@@ -146,7 +146,9 @@ function WorksheetContent({ params }: { params: Promise<{ unitId: string }> }) {
 
   useEffect(() => {
     async function loadProblems() {
-      const problems = await fetchUnitProblems(resolvedParams.unitId, 20);
+      // include_answers=true → problem.answer + problem.explanation 클라이언트에 노출
+      // (정답지 인쇄·채점 후 풀이 박스 둘 다 필요)
+      const problems = await fetchUnitProblems(resolvedParams.unitId, 20, true);
       setUnitProblems(problems);
       setIsLoading(false);
       recordPlayedUnit(resolvedParams.unitId);
@@ -378,58 +380,87 @@ function ProblemCell({
 
           {/* Choices or Short Answer Input */}
           {problem.type === "multiple_choice" && problem.choices ? (
-            <div className="mt-2 space-y-[2px]" style={{ paddingLeft: "0" }}>
+            <div className="mt-2 space-y-1" style={{ paddingLeft: "0" }}>
               {problem.choices.map((choice, i) => {
                 const isSelected = answer === choice;
                 const isCorrectChoice = choice === problem.answer;
                 const isWrongSelection =
                   isGraded && isSelected && !isCorrectChoice;
 
+                // 채점 전: 선택된 항목은 옅은 회색 배경 + bold
+                // 채점 후: 정답 = 초록 배경 / 오답 선택 = 빨강 배경
+                const bgClass = isGraded
+                  ? isCorrectChoice
+                    ? "bg-green-50"
+                    : isWrongSelection
+                      ? "bg-rose-50"
+                      : ""
+                  : isSelected
+                    ? "bg-gray-100"
+                    : "hover:bg-gray-50";
+
+                const textClass = isGraded
+                  ? isCorrectChoice
+                    ? "text-[#15803d] font-semibold"
+                    : isWrongSelection
+                      ? "text-[#b91c1c]"
+                      : "text-[#111827]"
+                  : isSelected
+                    ? "text-[#111827] font-semibold"
+                    : "text-[#111827]";
+
                 return (
                   <label
                     key={i}
-                    className={`flex cursor-pointer items-baseline gap-1.5 leading-tight ${
-                      isGraded && isCorrectChoice
-                        ? "text-[#15803d]"
-                        : isWrongSelection
-                          ? "text-[#b91c1c] line-through"
-                          : "text-[#111827]"
-                    }`}
+                    onClick={() => !isGraded && onAnswerChange(problem.id, choice)}
+                    className={`flex cursor-pointer items-center gap-2 rounded px-2 py-1 leading-tight transition print:bg-transparent print:p-0 ${bgClass} ${textClass}`}
+                    style={{ pointerEvents: isGraded ? "none" : "auto" }}
                   >
+                    {/* 라디오 시각화 — sr-only 대신 보이는 ○/● */}
                     <input
                       type="radio"
                       name={problem.id}
                       value={choice}
                       checked={isSelected}
-                      onChange={(e) =>
-                        onAnswerChange(problem.id, e.target.value)
-                      }
+                      onChange={() => onAnswerChange(problem.id, choice)}
                       disabled={isGraded}
                       className="sr-only"
+                      tabIndex={-1}
                     />
-                    {/* Circled number - serif */}
+                    <span
+                      aria-hidden="true"
+                      className="shrink-0 inline-flex h-4 w-4 items-center justify-center rounded-full border print:border-[#111827]"
+                      style={{
+                        borderColor: isSelected ? "#111827" : "#9ca3af",
+                        borderWidth: isSelected ? 1.5 : 1,
+                      }}
+                    >
+                      {isSelected && (
+                        <span
+                          className="h-2 w-2 rounded-full"
+                          style={{ background: isGraded ? (isCorrectChoice ? "#15803d" : "#b91c1c") : "#111827" }}
+                        />
+                      )}
+                    </span>
                     <span className="font-serif shrink-0" style={{ fontSize: "16px" }}>
                       {choiceLabels[i]}
                     </span>
-                    {/* Choice text - inline math forced (no BlockMath inside choices) */}
+                    {/* KaTeX 렌더된 span 내부가 click을 가로채지 못하도록 pointer-events:none */}
                     <span
-                      className={`${isSelected && !isGraded ? "font-medium" : ""}`}
+                      className="[&_.katex]:pointer-events-none"
                       style={{
                         fontSize: "15px",
                         lineHeight: 1.5,
-                        textDecoration: isSelected && !isGraded ? "underline" : "none",
-                        textDecorationThickness: "0.5pt",
-                        textUnderlineOffset: "4px",
+                        textDecoration: isWrongSelection ? "line-through" : "none",
                       }}
                     >
                       <MathText text={choice} inline />
                     </span>
-                    {/* Grading marks */}
                     {isGraded && isCorrectChoice && (
-                      <span className="ml-1 text-[#15803d]">✓</span>
+                      <span className="ml-auto text-[#15803d]">✓</span>
                     )}
                     {isWrongSelection && (
-                      <span className="ml-1 text-[#b91c1c]">✗</span>
+                      <span className="ml-auto text-[#b91c1c]">✗</span>
                     )}
                   </label>
                 );
