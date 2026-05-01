@@ -14,6 +14,7 @@ import {
   FREE_UNIT_LIMIT,
   type UnitDTO,
 } from "@/lib/client";
+import { AdSlot } from "@/components/AdSlot";
 
 function gradeLabel(g: number): string {
   if (g <= 6) return `초${g}`;
@@ -125,6 +126,8 @@ function LibraryContent() {
             </div>
           </div>
         )}
+
+        <AdSlot slot="LIBRARY_BOTTOM" format="auto" className="mt-12" />
       </main>
     </div>
   );

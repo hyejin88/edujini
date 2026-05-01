@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
+import { AdSlot } from "@/components/AdSlot";
 
 const grades = [
   { value: 1, label: "초1" },
@@ -47,12 +48,11 @@ export default function LandingPage() {
           <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
             단원별 학습지를{" "}
             <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-              무료로 60문항
+              초1~고3 전 단원
             </span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            초등학교 1학년부터 고등학교 3학년까지, 교육과정에 맞춘 체계적인
-            학습지를 인쇄하여 사용하세요.
+            교육과정에 맞춘 체계적인 학습지. AI 자동 채점·해설 + A4 인쇄.
           </p>
 
           {/* Grade Picker */}
@@ -108,14 +108,14 @@ export default function LandingPage() {
       </section>
 
       {/* Free Tier Section */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="mb-3 text-2xl font-bold text-foreground md:text-3xl">
-            지금은 모든 단원이 무료
-          </h2>
-          <p className="mb-10 text-base text-muted-foreground">
-            회원가입 없이 바로 풀고 인쇄까지 가능해요. 운영비는 광고로 충당합니다.
-          </p>
+      <AdSlot
+        slot="HOME_HERO"
+        format="horizontal"
+        className="mx-auto my-8 max-w-4xl px-4"
+      />
+
+      <section className="py-12 md:py-16">
+        <div className="mx-auto max-w-4xl px-4">
           <div className="grid gap-4 md:grid-cols-3">
             {[
               { title: "전 학년·전 과목", desc: "초1~고3 NCIC 성취기준 기반" },
@@ -130,9 +130,6 @@ export default function LandingPage() {
               </Card>
             ))}
           </div>
-          <p className="mt-8 text-xs text-muted-foreground">
-            추후 광고 제거 / 학부모 PDF 리포트 등 프리미엄 옵션이 추가될 예정이에요.
-          </p>
         </div>
       </section>
 
@@ -156,8 +153,6 @@ export default function LandingPage() {
             NCIC 성취기준 기반 체계적인 학습지
           </p>
           <div className="flex justify-center gap-6 text-sm text-muted-foreground">
-            <span>7일 환불 보장</span>
-            <span>·</span>
             <span>고객센터</span>
             <span>·</span>
             <span>이용약관</span>
