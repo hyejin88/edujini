@@ -146,9 +146,11 @@ export default function LandingPage() {
             NCIC 성취기준 기반 체계적인 학습지
           </p>
           <div className="flex justify-center gap-6 text-sm text-muted-foreground">
-            <span>고객센터</span>
+            <a href="/about" className="hover:text-foreground">운영자 정보</a>
             <span>·</span>
-            <span>이용약관</span>
+            <a href="/privacy" className="hover:text-foreground">개인정보처리방침</a>
+            <span>·</span>
+            <a href="/terms" className="hover:text-foreground">이용약관</a>
           </div>
         </div>
       </footer>
