@@ -190,18 +190,9 @@ function UnitCard({
           </div>
         </div>
         <div className="ml-4">
-          {isLockedByLimit ? (
-            <div className="flex flex-col items-center gap-1">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted">
-                <Lock className="h-4 w-4 text-muted-foreground" />
-              </div>
-              <span className="text-xs font-medium text-accent">₩990</span>
-            </div>
-          ) : (
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
-              {index + 1}
-            </div>
-          )}
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+            {index + 1}
+          </div>
         </div>
       </div>
     </Card>
