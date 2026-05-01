@@ -2,44 +2,33 @@
 
 export const runtime = "edge";
 
-import {
-  Suspense,
-  use,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
-import { useRouter } from "next/navigation";
+import { useState, useCallback, useEffect, use } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Printer, CheckCircle2, Lock } from "lucide-react";
+import { Suspense } from "react";
+import "katex/dist/katex.min.css";
+import { InlineMath, BlockMath } from "react-katex";
 import {
-  FREE_UNIT_LIMIT,
   fetchUnitProblems,
-  getPlayedUnits,
   gradeBatch,
   makeUserId,
   recordPlayedUnit,
   type ProblemDTO,
 } from "@/lib/client";
-import "katex/dist/katex.min.css";
-import { InlineMath, BlockMath } from "react-katex";
 
-function gradeLabel(g: number): string {
+type Problem = ProblemDTO;
+
+function getGradeLabel(g: number): string {
   if (g <= 6) return `초${g}`;
   if (g <= 9) return `중${g - 6}`;
   return `고${g - 9}`;
 }
 
+// Parse math expressions from text
 function MathText({ text }: { text: string }) {
-  if (!text) return null;
-  type Part = { type: "text" | "inline" | "block"; content: string };
-  const parts: Part[] = [];
+  const parts: { type: "text" | "inline" | "block"; content: string }[] = [];
   let remaining = text;
+
   while (remaining.length > 0) {
     const blockMatch = remaining.match(/^\$\$([\s\S]*?)\$\$/);
     if (blockMatch) {
@@ -47,304 +36,291 @@ function MathText({ text }: { text: string }) {
       remaining = remaining.slice(blockMatch[0].length);
       continue;
     }
+
     const inlineMatch = remaining.match(/^\$([\s\S]*?)\$/);
     if (inlineMatch) {
       parts.push({ type: "inline", content: inlineMatch[1] });
       remaining = remaining.slice(inlineMatch[0].length);
       continue;
     }
+
     const nextBlock = remaining.indexOf("$$");
     const nextInline = remaining.indexOf("$");
     let nextMath = -1;
-    if (nextBlock !== -1 && nextInline !== -1) nextMath = Math.min(nextBlock, nextInline);
-    else if (nextBlock !== -1) nextMath = nextBlock;
-    else if (nextInline !== -1) nextMath = nextInline;
+
+    if (nextBlock !== -1 && nextInline !== -1) {
+      nextMath = Math.min(nextBlock, nextInline);
+    } else if (nextBlock !== -1) {
+      nextMath = nextBlock;
+    } else if (nextInline !== -1) {
+      nextMath = nextInline;
+    }
+
     if (nextMath === -1) {
       parts.push({ type: "text", content: remaining });
       break;
+    } else {
+      if (nextMath > 0) {
+        parts.push({ type: "text", content: remaining.slice(0, nextMath) });
+      }
+      remaining = remaining.slice(nextMath);
     }
-    if (nextMath > 0) parts.push({ type: "text", content: remaining.slice(0, nextMath) });
-    remaining = remaining.slice(nextMath);
   }
+
   return (
-    <span>
+    <span className="[&_.katex-display]:overflow-x-auto [&_.katex-display]:py-2">
       {parts.map((part, i) => {
-        if (part.type === "block") return <BlockMath key={i} math={part.content} />;
-        if (part.type === "inline") return <InlineMath key={i} math={part.content} />;
-        return (
-          <span key={i} style={{ whiteSpace: "pre-line" }}>
-            {part.content}
-          </span>
-        );
+        if (part.type === "block") {
+          return <BlockMath key={i} math={part.content} />;
+        } else if (part.type === "inline") {
+          return <InlineMath key={i} math={part.content} />;
+        }
+        // Handle "(그림:...)" annotations
+        if (part.content.includes("(그림:")) {
+          const annotationMatch = part.content.match(/\(그림:[^)]+\)/);
+          if (annotationMatch) {
+            const before = part.content.slice(0, part.content.indexOf(annotationMatch[0]));
+            const annotation = annotationMatch[0];
+            const after = part.content.slice(part.content.indexOf(annotationMatch[0]) + annotationMatch[0].length);
+            return (
+              <span key={i}>
+                {before}
+                <span className="my-2 block border-l-2 border-[#d1d5db] pl-3 italic text-[#6b7280]">
+                  {annotation}
+                </span>
+                {after}
+              </span>
+            );
+          }
+        }
+        return <span key={i}>{part.content}</span>;
       })}
     </span>
   );
 }
 
-interface ResultMap {
-  [problemId: string]: {
-    correct: boolean;
-    correct_answer: string;
-    explanation: string;
-    error_label: string | null;
-  };
+// Measure problem complexity for adaptive layout
+function measureProblem(problem: Problem): "compact" | "regular" | "long" {
+  let score = 0;
+  
+  // Body length scoring
+  if (problem.body.length > 80) score += 2;
+  else if (problem.body.length > 40) score += 1;
+  
+  // Choice count scoring
+  if (problem.choices) {
+    if (problem.choices.length >= 5) score += 2;
+    else if (problem.choices.length === 4) score += 1;
+    
+    // Longest choice length scoring
+    const maxChoiceLen = Math.max(...problem.choices.map(c => c.length));
+    if (maxChoiceLen > 30) score += 1;
+  }
+  
+  // Block math scoring
+  if (problem.body.includes("$$")) score += 2;
+  
+  // Figure annotation scoring
+  if (problem.body.includes("(그림:")) score += 2;
+  
+  if (score >= 4) return "long";
+  if (score >= 2) return "regular";
+  return "compact";
 }
 
 function WorksheetContent({ params }: { params: Promise<{ unitId: string }> }) {
   const resolvedParams = use(params);
-  const unitId = decodeURIComponent(resolvedParams.unitId);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const grade = parseInt(searchParams.get("grade") || "3");
 
-  const [problems, setProblems] = useState<ProblemDTO[]>([]);
+  const [unitProblems, setUnitProblems] = useState<Problem[]>([]);
+  const unit = unitProblems[0]
+    ? { id: unitProblems[0].unit_id, unit_name: unitProblems[0].unit_name }
+    : { id: resolvedParams.unitId, unit_name: "" };
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [results, setResults] = useState<ResultMap>({});
-  const [scoreSummary, setScoreSummary] = useState<{
-    total: number;
-    correct: number;
-    score_pct: number;
-    error_breakdown: Record<string, number>;
-  } | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [grading, setGrading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [locked, setLocked] = useState(false);
+  const [isGraded, setIsGraded] = useState(false);
+  const [results, setResults] = useState<Record<string, boolean>>({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Phase 1: 광고+무료 모델. 단원 잠금 없음.
-    makeUserId();
-    fetchUnitProblems(unitId, 20)
-      .then((data) => {
-        setProblems(data);
-        if (data.length === 0) setError("이 단원에 등록된 문항이 아직 없어요.");
-        else recordPlayedUnit(unitId);
-      })
-      .catch((e) => setError(e.message))
-      .finally(() => setLoading(false));
-  }, [unitId]);
+    async function loadProblems() {
+      const problems = await fetchUnitProblems(resolvedParams.unitId, 20);
+      setUnitProblems(problems);
+      setIsLoading(false);
+      recordPlayedUnit(resolvedParams.unitId);
+    }
+    loadProblems();
+  }, [resolvedParams.unitId]);
 
-  const answeredCount = useMemo(
-    () => Object.values(answers).filter((v) => v && String(v).trim()).length,
-    [answers]
-  );
+  const answeredCount = Object.keys(answers).filter(
+    (k) => answers[k]?.trim()
+  ).length;
+  const correctCount = Object.values(results).filter(Boolean).length;
+  const score = unitProblems.length > 0 
+    ? Math.round((correctCount / unitProblems.length) * 100) 
+    : 0;
 
   const handleAnswerChange = useCallback((problemId: string, value: string) => {
     setAnswers((prev) => ({ ...prev, [problemId]: value }));
   }, []);
 
   const handleGrade = async () => {
-    setGrading(true);
-    try {
-      const list = problems
-        .filter((p) => answers[p.id])
-        .map((p) => ({ problem_id: p.id, user_answer: answers[p.id] }));
-      const r = await gradeBatch(makeUserId(), list);
-      const map: ResultMap = {};
-      for (const it of r.results) {
-        map[it.problem_id] = {
-          correct: it.correct,
-          correct_answer: it.correct_answer,
-          explanation: it.explanation,
-          error_label: it.error_label,
-        };
-      }
-      setResults(map);
-      setScoreSummary({
-        total: r.total,
-        correct: r.correct,
-        score_pct: r.score_pct,
-        error_breakdown: r.error_breakdown,
-      });
-      setTimeout(() => {
-        document.getElementById("score-banner")?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    } catch (e: any) {
-      setError(e?.message || "채점 중 오류");
-    } finally {
-      setGrading(false);
-    }
+    const userId = makeUserId();
+    const list = Object.entries(answers)
+      .filter(([, v]) => v && String(v).trim())
+      .map(([problem_id, user_answer]) => ({ problem_id, user_answer }));
+    const r = await gradeBatch(userId, list);
+    const map: Record<string, boolean> = {};
+    for (const it of r.results) map[it.problem_id] = it.correct;
+    setResults(map);
+    setIsGraded(true);
   };
 
-  if (locked) {
+  const handlePrint = () => {
+    window.print();
+  };
+
+  if (isLoading) {
     return (
-      <div className="flex min-h-screen items-center justify-center px-4">
-        <Card className="max-w-md p-8 text-center">
-          <Lock className="mx-auto mb-3 h-10 w-10 text-muted-foreground" />
-          <h2 className="mb-2 text-xl font-bold">무료 3개 단원 사용 완료</h2>
-          <p className="mb-6 text-sm text-muted-foreground">
-            다음 단원을 풀려면 결제 후 이용할 수 있어요
-          </p>
-          <Link
-            href={`/result?lock=${encodeURIComponent(unitId)}`}
-            className="inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
-          >
-            ₩990 단원 정복 팩
-          </Link>
-        </Card>
+      <div className="flex min-h-screen items-center justify-center bg-[#f5f5f5]">
+        <p className="text-[#6b7280]">로딩 중...</p>
       </div>
     );
   }
-
-  if (loading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center text-muted-foreground">
-        문항 불러오는 중...
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="flex min-h-screen flex-col items-center justify-center gap-3 text-center">
-        <p className="text-muted-foreground">{error}</p>
-        <Link href="/library?grade=3&subject=수학" className="text-sm text-primary underline">
-          단원 목록으로
-        </Link>
-      </div>
-    );
-  }
-
-  if (problems.length === 0) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <p className="text-muted-foreground">등록된 문항이 없어요.</p>
-      </div>
-    );
-  }
-
-  const unitName = problems[0].unit_name;
-  const subjectLabel = problems[0].subject;
-  const grade = problems[0].grade;
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="no-print sticky top-0 z-10 border-b border-border bg-background">
-        <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
+    <div className="min-h-screen bg-[#f5f5f5] print:bg-white">
+      {/* Toolbar - Hidden on Print */}
+      <header className="no-print sticky top-0 z-10 border-b border-[#e5e7eb] bg-white">
+        <div className="mx-auto flex max-w-[210mm] items-center justify-between px-4 py-3">
           <Link
-            href={`/library?grade=${grade}&subject=${encodeURIComponent(subjectLabel)}`}
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+            href={`/library?grade=${grade}&subject=수학`}
+            className="flex items-center gap-2 text-sm text-[#6b7280] hover:text-[#111827]"
           >
-            <ArrowLeft className="h-4 w-4" />
-            단원 목록
+            ← 단원 목록
           </Link>
-          <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" onClick={() => window.print()} className="gap-2">
-              <Printer className="h-4 w-4" />
-              인쇄/PDF
-            </Button>
-            {!scoreSummary ? (
-              <Button
-                size="sm"
+
+          <div className="flex items-center gap-3">
+            <button
+              onClick={handlePrint}
+              className="flex items-center gap-2 rounded border border-[#e5e7eb] bg-white px-3 py-1.5 text-sm text-[#111827] hover:bg-[#f9fafb]"
+            >
+              🖨️ 인쇄/PDF
+            </button>
+            {!isGraded ? (
+              <button
                 onClick={handleGrade}
-                disabled={answeredCount === 0 || grading}
-                className="gap-2 bg-primary hover:bg-primary/90"
+                disabled={answeredCount === 0}
+                className="flex items-center gap-2 rounded bg-[#111827] px-3 py-1.5 text-sm text-white hover:bg-[#1f2937] disabled:cursor-not-allowed disabled:opacity-50"
               >
-                <CheckCircle2 className="h-4 w-4" />
-                {grading ? "채점 중..." : "일괄 채점"}
-                <span className="rounded bg-primary-foreground/20 px-1.5 py-0.5 text-xs">
-                  {answeredCount}/{problems.length}
+                일괄 채점
+                <span className="rounded bg-white/20 px-1.5 py-0.5 text-xs">
+                  {answeredCount}/{unitProblems.length}
                 </span>
-              </Button>
+              </button>
             ) : (
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => router.push("/result")}
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
-                학습 진단 보기
-              </Button>
+              <div className="flex items-center gap-3">
+                <span className="font-serif text-xl font-bold text-[#111827]">
+                  {score}점
+                </span>
+                <span className="text-sm text-[#6b7280]">
+                  · {correctCount}/{unitProblems.length}
+                </span>
+                <Link
+                  href="/result"
+                  className="text-sm text-[#1e3a8a] underline underline-offset-2 hover:text-[#1e40af]"
+                >
+                  학습 진단 →
+                </Link>
+              </div>
             )}
           </div>
         </div>
       </header>
 
-      {scoreSummary && (
-        <div
-          id="score-banner"
-          className="no-print sticky top-14 z-10 border-b border-primary/20 bg-primary/5 py-3"
-        >
-          <div className="mx-auto flex max-w-4xl items-center justify-between px-4">
-            <div className="flex items-center gap-4">
-              <span className="text-2xl font-bold text-primary">
-                {scoreSummary.score_pct}점
-              </span>
-              <span className="text-sm text-muted-foreground">
-                {scoreSummary.correct}/{scoreSummary.total} 정답
-              </span>
-            </div>
-            <Button
-              size="sm"
-              onClick={() => router.push("/result")}
-              className="bg-primary hover:bg-primary/90"
-            >
-              학부모 리포트 받기
-            </Button>
-          </div>
-        </div>
-      )}
-
-      <main className="mx-auto max-w-4xl px-4 py-8">
-        <div className="mb-8 border-b-2 border-foreground pb-4">
-          <p className="mb-2 text-xs font-medium tracking-widest text-muted-foreground">
-            EDUJINI WORKSHEET
-          </p>
-          <div className="flex items-end justify-between">
-            <h1 className="text-2xl font-bold text-foreground">
-              {gradeLabel(grade)} {subjectLabel} · {unitName}
-            </h1>
-            <div className="print-only flex gap-8 text-sm">
-              <span>이름: <span className="inline-block w-24 border-b border-foreground" /></span>
-              <span>날짜: <span className="inline-block w-24 border-b border-foreground" /></span>
-            </div>
-          </div>
+      {/* A4 Paper Frame */}
+      <main className="worksheet-page mx-auto my-8 max-w-[210mm] bg-white shadow-lg print:my-0 print:max-w-none print:p-[16mm] print:shadow-none" style={{ padding: "16mm" }}>
+        {/* Header - Centered serif title with rule */}
+        <div className="mb-8 text-center">
+          <h1 className="font-serif text-xl font-bold text-[#111827]">
+            {getGradeLabel(grade)} 수학 · {unit.unit_name}
+          </h1>
+          <div className="mx-auto mt-4 h-px w-full bg-[#111827]" style={{ height: "0.5pt" }} />
         </div>
 
-        <div className="space-y-7">
-          {problems.map((problem, index) => (
-            <ProblemRow
-              key={problem.id}
-              problem={problem}
-              index={index + 1}
-              answer={answers[problem.id] || ""}
-              onAnswerChange={handleAnswerChange}
-              result={results[problem.id]}
-            />
-          ))}
+        {/* Problems Grid - 2 columns */}
+        <div className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2 print:grid-cols-2">
+          {unitProblems.map((problem, index) => {
+            const layout = measureProblem(problem);
+            return (
+              <ProblemCell
+                key={problem.id}
+                problem={problem}
+                index={index + 1}
+                answer={answers[problem.id] || ""}
+                onAnswerChange={handleAnswerChange}
+                isGraded={isGraded}
+                isCorrect={results[problem.id]}
+                layout={layout}
+              />
+            );
+          })}
         </div>
 
-        {!scoreSummary && (
-          <div className="no-print mt-10 flex items-center justify-between border-t border-border pt-6 text-sm">
-            <span className="text-muted-foreground">
-              답변 {answeredCount} / {problems.length}
+        {/* Score Banner - After grading (screen only) */}
+        {isGraded && (
+          <div className="no-print mt-8 flex items-center gap-4 pt-4" style={{ borderTop: "0.5pt solid #e5e7eb" }}>
+            <span className="font-serif text-2xl font-bold text-[#111827]">
+              {score}점
             </span>
-            <Button
-              onClick={handleGrade}
-              disabled={answeredCount === 0 || grading}
-              className="bg-primary hover:bg-primary/90"
+            <span className="text-sm text-[#6b7280]">
+              {correctCount}/{unitProblems.length}
+            </span>
+            <div className="flex-grow" />
+            <Link
+              href="/result"
+              className="text-[#1e3a8a] underline underline-offset-2"
             >
-              {grading ? "채점 중..." : "일괄 채점하기"}
-            </Button>
+              학습 진단 →
+            </Link>
           </div>
         )}
 
-        <div className="answer-key print-only mt-16">
-          <h2 className="mb-6 border-b-2 border-foreground pb-2 text-xl font-bold">
+        {/* Answer Key - Print Only */}
+        <div className="answer-key hidden print:block" style={{ pageBreakBefore: "always" }}>
+          {/* Double line header */}
+          <div className="mb-2 border-t-2 border-[#111827]" />
+          <div className="mb-4 border-t border-[#111827]" />
+          <h2 className="mb-4 text-center font-serif text-lg font-bold text-[#111827]">
             정답 및 해설
           </h2>
-          <div className="space-y-6">
-            {problems.map((p, i) => (
-              <div key={p.id} className="text-sm">
-                <div className="mb-1 flex items-center gap-2">
-                  <span className="font-bold">{i + 1}.</span>
-                  <span className="font-medium text-primary">
-                    정답: {p.answer || "(정답 데이터 미포함)"}
+          <div className="mb-2 border-t border-[#111827]" />
+          <div className="mb-6 border-t-2 border-[#111827]" />
+
+          {/* Compact 2-column answer list */}
+          <div className="mb-8 grid grid-cols-2 gap-x-8 gap-y-1 text-sm">
+            {unitProblems.map((problem, index) => (
+              <div key={problem.id} className="flex gap-2">
+                <span className="font-serif font-bold text-[#111827]">{index + 1}.</span>
+                <span className="text-[#111827]">{problem.answer}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Full explanations */}
+          <div className="space-y-4 text-sm">
+            {unitProblems.map((problem, index) => (
+              <div key={problem.id} className="break-inside-avoid">
+                <div className="flex items-center gap-2">
+                  <span className="font-serif font-bold text-[#111827]">{index + 1}.</span>
+                  <span className="font-medium text-[#1e3a8a]">
+                    정답: {problem.answer}
                   </span>
                 </div>
-                {p.explanation && (
-                  <p className="whitespace-pre-line pl-5 text-muted-foreground">
-                    {p.explanation}
-                  </p>
-                )}
+                <p className="mt-1 whitespace-pre-line pl-5 text-xs leading-relaxed text-[#374151]">
+                  {problem.explanation}
+                </p>
               </div>
             ))}
           </div>
@@ -354,130 +330,184 @@ function WorksheetContent({ params }: { params: Promise<{ unitId: string }> }) {
   );
 }
 
-function ProblemRow({
+function ProblemCell({
   problem,
   index,
   answer,
   onAnswerChange,
-  result,
+  isGraded,
+  isCorrect,
+  layout,
 }: {
-  problem: ProblemDTO;
+  problem: Problem;
   index: number;
   answer: string;
   onAnswerChange: (id: string, value: string) => void;
-  result?: ResultMap[string];
+  isGraded: boolean;
+  isCorrect?: boolean;
+  layout: "compact" | "regular" | "long";
 }) {
   const choiceLabels = ["①", "②", "③", "④", "⑤"];
-  const isGraded = !!result;
+  const spanClass = layout === "long" ? "md:col-span-2 print:col-span-2" : "";
 
   return (
-    <div className="worksheet-problem border-b border-dashed border-border pb-7">
-      <div className="mb-3 flex items-center gap-3">
-        <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
-          {index}
+    <div
+      className={`worksheet-problem break-inside-avoid ${spanClass}`}
+      style={{ wordBreak: "keep-all" }}
+    >
+      {/* Problem Row: Number + Body */}
+      <div className="flex">
+        {/* Problem Number - Large bold serif, flush left */}
+        <div 
+          className="w-8 flex-shrink-0 font-serif font-bold text-[#111827]"
+          style={{ fontSize: "22px", lineHeight: "1.8" }}
+        >
+          {index}.
         </div>
-        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span className="text-amber-500">
-            {"★".repeat(problem.difficulty)}
-            {"☆".repeat(5 - problem.difficulty)}
-          </span>
-          <Badge variant="outline" className="text-[10px] font-normal">
-            {problem.type === "multiple_choice" ? "객관식" : "단답형"}
-          </Badge>
-        </div>
-      </div>
 
-      <div className="mb-4 pl-10 text-base leading-relaxed text-foreground">
-        <MathText text={problem.body} />
-      </div>
-
-      <div className="pl-10">
-        {problem.type === "multiple_choice" && problem.choices ? (
-          <div className="space-y-2">
-            {problem.choices.map((choice, i) => {
-              const isSelected = answer === choice;
-              const isCorrectChoice = isGraded && result && choice === result.correct_answer;
-              const isWrongPick = isGraded && result && isSelected && !result.correct;
-              let cls = "border-border hover:border-primary/50";
-              if (isCorrectChoice) cls = "border-green-500 bg-green-50";
-              else if (isWrongPick) cls = "border-rose-400 bg-rose-50";
-              else if (isSelected) cls = "border-primary bg-primary/5";
-              return (
-                <label
-                  key={i}
-                  className={`flex cursor-pointer items-start gap-3 rounded-lg border-2 px-4 py-3 transition ${cls} ${
-                    isGraded ? "cursor-default" : ""
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    name={problem.id}
-                    value={choice}
-                    checked={isSelected}
-                    disabled={isGraded}
-                    onChange={() => onAnswerChange(problem.id, choice)}
-                    className="mt-1"
-                  />
-                  <span className="font-semibold text-muted-foreground">
-                    {choiceLabels[i] || `(${i + 1})`}
-                  </span>
-                  <span className="flex-1 text-[15px]">
-                    <MathText text={choice} />
-                  </span>
-                </label>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="flex items-center gap-3">
-            <span className="text-sm text-muted-foreground">정답:</span>
-            <Input
-              value={answer}
-              disabled={isGraded}
-              onChange={(e) => onAnswerChange(problem.id, e.target.value)}
-              placeholder={isGraded ? "" : "답을 적으세요"}
-              className={`max-w-[220px] ${
-                isGraded && result?.correct
-                  ? "border-green-500 bg-green-50"
-                  : isGraded && !result?.correct
-                  ? "border-rose-400 bg-rose-50"
-                  : ""
-              }`}
-            />
-          </div>
-        )}
-
-        {!isGraded && (
-          <div className="mt-3 hidden h-24 rounded-md border border-dashed border-border bg-muted/20 print:block" />
-        )}
-
-        {isGraded && result && (
-          <div
-            className={`mt-3 rounded-md border p-3 text-[13px] ${
-              result.correct
-                ? "border-green-200 bg-green-50/50 text-green-900"
-                : "border-rose-200 bg-rose-50/50 text-rose-900"
-            }`}
+        {/* Problem Content - Indented */}
+        <div className="flex-1 pl-1">
+          {/* Problem Body */}
+          <div 
+            className="text-[#111827]"
+            style={{ fontSize: "16px", lineHeight: "1.8" }}
           >
-            <div className="mb-1 font-semibold">
-              {result.correct ? "✓ 정답" : `✗ 정답: ${result.correct_answer}`}
-              {result.error_label && (
-                <span className="ml-2 rounded bg-white/70 px-1.5 py-0.5 text-[11px] font-medium">
-                  {result.error_label}
-                </span>
+            <MathText text={problem.body} />
+          </div>
+
+          {/* Choices or Short Answer Input */}
+          {problem.type === "multiple_choice" && problem.choices ? (
+            <div className="mt-3 space-y-[6px]" style={{ paddingLeft: "0" }}>
+              {problem.choices.map((choice, i) => {
+                const isSelected = answer === choice;
+                const isCorrectChoice = choice === problem.answer;
+                const isWrongSelection =
+                  isGraded && isSelected && !isCorrectChoice;
+
+                return (
+                  <label
+                    key={i}
+                    className={`flex cursor-pointer items-baseline gap-2 py-0.5 ${
+                      isGraded && isCorrectChoice
+                        ? "text-[#15803d]"
+                        : isWrongSelection
+                          ? "text-[#b91c1c] line-through"
+                          : "text-[#111827]"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name={problem.id}
+                      value={choice}
+                      checked={isSelected}
+                      onChange={(e) =>
+                        onAnswerChange(problem.id, e.target.value)
+                      }
+                      disabled={isGraded}
+                      className="sr-only"
+                    />
+                    {/* Circled number - serif */}
+                    <span className="font-serif" style={{ fontSize: "18px" }}>
+                      {choiceLabels[i]}
+                    </span>
+                    {/* Choice text - with underline if selected */}
+                    <span
+                      className={`${isSelected && !isGraded ? "font-medium" : ""}`}
+                      style={{ 
+                        fontSize: "16px",
+                        textDecoration: isSelected && !isGraded ? "underline" : "none",
+                        textDecorationThickness: "0.5pt",
+                        textUnderlineOffset: "4px"
+                      }}
+                    >
+                      <MathText text={choice} />
+                    </span>
+                    {/* Grading marks */}
+                    {isGraded && isCorrectChoice && (
+                      <span className="ml-1 text-[#15803d]">✓</span>
+                    )}
+                    {isWrongSelection && (
+                      <span className="ml-1 text-[#b91c1c]">✗</span>
+                    )}
+                  </label>
+                );
+              })}
+            </div>
+          ) : (
+            /* Short answer - inline "정답: __________" */
+            <div className="mt-3 flex items-baseline gap-2">
+              <span className="text-[#111827]" style={{ fontSize: "16px" }}>정답:</span>
+              <input
+                type="text"
+                value={answer}
+                onChange={(e) => onAnswerChange(problem.id, e.target.value)}
+                disabled={isGraded}
+                className={`bg-transparent px-1 py-0.5 font-serif outline-none ${
+                  isGraded
+                    ? isCorrect
+                      ? "text-[#15803d]"
+                      : "text-[#b91c1c]"
+                    : "text-[#111827]"
+                }`}
+                style={{ 
+                  width: "36mm",
+                  fontSize: "16px",
+                  border: "none",
+                  borderBottom: `0.5pt solid ${isGraded ? (isCorrect ? "#15803d" : "#b91c1c") : "#111827"}`,
+                  borderRadius: 0
+                }}
+              />
+              {isGraded && isCorrect && (
+                <span className="text-[#15803d]">✓</span>
+              )}
+              {isGraded && !isCorrect && (
+                <span className="text-[#b91c1c]">✗</span>
               )}
             </div>
-            <div className="leading-relaxed text-foreground/80">
-              <MathText text={result.explanation} />
+          )}
+
+          {/* Explanation Box - Shows after grading */}
+          {isGraded && (
+            <div
+              className="mt-4"
+              style={{ border: "0.5pt solid #d1d5db", padding: "2mm 3mm" }}
+            >
+              <div
+                className="mb-2 pb-1 text-sm font-bold uppercase tracking-wide text-[#111827]"
+                style={{ borderBottom: "0.5pt solid #111827" }}
+              >
+                풀이
+              </div>
+              <div className="space-y-1">
+                <p className="font-medium text-[#1e3a8a]" style={{ fontSize: "13px" }}>
+                  정답: {problem.answer}
+                </p>
+                <p 
+                  className="whitespace-pre-line text-[#374151]"
+                  style={{ fontSize: "13px", lineHeight: "1.6" }}
+                >
+                  {problem.explanation}
+                </p>
+                {problem.error_type && !isCorrect && (
+                  <div className="flex justify-end pt-1">
+                    <span 
+                      className="rounded bg-[#f3f4f6] px-2 py-0.5 font-mono text-[#6b7280]"
+                      style={{ fontSize: "11px" }}
+                    >
+                      {problem.error_type}
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
 }
 
-export default function UnitPage({
+export default function WorksheetPage({
   params,
 }: {
   params: Promise<{ unitId: string }>;
@@ -485,8 +515,8 @@ export default function UnitPage({
   return (
     <Suspense
       fallback={
-        <div className="flex min-h-screen items-center justify-center">
-          <p className="text-muted-foreground">로딩 중...</p>
+        <div className="flex min-h-screen items-center justify-center bg-[#f5f5f5]">
+          <p className="text-[#6b7280]">로딩 중...</p>
         </div>
       }
     >
