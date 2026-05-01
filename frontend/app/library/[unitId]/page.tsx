@@ -110,12 +110,7 @@ function WorksheetContent({ params }: { params: Promise<{ unitId: string }> }) {
   const [locked, setLocked] = useState(false);
 
   useEffect(() => {
-    const played = getPlayedUnits();
-    if (!played.includes(unitId) && played.length >= FREE_UNIT_LIMIT) {
-      setLocked(true);
-      setLoading(false);
-      return;
-    }
+    // Phase 1: 광고+무료 모델. 단원 잠금 없음.
     makeUserId();
     fetchUnitProblems(unitId, 20)
       .then((data) => {

@@ -72,9 +72,9 @@ function LibraryContent() {
           </div>
           <Badge
             variant="secondary"
-            className="bg-primary/10 text-primary hover:bg-primary/10"
+            className="bg-emerald-50 text-emerald-700 hover:bg-emerald-50"
           >
-            무료 {left}/{FREE_UNIT_LIMIT} 단원
+            전 단원 무료
           </Badge>
         </div>
 
@@ -101,9 +101,7 @@ function LibraryContent() {
                 unit={unit}
                 index={index}
                 isPlayed={played.includes(unit.id)}
-                isLockedByLimit={
-                  !played.includes(unit.id) && played.length >= FREE_UNIT_LIMIT
-                }
+                isLockedByLimit={false}
               />
             ))}
           </div>

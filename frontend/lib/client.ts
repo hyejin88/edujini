@@ -153,4 +153,6 @@ export function recordPlayedUnit(unitId: string) {
   } catch {}
 }
 
-export const FREE_UNIT_LIMIT = 3;
+// Phase 1: 무료 + 광고 모델. 단원 제한 없음.
+// Phase 2 진입 시 결제 옵션 추가하면서 다시 제한 도입 검토.
+export const FREE_UNIT_LIMIT = Infinity;

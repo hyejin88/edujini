@@ -137,7 +137,7 @@ export default function ParentPreviewPage() {
             카카오톡으로 받기
           </Button>
           <p className="mt-3 text-sm text-muted-foreground">
-            결제 후 카카오톡으로 전송됩니다
+            현재는 무료 미리보기. 추후 카카오톡 자동 전송 추가 예정.
           </p>
         </div>
       </main>

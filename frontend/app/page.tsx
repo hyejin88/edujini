@@ -107,116 +107,32 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Free Tier Section */}
       <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-5xl px-4">
-          <h2 className="mb-4 text-center text-2xl font-bold text-foreground">
-            학습 요금제
+        <div className="mx-auto max-w-3xl px-4 text-center">
+          <h2 className="mb-3 text-2xl font-bold text-foreground md:text-3xl">
+            지금은 모든 단원이 무료
           </h2>
-          <p className="mb-12 text-center text-muted-foreground">
-            필요한 만큼만 선택하세요
+          <p className="mb-10 text-base text-muted-foreground">
+            회원가입 없이 바로 풀고 인쇄까지 가능해요. 운영비는 광고로 충당합니다.
           </p>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Free Plan */}
-            <Card className="border border-border p-6 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4">
-                <p className="text-sm font-medium text-muted-foreground">무료</p>
-                <p className="text-3xl font-bold text-foreground">₩0</p>
-              </div>
-              <p className="mb-6 text-2xl font-semibold text-foreground">
-                60문항 체험
-              </p>
-              <ul className="mb-6 space-y-3 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  단원당 20문항 제공
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  3개 단원 무료 이용
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  인쇄/PDF 다운로드
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  자동 채점 및 해설
-                </li>
-              </ul>
-              <Button variant="outline" className="w-full">
-                시작하기
-              </Button>
-            </Card>
-
-            {/* Unit Pack */}
-            <Card className="relative border-2 border-primary p-6 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-                인기
-              </div>
-              <div className="mb-4">
-                <p className="text-sm font-medium text-muted-foreground">단원 정복</p>
-                <p className="text-3xl font-bold text-foreground">₩990</p>
-              </div>
-              <p className="mb-6 text-2xl font-semibold text-foreground">
-                단원 정복 팩
-              </p>
-              <ul className="mb-6 space-y-3 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  선택 단원 전체 문항
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  심화 문제 포함
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  상세 오답 분석
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  학부모 리포트
-                </li>
-              </ul>
-              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                구매하기
-              </Button>
-            </Card>
-
-            {/* Weekly Unlimited */}
-            <Card className="border border-border p-6 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4">
-                <p className="text-sm font-medium text-muted-foreground">무제한</p>
-                <p className="text-3xl font-bold text-foreground">₩2,900</p>
-              </div>
-              <p className="mb-6 text-2xl font-semibold text-foreground">
-                1주 무제한
-              </p>
-              <ul className="mb-6 space-y-3 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  전 학년 전 과목
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  모든 단원 이용
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  무제한 인쇄
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-primary" />
-                  우선 고객지원
-                </li>
-              </ul>
-              <Button variant="outline" className="w-full">
-                구매하기
-              </Button>
-            </Card>
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              { title: "전 학년·전 과목", desc: "초1~고3 NCIC 성취기준 기반" },
+              { title: "단원당 20문항", desc: "AI 자동 채점 + 단계별 해설" },
+              { title: "A4 인쇄·PDF", desc: "학습지 그대로 출력 가능" },
+            ].map((item) => (
+              <Card key={item.title} className="border border-border p-6 text-left">
+                <p className="text-base font-semibold text-foreground">
+                  {item.title}
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+              </Card>
+            ))}
           </div>
+          <p className="mt-8 text-xs text-muted-foreground">
+            추후 광고 제거 / 학부모 PDF 리포트 등 프리미엄 옵션이 추가될 예정이에요.
+          </p>
         </div>
       </section>
 

@@ -145,7 +145,7 @@ export default function ResultPage() {
               </p>
               <Link href="/parent-preview">
                 <Button className="bg-amber-500 text-foreground hover:bg-amber-600">
-                  학부모 리포트 받기 ₩990
+                  학부모 리포트 무료 미리보기
                 </Button>
               </Link>
             </div>
