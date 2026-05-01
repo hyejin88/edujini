@@ -1,0 +1,27 @@
+# Render IaC — Web Service (Free)
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: eduqa-backend
+    runtime: docker
+    plan: free                  # 512MB RAM, 750h/월, 15분 idle 후 sleep
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    region: singapore           # 한국에서 가장 가까운 무료 리전
+    branch: main
+    healthCheckPath: /healthz
+    envVars:
+      - key: SUPABASE_DB_URL
+        sync: false             # 대시보드에서 수동 입력
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+      - key: PYTHONUNBUFFERED
+        value: "1"

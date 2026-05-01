@@ -1,0 +1,72 @@
+project:
+  name: "edutech-qa"
+  korean_name: "초중고 기출/연습문제 + AI 오답 진단 웹앱"
+  description: "초1~고3 모든 교과서 단원별 기출·연습문제 제공 + AI 오답 진단 + 약점 추천 학습 서비스"
+  created: "2026-04-30"
+  owner: "정혜진"
+  stage: "Stage A — 기획"
+
+market:
+  total_addressable_market: "한국 사교육 27.5조 / EduTech 11조 (2026 전망)"
+  target_segment: "초1~고3 학생 (B2C) → 학원 (B2B 6개월 차)"
+  key_competitors: ["콴다(수학 편중)", "아이스크림에듀 홈런(초등 편중)", "밀크T", "클래스데이(B2B)"]
+
+mvp:
+  scope: "중1 수학 1종 · 3000문항 · 객관식+단답형 · 룰 기반 진단 · 무료/월 9900원"
+  duration: "3개월"
+  team: "개발 1~2명 + 콘텐츠 검수 외주 2명"
+
+monetization:
+  primary: "B2C 월 구독 (₩9,900) + 프리미엄 진단 리포트 1회 결제 (₩9,900~29,000)"
+  secondary: "학원 B2B SaaS (좌석당 월 ₩5천~2만, 6개월 차)"
+  tertiary: "출판사 Rev-share (5~15%)"
+
+tech_stack:
+  frontend: "Next.js 14 App Router (PWA) + Tailwind + shadcn/ui + KaTeX"
+  backend: "FastAPI (Python) + Celery + Redis"
+  database: "PostgreSQL (Supabase) + pgvector + S3 + BigQuery"
+  ai: "GPT-4o / Claude (RAG) + KoBERT (개념 태깅) + IRT 2모수"
+  payment: "토스페이먼츠"
+  infra: "Vercel + Cloudflare CDN"
+
+paths:
+  docs: "docs"
+  backend: "backend"
+  frontend: "frontend"
+  bizdev: "bizdev"
+  reports: "reports"
+
+key_differentiators:
+  - "오답 유형 4축 라벨링 (개념/계산/해석/함정)"
+  - "초1~고3 전 교과 단원 그래프 + 선수학습 의존성"
+  - "학부모 결제자 대시보드 + 주간 카카오 알림톡"
+  - "B2C → 학원 화이트라벨 SaaS 확장"
+  - "공공누리 + 자체 출제 + AI 변형 문항 (라이선스 리스크 회피)"
+
+risks:
+  - level: critical
+    name: "콘텐츠 라이선스"
+    mitigation: "성취기준 코드(NCIC) 기반 자체 출제 + EBS 공공 + 출판사 Rev-share 협상"
+  - level: high
+    name: "채점 정확도"
+    mitigation: "정답 정규화 + 동치 사전 + LLM 폴백 + 오채점 신고 큐"
+  - level: high
+    name: "유저 이탈 D7"
+    mitigation: "스트릭·진척도·카톡 알림 / D7 < 50% 목표"
+  - level: medium
+    name: "LLM 호출 비용"
+    mitigation: "해설 사전 캐시 + 룰 80% / LLM 20%만 + 월 예산 상한"
+  - level: medium
+    name: "진단 콜드스타트"
+    mitigation: "신규 유저 진단고사 10문항 의무"
+
+roadmap:
+  - phase: "MVP"
+    months: "0~3"
+    goals: "중1 수학 3000문항 / 룰 진단 / 베타 100명 무료 / NPS·D7 측정"
+  - phase: "검증"
+    months: "3~6"
+    goals: "결제 도입 (전환율 5%) / 중2·중3 확장 / IRT + ML 진단 / 학부모 리포트 / 유료 500명"
+  - phase: "스케일"
+    months: "6~12"
+    goals: "국·영 추가 / 고등 진입 / 학원 B2B SaaS / MAU 5만 / 유료 5천 / Series A 준비"
