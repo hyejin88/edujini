@@ -67,28 +67,51 @@
   }
 }
 
-/* Print Styles */
+/* Print Styles — A4 학습지 강제 */
+@page {
+  size: A4;
+  margin: 16mm;
+}
+
 @media print {
   .no-print {
     display: none !important;
   }
-  
+
   .print-only {
     display: block !important;
   }
-  
-  body {
+
+  html, body {
     background: white !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  
+
+  /* 학습지 페이지 컨테이너 — 인쇄 시 그림자·여백 제거 */
+  .worksheet-page {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    background: white !important;
+  }
+
+  /* 각 문제 셀 — 페이지 사이로 잘리지 않도록 */
   .worksheet-problem {
     page-break-inside: avoid;
+    break-inside: avoid;
   }
-  
+
+  /* 한국어 단어 단위 줄바꿈 강제 */
+  body, p, span, div {
+    word-break: keep-all;
+  }
+
+  /* 답안지 — 별도 페이지 */
   .answer-key {
     page-break-before: always;
+    break-before: page;
   }
 }
 
