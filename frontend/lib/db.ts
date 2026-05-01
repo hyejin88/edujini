@@ -39,7 +39,31 @@ export interface SeedUnit {
   concepts: string[];
 }
 
-export const SEED_PROBLEMS: SeedProblem[] = seedData as SeedProblem[];
+// PoC 콘텐츠 품질 게이트 — Phase 1.5 v3 재생성 전까지 임시 필터.
+// 다음 패턴 중 하나라도 매칭되면 게시 보류 (학습지 톤 깨짐):
+//  · KaTeX 텍스트 도형 (\\begin{array}, ⋅⟶⟷ 같은 ASCII 도형)
+//  · 마크다운 다중 bullet 대화 (* 이름: ... * 이름: ...)
+//  · 본문 250자 초과 (분포 룰 위반)
+//  · 보기에 도형 묘사 (\\begin{array} 또는 큰 KaTeX 블록)
+function isPublishable(p: SeedProblem): boolean {
+  const body = p.body || "";
+  if (body.length > 250) return false;
+  if (/\\begin\{array\}/.test(body)) return false;
+  if (/[⟶⟷⋅]/.test(body)) return false;
+  // 마크다운 다중 bullet 대화 (3개 이상 친구 이름 list 패턴)
+  if ((body.match(/\*\s+[가-힣]+:/g) || []).length >= 3) return false;
+  // 보기에 도형 묘사
+  for (const c of p.choices || []) {
+    if (/\\begin\{array\}/.test(c)) return false;
+    if (/[⟶⟷⋅]{2,}/.test(c)) return false;
+    if (c.length > 80) return false;
+  }
+  return true;
+}
+
+export const SEED_PROBLEMS: SeedProblem[] = (seedData as SeedProblem[]).filter(
+  isPublishable
+);
 export const SEED_UNITS: SeedUnit[] = unitsData as SeedUnit[];
 
 const BY_ID = new Map<string, SeedProblem>(SEED_PROBLEMS.map((p) => [p.id, p]));
