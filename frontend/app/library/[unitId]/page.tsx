@@ -81,10 +81,20 @@ function MathText({ text, inline = false }: { text: string; inline?: boolean }) 
         } else if (part.type === "inline") {
           return <InlineMath key={i} math={part.content} />;
         }
-        // "(그림:...)" 메타 묘사는 학습지 본문에 부적합 → UI에서 완전 제거
-        // 데이터는 seed.json에 보존되지만 화면·인쇄에 노출되지 않음
-        const cleaned = part.content.replace(/\s*\(그림:[^)]*\)\s*/g, "");
-        return <span key={i}>{cleaned}</span>;
+        // 본문 후처리:
+        //  1) "(그림:..)" 메타 묘사 제거
+        //  2) 마크다운 bullet "* "/"- " → "· " 변환 (줄 시작 한정)
+        //  3) 한 줄에 여러 bullet이 인라인으로 붙은 케이스 → 각 bullet 앞에 줄바꿈
+        let cleaned = part.content.replace(/\s*\(그림:[^)]*\)\s*/g, "");
+        // 인라인 bullet 분리: " * " 또는 " - " 패턴을 줄바꿈 + "· "로 변환
+        cleaned = cleaned.replace(/\s+\*\s+/g, "\n· ").replace(/\s+-\s+/g, "\n· ");
+        // 줄 시작의 "* " / "- " 도 처리
+        cleaned = cleaned.replace(/^\*\s+/gm, "· ").replace(/^-\s+/gm, "· ");
+        return (
+          <span key={i} style={{ whiteSpace: "pre-line" }}>
+            {cleaned}
+          </span>
+        );
       })}
     </span>
   );
