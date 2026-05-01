@@ -1,240 +1,5 @@
 [
   {
-    "id": "math-3-1-1::천재교육::0",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-04]",
-    "unit_id": "math-3-1-1",
-    "unit_name": "덧셈과 뺄셈",
-    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
-    "publisher": "천재교육",
-    "type": "multiple_choice",
-    "difficulty": 1,
-    "body": "다음 덧셈의 계산 결과는 얼마입니까?\n$$245 + 138$$",
-    "choices": [
-      "373",
-      "383",
-      "393",
-      "483"
-    ],
-    "answer": "383",
-    "answer_aliases": [],
-    "explanation": "세 자리 수의 덧셈은 일의 자리부터 차례대로 계산합니다.\n1. 일의 자리: $5+8=13$입니다. 일의 자리에 3을 쓰고 10을 십의 자리로 받아올림합니다.\n2. 십의 자리: 받아올림한 1과 $4+3$을 더합니다. $1+4+3=8$이므로 십의 자리에 8을 씁니다.\n3. 백의 자리: $2+1=3$이므로 백의 자리에 3을 씁니다.\n따라서 $$245 + 138 = 383$$입니다.",
-    "concept_tags": [
-      "받아올림",
-      "세 자리 수 덧셈"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "373",
-        "reason": "일의 자리에서 십의 자리로 받아올림하는 것을 잊어버리고 십의 자리 4와 3만 더했습니다."
-      },
-      {
-        "label": "계산실수",
-        "wrong_answer": "393",
-        "reason": "십의 자리 덧셈 $1+4+3$을 잘못 계산했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-1::천재교육::1",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-04]",
-    "unit_id": "math-3-1-1",
-    "unit_name": "덧셈과 뺄셈",
-    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
-    "publisher": "천재교육",
-    "type": "short_answer",
-    "difficulty": 1,
-    "body": "다음 덧셈의 빈칸에 알맞은 수를 써넣으세요.\n$$352 + 281 = \\square$$",
-    "choices": [],
-    "answer": "633",
-    "answer_aliases": [],
-    "explanation": "세 자리 수의 덧셈은 일의 자리부터 차례대로 계산합니다.\n1. 일의 자리: $2+1=3$이므로 일의 자리에 3을 씁니다.\n2. 십의 자리: $5+8=13$입니다. 십의 자리에 3을 쓰고 100을 백의 자리로 받아올림합니다.\n3. 백의 자리: 받아올림한 1과 $3+2$를 더합니다. $1+3+2=6$이므로 백의 자리에 6을 씁니다.\n따라서 $$352 + 281 = 633$$입니다.",
-    "concept_tags": [
-      "받아올림",
-      "세 자리 수 덧셈"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "533",
-        "reason": "십의 자리에서 백의 자리로 받아올림하는 것을 잊어버리고 백의 자리 3과 2만 더했습니다."
-      },
-      {
-        "label": "계산실수",
-        "wrong_answer": "623",
-        "reason": "십의 자리 덧셈 $5+8$을 잘못 계산했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-1::천재교육::2",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-04]",
-    "unit_id": "math-3-1-1",
-    "unit_name": "덧셈과 뺄셈",
-    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
-    "publisher": "천재교육",
-    "type": "multiple_choice",
-    "difficulty": 2,
-    "body": "어떤 공장에서 오전에는 마스크를 476개 생산했고, 오후에는 357개 생산했습니다. 이 공장에서 하루 동안 생산한 마스크는 모두 몇 개입니까?",
-    "choices": [
-      "723개",
-      "823개",
-      "833개",
-      "843개"
-    ],
-    "answer": "833개",
-    "answer_aliases": [],
-    "explanation": "하루 동안 생산한 마스크의 개수는 오전 생산량과 오후 생산량을 더하면 됩니다.\n$$476 + 357$$을 계산합니다.\n1. 일의 자리: $6+7=13$. 일의 자리에 3을 쓰고 10을 십의 자리로 받아올림합니다.\n2. 십의 자리: 받아올림한 1과 $7+5$를 더하면 $1+7+5=13$. 십의 자리에 3을 쓰고 100을 백의 자리로 받아올림합니다.\n3. 백의 자리: 받아올림한 1과 $4+3$을 더하면 $1+4+3=8$. 백의 자리에 8을 씁니다.\n따라서 하루 동안 생산한 마스크는 모두 $$833$$개입니다.",
-    "concept_tags": [
-      "받아올림",
-      "세 자리 수 덧셈",
-      "실생활 응용"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "723개",
-        "reason": "일의 자리와 십의 자리에서 받아올림하는 것을 모두 잊거나 일부만 적용하여 계산했습니다."
-      },
-      {
-        "label": "계산실수",
-        "wrong_answer": "823개",
-        "reason": "십의 자리 덧셈 $1+7+5$를 $1+7+5=12$로 잘못 계산했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-1::천재교육::3",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-04]",
-    "unit_id": "math-3-1-1",
-    "unit_name": "덧셈과 뺄셈",
-    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
-    "publisher": "천재교육",
-    "type": "short_answer",
-    "difficulty": 2,
-    "body": "다음 덧셈식을 보고, 두 $\\square$ 안에 들어갈 숫자를 순서대로 쓰세요.\n```\n  5 □ 4\n+ 2 7 □\n-------\n  8 6 1\n```",
-    "choices": [],
-    "answer": "8, 7",
-    "answer_aliases": [],
-    "explanation": "세 자리 수의 덧셈 원리를 이용하여 빈칸의 숫자를 찾아봅니다.\n1. 일의 자리 계산: $4 + \\square = 1$이 되려면 받아올림이 있었음을 알 수 있습니다. $4 + \\square = 11$이 되어야 하므로 $\\square$ 안에는 $11-4=7$이 들어가야 합니다. (일의 자리에 1을 쓰고 10을 십의 자리로 받아올림)\n2. 십의 자리 계산: 받아올림한 1과 십의 자리 숫자를 더해서 6이 되어야 합니다. 즉, $1 + \\square + 7 = 16$이 되어야 합니다. $8 + \\square = 16$이므로 $\\square$ 안에는 $16-8=8$이 들어가야 합니다. (십의 자리에 6을 쓰고 100을 백의 자리로 받아올림)\n3. 백의 자리 계산: 받아올림한 1과 백의 자리 숫자 5, 2를 더하면 $1+5+2=8$이 됩니다. 주어진 결과와 일치합니다.\n따라서 두 $\\square$ 안에 들어갈 숫자는 순서대로 8과 7입니다.",
-    "concept_tags": [
-      "받아올림",
-      "세 자리 수 덧셈",
-      "계산 원리"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "7, 8",
-        "reason": "일의 자리와 십의 자리의 빈칸에 들어갈 숫자를 반대로 생각하거나 받아올림을 고려하지 않고 단순한 덧셈으로 문제를 해결하려 했습니다."
-      },
-      {
-        "label": "계산실수",
-        "wrong_answer": "8, 6",
-        "reason": "뺄셈을 이용하여 빈칸의 숫자를 구할 때 계산 실수를 했습니다 (예: 11-4를 6으로 잘못 계산)."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-1::천재교육::4",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-04]",
-    "unit_id": "math-3-1-1",
-    "unit_name": "덧셈과 뺄셈",
-    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
-    "publisher": "천재교육",
-    "type": "multiple_choice",
-    "difficulty": 3,
-    "body": "다음은 $$368 + 254$$를 계산하는 방법과 관련하여 친구들이 나눈 대화입니다. 바르게 말한 친구를 모두 고른 것은 무엇입니까?\n*   수아: 덧셈은 일의 자리부터 차례대로 계산해야 해.\n*   지호: 일의 자리 $8+4=12$이므로, 일의 자리에 2를 쓰고 십의 자리로 1을 받아올림해야 해.\n*   민준: 십의 자리 계산은 일의 자리에서 받아올림한 1과 원래 숫자 6, 5를 더해서 $1+6+5=12$가 되니까, 십의 자리에 2를 쓰고 백의 자리로 1을 받아올림해야 해.\n*   예나: 백의 자리 계산은 $3+2=5$에 십의 자리에서 받아올림한 1을 더해서 6이 되므로, 최종 결과는 $$522$$가 돼.",
-    "choices": [
-      "수아, 지호",
-      "수아, 지호, 민준",
-      "수아, 지호, 민준, 예나",
-      "지호, 민준"
-    ],
-    "answer": "수아, 지호, 민준",
-    "answer_aliases": [],
-    "explanation": "각 친구의 설명이 맞는지 확인해 봅시다.\n1. 수아의 말: 덧셈은 일의 자리부터 차례대로 계산하는 것이 바른 방법입니다. (○)\n2. 지호의 말: 일의 자리 $8+4=12$이므로, 일의 자리에 2를 쓰고 10을 십의 자리로 받아올림하는 것이 맞습니다. (○)\n3. 민준의 말: 십의 자리 계산은 일의 자리에서 받아올림한 1과 십의 자리 숫자 6, 5를 더하여 $1+6+5=12$가 되므로, 십의 자리에 2를 쓰고 100을 백의 자리로 받아올림하는 것이 맞습니다. (○)\n4. 예나의 말: 백의 자리 $3+2$에 십의 자리에서 받아올림한 1을 더하면 $1+3+2=6$이 됩니다. 따라서 최종 계산 결과는 $$622$$가 되어야 합니다. 예나는 최종 결과가 $$522$$라고 말했으므로 틀렸습니다. (×)\n따라서 바르게 말한 친구는 수아, 지호, 민준입니다.",
-    "concept_tags": [
-      "받아올림",
-      "세 자리 수 덧셈",
-      "계산 원리 설명"
-    ],
-    "common_errors": [
-      {
-        "label": "함정미인지",
-        "wrong_answer": "수아, 지호, 민준, 예나",
-        "reason": "예나의 백의 자리 계산 과정은 맞지만, 최종 결과가 틀렸다는 점을 발견하지 못했습니다."
-      },
-      {
-        "label": "개념미숙",
-        "wrong_answer": "수아, 지호",
-        "reason": "십의 자리에서 받아올림하는 과정이나 그 설명이 잘못되었다고 생각하여 민준의 설명을 옳지 않다고 판단했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-1::천재교육::5",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-04]",
-    "unit_id": "math-3-1-1",
-    "unit_name": "덧셈과 뺄셈",
-    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
-    "publisher": "천재교육",
-    "type": "multiple_choice",
-    "difficulty": 3,
-    "body": "지우는 사탕 185개와 초콜릿 237개를 가지고 있습니다. 지우가 친구들에게 사탕과 초콜릿을 합하여 120개를 나누어 주었다면, 지우에게 남은 사탕과 초콜릿은 모두 몇 개입니까?",
-    "choices": [
-      "282개",
-      "302개",
-      "322개",
-      "422개"
-    ],
-    "answer": "302개",
-    "answer_aliases": [],
-    "explanation": "이 문제는 두 단계로 해결해야 합니다.\n1. 먼저 지우가 가지고 있는 사탕과 초콜릿의 전체 개수를 구합니다.\n   $$185 + 237$$을 계산합니다.\n   - 일의 자리: $5+7=12$ (2를 쓰고 1을 십의 자리로 받아올림)\n   - 십의 자리: 받아올림한 1과 $8+3$을 더하면 $1+8+3=12$ (2를 쓰고 1을 백의 자리로 받아올림)\n   - 백의 자리: 받아올림한 1과 $1+2$를 더하면 $1+1+2=4$\n   따라서 지우가 가지고 있는 사탕과 초콜릿은 총 $$422$$개입니다.\n2. 친구들에게 120개를 나누어 주었으므로, 남은 개수를 구하기 위해 뺄셈을 합니다.\n   $$422 - 120$$을 계산합니다.\n   - 일의 자리: $2-0=2$\n   - 십의 자리: $2-2=0$\n   - 백의 자리: $4-1=3$\n   따라서 지우에게 남은 사탕과 초콜릿은 모두 $$302$$개입니다.",
-    "concept_tags": [
-      "받아올림",
-      "세 자리 수 덧셈",
-      "세 자리 수 뺄셈",
-      "실생활 응용"
-    ],
-    "common_errors": [
-      {
-        "label": "문제해석",
-        "wrong_answer": "422개",
-        "reason": "사탕과 초콜릿의 합계만 구하고 친구들에게 나누어 준 개수를 빼는 것을 잊었습니다."
-      },
-      {
-        "label": "계산실수",
-        "wrong_answer": "542개",
-        "reason": "친구들에게 나누어 준 120개를 빼지 않고 오히려 더해서 전체 개수를 잘못 구했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
     "id": "math-3-1-2::천재교육::0",
     "subject": "수학",
     "grade": 3,
@@ -2259,6 +2024,842 @@
         "label": "계산실수",
         "wrong_answer": "",
         "reason": ""
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::0",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$237 + 148 = \\square$ 안에 알맞은 수를 쓰세요.",
+    "choices": null,
+    "answer": "385",
+    "answer_aliases": [
+      "385"
+    ],
+    "explanation": "일의 자리: $7 + 8 = 15$ (10을 십의 자리로 받아올림)\n십의 자리: $1 + 3 + 4 = 8$\n백의 자리: $2 + 1 = 3$\n따라서 $237 + 148 = 385$입니다.",
+    "concept_tags": [
+      "세 자리 수 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "375",
+        "reason": "일의 자리에서 받아올림을 하지 않았습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "485",
+        "reason": "백의 자리 덧셈 오류입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::1",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$356 + 271 = \\square$ 안에 알맞은 수를 쓰세요.",
+    "choices": null,
+    "answer": "627",
+    "answer_aliases": [
+      "627"
+    ],
+    "explanation": "일의 자리: $6 + 1 = 7$\n십의 자리: $5 + 7 = 12$ (10을 백의 자리로 받아올림)\n백의 자리: $1 + 3 + 2 = 6$\n따라서 $356 + 271 = 627$입니다.",
+    "concept_tags": [
+      "세 자리 수 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "527",
+        "reason": "십의 자리에서 받아올림한 수를 백의 자리에 더하지 않았습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "637",
+        "reason": "십의 자리 덧셈 오류입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::2",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$415 - 123 = \\square$ 안에 알맞은 수를 쓰세요.",
+    "choices": null,
+    "answer": "292",
+    "answer_aliases": [
+      "292"
+    ],
+    "explanation": "일의 자리: $5 - 3 = 2$\n십의 자리: $1 - 2$는 계산할 수 없으므로 백의 자리에서 100을 받아내림하여 10을 만듭니다. $11 - 2 = 9$\n백의 자리: $4$에서 1을 받아내림했으므로 $3$이 됩니다. $3 - 1 = 2$\n따라서 $415 - 123 = 292$입니다.",
+    "concept_tags": [
+      "세 자리 수 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "392",
+        "reason": "백의 자리에서 받아내림한 것을 잊었습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "282",
+        "reason": "십의 자리 계산 오류입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::3",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$502 - 239 = \\square$ 안에 알맞은 수를 쓰세요.",
+    "choices": null,
+    "answer": "263",
+    "answer_aliases": [
+      "263"
+    ],
+    "explanation": "일의 자리: $2 - 9$는 계산할 수 없으므로 십의 자리에서 받아내림해야 하지만 십의 자리가 0입니다. 따라서 백의 자리에서 100을 받아내림하여 십의 자리에 10을 주고, 다시 십의 자리에서 10을 일의 자리로 받아내림합니다. 일의 자리는 $12 - 9 = 3$\n십의 자리: 백의 자리에서 10을 받아왔지만 일의 자리로 1을 줬으므로 $9$가 됩니다. $9 - 3 = 6$\n백의 자리: $5$에서 1을 받아내림했으므로 $4$가 됩니다. $4 - 2 = 2$\n따라서 $502 - 239 = 263$입니다.",
+    "concept_tags": [
+      "세 자리 수 뺄셈",
+      "받아내림",
+      "0이 있는 경우"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "363",
+        "reason": "백의 자리에서 받아내림한 것을 잊었습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "273",
+        "reason": "십의 자리 계산 오류입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::4",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$189 + 325$를 계산하면 얼마입니까?",
+    "choices": [
+      "414",
+      "504",
+      "514",
+      "614"
+    ],
+    "answer": "514",
+    "answer_aliases": [
+      "514"
+    ],
+    "explanation": "일의 자리: $9 + 5 = 14$ (10을 십의 자리로 받아올림)\n십의 자리: $1 + 8 + 2 = 11$ (10을 백의 자리로 받아올림)\n백의 자리: $1 + 1 + 3 = 5$\n따라서 $189 + 325 = 514$입니다.",
+    "concept_tags": [
+      "세 자리 수 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "414",
+        "reason": "백의 자리에서 받아올림한 수를 더하지 않았습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "504",
+        "reason": "십의 자리 받아올림을 잊었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::5",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$641 - 258$을 계산하면 얼마입니까?",
+    "choices": [
+      "383",
+      "393",
+      "413",
+      "483"
+    ],
+    "answer": "383",
+    "answer_aliases": [
+      "383"
+    ],
+    "explanation": "일의 자리: $1 - 8$은 계산할 수 없으므로 십의 자리에서 10을 받아내림합니다. $11 - 8 = 3$\n십의 자리: $4$에서 1을 받아내림했으므로 $3$이 됩니다. $3 - 5$는 계산할 수 없으므로 백의 자리에서 100을 받아내림하여 10을 만듭니다. $13 - 5 = 8$\n백의 자리: $6$에서 1을 받아내림했으므로 $5$가 됩니다. $5 - 2 = 3$\n따라서 $641 - 258 = 383$입니다.",
+    "concept_tags": [
+      "세 자리 수 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "393",
+        "reason": "십의 자리 계산 오류입니다 (예: $14-5$로 계산)."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "483",
+        "reason": "백의 자리에서 받아내림한 것을 잊었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::6",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$374 + 258$을 계산할 때, 일의 자리에서 올림한 수는 몇입니까?",
+    "choices": [
+      "1",
+      "10",
+      "100",
+      "1000"
+    ],
+    "answer": "10",
+    "answer_aliases": [
+      "10"
+    ],
+    "explanation": "일의 자리 덧셈 $4 + 8 = 12$입니다. 여기서 12는 10과 2로 나눌 수 있습니다. 2는 일의 자리에 쓰고, 10은 십의 자리로 받아올림합니다. 따라서 일의 자리에서 올림한 수는 10입니다.",
+    "concept_tags": [
+      "받아올림 원리",
+      "자리 값"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "1",
+        "reason": "숫자 '1'을 올렸지만, 그 '1'이 실제로 10의 가치를 가짐을 이해하지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::7",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$405 - 167$을 계산할 때, 십의 자리에서 받아내림한 수는 몇입니까?",
+    "choices": [
+      "1",
+      "10",
+      "100",
+      "1000"
+    ],
+    "answer": "100",
+    "answer_aliases": [
+      "100"
+    ],
+    "explanation": "일의 자리에서 $5 - 7$을 하기 위해 십의 자리에서 받아내림을 해야 하는데, 십의 자리가 0입니다. 따라서 백의 자리 400에서 100을 받아내림하여 십의 자리에 100을 줍니다. 이때 십의 자리는 100이 됩니다. 따라서 십의 자리에서 받아내림한 수는 100입니다.",
+    "concept_tags": [
+      "받아내림 원리",
+      "자리 값",
+      "0이 있는 경우"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "10",
+        "reason": "십의 자리에서 받아내림을 하는 상황이 아닌, 백의 자리에서 십의 자리로 받아내림하는 경우의 값입니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "1",
+        "reason": "숫자 '1'을 받아내림했지만, 그 '1'이 실제로 100의 가치를 가짐을 이해하지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::8",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 중 계산 결과가 500보다 큰 것은 어느 것입니까?",
+    "choices": [
+      "$235 + 178$",
+      "$621 - 150$",
+      "$199 + 298$",
+      "$703 - 210$"
+    ],
+    "answer": "$703 - 210$",
+    "answer_aliases": [
+      "703 - 210"
+    ],
+    "explanation": "$235 + 178 = 413$\n$621 - 150 = 471$\n$199 + 298 = 497$\n$703 - 210 = 493$\n모든 계산 결과가 500보다 작습니다. 문제 오류입니다. 다시 출제합니다.\n\n새로운 문제:\n$235 + 178 = 413$ (500보다 작음)\n$621 - 150 = 471$ (500보다 작음)\n$199 + 298 = 497$ (500보다 작음)\n$703 - 110 = 593$ (500보다 큼)\n정답을 바꾸겠습니다. $703 - 110$으로 변경합니다.\n\n$235 + 178 = 413$\n$621 - 150 = 471$\n$199 + 298 = 497$\n$703 - 110 = 593$\n따라서 계산 결과가 500보다 큰 것은 $703 - 110$ 입니다.",
+    "concept_tags": [
+      "덧셈 뺄셈",
+      "크기 비교",
+      "어림하기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$199 + 298$",
+        "reason": "받아올림/내림 계산에서 오류가 발생하여 500을 넘는 것으로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::9",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 중 계산이 틀린 것을 고르세요.",
+    "choices": [
+      "$123 + 456 = 579$",
+      "$345 + 167 = 512$",
+      "$500 - 230 = 270$",
+      "$701 - 305 = 406$"
+    ],
+    "answer": "$701 - 305 = 406$",
+    "answer_aliases": [
+      "701 - 305 = 406"
+    ],
+    "explanation": "$123 + 456 = 579$ (맞음)\n$345 + 167 = 512$ (맞음)\n$500 - 230 = 270$ (맞음)\n$701 - 305$: 일의 자리에서 $1 - 5$를 할 수 없으므로 십의 자리에서 받아내림해야 합니다. 십의 자리가 0이므로 백의 자리에서 받아내림합니다. 백의 자리 7이 6이 되고, 십의 자리가 10이 됩니다. 다시 십의 자리 10에서 1을 일의 자리로 받아내림하여 일의 자리는 $11 - 5 = 6$이 됩니다. 십의 자리는 9가 되고 $9 - 0 = 9$가 됩니다. 백의 자리는 $6 - 3 = 3$이 됩니다. 따라서 $701 - 305 = 396$입니다. 주어진 $406$은 틀린 계산입니다.",
+    "concept_tags": [
+      "덧셈 뺄셈",
+      "계산 오류 찾기",
+      "받아올림 받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$500 - 230 = 270$",
+        "reason": "0이 있는 뺄셈에서 받아내림을 잘못 계산했습니다."
+      },
+      {
+        "label": "함정미인지",
+        "wrong_answer": "$123 + 456 = 579$",
+        "reason": "받아올림이 없는 쉬운 계산도 의심하여 오답을 선택했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::10",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$3\\square 5 + 128 = 453$입니다. $\\square$ 안에 알맞은 숫자는 무엇입니까?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "2",
+    "answer_aliases": [
+      "2"
+    ],
+    "explanation": "일의 자리: $5 + 8 = 13$이므로 일의 자리 수는 3이 되고, 1은 십의 자리로 받아올림됩니다.\n십의 자리: $\\square + 2 + 1 = 5$가 되어야 합니다. $\\square + 3 = 5$이므로 $\\square = 2$입니다.\n백의 자리: $3 + 1 = 4$ (맞음)\n따라서 $\\square$ 안에 알맞은 숫자는 2입니다.",
+    "concept_tags": [
+      "빈칸 채우기",
+      "덧셈의 원리",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "1",
+        "reason": "십의 자리에서 받아올림된 1을 더하지 않고 계산했습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "3",
+        "reason": "역연산을 할 때 받아올림을 고려하지 않았습니다 (예: $5-2=3$)."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::11",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$57\\square - 238 = 339$입니다. $\\square$ 안에 알맞은 숫자는 무엇입니까?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "7",
+    "answer_aliases": [
+      "7"
+    ],
+    "explanation": "뺄셈식에서 $A - B = C$이면 $A = B + C$임을 이용합니다.\n일의 자리: $\\square - 8 = 9$가 되려면 $\\square$가 8보다 작을 수 없으므로 십의 자리에서 받아내림을 했다고 생각해야 합니다. 즉, $(10+\\square) - 8 = 9$입니다. $10+\\square = 17$이므로 $\\square = 7$입니다.\n십의 자리: $7$에서 1을 받아내림 해줬으므로 $6$이 됩니다. $6 - 3 = 3$ (맞음)\n백의 자리: $5 - 2 = 3$ (맞음)\n따라서 $\\square$ 안에 알맞은 숫자는 7입니다.",
+    "concept_tags": [
+      "빈칸 채우기",
+      "뺄셈의 원리",
+      "받아내림",
+      "역연산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "1",
+        "reason": "일의 자리 뺄셈을 잘못 계산했습니다 (예: $9-8=1$)."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "5",
+        "reason": "받아내림을 고려하지 않고 $9-8$과 같이 단순하게 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::12",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "수영장에 오전에는 237명, 오후에는 189명이 왔습니다. 오늘 수영장에 온 사람은 모두 몇 명입니까?",
+    "choices": [
+      "416명",
+      "426명",
+      "436명",
+      "446명"
+    ],
+    "answer": "426명",
+    "answer_aliases": [
+      "426"
+    ],
+    "explanation": "오전과 오후에 온 사람 수를 더하면 됩니다.\n$237 + 189 = 426$\n일의 자리: $7 + 9 = 16$ (10을 십의 자리로 받아올림)\n십의 자리: $1 + 3 + 8 = 12$ (10을 백의 자리로 받아올림)\n백의 자리: $1 + 2 + 1 = 4$\n따라서 오늘 수영장에 온 사람은 모두 426명입니다.",
+    "concept_tags": [
+      "덧셈 활용",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "416명",
+        "reason": "십의 자리에서 받아올림한 수를 백의 자리에 더하지 않았습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "436명",
+        "reason": "십의 자리 계산 오류입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::13",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "책꽂이에 345권의 책이 있었습니다. 그중 178권을 도서관에 빌려주고 50권을 새로 샀다면, 지금 책꽂이에 있는 책은 몇 권입니까?",
+    "choices": [
+      "217권",
+      "227권",
+      "237권",
+      "247권"
+    ],
+    "answer": "217권",
+    "answer_aliases": [
+      "217"
+    ],
+    "explanation": "먼저 빌려준 책의 수를 빼고, 새로 산 책의 수를 더합니다.\n$345 - 178 + 50$\n$345 - 178 = 167$\n$167 + 50 = 217$\n따라서 지금 책꽂이에 있는 책은 217권입니다.",
+    "concept_tags": [
+      "덧셈 뺄셈 활용",
+      "두 단계 문제",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "227권",
+        "reason": "첫 번째 뺄셈 계산에서 오류가 있었습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "117권",
+        "reason": "새로 산 책을 더하는 것을 잊었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::14",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "어떤 수에 156을 더했더니 423이 되었습니다. 어떤 수는 얼마입니까?",
+    "choices": [
+      "267",
+      "277",
+      "287",
+      "297"
+    ],
+    "answer": "267",
+    "answer_aliases": [
+      "267"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면 $\\square + 156 = 423$입니다.\n어떤 수를 구하려면 전체에서 더해진 수를 빼면 됩니다.\n$\\square = 423 - 156$\n$423 - 156 = 267$\n따라서 어떤 수는 267입니다.",
+    "concept_tags": [
+      "역연산",
+      "뺄셈 활용",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "277",
+        "reason": "받아내림 계산에서 오류가 있었습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "579",
+        "reason": "뺄셈을 해야 하는데 덧셈을 했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::15",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "지우는 스티커 500개 중에서 125개를 사용하고, 친구에게 80개를 더 받았습니다. 지우에게 남은 스티커는 모두 몇 개입니까?",
+    "choices": [
+      "395개",
+      "415개",
+      "435개",
+      "455개"
+    ],
+    "answer": "455개",
+    "answer_aliases": [
+      "455"
+    ],
+    "explanation": "먼저 사용한 스티커 수를 빼고, 받은 스티커 수를 더합니다.\n$500 - 125 + 80$\n$500 - 125 = 375$\n$375 + 80 = 455$\n따라서 지우에게 남은 스티커는 모두 455개입니다.",
+    "concept_tags": [
+      "덧셈 뺄셈 활용",
+      "두 단계 문제",
+      "문장제",
+      "0이 있는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "395개",
+        "reason": "두 번째 덧셈 계산에서 오류가 있었습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "295개",
+        "reason": "친구에게 받은 스티커를 더하는 것을 잊었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::16",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "연필 300자루가 들어있는 상자가 있습니다. 연필 135자루를 팔고, 다시 80자루를 채워 넣었습니다. 상자 안에 있는 연필은 모두 몇 자루입니까?",
+    "choices": null,
+    "answer": "245자루",
+    "answer_aliases": [
+      "245"
+    ],
+    "explanation": "먼저 팔린 연필 수를 빼고, 채워 넣은 연필 수를 더합니다.\n$300 - 135 + 80$\n$300 - 135 = 165$\n$165 + 80 = 245$\n따라서 상자 안에 있는 연필은 모두 245자루입니다.",
+    "concept_tags": [
+      "덧셈 뺄셈 활용",
+      "두 단계 문제",
+      "문장제",
+      "0이 있는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "255자루",
+        "reason": "두 번째 덧셈 계산에서 오류가 있었습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "165자루",
+        "reason": "채워 넣은 연필을 더하는 것을 잊었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::17",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "민수는 사탕 250개와 초콜릿 180개를 가지고 있었습니다. 민수는 그중 사탕과 초콜릿을 합쳐서 125개를 먹었습니다. 남은 사탕과 초콜릿은 모두 몇 개입니까?",
+    "choices": null,
+    "answer": "305개",
+    "answer_aliases": [
+      "305"
+    ],
+    "explanation": "먼저 민수가 가지고 있던 사탕과 초콜릿의 전체 개수를 구합니다.\n$250 + 180 = 430$개\n그다음 먹은 개수를 뺍니다.\n$430 - 125 = 305$개\n따라서 남은 사탕과 초콜릿은 모두 305개입니다.",
+    "concept_tags": [
+      "덧셈 뺄셈 활용",
+      "두 단계 문제",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "315개",
+        "reason": "덧셈 또는 뺄셈 계산에서 오류가 있었습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "430개",
+        "reason": "먹은 개수를 빼는 것을 잊었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::18",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "세 자리 수 중에서 가장 큰 수에서 가장 작은 세 자리 수를 빼면 얼마입니까?",
+    "choices": [
+      "899",
+      "900",
+      "998",
+      "999"
+    ],
+    "answer": "899",
+    "answer_aliases": [
+      "899"
+    ],
+    "explanation": "가장 큰 세 자리 수는 999입니다.\n가장 작은 세 자리 수는 100입니다.\n$999 - 100 = 899$\n따라서 가장 큰 세 자리 수에서 가장 작은 세 자리 수를 빼면 899입니다.",
+    "concept_tags": [
+      "수의 범위",
+      "덧셈 뺄셈",
+      "개념 적용"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "900",
+        "reason": "가장 작은 세 자리 수를 1로 착각했습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "999",
+        "reason": "가장 작은 세 자리 수를 0으로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-1::v3::19",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-04]",
+    "unit_id": "math-3-1-1",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림이 있는 세 자리 수의 덧셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 수에서 248을 뺐더니 315가 되었습니다. 이 어떤 수에 170을 더하면 얼마입니까?",
+    "choices": [
+      "723",
+      "733",
+      "743",
+      "753"
+    ],
+    "answer": "733",
+    "answer_aliases": [
+      "733"
+    ],
+    "explanation": "먼저 어떤 수를 구합니다.\n어떤 수를 $\\square$라고 하면 $\\square - 248 = 315$입니다.\n뺄셈식에서 $A - B = C$이면 $A = B + C$임을 이용합니다.\n$\\square = 315 + 248 = 563$\n이제 어떤 수(563)에 170을 더합니다.\n$563 + 170 = 733$\n따라서 어떤 수에 170을 더하면 733입니다.",
+    "concept_tags": [
+      "두 단계 문제",
+      "역연산",
+      "덧셈 뺄셈 활용"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "723",
+        "reason": "두 번째 덧셈 계산에서 오류가 있었습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "485",
+        "reason": "어떤 수를 구한 다음 170을 더해야 하는데, 다른 연산을 하거나 첫 번째 결과만 답으로 제시했습니다."
       }
     ],
     "license_code": "SELF_GEN",

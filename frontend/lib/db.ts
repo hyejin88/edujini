@@ -39,20 +39,28 @@ export interface SeedUnit {
   concepts: string[];
 }
 
-// PoC 콘텐츠 품질 게이트 — Phase 1.5 v3 재생성 전까지 임시 필터.
-// 다음 패턴 중 하나라도 매칭되면 게시 보류 (학습지 톤 깨짐):
-//  · KaTeX 텍스트 도형 (\\begin{array}, ⋅⟶⟷ 같은 ASCII 도형)
-//  · 마크다운 다중 bullet 대화 (* 이름: ... * 이름: ...)
-//  · 본문 250자 초과 (분포 룰 위반)
-//  · 보기에 도형 묘사 (\\begin{array} 또는 큰 KaTeX 블록)
+// PoC Phase 1.5 단원 화이트리스트 — 3학년 1단원(덧셈과 뺄셈)만 게시.
+// 나머지 단원은 v3 보강 후 순차 활성화.
+const PUBLISHED_UNITS = new Set<string>([
+  "math-3-1-1", // 덧셈과 뺄셈
+]);
+
+// 콘텐츠 품질 게이트 — v3 재생성 전까지 임시 필터:
+//  · 단원 화이트리스트
+//  · 본문 250자 초과
+//  · KaTeX 텍스트 도형 (\\begin{array}, ⋅⟶⟷)
+//  · 마크다운 다중 bullet 대화
+//  · 보기에 도형 묘사 / 80자 초과 / 보기 중복 노출 (본문 안에 ① ② ③ ④ 패턴)
 function isPublishable(p: SeedProblem): boolean {
+  if (!PUBLISHED_UNITS.has(p.unit_id)) return false;
   const body = p.body || "";
   if (body.length > 250) return false;
   if (/\\begin\{array\}/.test(body)) return false;
-  if (/[⟶⟷⋅]/.test(body)) return false;
-  // 마크다운 다중 bullet 대화 (3개 이상 친구 이름 list 패턴)
+  if (/[⟶⟷]/.test(body)) return false;
+  if ((body.match(/⋅/g) || []).length >= 2) return false;
   if ((body.match(/\*\s+[가-힣]+:/g) || []).length >= 3) return false;
-  // 보기에 도형 묘사
+  // 보기 번호가 본문에 중복 노출된 케이스 (LLM이 본문에 ① ② ③ ④ + choices에 또 추가)
+  if ((body.match(/[①②③④⑤]/g) || []).length >= 3) return false;
   for (const c of p.choices || []) {
     if (/\\begin\{array\}/.test(c)) return false;
     if (/[⟶⟷⋅]{2,}/.test(c)) return false;
