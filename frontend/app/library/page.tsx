@@ -127,7 +127,12 @@ function LibraryContent() {
           </div>
         )}
 
-        <AdSlot slot="LIBRARY_BOTTOM" format="auto" className="mt-12" />
+        {/* 작은 광고 1개 — 단원 그리드 한참 아래, 푸터 위. 학습지 페이지엔 절대 광고 없음 */}
+        <AdSlot
+          slot="LIBRARY_BOTTOM"
+          format="rectangle"
+          className="mx-auto mt-16 max-w-sm opacity-90"
+        />
       </main>
     </div>
   );

@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
-import { AdSlot } from "@/components/AdSlot";
 
 const grades = [
   { value: 1, label: "초1" },
@@ -108,12 +107,6 @@ export default function LandingPage() {
       </section>
 
       {/* Free Tier Section */}
-      <AdSlot
-        slot="HOME_HERO"
-        format="horizontal"
-        className="mx-auto my-8 max-w-4xl px-4"
-      />
-
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-4xl px-4">
           <div className="grid gap-4 md:grid-cols-3">
