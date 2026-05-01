@@ -1,4 +1,4 @@
-# EduQA 최종 기획·전략 보고서 v2 — Claude + Gemini 1인 운영
+# Edujini 최종 기획·전략 보고서 v2 — Claude + Gemini 1인 운영
 
 **작성일**: 2026-04-30
 **v2 변경 핵심**: 외주·풀스택 채용 → **정혜진 1인 + Claude Code(개발/QA) + Gemini API(콘텐츠)**

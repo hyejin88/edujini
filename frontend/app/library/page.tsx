@@ -1,78 +1,130 @@
 "use client";
 
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowLeft, Printer } from "lucide-react";
-import { units, getGradeLabel } from "@/lib/data";
-import { Suspense } from "react";
+import { Lock, ArrowLeft, Printer, FileText } from "lucide-react";
+import {
+  fetchUnits,
+  getPlayedUnits,
+  FREE_UNIT_LIMIT,
+  type UnitDTO,
+} from "@/lib/client";
+
+function gradeLabel(g: number): string {
+  if (g <= 6) return `초${g}`;
+  if (g <= 9) return `중${g - 6}`;
+  return `고${g - 9}`;
+}
 
 function LibraryContent() {
   const searchParams = useSearchParams();
-  const grade = parseInt(searchParams.get("grade") || "3");
+  const grade = parseInt(searchParams.get("grade") || "3", 10);
   const subject = searchParams.get("subject") || "수학";
 
-  const freeUnitsCount = units.filter((u) => u.available).length;
+  const [units, setUnits] = useState<UnitDTO[]>([]);
+  const [played, setPlayed] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPlayed(getPlayedUnits());
+    fetchUnits(grade, subject)
+      .then(setUnits)
+      .catch((e) => setError(e.message))
+      .finally(() => setLoading(false));
+  }, [grade, subject]);
+
+  const available = units.filter((u) => u.available);
+  const upcoming = units.filter((u) => !u.available);
+  const left = Math.max(0, FREE_UNIT_LIMIT - played.length);
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <header className="border-b border-border bg-background">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-          <div className="flex items-center gap-4">
-            <Link
-              href="/"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              홈으로
-            </Link>
-          </div>
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            홈으로
+          </Link>
           <Link href="/" className="text-lg font-bold text-foreground">
-            EduQA
+            Edujini
           </Link>
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="mx-auto max-w-5xl px-4 py-8">
-        {/* Title Section */}
         <div className="mb-8 flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-foreground">
-              {getGradeLabel(grade)} · {subject}
+              {gradeLabel(grade)} · {subject}
             </h1>
             <p className="mt-1 text-sm text-muted-foreground">
-              단원별 학습지를 선택하세요
+              단원별 학습지를 선택하세요. 단원당 20문항 · 인쇄 가능
             </p>
           </div>
           <Badge
             variant="secondary"
             className="bg-primary/10 text-primary hover:bg-primary/10"
           >
-            무료 {freeUnitsCount}/{units.length} 단원
+            무료 {left}/{FREE_UNIT_LIMIT} 단원
           </Badge>
         </div>
 
-        {/* Unit Grid */}
-        <div className="grid gap-4 md:grid-cols-2">
-          {units.map((unit, index) => (
-            <UnitCard key={unit.id} unit={unit} index={index} grade={grade} />
-          ))}
-        </div>
-
-        {/* Upcoming Section */}
-        <div className="mt-12">
-          <h2 className="mb-4 text-lg font-semibold text-foreground">
-            준비 중인 단원
-          </h2>
-          <div className="rounded-lg border border-dashed border-border bg-muted/30 p-8 text-center">
-            <p className="text-sm text-muted-foreground">
-              추가 단원이 곧 업데이트됩니다
-            </p>
+        {loading ? (
+          <div className="rounded-lg border border-border p-10 text-center text-muted-foreground">
+            단원 불러오는 중...
           </div>
-        </div>
+        ) : error ? (
+          <div className="rounded-lg border border-destructive/30 bg-destructive/5 p-6 text-sm text-destructive">
+            {error}
+          </div>
+        ) : available.length === 0 ? (
+          <Card className="p-10 text-center">
+            <FileText className="mx-auto mb-3 h-8 w-8 text-muted-foreground" />
+            <p className="text-sm text-muted-foreground">
+              아직 이 학년·과목에 등록된 단원이 없어요.
+            </p>
+          </Card>
+        ) : (
+          <div className="grid gap-4 md:grid-cols-2">
+            {available.map((unit, index) => (
+              <UnitCard
+                key={unit.id}
+                unit={unit}
+                index={index}
+                isPlayed={played.includes(unit.id)}
+                isLockedByLimit={
+                  !played.includes(unit.id) && played.length >= FREE_UNIT_LIMIT
+                }
+              />
+            ))}
+          </div>
+        )}
+
+        {upcoming.length > 0 && (
+          <div className="mt-12">
+            <h2 className="mb-4 text-lg font-semibold text-foreground">
+              준비 중인 단원
+            </h2>
+            <div className="grid gap-2 md:grid-cols-2">
+              {upcoming.map((u) => (
+                <div
+                  key={u.id}
+                  className="rounded-lg border border-dashed border-border bg-muted/30 px-4 py-3 text-sm text-muted-foreground"
+                >
+                  {u.unit_name}
+                  <span className="ml-2 text-[11px]">{u.standard_code}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );
@@ -81,43 +133,36 @@ function LibraryContent() {
 function UnitCard({
   unit,
   index,
-  grade,
+  isPlayed,
+  isLockedByLimit,
 }: {
-  unit: (typeof units)[0];
+  unit: UnitDTO;
   index: number;
-  grade: number;
+  isPlayed: boolean;
+  isLockedByLimit: boolean;
 }) {
-  const isLocked = !unit.available;
-
-  const cardContent = (
+  const inner = (
     <Card
       className={`group border border-border p-5 transition-all ${
-        isLocked
+        isLockedByLimit
           ? "bg-muted/30"
           : "cursor-pointer hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-sm"
       }`}
     >
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          {/* Unit Name */}
           <h3 className="mb-2 text-base font-bold text-foreground">
             {unit.unit_name}
           </h3>
-
-          {/* Sub Unit */}
           <p className="mb-3 text-sm text-muted-foreground">{unit.sub_unit}</p>
-
-          {/* Standard Code */}
           <Badge
             variant="outline"
             className="mb-3 border-border text-xs font-mono"
           >
-            [{unit.standard_code}]
+            {unit.standard_code}
           </Badge>
-
-          {/* Concept Tags */}
           <div className="mb-4 flex flex-wrap gap-1.5">
-            {unit.concepts.map((concept) => (
+            {unit.concepts.slice(0, 4).map((concept) => (
               <span
                 key={concept}
                 className="rounded-full bg-secondary px-2 py-0.5 text-xs text-secondary-foreground"
@@ -126,17 +171,18 @@ function UnitCard({
               </span>
             ))}
           </div>
-
-          {/* Meta */}
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <Printer className="h-3.5 w-3.5" />
             <span>{unit.problem_count}문항 · 인쇄 가능</span>
+            {isPlayed && (
+              <span className="ml-2 rounded-full bg-green-100 px-2 py-0.5 text-green-700">
+                ✓ 풀이중
+              </span>
+            )}
           </div>
         </div>
-
-        {/* Lock Icon or Index */}
         <div className="ml-4">
-          {isLocked ? (
+          {isLockedByLimit ? (
             <div className="flex flex-col items-center gap-1">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted">
                 <Lock className="h-4 w-4 text-muted-foreground" />
@@ -152,14 +198,12 @@ function UnitCard({
       </div>
     </Card>
   );
-
-  if (isLocked) {
-    return cardContent;
+  if (isLockedByLimit) {
+    return (
+      <Link href={`/result?lock=${encodeURIComponent(unit.id)}`}>{inner}</Link>
+    );
   }
-
-  return (
-    <Link href={`/library/${unit.id}?grade=${grade}`}>{cardContent}</Link>
-  );
+  return <Link href={`/library/${encodeURIComponent(unit.id)}`}>{inner}</Link>;
 }
 
 export default function LibraryPage() {

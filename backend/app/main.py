@@ -1,4 +1,4 @@
-"""EduQA Backend — FastAPI Entry Point.
+"""Edujini Backend — FastAPI Entry Point.
 
 Render Free Web Service 배포용. 무료 호스팅이라 15분 idle 후 sleep,
 첫 요청 30초 cold start. Phase 2 유료 진입 시 Render Starter ($7/mo) 또는
@@ -14,14 +14,14 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    app_name: str = "EduQA"
+    app_name: str = "Edujini"
     env: str = "development"
     cors_origins: list[str] = [
         "http://localhost:3000",
         "http://127.0.0.1:3000",
         "http://localhost:3030",
         "http://127.0.0.1:3030",
-        "https://eduqa.vercel.app",
+        "https://edujini.vercel.app",
     ]
 
     supabase_db_url: str = ""

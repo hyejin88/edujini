@@ -21,7 +21,6 @@ const grades = [
 
 const subjects = [
   { value: "수학", label: "수학" },
-  { value: "국어", label: "국어" },
 ];
 
 export default function LandingPage() {
@@ -234,7 +233,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="py-12">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="mb-2 text-sm font-medium text-foreground">EduQA</p>
+          <p className="mb-2 text-sm font-medium text-foreground">Edujini</p>
           <p className="mb-4 text-sm text-muted-foreground">
             NCIC 성취기준 기반 체계적인 학습지
           </p>

@@ -1,4 +1,4 @@
-# EduQA — 무료 인프라 0원 셋업 가이드
+# Edujini — 무료 인프라 0원 셋업 가이드
 
 **작성일**: 2026-05-01
 **전제**: 사업자등록 X · 무료 도메인 + 무료 호스팅으로 즉시 시작
@@ -10,7 +10,7 @@
 
 | 영역 | 서비스 | 무료 한도 | 가입 |
 |---|---|---|---|
-| **도메인** | Vercel 서브도메인 (`eduqa.vercel.app`) | 영구 무료 | Vercel 계정 자동 |
+| **도메인** | Vercel 서브도메인 (`edujini.vercel.app`) | 영구 무료 | Vercel 계정 자동 |
 | **프론트엔드 호스팅** | Vercel Hobby | 100GB 트래픽 / 월 | https://vercel.com |
 | **백엔드 호스팅** | Render Free Web Service | 512MB RAM / 750h/월 | https://render.com |
 | **DB** | Supabase Free | 500MB DB / 1GB 스토리지 / 50K MAU | https://supabase.com |
@@ -32,17 +32,17 @@
 
 ### 1.1 GitHub 계정 (코드 저장소)
 - 이미 있으시면 스킵. 없으면 https://github.com 가입
-- `eduqa` 이름으로 **Private repo** 생성 (Settings에서 Personal Access Token 발급 — 권한: repo, workflow)
+- `edujini` 이름으로 **Private repo** 생성 (Settings에서 Personal Access Token 발급 — 권한: repo, workflow)
 
 ### 1.2 Vercel (프론트엔드 + 도메인)
 - https://vercel.com → GitHub 로그인
 - 자동으로 `*.vercel.app` 서브도메인 무료 제공
-- → 결과 URL 예: `eduqa.vercel.app`
+- → 결과 URL 예: `edujini.vercel.app`
 
 ### 1.3 Supabase (DB + Auth + Storage)
 - https://supabase.com → GitHub 로그인
 - Region: **Northeast Asia (Seoul)** 선택
-- `eduqa` 프로젝트 생성 → DB 비밀번호 안전 저장 (자동 생성 권장)
+- `edujini` 프로젝트 생성 → DB 비밀번호 안전 저장 (자동 생성 권장)
 - Settings → API → `anon` key, `service_role` key, Project URL 복사
 
 ### 1.4 Render (백엔드 호스팅 — FastAPI)
@@ -130,7 +130,7 @@ edutech_qa/
 ## 3. 도메인 결정
 
 ### MVP (지금)
-**`eduqa.vercel.app`** — Vercel 무료 서브도메인. 즉시 사용 가능. SSL 자동.
+**`edujini.vercel.app`** — Vercel 무료 서브도메인. 즉시 사용 가능. SSL 자동.
 
 ### Phase 2 (선택 — 6개월 차)
 유료 전환 후 브랜드용 도메인 결정 시점. 옵션:
@@ -142,7 +142,7 @@ edutech_qa/
 | 가비아 `.kr` | ₩22K/년 | 한국 브랜드 명확 |
 | Freenom `.tk/.ml` 등 | ₩0 | **권장 X** (서비스 불안정·블랙리스트 위험) |
 
-→ **MVP는 `eduqa.vercel.app` 그대로**. 유료 전환 검증 후에만 도메인 ₩15K~22K 투자.
+→ **MVP는 `edujini.vercel.app` 그대로**. 유료 전환 검증 후에만 도메인 ₩15K~22K 투자.
 
 ---
 
@@ -193,7 +193,7 @@ edutech_qa/
 
 | # | 액션 | 시간 |
 |---|---|---|
-| 1 | GitHub `eduqa` private repo 생성 | 2분 |
+| 1 | GitHub `edujini` private repo 생성 | 2분 |
 | 2 | Vercel·Supabase·Render·Google AI Studio·Cloudflare·Resend 6개 가입 | 30분 |
 | 3 | 각 서비스 API 키 `.env.local` 에 저장 (Claude가 템플릿 작성) | 5분 |
 | 4 | Claude Code에 "**계속 진행해**" 입력 — 백엔드/프론트 스켈레톤 자동 생성 | 0분 (자동) |
@@ -209,12 +209,12 @@ edutech_qa/
 ```bash
 cd /Users/hyejin/Documents/generalv1/edutech_qa
 git init
-git remote add origin https://github.com/hyejin/eduqa.git
+git remote add origin https://github.com/hyejin/edujini.git
 git add . && git commit -m "init: project scaffolding"
 git push -u origin main
 ```
 
-이후 Vercel 대시보드에서 GitHub 레포 import → 자동 배포 시작 → `eduqa.vercel.app` 도메인 활성화.
+이후 Vercel 대시보드에서 GitHub 레포 import → 자동 배포 시작 → `edujini.vercel.app` 도메인 활성화.
 
 **Claude Code가 다음 단계로 진행할 작업**:
 1. `.env.example` 템플릿 작성

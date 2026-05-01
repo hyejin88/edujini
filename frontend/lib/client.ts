@@ -1,11 +1,39 @@
-import type { Problem, Unit } from "./data";
+// Browser API client (calls /api/* same origin)
+// Used by client components.
 
-const BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8765";
+export interface UnitDTO {
+  id: string;
+  subject: string;
+  grade: number;
+  unit_name: string;
+  sub_unit: string;
+  standard_code: string;
+  concepts: string[];
+  problem_count: number;
+  available: boolean;
+}
 
-export async function fetchUnits(grade: number, subject = "수학"): Promise<Unit[]> {
-  const url = `${BASE}/api/v1/units?grade=${grade}&subject=${encodeURIComponent(subject)}`;
-  const r = await fetch(url, { cache: "no-store" });
-  if (!r.ok) throw new Error("단원 목록을 불러오지 못했어요");
+export interface ProblemDTO {
+  id: string;
+  subject: string;
+  grade: number;
+  unit_id: string;
+  unit_name: string;
+  publisher: string;
+  type: "multiple_choice" | "short_answer";
+  difficulty: number;
+  body: string;
+  choices?: string[] | null;
+  concept_tags: string[];
+  answer?: string;
+  explanation?: string;
+}
+
+export async function fetchUnits(grade: number, subject = "수학"): Promise<UnitDTO[]> {
+  const r = await fetch(`/api/units?grade=${grade}&subject=${encodeURIComponent(subject)}`, {
+    cache: "no-store",
+  });
+  if (!r.ok) throw new Error("단원 불러오기 실패");
   return r.json();
 }
 
@@ -13,12 +41,14 @@ export async function fetchUnitProblems(
   unitId: string,
   limit = 20,
   includeAnswers = false
-): Promise<Problem[]> {
+): Promise<ProblemDTO[]> {
   const params = new URLSearchParams({ limit: String(limit) });
   if (includeAnswers) params.set("include_answers", "true");
-  const url = `${BASE}/api/v1/units/${encodeURIComponent(unitId)}/problems?${params}`;
-  const r = await fetch(url, { cache: "no-store" });
-  if (!r.ok) throw new Error("문항을 불러오지 못했어요");
+  const r = await fetch(
+    `/api/units/${encodeURIComponent(unitId)}/problems?${params}`,
+    { cache: "no-store" }
+  );
+  if (!r.ok) throw new Error("문항 불러오기 실패");
   return r.json();
 }
 
@@ -40,12 +70,12 @@ export async function gradeBatch(
   userId: string,
   answers: { problem_id: string; user_answer: string }[]
 ): Promise<BatchGradeResult> {
-  const r = await fetch(`${BASE}/api/v1/grade`, {
+  const r = await fetch("/api/grade", {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ user_id: userId, answers }),
   });
-  if (!r.ok) throw new Error("채점에 실패했어요");
+  if (!r.ok) throw new Error("채점 실패");
   return r.json();
 }
 
@@ -66,7 +96,7 @@ export interface DiagnosisResp {
 }
 
 export async function getDiagnosis(userId: string): Promise<DiagnosisResp> {
-  const r = await fetch(`${BASE}/api/v1/diagnose/${userId}`, { cache: "no-store" });
+  const r = await fetch(`/api/diagnose/${userId}`, { cache: "no-store" });
   if (!r.ok) throw new Error("진단 실패");
   return r.json();
 }
@@ -88,7 +118,7 @@ export async function getParentReport(
   childName = "OO"
 ): Promise<ParentReportResp> {
   const r = await fetch(
-    `${BASE}/api/v1/report/${userId}?child_name=${encodeURIComponent(childName)}`,
+    `/api/report/${userId}?child_name=${encodeURIComponent(childName)}`,
     { cache: "no-store" }
   );
   if (!r.ok) throw new Error("리포트 실패");
@@ -97,10 +127,10 @@ export async function getParentReport(
 
 export function makeUserId(): string {
   if (typeof window === "undefined") return "anon";
-  let id = window.localStorage.getItem("eduqa_uid");
+  let id = window.localStorage.getItem("edujini_uid");
   if (!id) {
     id = "u_" + Math.random().toString(36).slice(2, 10);
-    window.localStorage.setItem("eduqa_uid", id);
+    window.localStorage.setItem("edujini_uid", id);
   }
   return id;
 }
@@ -108,7 +138,7 @@ export function makeUserId(): string {
 export function getPlayedUnits(): string[] {
   if (typeof window === "undefined") return [];
   try {
-    return JSON.parse(window.localStorage.getItem("eduqa_played_units") || "[]");
+    return JSON.parse(window.localStorage.getItem("edujini_played_units") || "[]");
   } catch {
     return [];
   }
@@ -119,7 +149,7 @@ export function recordPlayedUnit(unitId: string) {
   try {
     const arr = getPlayedUnits();
     if (!arr.includes(unitId)) arr.push(unitId);
-    window.localStorage.setItem("eduqa_played_units", JSON.stringify(arr));
+    window.localStorage.setItem("edujini_played_units", JSON.stringify(arr));
   } catch {}
 }
 

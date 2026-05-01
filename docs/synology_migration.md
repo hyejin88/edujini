@@ -1,6 +1,6 @@
 # 시놀로지 NAS 이전 가이드 (Stage 4 옵션)
 
-**전제**: 정혜진 보유 시놀로지 NAS (모델 미정). EduQA 백엔드를 Render Free → 시놀로지 Docker로 이전하여 콜드스타트·요청 한도 해소.
+**전제**: 정혜진 보유 시놀로지 NAS (모델 미정). Edujini 백엔드를 Render Free → 시놀로지 Docker로 이전하여 콜드스타트·요청 한도 해소.
 
 ---
 
@@ -53,11 +53,11 @@ services:
     image: pgvector/pgvector:pg16
     restart: always
     environment:
-      POSTGRES_USER: eduqa
+      POSTGRES_USER: edujini
       POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: eduqa
+      POSTGRES_DB: edujini
     volumes:
-      - /volume1/docker/eduqa/pgdata:/var/lib/postgresql/data
+      - /volume1/docker/edujini/pgdata:/var/lib/postgresql/data
     ports:
       - "127.0.0.1:5432:5432"
 
@@ -65,7 +65,7 @@ services:
     build: ./backend
     restart: always
     environment:
-      DATABASE_URL: postgresql+asyncpg://eduqa:${DB_PASSWORD}@db:5432/eduqa
+      DATABASE_URL: postgresql+asyncpg://edujini:${DB_PASSWORD}@db:5432/edujini
       GEMINI_API_KEY: ${GEMINI_API_KEY}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
     depends_on: [db]
@@ -79,26 +79,26 @@ services:
 ```
 
 ### 3. Cloudflare Tunnel 라우팅
-- `api.eduqa.app` → `http://api:8000` (or `http://localhost:8000`)
+- `api.edujini.app` → `http://api:8000` (or `http://localhost:8000`)
 - HTTPS 자동 (Cloudflare가 처리)
 
 ### 4. DB 마이그레이션 (Supabase → 시놀로지)
 ```bash
 # Supabase pg_dump
-pg_dump $SUPABASE_DB_URL > eduqa_backup.sql
+pg_dump $SUPABASE_DB_URL > edujini_backup.sql
 
 # 시놀로지 PostgreSQL 컨테이너에 복원
-docker exec -i eduqa-db-1 psql -U eduqa -d eduqa < eduqa_backup.sql
+docker exec -i edujini-db-1 psql -U edujini -d edujini < edujini_backup.sql
 ```
 
 ### 5. 환경 변수 전환
-- Vercel 프론트엔드 `NEXT_PUBLIC_API_URL` → `https://api.eduqa.app`
+- Vercel 프론트엔드 `NEXT_PUBLIC_API_URL` → `https://api.edujini.app`
 - 기존 Render 서비스는 1주일 유지 (롤백 대비) 후 종료
 
 ### 6. 모니터링·백업
 - Synology Container Manager 알림 (컨테이너 다운 시 이메일)
 - Hyper Backup 매일 02:00 → C2 클라우드
-- pg_dump 매일 03:00 → `/volume1/backup/eduqa_db/`
+- pg_dump 매일 03:00 → `/volume1/backup/edujini_db/`
 
 ---
 
@@ -111,7 +111,7 @@ docker exec -i eduqa-db-1 psql -U eduqa -d eduqa < eduqa_backup.sql
 | 외부 한도 | 월 750시간 | 무제한 |
 | DB | Supabase Free 500MB | 무제한 (NAS 용량) |
 | 백업 | Supabase 무료 | Synology C2 ~6,500원/월 |
-| 도메인 | eduqa.vercel.app | api.eduqa.app (도메인 ₩15,000/년) |
+| 도메인 | edujini.vercel.app | api.edujini.app (도메인 ₩15,000/년) |
 | 운영 부담 | 0 | 중 (NAS 모니터링·재부팅) |
 
 ---

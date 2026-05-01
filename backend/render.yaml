@@ -2,7 +2,7 @@
 # https://render.com/docs/blueprint-spec
 services:
   - type: web
-    name: eduqa-backend
+    name: edujini-backend
     runtime: docker
     plan: free                  # 512MB RAM, 750h/월, 15분 idle 후 sleep
     dockerfilePath: ./backend/Dockerfile
