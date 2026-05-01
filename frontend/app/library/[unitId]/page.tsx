@@ -25,7 +25,7 @@ function getGradeLabel(g: number): string {
 }
 
 // Parse math expressions from text
-function MathText({ text }: { text: string }) {
+function MathText({ text, inline = false }: { text: string; inline?: boolean }) {
   const parts: { type: "text" | "inline" | "block"; content: string }[] = [];
   let remaining = text;
 
@@ -71,7 +71,13 @@ function MathText({ text }: { text: string }) {
     <span className="[&_.katex-display]:overflow-x-auto [&_.katex-display]:py-2">
       {parts.map((part, i) => {
         if (part.type === "block") {
-          return <BlockMath key={i} math={part.content} />;
+          // 보기·짧은 컨텍스트(inline=true)에서는 BlockMath 대신 InlineMath로 강제
+          // → 한 줄 통째 차지 방지
+          return inline ? (
+            <InlineMath key={i} math={part.content} />
+          ) : (
+            <BlockMath key={i} math={part.content} />
+          );
         } else if (part.type === "inline") {
           return <InlineMath key={i} math={part.content} />;
         }
@@ -377,7 +383,7 @@ function ProblemCell({
 
           {/* Choices or Short Answer Input */}
           {problem.type === "multiple_choice" && problem.choices ? (
-            <div className="mt-3 space-y-[6px]" style={{ paddingLeft: "0" }}>
+            <div className="mt-2 space-y-[2px]" style={{ paddingLeft: "0" }}>
               {problem.choices.map((choice, i) => {
                 const isSelected = answer === choice;
                 const isCorrectChoice = choice === problem.answer;
@@ -387,7 +393,7 @@ function ProblemCell({
                 return (
                   <label
                     key={i}
-                    className={`flex cursor-pointer items-baseline gap-2 py-0.5 ${
+                    className={`flex cursor-pointer items-baseline gap-1.5 leading-tight ${
                       isGraded && isCorrectChoice
                         ? "text-[#15803d]"
                         : isWrongSelection
@@ -407,20 +413,21 @@ function ProblemCell({
                       className="sr-only"
                     />
                     {/* Circled number - serif */}
-                    <span className="font-serif" style={{ fontSize: "18px" }}>
+                    <span className="font-serif shrink-0" style={{ fontSize: "16px" }}>
                       {choiceLabels[i]}
                     </span>
-                    {/* Choice text - with underline if selected */}
+                    {/* Choice text - inline math forced (no BlockMath inside choices) */}
                     <span
                       className={`${isSelected && !isGraded ? "font-medium" : ""}`}
-                      style={{ 
-                        fontSize: "16px",
+                      style={{
+                        fontSize: "15px",
+                        lineHeight: 1.5,
                         textDecoration: isSelected && !isGraded ? "underline" : "none",
                         textDecorationThickness: "0.5pt",
-                        textUnderlineOffset: "4px"
+                        textUnderlineOffset: "4px",
                       }}
                     >
-                      <MathText text={choice} />
+                      <MathText text={choice} inline />
                     </span>
                     {/* Grading marks */}
                     {isGraded && isCorrectChoice && (
