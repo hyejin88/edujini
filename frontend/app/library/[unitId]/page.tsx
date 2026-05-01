@@ -81,25 +81,10 @@ function MathText({ text, inline = false }: { text: string; inline?: boolean }) 
         } else if (part.type === "inline") {
           return <InlineMath key={i} math={part.content} />;
         }
-        // Handle "(그림:...)" annotations
-        if (part.content.includes("(그림:")) {
-          const annotationMatch = part.content.match(/\(그림:[^)]+\)/);
-          if (annotationMatch) {
-            const before = part.content.slice(0, part.content.indexOf(annotationMatch[0]));
-            const annotation = annotationMatch[0];
-            const after = part.content.slice(part.content.indexOf(annotationMatch[0]) + annotationMatch[0].length);
-            return (
-              <span key={i}>
-                {before}
-                <span className="my-2 block border-l-2 border-[#d1d5db] pl-3 italic text-[#6b7280]">
-                  {annotation}
-                </span>
-                {after}
-              </span>
-            );
-          }
-        }
-        return <span key={i}>{part.content}</span>;
+        // "(그림:...)" 메타 묘사는 학습지 본문에 부적합 → UI에서 완전 제거
+        // 데이터는 seed.json에 보존되지만 화면·인쇄에 노출되지 않음
+        const cleaned = part.content.replace(/\s*\(그림:[^)]*\)\s*/g, "");
+        return <span key={i}>{cleaned}</span>;
       })}
     </span>
   );
