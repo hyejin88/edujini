@@ -3,8 +3,8 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Edujini - 단원별 학습지 무료 제공',
-  description: '초등학교 1학년부터 고등학교 3학년까지 단원별 수학 학습지를 무료로 제공합니다. NCIC 성취기준 기반, 인쇄 가능한 학습지.',
+  title: 'EDU Jini - 단원별 학습지 무료 제공',
+  description: '초1~고3 단원별 수학 학습지. NCIC 성취기준 기반, AI 자동 채점·해설, A4 인쇄 가능.',
   generator: 'v0.app',
   icons: {
     icon: [

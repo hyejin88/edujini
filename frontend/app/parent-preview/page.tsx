@@ -20,7 +20,7 @@ export default function ParentPreviewPage() {
             <ArrowLeft className="h-4 w-4" />
             진단 결과
           </Link>
-          <span className="text-lg font-bold text-foreground">Edujini</span>
+          <span className="text-lg font-bold text-foreground">EDU Jini</span>
         </div>
       </header>
 
@@ -39,7 +39,7 @@ export default function ParentPreviewPage() {
           {/* Report Header */}
           <div className="mb-6 border-b border-border pb-4">
             <p className="text-xs tracking-widest text-muted-foreground">
-              EDUJINI 학습 리포트
+              EDU Jini 학습 리포트
             </p>
             <h2 className="mt-1 text-lg font-bold text-foreground">
               초3 수학 · 덧셈과 뺄셈
@@ -122,7 +122,7 @@ export default function ParentPreviewPage() {
           {/* Footer */}
           <div className="mt-6 border-t border-border pt-4 text-center">
             <p className="text-xs text-muted-foreground">
-              Edujini · NCIC 성취기준 기반 학습지
+              EDU Jini · NCIC 성취기준 기반 학습지
             </p>
           </div>
         </Card>

@@ -48,7 +48,7 @@ export default function ResultPage() {
             <ArrowLeft className="h-4 w-4" />
             단원 목록
           </Link>
-          <span className="text-lg font-bold text-foreground">Edujini</span>
+          <span className="text-lg font-bold text-foreground">EDU Jini</span>
         </div>
       </header>
 

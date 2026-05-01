@@ -141,7 +141,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="py-12">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="mb-2 text-sm font-medium text-foreground">Edujini</p>
+          <p className="mb-2 text-sm font-medium text-foreground">EDU Jini</p>
           <p className="mb-4 text-sm text-muted-foreground">
             NCIC 성취기준 기반 체계적인 학습지
           </p>
