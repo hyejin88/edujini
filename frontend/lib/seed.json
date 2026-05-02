@@ -4101,7 +4101,7 @@
     "type": "multiple_choice",
     "difficulty": 3,
     "section": "concept",
-    "body": "KaTeX \\square 안에 들어갈 수로 알맞은 것은 무엇입니까?\n$15 \\times \\square = 105$",
+    "body": "$\\square$ 안에 들어갈 수로 알맞은 것은 무엇입니까?\n$15 \\times \\square = 105$",
     "choices": [
       "6",
       "7",
@@ -4112,7 +4112,7 @@
     "answer_aliases": [
       "7"
     ],
-    "explanation": "$15 \\times 1 = 15$\n$15 \\times 2 = 30$\n$15 \\times 3 = 45$\n$15 \\times 4 = 60$\n$15 \\times 5 = 75$\n$15 \\times 6 = 90$\n$15 \\times 7 = 105$\n따라서 KaTeX \\square 안에 들어갈 수는 $7$입니다.",
+    "explanation": "$15 \\times 1 = 15$\n$15 \\times 2 = 30$\n$15 \\times 3 = 45$\n$15 \\times 4 = 60$\n$15 \\times 5 = 75$\n$15 \\times 6 = 90$\n$15 \\times 7 = 105$\n따라서 $\\square$ 안에 들어갈 수는 $7$입니다.",
     "concept_tags": [
       "곱셈",
       "역연산",
@@ -4301,7 +4301,7 @@
     "answer_aliases": [
       "576"
     ],
-    "explanation": "어떤 수를 KaTeX \\square 라고 하면, 잘못 계산한 식은 $\\square \\times 42 = 1008$입니다.\nKaTeX \\square 를 구하려면 $1008 \\div 42$를 계산해야 합니다.\n$1008 \\div 42 = 24$\n따라서 어떤 수는 $24$입니다.\n바르게 계산한 값은 $24 \\times 24$입니다.\n$24 \\times 24 = 576$\n정답은 $576$입니다.",
+    "explanation": "어떤 수를 $\\square$ 라고 하면, 잘못 계산한 식은 $\\square \\times 42 = 1008$입니다.\n$\\square$ 를 구하려면 $1008 \\div 42$를 계산해야 합니다.\n$1008 \\div 42 = 24$\n따라서 어떤 수는 $24$입니다.\n바르게 계산한 값은 $24 \\times 24$입니다.\n$24 \\times 24 = 576$\n정답은 $576$입니다.",
     "concept_tags": [
       "곱셈",
       "나눗셈",
