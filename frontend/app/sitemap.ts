@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     }));
 
-  // SEO 단원별 랜딩 페이지 27개
+  // SEO 단원별 랜딩 페이지
   const learnPages: MetadataRoute.Sitemap = LEARN_UNITS.map((u) => ({
     url: `${BASE}/learn/grade-${u.grade}/${u.slug}`,
     lastModified: now,
@@ -44,5 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...unitPages, ...learnPages];
+  // 학년 인덱스 페이지 (1~6학년)
+  const gradeIndexPages: MetadataRoute.Sitemap = [1, 2, 3, 4, 5, 6].map((g) => ({
+    url: `${BASE}/learn/grade-${g}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
+
+  return [...staticPages, ...unitPages, ...learnPages, ...gradeIndexPages];
 }

@@ -87,11 +87,11 @@ export default async function LearnUnitPage({
       <header className="border-b border-border bg-background">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
           <Link
-            href="/"
+            href={`/learn/grade-${grade}`}
             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" />
-            홈으로
+            초{grade} 단원 목록
           </Link>
           <Brand />
         </div>
