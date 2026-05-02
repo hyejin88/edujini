@@ -10988,5 +10988,695 @@
     ],
     "license_code": "SELF_GEN",
     "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::0",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$3$에 대한 $5$의 비를 바르게 나타낸 것은 어느 것인가요?",
+    "choices": [
+      "$3:5$",
+      "$5:3$",
+      "$\\frac{3}{5}$",
+      "$\\frac{5}{3}$"
+    ],
+    "answer": "$5:3$",
+    "answer_aliases": [],
+    "explanation": "비교하는 양을 먼저 쓰고 기준량을 나중에 써서 '비교하는 양 : 기준량'으로 나타냅니다. $3$에 대한 $5$의 비는 $5$를 $3$에 비교하는 것이므로 $5:3$입니다.",
+    "concept_tags": [
+      "비의 표현"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$3:5$",
+        "reason": "비교량과 기준량을 혼동하여 잘못 표현했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::1",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$7$과 $2$의 비를 기호로 나타낸 것은 어느 것인가요?",
+    "choices": [
+      "$7+2$",
+      "$7-2$",
+      "$7:2$",
+      "$7 \\times 2$"
+    ],
+    "answer": "$7:2$",
+    "answer_aliases": [],
+    "explanation": "두 수를 비교하는 비는 콜론($:$) 기호를 사용하여 나타냅니다. $7$과 $2$의 비는 $7:2$입니다.",
+    "concept_tags": [
+      "비의 표현"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::2",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "비 $4:5$의 비율을 분수로 나타내시오.",
+    "choices": null,
+    "answer": "$\\frac{4}{5}$",
+    "answer_aliases": [
+      "4/5"
+    ],
+    "explanation": "비 $A:B$의 비율은 비교하는 양 $A$를 기준량 $B$로 나눈 값인 $\\frac{A}{B}$로 나타냅니다. 따라서 $4:5$의 비율은 $\\frac{4}{5}$입니다.",
+    "concept_tags": [
+      "비율의 표현",
+      "분수"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$\\frac{5}{4}$",
+        "reason": "비교량과 기준량을 혼동하여 분모와 분자를 잘못 썼습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::3",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "비율 $0.25$를 백분율로 나타내면 몇 %인가요?",
+    "choices": [
+      "$2.5\\%$",
+      "$25\\%$",
+      "$250\\%$",
+      "$0.25\\%$"
+    ],
+    "answer": "$25\\%$",
+    "answer_aliases": [],
+    "explanation": "비율을 백분율로 나타내려면 비율에 $100$을 곱하고 $\\%$ 기호를 붙입니다. $0.25 \\times 100 = 25$이므로 $25\\%$입니다.",
+    "concept_tags": [
+      "백분율",
+      "소수와 백분율"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2.5\\%$",
+        "reason": "소수점의 위치를 잘못 옮겼습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::4",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$60\\%$를 소수로 나타내시오.",
+    "choices": null,
+    "answer": "$0.6$",
+    "answer_aliases": [
+      "0.60"
+    ],
+    "explanation": "백분율을 소수로 나타내려면 $\\%$ 기호를 떼고 $100$으로 나눕니다. $60 \\div 100 = 0.6$입니다.",
+    "concept_tags": [
+      "백분율",
+      "소수와 백분율"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$6.0$",
+        "reason": "소수점의 위치를 잘못 옮겼습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::5",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "비율 $0.3$을 할푼리로 나타낸 것은 어느 것인가요?",
+    "choices": [
+      "$3$할",
+      "$3$푼",
+      "$3$리",
+      "$30$할"
+    ],
+    "answer": "$3$할",
+    "answer_aliases": [],
+    "explanation": "할푼리는 소수점 아래 첫째 자리는 할, 둘째 자리는 푼, 셋째 자리는 리로 나타냅니다. $0.3$은 소수점 아래 첫째 자리가 $3$이므로 $3$할입니다.",
+    "concept_tags": [
+      "할푼리"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$3$푼",
+        "reason": "할푼리의 자리값을 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::6",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "다음 중 비율이 다른 하나는 어느 것인가요?",
+    "choices": [
+      "$1:2$",
+      "$2:4$",
+      "$3:5$",
+      "$4:8$"
+    ],
+    "answer": "$3:5$",
+    "answer_aliases": [],
+    "explanation": "각 비의 비율을 소수로 나타내면 다음과 같습니다.\n$1:2 \\rightarrow 1 \\div 2 = 0.5$\n$2:4 \\rightarrow 2 \\div 4 = 0.5$\n$3:5 \\rightarrow 3 \\div 5 = 0.6$\n$4:8 \\rightarrow 4 \\div 8 = 0.5$\n따라서 비율이 다른 하나는 $3:5$입니다.",
+    "concept_tags": [
+      "비율의 비교"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$4:8$",
+        "reason": "비율 계산을 잘못하여 다른 비를 선택했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::7",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$3:\\square = 9:15$일 때, $\\square$ 안에 알맞은 수는 무엇인가요?",
+    "choices": null,
+    "answer": "$5$",
+    "answer_aliases": [],
+    "explanation": "비율이 같으므로 $3:\\square$와 $9:15$는 같은 비입니다. $3$이 $9$가 되려면 $3$을 곱해야 하므로, $\\square$에도 $3$을 곱하면 $15$가 되어야 합니다. $\\square \\times 3 = 15$이므로 $\\square = 15 \\div 3 = 5$입니다.",
+    "concept_tags": [
+      "같은 비",
+      "비율의 성질"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$45$",
+        "reason": "외항의 곱과 내항의 곱을 잘못 적용했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::8",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "전체 $200$개 중 $40$개가 불량품일 때, 불량률은 몇 %인가요?",
+    "choices": [
+      "$10\\%$",
+      "$20\\%$",
+      "$30\\%$",
+      "$40\\%$"
+    ],
+    "answer": "$20\\%$",
+    "answer_aliases": [],
+    "explanation": "불량률은 (불량품의 수) $\\div$ (전체 개수) $\\times 100\\%$입니다. $\\frac{40}{200} = \\frac{1}{5} = 0.2$이므로, $0.2 \\times 100\\% = 20\\%$입니다.",
+    "concept_tags": [
+      "백분율 계산",
+      "비율의 활용"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$40\\%$",
+        "reason": "비율을 구하지 않고 불량품 개수를 그대로 백분율로 생각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::9",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "비율 $0.075$를 할푼리로 바르게 나타낸 것은 어느 것인가요?",
+    "choices": [
+      "$7$할 $5$푼",
+      "$7$푼 $5$리",
+      "$75$리",
+      "$75$푼"
+    ],
+    "answer": "$7$푼 $5$리",
+    "answer_aliases": [],
+    "explanation": "소수점 아래 첫째 자리는 할, 둘째 자리는 푼, 셋째 자리는 리입니다. $0.075$는 $0$할 $7$푼 $5$리이므로 $7$푼 $5$리입니다.",
+    "concept_tags": [
+      "할푼리"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$7$할 $5$푼",
+        "reason": "할푼리의 자리값을 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::10",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "사과 $10$개 중 $3$개가 빨간색일 때, 빨간 사과의 비율을 분수로 나타내시오.",
+    "choices": null,
+    "answer": "$\\frac{3}{10}$",
+    "answer_aliases": [
+      "3/10"
+    ],
+    "explanation": "빨간 사과의 비율은 (빨간 사과의 수) $\\div$ (전체 사과의 수)입니다. 따라서 $\\frac{3}{10}$입니다.",
+    "concept_tags": [
+      "비율의 표현",
+      "분수"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$\\frac{10}{3}$",
+        "reason": "비교량과 기준량을 혼동하여 분모와 분자를 잘못 썼습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::11",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$75\\%$를 기약분수로 나타내시오.",
+    "choices": [
+      "$\\frac{75}{100}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{4}$",
+      "$\\frac{15}{20}$"
+    ],
+    "answer": "$\\frac{3}{4}$",
+    "answer_aliases": [],
+    "explanation": "$75\\%$는 비율 $0.75$와 같습니다. $0.75$를 분수로 나타내면 $\\frac{75}{100}$이고, 이를 약분하면 $\\frac{3}{4}$입니다.",
+    "concept_tags": [
+      "백분율",
+      "분수",
+      "기약분수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{75}{100}$",
+        "reason": "기약분수로 약분하는 과정을 생략했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::12",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "학생 $20$명 중 남학생이 $12$명일 때, 남학생 수와 여학생 수의 비는?",
+    "choices": [
+      "$12:8$",
+      "$8:12$",
+      "$3:2$",
+      "$2:3$"
+    ],
+    "answer": "$3:2$",
+    "answer_aliases": [],
+    "explanation": "전체 학생 $20$명 중 남학생이 $12$명이므로, 여학생은 $20 - 12 = 8$명입니다. 남학생 수와 여학생 수의 비는 $12:8$이고, 이를 가장 간단한 자연수의 비로 나타내면 $3:2$입니다.",
+    "concept_tags": [
+      "비의 활용",
+      "가장 간단한 비"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$12:8$",
+        "reason": "가장 간단한 자연수의 비로 나타내지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::13",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "어떤 물건의 정가가 $5000$원인데 $20\\%$ 할인하여 팔았다면, 할인된 가격은 얼마인가요?",
+    "choices": null,
+    "answer": "$4000$원",
+    "answer_aliases": [
+      "4000"
+    ],
+    "explanation": "$5000$원의 $20\\%$ 할인은 $5000 \\times \\frac{20}{100} = 1000$원입니다. 따라서 할인된 가격은 $5000 - 1000 = 4000$원입니다. 또는 $5000 \\times (1 - 0.2) = 5000 \\times 0.8 = 4000$원입니다.",
+    "concept_tags": [
+      "백분율의 활용",
+      "할인율"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$1000$원",
+        "reason": "할인된 가격이 아닌 할인액을 답으로 제시했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::14",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "자동차가 $2$시간 동안 $150\\text{km}$를 이동했습니다. 이 자동차의 시속은 몇 $\\text{km}$인가요?",
+    "choices": [
+      "$70\\text{km}$",
+      "$75\\text{km}$",
+      "$80\\text{km}$",
+      "$150\\text{km}$"
+    ],
+    "answer": "$75\\text{km}$",
+    "answer_aliases": [],
+    "explanation": "시속은 $1$시간 동안 이동한 거리를 의미합니다. $2$시간 동안 $150\\text{km}$를 이동했으므로, $1$시간 동안은 $150 \\div 2 = 75\\text{km}$를 이동합니다.",
+    "concept_tags": [
+      "비율의 활용",
+      "속력"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$150\\text{km}$",
+        "reason": "총 이동 거리를 시속으로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::15",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "소금 $20\\text{g}$을 물 $80\\text{g}$에 녹여 소금물을 만들었습니다. 이 소금물의 농도는 몇 %인가요?",
+    "choices": [
+      "$10\\%$",
+      "$20\\%$",
+      "$25\\%$",
+      "$30\\%$"
+    ],
+    "answer": "$20\\%$",
+    "answer_aliases": [],
+    "explanation": "소금물의 농도는 $\\frac{\\text{소금의 양}}{\\text{소금물의 양}} \\times 100\\%$입니다. 소금물의 양은 소금의 양과 물의 양을 합한 것이므로 $20\\text{g} + 80\\text{g} = 100\\text{g}$입니다. 따라서 농도는 $\\frac{20}{100} \\times 100\\% = 20\\%$입니다.",
+    "concept_tags": [
+      "백분율의 활용",
+      "농도"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$25\\%$",
+        "reason": "소금물의 양을 물의 양으로 착각하여 $\\frac{20}{80}$으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::16",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "A팀은 $10$번의 시도 중 $7$번 성공했고, B팀은 $20$번의 시도 중 $12$번 성공했습니다. 어느 팀의 성공률이 더 높은가요?",
+    "choices": null,
+    "answer": "A팀",
+    "answer_aliases": [
+      "A"
+    ],
+    "explanation": "A팀의 성공률은 $\\frac{7}{10} = 0.7$입니다. B팀의 성공률은 $\\frac{12}{20} = \\frac{6}{10} = 0.6$입니다. $0.7 > 0.6$이므로 A팀의 성공률이 더 높습니다.",
+    "concept_tags": [
+      "비율의 비교",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "B팀",
+        "reason": "두 팀의 성공률을 잘못 계산하거나 비교했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::17",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "작년에 $200$명이었던 학생 수가 올해 $10\\%$ 증가했습니다. 올해 학생 수는 몇 명인가요?",
+    "choices": [
+      "$210$명",
+      "$220$명",
+      "$230$명",
+      "$240$명"
+    ],
+    "answer": "$220$명",
+    "answer_aliases": [],
+    "explanation": "$200$명의 $10\\%$는 $200 \\times \\frac{10}{100} = 20$명입니다. 학생 수가 $20$명 증가했으므로, 올해 학생 수는 $200 + 20 = 220$명입니다.",
+    "concept_tags": [
+      "백분율의 활용",
+      "증가율"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$210$명",
+        "reason": "증가한 학생 수를 잘못 계산하거나, $10$명으로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::18",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "어떤 가게에서 $10000$원짜리 물건을 $10\\%$ 할인한 후, 다시 할인된 가격에서 $10\\%$를 추가 할인했습니다. 최종 가격은 얼마인가요?",
+    "choices": [
+      "$8000$원",
+      "$8100$원",
+      "$8900$원",
+      "$9000$원"
+    ],
+    "answer": "$8100$원",
+    "answer_aliases": [],
+    "explanation": "첫 번째 $10\\%$ 할인 후 가격: $10000 \\times (1 - 0.10) = 10000 \\times 0.9 = 9000$원입니다.\n두 번째 $10\\%$ 추가 할인은 할인된 가격인 $9000$원에서 $10\\%$를 할인하는 것입니다. $9000 \\times (1 - 0.10) = 9000 \\times 0.9 = 8100$원입니다.",
+    "concept_tags": [
+      "백분율의 연이은 적용",
+      "복합 할인"
+    ],
+    "common_errors": [
+      {
+        "label": "함정미인지",
+        "wrong_answer": "$8000$원",
+        "reason": "총 $20\\%$ 할인으로 착각하여 $10000 \\times 0.8 = 8000$원으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-4::v3::19",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-09]",
+    "unit_id": "math-6-1-4",
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "전체 학생의 $60\\%$가 여학생이고, 여학생의 $50\\%$가 안경을 썼습니다. 전체 학생 중 안경을 쓴 여학생은 몇 %인가요?",
+    "choices": [
+      "$10\\%$",
+      "$20\\%$",
+      "$30\\%$",
+      "$40\\%$"
+    ],
+    "answer": "$30\\%$",
+    "answer_aliases": [],
+    "explanation": "전체 학생을 $100$명이라고 가정하면, 여학생은 $100 \\times 0.60 = 60$명입니다. 이 여학생 중 $50\\%$가 안경을 썼으므로, 안경을 쓴 여학생은 $60 \\times 0.50 = 30$명입니다. 따라서 전체 학생 중 안경을 쓴 여학생은 $30\\%$입니다.",
+    "concept_tags": [
+      "백분율의 연이은 적용",
+      "비율의 곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$10\\%$",
+        "reason": "두 백분율을 더하거나 빼는 등 잘못된 연산을 했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
   }
 ]

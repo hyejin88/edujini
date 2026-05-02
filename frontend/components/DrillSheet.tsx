@@ -657,13 +657,46 @@ function SpecialProblem({
     );
   }
 
-  // 분수 비교: a/d ? b/d
+  // 분수 비교: a/d ? b/d — 키패드 대신 >, < 버튼 두 개
   if (problem.op === "frac_compare") {
     const ans = (raw.ans as unknown) as string; // '>' or '<'
+    const btnBase = "inline-flex h-7 w-7 items-center justify-center rounded border text-base font-bold transition";
+    const renderBtn = (sym: ">" | "<") => {
+      const selected = userAns === sym;
+      const cls = problem.is_example
+        ? "border-[#1e3a8a] bg-[#1e3a8a] text-white"
+        : isGraded
+          ? selected
+            ? correct
+              ? "border-[#15803d] bg-[#15803d] text-white"
+              : "border-[#b91c1c] bg-[#b91c1c] text-white"
+            : "border-[#e5e7eb] bg-white text-[#6b7280]"
+          : selected
+            ? "border-[#111827] bg-[#111827] text-white"
+            : "border-[#e5e7eb] bg-white text-[#111827] hover:border-[#111827]";
+      return (
+        <button
+          key={sym}
+          type="button"
+          disabled={isGraded || problem.is_example}
+          onClick={() => onChange(sym)}
+          className={`${btnBase} ${cls}`}
+        >
+          {sym}
+        </button>
+      );
+    };
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono flex items-center gap-2" style={{ fontSize: "16px" }}>
         <Frac n={raw.a_num} d={raw.a_den} />
-        <span className="mx-1">{problem.is_example ? String(raw.ans) : Box("(>, <)", 50)}</span>
+        {problem.is_example ? (
+          <span className={`mx-1 ${inputCls}`} style={{ fontWeight: 700 }}>{String(raw.ans)}</span>
+        ) : (
+          <span className="mx-1 inline-flex gap-1">
+            {renderBtn(">")}
+            {renderBtn("<")}
+          </span>
+        )}
         <Frac n={raw.b_num} d={raw.b_den} />
         {isGraded && !problem.is_example && correct === false && (
           <span className="ml-2 text-[#6b7280]" style={{ fontSize: "13px" }}>
