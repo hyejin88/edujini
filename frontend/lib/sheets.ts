@@ -47,6 +47,12 @@ const COMP_UNITS: Record<string, { title: string; subtitle: string }> = {
   "math-5-1-1": { title: "단원 학습", subtitle: "혼합 계산·괄호 · 20문제" },
   "math-5-2-2": { title: "단원 학습", subtitle: "분수의 곱셈·약분 · 20문제" },
   "math-5-2-4": { title: "단원 학습", subtitle: "소수의 곱셈 · 20문제" },
+  "math-6-1-1": { title: "단원 학습", subtitle: "분수의 나눗셈 · 20문제" },
+  "math-6-1-3": { title: "단원 학습", subtitle: "소수의 나눗셈 · 20문제" },
+  "math-6-1-4": { title: "단원 학습", subtitle: "비와 비율 · 20문제" },
+  "math-6-2-1": { title: "단원 학습", subtitle: "분수의 나눗셈 · 20문제" },
+  "math-6-2-3": { title: "단원 학습", subtitle: "소수의 나눗셈 · 20문제" },
+  "math-6-2-4": { title: "단원 학습", subtitle: "비례식과 비례배분 · 20문제" },
 };
 
 function compSheet(unitId: string): SheetMeta | null {
