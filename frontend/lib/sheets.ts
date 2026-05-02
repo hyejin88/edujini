@@ -44,6 +44,9 @@ const COMP_UNITS: Record<string, { title: string; subtitle: string }> = {
   "math-4-1-3": { title: "단원 학습", subtitle: "(세 자리)×(두 자리)·(세 자리)÷(두 자리) · 20문제" },
   "math-4-2-1": { title: "단원 학습", subtitle: "분모가 같은 분수의 덧·뺄셈 · 20문제" },
   "math-4-2-3": { title: "단원 학습", subtitle: "소수 둘째 자리 덧·뺄셈 · 20문제" },
+  "math-5-1-1": { title: "단원 학습", subtitle: "혼합 계산·괄호 · 20문제" },
+  "math-5-2-2": { title: "단원 학습", subtitle: "분수의 곱셈·약분 · 20문제" },
+  "math-5-2-4": { title: "단원 학습", subtitle: "소수의 곱셈 · 20문제" },
 };
 
 function compSheet(unitId: string): SheetMeta | null {
