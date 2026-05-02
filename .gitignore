@@ -74,3 +74,4 @@ __pycache__/
 /tmp/eduqa_*.log
 
 # Lockfile (keep package.json only for now)
+frontend/tsconfig.tsbuildinfo

@@ -50,7 +50,7 @@ export default function LandingPage() {
             </span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            단원별 학습지부터 매일 새 연산 문제지까지.
+            단원별 학습부터 매일 새 연산 문제까지.
             <br className="hidden sm:block" />
             우리 아이 학년에 맞춰 바로 풀고 즉시 채점해요.
           </p>
@@ -102,7 +102,7 @@ export default function LandingPage() {
               size="lg"
               className="group bg-primary px-8 text-base font-semibold hover:bg-primary/90"
             >
-              단원 학습지 보기
+              단원 학습 보기
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
@@ -111,12 +111,12 @@ export default function LandingPage() {
               variant="outline"
               className="group border-2 px-8 text-base font-semibold"
             >
-              연산 문제지 보기
+              연산 문제 보기
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            단원 학습지 = 객관식·서술형 + 즉시 채점 · 연산 문제지 = 가로식·세로식 반복 드릴
+            단원 학습 = 객관식·서술형 + 즉시 채점 · 연산 문제 = 가로식·세로식 반복 드릴
           </p>
         </div>
       </section>

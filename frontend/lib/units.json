@@ -17,24 +17,6 @@
     ]
   },
   {
-    "id": "math-3-1-2",
-    "subject": "수학",
-    "grade": 3,
-    "semester": 1,
-    "unit_no": 2,
-    "unit_name": "평면도형",
-    "sub_unit": "선의 종류 / 각",
-    "standard_code": "[4수02-01]",
-    "standard_text": "직선, 반직선, 선분을 이해하고 구별할 수 있다.",
-    "concepts": [
-      "직선",
-      "반직선",
-      "선분",
-      "각",
-      "직각"
-    ]
-  },
-  {
     "id": "math-3-1-3",
     "subject": "수학",
     "grade": 3,
@@ -64,22 +46,6 @@
       "올림이 없는 곱셈",
       "올림이 있는 곱셈",
       "분배법칙"
-    ]
-  },
-  {
-    "id": "math-3-1-5",
-    "subject": "수학",
-    "grade": 3,
-    "semester": 1,
-    "unit_no": 5,
-    "unit_name": "길이와 시간",
-    "sub_unit": "1mm·1km / 시간 단위",
-    "standard_code": "[4수03-01]",
-    "standard_text": "1mm와 1km의 단위를 알고 길이를 측정하고 어림할 수 있다.",
-    "concepts": [
-      "길이 단위 변환",
-      "시간 단위 변환",
-      "어림하기"
     ]
   },
   {
@@ -129,74 +95,6 @@
       "나머지가 없는 나눗셈",
       "나머지가 있는 나눗셈",
       "검산"
-    ]
-  },
-  {
-    "id": "math-3-2-3",
-    "subject": "수학",
-    "grade": 3,
-    "semester": 2,
-    "unit_no": 3,
-    "unit_name": "원",
-    "sub_unit": "원의 중심·반지름·지름",
-    "standard_code": "[4수02-04]",
-    "standard_text": "원의 중심, 반지름, 지름을 알고, 그 관계를 이해한다.",
-    "concepts": [
-      "중심",
-      "반지름",
-      "지름",
-      "지름은 반지름의 2배"
-    ]
-  },
-  {
-    "id": "kor-3-1-1",
-    "subject": "국어",
-    "grade": 3,
-    "semester": 1,
-    "unit_no": 1,
-    "unit_name": "재미가 톡톡톡",
-    "sub_unit": "감각적 표현이 드러난 글 읽기",
-    "standard_code": "[4국05-01]",
-    "standard_text": "시각, 청각 등 감각적 표현에 유의하여 작품을 감상한다.",
-    "concepts": [
-      "감각적 표현",
-      "비유",
-      "운율",
-      "의성어·의태어"
-    ]
-  },
-  {
-    "id": "kor-3-1-2",
-    "subject": "국어",
-    "grade": 3,
-    "semester": 1,
-    "unit_no": 2,
-    "unit_name": "문단의 짜임",
-    "sub_unit": "중심 문장과 뒷받침 문장",
-    "standard_code": "[4국02-02]",
-    "standard_text": "글의 중심 생각을 파악한다.",
-    "concepts": [
-      "중심 문장",
-      "뒷받침 문장",
-      "문단",
-      "주제"
-    ]
-  },
-  {
-    "id": "kor-3-1-3",
-    "subject": "국어",
-    "grade": 3,
-    "semester": 1,
-    "unit_no": 3,
-    "unit_name": "낱말의 의미",
-    "sub_unit": "낱말의 뜻 짐작하기 / 비슷한말·반대말",
-    "standard_code": "[4국04-02]",
-    "standard_text": "낱말과 낱말의 의미 관계를 파악한다.",
-    "concepts": [
-      "유의어",
-      "반의어",
-      "다의어",
-      "문맥 추론"
     ]
   },
   {

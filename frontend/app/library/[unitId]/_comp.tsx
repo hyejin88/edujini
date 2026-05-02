@@ -29,6 +29,11 @@ function gradeLabel(g: number): string {
   return `고${g - 9}`;
 }
 
+function gradeFromUnitId(unitId: string): number {
+  const m = unitId.match(/^[a-z]+-(\d+)/i);
+  return m ? parseInt(m[1], 10) : 3;
+}
+
 function MathText({ text, inline = false }: { text: string; inline?: boolean }) {
   const parts: { type: "text" | "inline" | "block"; content: string }[] = [];
   let remaining = text || "";
@@ -216,7 +221,7 @@ export default function ComprehensiveSheet({
             EDUJINI WORKSHEET
           </p>
           <h1 className="font-serif text-xl font-bold text-[#111827]">
-            {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : "초3 수학"}{" "}
+            {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(unitId))} 수학`}{" "}
             · {unit?.unit_name || ""}
           </h1>
           <div className="mt-2 mb-4 border-t border-[#111827]" />

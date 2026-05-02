@@ -14,6 +14,11 @@ function gradeLabel(g: number): string {
   return `고${g - 9}`;
 }
 
+function gradeFromUnitId(unitId: string): number {
+  const m = unitId.match(/^[a-z]+-(\d+)/i);
+  return m ? parseInt(m[1], 10) : 3;
+}
+
 export default function DrillSheetPage({
   sheet,
   unit,
@@ -111,7 +116,7 @@ export default function DrillSheetPage({
           </p>
           <div className="flex items-end justify-between">
             <h1 className="font-serif text-xl font-bold text-[#111827]">
-              {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : "초3 수학"}{" "}
+              {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(sheet.unit_id))} 수학`}{" "}
               · {sheet.title}
             </h1>
             <div className="hidden gap-6 text-xs text-[#6b7280] print:flex">

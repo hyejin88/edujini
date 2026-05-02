@@ -1,0 +1,2373 @@
+{
+  "math-1-1-3": {
+    "grade": 1,
+    "semester": 1,
+    "chapter_no": 3,
+    "unit_name": "덧셈과 뺄셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "5",
+        "title": "두 수로 가르기(한 자리 수)",
+        "description": "한 자리 수를 둘로 나누어 뺄셈의 기본 개념을 익힙니다.",
+        "page": "p50, 52, 54, 56",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "2",
+        "idx": "4",
+        "title": "두 수를 모으기(한 자리 수)",
+        "description": "한 자리 수 두 개를 모은 수를 살펴 보아 덧셈의 기본 개념을 익힙니다.",
+        "page": "p51, 53, 55, 57",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "3",
+        "idx": "6",
+        "title": "몇 + 몇 (합이 9이하)",
+        "description": "두 수를 더한 값이 9이하인 덧셈을 연습합니다.",
+        "page": "p60~62",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "4",
+        "idx": "7",
+        "title": "몇 - 몇 (차가 9이하)",
+        "description": "두 수를 뺀 값이 9이하인 뺄셈을 연습합니다.",
+        "page": "p63~67",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "5",
+        "idx": "8",
+        "title": "한 자리 수 덧셈과 뺄셈의 관계",
+        "description": "한 자리 수끼리의 덧셈식을 보고 뺄셈식을 만드는 연습을 합니다.",
+        "page": "p68",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "6",
+        "idx": "9",
+        "title": "한 자리 수 뺄셈과 덧셈의 관계",
+        "description": "한 자리 수끼리의 뺄셈식을 보고 덧셈식을 만드는 연습을 합니다.",
+        "page": "p69",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "7",
+        "idx": "10",
+        "title": "한 자리 수 덧셈/뺄셈에서 @box안의 수 찾기",
+        "description": "한 자리 수끼리의 덧셈과 뺄셈에서 ☐안의 숫자를 알아내는 연습을 합니다.",
+        "page": "p72~73",
+        "ccss": "Addition/Subtraction"
+      }
+    ],
+    "format_count": 7
+  },
+  "math-1-2-2": {
+    "grade": 1,
+    "semester": 2,
+    "chapter_no": 2,
+    "unit_name": "덧셈과 뺄셈(1)",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "19",
+        "title": "몇십 + 몇 (받아올림 없음) A",
+        "description": "받아올림이 없는 몇십과 몇의 합을 세로식으로 연습합니다.",
+        "page": "p56~57",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "2",
+        "idx": "18",
+        "title": "몇십 + 몇 (받아올림 없음) B",
+        "description": "받아올림이 없는 몇십과 몇의 합을 가로식으로 연습합니다.",
+        "page": "p56~57",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "3",
+        "idx": "21",
+        "title": "몇십 몇 + 몇 (받아올림 없음) A",
+        "description": "받아올림이 없는 몇십 몇과 몇의 합을 세로식으로 연습합니다.",
+        "page": "p58~59",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "4",
+        "idx": "20",
+        "title": "몇십 몇 + 몇 (받아올림 없음) B",
+        "description": "받아올림이 없는 몇십 몇과 몇의 합을 가로식으로 연습합니다.",
+        "page": "p58~59",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "5",
+        "idx": "23",
+        "title": "몇십 + 몇십 (받아올림 없음) A",
+        "description": "받아올림이 없는 몇십과 몇십의 합을 세로식으로 연습합니다.",
+        "page": "p60",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "6",
+        "idx": "22",
+        "title": "몇십 + 몇십 (받아올림 없음) B",
+        "description": "받아올림이 없는 몇십과 몇십의 합을 가로식으로 연습합니다.",
+        "page": "p60",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "7",
+        "idx": "25",
+        "title": "몇십 몇 + 몇십 몇 (받아올림 없음) A",
+        "description": "받아올림이 없는 몇십 몇과 몇십 몇의 합을 세로식으로 연습합니다.",
+        "page": "p61",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "8",
+        "idx": "24",
+        "title": "몇십 몇 + 몇십 몇 (받아올림 없음) B",
+        "description": "받아올림이 없는 몇십 몇과 몇십 몇의 합을 가로식으로 연습합니다.",
+        "page": "p61",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "9",
+        "idx": "29",
+        "title": "몇십 - 몇십 (받아내림 없음) A",
+        "description": "받아내림이 없는 몇십과 몇십의 차를 세로식으로 연습합니다.",
+        "page": "p64",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "10",
+        "idx": "28",
+        "title": "몇십 - 몇십 (받아내림 없음) B",
+        "description": "받아내림이 없는 몇십과 몇십의 차를 가로식으로 연습합니다.",
+        "page": "p64",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "11",
+        "idx": "27",
+        "title": "몇십 몇 - 몇 (받아내림 없음) A",
+        "description": "받아내림이 없는 몇십 몇과 몇의 차를 세로식으로 연습합니다.",
+        "page": "p62~63",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "12",
+        "idx": "26",
+        "title": "몇십 몇 - 몇 (받아내림 없음) B",
+        "description": "받아내림이 없는 몇십 몇과 몇의 차를 가로식으로 연습합니다.",
+        "page": "p62~63",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "13",
+        "idx": "31",
+        "title": "몇십 몇 - 몇십 몇 (받아내림 없음) A",
+        "description": "받아내림이 없는 몇십 몇과 몇십 몇의 차를 세로식으로 연습합니다.",
+        "page": "p65",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "14",
+        "idx": "30",
+        "title": "몇십 몇 - 몇십 몇 (받아내림 없음) B",
+        "description": "받아내림이 없는 몇십 몇과 몇십 몇의 차를 가로식으로 연습합니다.",
+        "page": "p65",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "15",
+        "idx": "32",
+        "title": "두 자리 수 덧셈과 뺄셈의 관계",
+        "description": "두 자리 수들의 덧셈식을 보고 뺄셈식을 만드는 연습을 합니다.",
+        "page": "p66",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "16",
+        "idx": "33",
+        "title": "두 자리 수 뺄셈과 덧셈의 관계",
+        "description": "두 자리 수들의 뺄셈식을 보고 덧셈식을 만드는 연습을 합니다.",
+        "page": "p67",
+        "ccss": "Addition/Subtraction"
+      }
+    ],
+    "format_count": 16
+  },
+  "math-1-2-4": {
+    "grade": 1,
+    "semester": 2,
+    "chapter_no": 4,
+    "unit_name": "덧셈과 뺄셈(2)",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "15",
+        "title": "몇 + 몇 + 몇 (합이 9이하)",
+        "description": "합이 10을 넘지 않는 세 수의 덧셈을 연습합니다.",
+        "page": "p52~55",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "2",
+        "idx": "16",
+        "title": "몇 - 몇 - 몇 (차가 9이하)",
+        "description": "한 자리 수 세 개의 뺄셈을 연습합니다.",
+        "page": "p52~55",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "3",
+        "idx": "17",
+        "title": "몇 + 몇 - 몇 / 몇 - 몇 + 몇 (한 자리 수)",
+        "description": "세 수의 계산 결과가 한 자리 수인 덧셈과 뺄셈이 혼합된 계산을 연습합니다.",
+        "page": "p52~55",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "4",
+        "idx": "11",
+        "title": "10을 두 수로 가르기",
+        "description": "10을 두수로 가르는 문제를 통해 이후 받아내림이 있는 뺄셈을 잘 할 수 있도록 연습합니다.",
+        "page": "p36~37",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "5",
+        "idx": "12",
+        "title": "10이 되도록 두 수를 모으기",
+        "description": "두 수를 모아 10을 만드는 문제를 통해 이후 받아올림이 있는 덧셈을 잘 할 수 있도록 연습합니다.",
+        "page": "p38~39",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "6",
+        "idx": "13",
+        "title": "10이 되는 더하기",
+        "description": "두 수를 모아 10을 만드는 것을 식을 통해 연습합니다.",
+        "page": "p40~43",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "7",
+        "idx": "14",
+        "title": "10에서 빼기",
+        "description": "10을 두 수로 가르는 것을 식을 통해 연습합니다.",
+        "page": "p44~47",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "8",
+        "idx": "34",
+        "title": "두 수의 합이 10이 되는 세 수의 덧셈 A",
+        "description": "받아올림이 있는 덧셈을 연습하기 위해 합이 10이 되는 두 수가 표시되어 있을 때 그 수들을 먼저 더하고 남은 수를 더하는 연습을 합니다.",
+        "page": "p82~83",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "9",
+        "idx": "35",
+        "title": "두 수의 합이 10이 되는 세 수의 덧셈 B",
+        "description": "받아올림이 있는 덧셈을 연습하기 위해 합이 10이 되는 두 수를 찾아서 그 수들을 먼저 더하고 남은 수를 더하는 연습을 합니다.",
+        "page": "p82~83",
+        "ccss": "Addition/Subtraction"
+      }
+    ],
+    "format_count": 9
+  },
+  "math-1-2-6": {
+    "grade": 1,
+    "semester": 2,
+    "chapter_no": 6,
+    "unit_name": "덧셈과 뺄셈(3)",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "37",
+        "title": "몇 + 몇 (받아올림 있음) A",
+        "description": "받아올림이 있는 한 자리 수 덧셈을 세로식으로 연습합니다.",
+        "page": "p84~87",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "2",
+        "idx": "36",
+        "title": "몇 + 몇 (받아올림 있음) B",
+        "description": "받아올림이 있는 한 자리 수 덧셈을 가로식으로 연습합니다.",
+        "page": "p84~87",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "3",
+        "idx": "43",
+        "title": "몇 + 몇 + 몇 (받아올림 있음)",
+        "description": "받아올림이 있는 한 자리 수 세 개의 덧셈을 연습합니다.",
+        "page": "p92",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "4",
+        "idx": "39",
+        "title": "십몇 - 몇 (받아내림 있음) A",
+        "description": "받아내림이 있는 십몇 - 몇을 세로식으로 연습합니다.",
+        "page": "p88~91",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "5",
+        "idx": "38",
+        "title": "십몇 - 몇 (받아내림 있음) B",
+        "description": "받아내림이 있는 십몇 - 몇을 가로식으로 연습합니다.",
+        "page": "p88~91",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "6",
+        "idx": "44",
+        "title": "십몇 - 몇 - 몇 (받아내림 있음)",
+        "description": "받아내림이 있는 세 수의(십몇 - 몇 - 몇) 뺄셈을 연습합니다.",
+        "page": "p93",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "7",
+        "idx": "42",
+        "title": "몇 + 몇 / 십몇 - 몇 A",
+        "description": "받아올림이 있는 한 자리 수 덧셈, 받아내림이 있는 십몇 - 몇을 세로식으로 연습합니다.",
+        "page": "p94~95",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "8",
+        "idx": "41",
+        "title": "몇 + 몇 / 십몇 - 몇 B",
+        "description": "받아올림이 있는 한 자리 수 덧셈, 받아내림이 있는 십몇 - 몇을 가로식으로 연습합니다.",
+        "page": "p94~95",
+        "ccss": "Addition/Subtraction"
+      }
+    ],
+    "format_count": 8
+  },
+  "math-2-1-3": {
+    "grade": 2,
+    "semester": 1,
+    "chapter_no": 3,
+    "unit_name": "덧셈과 뺄셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "45",
+        "title": "몇십 몇 + 몇 (받아올림 있음) A",
+        "description": "받아올림이 있는 몇십 + 몇을 세로식으로 연습합니다.",
+        "page": "p22~23",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "2",
+        "idx": "46",
+        "title": "몇십 몇 + 몇 (받아올림 있음) B",
+        "description": "받아올림이 있는 몇십 + 몇을 가로식으로 연습합니다.",
+        "page": "p22~23",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "3",
+        "idx": "55",
+        "title": "몇십 몇 + 몇십 몇 (받아올림 1번) A",
+        "description": "받아올림이 한 번 있는 몇십 몇 + 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p52~53",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "4",
+        "idx": "56",
+        "title": "몇십 몇 + 몇십 몇 (받아올림 1번) B",
+        "description": "받아올림이 한 번 있는 몇십 몇 + 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p52~53",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "5",
+        "idx": "57",
+        "title": "몇십 몇 + 몇십 몇 (받아올림 2번) A",
+        "description": "받아올림이 두 번 있는 몇십 몇 + 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p54",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "6",
+        "idx": "58",
+        "title": "몇십 몇 + 몇십 몇 (받아올림 2번) B",
+        "description": "받아올림이 두 번 있는 몇십 몇 + 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p54",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "7",
+        "idx": "47",
+        "title": "몇십 몇 - 몇 (받아내림 있음) A",
+        "description": "받아내림이 있는 몇십 몇 - 몇을 세로식으로 연습합니다.",
+        "page": "p24~25",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "8",
+        "idx": "48",
+        "title": "몇십 몇 - 몇 (받아내림 있음) B",
+        "description": "받아내림이 있는 몇십 몇 - 몇을 가로식으로 연습합니다.",
+        "page": "p24~25",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "9",
+        "idx": "59",
+        "title": "몇십 몇 - 몇십 몇 (받아내림 1번) A",
+        "description": "받아내림이 한 번 있는 몇십 몇 - 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p55~56",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "10",
+        "idx": "60",
+        "title": "몇십 몇 - 몇십 몇 (받아내림 1번) B",
+        "description": "받아내림이 한 번 있는 몇십 몇 - 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p55~56",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "11",
+        "idx": "49",
+        "title": "몇십 몇 ± 몇 (받아올림/내림 있음) A",
+        "description": "받아올림이 있는 몇십 몇 + 몇 또는 받아내림이 있는 몇십 몇 - 몇을 세로식으로 연습합니다.",
+        "page": "p28~29",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "12",
+        "idx": "50",
+        "title": "몇십 몇 ± 몇 (받아올림/내림 있음) B",
+        "description": "받아올림이 있는 몇십 몇 + 몇 또는 받아내림이 있는 몇십 몇 - 몇을 가로식으로 연습합니다.",
+        "page": "p28~29",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "13",
+        "idx": "61",
+        "title": "몇십 몇 ± 몇십 몇 A",
+        "description": "받아올림/받아내림이 있는 두 자리 수의 덧셈/뺄셈을 세로식으로 연습합니다.",
+        "page": "p52~56",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "14",
+        "idx": "62",
+        "title": "몇십 몇 ± 몇십 몇 B",
+        "description": "받아올림/받아내림이 있는 두 자리 수의 덧셈/뺄셈을 가로식으로 연습합니다.",
+        "page": "p52~56",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "15",
+        "idx": "51",
+        "title": "몇십 몇 + 몇 + 몇 (받아올림 있음)",
+        "description": "몇십 몇 + 몇 + 몇 형태의 세 수의 덧셈을 연습합니다.",
+        "page": "p26",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "16",
+        "idx": "52",
+        "title": "몇십 몇 - 몇 - 몇 (받아내림 있음)",
+        "description": "몇십 몇 - 몇 - 몇 형태의 세 수의 뺄셈을 연습합니다.",
+        "page": "p27",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "17",
+        "idx": "53",
+        "title": "몇십 몇 + 몇 - 몇 / 몇십 몇 - 몇 + 몇 ",
+        "description": "몇십 몇 + 몇 - 몇 또는 몇십 몇 - 몇 + 몇과 같이 더하기와 빼기가 한 번씩 나오는 세 수의 계산을 연습합니다.",
+        "page": "p28~29",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "18",
+        "idx": "54",
+        "title": "몇십 몇 ± 몇 ± 몇 ",
+        "description": "세 수를 더하거나 빼는 것이 혼합되어 있는 계산을 연습합니다.",
+        "page": "p28~29",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "19",
+        "idx": "63",
+        "title": "몇십 몇 ± 몇십 몇 ± 몇십 몇",
+        "description": "받아올림/받아내림이 있는 세 개의 두 자리 수들의 덧셈/뺄셈 혼합 계산을 연습합니다.",
+        "page": "p60~61",
+        "ccss": "Addition/Subtraction"
+      }
+    ],
+    "format_count": 19
+  },
+  "math-2-2-2": {
+    "grade": 2,
+    "semester": 2,
+    "chapter_no": 2,
+    "unit_name": "곱셈구구",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "64",
+        "title": "2, 5, 3, 4의 단 곱셈구구",
+        "description": "2단, 5단, 3단, 4단의 곱셈구구를 연습합니다.",
+        "page": "p4~9",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "2",
+        "idx": "65",
+        "title": "6, 7, 8, 9의 단 곱셈구구",
+        "description": "6단, 7단, 8단, 9단의 곱셈구구를 연습합니다.",
+        "page": "p10~15",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "3",
+        "idx": "66",
+        "title": "1의 단, 0의 단을 포함한 곱셈구구",
+        "description": "0단, 1단을 포함한 곱셈구구를 연습합니다.",
+        "page": "p4~17",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "4",
+        "idx": "67",
+        "title": "곱셈구구에서 @box안의 수 찾기 A",
+        "description": "곱셈구구 식에서 ☐가 오른쪽에 있을 때, ☐안의 숫자를 알아내는 연습을 합니다.",
+        "page": "p4~17",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "5",
+        "idx": "68",
+        "title": "곱셈구구에서 @box안의 수 찾기 B",
+        "description": "곱셈구구 식에서 ☐가 왼쪽에 있을 때, ☐안의 숫자를 알아내는 연습을 합니다.",
+        "page": "p4~17",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "6",
+        "idx": "69",
+        "title": "곱셈구구에서 @box안의 수 찾기 C",
+        "description": "곱셈구구 식에서 ☐안의 숫자를 알아내는 연습을 합니다.",
+        "page": "p4~17",
+        "ccss": "Multiplication"
+      }
+    ],
+    "format_count": 6
+  },
+  "math-3-1-1": {
+    "grade": 3,
+    "semester": 1,
+    "chapter_no": 1,
+    "unit_name": "덧셈과 뺄셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "70",
+        "title": "몇백 / 몇백 몇십의 덧셈 (받아올림 없음) A",
+        "description": "받아올림이 없는 몇백 + 몇백, 또는 몇백 몇십 + 몇백 몇십을 세로식으로 연습합니다.",
+        "page": "p24~26",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "2",
+        "idx": "71",
+        "title": "몇백 / 몇백 몇십의 덧셈 (받아올림 없음) B",
+        "description": "받아올림이 없는 몇백 + 몇백, 또는 몇백 몇십 + 몇백 몇십을 가로식으로 연습합니다.",
+        "page": "p24~26",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "3",
+        "idx": "72",
+        "title": "몇백 몇십 몇의 덧셈 (받아올림 없음) A",
+        "description": "받아올림이 없는 몇백 몇십 몇 + 몇백 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p27~28",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "4",
+        "idx": "73",
+        "title": "몇백 몇십 몇의 덧셈 (받아올림 없음) B",
+        "description": "받아올림이 없는 몇백 몇십 몇 + 몇백 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p27~28",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "5",
+        "idx": "79",
+        "title": "몇백 몇십 몇의 덧셈 (받아올림 1번) A",
+        "description": "받아올림이 1번 있는 몇백 몇십 몇 + 몇백 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p54~57",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "6",
+        "idx": "80",
+        "title": "몇백 몇십 몇의 덧셈 (받아올림 1번) B",
+        "description": "받아올림이 1번 있는 몇백 몇십 몇 + 몇백 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p54~57",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "7",
+        "idx": "81",
+        "title": "몇백 몇십 몇의 덧셈 (받아올림 2번) A",
+        "description": "받아올림이 2번 있는 몇백 몇십 몇 + 몇백 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p58~60",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "8",
+        "idx": "82",
+        "title": "몇백 몇십 몇의 덧셈 (받아올림 2번) B",
+        "description": "받아올림이 2번 있는 몇백 몇십 몇 + 몇백 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p58~60",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "9",
+        "idx": "91",
+        "title": "몇백 몇십 몇의 덧셈 (받아올림 3번) A",
+        "description": "받아올림이 3번 있는 몇백 몇십 몇 + 몇백 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p20~21",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "10",
+        "idx": "92",
+        "title": "몇백 몇십 몇의 덧셈 (받아올림 3번) B",
+        "description": "받아올림이 3번 있는 몇백 몇십 몇 + 몇백 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p20~21",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "11",
+        "idx": "111",
+        "title": "네 자리 수 + 세 자리 수 A",
+        "description": "네 자리 수 + 세 자리 수를 세로식으로 연습합니다.",
+        "page": "p4~5",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "12",
+        "idx": "112",
+        "title": "네 자리 수 + 세 자리 수 B",
+        "description": "네 자리 수 + 세 자리 수를 가로식으로 연습합니다.",
+        "page": "p4~5",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "13",
+        "idx": "113",
+        "title": "네 자리 수 + 네 자리 수 A",
+        "description": "네 자리 수 + 네 자리 수를 세로식으로 연습합니다.",
+        "page": "p6~7",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "14",
+        "idx": "114",
+        "title": "네 자리 수 + 네 자리 수 B",
+        "description": "네 자리 수 + 네 자리 수를 가로식으로 연습합니다.",
+        "page": "p6~7",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "15",
+        "idx": "74",
+        "title": "몇백 / 몇백 몇십의 뺄셈 (받아내림 없음) A",
+        "description": "받아내림이 없는 몇백 - 몇백, 또는 몇백 몇십 - 몇백 몇십을 세로식으로 연습합니다.",
+        "page": "p29~31",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "16",
+        "idx": "75",
+        "title": "몇백 / 몇백 몇십의 뺄셈 (받아내림 없음) B",
+        "description": "받아내림이 업는 몇백 - 몇백, 또는 몇백 몇십 - 몇백 몇십을 가로식으로 연습합니다.",
+        "page": "p29~31",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "17",
+        "idx": "76",
+        "title": "몇백 몇십 몇의 뺄셈 (받아내림 없음) A",
+        "description": "받아내림이 없는 몇백 몇십 몇 - 몇백 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p32~33",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "18",
+        "idx": "77",
+        "title": "몇백 몇십 몇의 뺄셈 (받아내림 없음) B",
+        "description": "받아내림이 없는 몇백 몇십 몇 - 몇백 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p32~33",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "19",
+        "idx": "84",
+        "title": "몇백 몇십 몇의 뺄셈 (받아내림 1번) A",
+        "description": "받아내림이 1번 있는 몇백 몇십 몇 - 몇백 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p61~64",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "20",
+        "idx": "85",
+        "title": "몇백 몇십 몇의 뺄셈 (받아내림 1번) B",
+        "description": "받아내림이 1번 있는 몇백 몇십 몇 - 몇백 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p61~64",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "21",
+        "idx": "86",
+        "title": "몇백 몇십 몇의 뺄셈 (받아내림 2번) A",
+        "description": "받아내림이 2번 있는 몇백 몇십 몇 - 몇백 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p65~67",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "22",
+        "idx": "87",
+        "title": "몇백 몇십 몇의 뺄셈 (받아내림 2번) B",
+        "description": "받아내림이 2번 있는 몇백 몇십 몇 - 몇백 몇십 몇을 가로식으로 연습합니다.",
+        "page": "p65~67",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "23",
+        "idx": "115",
+        "title": "네 자리 수 - 세 자리 수 A",
+        "description": "네 자리 수 - 세 자리 수를 세로식으로 연습합니다.",
+        "page": "p8~9",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "24",
+        "idx": "116",
+        "title": "네 자리 수 - 세 자리 수 B",
+        "description": "네 자리 수 - 세 자리 수를 세로식으로 연습합니다.",
+        "page": "p8~9",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "25",
+        "idx": "117",
+        "title": "네 자리 수 - 네 자리 수 A",
+        "description": "네 자리 수 - 네 자리 수를 세로식으로 연습합니다.",
+        "page": "p10~11",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "26",
+        "idx": "118",
+        "title": "네 자리 수 - 네 자리 수 B",
+        "description": "네 자리 수 - 네 자리 수를 가로식으로 연습합니다.",
+        "page": "p10~11",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "27",
+        "idx": "78",
+        "title": "몇백 몇십 몇 ± 몇백 몇십 몇 A",
+        "description": "받아내림이 없는 몇백 몇십 몇 + 몇백 몇십 몇, 또는 몇백 몇십 몇 - 몇백 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p36~37",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "28",
+        "idx": "83",
+        "title": "몇백 몇십 몇 ± 몇백 몇십 몇 B",
+        "description": "받아내림이 없는 몇백 몇십 몇 + 몇백 몇십 몇, 또는 몇백 몇십 몇 - 몇백 몇십 몇을 세로식으로 연습합니다.",
+        "page": "p36~37",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "29",
+        "idx": "119",
+        "title": "네 자리 수 ± 네 자리 수 A",
+        "description": "네 자리 수 ± 네 자리 수를 세로식으로 연습합니다.",
+        "page": "p6~7, 10~11",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "30",
+        "idx": "120",
+        "title": "네 자리 수 ± 네 자리 수 B",
+        "description": "네 자리 수 ± 네 자리 수를 가로식으로 연습합니다.",
+        "page": "p6~7, 10~11",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "31",
+        "idx": "90",
+        "title": "세 수의 덧셈/뺄셈 (세 자리 수)",
+        "description": "받아올림/받아내림이 있는 세 개의 세 자리 수들의 덧셈/뺄셈 혼합 계산을 연습합니다.",
+        "page": "p68~69",
+        "ccss": "Addition/Subtraction"
+      },
+      {
+        "no": "32",
+        "idx": "121",
+        "title": "세 수의 덧셈/뺄셈 (네 자리 수)",
+        "description": "세 개의 네 자리 수들의 덧셈/뺄셈 혼합 계산을 연습합니다.",
+        "page": "p12~13",
+        "ccss": "Addition/Subtraction"
+      }
+    ],
+    "format_count": 32
+  },
+  "math-3-1-3": {
+    "grade": 3,
+    "semester": 1,
+    "chapter_no": 3,
+    "unit_name": "나눗셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "93",
+        "title": "나눗셈의 기초",
+        "description": "나누는 수를 몇 번 빼서 0이 될 때, 그 회수가 나눗셈의 몫이 되는 나눗셈의 개념을 익힙니다.",
+        "page": "p48~51",
+        "ccss": "Division"
+      },
+      {
+        "no": "2",
+        "idx": "94",
+        "title": "곱셈과 나눗셈의 관계",
+        "description": "두 수의 곱셈에서, 곱셈한 결과를 한 수로 나눈 결과는 다른 한 수가 된다는 개념을 익힙니다.",
+        "page": "p58~59",
+        "ccss": "Division"
+      },
+      {
+        "no": "3",
+        "idx": "95",
+        "title": "나눗셈과 곱셈의 관계",
+        "description": "두 수의 나눗셈에서, 나누는 수와 몫을 곱하면 나누어지는 수가 되는 개념을 익힙니다. ",
+        "page": "p58~59",
+        "ccss": "Division"
+      },
+      {
+        "no": "4",
+        "idx": "96",
+        "title": "곱셈구구 내에서의 나눗셈 A",
+        "description": "곱셈을 활용하여 나눗셈의 몫을 구하는 것을 세로식으로 연습합니다.",
+        "page": "p60~65",
+        "ccss": "Division"
+      },
+      {
+        "no": "5",
+        "idx": "97",
+        "title": "곱셈구구 내에서의 나눗셈 B",
+        "description": "곱셈을 활용하여 나눗셈의 몫을 구하는 것을 가로식으로 연습합니다.",
+        "page": "p60~65",
+        "ccss": "Division"
+      }
+    ],
+    "format_count": 5
+  },
+  "math-3-1-4": {
+    "grade": 3,
+    "semester": 1,
+    "chapter_no": 4,
+    "unit_name": "곱셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "98",
+        "title": "몇십 X 몇 A",
+        "description": "몇십 X 몇을 세로식으로 연습합니다.",
+        "page": "p82~83",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "2",
+        "idx": "99",
+        "title": "몇십 X 몇 B",
+        "description": "몇십 X 몇을 가로식으로 연습합니다.",
+        "page": "p82~83",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "3",
+        "idx": "100",
+        "title": "몇십 몇 X 몇 (올림 없음) A",
+        "description": "올림이 없는 몇십 몇 X 몇을 세로식으로 연습합니다.",
+        "page": "p84~85",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "4",
+        "idx": "101",
+        "title": "몇십 몇 X 몇 (올림 없음) B",
+        "description": "올림이 없는 몇십 몇 X 몇을 가로식으로 연습합니다.",
+        "page": "p84~85",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "5",
+        "idx": "102",
+        "title": "몇십 몇 X 몇 (십의 자리 올림 있음) A",
+        "description": "십의 자리에서 올림이 있는 몇십 몇 X 몇을 세로식으로 연습합니다. ",
+        "page": "p86~87",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "6",
+        "idx": "103",
+        "title": "몇십 몇 X 몇 (십의 자리 올림 없음) B",
+        "description": "십의 자리에서 올림이 있는 몇십 몇 X 몇을 가로식으로 연습합니다. ",
+        "page": "p86~87",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "7",
+        "idx": "104",
+        "title": "몇십 몇 X 몇 (일의 자리에서 올림) A",
+        "description": "일의 자리에서 올림이 있는 몇십 몇 X 몇을 세로식으로 연습합니다.",
+        "page": "p88~89",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "8",
+        "idx": "105",
+        "title": "몇십 몇 X 몇 (일의 자리에서 올림) B",
+        "description": "일의 자리에서 올림이 있는 몇십 몇 X 몇을 가로식으로 연습합니다.",
+        "page": "p88~89",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "9",
+        "idx": "107",
+        "title": "몇십 몇 X 몇 (십, 일의 자리 올림 있음) A",
+        "description": "십의 자리와 일의 자리에서 모두 올림이 있는 몇십 몇 X 몇을 세로식으로 연습합니다.",
+        "page": "p92~93",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "10",
+        "idx": "108",
+        "title": "몇십 몇 X 몇 (십, 일의 자리 올림 있음) B",
+        "description": "십의 자리와 일의 자리에서 모두 올림이 있는 몇십 몇 X 몇을 가로식으로 연습합니다.",
+        "page": "p92~93",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "11",
+        "idx": "109",
+        "title": "몇십 몇 X 몇 (종합) A",
+        "description": "여러 형태의 올림이 있는 몇십 몇 X 몇을 세로식으로 연습합니다.",
+        "page": "p92~93",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "12",
+        "idx": "110",
+        "title": "몇십 몇 X 몇 (종합) B",
+        "description": "여러 형태의 올림이 있는 몇십 몇 X 몇을 가로식으로 연습합니다.",
+        "page": "p92~93",
+        "ccss": "Multiplication"
+      }
+    ],
+    "format_count": 12
+  },
+  "math-3-2-1": {
+    "grade": 3,
+    "semester": 2,
+    "chapter_no": 1,
+    "unit_name": "곱셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "122",
+        "title": "세 자리 수 X 한 자리 수 (올림 없음) A",
+        "description": "올림이 없는 세 자리 수 X 한 자리 수를 곱셉 과정을 모두 나타낸 세로식으로 연습합니다. ",
+        "page": "p18~19",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "2",
+        "idx": "123",
+        "title": "세 자리 수 X 한 자리 수 (올림 없음) B",
+        "description": "올림이 없는 세 자리 수 X 한 자리 수를 세로식으로 연습합니다. ",
+        "page": "p18~19",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "3",
+        "idx": "124",
+        "title": "세 자리 수 X 한 자리 수 (올림 없음) C",
+        "description": "올림이 없는 세 자리 수 X 한 자리 수를 가로식으로 연습합니다. ",
+        "page": "p18~19",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "4",
+        "idx": "125",
+        "title": "세 자리 수 X 한 자리 수 (올림 있음) A",
+        "description": "올림이 있는 세 자리 수 X 한 자리 수를 곱셈 과정을 모두 나타낸 세로식으로 연습합니다.",
+        "page": "p20~21",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "5",
+        "idx": "126",
+        "title": "세 자리 수 X 한 자리 수 (올림 있음) B",
+        "description": "올림이 있는 세 자리 수 X 한 자리 수를 세로식으로 연습합니다.",
+        "page": "p20~21",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "6",
+        "idx": "127",
+        "title": "세 자리 수 X 한 자리 수 (올림 있음) C",
+        "description": "올림이 있는 세 자리 수 X 한 자리 수를 가로식으로 연습합니다.",
+        "page": "p20~21",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "7",
+        "idx": "128",
+        "title": "몇십 X 몇십 A",
+        "description": "몇십 X 몇십을 세로식으로 연습합니다.",
+        "page": "p22~23",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "8",
+        "idx": "129",
+        "title": "몇십 X 몇십 B",
+        "description": "몇십 X 몇십을 가로식으로 연습합니다.",
+        "page": "p22~23",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "9",
+        "idx": "130",
+        "title": "두 자리 수 X 몇십 A",
+        "description": "두 자리 수 X 몇십을 세로식으로 연습합니다.",
+        "page": "p24~25",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "10",
+        "idx": "131",
+        "title": "두 자리 수 X 몇십 B",
+        "description": "두 자리 수 X 몇십을 가로식으로 연습합니다.",
+        "page": "p24~25",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "11",
+        "idx": "132",
+        "title": "두 자리 수 X 두 자리 수 A",
+        "description": "두 자리 수 X 두 자리 수를 세로식으로 연습합니다.",
+        "page": "p26~27",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "12",
+        "idx": "133",
+        "title": "두 자리 수 X 두 자리 수 B",
+        "description": "가로식으로 된 두 자리 수 X 두 자리 수를 세로식으로 바꾸어 곱셈하는 것을 연습합니다.",
+        "page": "p26~27",
+        "ccss": "Multiplication"
+      }
+    ],
+    "format_count": 12
+  },
+  "math-3-2-2": {
+    "grade": 3,
+    "semester": 2,
+    "chapter_no": 2,
+    "unit_name": "나눗셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "134",
+        "title": "몇십 ÷ 몇 (내림이 없고 나머지도 없음) A",
+        "description": "내림이 없고 나머지도 없는 몇십 ÷ 몇을 세로식으로 연습합니다.",
+        "page": "p50~51",
+        "ccss": "Division"
+      },
+      {
+        "no": "2",
+        "idx": "135",
+        "title": "몇십 ÷ 몇 (내림이 없고 나머지도 없음) B",
+        "description": "내림이 없고 나머지도 없는 몇십 ÷ 몇이 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈을 하는 연습을 합니다.",
+        "page": "p50~51",
+        "ccss": "Division"
+      },
+      {
+        "no": "3",
+        "idx": "136",
+        "title": "몇십 몇 ÷ 몇 (내림이 없고 나머지도 없음) A",
+        "description": "내림이 없고 나머지도 없는 몇십 몇 ÷ 몇을 세로식으로 연습합니다.",
+        "page": "p52~53",
+        "ccss": "Division"
+      },
+      {
+        "no": "4",
+        "idx": "137",
+        "title": "몇십 몇 ÷ 몇 (내림이 없고 나머지도 없음) B",
+        "description": "내림이 없고 나머지도 없는 몇십 몇 ÷ 몇이 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다. ",
+        "page": "p52~53",
+        "ccss": "Division"
+      },
+      {
+        "no": "5",
+        "idx": "142",
+        "title": "몇십 몇 ÷ 몇 (내림이 있으나 나머지가 없음) A",
+        "description": "내림이 있으나 나머지가 없는 몇십 몇 ÷ 몇을 세로식으로 연습합니다.",
+        "page": "p58",
+        "ccss": "Division"
+      },
+      {
+        "no": "6",
+        "idx": "143",
+        "title": "몇십 몇 ÷ 몇 (내림이 있으나 나머지가 없음) B",
+        "description": "내림이 있으나 나머지가 없는 몇십 몇 ÷ 몇이 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p58",
+        "ccss": "Division"
+      },
+      {
+        "no": "7",
+        "idx": "144",
+        "title": "몇십 몇 ÷ 몇 (내림이 있고 나머지도 있음) A",
+        "description": "내림이 있고 나머지도 있는 몇십 몇 ÷ 몇을 세로식으로 연습합니다.",
+        "page": "p59",
+        "ccss": "Division"
+      },
+      {
+        "no": "8",
+        "idx": "145",
+        "title": "몇십 몇 ÷ 몇 (내림이 있고 나머지도 있음) B",
+        "description": "내림이 있고 나머지도 있는 몇십 몇 ÷ 몇이 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p59",
+        "ccss": "Division"
+      },
+      {
+        "no": "9",
+        "idx": "152",
+        "title": "몇백 몇십 몇 ÷ 몇 (내림/나머지 있음) A",
+        "description": "내림이 있고 나머지도 있는 몇백 몇십 몇 ÷ 몇을 세로식으로 연습합니다.",
+        "page": "p60~61",
+        "ccss": "Division"
+      },
+      {
+        "no": "10",
+        "idx": "153",
+        "title": "몇백 몇십 몇 ÷ 몇 (내림/나머지 있음) B",
+        "description": "내림이 있고 나머지도 있는 몇백 몇십 몇 ÷ 몇이 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p60~61",
+        "ccss": "Division"
+      },
+      {
+        "no": "11",
+        "idx": "138",
+        "title": "나눗셈의 몫과 나머지 A",
+        "description": "나누는 수를 몇 번 빼서 남은 수가 나누는 수보다 작을 때, 그 회수가 나눗셈의 몫이 되고 남은 수가 나눗셈의 나머지가 되는 개념을 익힙니다.",
+        "page": "p54~55",
+        "ccss": "Division"
+      },
+      {
+        "no": "12",
+        "idx": "139",
+        "title": "나눗셈의 몫과 나머지 B",
+        "description": "나누어 떨어지지 않는 나눗셈의 몫과 나머지를 구하는 것을 세로식으로 연습합니다.",
+        "page": "p54~55",
+        "ccss": "Division"
+      },
+      {
+        "no": "13",
+        "idx": "140",
+        "title": "나눗셈의 몫과 나머지 C",
+        "description": "나누어 떨어지지 않는 나눗셈의 몫과 나머지를 구하는 것을 가로식으로 연습합니다.",
+        "page": "p54~55",
+        "ccss": "Division"
+      },
+      {
+        "no": "14",
+        "idx": "141",
+        "title": "나눗셈의 검산",
+        "description": "나눗셈의 몫과 나머지를 곱셈과 덧셈을 이용하여 검산하는 것을 연습합니다.",
+        "page": "p56~57",
+        "ccss": "Division"
+      }
+    ],
+    "format_count": 14
+  },
+  "math-3-2-4": {
+    "grade": 3,
+    "semester": 2,
+    "chapter_no": 4,
+    "unit_name": "분수",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "181",
+        "title": "대분수를 가분수로 나타내기",
+        "description": "대분수를 가분수로 나타내는 연습을 합니다.",
+        "page": "p98~99",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "182",
+        "title": "가분수를 대분수로 나타내기",
+        "description": "가분수를 대분수로 나타내는 연습을 합니다.",
+        "page": "p98~99",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "183",
+        "title": "분모가 같은 가분수/대분수끼리의 크기 비교",
+        "description": "분모가 같은 가분수들의 크기를 비교하고, 분모가 같은 대분수들의 크기를 비교하는 연습을 합니다.",
+        "page": "p100~p101",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "4",
+        "idx": "184",
+        "title": "분모가 같은 가분수와 대분수의 크기 비교",
+        "description": "분모가 같은 가분수와 대분수의 크기를 비교하는 연습을 합니다.",
+        "page": "p100~p101",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 4
+  },
+  "math-4-1-3": {
+    "grade": 4,
+    "semester": 1,
+    "chapter_no": 3,
+    "unit_name": "곱셈과 나눗셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "146",
+        "title": "두 자리 수 X 몇백/몇천",
+        "description": "몇백과 몇천을 곱할 때의 원리를 이해하고, 두 자리수 X 몇백/몇천을 구하는 것을 연습합니다.",
+        "page": "p24~25",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "2",
+        "idx": "147",
+        "title": "몇백, 몇천의 곱",
+        "description": "몇백과 몇천을 곱할 때의 원리를 이해하고, 몇백/몇천 X 몇백/몇천을 연습합니다.",
+        "page": "p24~25",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "3",
+        "idx": "148",
+        "title": "세 자리 수 X 두 자리 수 A",
+        "description": "세 자리 수 X 두 자리 수를 세로식으로 연습합니다.",
+        "page": "p26~27",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "4",
+        "idx": "149",
+        "title": "세 자리 수 X 두 자리 수 B",
+        "description": "가로식으로 주어진 세 자리 수 X 두 자리 수를 세로식으로 풀어 구하는 것을 연습합니다.",
+        "page": "p26~27",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "5",
+        "idx": "150",
+        "title": "네 자리 수 X 두 자리 수 A",
+        "description": "네 자리 수 X 두 자리 수를 세로식으로 연습합니다.",
+        "page": "p28~29",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "6",
+        "idx": "151",
+        "title": "네 자리 수 X 두 자리 수 B",
+        "description": "가로식으로 주어진 네 자리 수 X 두 자리 수를 세로식으로 풀어 구하는 것을 연습합니다.",
+        "page": "p28~29",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "7",
+        "idx": "154",
+        "title": "세 수의 곱셈",
+        "description": "세 수의 연이은 곱셈값을 구하는 것을 연습합니다.",
+        "page": "p30~31",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "8",
+        "idx": "155",
+        "title": "곱셈 종합",
+        "description": "두 자리/세 자리/네 자리 X 두 자리 곱셈을 연습합니다.",
+        "page": "p24~31",
+        "ccss": "Multiplication"
+      },
+      {
+        "no": "9",
+        "idx": "156",
+        "title": "몇십으로 나누기 (나머지 없음) A",
+        "description": "나머지가 없는 세 자리수 ÷ 몇십을 세로식으로 연습합니다.",
+        "page": "p32",
+        "ccss": "Division"
+      },
+      {
+        "no": "10",
+        "idx": "157",
+        "title": "몇십으로 나누기 (나머지 없음) B",
+        "description": "나머지가 없는 세 자리수 ÷ 몇십이 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p32",
+        "ccss": "Division"
+      },
+      {
+        "no": "11",
+        "idx": "158",
+        "title": "몇십으로 나누기 (나머지 있음) A",
+        "description": "나머지가 있는 세 자리수 ÷ 몇십을 세로식으로 연습합니다.",
+        "page": "p33",
+        "ccss": "Division"
+      },
+      {
+        "no": "12",
+        "idx": "159",
+        "title": "몇십으로 나누기 (나머지 있음) B",
+        "description": "나머지가 있는 세 자리수 ÷ 몇십이 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p33",
+        "ccss": "Division"
+      },
+      {
+        "no": "13",
+        "idx": "160",
+        "title": "두 자리 수 ÷ 두 자리 수 (나머지 없음) A",
+        "description": "나머지가 없는 두 자리수 ÷ 두 자리 수를 세로식으로 연습합니다.",
+        "page": "p34",
+        "ccss": "Division"
+      },
+      {
+        "no": "14",
+        "idx": "161",
+        "title": "두 자리 수 ÷ 두 자리 수 (나머지 없음) B",
+        "description": "나머지가 없는 두 자리수 ÷ 두 자리 수가 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p34",
+        "ccss": "Division"
+      },
+      {
+        "no": "15",
+        "idx": "162",
+        "title": "두 자리 수 ÷ 두 자리 수 (나머지 있음) A",
+        "description": "나머지가 있는 두 자리수 ÷ 두 자리 수를 세로식으로 연습합니다.",
+        "page": "p35",
+        "ccss": "Division"
+      },
+      {
+        "no": "16",
+        "idx": "163",
+        "title": "두 자리 수 ÷ 두 자리 수 (나머지 있음) B",
+        "description": "나머지가 있는 두 자리수 ÷ 두 자리 수가 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p35",
+        "ccss": "Division"
+      },
+      {
+        "no": "17",
+        "idx": "164",
+        "title": "세 자리 수 ÷ 두 자리 수 (나머지 없음) A",
+        "description": "몫이 한 자리이고 나머지가 없는 세 자리수 ÷ 두 자리 수를 세로식으로 연습합니다.",
+        "page": "p36",
+        "ccss": "Division"
+      },
+      {
+        "no": "18",
+        "idx": "165",
+        "title": "세 자리 수 ÷ 두 자리 수 (나머지 없음) B",
+        "description": "몫이 한 자리이고 나머지가 없는 세 자리수 ÷ 두 자리 수가 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p36",
+        "ccss": "Division"
+      },
+      {
+        "no": "19",
+        "idx": "166",
+        "title": "세 자리 수 ÷ 두 자리 수 (나머지 있음) A",
+        "description": "몫이 한 자리이고 나머지가 있는 세 자리수 ÷ 두 자리 수를 세로식으로 연습합니다.",
+        "page": "p37",
+        "ccss": "Division"
+      },
+      {
+        "no": "20",
+        "idx": "167",
+        "title": "세 자리 수 ÷ 두 자리 수 (나머지 있음) B",
+        "description": "몫이 한 자리이고 나머지가 있는 세 자리수 ÷ 두 자리 수가 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p37",
+        "ccss": "Division"
+      },
+      {
+        "no": "21",
+        "idx": "168",
+        "title": "세 자리 수 ÷ 두 자리 수 (몫이 두 자리) A",
+        "description": "몫이 두 자리이고 나머지가 있는 세 자리수 ÷ 두 자리 수를 세로식으로 연습합니다.",
+        "page": "p38~39",
+        "ccss": "Division"
+      },
+      {
+        "no": "22",
+        "idx": "169",
+        "title": "세 자리 수 ÷ 두 자리 수 (몫이 두 자리) B",
+        "description": "몫이 두 자리이고 나머지가 있는 세 자리수 ÷ 두 자리 수가 가로식으로 주어졌을때, 세로식으로 풀어서 나눗셈하는 연습을 합니다.",
+        "page": "p38~39",
+        "ccss": "Division"
+      }
+    ],
+    "format_count": 22
+  },
+  "math-4-2-1": {
+    "grade": 4,
+    "semester": 2,
+    "chapter_no": 1,
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "185",
+        "title": "분모가 같은 진분수의 덧셈 (합이 진분수)",
+        "description": "합이 진분수인, 분모가 같은 두 개의 진분수의 합을 구하는 연습을 합니다. ",
+        "page": "p4~5",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "186",
+        "title": "분모가 같은 진분수의 덧셈 (합이 가분수)",
+        "description": "합이 가분수인, 분모가 같은 두 개의 진분수의 합을 구하는 연습을 합니다. ",
+        "page": "p6~7",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "187",
+        "title": "분모가 같은 대분수의 덧셈 (분자의 합 < 분모)",
+        "description": "분자의 합이 분모보다 크지 않은, 분모가 같은 두 개의 대분수의 합을 구하는 연습을 합니다. ",
+        "page": "p8",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "4",
+        "idx": "188",
+        "title": "분모가 같은 대분수의 덧셈 (분자의 합 > 분모)",
+        "description": "분자의 합이 분모보다 큰, 분모가 같은 두 개의 대분수의 합을 구하는 연습을 합니다. ",
+        "page": "p9",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "5",
+        "idx": "189",
+        "title": "분모가 같은 진분수의 뺄셈 (진분수 - 진분수)",
+        "description": "분모가 같은 두 개의 진분수의 뺄셈을 연습합니다.",
+        "page": "p10",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "6",
+        "idx": "190",
+        "title": "분모가 같은 진분수의 뺄셈 (자연수 - 진분수)",
+        "description": "자연수에서 진분수를 빼는 계산을 연습합니다.",
+        "page": "p11",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "7",
+        "idx": "191",
+        "title": "분모가 같은 대분수의 뺄셈 <1>",
+        "description": "분모가 같고 앞의 분자가 뒤의 분자보다 큰 값을 가진, 두 개의 대분수의 뺄셈을 연습합니다.",
+        "page": "p12",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "8",
+        "idx": "192",
+        "title": "분모가 같은 대분수의 뺄셈 <2>",
+        "description": "분모가 같고 앞의 분자가 뒤의 분자보다 작은 값을 가진, 두 개의 대분수의 뺄셈을 연습합니다.",
+        "page": "p13",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "9",
+        "idx": "193",
+        "title": "분모가 같은 대분수와 진분수의 덧셈",
+        "description": "분모가 같은 대분수와 진분수의 덧셈을 연습합니다.",
+        "page": "p14",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "10",
+        "idx": "194",
+        "title": "분모가 같은 대분수와 진분수의 뺄셈",
+        "description": "분모가 같은 대분수와 진분수의 뺄셈을 연습합니다.",
+        "page": "p15",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 10
+  },
+  "math-4-2-3": {
+    "grade": 4,
+    "semester": 2,
+    "chapter_no": 3,
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "195",
+        "title": "자연수가 없는 소수 한 자리 수끼리의 덧셈 A",
+        "description": "소수 한 자리 수끼리의 덧셈을 세로식으로 연습합니다.",
+        "page": "p20~21",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "203",
+        "title": "자연수가 없는 소수 한 자리 수끼리의 덧셈 B",
+        "description": "소수 한 자리 수끼리의 덧셈을 가로식으로 연습합니다.",
+        "page": "p20~21",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "196",
+        "title": "자연수가 없는 소수 두 자리 수 범위의 덧셈 A",
+        "description": "소수 두 자리 수끼리의 덧셈 또는 소수 한 자리 수와 소수 두 자리 수의 덧셈을 세로식으로 연습합니다.",
+        "page": "p22~23",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "4",
+        "idx": "197",
+        "title": "자연수가 없는 소수 두 자리 수 범위의 덧셈 B",
+        "description": "소수 두 자리 수끼리의 덧셈 또는 소수 한 자리 수와 소수 두 자리 수의 덧셈을 가로식으로 연습합니다.",
+        "page": "p22~23",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "5",
+        "idx": "198",
+        "title": "자연수가 있는 소수 두 자리 수끼리의 덧셈 A",
+        "description": "자연수가 있는 소수 두 자리 수끼리의 덧셈을 세로식으로 연습합니다.",
+        "page": "p24",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "6",
+        "idx": "199",
+        "title": "자연수가 있는 소수 두 자리 수끼리의 덧셈 B",
+        "description": "자연수가 있는 소수 두 자리 수끼리의 덧셈을 가로식으로 연습합니다.",
+        "page": "p24",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "7",
+        "idx": "200",
+        "title": "자연수가 있는 소수 세 자리 수 범위의 덧셈 A",
+        "description": "자연수가 있는 소수 세 자리 수 범위의 덧셈을 세로식으로 연습합니다.",
+        "page": "p25",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "8",
+        "idx": "201",
+        "title": "자연수가 있는 소수 세 자리 수 범위의 덧셈 B",
+        "description": "자연수가 있는 소수 세 자리 수 범위의 덧셈을 가로식으로 연습합니다.",
+        "page": "p25",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "9",
+        "idx": "202",
+        "title": "소수 한 자리 수끼리의 뺄셈 A",
+        "description": "소수 한 자리 수끼리의 뺄셈을 세로식으로 연습합니다.",
+        "page": "p26~27",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "10",
+        "idx": "204",
+        "title": "소수 한 자리 수끼리의 뺄셈 B",
+        "description": "소수 한 자리 수끼리의 뺄셈을 가로식으로 연습합니다.",
+        "page": "p26~27",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "11",
+        "idx": "205",
+        "title": "자연수가 없는 소수 두 자리 범위의 뺄셈 A",
+        "description": "자연수가 없는 소수 두 자리 수 범위의 뺄셈을 세로식으로 연습합니다.",
+        "page": "p28~29",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "12",
+        "idx": "206",
+        "title": "자연수가 없는 소수 두 자리 범위의 뺄셈 B",
+        "description": "자연수가 없는 소수 두 자리 수 범위의 뺄셈을 가로식으로 연습합니다.",
+        "page": "p28~29",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "13",
+        "idx": "207",
+        "title": "자연수가 있는 소수 두 자리 수끼리의 뺄셈 A",
+        "description": "자연수가 있는 소수 두 자리 수끼리의 뺄셈을 세로식으로 연습합니다.",
+        "page": "p30",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "14",
+        "idx": "208",
+        "title": "자연수가 있는 소수 두 자리 수끼리의 뺄셈 B",
+        "description": "자연수가 있는 소수 두 자리 수끼리의 뺄셈을 가로식으로 연습합니다.",
+        "page": "p30",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "15",
+        "idx": "209",
+        "title": "자연수가 있는 소수 세 자리 수 범위의 뺄셈 A",
+        "description": "자연수가 있는 소수 세 자리 범위의 뺄셈을 세로식으로 연습합니다.",
+        "page": "p31",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "16",
+        "idx": "210",
+        "title": "자연수가 있는 소수 세 자리 수 범위의 뺄셈 B",
+        "description": "자연수가 있는 소수 세 자리 범위의 뺄셈을 가로식으로 연습합니다.",
+        "page": "p31",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 16
+  },
+  "math-5-1-1": {
+    "grade": 5,
+    "semester": 1,
+    "chapter_no": 1,
+    "unit_name": "자연수의 혼합계산",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "170",
+        "title": "덧셈과 뺄셈의 혼합 계산",
+        "description": "덧셈과 뺄셈이 섞여 있는 식의 계산을 연습합니다.",
+        "page": "p76~77",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "2",
+        "idx": "171",
+        "title": "곱셈과 나눗셈의 혼합 계산",
+        "description": "곱셈과 나눗셈이 섞여 있는 식의 계산을 연습합니다.",
+        "page": "p78~79",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "3",
+        "idx": "172",
+        "title": "덧셈, 뺄셈, 곱셈의 혼합 계산",
+        "description": "덧셈, 뺄셈, 곱셈이 섞여 있는 식의 계산을 연습합니다.",
+        "page": "p80~81",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "4",
+        "idx": "173",
+        "title": "덧셈, 뺄셈, 나눗셈의 혼합 계산",
+        "description": "덧셈, 뺄셈, 나눗셈이 섞여 있는 식의 계산을 연습합니다.",
+        "page": "p82~83",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "5",
+        "idx": "174",
+        "title": "덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산",
+        "description": "덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식의 계산을 연습합니다.",
+        "page": "p80~83",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "6",
+        "idx": "175",
+        "title": "( )가 있는 덧셈/뺄셈의 혼합 계산",
+        "description": "( )가 있는 덧셈/뺄셈의 혼합 계산을 연습합니다.",
+        "page": "p84~85",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "7",
+        "idx": "176",
+        "title": "( )가 있는 곱셈/나눗셈의 혼합 계산",
+        "description": "( )가 있는 곱셈/나눗셈의 혼합 계산을 연습합니다.",
+        "page": "p84~85",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "8",
+        "idx": "177",
+        "title": "( )가 있는 덧셈/뺄셈/곱셈의 혼합 계산",
+        "description": "( )가 있는 덧셈/뺄셈/곱셈의 혼합 계산을 연습합니다.",
+        "page": "p84~85",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "9",
+        "idx": "178",
+        "title": "( )가 있는 덧셈/뺄셈/나눗셈의 혼합 계산",
+        "description": "( )가 있는 덧셈/뺄셈/나눗셈의 혼합 계산을 연습합니다.",
+        "page": "p84~85",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "10",
+        "idx": "179",
+        "title": "( )가 있는 덧셈/뺄셈/곱셈/나눗셈의 혼합 계산",
+        "description": "( )가 있는 덧셈/뺄셈/곱셈/나눗셈의 혼합 계산을 연습합니다.",
+        "page": "p84~85",
+        "ccss": "Mixed Operation"
+      },
+      {
+        "no": "11",
+        "idx": "180",
+        "title": "{ }가 있는 덧셈/뺄셈/곱셈/나눗셈의 혼합 계산",
+        "description": "{ }가 있는 덧셈/뺄셈/곱셈/나눗셈의 혼합 계산을 연습합니다.",
+        "page": "p86~89",
+        "ccss": "Mixed Operation"
+      }
+    ],
+    "format_count": 11
+  },
+  "math-5-1-2": {
+    "grade": 5,
+    "semester": 1,
+    "chapter_no": 2,
+    "unit_name": "약수와 배수",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "211",
+        "title": "약수 구하기",
+        "description": "주어진 수의 약수를 구하는 연습을 합니다.",
+        "page": "p4~5",
+        "ccss": "Factor/Multiple"
+      },
+      {
+        "no": "2",
+        "idx": "212",
+        "title": "배수 구하기",
+        "description": "주어진 수의 배수를 구하는 연습을 합니다.",
+        "page": "p6~7",
+        "ccss": "Factor/Multiple"
+      },
+      {
+        "no": "3",
+        "idx": "213",
+        "title": "공약수 구하기",
+        "description": "두 개의 수에서 공통으로 존재하는 약수들을 구하는 연습을 합니다.",
+        "page": "p10",
+        "ccss": "Factor/Multiple"
+      },
+      {
+        "no": "4",
+        "idx": "214",
+        "title": "최대 공약수 구하기 - 두 수를 곱으로 나타냄",
+        "description": "두 수를 곱으로 나타내어 공통인 수를 찾아 최대공약수를 구하는 것을 연습합니다.",
+        "page": "p11",
+        "ccss": "Factor/Multiple"
+      },
+      {
+        "no": "5",
+        "idx": "215",
+        "title": "최대 공약수 구하기 - 공통 약수 이용",
+        "description": "공통인 약수를 찾아 최대공약수를 구하는 것을 연습합니다.",
+        "page": "p11",
+        "ccss": "Factor/Multiple"
+      },
+      {
+        "no": "6",
+        "idx": "216",
+        "title": "공배수 구하기",
+        "description": "두 수의 배수 중에서 공통으로 존재하는 배수들을 구하는 연습을 합니다.",
+        "page": "p12",
+        "ccss": "Factor/Multiple"
+      },
+      {
+        "no": "7",
+        "idx": "217",
+        "title": "최소 공배수 구하기 - 두 수를 곱으로 나타냄",
+        "description": "두 수를 곱으로 나타낸 후 최소공배수를 찾는 연습을 합니다.",
+        "page": "p13",
+        "ccss": "Factor/Multiple"
+      },
+      {
+        "no": "8",
+        "idx": "218",
+        "title": "최소 공배수 구하기 - 최대공약수 이용",
+        "description": "두 수의 최대공약수와 각 수를 최대공약수로 나눈 몫을 곱하여 최소공배수를 구하는 것을 연습합니다.",
+        "page": "p13",
+        "ccss": "Factor/Multiple"
+      }
+    ],
+    "format_count": 8
+  },
+  "math-5-1-4": {
+    "grade": 5,
+    "semester": 1,
+    "chapter_no": 4,
+    "unit_name": "약분과 통분",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "219",
+        "title": "크기가 같은 분수 만들기",
+        "description": "분수의 분모와 분자에 0이 아닌 같은 수를 곱하여 크기가 같은 분수를 만드는 연습을 합니다.",
+        "page": "p20",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "221",
+        "title": "기약분수 구하기",
+        "description": "분모와 분자를 최대공약수로 나누어 더는 약분할 수 없는 가장 작은 분수로 나타내는 연습을 합니다.",
+        "page": "p23",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "4",
+        "idx": "222",
+        "title": "분수의 통분 (곱을 공통분모로)",
+        "description": "분모의 곱을 공통분모로 하여 두 분수를 통분하는 것을 연습합니다.",
+        "page": "p24~27",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "5",
+        "idx": "223",
+        "title": "분수의 통분 (최소공배수를 공통분모로)",
+        "description": "분모의 곱을 최소공배수로 하여 두 분수를 통분하는 것을 연습합니다.",
+        "page": "p24~27",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "6",
+        "idx": "224",
+        "title": "분수의 크기 비교",
+        "description": "분모가 다른 두 분수의 크기를 비교하여 부등호를 써서 나타내는 연습을 합니다. ",
+        "page": "p28",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "7",
+        "idx": "238",
+        "title": "분수를 소수로 나타내기",
+        "description": "분수를 소수로 나타내는 연습을 합니다.",
+        "page": "p6~7",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "8",
+        "idx": "239",
+        "title": "소수를 분수로 나타내기",
+        "description": "소수를 분수로 나타내는 연습을 합니다.",
+        "page": "p8~9",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "9",
+        "idx": "240",
+        "title": "분수와 소수의 비교",
+        "description": "소수를 분수로 나타내는 연습을 합니다.",
+        "page": "p10~11",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 8
+  },
+  "math-5-1-5": {
+    "grade": 5,
+    "semester": 1,
+    "chapter_no": 5,
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "225",
+        "title": "진분수의 덧셈",
+        "description": "분모가 다른 진분수의 덧셈을 연습합니다.",
+        "page": "p34~35",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "226",
+        "title": "대분수의 덧셈 (받아올림 없음)",
+        "description": "받아올림이 없는 대분수의 덧셈을 연습합니다. ",
+        "page": "p36",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "227",
+        "title": "대분수의 덧셈 (받아올림 있음)",
+        "description": "받아올림이 있는 대분수의 덧셈을 연습합니다. ",
+        "page": "p37",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "4",
+        "idx": "228",
+        "title": "진분수의 뺄셈",
+        "description": "분모가 다른 진분수의 뺄셈을 연습합니다.",
+        "page": "p38~39",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "5",
+        "idx": "230",
+        "title": "대분수의 뺄셈 (받아내림 없음)",
+        "description": "받아내림이 없는 대분수의 뺄셈을 연습합니다.",
+        "page": "p40",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "6",
+        "idx": "231",
+        "title": "대분수의 뺄셈 (받아내림 있음)",
+        "description": "받아내림이 있는 대분수의 뺄셈을 연습합니다.",
+        "page": "p41",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 6
+  },
+  "math-5-2-2": {
+    "grade": 5,
+    "semester": 2,
+    "chapter_no": 2,
+    "unit_name": "분수의 곱셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "232",
+        "title": "분수 X 자연수",
+        "description": "(진분수) X (자연수) 또는 (대분수) X (자연수)의 계산을 연습합니다.",
+        "page": "p48~51",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "233",
+        "title": "자연수 X 분수",
+        "description": "(자연수) X (진분수) 또는 (자연수) X (대분수)의 계산을 연습합니다.",
+        "page": "p52~55",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "234",
+        "title": "진분수 X 진분수",
+        "description": "(진분수) X (진분수)의 계산을 연습합니다.",
+        "page": "p56~59",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "4",
+        "idx": "235",
+        "title": "대분수 X 대분수",
+        "description": "(대분수) X (대분수)의 계산을 연습합니다.",
+        "page": "p60~61",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "5",
+        "idx": "236",
+        "title": "세 분수의 곱셈 (진분수)",
+        "description": "세 분수 모두 진분수로만 이루어진 세 분수의 곱셈을 연습합니다.",
+        "page": "p62~63",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "6",
+        "idx": "237",
+        "title": "세 분수의 곱셈 (대분수, 자연수 포함)",
+        "description": "대분수 또는 자연수를 포함한 세 분수의 곱셈을 연습합니다.",
+        "page": "p62~63",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 6
+  },
+  "math-5-2-4": {
+    "grade": 5,
+    "semester": 2,
+    "chapter_no": 4,
+    "unit_name": "소수의 곱셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "243",
+        "title": "소수와 자연수의 곱",
+        "description": "소수 X 자연수, 자연수 X 소수를 연습합니다.",
+        "page": "p56~61",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "244",
+        "title": "곱의 소수점의 위치",
+        "description": "자연수와 소수의 곱셈 및 소수에 10, 100, 1000을 곱하는 경우와 자연수에 0.1, 0.01, 0.001을 곱하는 것을 통해 소수를 곱한 후 소수점의 위치를 알아내는 연습을 합니다.",
+        "page": "p62~65",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "246",
+        "title": "소수 X 소수",
+        "description": "소수와 소수의 곱셈을 연습합니다.",
+        "page": "p66~69",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "4",
+        "idx": "247",
+        "title": "세 소수의 곱셈",
+        "description": "세 소수의 곱셈을 연습합니다.",
+        "page": "p71",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 4
+  },
+  "math-6-1-1": {
+    "grade": 6,
+    "semester": 1,
+    "chapter_no": 1,
+    "unit_name": "분수의 나눗셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "241",
+        "title": "분수 ÷ 자연수",
+        "description": "분수를 자연수로 나눈 값을 구하는 연습을 합니다.",
+        "page": "p20~25",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "242",
+        "title": "분수와 자연수의 곱셈/나눗셈 혼합",
+        "description": "분수와 자연수의 곱셈, 나눗셈이 혼합된 계산을 연습합니다.",
+        "page": "p26~27",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 2
+  },
+  "math-6-1-3": {
+    "grade": 6,
+    "semester": 1,
+    "chapter_no": 3,
+    "unit_name": "소수의 나눗셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "248",
+        "title": "소수 ÷ 자연수 ",
+        "description": "자연수로 나누어 떨어지는 소수 ÷ 자연수를 연습합니다.",
+        "page": "p76~81",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "249",
+        "title": "소수 ÷ 자연수 (소수 끝자리 아래 0을 내려 계산)",
+        "description": "주어진 소수를 그대로 나눌 때 나누어 떨어지지 않는 경우 소수 끝자리 아래에 0을 내려 계산하는 연습을 합니다.",
+        "page": "p82~85",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "250",
+        "title": "자연수 ÷ 자연수",
+        "description": "자연수 ÷ 자연수의 몫이 소수인 나눗셈을 연습합니다.",
+        "page": "p86",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "4",
+        "idx": "251",
+        "title": "자연수 ÷ 자연수 (반올림하여 나타냄)",
+        "description": "자연수 ÷ 자연수의 몫이 나누어떨어지지 않을 경우 반올림하여 나타내는 연습을 합니다.",
+        "page": "p87",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 4
+  },
+  "math-6-1-4": {
+    "grade": 6,
+    "semester": 1,
+    "chapter_no": 4,
+    "unit_name": "비와 비율",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "259",
+        "title": "비와 비율",
+        "description": "문장을 보고, 비를 나타내고 그 비를 분수와 소수로 나타내는 연습을 합니다.",
+        "page": "p106~109",
+        "ccss": null
+      },
+      {
+        "no": "2",
+        "idx": "260",
+        "title": "백분율과 할푼리",
+        "description": "비율을 백분율(%) 또는 할푼리로 나타내는 연습을 합니다. ",
+        "page": "p110~113",
+        "ccss": null
+      }
+    ],
+    "format_count": 2
+  },
+  "math-6-2-1": {
+    "grade": 6,
+    "semester": 2,
+    "chapter_no": 1,
+    "unit_name": "분수의 나눗셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "252",
+        "title": "분수의 나눗셈 <1>",
+        "description": "(자연수) ÷ (단위분수) 및 분모가 같은 진분수끼리의 나눗셈을 연습합니다.",
+        "page": "p4~7",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "253",
+        "title": "분수의 나눗셈 <2>",
+        "description": "분모가 다른 진분수끼리의 나눗셈 및 (자연수) ÷ (진분수)를 연습합니다.",
+        "page": "p8~11",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "254",
+        "title": "분수의 나눗셈 <3>",
+        "description": "대분수가 포함된 분수의 나눗셈을 연습합니다.",
+        "page": "p12~13",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 3
+  },
+  "math-6-2-2": {
+    "grade": 6,
+    "semester": 2,
+    "chapter_no": 2,
+    "unit_name": "소수의 나눗셈",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "255",
+        "title": "소수 한 자리 수 ÷ 소수 한 자리 수",
+        "description": "(소수 한 자리 수) ÷ (소수 한 자리 수)의 몫을 구하는 연습을 합니다.",
+        "page": "p20~21",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "2",
+        "idx": "256",
+        "title": "소수 두 자리 수 ÷ 소수 두 자리 수",
+        "description": "(소수 두 자리 수) ÷ (소수 두 자리 수)의 몫을 구하는 연습을 합니다.",
+        "page": "p22~23",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "3",
+        "idx": "257",
+        "title": "자릿수가 다른 두 소수의 나눗셈",
+        "description": "자릿수가 다른 두 소수의 나눗셈을 연습합니다.",
+        "page": "p24~25",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "4",
+        "idx": "258",
+        "title": "자연수 ÷ 소수",
+        "description": "(자연수) ÷ (소수)을 연습합니다.",
+        "page": "p26~27",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "5",
+        "idx": "261",
+        "title": "소수의 나눗셈에서 나머지 구하기",
+        "description": "소수의 나눗셈에서 나머지를 구하는 연습을 합니다.",
+        "page": "p28~29",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "6",
+        "idx": "271",
+        "title": "소수 ÷ 분수 (분수로 고쳐 계산)",
+        "description": "(소수) ÷ (분수)에서 소수를 분수로 고쳐서 계산하는 연습을 합니다.",
+        "page": "p4~6",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "7",
+        "idx": "272",
+        "title": "소수 ÷ 분수 (소수로 고쳐 계산)",
+        "description": "(소수) ÷ (분수)에서 분수를 소수로 고쳐서 계산하는 연습을 합니다.",
+        "page": "p4~6",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "8",
+        "idx": "273",
+        "title": "분수 ÷ 소수 (분수로 고쳐 계산)",
+        "description": "(분수) ÷ (소수)에서 소수를 분수로 고쳐서 계산하는 연습을 합니다.",
+        "page": "p7~8",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "9",
+        "idx": "274",
+        "title": "분수 ÷ 소수 (소수로 고쳐 계산)",
+        "description": "(분수) ÷ (소수)에서 분수를 소수로 고쳐서 계산하는 연습을 합니다.",
+        "page": "p7~8",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "10",
+        "idx": "275",
+        "title": "분수와 소수의 혼합 계산 (연산자가 2, 3개)",
+        "description": "연산자가 2개 또는 3개인, 분수와 소수가 혼합되어 있는 수식을 계산하는 연습을 합니다.",
+        "page": "p9~10",
+        "ccss": "Fraction/Decimal"
+      },
+      {
+        "no": "11",
+        "idx": "276",
+        "title": "분수와 소수의 혼합 계산 (연산자가 4개 이상)",
+        "description": "연산자가 4개 이상인, 분수와 소수가 혼합되어 있는 수식을 계산하는 연습을 합니다.",
+        "page": "p11~13",
+        "ccss": "Fraction/Decimal"
+      }
+    ],
+    "format_count": 11
+  },
+  "math-6-2-4": {
+    "grade": 6,
+    "semester": 2,
+    "chapter_no": 4,
+    "unit_name": "비례식과 비례배분",
+    "formats": [
+      {
+        "no": "1",
+        "idx": "262",
+        "title": "가장 작은 자연수의 비로 나타내기",
+        "description": "주어진 비를 가장 작은 자연수의 비로 나타내는 연습을 합니다.",
+        "page": "p104~105",
+        "ccss": null
+      },
+      {
+        "no": "2",
+        "idx": "263",
+        "title": "자연수로 된 비례식에서 @box 안의 수 구하기",
+        "description": "비례식의 성질을 이용하여 자연수로만 이루어진 비례식에서 모르는 항의 값을 구하는 연습을 합니다.",
+        "page": "p106~107",
+        "ccss": null
+      },
+      {
+        "no": "3",
+        "idx": "264",
+        "title": "소수가 있는 비례식에서 @box 안의 수 구하기",
+        "description": "비례식의 성질을 이용하여 소수가 포함되어 있는 비례식에서 모르는 항의 값을 구하는 연습을 합니다.",
+        "page": "p106~107",
+        "ccss": null
+      },
+      {
+        "no": "4",
+        "idx": "265",
+        "title": "분수가 있는 비례식에서 @box 안의 수 구하기",
+        "description": "비례식의 성질을 이용하여 분수가 포함되어 있는 비례식에서 모르는 항의 값을 구하는 연습을 합니다.",
+        "page": "p106~107",
+        "ccss": null
+      },
+      {
+        "no": "5",
+        "idx": "266",
+        "title": "두 비의 관계를 연비로 나타내기",
+        "description": "두 비의 관계를 연비로 나타내는 연습을 합니다.",
+        "page": "p116~119",
+        "ccss": null
+      },
+      {
+        "no": "6",
+        "idx": "267",
+        "title": "두 비를 연비로 나타낸 것에서 @box 안의 수 구하기",
+        "description": "두 비를 하나로 표현한 연비와의 관계에서 모르는 수를 찾는 연습을 합니다.",
+        "page": "p116~119",
+        "ccss": null
+      },
+      {
+        "no": "7",
+        "idx": "268",
+        "title": "가장 작은 수의 연비로 나타내기",
+        "description": "연비의 각 항에 0이 아닌 같은 수를 곱하거나 나누어 가장 작은 자연수의 연비로 나타내는 연습을 합니다.",
+        "page": "p120~121",
+        "ccss": null
+      },
+      {
+        "no": "8",
+        "idx": "269",
+        "title": "비례배분",
+        "description": "문제에 주어진 수를 비에 맞게 비례배분하는 연습을 합니다.",
+        "page": "p122~123",
+        "ccss": null
+      },
+      {
+        "no": "9",
+        "idx": "270",
+        "title": "연비로 비례배분",
+        "description": "문제에 주어진 수를 연비에 맞게 비례배분하는 연습을 합니다.",
+        "page": "p124~125",
+        "ccss": null
+      }
+    ],
+    "format_count": 9
+  }
+}

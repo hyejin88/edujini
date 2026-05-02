@@ -28,7 +28,7 @@ function LibraryContent() {
   const grade = parseInt(searchParams.get("grade") || "3", 10);
   const subject = searchParams.get("subject") || "수학";
   const mode = (searchParams.get("mode") || "comp") as "comp" | "drill";
-  const modeLabel = mode === "drill" ? "연산 문제지" : "단원 학습지";
+  const modeLabel = mode === "drill" ? "연산 문제" : "단원 학습";
 
   const [units, setUnits] = useState<UnitDTO[]>([]);
   const [played, setPlayed] = useState<string[]>([]);
@@ -50,9 +50,9 @@ function LibraryContent() {
   const available = units.filter((u) =>
     mode === "drill" ? hasDrill(u.id) : u.available
   );
-  const upcoming = units.filter((u) =>
-    mode === "drill" ? !hasDrill(u.id) : !u.available
-  );
+  // 드릴 모드는 양식 없는 단원을 "준비 중"으로도 노출하지 않음 (연산 무관 단원이 대부분)
+  const upcoming =
+    mode === "drill" ? [] : units.filter((u) => !u.available);
   const left = Math.max(0, FREE_UNIT_LIMIT - played.length);
 
   return (

@@ -1,21 +1,36 @@
-// 드릴 학습지 자동 생성 — Gemini 호출 0, 클라이언트 사이드.
-// 매번 호출 시 새 숫자. 1번 문제는 정답 시범 (학생이 양식 학습).
+// 드릴 학습지 생성 — drill_pools.json에서 시드 기반 N개 추출.
+// Gemini 호출 0, 25만 문제 사전 빌드 풀 활용. 매일 새 학습지.
 
 import type { SheetMeta } from "./sheets";
+import poolsRaw from "./drill_pools.json";
+
+type PoolItem =
+  | { op: "+" | "-" | "×"; a: number; b: number; ans: number }
+  | { op: "÷"; a: number; b: number; ans: number; r?: number }
+  | { op: "frac_add" | "frac_sub"; d: number; a: number; b: number; ans_num: number; ans_den: number }
+  | { op: "decompose"; n: number; a: number; b: number }
+  | { op: "make_ten" | "break_ten"; a: number; ans: number }
+  | { op: "three"; a: number; b: number; c: number; ops: "+-" | "-+"; ans: number };
+
+const POOLS = poolsRaw as Record<string, PoolItem[]>;
 
 export interface DrillProblem {
   index: number; // 1부터 시작
-  is_example: boolean; // true = 정답 시범
-  op: "+" | "-" | "×" | "÷";
-  operands: number[];
-  answer: number; // 나눗셈은 몫
-  remainder?: number; // 나눗셈 나머지 (0 또는 양수)
+  is_example: boolean;
+  op: string; // "+" | "-" | "×" | "÷" | "frac_add" | "frac_sub" | "decompose" | "make_ten" | "break_ten" | "three"
+  operands: number[]; // 보편적 표현 (덧/뺄/곱: [a,b], 나눗셈: [a,b], 분수: [a,d,b,d], decompose: [n,a,b], three: [a,b,c])
+  answer: number; // 주 답 (분수: 분자 / decompose: a / three: ans)
+  // 추가 필드
+  remainder?: number;
+  ans_den?: number; // 분수 답 분모
+  ops_str?: string; // 세 수 연산자
   // 시각용
-  digits: [number, number];
+  digits?: [number, number];
   carry?: "none" | "once" | "any";
+  raw?: PoolItem; // 렌더러 직접 사용
 }
 
-// 시드 가능한 PRNG (단원·학습지 ID + 날짜로 매일 새 학습지)
+// 시드 가능한 PRNG
 function mulberry32(seed: number) {
   return function () {
     seed |= 0;
@@ -41,137 +56,113 @@ function todayKey(): string {
   return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 }
 
-function range(rng: () => number, min: number, max: number): number {
-  return Math.floor(rng() * (max - min + 1)) + min;
-}
-
-function digitMin(d: number): number {
-  return d <= 1 ? 0 : Math.pow(10, d - 1);
-}
-function digitMax(d: number): number {
-  return Math.pow(10, d) - 1;
-}
-
-// 받아올림 발생 여부 검사 (세로 덧셈)
-function hasCarry(a: number, b: number): boolean {
-  while (a > 0 || b > 0) {
-    if ((a % 10) + (b % 10) >= 10) return true;
-    a = Math.floor(a / 10);
-    b = Math.floor(b / 10);
+// Fisher-Yates 셔플 (시드 가능)
+function shuffle<T>(arr: T[], rng: () => number): T[] {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
   }
-  return false;
+  return a;
 }
 
-// 받아내림 발생 여부 검사 (세로 뺄셈)
-function hasBorrow(a: number, b: number): boolean {
-  while (a > 0 || b > 0) {
-    if (a % 10 < b % 10) return true;
-    a = Math.floor(a / 10);
-    b = Math.floor(b / 10);
+function poolItemToProblem(item: PoolItem): Omit<DrillProblem, "index" | "is_example"> {
+  if (item.op === "+" || item.op === "-" || item.op === "×") {
+    return {
+      op: item.op,
+      operands: [item.a, item.b],
+      answer: item.ans,
+      raw: item,
+    };
   }
-  return false;
-}
-
-function opForType(type: SheetMeta["type"]): "+" | "-" | "×" | "÷" {
-  switch (type) {
-    case "drill_h_sub":
-    case "drill_v_sub":
-      return "-";
-    case "drill_h_mul":
-    case "drill_v_mul":
-      return "×";
-    case "drill_h_div":
-      return "÷";
-    default:
-      return "+";
+  if (item.op === "÷") {
+    return {
+      op: "÷",
+      operands: [item.a, item.b],
+      answer: item.ans,
+      remainder: item.r,
+      raw: item,
+    };
   }
+  if (item.op === "frac_add" || item.op === "frac_sub") {
+    return {
+      op: item.op,
+      operands: [item.a, item.d, item.b, item.d],
+      answer: item.ans_num,
+      ans_den: item.ans_den,
+      raw: item,
+    };
+  }
+  if (item.op === "decompose") {
+    return {
+      op: "decompose",
+      operands: [item.n, item.a, item.b],
+      answer: item.a,
+      raw: item,
+    };
+  }
+  if (item.op === "make_ten" || item.op === "break_ten") {
+    return {
+      op: item.op,
+      operands: [item.a],
+      answer: item.ans,
+      raw: item,
+    };
+  }
+  if (item.op === "three") {
+    return {
+      op: "three",
+      operands: [item.a, item.b, item.c],
+      answer: item.ans,
+      ops_str: item.ops,
+      raw: item,
+    };
+  }
+  // fallthrough
+  return {
+    op: "?",
+    operands: [],
+    answer: 0,
+    raw: item,
+  };
 }
 
 export function generateDrill(sheet: SheetMeta): DrillProblem[] {
+  const poolKey = sheet.pool_key;
+  const pool = poolKey ? POOLS[poolKey] : undefined;
   const seed = hashCode(`${sheet.unit_id}::${sheet.id}::${todayKey()}`);
   const rng = mulberry32(seed);
-  const [d1, d2] = sheet.digits || [3, 3];
-  const op = opForType(sheet.type);
 
-  const list: DrillProblem[] = [];
-  let attempts = 0;
-  const maxAttempts = sheet.problem_count * 100;
-
-  while (list.length < sheet.problem_count && attempts < maxAttempts) {
-    attempts++;
-
-    // 곱셈 두 번째 피연산자가 1이면 시시함 → 2 이상 강제 (한 자리는 2~9)
-    let a = range(rng, digitMin(d1), digitMax(d1));
-    let b = range(rng, digitMin(d2), digitMax(d2));
-
-    if (op === "×") {
-      if (d1 === 1) a = range(rng, 2, 9);
-      if (d2 === 1) b = range(rng, 2, 9);
-    }
-
-    // 음수 방지
-    if (op === "-" && a < b) [a, b] = [b, a];
-
-    // 나눗셈은 b > 0 이고 a >= b 보장
-    if (op === "÷") {
-      if (b === 0) continue;
-      // 나머지 정책: carry === "once" 면 나머지 있음, else 나머지 없음
-      const wantRemainder = sheet.carry === "once";
-      if (!wantRemainder) {
-        // 나머지 없도록 a를 b의 배수로 조정
-        const quotient = range(rng, 2, Math.min(9, Math.floor(digitMax(d1) / Math.max(1, b))));
-        a = b * quotient;
-      } else {
-        // 나머지 있도록: a = b*q + r (0 < r < b)
-        const quotient = range(rng, 1, Math.min(9, Math.floor(digitMax(d1) / Math.max(1, b))));
-        const r = range(rng, 1, Math.max(1, b - 1));
-        a = b * quotient + r;
-      }
-    }
-
-    // 가산·감산 carry/borrow 정책
-    if (op === "+" || op === "-") {
-      if (sheet.carry === "none") {
-        if (op === "+" && hasCarry(a, b)) continue;
-        if (op === "-" && hasBorrow(a, b)) continue;
-      } else if (sheet.carry === "once") {
-        if (op === "+" && !hasCarry(a, b)) continue;
-        if (op === "-" && !hasBorrow(a, b)) continue;
-      } else if (sheet.carry === "any") {
-        const want = list.length % 2 === 0;
-        if (op === "+" && hasCarry(a, b) !== want && list.length < sheet.problem_count - 4) continue;
-        if (op === "-" && hasBorrow(a, b) !== want && list.length < sheet.problem_count - 4) continue;
-      }
-    }
-
-    let answer: number;
-    let remainder: number | undefined;
-    switch (op) {
-      case "+":
-        answer = a + b;
-        break;
-      case "-":
-        answer = a - b;
-        break;
-      case "×":
-        answer = a * b;
-        break;
-      case "÷":
-        answer = Math.floor(a / b);
-        remainder = a % b;
-        break;
-    }
-
-    list.push({
-      index: list.length + 1,
-      is_example: list.length === 0,
-      op,
-      operands: [a, b],
-      answer,
-      remainder,
-      digits: [d1, d2],
-      carry: sheet.carry,
-    });
+  // 풀 없으면 빈 배열 (호출처에서 빈 상태 핸들링)
+  if (!pool || pool.length === 0) {
+    return [];
   }
+
+  // 풀에서 problem_count 만큼 시드 기반 추출 — Fisher-Yates 부분 셔플
+  const N = sheet.problem_count;
+  const picked: PoolItem[] = [];
+  if (pool.length <= N) {
+    picked.push(...shuffle(pool, rng));
+    while (picked.length < N) picked.push(pool[Math.floor(rng() * pool.length)]);
+  } else {
+    const idxs = new Set<number>();
+    while (idxs.size < N) {
+      idxs.add(Math.floor(rng() * pool.length));
+    }
+    for (const i of idxs) picked.push(pool[i]);
+    // 추출 결과도 한 번 더 셔플 (순서 다양성)
+    picked.splice(0, picked.length, ...shuffle(picked, rng));
+  }
+
+  const list: DrillProblem[] = picked.map((item, i) => {
+    const base = poolItemToProblem(item);
+    return {
+      ...base,
+      index: i + 1,
+      is_example: i === 0,
+      digits: sheet.digits,
+      carry: sheet.carry,
+    };
+  });
   return list;
 }

@@ -25,6 +25,14 @@ export function DrillSheet({
     sheet.type === "drill_h_mul" ||
     sheet.type === "drill_h_div";
 
+  if (problems.length === 0) {
+    return (
+      <div className="rounded border border-dashed border-[#e5e7eb] bg-[#fafafa] p-8 text-center text-sm text-[#6b7280]">
+        이 양식은 아직 문제 풀이 준비 중입니다.
+      </div>
+    );
+  }
+
   return (
     <div className="grid grid-cols-2 gap-x-8 gap-y-5 print:grid-cols-2">
       {problems.map((p) => (
@@ -39,6 +47,11 @@ export function DrillSheet({
       ))}
     </div>
   );
+}
+
+// 산술이 아닌 op (분수, 세 수, 가르기·모으기 등)은 별도 렌더
+function isArithmetic(op: string): op is "+" | "-" | "×" | "÷" {
+  return op === "+" || op === "-" || op === "×" || op === "÷";
 }
 
 function DrillProblemCell({
@@ -73,7 +86,15 @@ function DrillProblemCell({
         {problem.index}.
       </div>
 
-      {isHorizontal ? (
+      {!isArithmetic(problem.op) ? (
+        <SpecialProblem
+          problem={problem}
+          isGraded={isGraded}
+          userAns={userAns}
+          onChange={onChange}
+          correct={correct}
+        />
+      ) : isHorizontal ? (
         <HorizontalProblem
           problem={problem}
           isGraded={isGraded}
@@ -172,8 +193,9 @@ function VerticalProblem({
   const userDigits = padDigits(userAns ? Number(userAns.replace(/[^\d]/g, "")) || 0 : 0, maxDigits, true);
 
   // 받아올림/내림 표시 (예시 1번에만)
+  const opForCarry = problem.op === "+" || problem.op === "-" ? problem.op : "+";
   const carries: string[] = problem.is_example
-    ? computeCarries(a, b, problem.op, maxDigits)
+    ? computeCarries(a, b, opForCarry, maxDigits)
     : Array(maxDigits).fill("");
 
   return (
@@ -290,6 +312,138 @@ function VerticalProblem({
         </div>
       )}
     </div>
+  );
+}
+
+// 산술이 아닌 양식 — 분수, 세 수, 가르기·모으기, 10 만들기 등
+function SpecialProblem({
+  problem,
+  isGraded,
+  userAns,
+  onChange,
+  correct,
+}: {
+  problem: DrillProblem;
+  isGraded: boolean;
+  userAns: string;
+  onChange: (v: string) => void;
+  correct: boolean | null;
+}) {
+  const inputCls =
+    problem.is_example
+      ? "text-[#1e3a8a] font-semibold"
+      : isGraded
+        ? correct
+          ? "text-[#15803d]"
+          : "text-[#b91c1c]"
+        : "text-[#111827]";
+
+  const Box = (val: string | number, w = 56) =>
+    problem.is_example ? (
+      <span className={inputCls}>{val}</span>
+    ) : (
+      <input
+        type="text"
+        value={userAns}
+        disabled={isGraded}
+        onChange={(e) => onChange(e.target.value)}
+        className={`bg-transparent px-1 outline-none ${inputCls}`}
+        style={{
+          width: w,
+          border: "none",
+          borderBottom: "1px solid #111827",
+          borderRadius: 0,
+          fontFamily: "inherit",
+          fontSize: "inherit",
+        }}
+      />
+    );
+
+  // 분수 덧/뺄 (분모 같음)
+  if (problem.op === "frac_add" || problem.op === "frac_sub") {
+    const [an, ad, bn, bd] = problem.operands;
+    const opSym = problem.op === "frac_add" ? "+" : "−";
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Frac n={an} d={ad} /> <span className="mx-1">{opSym}</span>{" "}
+        <Frac n={bn} d={bd} /> <span className="mx-1">=</span>{" "}
+        {problem.is_example ? (
+          <Frac n={problem.answer} d={problem.ans_den ?? ad} />
+        ) : (
+          Box(`${problem.answer}/${problem.ans_den ?? ad}`, 80)
+        )}
+        {isGraded && !problem.is_example && correct === false && (
+          <span className="ml-2 text-[#6b7280]" style={{ fontSize: "13px" }}>
+            (정답 {problem.answer}/{problem.ans_den ?? ad})
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  // 가르기: n = a + ?
+  if (problem.op === "decompose") {
+    const [n, a] = problem.operands;
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {n} = {a} + {Box(problem.answer)}
+      </div>
+    );
+  }
+
+  // 10 만들기: a + ? = 10
+  if (problem.op === "make_ten") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {problem.operands[0]} + {Box(problem.answer)} = 10
+      </div>
+    );
+  }
+  // 10에서 빼기: 10 − a = ?
+  if (problem.op === "break_ten") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        10 − {problem.operands[0]} = {Box(problem.answer)}
+      </div>
+    );
+  }
+
+  // 세 수 연산: a (op1) b (op2) c = ?
+  if (problem.op === "three") {
+    const [a, b, c] = problem.operands;
+    const ops = problem.ops_str || "+-";
+    const o1 = ops[0] === "+" ? "+" : "−";
+    const o2 = ops[1] === "+" ? "+" : "−";
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {a} {o1} {b} {o2} {c} = {Box(problem.answer)}
+        {isGraded && !problem.is_example && correct === false && (
+          <span className="ml-2 text-[#6b7280]" style={{ fontSize: "13px" }}>
+            (정답 {problem.answer})
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  // unknown op
+  return (
+    <div className="text-sm text-[#6b7280]">
+      (이 양식은 표시 준비 중입니다)
+    </div>
+  );
+}
+
+function Frac({ n, d }: { n: number; d: number }) {
+  return (
+    <span
+      className="inline-flex flex-col items-center align-middle"
+      style={{ lineHeight: 1, verticalAlign: "middle" }}
+    >
+      <span style={{ fontSize: "13px" }}>{n}</span>
+      <span style={{ borderTop: "1px solid #111827", width: "100%", margin: "1px 0" }} />
+      <span style={{ fontSize: "13px" }}>{d}</span>
+    </span>
   );
 }
 

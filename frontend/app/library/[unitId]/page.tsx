@@ -20,20 +20,27 @@ function gradeLabel(g: number): string {
   return `고${g - 9}`;
 }
 
+// unitId 형식: "math-3-1-1" / "kor-4-2-3" → 학년 추출
+function gradeFromUnitId(unitId: string): number {
+  const m = unitId.match(/^[a-z]+-(\d+)/i);
+  return m ? parseInt(m[1], 10) : 3;
+}
+
 function UnitContent({ unitId }: { unitId: string }) {
   const searchParams = useSearchParams();
   const sheetId = searchParams.get("sheet");
   const mode = searchParams.get("mode"); // "drill" 일 때 연산 문제지 카드만
   const [unit, setUnit] = useState<UnitDTO | null>(null);
+  const grade = gradeFromUnitId(unitId);
 
   useEffect(() => {
-    fetchUnits(3, "수학")
+    fetchUnits(grade, "수학")
       .then((units) => {
         const found = units.find((u) => u.id === unitId);
         if (found) setUnit(found);
       })
       .catch(console.error);
-  }, [unitId]);
+  }, [unitId, grade]);
 
   // sheet 쿼리 있으면 해당 학습지 페이지로 분기
   if (sheetId) {
@@ -57,13 +64,13 @@ function UnitContent({ unitId }: { unitId: string }) {
     mode === "drill"
       ? allSheets.filter((s) => s.type !== "comprehensive")
       : allSheets;
-  const titleLabel = mode === "drill" ? "연산 문제지" : "학습지";
+  const titleLabel = mode === "drill" ? "연산 문제" : "단원 학습";
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-background">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
           <Link
-            href={`/library?grade=3&subject=수학&mode=${mode === "drill" ? "drill" : "comp"}`}
+            href={`/library?grade=${grade}&subject=수학&mode=${mode === "drill" ? "drill" : "comp"}`}
             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" />
@@ -77,7 +84,7 @@ function UnitContent({ unitId }: { unitId: string }) {
       <main className="mx-auto max-w-4xl px-4 py-10">
         <div className="mb-8">
           <p className="text-xs font-medium tracking-wide text-muted-foreground">
-            {titleLabel} · {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : "초3 수학"}
+            {titleLabel} · {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(grade)} 수학`}
           </p>
           <h1 className="mt-0.5 text-2xl font-bold">
             {unit?.unit_name || "단원"}
@@ -119,7 +126,7 @@ function SheetCard({ unitId, sheet }: { unitId: string; sheet: SheetMeta }) {
           <Icon className="h-4 w-4" />
         </div>
         <span className="text-[11px] uppercase tracking-wide text-muted-foreground">
-          {isComp ? "단원 학습지" : "연산 문제지"}
+          {isComp ? "단원 학습" : "연산 문제"}
         </span>
       </div>
       <h3 className="text-base font-semibold text-foreground">{sheet.title}</h3>
