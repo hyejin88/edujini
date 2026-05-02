@@ -141,6 +141,63 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* AI 진단 미리보기 — 풀어보지 않은 사용자에게 결과물이 어떤지 보여주기 */}
+      <section className="border-y border-border bg-secondary/30 py-12 md:py-16">
+        <div className="mx-auto max-w-4xl px-4">
+          <div className="mb-8 text-center">
+            <p className="mb-2 text-sm font-medium text-muted-foreground">
+              EDU Jini가 자녀에게 보여주는 결과
+            </p>
+            <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+              풀고 나면 이런 학부모 리포트가 자동 생성돼요
+            </h2>
+          </div>
+
+          <Card className="mx-auto max-w-2xl border-2 border-border bg-background p-6 shadow-sm">
+            <div className="mb-4 border-b border-border pb-3">
+              <p className="text-xs tracking-widest text-muted-foreground">
+                EDU Jini 학습 리포트 — 미리보기
+              </p>
+              <p className="mt-1 font-semibold text-foreground">
+                초3 수학 · 곱셈 단원 · 19/20 정답
+              </p>
+            </div>
+
+            <div className="mb-4">
+              <p className="mb-2 text-sm font-semibold text-foreground">잘한 점</p>
+              <ul className="space-y-1 text-sm text-muted-foreground">
+                <li>· 받아올림 없는 두 자리 곱셈을 빠르게 풀었어요</li>
+                <li>· 문장제에서 식 세우기까지 스스로 해냈어요</li>
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <p className="mb-2 text-sm font-semibold text-foreground">보완할 점</p>
+              <ul className="space-y-1 text-sm text-muted-foreground">
+                <li>· 받아올림 2번 있는 곱셈에서 자릿값 정렬을 자주 놓쳐요</li>
+                <li>· 함정 문제(단위 다른 비교)를 끝까지 안 읽는 경향</li>
+              </ul>
+            </div>
+
+            <div className="rounded-lg border border-border bg-muted/30 p-3">
+              <p className="mb-2 text-sm font-semibold text-foreground">
+                다음 학습 추천
+              </p>
+              <ol className="space-y-1 text-sm text-muted-foreground">
+                <li>1. 곱셈 단원 받아올림 2번 양식 30문제 워밍업</li>
+                <li>2. (두 자리)×(두 자리) 단원 학습 재도전</li>
+                <li>3. 문장제 끝까지 읽기 습관 만들기</li>
+              </ol>
+            </div>
+          </Card>
+
+          <p className="mx-auto mt-6 max-w-xl text-center text-sm text-muted-foreground">
+            정답률만 알려주는 다른 학습지와 달리, <strong className="text-foreground">왜 틀렸는지</strong>까지 짚어주고
+            <strong className="text-foreground"> 다음 학습</strong>을 추천해요.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-12">
         <div className="mx-auto max-w-4xl px-4 text-center">
