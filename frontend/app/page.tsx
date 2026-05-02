@@ -37,8 +37,14 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-secondary py-16 md:py-24">
+      <section className="bg-secondary py-12 md:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt="EDU Jini — 초등학생 연산·학습 문제 제공"
+            className="mx-auto mb-6 h-44 w-auto md:h-56"
+          />
           <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
             오늘의 학습,{" "}
             <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">

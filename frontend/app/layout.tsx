@@ -17,11 +17,13 @@ export const metadata: Metadata = {
     siteName: 'EDU Jini',
     locale: 'ko_KR',
     type: 'website',
+    images: [{ url: '/logo-og.png', width: 1200, height: 654, alt: 'EDU Jini' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'EDU Jini - 단원별 무료 수학 학습지',
     description: '초1~초6 NCIC 성취기준 기반 수학 학습지.',
+    images: ['/logo-og.png'],
   },
   robots: {
     index: true,

@@ -12422,5 +12422,1441 @@
     ],
     "license_code": "SELF_GEN",
     "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::0",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$2.4 \\div 0.6$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.4$",
+      "$4$",
+      "$40$",
+      "$400$"
+    ],
+    "answer": "$4$",
+    "answer_aliases": [
+      "4"
+    ],
+    "explanation": "$2.4 \\div 0.6$은 나누는 수와 나누어지는 수에 각각 $10$을 곱하여 $24 \\div 6$으로 계산할 수 있습니다. $24 \\div 6 = 4$이므로 몫은 $4$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.4$",
+        "reason": "자릿수를 잘못 옮기거나 몫의 소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::1",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$0.72 \\div 0.09$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.8$",
+      "$8$",
+      "$80$",
+      "$800$"
+    ],
+    "answer": "$8$",
+    "answer_aliases": [
+      "8"
+    ],
+    "explanation": "$0.72 \\div 0.09$는 나누는 수와 나누어지는 수에 각각 $100$을 곱하여 $72 \\div 9$로 계산할 수 있습니다. $72 \\div 9 = 8$이므로 몫은 $8$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.8$",
+        "reason": "자릿수를 잘못 옮기거나 몫의 소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::2",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$1.25 \\div 0.5 = \\square$",
+    "choices": null,
+    "answer": "$2.5$",
+    "answer_aliases": [
+      "2.5"
+    ],
+    "explanation": "$1.25 \\div 0.5$는 나누는 수와 나누어지는 수에 각각 $10$을 곱하여 $12.5 \\div 5$로 계산할 수 있습니다. $12.5 \\div 5 = 2.5$이므로 $\\square$ 안에 알맞은 수는 $2.5$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$25$",
+        "reason": "몫의 소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::3",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$3.6 \\div 0.04$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.9$",
+      "$9$",
+      "$90$",
+      "$900$"
+    ],
+    "answer": "$90$",
+    "answer_aliases": [
+      "90"
+    ],
+    "explanation": "$3.6 \\div 0.04$는 나누는 수와 나누어지는 수에 각각 $100$을 곱하여 $360 \\div 4$로 계산할 수 있습니다. $360 \\div 4 = 90$이므로 몫은 $90$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$9$",
+        "reason": "자릿수를 잘못 옮겨 $36 \\div 4$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::4",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$4.8 \\div 1.2$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.4$",
+      "$4$",
+      "$40$",
+      "$400$"
+    ],
+    "answer": "$4$",
+    "answer_aliases": [
+      "4"
+    ],
+    "explanation": "$4.8 \\div 1.2$는 나누는 수와 나누어지는 수에 각각 $10$을 곱하여 $48 \\div 12$로 계산할 수 있습니다. $48 \\div 12 = 4$이므로 몫은 $4$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.4$",
+        "reason": "몫의 소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::5",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$0.91 \\div 0.7 = \\square$",
+    "choices": null,
+    "answer": "$1.3$",
+    "answer_aliases": [
+      "1.3"
+    ],
+    "explanation": "$0.91 \\div 0.7$은 나누는 수와 나누어지는 수에 각각 $10$을 곱하여 $9.1 \\div 7$로 계산할 수 있습니다. $9.1 \\div 7 = 1.3$이므로 $\\square$ 안에 알맞은 수는 $1.3$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$13$",
+        "reason": "몫의 소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::6",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$5.4 \\div 0.12$의 몫은 얼마인가요?",
+    "choices": [
+      "$4.5$",
+      "$45$",
+      "$450$",
+      "$0.45$"
+    ],
+    "answer": "$45$",
+    "answer_aliases": [
+      "45"
+    ],
+    "explanation": "$5.4 \\div 0.12$는 나누는 수와 나누어지는 수에 각각 $100$을 곱하여 $540 \\div 12$로 계산할 수 있습니다. $540 \\div 12 = 45$이므로 몫은 $45$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$4.5$",
+        "reason": "자릿수를 잘못 옮겨 $54 \\div 12$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::7",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$1.56 \\div 0.3$을 계산할 때, 몫을 소수 첫째 자리까지 나타내고 나머지를 구하면 얼마인가요?",
+    "choices": [
+      "몫 $5$, 나머지 $0.06$",
+      "몫 $5.2$, 나머지 $0$",
+      "몫 $5$, 나머지 $0.6$",
+      "몫 $5.2$, 나머지 $0.006$"
+    ],
+    "answer": "몫 $5$, 나머지 $0.06$",
+    "answer_aliases": [
+      "몫 5, 나머지 0.06"
+    ],
+    "explanation": "$1.56 \\div 0.3$을 계산하기 위해 나누는 수와 나누어지는 수에 각각 $10$을 곱하여 $15.6 \\div 3$으로 만듭니다. $15.6 \\div 3 = 5$이고, 이때의 나머지는 $0.6$입니다. 원래 식의 소수점 위치를 고려하면, 몫은 $5$이고 나머지는 $0.06$입니다. ($1.56 = 0.3 \\times 5 + 0.06$)",
+    "concept_tags": [
+      "소수 나눗셈",
+      "나머지"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "몫 $5$, 나머지 $0.6$",
+        "reason": "나머지의 소수점 위치를 원래 나누어지는 수의 소수점 위치에 맞춰야 하는데, 옮긴 소수점 위치에 맞추었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::8",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$2.8 \\div 0.05$의 몫은 얼마인가요?",
+    "choices": [
+      "$5.6$",
+      "$56$",
+      "$560$",
+      "$0.56$"
+    ],
+    "answer": "$56$",
+    "answer_aliases": [
+      "56"
+    ],
+    "explanation": "$2.8 \\div 0.05$는 나누는 수와 나누어지는 수에 각각 $100$을 곱하여 $280 \\div 5$로 계산할 수 있습니다. $280 \\div 5 = 56$이므로 몫은 $56$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$5.6$",
+        "reason": "자릿수를 잘못 옮겨 $28 \\div 5$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::9",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$10.8 \\div 2.4 = \\square$",
+    "choices": null,
+    "answer": "$4.5$",
+    "answer_aliases": [
+      "4.5"
+    ],
+    "explanation": "$10.8 \\div 2.4$는 나누는 수와 나누어지는 수에 각각 $10$을 곱하여 $108 \\div 24$로 계산할 수 있습니다. $108 \\div 24 = 4.5$이므로 $\\square$ 안에 알맞은 수는 $4.5$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$45$",
+        "reason": "몫의 소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::10",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$13.5 \\div 0.25$의 몫은 얼마인가요?",
+    "choices": [
+      "$5.4$",
+      "$54$",
+      "$540$",
+      "$0.54$"
+    ],
+    "answer": "$54$",
+    "answer_aliases": [
+      "54"
+    ],
+    "explanation": "$13.5 \\div 0.25$는 나누는 수와 나누어지는 수에 각각 $100$을 곱하여 $1350 \\div 25$로 계산할 수 있습니다. $1350 \\div 25 = 54$이므로 몫은 $54$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$5.4$",
+        "reason": "자릿수를 잘못 옮겨 $135 \\div 25$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::11",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$6.3 \\div 0.18$의 몫은 얼마인가요?",
+    "choices": [
+      "$3.5$",
+      "$35$",
+      "$350$",
+      "$0.35$"
+    ],
+    "answer": "$35$",
+    "answer_aliases": [
+      "35"
+    ],
+    "explanation": "$6.3 \\div 0.18$은 나누는 수와 나누어지는 수에 각각 $100$을 곱하여 $630 \\div 18$로 계산할 수 있습니다. $630 \\div 18 = 35$이므로 몫은 $35$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "자릿수 옮기기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$3.5$",
+        "reason": "자릿수를 잘못 옮겨 $63 \\div 18$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::12",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "application",
+    "body": "$1.8$ L의 주스를 한 컵에 $0.3$ L씩 나누어 담으려면 몇 개의 컵이 필요한가요?",
+    "choices": [
+      "$3$개",
+      "$6$개",
+      "$9$개",
+      "$12$개"
+    ],
+    "answer": "$6$개",
+    "answer_aliases": [
+      "6개"
+    ],
+    "explanation": "필요한 컵의 개수는 $1.8 \\div 0.3$으로 계산합니다. $1.8 \\div 0.3 = 18 \\div 3 = 6$이므로 $6$개의 컵이 필요합니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$3$개",
+        "reason": "나눗셈 계산을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::13",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "application",
+    "body": "$3.6$ kg의 쌀을 한 봉지에 $0.4$ kg씩 나누어 담으려고 합니다. 몇 봉지가 필요한가요?",
+    "choices": null,
+    "answer": "$9$봉지",
+    "answer_aliases": [
+      "9봉지"
+    ],
+    "explanation": "필요한 봉지의 개수는 $3.6 \\div 0.4$로 계산합니다. $3.6 \\div 0.4 = 36 \\div 4 = 9$이므로 $9$봉지가 필요합니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$9$",
+        "reason": "단위를 빠뜨렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::14",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "$14.4$ m 길이의 철사를 $1.6$ m씩 자르면 몇 도막이 되나요?",
+    "choices": [
+      "$6$도막",
+      "$7$도막",
+      "$8$도막",
+      "$9$도막"
+    ],
+    "answer": "$9$도막",
+    "answer_aliases": [
+      "9도막"
+    ],
+    "explanation": "만들 수 있는 도막의 수는 $14.4 \\div 1.6$으로 계산합니다. $14.4 \\div 1.6 = 144 \\div 16 = 9$이므로 $9$도막이 됩니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$8$도막",
+        "reason": "나눗셈 계산을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::15",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "$1.2$ L의 휘발유로 $15.6$ km를 갈 수 있는 자동차가 있습니다. 이 자동차가 $1$ L의 휘발유로 갈 수 있는 거리는 몇 km인가요?",
+    "choices": null,
+    "answer": "$13$ km",
+    "answer_aliases": [
+      "13km"
+    ],
+    "explanation": "$1$ L의 휘발유로 갈 수 있는 거리는 $15.6 \\div 1.2$로 계산합니다. $15.6 \\div 1.2 = 156 \\div 12 = 13$이므로 $13$ km를 갈 수 있습니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "단위량 구하기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$13$",
+        "reason": "단위를 빠뜨렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::16",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "$2.5$ m의 리본으로 $0.4$ m짜리 리본을 최대한 많이 만들면, 몇 개를 만들 수 있고 남는 리본은 몇 m인가요?",
+    "choices": [
+      "$6$개, $0.1$ m",
+      "$6$개, $0.01$ m",
+      "$5$개, $0.5$ m",
+      "$6$개, $1$ m"
+    ],
+    "answer": "$6$개, $0.1$ m",
+    "answer_aliases": [
+      "6개, 0.1m"
+    ],
+    "explanation": "$2.5 \\div 0.4$를 계산합니다. 나누는 수와 나누어지는 수에 각각 $10$을 곱하여 $25 \\div 4$로 계산하면 몫은 $6$이고 나머지는 $1$입니다. 이때 나머지는 원래 나누어지는 수의 소수점 위치를 따라야 하므로 $0.1$ m가 남습니다. 따라서 $6$개를 만들 수 있고 $0.1$ m가 남습니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "나머지",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$6$개, $1$ m",
+        "reason": "나머지의 소수점 위치를 원래 나누어지는 수의 소수점 위치에 맞추지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::17",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 수에 $0.8$을 곱해야 할 것을 잘못하여 $0.8$로 나누었더니 $12.5$가 되었습니다. 바르게 계산한 값은 얼마인가요?",
+    "choices": null,
+    "answer": "$8$",
+    "answer_aliases": [
+      "8"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면, 잘못 계산한 식은 $\\square \\div 0.8 = 12.5$입니다. 따라서 어떤 수는 $12.5 \\times 0.8 = 10$입니다. 바르게 계산한 값은 $10 \\times 0.8 = 8$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "소수 곱셈",
+      "역연산"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$10$",
+        "reason": "어떤 수를 구하고 바르게 계산하는 단계를 놓쳤습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::18",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "가로가 $3.6$ cm, 세로가 $2.4$ cm인 직사각형의 넓이는 $8.64 \\text{ cm}^2$입니다. 이 직사각형의 가로를 $0.9$ cm로 줄이고 넓이는 그대로 유지한다면, 세로는 몇 cm가 되어야 할까요?",
+    "choices": [
+      "$9.6$ cm",
+      "$8.64$ cm",
+      "$7.2$ cm",
+      "$6.4$ cm"
+    ],
+    "answer": "$9.6$ cm",
+    "answer_aliases": [
+      "9.6cm"
+    ],
+    "explanation": "직사각형의 넓이는 가로 $\\times$ 세로입니다. 넓이가 $8.64 \\text{ cm}^2$이고, 새로운 가로가 $0.9$ cm이므로, 새로운 세로는 $8.64 \\div 0.9$로 계산합니다. $8.64 \\div 0.9 = 86.4 \\div 9 = 9.6$이므로 세로는 $9.6$ cm가 되어야 합니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "넓이",
+      "문제 해결"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$7.2$ cm",
+        "reason": "나눗셈 계산을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-3::v3::19",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-12]",
+    "unit_id": "math-6-2-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 수를 $0.6$으로 나누어야 할 것을 잘못하여 $0.06$으로 나누었더니 몫이 $75$가 되었습니다. 바르게 계산한 몫은 얼마인가요?",
+    "choices": [
+      "$7.5$",
+      "$12.5$",
+      "$45$",
+      "$750$"
+    ],
+    "answer": "$7.5$",
+    "answer_aliases": [
+      "7.5"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면, 잘못 계산한 식은 $\\square \\div 0.06 = 75$입니다. 따라서 어떤 수는 $75 \\times 0.06 = 4.5$입니다. 바르게 계산한 몫은 $4.5 \\div 0.6$입니다. $4.5 \\div 0.6 = 45 \\div 6 = 7.5$이므로 바르게 계산한 몫은 $7.5$입니다.",
+    "concept_tags": [
+      "소수 나눗셈",
+      "소수 곱셈",
+      "역연산",
+      "문제 해결"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$750$",
+        "reason": "나누는 수가 $10$배 작아졌으므로 몫은 $10$배 커진다는 관계를 잘못 이해했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::0",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "비례식 $3:5 = 6:10$에서 외항은 무엇입니까?",
+    "choices": [
+      "$3, 5$",
+      "$3, 10$",
+      "$5, 6$",
+      "$6, 10$"
+    ],
+    "answer": "$3, 10$",
+    "answer_aliases": [],
+    "explanation": "비례식 $A:B = C:D$에서 외항은 $A$와 $D$입니다. 따라서 $3:5 = 6:10$에서 외항은 $3$과 $10$입니다.",
+    "concept_tags": [
+      "비례식",
+      "외항"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$5, 6$",
+        "reason": "외항과 내항을 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::1",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "비례식 $4:7 = 8:14$에서 내항은 무엇입니까?",
+    "choices": [
+      "$4, 7$",
+      "$4, 14$",
+      "$7, 8$",
+      "$8, 14$"
+    ],
+    "answer": "$7, 8$",
+    "answer_aliases": [],
+    "explanation": "비례식 $A:B = C:D$에서 내항은 $B$와 $C$입니다. 따라서 $4:7 = 8:14$에서 내항은 $7$과 $8$입니다.",
+    "concept_tags": [
+      "비례식",
+      "내항"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$4, 14$",
+        "reason": "외항과 내항을 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::2",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음 중 비례식이 아닌 것은 어느 것입니까?",
+    "choices": [
+      "$1:2 = 3:6$",
+      "$2:3 = 4:5$",
+      "$5:10 = 1:2$",
+      "$10:15 = 2:3$"
+    ],
+    "answer": "$2:3 = 4:5$",
+    "answer_aliases": [],
+    "explanation": "비례식은 비율이 같은 두 비를 등호로 나타낸 식입니다. 각 비의 비율을 확인합니다.\n$1:2$의 비율은 $\frac{1}{2}$, $3:6$의 비율은 $\frac{3}{6} = \frac{1}{2}$이므로 비례식입니다.\n$2:3$의 비율은 $\frac{2}{3}$, $4:5$의 비율은 $\frac{4}{5}$이므로 비례식이 아닙니다.\n$5:10$의 비율은 $\frac{5}{10} = \frac{1}{2}$, $1:2$의 비율은 $\frac{1}{2}$이므로 비례식입니다.\n$10:15$의 비율은 $\frac{10}{15} = \frac{2}{3}$, $2:3$의 비율은 $\frac{2}{3}$이므로 비례식입니다.",
+    "concept_tags": [
+      "비례식",
+      "비율"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$1:2 = 3:6$",
+        "reason": "비율이 같은지 확인하는 방법을 모릅니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::3",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "비례식 $2:3 = 4:\\square$에서 $\\square$ 안에 알맞은 수를 구하시오.",
+    "choices": null,
+    "answer": "$6$",
+    "answer_aliases": [
+      "6"
+    ],
+    "explanation": "비례식의 성질에 따라 외항의 곱과 내항의 곱은 같습니다.\n$2 \times \\square = 3 \times 4$\n$2 \times \\square = 12$\n$\\square = 12 \\div 2$\n$\\square = 6$",
+    "concept_tags": [
+      "비례식",
+      "비례식 풀이"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$8$",
+        "reason": "내항의 곱과 외항의 곱을 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::4",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "비례식 $A:B = C:D$에서 외항의 곱과 내항의 곱은 항상 같습니다. 다음 중 외항의 곱은 무엇입니까?",
+    "choices": [
+      "$A \\times B$",
+      "$A \\times C$",
+      "$A \\times D$",
+      "$B \\times C$"
+    ],
+    "answer": "$A \\times D$",
+    "answer_aliases": [],
+    "explanation": "비례식 $A:B = C:D$에서 외항은 $A$와 $D$이므로 외항의 곱은 $A \times D$입니다.",
+    "concept_tags": [
+      "비례식",
+      "외항의 곱"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$B \\times C$",
+        "reason": "외항의 곱과 내항의 곱을 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::5",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$1:5 = \\square:15$에서 $\\square$ 안에 알맞은 수를 구하시오.",
+    "choices": null,
+    "answer": "$3$",
+    "answer_aliases": [
+      "3"
+    ],
+    "explanation": "비례식의 성질에 따라 외항의 곱과 내항의 곱은 같습니다.\n$1 \times 15 = 5 \times \\square$\n$15 = 5 \times \\square$\n$\\square = 15 \\div 5$\n$\\square = 3$",
+    "concept_tags": [
+      "비례식",
+      "비례식 풀이"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$5$",
+        "reason": "비율 관계를 잘못 적용했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::6",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "비례식 $\\frac{1}{2}:\\frac{1}{3} = 9:\\square$에서 $\\square$ 안에 알맞은 수를 구하시오.",
+    "choices": [
+      "$6$",
+      "$12$",
+      "$18$",
+      "$27$"
+    ],
+    "answer": "$6$",
+    "answer_aliases": [],
+    "explanation": "비례식의 성질에 따라 외항의 곱과 내항의 곱은 같습니다.\n$\\frac{1}{2} \\times \\square = \\frac{1}{3} \\times 9$\n$\\frac{1}{2} \\times \\square = 3$\n$\\square = 3 \\div \\frac{1}{2}$\n$\\square = 3 \\times 2$\n$\\square = 6$",
+    "concept_tags": [
+      "비례식",
+      "분수 비례식"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$18$",
+        "reason": "분수의 곱셈과 나눗셈을 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::7",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$0.5:1.5 = 4:\\square$에서 $\\square$ 안에 알맞은 수를 구하시오.",
+    "choices": null,
+    "answer": "$12$",
+    "answer_aliases": [
+      "12"
+    ],
+    "explanation": "비례식의 성질에 따라 외항의 곱과 내항의 곱은 같습니다.\n$0.5 \\times \\square = 1.5 \\times 4$\n$0.5 \\times \\square = 6$\n$\\square = 6 \\div 0.5$\n$\\square = 12$",
+    "concept_tags": [
+      "비례식",
+      "소수 비례식"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$3$",
+        "reason": "소수 계산을 잘못했거나 비례 관계를 잘못 적용했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::8",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "사과 3개에 2400원일 때, 사과 5개는 얼마인지 구하는 비례식으로 옳은 것은 무엇입니까?",
+    "choices": [
+      "$3:5 = \\square:2400$",
+      "$3:2400 = 5:\\square$",
+      "$5:3 = 2400:\\square$",
+      "$2400:3 = 5:\\square$"
+    ],
+    "answer": "$3:2400 = 5:\\square$",
+    "answer_aliases": [],
+    "explanation": "사과의 개수와 가격은 비례합니다. '사과 개수 : 가격'의 비가 같아야 하므로 $3:2400 = 5:\\square$가 올바른 비례식입니다.",
+    "concept_tags": [
+      "비례식",
+      "비례식 세우기"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$3:5 = \\square:2400$",
+        "reason": "비례식에서 같은 종류의 양끼리 비교해야 하는데 순서를 잘못 설정했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::9",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "20을 $2:3$으로 비례배분할 때, 더 작은 값은 얼마입니까?",
+    "choices": [
+      "$8$",
+      "$10$",
+      "$12$",
+      "$15$"
+    ],
+    "answer": "$8$",
+    "answer_aliases": [],
+    "explanation": "20을 $2:3$으로 비례배분할 때, 전체 비의 합은 $2+3=5$입니다.\n더 작은 값은 $20 \\times \\frac{2}{5} = 4 \\times 2 = 8$입니다.",
+    "concept_tags": [
+      "비례배분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$12$",
+        "reason": "더 큰 값을 구하거나 계산 실수를 했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::10",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "36을 $4:5$로 비례배분할 때, 더 큰 값은 얼마입니까?",
+    "choices": null,
+    "answer": "$20$",
+    "answer_aliases": [
+      "20"
+    ],
+    "explanation": "36을 $4:5$로 비례배분할 때, 전체 비의 합은 $4+5=9$입니다.\n더 큰 값은 $36 \\times \\frac{5}{9} = 4 \\times 5 = 20$입니다.",
+    "concept_tags": [
+      "비례배분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$16$",
+        "reason": "더 작은 값을 구하거나 계산 실수를 했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::11",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "concept",
+    "body": "$1\\frac{1}{4}:2 = \\square:8$에서 $\\square$ 안에 알맞은 수를 구하시오.",
+    "choices": [
+      "$4$",
+      "$5$",
+      "$6$",
+      "$7$"
+    ],
+    "answer": "$5$",
+    "answer_aliases": [],
+    "explanation": "먼저 $1\\frac{1}{4}$을 가분수로 바꿉니다. $1\\frac{1}{4} = \\frac{5}{4}$\n비례식은 $\\frac{5}{4}:2 = \\square:8$입니다.\n외항의 곱과 내항의 곱은 같습니다.\n$2 \\times \\square = \\frac{5}{4} \\times 8$\n$2 \\times \\square = 10$\n$\\square = 10 \\div 2$\n$\\square = 5$",
+    "concept_tags": [
+      "비례식",
+      "대분수 비례식"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$4$",
+        "reason": "대분수를 가분수로 바꾸는 과정이나 곱셈 계산에서 실수가 있었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::12",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "실제 거리가 $100 \\text{km}$인 두 도시가 지도에서는 $2 \\text{cm}$로 나타나 있습니다. 지도에서 $5 \\text{cm}$로 나타나는 두 도시의 실제 거리는 몇 $\\text{km}$입니까?",
+    "choices": [
+      "$200 \\text{km}$",
+      "$250 \\text{km}$",
+      "$300 \\text{km}$",
+      "$350 \\text{km}$"
+    ],
+    "answer": "$250 \\text{km}$",
+    "answer_aliases": [
+      "250km"
+    ],
+    "explanation": "지도에서의 거리와 실제 거리는 비례합니다.\n$2 \\text{cm} : 100 \\text{km} = 5 \\text{cm} : \\square \\text{km}$\n$2 \\times \\square = 100 \\times 5$\n$2 \\times \\square = 500$\n$\\square = 500 \\div 2$\n$\\square = 250$\n따라서 실제 거리는 $250 \\text{km}$입니다.",
+    "concept_tags": [
+      "비례식 활용",
+      "지도 축척"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$200 \\text{km}$",
+        "reason": "비례식을 잘못 세웠거나 계산 실수를 했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::13",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "주스 $450 \\text{mL}$를 사과 주스와 오렌지 주스를 $2:7$의 비율로 섞으려고 합니다. 이때 필요한 오렌지 주스는 몇 $\\text{mL}$입니까?",
+    "choices": null,
+    "answer": "$350 \\text{mL}$",
+    "answer_aliases": [
+      "350mL"
+    ],
+    "explanation": "전체 주스의 양 $450 \\text{mL}$를 $2:7$로 비례배분합니다.\n전체 비의 합은 $2+7=9$입니다.\n오렌지 주스의 양은 $450 \\times \\frac{7}{9} = 50 \\times 7 = 350 \\text{mL}$입니다.",
+    "concept_tags": [
+      "비례배분 활용",
+      "재료 분배"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$100 \\text{mL}$",
+        "reason": "사과 주스의 양을 구하거나 계산 실수를 했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::14",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "소금 $15 \\text{g}$으로 소금물 $300 \\text{g}$을 만들었습니다. 같은 비율로 소금물 $500 \\text{g}$을 만들려면 소금은 몇 $\\text{g}$이 필요합니까?",
+    "choices": [
+      "$20 \\text{g}$",
+      "$25 \\text{g}$",
+      "$30 \\text{g}$",
+      "$35 \\text{g}$"
+    ],
+    "answer": "$25 \\text{g}$",
+    "answer_aliases": [],
+    "explanation": "소금의 양과 소금물의 양은 비례합니다.\n$15 \\text{g} : 300 \\text{g} = \\square \\text{g} : 500 \\text{g}$\n$300 \\times \\square = 15 \\times 500$\n$300 \\times \\square = 7500$\n$\\square = 7500 \\div 300$\n$\\square = 25$\n따라서 소금 $25 \\text{g}$이 필요합니다.",
+    "concept_tags": [
+      "비례식 활용",
+      "농도"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$30 \\text{g}$",
+        "reason": "비율 관계를 잘못 이해하여 비례식을 잘못 세웠습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::15",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "형과 동생이 5600원을 $3:5$의 비율로 나누어 가졌습니다. 동생이 받은 돈은 얼마입니까?",
+    "choices": [
+      "$2100$원",
+      "$2800$원",
+      "$3500$원",
+      "$4200$원"
+    ],
+    "answer": "$3500$원",
+    "answer_aliases": [],
+    "explanation": "전체 5600원을 $3:5$로 비례배분합니다.\n전체 비의 합은 $3+5=8$입니다.\n동생이 받은 돈은 $5600 \\times \\frac{5}{8} = 700 \\times 5 = 3500$원입니다.",
+    "concept_tags": [
+      "비례배분 활용",
+      "돈 분배"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2100$원",
+        "reason": "형이 받은 돈을 구하거나 계산 실수를 했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::16",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 5,
+    "section": "application",
+    "body": "한 기계로 3시간 동안 인형 18개를 만들 수 있습니다. 같은 기계로 5시간 동안 만들 수 있는 인형은 몇 개입니까?",
+    "choices": null,
+    "answer": "$30$개",
+    "answer_aliases": [
+      "30개"
+    ],
+    "explanation": "시간과 만들 수 있는 인형의 개수는 비례합니다.\n$3 \\text{시간} : 18 \\text{개} = 5 \\text{시간} : \\square \\text{개}$\n$3 \\times \\square = 18 \\times 5$\n$3 \\times \\square = 90$\n$\\square = 90 \\div 3$\n$\\square = 30$\n따라서 5시간 동안 인형 30개를 만들 수 있습니다.",
+    "concept_tags": [
+      "비례식 활용",
+      "생산량"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$24$개",
+        "reason": "비례식을 잘못 세웠거나 계산 실수를 했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::17",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "application",
+    "body": "직사각형의 가로와 세로의 길이의 비가 $5:3$이고, 둘레가 $48 \\text{cm}$입니다. 이 직사각형의 가로의 길이는 몇 $\\text{cm}$입니까?",
+    "choices": [
+      "$12 \\text{cm}$",
+      "$15 \\text{cm}$",
+      "$18 \\text{cm}$",
+      "$20 \\text{cm}$"
+    ],
+    "answer": "$15 \\text{cm}$",
+    "answer_aliases": [],
+    "explanation": "직사각형의 둘레는 (가로 + 세로) $\\times 2$입니다.\n둘레가 $48 \\text{cm}$이므로 가로와 세로의 합은 $48 \\div 2 = 24 \\text{cm}$입니다.\n가로와 세로의 길이의 비가 $5:3$이므로, 합계 $24 \\text{cm}$를 $5:3$으로 비례배분합니다.\n전체 비의 합은 $5+3=8$입니다.\n가로의 길이는 $24 \\times \\frac{5}{8} = 3 \\times 5 = 15 \\text{cm}$입니다.",
+    "concept_tags": [
+      "비례배분 활용",
+      "도형"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$18 \\text{cm}$",
+        "reason": "둘레를 가로와 세로의 합으로 바꾸는 과정에서 실수가 있었거나 세로의 길이를 구했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::18",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 수와 18의 비는 $2:3$입니다. 이 어떤 수를 $1:2$로 비례배분할 때, 더 큰 값은 얼마입니까?",
+    "choices": [
+      "$6$",
+      "$8$",
+      "$10$",
+      "$12$"
+    ],
+    "answer": "$8$",
+    "answer_aliases": [],
+    "explanation": "먼저 어떤 수를 $\\square$라고 할 때, 비례식 $\\square:18 = 2:3$을 세웁니다.\n$3 \\times \\square = 18 \\times 2$\n$3 \\times \\square = 36$\n$\\square = 36 \\div 3$\n$\\square = 12$\n어떤 수는 12입니다. 이제 12를 $1:2$로 비례배분합니다.\n전체 비의 합은 $1+2=3$입니다.\n더 큰 값은 $12 \\times \\frac{2}{3} = 4 \\times 2 = 8$입니다.",
+    "concept_tags": [
+      "비례식과 비례배분 복합"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$4$",
+        "reason": "어떤 수를 잘못 구했거나 비례배분 시 더 작은 값을 구했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-2-4::v3::19",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수02-10]",
+    "unit_id": "math-6-2-4",
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 모임에 남자와 여자의 수의 비는 $3:2$입니다. 남자 중 안경을 쓴 사람과 안 쓴 사람의 비는 $1:2$입니다. 전체 인원이 60명일 때, 안경을 쓴 남자는 몇 명입니까?",
+    "choices": [
+      "$12$명",
+      "$15$명",
+      "$18$명",
+      "$24$명"
+    ],
+    "answer": "$12$명",
+    "answer_aliases": [],
+    "explanation": "1. 전체 인원 60명 중 남자의 수를 구합니다.\n   남자 : 여자 = $3:2$이므로, 전체 비의 합은 $3+2=5$입니다.\n   남자 수는 $60 \\times \\frac{3}{5} = 12 \\times 3 = 36$명입니다.\n2. 남자 36명 중 안경을 쓴 남자의 수를 구합니다.\n   안경 쓴 남자 : 안 쓴 남자 = $1:2$이므로, 전체 비의 합은 $1+2=3$입니다.\n   안경을 쓴 남자는 $36 \\times \\frac{1}{3} = 12 \\times 1 = 12$명입니다.",
+    "concept_tags": [
+      "비례배분 활용",
+      "단계별 비례배분"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$18$명",
+        "reason": "남자의 수를 구하는 과정에서 실수가 있었거나 안경을 안 쓴 남자의 수를 구했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
   }
 ]

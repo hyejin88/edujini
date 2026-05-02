@@ -13,6 +13,12 @@ export interface AttemptRecord {
   error_label: string | null;
   correct_answer?: string;
   created_at: string;
+  // 출처 구분 — 진단 분석 시 분리
+  source?: "comp" | "drill";
+  // 드릴 전용 메타
+  sheet_id?: string;
+  sheet_title?: string;
+  pool_key?: string;
 }
 
 export interface DiagnosisResult {
@@ -34,7 +40,23 @@ export interface DiagnosisResult {
     score_pct: number;
     correct: number;
     total: number;
+    source?: "comp" | "drill";
+    sheet_title?: string;
   } | null;
+  // 연산 양식별 진단
+  weak_drill_sheets: {
+    unit_id: string;
+    unit_name: string;
+    sheet_id: string;
+    sheet_title: string;
+    accuracy: number;
+    total: number;
+    correct: number;
+  }[];
+  drill_total: number;
+  drill_correct: number;
+  comp_total: number;
+  comp_correct: number;
 }
 
 export function loadAttempts(): AttemptRecord[] {
@@ -115,11 +137,18 @@ export function computeDiagnosis(scope?: { unitId?: string; lastN?: number }): D
     }
   }
 
-  // 가장 최근 세션 (마지막 단원의 마지막 시도들)
+  // 가장 최근 세션 (마지막 단원/양식의 마지막 시도들)
   let recent: DiagnosisResult["recent_session"] = null;
   if (atts.length > 0) {
-    const lastUnit = atts[atts.length - 1].unit_id;
-    const lastAtts = atts.filter((a) => a.unit_id === lastUnit).slice(-30);
+    const last = atts[atts.length - 1];
+    const lastSource = last.source;
+    const lastSheetId = last.sheet_id;
+    const lastUnit = last.unit_id;
+    // 드릴이면 sheet_id 단위, 종합이면 unit_id 단위로 묶기
+    const lastAtts =
+      lastSource === "drill" && lastSheetId
+        ? atts.filter((a) => a.sheet_id === lastSheetId).slice(-30)
+        : atts.filter((a) => a.unit_id === lastUnit && (a.source ?? "comp") === (lastSource ?? "comp")).slice(-30);
     const c = lastAtts.filter((a) => a.is_correct).length;
     recent = {
       unit_id: lastUnit,
@@ -127,8 +156,54 @@ export function computeDiagnosis(scope?: { unitId?: string; lastN?: number }): D
       total: lastAtts.length,
       correct: c,
       score_pct: lastAtts.length > 0 ? Math.round((c / lastAtts.length) * 100) : 0,
+      source: lastSource,
+      sheet_title: last.sheet_title,
     };
   }
+
+  // source별 통계 + 양식별 약점
+  const compAtts = atts.filter((a) => (a.source ?? "comp") === "comp");
+  const drillAtts = atts.filter((a) => a.source === "drill");
+  const comp_total = compAtts.length;
+  const comp_correct = compAtts.filter((a) => a.is_correct).length;
+  const drill_total = drillAtts.length;
+  const drill_correct = drillAtts.filter((a) => a.is_correct).length;
+
+  // 양식별 집계 (드릴 한정)
+  const bySheet = new Map<
+    string,
+    {
+      unit_id: string;
+      unit_name: string;
+      sheet_id: string;
+      sheet_title: string;
+      correct: number;
+      total: number;
+    }
+  >();
+  for (const a of drillAtts) {
+    if (!a.sheet_id) continue;
+    const key = `${a.unit_id}::${a.sheet_id}`;
+    const s = bySheet.get(key) || {
+      unit_id: a.unit_id,
+      unit_name: a.unit_name,
+      sheet_id: a.sheet_id,
+      sheet_title: a.sheet_title || a.sheet_id,
+      correct: 0,
+      total: 0,
+    };
+    s.total += 1;
+    if (a.is_correct) s.correct += 1;
+    bySheet.set(key, s);
+  }
+  const weak_drill_sheets = [...bySheet.values()]
+    .map((s) => ({
+      ...s,
+      accuracy: s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0,
+    }))
+    .filter((s) => s.accuracy < 100 && s.total >= 5)
+    .sort((a, b) => a.accuracy - b.accuracy)
+    .slice(0, 3);
 
   return {
     total,
@@ -137,5 +212,10 @@ export function computeDiagnosis(scope?: { unitId?: string; lastN?: number }): D
     weak_units: weak,
     error_breakdown: eb,
     recent_session: recent,
+    weak_drill_sheets,
+    drill_total,
+    drill_correct,
+    comp_total,
+    comp_correct,
   };
 }

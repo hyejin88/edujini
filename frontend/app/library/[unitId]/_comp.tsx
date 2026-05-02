@@ -175,6 +175,7 @@ export default function ComprehensiveSheet({
         error_label: res.error_label || null,
         correct_answer: res.correct_answer,
         created_at: now,
+        source: "comp" as const,
       };
     });
     saveAttempts(attemptsToSave);

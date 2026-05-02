@@ -7,6 +7,7 @@ import { generateDrill, type DrillProblem } from "@/lib/drillGen";
 import type { SheetMeta } from "@/lib/sheets";
 import type { UnitDTO } from "@/lib/client";
 import { DrillSheet } from "@/components/DrillSheet";
+import { saveAttempts, type AttemptRecord } from "@/lib/diagnose";
 
 function gradeLabel(g: number): string {
   if (g <= 6) return `초${g}`;
@@ -186,7 +187,35 @@ export default function DrillSheetPage({
   const total = problems.length - 1; // 1번은 시범, 채점 대상 X
   const score = total > 0 ? Math.round((correctCount / total) * 100) : 0;
 
-  const handleGrade = () => setIsGraded(true);
+  const handleGrade = () => {
+    setIsGraded(true);
+    // 진단용 attempts 로컬 저장 — 1번(예시) 제외, 답한 문제만
+    const now = new Date().toISOString();
+    const grade = sheet.unit_id.match(/^[a-z]+-(\d+)/i);
+    const subject = "수학";
+    const records: AttemptRecord[] = problems
+      .filter((p) => !p.is_example)
+      .map((p) => {
+        const ua = answers[p.index] || "";
+        const isCorrect = checkAnswer(p, ua);
+        return {
+          problem_id: `${sheet.unit_id}::${sheet.id}::${seedNonce}::${p.index}`,
+          unit_id: sheet.unit_id,
+          unit_name: unit?.unit_name || "",
+          subject,
+          user_answer: ua,
+          is_correct: isCorrect,
+          error_label: isCorrect ? null : "계산실수",
+          created_at: now,
+          source: "drill" as const,
+          sheet_id: sheet.id,
+          sheet_title: sheet.title,
+          pool_key: sheet.pool_key,
+        };
+      })
+      .filter((r) => r.user_answer.trim()); // 답 안 한 문제는 진단 제외
+    if (records.length > 0) saveAttempts(records);
+  };
   const handleNew = () => {
     setSeedNonce(Date.now() ^ Math.floor(Math.random() * 1_000_000_000));
     setAnswers({});
