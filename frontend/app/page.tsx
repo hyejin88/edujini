@@ -2,7 +2,7 @@
 
 export const runtime = "edge";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -23,8 +23,25 @@ const subjects = [
 
 export default function LandingPage() {
   const router = useRouter();
-  const [selectedGrade, setSelectedGrade] = useState<number | null>(3);
+  // 학년 기억 — localStorage 우선, 없으면 미선택 (사용자가 명시 선택 유도)
+  const [selectedGrade, setSelectedGrade] = useState<number | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string>("수학");
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const saved = localStorage.getItem("edujini_last_grade");
+      if (saved) {
+        const g = parseInt(saved, 10);
+        if (g >= 1 && g <= 6) setSelectedGrade(g);
+      }
+    } catch {}
+  }, []);
+
+  const handleSelectGrade = (g: number) => {
+    setSelectedGrade(g);
+    try { localStorage.setItem("edujini_last_grade", String(g)); } catch {}
+  };
 
   const goLibrary = (mode: "comp" | "drill") => {
     if (selectedGrade && selectedSubject) {
@@ -63,7 +80,7 @@ export default function LandingPage() {
               {grades.map((grade) => (
                 <button
                   key={grade.value}
-                  onClick={() => setSelectedGrade(grade.value)}
+                  onClick={() => handleSelectGrade(grade.value)}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                     selectedGrade === grade.value
                       ? "bg-primary text-primary-foreground"
@@ -96,12 +113,13 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* CTA Buttons — 두 갈래 */}
+          {/* CTA Buttons — 두 갈래. 학년 미선택 시 disabled (UX High) */}
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Button
               onClick={() => goLibrary("comp")}
               size="lg"
-              className="group bg-primary px-8 text-base font-semibold hover:bg-primary/90"
+              disabled={!selectedGrade}
+              className="group min-h-[48px] bg-primary px-8 text-base font-semibold hover:bg-primary/90 disabled:opacity-50"
             >
               단원 학습 보기
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -110,14 +128,17 @@ export default function LandingPage() {
               onClick={() => goLibrary("drill")}
               size="lg"
               variant="outline"
-              className="group border-2 px-8 text-base font-semibold"
+              disabled={!selectedGrade}
+              className="group min-h-[48px] border-2 px-8 text-base font-semibold disabled:opacity-50"
             >
               연산 문제 보기
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            단원 학습으로 약점 진단 · 연산 문제로 매일 30문제 반복 연습
+            {selectedGrade
+              ? "단원 학습으로 약점 진단 · 연산 문제로 매일 30문제 반복 연습"
+              : "먼저 자녀 학년을 골라주세요"}
           </p>
         </div>
       </section>
