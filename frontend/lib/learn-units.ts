@@ -40,6 +40,14 @@ export const LEARN_UNITS: LearnUnit[] = [
     search_intents: ["초1 받아올림", "받아내림 어려워해요", "13 빼기 7"],
   },
 
+  {
+    unit_id: "math-1-2-6", grade: 1, semester: 2, slug: "addition-subtraction-mixed",
+    unit_name: "덧셈과 뺄셈 (혼합)", ncic_codes: ["[2수01-04]"],
+    short_description: "한 자리 + 한 자리(받아올림) + 십몇 - 몇(받아내림) 종합",
+    long_description: "1학년 후반의 덧셈과 뺄셈 종합 단원. 받아올림이 있는 한 자리 수 덧셈, 받아내림이 있는 십몇 - 몇 뺄셈을 함께 다루며 자릿값 감각을 정착시켜요.",
+    common_struggles: ["받아올림과 받아내림 동시 학습 부담", "10을 빌려오는 단계 헷갈림"],
+    search_intents: ["초1 받아올림 받아내림", "1학년 종합 덧뺄"],
+  },
   // ───────── 초2 ─────────
   {
     unit_id: "math-2-1-3", grade: 2, semester: 1, slug: "two-digit-addition-subtraction",
@@ -160,6 +168,14 @@ export const LEARN_UNITS: LearnUnit[] = [
     search_intents: ["최대공약수 구하는 법", "최소공배수", "초5 약수 배수"],
   },
   {
+    unit_id: "math-5-1-4", grade: 5, semester: 1, slug: "fraction-reduce-common-denominator",
+    unit_name: "약분과 통분", ncic_codes: ["[6수01-05]"],
+    short_description: "기약분수·분모 다른 분수 비교·분수↔소수 관계",
+    long_description: "분수를 가장 간단한 모양으로 나타내는 약분과, 분모 다른 두 분수를 같은 분모로 만드는 통분을 배워요. 분수의 곱셈·나눗셈 다음 단원으로 가는 핵심 디딤돌.",
+    common_struggles: ["기약분수 끝까지 약분 안 함", "통분에서 LCM 못 찾음", "분수와 소수 변환 헷갈림"],
+    search_intents: ["초5 약분", "통분 구하는 법", "기약분수"],
+  },
+  {
     unit_id: "math-5-1-5", grade: 5, semester: 1, slug: "fraction-different-denominator",
     unit_name: "분모가 다른 분수의 덧셈과 뺄셈", ncic_codes: ["[6수01-06]"],
     short_description: "통분 → 같은 분모로 만들고 덧셈·뺄셈",
@@ -216,6 +232,14 @@ export const LEARN_UNITS: LearnUnit[] = [
     long_description: "분수를 분수로 나누는 방법을 배워요. 나누는 분수의 역수를 곱하면 됩니다. 또는 통분 후 분자끼리 나누기. 두 방법을 모두 익히면 응용에서 강해요.",
     common_struggles: ["역수 개념 헷갈림", "약분 안 함", "대분수 변환 잊음"],
     search_intents: ["초6 분수 나눗셈", "분수 역수 곱셈", "분수 분수 나누기"],
+  },
+  {
+    unit_id: "math-6-2-2", grade: 6, semester: 2, slug: "decimal-division-extended",
+    unit_name: "소수의 나눗셈 (심화)", ncic_codes: ["[6수01-11]"],
+    short_description: "소수÷소수 + 자연수÷소수 + 분수↔소수 변환 나눗셈",
+    long_description: "6학년 2학기 소수의 나눗셈 심화 — 소수와 소수의 나눗셈, 자연수를 소수로 나누기, 분수와 소수가 섞인 나눗셈을 배워요. 다양한 변형을 한 단원에서 한꺼번에 다룹니다.",
+    common_struggles: ["분수↔소수 변환 후 계산 헷갈림", "자연수÷소수 자릿수 옮기기"],
+    search_intents: ["초6 소수 나눗셈", "분수와 소수 나눗셈", "자연수÷소수"],
   },
   {
     unit_id: "math-6-2-3", grade: 6, semester: 2, slug: "decimal-division-decimal",
