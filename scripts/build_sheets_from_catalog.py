@@ -130,8 +130,10 @@ def parse_special_op(title, desc):
         if '세 자리' in title:
             return 'three_pm_3d'
         return 'three_pm_2d'
-    # math-2-1-3: 몇십 몇 + 몇 - 몇 (단순 세 수 ±)
+    # math-2-1-3: 몇십 몇 + 몇 - 몇 / 몇십 몇 - 몇 + 몇 (세 수 ±)
     if '+' in title and '-' in title and ('몇' in title or '자리' in title):
+        return 'three_pm_2d'
+    if '/' in title and ('+' in title or '-' in title) and ('몇' in title or '자리' in title):
         return 'three_pm_2d'
     # 소수와 자연수의 곱
     if '소수와 자연수의 곱' in title or ('소수' in title and '자연수' in title and '곱' in title):
@@ -156,7 +158,7 @@ def parse_special_op(title, desc):
     if '자연수' in title and '소수' in title and '÷' in title.replace(' ', ''):
         return 'nat_div_dec_1'
     # 소수↔분수 나눗셈 변환 (단순화: 분수 나눗셈 풀로 매핑)
-    if '소수' in title and '분수' in title and '나눗셈' in title:
+    if '소수' in title and '분수' in title and ('나눗셈' in title or '÷' in title):
         return 'frac_div'
     # 연비 / 가장 작은 자연수의 비
     if '연비' in title:

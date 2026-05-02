@@ -2561,6 +2561,16 @@
       "layout": "h"
     },
     {
+      "id": "s6-h-f",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "소수 ÷ 분수 (분수로 고쳐 계산)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "frac_div",
+      "layout": "h"
+    },
+    {
       "id": "s7-h-d",
       "unit_id": "math-6-2-2",
       "type": "drill_h_add",
