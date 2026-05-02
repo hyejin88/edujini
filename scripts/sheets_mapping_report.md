@@ -1,13 +1,13 @@
 # 일일수학 → sheets.ts 매핑 리포트
 
 - 카탈로그 양식: 266개
-- 매핑 성공: 216개
-- 매핑 실패: 50개
+- 매핑 성공: 229개
+- 매핑 실패: 37개
 
 ## 단원별 매핑 수
-- `math-1-1-3` (덧셈과 뺄셈): 2개
-- `math-1-2-2` (덧셈과 뺄셈(1)): 14개
-- `math-1-2-4` (덧셈과 뺄셈(2)): 3개
+- `math-1-1-3` (덧셈과 뺄셈): 7개
+- `math-1-2-2` (덧셈과 뺄셈(1)): 16개
+- `math-1-2-4` (덧셈과 뺄셈(2)): 9개
 - `math-1-2-6` (덧셈과 뺄셈(3)): 8개
 - `math-2-1-3` (덧셈과 뺄셈): 18개
 - `math-2-2-2` (곱셈구구): 6개
@@ -33,25 +33,6 @@
 - `math-6-2-4` (비례식과 비례배분): 6개
 
 ## 매핑 실패 양식 (단원별)
-
-### math-1-1-3 (덧셈과 뺄셈)
-- 1. 두 수로 가르기(한 자리 수) _(pool? op=sub d=None_None carry=None)_
-- 2. 두 수를 모으기(한 자리 수) _(pool? op=add d=None_None carry=None)_
-- 5. 한 자리 수 덧셈과 뺄셈의 관계 _(pool? op=sub d=None_None carry=None)_
-- 6. 한 자리 수 뺄셈과 덧셈의 관계 _(pool? op=sub d=None_None carry=None)_
-- 7. 한 자리 수 덧셈/뺄셈에서 @box안의 수 찾기 _(pool? op=sub d=None_None carry=None)_
-
-### math-1-2-2 (덧셈과 뺄셈(1))
-- 15. 두 자리 수 덧셈과 뺄셈의 관계 _(pool? op=sub d=None_None carry=None)_
-- 16. 두 자리 수 뺄셈과 덧셈의 관계 _(pool? op=sub d=None_None carry=None)_
-
-### math-1-2-4 (덧셈과 뺄셈(2))
-- 4. 10을 두 수로 가르기 _(pool? op=sub d=None_None carry=None)_
-- 5. 10이 되도록 두 수를 모으기 _(pool? op=add d=None_None carry=None)_
-- 6. 10이 되는 더하기 _(pool? op=add d=None_None carry=None)_
-- 7. 10에서 빼기 _(pool? op=sub d=None_None carry=None)_
-- 8. 두 수의 합이 10이 되는 세 수의 덧셈 A _(pool? op=add d=None_None carry=None)_
-- 9. 두 수의 합이 10이 되는 세 수의 덧셈 B _(pool? op=add d=None_None carry=None)_
 
 ### math-2-1-3 (덧셈과 뺄셈)
 - 17. 몇십 몇 + 몇 - 몇 / 몇십 몇 - 몇 + 몇  _(op?)_

@@ -123,6 +123,32 @@ def parse_special_op(title, desc):
     # 자연수 혼합
     if '혼합' in title and '계산' in title:
         return 'mixed_calc_3'
+    # 1학년: 두 수로 가르기 / 두 수를 모으기
+    if '두 수로 가르기' in title or '가르기' in title:
+        return 'decompose_9'
+    if '두 수를 모으기' in title or '모으기' in title:
+        return 'decompose_9'
+    # 10이 되는 더하기 / 10에서 빼기 / 10을 두 수로 가르기 / 10이 되도록 두 수를 모으기
+    if '10이 되는' in title and '더하기' in title:
+        return 'make_ten'
+    if '10에서 빼' in title or '10에서빼' in title:
+        return 'break_ten'
+    if '10을' in title and '가르기' in title:
+        return 'break_ten'
+    if '10이 되도록' in title or '되도록 두 수' in title:
+        return 'make_ten'
+    # 두 수의 합이 10이 되는 세 수의 덧셈
+    if '두 수의 합이 10' in title and '세 수' in title:
+        return 'three_num_1'
+    # 빈칸(@box / ☐) 채우기
+    if '@box' in title or '☐' in title or '안의 수 찾기' in title:
+        return 'box_addsub_2d' if ('두 자리' in title or '몇십' in title) else 'box_addsub_1d'
+    # 덧셈/뺄셈의 관계
+    if '덧셈과 뺄셈의 관계' in title or '뺄셈과 덧셈의 관계' in title:
+        return 'rel_addsub_2d' if '두 자리' in title else 'rel_addsub_1d'
+    # 몇십 몇 ± 몇 ± 몇 (세 수 ±)
+    if '±' in title and '몇' in title:
+        return 'three_pm_2d'
     return None
 
 
@@ -160,7 +186,10 @@ SINGLE_KW = {
 
 
 def parse_digits(title):
-    # 1) "X 자리 수 + Y 자리 수"
+    # 1a) "X 자리 수 + Y 자리 수" (직접 인접)
+    m = re.search(r'(한|두|세|네)\s*자리\s*수\s*[+\-X×÷±]\s*(한|두|세|네)\s*자리\s*수', title)
+    if m: return DIG_MAP[m.group(1)], DIG_MAP[m.group(2)]
+    # 1b) "X 자리 수" 사이에 다른 단어
     m = re.search(r'(한|두|세|네)\s*자리\s*수[^+\-X×÷±]*[+\-X×÷±]\s*(한|두|세|네)\s*자리\s*수', title)
     if m: return DIG_MAP[m.group(1)], DIG_MAP[m.group(2)]
     # 2) "몇/몇십 + 몇/몇십" — 양쪽 명시

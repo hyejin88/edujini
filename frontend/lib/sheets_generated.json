@@ -1,6 +1,26 @@
 {
   "math-1-1-3": [
     {
+      "id": "s1-h-d",
+      "unit_id": "math-1-1-3",
+      "type": "drill_h_add",
+      "title": "두 수로 가르기(한 자리 수)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "decompose_9",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-d",
+      "unit_id": "math-1-1-3",
+      "type": "drill_h_add",
+      "title": "두 수를 모으기(한 자리 수)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "decompose_9",
+      "layout": "h"
+    },
+    {
       "id": "s3-h-a",
       "unit_id": "math-1-1-3",
       "type": "drill_h_add",
@@ -18,6 +38,36 @@
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
       "pool_key": "h_sub_1_1",
+      "layout": "h"
+    },
+    {
+      "id": "s5-h-r",
+      "unit_id": "math-1-1-3",
+      "type": "drill_h_add",
+      "title": "한 자리 수 덧셈과 뺄셈의 관계",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "rel_addsub_1d",
+      "layout": "h"
+    },
+    {
+      "id": "s6-h-r",
+      "unit_id": "math-1-1-3",
+      "type": "drill_h_add",
+      "title": "한 자리 수 뺄셈과 덧셈의 관계",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "rel_addsub_1d",
+      "layout": "h"
+    },
+    {
+      "id": "s7-h-b",
+      "unit_id": "math-1-1-3",
+      "type": "drill_h_add",
+      "title": "한 자리 수 덧셈/뺄셈에서 @box안의 수 찾기",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "box_addsub_1d",
       "layout": "h"
     }
   ],
@@ -161,6 +211,26 @@
       "problem_count": 30,
       "pool_key": "h_sub_2_2_no_borrow",
       "layout": "h"
+    },
+    {
+      "id": "s15-h-r",
+      "unit_id": "math-1-2-2",
+      "type": "drill_h_add",
+      "title": "두 자리 수 덧셈과 뺄셈의 관계",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "rel_addsub_2d",
+      "layout": "h"
+    },
+    {
+      "id": "s16-h-r",
+      "unit_id": "math-1-2-2",
+      "type": "drill_h_add",
+      "title": "두 자리 수 뺄셈과 덧셈의 관계",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "rel_addsub_2d",
+      "layout": "h"
     }
   ],
   "math-1-2-4": [
@@ -192,6 +262,66 @@
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
       "pool_key": "h_sub_1_1",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-d",
+      "unit_id": "math-1-2-4",
+      "type": "drill_h_add",
+      "title": "10을 두 수로 가르기",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "decompose_9",
+      "layout": "h"
+    },
+    {
+      "id": "s5-h-d",
+      "unit_id": "math-1-2-4",
+      "type": "drill_h_add",
+      "title": "10이 되도록 두 수를 모으기",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "decompose_9",
+      "layout": "h"
+    },
+    {
+      "id": "s6-h-m",
+      "unit_id": "math-1-2-4",
+      "type": "drill_h_add",
+      "title": "10이 되는 더하기",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "make_ten",
+      "layout": "h"
+    },
+    {
+      "id": "s7-h-b",
+      "unit_id": "math-1-2-4",
+      "type": "drill_h_add",
+      "title": "10에서 빼기",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "break_ten",
+      "layout": "h"
+    },
+    {
+      "id": "s8-v-t",
+      "unit_id": "math-1-2-4",
+      "type": "drill_v_add",
+      "title": "두 수의 합이 10이 되는 세 수의 덧셈",
+      "subtitle": "세로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "three_num_1",
+      "layout": "v"
+    },
+    {
+      "id": "s9-h-t",
+      "unit_id": "math-1-2-4",
+      "type": "drill_h_add",
+      "title": "두 수의 합이 10이 되는 세 수의 덧셈",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "three_num_1",
       "layout": "h"
     }
   ],
@@ -379,43 +509,43 @@
       "layout": "h"
     },
     {
-      "id": "s11-v-m",
+      "id": "s11-v-t",
       "unit_id": "math-2-1-3",
       "type": "drill_v_add",
       "title": "몇십 몇 ± 몇 (받아올림/내림 있음)",
       "subtitle": "세로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_2_1",
+      "pool_key": "three_pm_2d",
       "layout": "v"
     },
     {
-      "id": "s12-h-m",
+      "id": "s12-h-t",
       "unit_id": "math-2-1-3",
       "type": "drill_h_add",
       "title": "몇십 몇 ± 몇 (받아올림/내림 있음)",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_2_1",
+      "pool_key": "three_pm_2d",
       "layout": "h"
     },
     {
-      "id": "s13-v-m",
+      "id": "s13-v-t",
       "unit_id": "math-2-1-3",
       "type": "drill_v_add",
       "title": "몇십 몇 ± 몇십 몇",
       "subtitle": "세로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_2_2",
+      "pool_key": "three_pm_2d",
       "layout": "v"
     },
     {
-      "id": "s14-h-m",
+      "id": "s14-h-t",
       "unit_id": "math-2-1-3",
       "type": "drill_h_add",
       "title": "몇십 몇 ± 몇십 몇",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_2_2",
+      "pool_key": "three_pm_2d",
       "layout": "h"
     },
     {
@@ -439,23 +569,23 @@
       "layout": "h"
     },
     {
-      "id": "s18-h-m",
+      "id": "s18-h-t",
       "unit_id": "math-2-1-3",
       "type": "drill_h_add",
       "title": "몇십 몇 ± 몇 ± 몇 ",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_2_1",
+      "pool_key": "three_pm_2d",
       "layout": "h"
     },
     {
-      "id": "s19-h-m",
+      "id": "s19-h-t",
       "unit_id": "math-2-1-3",
       "type": "drill_h_add",
       "title": "몇십 몇 ± 몇십 몇 ± 몇십 몇",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_2_2",
+      "pool_key": "three_pm_2d",
       "layout": "h"
     }
   ],
@@ -491,33 +621,33 @@
       "layout": "h"
     },
     {
-      "id": "s4-v-m",
+      "id": "s4-v-b",
       "unit_id": "math-2-2-2",
-      "type": "drill_v_mul",
+      "type": "drill_v_add",
       "title": "곱셈구구에서 @box안의 수 찾기",
       "subtitle": "세로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_mul_1_1",
+      "pool_key": "box_addsub_1d",
       "layout": "v"
     },
     {
-      "id": "s5-h-m",
+      "id": "s5-h-b",
       "unit_id": "math-2-2-2",
-      "type": "drill_h_mul",
+      "type": "drill_h_add",
       "title": "곱셈구구에서 @box안의 수 찾기",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_mul_1_1",
+      "pool_key": "box_addsub_1d",
       "layout": "h"
     },
     {
-      "id": "s6-h-m",
+      "id": "s6-h-b",
       "unit_id": "math-2-2-2",
-      "type": "drill_h_mul",
+      "type": "drill_h_add",
       "title": "곱셈구구에서 @box안의 수 찾기 C",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_mul_1_1",
+      "pool_key": "box_addsub_1d",
       "layout": "h"
     }
   ],
@@ -703,23 +833,23 @@
       "layout": "h"
     },
     {
-      "id": "s27-v-m",
+      "id": "s27-v-t",
       "unit_id": "math-3-1-1",
       "type": "drill_v_add",
       "title": "몇백 몇십 몇 ± 몇백 몇십 몇",
       "subtitle": "세로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_3_3",
+      "pool_key": "three_pm_2d",
       "layout": "v"
     },
     {
-      "id": "s28-h-m",
+      "id": "s28-h-t",
       "unit_id": "math-3-1-1",
       "type": "drill_h_add",
       "title": "몇백 몇십 몇 ± 몇백 몇십 몇",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_3_3",
+      "pool_key": "three_pm_2d",
       "layout": "h"
     },
     {
