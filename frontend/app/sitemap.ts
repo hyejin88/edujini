@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import seedData from "@/lib/seed.json";
 import unitsData from "@/lib/units.json";
+import { LEARN_UNITS } from "@/lib/learn-units";
 
 const BASE = "https://edujini.pages.dev";
 
@@ -35,5 +36,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     }));
 
-  return [...staticPages, ...unitPages];
+  // SEO 단원별 랜딩 페이지 27개
+  const learnPages: MetadataRoute.Sitemap = LEARN_UNITS.map((u) => ({
+    url: `${BASE}/learn/grade-${u.grade}/${u.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  return [...staticPages, ...unitPages, ...learnPages];
 }
