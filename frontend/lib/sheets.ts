@@ -34,6 +34,9 @@ const DRILLS = generatedDrills as Record<string, GeneratedSheet[]>;
 
 // 종합 학습 콘텐츠가 있는 단원 (lib/db.ts PUBLISHED_UNITS와 동기화)
 const COMP_UNITS: Record<string, { title: string; subtitle: string }> = {
+  "math-1-1-3": { title: "단원 학습", subtitle: "9까지 수의 덧셈·뺄셈 · 가르기·모으기 · 20문제" },
+  "math-1-2-2": { title: "단원 학습", subtitle: "두 자리 수 덧·뺄셈 (받아올림 X) · 20문제" },
+  "math-1-2-4": { title: "단원 학습", subtitle: "한 자리 받아올림·십몇 받아내림 · 20문제" },
   "math-3-1-1": { title: "단원 학습", subtitle: "선택형 + 서술형 20문제 · AI 자동 채점" },
   "math-3-1-3": { title: "단원 학습", subtitle: "나눗셈 개념·곱셈과 관계 · 20문제" },
   "math-3-1-4": { title: "단원 학습", subtitle: "(두 자리)×(한 자리) · 20문제" },

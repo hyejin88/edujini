@@ -47,6 +47,8 @@ export interface SeedUnit {
 // 종합 학습 화이트리스트 — v3 seed.json에 콘텐츠가 있는 단원만 게시.
 // 드릴은 클라이언트 자동 생성이라 이 리스트와 무관.
 const PUBLISHED_UNITS = new Set<string>([
+  // 초1 (3단원 v3 완료)
+  "math-1-1-3", "math-1-2-2", "math-1-2-4",
   // 초3 (7단원 v3 완료)
   "math-3-1-1", "math-3-1-3", "math-3-1-4", "math-3-1-6",
   "math-3-2-1", "math-3-2-2", "math-3-2-4",
