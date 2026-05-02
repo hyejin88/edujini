@@ -5,6 +5,7 @@ export const runtime = "edge";
 import { Suspense, use, useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
+import { Brand } from "@/components/Brand";
 import { ArrowLeft, Printer, FileText, Pencil } from "lucide-react";
 import {
   fetchUnits,
@@ -76,9 +77,7 @@ function UnitContent({ unitId }: { unitId: string }) {
             <ArrowLeft className="h-4 w-4" />
             단원 목록
           </Link>
-          <Link href="/" className="text-lg font-bold">
-            EDU Jini
-          </Link>
+          <Brand />
         </div>
       </header>
       <main className="mx-auto max-w-4xl px-4 py-10">

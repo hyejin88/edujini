@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Brand } from "@/components/Brand";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
@@ -19,9 +20,7 @@ export default function TermsPage() {
             <ArrowLeft className="h-4 w-4" />
             홈으로
           </Link>
-          <Link href="/" className="text-lg font-bold text-foreground">
-            EDU Jini
-          </Link>
+          <Brand />
         </div>
       </header>
 

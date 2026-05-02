@@ -16759,5 +16759,745 @@
     ],
     "license_code": "SELF_GEN",
     "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::0",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$15 - 2 = \\square$",
+    "choices": [
+      "$12$",
+      "$13$",
+      "$14$",
+      "$15$"
+    ],
+    "answer": "$13$",
+    "answer_aliases": [
+      "13"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $5 - 2 = 3$입니다. 십의 자리는 그대로 1이므로 $13$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$12$",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::1",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$18 - 5 = \\square$",
+    "choices": [
+      "$12$",
+      "$13$",
+      "$14$",
+      "$15$"
+    ],
+    "answer": "$13$",
+    "answer_aliases": [
+      "13"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $8 - 5 = 3$입니다. 십의 자리는 그대로 1이므로 $13$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$14$",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::2",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$27 - 3 = \\square$",
+    "choices": [
+      "$23$",
+      "$24$",
+      "$25$",
+      "$26$"
+    ],
+    "answer": "$24$",
+    "answer_aliases": [
+      "24"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $7 - 3 = 4$입니다. 십의 자리는 그대로 2이므로 $24$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$23$",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::3",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$39 - 6 = \\square$",
+    "choices": [
+      "$32$",
+      "$33$",
+      "$34$",
+      "$35$"
+    ],
+    "answer": "$33$",
+    "answer_aliases": [
+      "33"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $9 - 6 = 3$입니다. 십의 자리는 그대로 3이므로 $33$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$34$",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::4",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$46 - 4 = \\square$",
+    "choices": [
+      "$41$",
+      "$42$",
+      "$43$",
+      "$44$"
+    ],
+    "answer": "$42$",
+    "answer_aliases": [
+      "42"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $6 - 4 = 2$입니다. 십의 자리는 그대로 4이므로 $42$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$43$",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::5",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$54 - 1 = \\square$",
+    "choices": null,
+    "answer": "$53$",
+    "answer_aliases": [
+      "53"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $4 - 1 = 3$입니다. 십의 자리는 그대로 5이므로 $53$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$55$",
+        "reason": "뺄셈을 덧셈으로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::6",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$67 - 5 = \\square$",
+    "choices": [
+      "$61$",
+      "$62$",
+      "$63$",
+      "$64$"
+    ],
+    "answer": "$62$",
+    "answer_aliases": [
+      "62"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $7 - 5 = 2$입니다. 십의 자리는 그대로 6이므로 $62$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$63$",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::7",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$78 - 2 = \\square$",
+    "choices": null,
+    "answer": "$76$",
+    "answer_aliases": [
+      "76"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $8 - 2 = 6$입니다. 십의 자리는 그대로 7이므로 $76$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$75$",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::8",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$89 - 7 = \\square$",
+    "choices": [
+      "$81$",
+      "$82$",
+      "$83$",
+      "$84$"
+    ],
+    "answer": "$82$",
+    "answer_aliases": [
+      "82"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $9 - 7 = 2$입니다. 십의 자리는 그대로 8이므로 $82$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$83$",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::9",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$23 - \\square = 21$",
+    "choices": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$4$"
+    ],
+    "answer": "$2$",
+    "answer_aliases": [
+      "2"
+    ],
+    "explanation": "어떤 수에서 $23$을 빼면 $21$이 됩니다. $23 - 21 = 2$이므로 $\\square$ 안에 들어갈 수는 $2$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "빈칸 채우기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$3$",
+        "reason": "뺄셈의 관계를 이해하지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::10",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$\\square - 4 = 32$",
+    "choices": null,
+    "answer": "$36$",
+    "answer_aliases": [
+      "36"
+    ],
+    "explanation": "어떤 수에서 $4$를 빼면 $32$가 됩니다. $32 + 4 = 36$이므로 $\\square$ 안에 들어갈 수는 $36$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "빈칸 채우기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$28$",
+        "reason": "덧셈과 뺄셈의 관계를 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::11",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$56 - 3 = \\square$",
+    "choices": [
+      "$52$",
+      "$53$",
+      "$54$",
+      "$55$"
+    ],
+    "answer": "$53$",
+    "answer_aliases": [
+      "53"
+    ],
+    "explanation": "일의 자리 수끼리 뺄셈을 합니다. $6 - 3 = 3$입니다. 십의 자리는 그대로 5이므로 $53$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$54$",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::12",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "사과 17개 중 4개를 먹었습니다. 남은 사과는 몇 개일까요?",
+    "choices": [
+      "$12$개",
+      "$13$개",
+      "$14$개",
+      "$15$개"
+    ],
+    "answer": "$13$개",
+    "answer_aliases": [
+      "13"
+    ],
+    "explanation": "남은 사과의 수를 구하는 식은 $17 - 4$입니다. $17 - 4 = 13$이므로 남은 사과는 $13$개입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$21$개",
+        "reason": "뺄셈이 아닌 덧셈으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::13",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "연필 25자루가 있습니다. 친구에게 3자루를 주었습니다. 남은 연필은 몇 자루일까요?",
+    "choices": null,
+    "answer": "$22$자루",
+    "answer_aliases": [
+      "22"
+    ],
+    "explanation": "남은 연필의 수를 구하는 식은 $25 - 3$입니다. $25 - 3 = 22$이므로 남은 연필은 $22$자루입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$23$자루",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::14",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "풍선 38개가 있습니다. 5개가 터졌습니다. 남은 풍선은 몇 개일까요?",
+    "choices": [
+      "$32$개",
+      "$33$개",
+      "$34$개",
+      "$35$개"
+    ],
+    "answer": "$33$개",
+    "answer_aliases": [
+      "33"
+    ],
+    "explanation": "남은 풍선의 수를 구하는 식은 $38 - 5$입니다. $38 - 5 = 33$이므로 남은 풍선은 $33$개입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$43$개",
+        "reason": "뺄셈이 아닌 덧셈으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::15",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "책 49권이 있습니다. 6권을 읽었습니다. 남은 책은 몇 권일까요?",
+    "choices": [
+      "$42$권",
+      "$43$권",
+      "$44$권",
+      "$45$권"
+    ],
+    "answer": "$43$권",
+    "answer_aliases": [
+      "43"
+    ],
+    "explanation": "남은 책의 수를 구하는 식은 $49 - 6$입니다. $49 - 6 = 43$이므로 남은 책은 $43$권입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$42$권",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::16",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "빵 52개가 있습니다. 1개를 먹었습니다. 남은 빵은 몇 개일까요?",
+    "choices": null,
+    "answer": "$51$개",
+    "answer_aliases": [
+      "51"
+    ],
+    "explanation": "남은 빵의 수를 구하는 식은 $52 - 1$입니다. $52 - 1 = 51$이므로 남은 빵은 $51$개입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$53$개",
+        "reason": "뺄셈이 아닌 덧셈으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::17",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "바나나 64개가 있습니다. 2개를 친구에게 주었습니다. 남은 바나나는 몇 개일까요?",
+    "choices": [
+      "$61$개",
+      "$62$개",
+      "$63$개",
+      "$64$개"
+    ],
+    "answer": "$62$개",
+    "answer_aliases": [
+      "62"
+    ],
+    "explanation": "남은 바나나의 수를 구하는 식은 $64 - 2$입니다. $64 - 2 = 62$이므로 남은 바나나는 $62$개입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "문장제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$63$개",
+        "reason": "일의 자리 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::18",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "$37 - 4$와 $39 - 5$ 중 더 큰 값은 얼마일까요?",
+    "choices": [
+      "$33$",
+      "$34$",
+      "$35$",
+      "$36$"
+    ],
+    "answer": "$34$",
+    "answer_aliases": [
+      "34"
+    ],
+    "explanation": "먼저 각각의 값을 계산합니다. $37 - 4 = 33$입니다. $39 - 5 = 34$입니다. $33$과 $34$ 중 더 큰 값은 $34$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "비교"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$33$",
+        "reason": "두 값 중 하나를 잘못 계산하거나 비교를 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-1-2-4::v3::19",
+    "subject": "수학",
+    "grade": 1,
+    "standard_code": "[2수01-06]",
+    "unit_id": "math-1-2-4",
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "어떤 수에서 3을 뺐더니 41이 되었습니다. 어떤 수는 얼마일까요?",
+    "choices": null,
+    "answer": "$44$",
+    "answer_aliases": [
+      "44"
+    ],
+    "explanation": "어떤 수에서 $3$을 빼서 $41$이 되었으므로, $41$에 $3$을 더하면 어떤 수를 알 수 있습니다. $41 + 3 = 44$입니다.",
+    "concept_tags": [
+      "두 자리 수 - 한 자리 수",
+      "받아내림 없는 뺄셈",
+      "역연산"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$38$",
+        "reason": "뺄셈을 그대로 적용하여 $41 - 3$을 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
   }
 ]

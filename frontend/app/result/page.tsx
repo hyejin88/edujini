@@ -4,6 +4,7 @@ export const runtime = "edge";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Brand } from "@/components/Brand";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -58,7 +59,7 @@ export default function ResultPage() {
               <ArrowLeft className="h-4 w-4" />
               홈으로
             </Link>
-            <span className="text-lg font-bold text-foreground">EDU Jini</span>
+            <Brand />
           </div>
         </header>
         <main className="mx-auto max-w-3xl px-4 py-16 text-center">
@@ -125,7 +126,7 @@ export default function ResultPage() {
             <ArrowLeft className="h-4 w-4" />
             홈으로
           </Link>
-          <span className="text-lg font-bold text-foreground">EDU Jini</span>
+          <Brand />
         </div>
       </header>
 

@@ -5,6 +5,7 @@ export const runtime = "edge";
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { Brand } from "@/components/Brand";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Lock, ArrowLeft, Printer, FileText } from "lucide-react";
@@ -66,9 +67,7 @@ function LibraryContent() {
             <ArrowLeft className="h-4 w-4" />
             홈으로
           </Link>
-          <Link href="/" className="text-lg font-bold text-foreground">
-            EDU Jini
-          </Link>
+          <Brand />
         </div>
       </header>
 
