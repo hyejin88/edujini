@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
+import { AdSenseScript } from '@/components/AdSlot'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -46,6 +47,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
         />
+        {/* AdSense 사이트 소유권 확인 + 광고 로드 베이스 스크립트 */}
+        <AdSenseScript />
       </head>
       <body className="font-sans antialiased">
         {children}

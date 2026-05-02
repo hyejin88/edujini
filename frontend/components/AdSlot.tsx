@@ -2,13 +2,13 @@
 
 import { useEffect, useRef } from "react";
 
+// AdSense client ID — EDU Jini 정혜진 계정 (공개 정보, 환경변수로 override 가능)
+const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-4995246987313839";
+
 // AdSense 광고 슬롯
-// 1. 정혜진이 https://www.google.com/adsense 가입
-// 2. 사이트 등록 + 검토 통과 (1~2주)
-// 3. Cloudflare Pages 환경변수에 NEXT_PUBLIC_ADSENSE_CLIENT 추가 (예: ca-pub-1234567890)
-// 4. 슬롯 ID는 props로 전달 (대시보드에서 슬롯 생성 후 받음)
-//
-// 환경변수 미설정 또는 미승인 상태에선 placeholder UI만 노출 (AdSense 정책 위반 회피)
+// - 사이트 소유권 확인용 스크립트는 layout.tsx의 <AdSenseScript />에서 자동 주입
+// - 광고 단위(slot) ID는 props로 전달 (AdSense 승인 후 광고 단위 생성해서 받음)
+// - slot 미설정 시 placeholder UI만 표시 (정책 위반 회피)
 export function AdSlot({
   slot,
   format = "auto",
@@ -19,8 +19,7 @@ export function AdSlot({
   className?: string;
 }) {
   const ref = useRef<HTMLModElement>(null);
-  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
-  const enabled = Boolean(client && slot);
+  const enabled = Boolean(slot);
 
   useEffect(() => {
     if (!enabled) return;
@@ -49,7 +48,7 @@ export function AdSlot({
       ref={ref}
       className={`adsbygoogle ${className}`}
       style={{ display: "block" }}
-      data-ad-client={client}
+      data-ad-client={ADSENSE_CLIENT}
       data-ad-slot={slot}
       data-ad-format={format}
       data-full-width-responsive="true"
@@ -58,13 +57,12 @@ export function AdSlot({
 }
 
 // AdSense 글로벌 스크립트 — layout에서 한 번만 주입
+// 사이트 소유권 확인 + 광고 로드 베이스. 광고 단위 없어도 사이트 등록 검토는 진행됨.
 export function AdSenseScript() {
-  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
-  if (!client) return null;
   return (
     <script
       async
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${client}`}
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
       crossOrigin="anonymous"
     />
   );
