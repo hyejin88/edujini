@@ -44,7 +44,7 @@ export default function LandingPage() {
       <section className="bg-secondary py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            오늘의 학습지,{" "}
+            오늘의 학습,{" "}
             <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
               골라보세요
             </span>
@@ -126,7 +126,7 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl px-4">
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              { title: "매일 새 문제", desc: "연산 드릴은 학습지 ID·날짜로 매번 새 숫자" },
+              { title: "매일 새 문제", desc: "연산 드릴은 단원·날짜로 매번 새 숫자" },
               { title: "즉시 채점", desc: "정답·오답 유형까지 한 번에 표시" },
               { title: "회원가입 없이", desc: "지금 바로 풀고, 마음에 들면 인쇄해요" },
             ].map((item) => (
@@ -158,7 +158,7 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="mb-2 text-sm font-medium text-foreground">EDU Jini</p>
           <p className="mb-4 text-sm text-muted-foreground">
-            NCIC 성취기준 기반 체계적인 학습지
+            NCIC 성취기준 기반 체계적인 학습
           </p>
           <div className="flex justify-center gap-6 text-sm text-muted-foreground">
             <a href="/about" className="hover:text-foreground">운영자 정보</a>
