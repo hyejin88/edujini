@@ -182,12 +182,6 @@ function UnitCard({
             {unit.unit_name}
           </h3>
           <p className="mb-3 text-sm text-muted-foreground">{unit.sub_unit}</p>
-          <Badge
-            variant="outline"
-            className="mb-3 border-border text-xs font-mono"
-          >
-            {unit.standard_code}
-          </Badge>
           <div className="mb-4 flex flex-wrap gap-1.5">
             {unit.concepts.slice(0, 4).map((concept) => (
               <span
