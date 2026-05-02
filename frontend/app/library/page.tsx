@@ -15,6 +15,7 @@ import {
   type UnitDTO,
 } from "@/lib/client";
 import { AdSlot } from "@/components/AdSlot";
+import { UNIT_SHEETS, getUnitSheets } from "@/lib/sheets";
 
 function gradeLabel(g: number): string {
   if (g <= 6) return `초${g}`;
@@ -42,8 +43,16 @@ function LibraryContent() {
       .finally(() => setLoading(false));
   }, [grade, subject]);
 
-  const available = units.filter((u) => u.available);
-  const upcoming = units.filter((u) => !u.available);
+  // 드릴 모드: UNIT_SHEETS에 드릴 양식 1+ 단원 표시
+  // 종합 모드: seed.json에 콘텐츠 있는 단원 (unit.available)
+  const hasDrill = (uid: string) =>
+    getUnitSheets(uid).some((s) => s.type !== "comprehensive");
+  const available = units.filter((u) =>
+    mode === "drill" ? hasDrill(u.id) : u.available
+  );
+  const upcoming = units.filter((u) =>
+    mode === "drill" ? !hasDrill(u.id) : !u.available
+  );
   const left = Math.max(0, FREE_UNIT_LIMIT - played.length);
 
   return (

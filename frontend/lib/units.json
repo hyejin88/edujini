@@ -198,5 +198,338 @@
       "다의어",
       "문맥 추론"
     ]
+  },
+  {
+    "id": "math-1-1-3",
+    "grade": 1,
+    "semester": 1,
+    "unit_no": 3,
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "한 자리 수의 덧셈·뺄셈",
+    "standard_code": "[2수01-04]",
+    "standard_text": "한 자리 수의 덧셈과 뺄셈을 이해하고 계산할 수 있다.",
+    "concepts": [
+      "한 자리 덧셈",
+      "한 자리 뺄셈",
+      "합과 차"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-1-2-2",
+    "grade": 1,
+    "semester": 2,
+    "unit_no": 2,
+    "unit_name": "덧셈과 뺄셈 (1)",
+    "sub_unit": "받아올림 없는 두 자리 + 한 자리",
+    "standard_code": "[2수01-05]",
+    "standard_text": "받아올림이 없는 (두 자리 수) + (한 자리 수) 계산.",
+    "concepts": [
+      "두 자리 덧셈",
+      "받아올림 없음"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-1-2-4",
+    "grade": 1,
+    "semester": 2,
+    "unit_no": 4,
+    "unit_name": "덧셈과 뺄셈 (2)",
+    "sub_unit": "받아내림 없는 두 자리 - 한 자리",
+    "standard_code": "[2수01-06]",
+    "standard_text": "받아내림이 없는 (두 자리 수) - (한 자리 수) 계산.",
+    "concepts": [
+      "두 자리 뺄셈",
+      "받아내림 없음"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-2-1-3",
+    "grade": 2,
+    "semester": 1,
+    "unit_no": 3,
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "standard_code": "[2수01-08]",
+    "standard_text": "두 자리 수의 덧셈과 뺄셈을 이해하고 받아올림·받아내림을 다룬다.",
+    "concepts": [
+      "받아올림",
+      "받아내림",
+      "두 자리 덧뺄셈"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-2-1-6",
+    "grade": 2,
+    "semester": 1,
+    "unit_no": 6,
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "standard_code": "[2수01-09]",
+    "standard_text": "곱셈의 의미를 이해하고 (한 자리)×(한 자리)를 계산한다.",
+    "concepts": [
+      "곱셈 의미",
+      "묶어 세기",
+      "배"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-2-2-2",
+    "grade": 2,
+    "semester": 2,
+    "unit_no": 2,
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "standard_code": "[2수01-10]",
+    "standard_text": "곱셈구구를 이해하고 외워서 활용한다.",
+    "concepts": [
+      "2단",
+      "3단",
+      "9단까지",
+      "곱셈구구"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-3-2-4",
+    "grade": 3,
+    "semester": 2,
+    "unit_no": 4,
+    "unit_name": "분수",
+    "sub_unit": "진분수·가분수·대분수",
+    "standard_code": "[4수01-11]",
+    "standard_text": "진분수·가분수·대분수를 이해하고 서로 변환한다.",
+    "concepts": [
+      "진분수",
+      "가분수",
+      "대분수",
+      "분수의 변환"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-4-1-3",
+    "grade": 4,
+    "semester": 1,
+    "unit_no": 3,
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "standard_code": "[4수01-13]",
+    "standard_text": "큰 수의 곱셈·나눗셈 계산 원리를 이해한다.",
+    "concepts": [
+      "세 자리 곱셈",
+      "세 자리 나눗셈",
+      "나머지"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-4-2-1",
+    "grade": 4,
+    "semester": 2,
+    "unit_no": 1,
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "standard_code": "[4수01-15]",
+    "standard_text": "분모가 같은 분수의 덧셈·뺄셈.",
+    "concepts": [
+      "진분수 덧셈",
+      "대분수 뺄셈",
+      "받아내림"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-4-2-3",
+    "grade": 4,
+    "semester": 2,
+    "unit_no": 3,
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "standard_code": "[4수01-17]",
+    "standard_text": "소수의 덧셈·뺄셈 원리를 이해한다.",
+    "concepts": [
+      "소수 자릿값",
+      "소수 덧뺄셈"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-5-1-1",
+    "grade": 5,
+    "semester": 1,
+    "unit_no": 1,
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "standard_code": "[6수01-01]",
+    "standard_text": "덧셈·뺄셈·곱셈·나눗셈 혼합 계산의 순서를 이해한다.",
+    "concepts": [
+      "연산 순서",
+      "괄호",
+      "혼합 계산"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-5-1-2",
+    "grade": 5,
+    "semester": 1,
+    "unit_no": 2,
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "standard_code": "[6수01-02]",
+    "standard_text": "약수와 배수를 이해하고 활용한다.",
+    "concepts": [
+      "약수",
+      "배수",
+      "공약수",
+      "공배수",
+      "최대공약수",
+      "최소공배수"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-5-1-5",
+    "grade": 5,
+    "semester": 1,
+    "unit_no": 5,
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "standard_code": "[6수01-05]",
+    "standard_text": "분모가 다른 분수의 덧셈·뺄셈.",
+    "concepts": [
+      "통분",
+      "약분",
+      "분수 덧뺄셈"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-5-2-2",
+    "grade": 5,
+    "semester": 2,
+    "unit_no": 2,
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "standard_code": "[6수01-06]",
+    "standard_text": "분수의 곱셈을 계산하고 약분한다.",
+    "concepts": [
+      "분수 곱셈",
+      "약분",
+      "대분수 곱셈"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-5-2-4",
+    "grade": 5,
+    "semester": 2,
+    "unit_no": 4,
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "standard_code": "[6수01-08]",
+    "standard_text": "소수의 곱셈 원리를 이해하고 계산한다.",
+    "concepts": [
+      "소수 곱셈",
+      "소수점 위치"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-6-1-1",
+    "grade": 6,
+    "semester": 1,
+    "unit_no": 1,
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "standard_code": "[6수01-09]",
+    "standard_text": "분수의 나눗셈을 계산한다.",
+    "concepts": [
+      "분수 나눗셈",
+      "역수"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-6-1-3",
+    "grade": 6,
+    "semester": 1,
+    "unit_no": 3,
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "standard_code": "[6수01-10]",
+    "standard_text": "소수의 나눗셈 원리를 이해한다.",
+    "concepts": [
+      "소수 나눗셈",
+      "소수점 자리 옮기기"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-6-1-4",
+    "grade": 6,
+    "semester": 1,
+    "unit_no": 4,
+    "unit_name": "비와 비율",
+    "sub_unit": "비·비율·백분율",
+    "standard_code": "[6수02-09]",
+    "standard_text": "비와 비율의 의미를 이해하고 계산한다.",
+    "concepts": [
+      "비",
+      "비율",
+      "백분율"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-6-2-1",
+    "grade": 6,
+    "semester": 2,
+    "unit_no": 1,
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "분수 ÷ 분수",
+    "standard_code": "[6수01-11]",
+    "standard_text": "분수의 나눗셈을 모든 형태로 계산한다.",
+    "concepts": [
+      "분수 나눗셈",
+      "역수 곱셈"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-6-2-3",
+    "grade": 6,
+    "semester": 2,
+    "unit_no": 3,
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 소수",
+    "standard_code": "[6수01-12]",
+    "standard_text": "소수와 소수의 나눗셈을 계산한다.",
+    "concepts": [
+      "소수 나눗셈",
+      "나머지 처리"
+    ],
+    "subject": "수학"
+  },
+  {
+    "id": "math-6-2-4",
+    "grade": 6,
+    "semester": 2,
+    "unit_no": 4,
+    "unit_name": "비례식과 비례배분",
+    "sub_unit": "비례식 풀이·비례배분",
+    "standard_code": "[6수02-10]",
+    "standard_text": "비례식과 비례배분을 활용한다.",
+    "concepts": [
+      "비례식",
+      "비례배분",
+      "외항·내항"
+    ],
+    "subject": "수학"
   }
 ]

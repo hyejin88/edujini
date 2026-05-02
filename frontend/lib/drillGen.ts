@@ -6,9 +6,10 @@ import type { SheetMeta } from "./sheets";
 export interface DrillProblem {
   index: number; // 1부터 시작
   is_example: boolean; // true = 정답 시범
-  op: "+" | "-";
+  op: "+" | "-" | "×" | "÷";
   operands: number[];
-  answer: number;
+  answer: number; // 나눗셈은 몫
+  remainder?: number; // 나눗셈 나머지 (0 또는 양수)
   // 시각용
   digits: [number, number];
   carry?: "none" | "once" | "any";
@@ -71,33 +72,94 @@ function hasBorrow(a: number, b: number): boolean {
   return false;
 }
 
+function opForType(type: SheetMeta["type"]): "+" | "-" | "×" | "÷" {
+  switch (type) {
+    case "drill_h_sub":
+    case "drill_v_sub":
+      return "-";
+    case "drill_h_mul":
+    case "drill_v_mul":
+      return "×";
+    case "drill_h_div":
+      return "÷";
+    default:
+      return "+";
+  }
+}
+
 export function generateDrill(sheet: SheetMeta): DrillProblem[] {
   const seed = hashCode(`${sheet.unit_id}::${sheet.id}::${todayKey()}`);
   const rng = mulberry32(seed);
   const [d1, d2] = sheet.digits || [3, 3];
-  const op: "+" | "-" =
-    sheet.type === "drill_h_sub" || sheet.type === "drill_v_sub" ? "-" : "+";
+  const op = opForType(sheet.type);
 
   const list: DrillProblem[] = [];
   let attempts = 0;
-  while (list.length < sheet.problem_count && attempts < sheet.problem_count * 50) {
-    attempts++;
-    const a = range(rng, digitMin(d1), digitMax(d1));
-    const b = range(rng, digitMin(d2), digitMax(d2));
-    if (op === "-" && a < b) continue; // 음수 방지
+  const maxAttempts = sheet.problem_count * 100;
 
-    // carry 조건 검사
-    if (sheet.carry === "none") {
-      if (op === "+" && hasCarry(a, b)) continue;
-      if (op === "-" && hasBorrow(a, b)) continue;
-    } else if (sheet.carry === "once") {
-      if (op === "+" && !hasCarry(a, b)) continue;
-      if (op === "-" && !hasBorrow(a, b)) continue;
-    } else if (sheet.carry === "any") {
-      // 50% 비율로 carry/no-carry 섞기 — 단조 회피
-      const want = list.length % 2 === 0;
-      if (op === "+" && hasCarry(a, b) !== want && list.length < sheet.problem_count - 4) continue;
-      if (op === "-" && hasBorrow(a, b) !== want && list.length < sheet.problem_count - 4) continue;
+  while (list.length < sheet.problem_count && attempts < maxAttempts) {
+    attempts++;
+
+    // 곱셈 두 번째 피연산자가 1이면 시시함 → 2 이상 강제 (한 자리는 2~9)
+    let a = range(rng, digitMin(d1), digitMax(d1));
+    let b = range(rng, digitMin(d2), digitMax(d2));
+
+    if (op === "×") {
+      if (d1 === 1) a = range(rng, 2, 9);
+      if (d2 === 1) b = range(rng, 2, 9);
+    }
+
+    // 음수 방지
+    if (op === "-" && a < b) [a, b] = [b, a];
+
+    // 나눗셈은 b > 0 이고 a >= b 보장
+    if (op === "÷") {
+      if (b === 0) continue;
+      // 나머지 정책: carry === "once" 면 나머지 있음, else 나머지 없음
+      const wantRemainder = sheet.carry === "once";
+      if (!wantRemainder) {
+        // 나머지 없도록 a를 b의 배수로 조정
+        const quotient = range(rng, 2, Math.min(9, Math.floor(digitMax(d1) / Math.max(1, b))));
+        a = b * quotient;
+      } else {
+        // 나머지 있도록: a = b*q + r (0 < r < b)
+        const quotient = range(rng, 1, Math.min(9, Math.floor(digitMax(d1) / Math.max(1, b))));
+        const r = range(rng, 1, Math.max(1, b - 1));
+        a = b * quotient + r;
+      }
+    }
+
+    // 가산·감산 carry/borrow 정책
+    if (op === "+" || op === "-") {
+      if (sheet.carry === "none") {
+        if (op === "+" && hasCarry(a, b)) continue;
+        if (op === "-" && hasBorrow(a, b)) continue;
+      } else if (sheet.carry === "once") {
+        if (op === "+" && !hasCarry(a, b)) continue;
+        if (op === "-" && !hasBorrow(a, b)) continue;
+      } else if (sheet.carry === "any") {
+        const want = list.length % 2 === 0;
+        if (op === "+" && hasCarry(a, b) !== want && list.length < sheet.problem_count - 4) continue;
+        if (op === "-" && hasBorrow(a, b) !== want && list.length < sheet.problem_count - 4) continue;
+      }
+    }
+
+    let answer: number;
+    let remainder: number | undefined;
+    switch (op) {
+      case "+":
+        answer = a + b;
+        break;
+      case "-":
+        answer = a - b;
+        break;
+      case "×":
+        answer = a * b;
+        break;
+      case "÷":
+        answer = Math.floor(a / b);
+        remainder = a % b;
+        break;
     }
 
     list.push({
@@ -105,7 +167,8 @@ export function generateDrill(sheet: SheetMeta): DrillProblem[] {
       is_example: list.length === 0,
       op,
       operands: [a, b],
-      answer: op === "+" ? a + b : a - b,
+      answer,
+      remainder,
       digits: [d1, d2],
       carry: sheet.carry,
     });

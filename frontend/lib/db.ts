@@ -39,8 +39,8 @@ export interface SeedUnit {
   concepts: string[];
 }
 
-// Phase 1.5 — 단원 화이트리스트.
-// v3 보강 완료된 단원만 게시. 자동 보강 스크립트가 단원 추가 시 함께 갱신.
+// 종합 학습지 화이트리스트 — v3 seed.json에 콘텐츠가 있는 단원만 게시.
+// 드릴(연산 문제지)은 클라이언트 자동 생성이라 이 리스트와 무관.
 const PUBLISHED_UNITS = new Set<string>([
   "math-3-1-1", // 덧셈과 뺄셈
   "math-3-1-2", // 평면도형

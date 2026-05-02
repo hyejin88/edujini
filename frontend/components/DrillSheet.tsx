@@ -20,7 +20,10 @@ export function DrillSheet({
   onChange: (idx: number, value: string) => void;
 }) {
   const isHorizontal =
-    sheet.type === "drill_h_add" || sheet.type === "drill_h_sub";
+    sheet.type === "drill_h_add" ||
+    sheet.type === "drill_h_sub" ||
+    sheet.type === "drill_h_mul" ||
+    sheet.type === "drill_h_div";
 
   return (
     <div className="grid grid-cols-2 gap-x-8 gap-y-5 print:grid-cols-2">
