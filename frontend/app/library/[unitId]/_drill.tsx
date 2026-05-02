@@ -280,21 +280,30 @@ export default function DrillSheetPage({
         className="mx-auto my-8 max-w-[210mm] bg-white shadow-lg print:my-0 print:max-w-none print:p-[16mm] print:shadow-none"
         style={{ padding: "16mm" }}
       >
-        {/* 헤더 */}
+        {/* 헤더 — 화면용 컬러 워드마크 + 인쇄용 흑백 캐릭터 */}
         <div className="mb-6">
-          <p className="mb-1 text-xs font-medium tracking-widest text-[#6b7280]">
-            EDUJINI WORKSHEET
-          </p>
-          <div className="flex items-end justify-between">
-            <h1 className="font-serif text-xl font-bold text-[#111827]">
-              {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(sheet.unit_id))} 수학`}{" "}
-              · {sheet.title}
-            </h1>
+          <div className="flex items-center justify-between">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-wordmark.png"
+              alt="EDU Jini"
+              className="h-6 w-auto print:hidden"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/character-mono.png"
+              alt="EDU Jini"
+              className="hidden h-10 w-auto print:block"
+            />
             <div className="hidden gap-6 text-xs text-[#6b7280] print:flex">
               <span>이름 ____________</span>
               <span>날짜 ___ / ___</span>
             </div>
           </div>
+          <h1 className="mt-3 font-serif text-xl font-bold text-[#111827]">
+            {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(sheet.unit_id))} 수학`}{" "}
+            · {sheet.title}
+          </h1>
           <div className="mt-2 mb-4 border-t border-[#111827]" />
           <p className="text-sm text-[#374151]">
             {drillInstruction(sheet)}

@@ -236,9 +236,25 @@ export default function ComprehensiveSheet({
         style={{ padding: "16mm" }}
       >
         <div className="mb-6">
-          <p className="mb-1 text-xs font-medium tracking-widest text-[#6b7280]">
-            EDUJINI WORKSHEET
-          </p>
+          {/* 화면용 컬러 워드마크 + 인쇄용 흑백 캐릭터 */}
+          <div className="mb-3 flex items-center justify-between">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-wordmark.png"
+              alt="EDU Jini"
+              className="h-6 w-auto print:hidden"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/character-mono.png"
+              alt="EDU Jini"
+              className="hidden h-10 w-auto print:block"
+            />
+            <div className="hidden gap-6 text-xs text-[#6b7280] print:flex">
+              <span>이름 ____________</span>
+              <span>날짜 ___ / ___</span>
+            </div>
+          </div>
           <h1 className="font-serif text-xl font-bold text-[#111827]">
             {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(unitId))} 수학`}{" "}
             · {unit?.unit_name || ""}
