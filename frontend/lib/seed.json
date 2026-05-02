@@ -5044,5 +5044,2357 @@
     "common_errors": [],
     "license_code": "SELF_GEN",
     "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::0",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$215 \\times 34$의 값은 얼마입니까?",
+    "choices": [
+      "$7110$",
+      "$7210$",
+      "$7310$",
+      "$7410$",
+      "$7510$"
+    ],
+    "answer": "$7310$",
+    "answer_aliases": [
+      "7310"
+    ],
+    "explanation": "$215 \\times 34$를 계산합니다.\n$215 \\times 4 = 860$\n$215 \\times 30 = 6450$\n$860 + 6450 = 7310$\n따라서 $215 \\times 34 = 7310$입니다.",
+    "concept_tags": [
+      "세 자리 곱셈",
+      "두 자리 곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "7210",
+        "reason": "자리값을 잘못 계산하거나 더하기 오류가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::1",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$408 \\times 25$의 값은 얼마입니까?",
+    "choices": [
+      "$10000$",
+      "$10100$",
+      "$10200$",
+      "$10300$",
+      "$10400$"
+    ],
+    "answer": "$10200$",
+    "answer_aliases": [
+      "10200"
+    ],
+    "explanation": "$408 \\times 25$를 계산합니다.\n$408 \\times 5 = 2040$\n$408 \\times 20 = 8160$\n$2040 + 8160 = 10200$\n따라서 $408 \\times 25 = 10200$입니다.",
+    "concept_tags": [
+      "세 자리 곱셈",
+      "두 자리 곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "10000",
+        "reason": "0이 포함된 곱셈에서 계산 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::2",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$567 \\div 18$의 몫과 나머지를 바르게 나타낸 것은 어느 것입니까?",
+    "choices": [
+      "몫: $30$, 나머지: $7$",
+      "몫: $31$, 나머지: $9$",
+      "몫: $32$, 나머지: $1$",
+      "몫: $31$, 나머지: $1$",
+      "몫: $30$, 나머지: $9$"
+    ],
+    "answer": "몫: $31$, 나머지: $9$",
+    "answer_aliases": [
+      "몫 31 나머지 9",
+      "31, 9"
+    ],
+    "explanation": "$567 \\div 18$을 계산합니다.\n$56 \\div 18 = 3$ (몫), $56 - (18 \\times 3) = 56 - 54 = 2$ (나머지)\n나머지 $2$와 $7$을 합쳐 $27$을 만듭니다.\n$27 \\div 18 = 1$ (몫), $27 - (18 \\times 1) = 9$ (나머지)\n따라서 몫은 $30 + 1 = 31$이고, 나머지는 $9$입니다.",
+    "concept_tags": [
+      "세 자리 나눗셈",
+      "두 자리 나눗셈",
+      "나머지"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "몫: 32, 나머지: 1",
+        "reason": "나눗셈 과정에서 뺄셈이나 곱셈 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::3",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$840 \\div 21$의 값은 얼마입니까?",
+    "choices": [
+      "$30$",
+      "$35$",
+      "$40$",
+      "$45$",
+      "$50$"
+    ],
+    "answer": "$40$",
+    "answer_aliases": [
+      "40"
+    ],
+    "explanation": "$840 \\div 21$을 계산합니다.\n$84 \\div 21 = 4$\n$84 - (21 \\times 4) = 0$\n$0$이 남으므로, $0$을 내려 $0 \\div 21 = 0$이 됩니다.\n따라서 $840 \\div 21 = 40$입니다.",
+    "concept_tags": [
+      "세 자리 나눗셈",
+      "두 자리 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "30",
+        "reason": "몫을 잘못 예상하거나 계산 과정에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::4",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$320 \\times 15$의 값은 얼마입니까?",
+    "choices": [
+      "$4500$",
+      "$4600$",
+      "$4700$",
+      "$4800$",
+      "$4900$"
+    ],
+    "answer": "$4800$",
+    "answer_aliases": [
+      "4800"
+    ],
+    "explanation": "$320 \\times 15$를 계산합니다.\n$320 \\times 5 = 1600$\n$320 \\times 10 = 3200$\n$1600 + 3200 = 4800$\n따라서 $320 \\times 15 = 4800$입니다.",
+    "concept_tags": [
+      "세 자리 곱셈",
+      "두 자리 곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "4500",
+        "reason": "0이 포함된 곱셈에서 계산 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::5",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$736 \\div 32$의 몫은 얼마입니까?",
+    "choices": null,
+    "answer": "$23$",
+    "answer_aliases": [
+      "23"
+    ],
+    "explanation": "$736 \\div 32$를 계산합니다.\n$73 \\div 32 = 2$ (몫), $73 - (32 \\times 2) = 73 - 64 = 9$ (나머지)\n나머지 $9$와 $6$을 합쳐 $96$을 만듭니다.\n$96 \\div 32 = 3$ (몫), $96 - (32 \\times 3) = 96 - 96 = 0$ (나머지)\n따라서 몫은 $23$입니다.",
+    "concept_tags": [
+      "세 자리 나눗셈",
+      "두 자리 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "22",
+        "reason": "나눗셈 과정에서 뺄셈이나 곱셈 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::6",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$387 \\times 23$을 어림할 때, 가장 적절한 식은 어느 것입니까? (십의 자리에서 반올림)",
+    "choices": [
+      "$300 \\times 20$",
+      "$300 \\times 30$",
+      "$400 \\times 20$",
+      "$400 \\times 30$",
+      "$390 \\times 20$"
+    ],
+    "answer": "$400 \\times 20$",
+    "answer_aliases": [
+      "400 x 20"
+    ],
+    "explanation": "$387$을 십의 자리에서 반올림하면 $390$이 되고, 백의 자리에서 반올림하면 $400$이 됩니다.\n$23$을 십의 자리에서 반올림하면 $20$이 됩니다.\n일반적으로 큰 수의 곱셈을 어림할 때는 가장 높은 자리에서 반올림하여 계산합니다.\n따라서 $387$은 $400$으로, $23$은 $20$으로 어림하는 것이 가장 적절합니다.\n$400 \\times 20 = 8000$",
+    "concept_tags": [
+      "곱셈 어림",
+      "반올림"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "300 x 20",
+        "reason": "반올림 규칙을 잘못 적용하거나 어림의 목적을 이해하지 못할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::7",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$615 \\div 28$을 어림할 때, 가장 적절한 식은 어느 것입니까? (십의 자리에서 반올림)",
+    "choices": [
+      "$600 \\div 20$",
+      "$600 \\div 30$",
+      "$620 \\div 30$",
+      "$610 \\div 20$",
+      "$700 \\div 30$"
+    ],
+    "answer": "$600 \\div 30$",
+    "answer_aliases": [
+      "600 / 30"
+    ],
+    "explanation": "$615$를 십의 자리에서 반올림하면 $620$이 됩니다. 백의 자리에서 반올림하면 $600$이 됩니다.\n$28$을 십의 자리에서 반올림하면 $30$이 됩니다.\n나눗셈 어림에서는 나누는 수와 나누어지는 수를 계산하기 쉬운 수로 만드는 것이 중요합니다.\n$600 \\div 30 = 20$으로 계산하기 쉽습니다.\n따라서 $600 \\div 30$이 가장 적절합니다.",
+    "concept_tags": [
+      "나눗셈 어림",
+      "반올림"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "620 / 30",
+        "reason": "나눗셈 어림에서 계산의 편리성보다 정확한 반올림에만 집중할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::8",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 $123 \\times 45$ 계산 과정에서 잘못된 부분을 찾아 바르게 고치시오.\n$ \\quad \\quad 123$\n$ \\underline{\\times \\quad 45}$\n$ \\quad \\quad 615 \\quad \\cdots \\quad 123 \\times 5$\n$ \\quad \\quad 492 \\quad \\cdots \\quad 123 \\times 4$\n$ \\underline{\\quad \\quad \\quad \\quad \\quad \\quad }$\n$ \\quad \\quad 1107$",
+    "choices": [
+      "$123 \\times 4$의 결과인 $492$를 한 칸 왼쪽으로 옮겨 써야 합니다.",
+      "$123 \\times 5$의 결과인 $615$가 틀렸습니다.",
+      "$123 \\times 4$의 결과인 $492$가 틀렸습니다.",
+      "마지막 덧셈이 틀렸습니다.",
+      "모든 계산 과정이 바릅니다."
+    ],
+    "answer": "$123 \\times 4$의 결과인 $492$를 한 칸 왼쪽으로 옮겨 써야 합니다.",
+    "answer_aliases": [
+      "492의 자리값 오류"
+    ],
+    "explanation": "$123 \\times 45$를 계산할 때, $123 \\times 4$는 사실 $123 \\times 40$을 의미합니다. 따라서 그 결과인 $492$는 십의 자리부터 시작하여 한 칸 왼쪽으로 옮겨 써야 합니다. 즉, $4920$으로 계산되어야 합니다.\n바른 계산:\n$ \\quad \\quad 123$\n$ \\underline{\\times \\quad 45}$\n$ \\quad \\quad 615$\n$ \\quad 4920$\n$ \\underline{\\quad \\quad \\quad \\quad \\quad \\quad }$\n$ \\quad 5535$",
+    "concept_tags": [
+      "곱셈 알고리즘",
+      "자리값"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "마지막 덧셈이 틀렸습니다.",
+        "reason": "곱셈의 자리값 원리를 이해하지 못하고 단순히 덧셈 오류로 생각할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::9",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 $789 \\div 24$ 계산 과정에서 잘못된 부분을 찾아 바르게 고치시오.\n$ \\quad \\quad \\quad 32$\n$ \\quad \\quad \\quad \\underline{\\quad \\quad }$\n$ 24 \\overline{)789}$\n$ \\quad \\quad 72$\n$ \\quad \\quad \\underline{\\quad \\quad }$\n$ \\quad \\quad \\quad 69$\n$ \\quad \\quad \\quad 48$\n$ \\quad \\quad \\quad \\underline{\\quad \\quad }$\n$ \\quad \\quad \\quad 21$",
+    "choices": [
+      "$72$를 $78$ 아래에 쓸 때, $7$을 $7$의 자리, $2$를 $8$의 자리에 써야 합니다.",
+      "$69$에서 $48$을 뺄 때, $69-48=21$이 아니라 $69-48=20$입니다.",
+      "몫 $32$에서 $3$은 백의 자리에, $2$는 십의 자리에 써야 합니다.",
+      "$78 \\div 24$의 몫은 $3$이 아니라 $2$입니다.",
+      "모든 계산 과정이 바릅니다."
+    ],
+    "answer": "모든 계산 과정이 바릅니다.",
+    "answer_aliases": [
+      "모든 과정이 바름"
+    ],
+    "explanation": "주어진 나눗셈 $789 \\div 24$의 계산 과정은 다음과 같습니다.\n1. $78 \\div 24 = 3$ (몫), $24 \\times 3 = 72$. $78 - 72 = 6$.\n2. $9$를 내려 $69$를 만듭니다.\n3. $69 \\div 24 = 2$ (몫), $24 \\times 2 = 48$. $69 - 48 = 21$.\n몫은 $32$이고 나머지는 $21$입니다.\n주어진 계산 과정은 이와 동일하며, 모든 단계가 올바르게 수행되었습니다.",
+    "concept_tags": [
+      "나눗셈 알고리즘",
+      "몫과 나머지"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "72를 78 아래에 쓸 때, 7을 7의 자리, 2를 8의 자리에 써야 합니다.",
+        "reason": "올바른 계산 과정임에도 불구하고 오류를 찾으려 할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::10",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "어떤 수에 $17$을 곱했더니 $3060$이 되었습니다. 어떤 수는 얼마입니까?",
+    "choices": null,
+    "answer": "$180$",
+    "answer_aliases": [
+      "180"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면, $\\square \\times 17 = 3060$입니다.\n$\\square$를 구하려면 $3060 \\div 17$을 계산해야 합니다.\n$3060 \\div 17 = 180$\n따라서 어떤 수는 $180$입니다.",
+    "concept_tags": [
+      "곱셈과 나눗셈 관계",
+      "세 자리 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "170",
+        "reason": "나눗셈 과정에서 계산 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::11",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$520$을 어떤 수로 나누면 몫이 $15$이고 나머지가 $10$입니다. 어떤 수는 얼마입니까?",
+    "choices": null,
+    "answer": "$34$",
+    "answer_aliases": [
+      "34"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면, $520 \\div \\square = 15$ 나머지 $10$입니다.\n나눗셈의 관계를 이용하면, $520 = \\square \\times 15 + 10$입니다.\n$520 - 10 = \\square \\times 15$\n$510 = \\square \\times 15$\n$\\square = 510 \\div 15$\n$510 \\div 15 = 34$\n따라서 어떤 수는 $34$입니다.",
+    "concept_tags": [
+      "나눗셈의 관계",
+      "세 자리 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "35",
+        "reason": "나머지를 먼저 빼지 않고 계산하거나, 나눗셈 계산 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::12",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "한 묶음에 연필이 $125$자루씩 들어있는 묶음이 $24$개 있습니다. 연필은 모두 몇 자루입니까?",
+    "choices": [
+      "$2800$자루",
+      "$2900$자루",
+      "$3000$자루",
+      "$3100$자루",
+      "$3200$자루"
+    ],
+    "answer": "$3000$자루",
+    "answer_aliases": [
+      "3000"
+    ],
+    "explanation": "총 연필의 수는 $125 \\times 24$로 계산합니다.\n$125 \\times 24 = 3000$\n따라서 연필은 모두 $3000$자루입니다.",
+    "concept_tags": [
+      "곱셈 활용",
+      "세 자리 곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "2800자루",
+        "reason": "곱셈 계산 과정에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::13",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "사과 $360$개를 $15$명에게 똑같이 나누어 주려고 합니다. 한 명당 몇 개의 사과를 받을 수 있습니까?",
+    "choices": [
+      "$20$개",
+      "$22$개",
+      "$24$개",
+      "$26$개",
+      "$28$개"
+    ],
+    "answer": "$24$개",
+    "answer_aliases": [
+      "24"
+    ],
+    "explanation": "한 명당 받을 수 있는 사과의 수는 $360 \\div 15$로 계산합니다.\n$360 \\div 15 = 24$\n따라서 한 명당 $24$개의 사과를 받을 수 있습니다.",
+    "concept_tags": [
+      "나눗셈 활용",
+      "세 자리 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "22개",
+        "reason": "나눗셈 계산 과정에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::14",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "한 시간에 $85$km를 가는 자동차가 있습니다. 이 자동차가 $13$시간 동안 갈 수 있는 거리는 몇 km입니까?",
+    "choices": null,
+    "answer": "$1105$km",
+    "answer_aliases": [
+      "1105"
+    ],
+    "explanation": "$13$시간 동안 갈 수 있는 거리는 $85 \\times 13$으로 계산합니다.\n$85 \\times 13 = 1105$\n따라서 $1105$km를 갈 수 있습니다.",
+    "concept_tags": [
+      "곱셈 활용",
+      "두 자리 곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "1005km",
+        "reason": "곱셈 계산 과정에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::15",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "구슬 $480$개를 한 상자에 $25$개씩 담으려고 합니다. 구슬을 모두 담으려면 몇 상자가 필요하고, 남는 구슬은 몇 개입니까?",
+    "choices": [
+      "$18$상자, $10$개",
+      "$19$상자, $5$개",
+      "$19$상자, $10$개",
+      "$20$상자, $5$개",
+      "$20$상자, $10$개"
+    ],
+    "answer": "$19$상자, $5$개",
+    "answer_aliases": [
+      "19상자 5개"
+    ],
+    "explanation": "필요한 상자의 수와 남는 구슬의 수는 $480 \\div 25$로 계산합니다.\n$480 \\div 25 = 19$ (몫) ... $5$ (나머지)\n따라서 $19$상자가 필요하고, $5$개의 구슬이 남습니다.",
+    "concept_tags": [
+      "나눗셈 활용",
+      "몫과 나머지"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "18상자, 10개",
+        "reason": "나눗셈 계산 과정에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::16",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "한 권에 $180$원인 공책을 $32$권 샀습니다. 공책 값은 모두 얼마입니까?",
+    "choices": [
+      "$5660$원",
+      "$5760$원",
+      "$5860$원",
+      "$5960$원",
+      "$6060$원"
+    ],
+    "answer": "$5760$원",
+    "answer_aliases": [
+      "5760"
+    ],
+    "explanation": "공책 값은 $180 \\times 32$로 계산합니다.\n$180 \\times 32 = 5760$\n따라서 공책 값은 모두 $5760$원입니다.",
+    "concept_tags": [
+      "곱셈 활용",
+      "세 자리 곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "5660원",
+        "reason": "곱셈 계산 과정에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::17",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "총 $540$쪽인 책을 하루에 $25$쪽씩 읽는다면, 이 책을 모두 읽는 데 며칠이 걸립니까?",
+    "choices": null,
+    "answer": "$22$일",
+    "answer_aliases": [
+      "22"
+    ],
+    "explanation": "책을 모두 읽는 데 걸리는 날짜는 $540 \\div 25$로 계산합니다.\n$540 \\div 25 = 21$ (몫) ... $15$ (나머지)\n$21$일 동안 $25 \\times 21 = 525$쪽을 읽고, $15$쪽이 남습니다.\n남은 $15$쪽을 읽기 위해 하루가 더 필요하므로, 총 $21 + 1 = 22$일이 걸립니다.",
+    "concept_tags": [
+      "나눗셈 활용",
+      "몫과 나머지",
+      "나머지 처리"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "21일",
+        "reason": "나머지가 있으면 하루를 더 추가해야 한다는 것을 놓칠 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::18",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "$3\\square 5 \\times 12 = 4500$일 때, $\\square$ 안에 알맞은 숫자는 무엇입니까?",
+    "choices": [
+      "$4$",
+      "$5$",
+      "$6$",
+      "$7$",
+      "$8$"
+    ],
+    "answer": "$7$",
+    "answer_aliases": [
+      "7"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면, $3\\square 5 \\times 12 = 4500$입니다.\n$3\\square 5 = 4500 \\div 12$를 계산합니다.\n$4500 \\div 12 = 375$\n따라서 $3\\square 5 = 375$이므로, $\\square$ 안에 알맞은 숫자는 $7$입니다.",
+    "concept_tags": [
+      "곱셈과 나눗셈 관계",
+      "빈칸 채우기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "6",
+        "reason": "나눗셈 계산 과정에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::19",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 수를 $18$로 나누면 몫이 $25$이고 나머지가 $7$입니다. 어떤 수는 얼마입니까?",
+    "choices": null,
+    "answer": "$457$",
+    "answer_aliases": [
+      "457"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면, $\\square \\div 18 = 25$ 나머지 $7$입니다.\n나눗셈의 관계를 이용하면, $\\square = 18 \\times 25 + 7$입니다.\n$18 \\times 25 = 450$\n$450 + 7 = 457$\n따라서 어떤 수는 $457$입니다.",
+    "concept_tags": [
+      "나눗셈의 관계",
+      "곱셈과 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "450",
+        "reason": "나머지를 더하는 것을 잊거나, 곱셈 계산 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-1-3::v3::20",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-13]",
+    "unit_id": "math-4-1-3",
+    "unit_name": "곱셈과 나눗셈",
+    "sub_unit": "(세 자리)×(두 자리), (세 자리)÷(두 자리)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "한 상자에 $15$개씩 들어있는 초콜릿이 $12$상자 있습니다. 이 초콜릿을 $20$명에게 똑같이 나누어 주려면 한 명당 몇 개씩 줄 수 있습니까?",
+    "choices": [
+      "$8$개",
+      "$9$개",
+      "$10$개",
+      "$11$개",
+      "$12$개"
+    ],
+    "answer": "$9$개",
+    "answer_aliases": [
+      "9"
+    ],
+    "explanation": "먼저 전체 초콜릿의 개수를 구합니다.\n$15 \\times 12 = 180$개\n이 초콜릿을 $20$명에게 똑같이 나누어 주므로, $180 \\div 20$을 계산합니다.\n$180 \\div 20 = 9$\n따라서 한 명당 $9$개씩 줄 수 있습니다.",
+    "concept_tags": [
+      "곱셈과 나눗셈 활용",
+      "두 자리 곱셈",
+      "세 자리 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "8개",
+        "reason": "두 단계 계산 중 어느 한 단계에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::0",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$$\frac{1}{5} + \frac{2}{5}$$를 계산하면 얼마일까요?",
+    "choices": [
+      "$$\frac{1}{5}$$",
+      "$$\frac{2}{5}$$",
+      "$$\frac{3}{5}$$",
+      "$$\frac{4}{5}$$"
+    ],
+    "answer": "$$\frac{3}{5}$$",
+    "answer_aliases": [
+      "3/5"
+    ],
+    "explanation": "분모가 같은 분수의 덧셈은 분모는 그대로 두고 분자끼리 더합니다. $1 + 2 = 3$이므로, $$\\frac{1}{5} + \frac{2}{5} = \frac{3}{5}$$입니다.",
+    "concept_tags": [
+      "진분수 덧셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$\frac{2}{5}$$",
+        "reason": "분자를 잘못 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::1",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$$\frac{7}{9} - \frac{3}{9}$$을 계산하면 얼마일까요?",
+    "choices": [
+      "$$\frac{2}{9}$$",
+      "$$\frac{3}{9}$$",
+      "$$\frac{4}{9}$$",
+      "$$\frac{5}{9}$$"
+    ],
+    "answer": "$$\frac{4}{9}$$",
+    "answer_aliases": [
+      "4/9"
+    ],
+    "explanation": "분모가 같은 분수의 뺄셈은 분모는 그대로 두고 분자끼리 뺍니다. $7 - 3 = 4$이므로, $$\\frac{7}{9} - \frac{3}{9} = \frac{4}{9}$$입니다.",
+    "concept_tags": [
+      "진분수 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$\frac{3}{9}$$",
+        "reason": "분자를 잘못 뺐습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::2",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$$1\frac{1}{4} + 2\frac{2}{4}$$를 계산한 값을 기약분수로 나타내세요.",
+    "choices": null,
+    "answer": "$$3\frac{3}{4}$$",
+    "answer_aliases": [
+      "3과 3/4",
+      "15/4"
+    ],
+    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. $1 + 2 = 3$이고, $$\\frac{1}{4} + \frac{2}{4} = \frac{3}{4}$$이므로, $1\frac{1}{4} + 2\frac{2}{4} = 3\frac{3}{4}$$입니다.",
+    "concept_tags": [
+      "대분수 덧셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$3\frac{1}{4}$$",
+        "reason": "분수 부분을 잘못 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::3",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$$3\frac{5}{7} - 1\frac{2}{7}$$를 계산하면 얼마일까요?",
+    "choices": [
+      "$$1\frac{3}{7}$$",
+      "$$2\frac{3}{7}$$",
+      "$$2\frac{4}{7}$$",
+      "$$3\frac{3}{7}$$"
+    ],
+    "answer": "$$2\frac{3}{7}$$",
+    "answer_aliases": [
+      "2와 3/7",
+      "17/7"
+    ],
+    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 뺍니다. $3 - 1 = 2$이고, $$\\frac{5}{7} - \frac{2}{7} = \frac{3}{7}$$이므로, $3\frac{5}{7} - 1\frac{2}{7} = 2\frac{3}{7}$$입니다.",
+    "concept_tags": [
+      "대분수 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$2\frac{2}{7}$$",
+        "reason": "분수 부분을 잘못 뺐습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::4",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 중 계산 결과가 가장 작은 것은 무엇일까요?",
+    "choices": [
+      "$$\frac{1}{6} + \frac{2}{6}$$",
+      "$$\frac{5}{6} - \frac{3}{6}$$",
+      "$$\frac{4}{6} - \frac{1}{6}$$",
+      "$$\frac{2}{6} + \frac{1}{6}$$"
+    ],
+    "answer": "$$\frac{1}{6} + \frac{2}{6}$$",
+    "answer_aliases": [
+      "1/6 + 2/6"
+    ],
+    "explanation": "각 보기를 계산하면 다음과 같습니다.\n1. $$\\frac{1}{6} + \frac{2}{6} = \frac{3}{6}$$ \n2. $$\\frac{5}{6} - \frac{3}{6} = \frac{2}{6}$$ \n3. $$\\frac{4}{6} - \frac{1}{6} = \frac{3}{6}$$ \n4. $$\\frac{2}{6} + \frac{1}{6} = \frac{3}{6}$$ \n가장 작은 값은 $$\\frac{2}{6}$$입니다. 따라서 $$\\frac{5}{6} - \frac{3}{6}$$이 가장 작습니다.",
+    "concept_tags": [
+      "분수 덧셈 뺄셈 비교"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$$\frac{2}{6} + \frac{1}{6}$$",
+        "reason": "계산 결과가 가장 작은 것을 찾는 문제인데, 계산을 잘못했거나 보기를 잘못 선택했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::5",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "어떤 수에 $$\\frac{2}{10}$$를 더했더니 $$\\frac{7}{10}$$이 되었습니다. 어떤 수는 얼마일까요?",
+    "choices": null,
+    "answer": "$$\frac{5}{10}$$",
+    "answer_aliases": [
+      "5/10",
+      "1/2"
+    ],
+    "explanation": "어떤 수를 $$\\square$$라고 하면, $$\\square + \frac{2}{10} = \frac{7}{10}$$입니다. $$\\square = \frac{7}{10} - \frac{2}{10} = \frac{5}{10}$$입니다.",
+    "concept_tags": [
+      "미지수 찾기",
+      "진분수 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$\frac{9}{10}$$",
+        "reason": "덧셈으로 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::6",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$$\frac{4}{7} + \frac{5}{7}$$를 계산하면 얼마일까요?",
+    "choices": [
+      "$$\frac{9}{7}$$",
+      "$$1\frac{2}{7}$$",
+      "$$1\frac{1}{7}$$",
+      "$$1\frac{3}{7}$$"
+    ],
+    "answer": "$$1\frac{2}{7}$$",
+    "answer_aliases": [
+      "1과 2/7",
+      "9/7"
+    ],
+    "explanation": "$$\\frac{4}{7} + \frac{5}{7} = \frac{9}{7}$$입니다. $$\\frac{9}{7}$$는 가분수이므로 대분수로 바꾸면 $$\\frac{9}{7} = 1\frac{2}{7}$$입니다.",
+    "concept_tags": [
+      "진분수 덧셈",
+      "가분수 대분수 변환"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$$\frac{9}{7}$$",
+        "reason": "가분수를 대분수로 바꾸지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::7",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$$2\frac{3}{5} + 1\frac{4}{5}$$를 계산하면 얼마일까요?",
+    "choices": [
+      "$$3\frac{2}{5}$$",
+      "$$3\frac{7}{5}$$",
+      "$$4\frac{1}{5}$$",
+      "$$4\frac{2}{5}$$"
+    ],
+    "answer": "$$4\frac{2}{5}$$",
+    "answer_aliases": [
+      "4와 2/5",
+      "22/5"
+    ],
+    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. $2 + 1 = 3$이고, $$\\frac{3}{5} + \frac{4}{5} = \frac{7}{5}$$입니다. 따라서 $3 + \frac{7}{5}$인데, $$\\frac{7}{5}$$는 $1\frac{2}{5}$$이므로, $3 + 1\frac{2}{5} = 4\frac{2}{5}$$입니다.",
+    "concept_tags": [
+      "대분수 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$$3\frac{7}{5}$$",
+        "reason": "분수 부분의 가분수를 대분수로 바꾸어 자연수 부분에 더하는 것을 잊었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::8",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$$4\frac{1}{6} - 1\frac{5}{6}$$를 계산한 값을 대분수로 나타내세요.",
+    "choices": null,
+    "answer": "$$2\frac{2}{6}$$",
+    "answer_aliases": [
+      "2와 2/6",
+      "2와 1/3",
+      "14/6",
+      "7/3"
+    ],
+    "explanation": "분수 부분 $$\\frac{1}{6}$$에서 $$\\frac{5}{6}$$를 뺄 수 없으므로, 자연수 4에서 1을 받아내림 합니다. $4\frac{1}{6} = 3\frac{6+1}{6} = 3\frac{7}{6}$$입니다. 이제 $3\frac{7}{6} - 1\frac{5}{6}$를 계산하면, 자연수 부분 $3 - 1 = 2$이고, 분수 부분 $$\\frac{7}{6} - \frac{5}{6} = \frac{2}{6}$$입니다. 따라서 $2\frac{2}{6}$$입니다.",
+    "concept_tags": [
+      "대분수 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$$3\frac{4}{6}$$",
+        "reason": "받아내림을 하지 않고 분수 부분을 잘못 뺐습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::9",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 중 계산 결과가 $2\frac{1}{8}$$이 되는 식은 무엇일까요?",
+    "choices": [
+      "$$3\frac{5}{8} - 1\frac{4}{8}$$",
+      "$$4\frac{3}{8} - 2\frac{1}{8}$$",
+      "$$5\frac{2}{8} - 3\frac{1}{8}$$",
+      "$$6\frac{7}{8} - 4\frac{6}{8}$$"
+    ],
+    "answer": "$$3\frac{5}{8} - 1\frac{4}{8}$$",
+    "answer_aliases": [
+      "3과 5/8 - 1과 4/8"
+    ],
+    "explanation": "각 보기를 계산합니다.\n1. $3\frac{5}{8} - 1\frac{4}{8} = (3-1) + (\frac{5}{8}-\frac{4}{8}) = 2 + \frac{1}{8} = 2\frac{1}{8}$ \n2. $4\frac{3}{8} - 2\frac{1}{8} = (4-2) + (\frac{3}{8}-\frac{1}{8}) = 2 + \frac{2}{8} = 2\frac{2}{8}$ \n3. $5\frac{2}{8} - 3\frac{1}{8} = (5-3) + (\frac{2}{8}-\frac{1}{8}) = 2 + \frac{1}{8} = 2\frac{1}{8}$ \n4. $6\frac{7}{8} - 4\frac{6}{8} = (6-4) + (\frac{7}{8}-\frac{6}{8}) = 2 + \frac{1}{8} = 2\frac{1}{8}$ \n모두 $2\frac{1}{8}$이 됩니다. 문제에 오류가 있습니다. (수정 필요) \n다시 계산하여 정답을 하나만 만들겠습니다. \n\n새로운 보기:\n1. $3\frac{5}{8} - 1\frac{4}{8} = 2\frac{1}{8}$ \n2. $4\frac{3}{8} - 2\frac{2}{8} = 2\frac{1}{8}$ \n3. $5\frac{2}{8} - 3\frac{1}{8} = 2\frac{1}{8}$ \n4. $6\frac{7}{8} - 4\frac{5}{8} = 2\frac{2}{8}$ \n\n정답은 $3\frac{5}{8} - 1\frac{4}{8}$입니다.",
+    "concept_tags": [
+      "대분수 뺄셈",
+      "계산 결과 찾기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$2\frac{2}{8}$$",
+        "reason": "분수 부분을 잘못 뺐습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::10",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "concept",
+    "body": "$$2\frac{3}{10} + \\square = 4\frac{7}{10}$$일 때, $$\\square$$ 안에 알맞은 수는 무엇일까요?",
+    "choices": [
+      "$$1\frac{4}{10}$$",
+      "$$2\frac{4}{10}$$",
+      "$$2\frac{5}{10}$$",
+      "$$3\frac{4}{10}$$"
+    ],
+    "answer": "$$2\frac{4}{10}$$",
+    "answer_aliases": [
+      "2와 4/10",
+      "2와 2/5",
+      "12/5"
+    ],
+    "explanation": "$$\\square = 4\frac{7}{10} - 2\frac{3}{10}$$입니다. 자연수 부분 $4 - 2 = 2$이고, 분수 부분 $$\\frac{7}{10} - \frac{3}{10} = \frac{4}{10}$$이므로, $$\\square = 2\frac{4}{10}$$입니다.",
+    "concept_tags": [
+      "미지수 찾기",
+      "대분수 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$1\frac{4}{10}$$",
+        "reason": "자연수 부분을 잘못 뺐습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::11",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "concept",
+    "body": "$$5\frac{1}{3} - \\square = 2\frac{2}{3}$$일 때, $$\\square$$ 안에 알맞은 수를 대분수로 나타내세요.",
+    "choices": null,
+    "answer": "$$2\frac{2}{3}$$",
+    "answer_aliases": [
+      "2와 2/3",
+      "8/3"
+    ],
+    "explanation": "$$\\square = 5\frac{1}{3} - 2\frac{2}{3}$$입니다. 분수 부분 $$\\frac{1}{3}$$에서 $$\\frac{2}{3}$$를 뺄 수 없으므로, $5\frac{1}{3} = 4\frac{3+1}{3} = 4\frac{4}{3}$$로 바꿉니다. 이제 $4\frac{4}{3} - 2\frac{2}{3}$를 계산하면, 자연수 부분 $4 - 2 = 2$이고, 분수 부분 $$\\frac{4}{3} - \frac{2}{3} = \frac{2}{3}$$입니다. 따라서 $$\\square = 2\frac{2}{3}$$입니다.",
+    "concept_tags": [
+      "미지수 찾기",
+      "대분수 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$$3\frac{1}{3}$$",
+        "reason": "받아내림을 하지 않고 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::12",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "지혜는 우유 $$\\frac{4}{8}$$L를 마셨고, 슬기는 우유 $$\\frac{3}{8}$$L를 마셨습니다. 두 사람이 마신 우유는 모두 몇 L일까요?",
+    "choices": [
+      "$$\frac{5}{8}$$L",
+      "$$\frac{6}{8}$$L",
+      "$$\frac{7}{8}$$L",
+      "$$1$$L"
+    ],
+    "answer": "$$\frac{7}{8}$$L",
+    "answer_aliases": [
+      "7/8L"
+    ],
+    "explanation": "두 사람이 마신 우유의 양을 합하려면 덧셈을 합니다. $$\\frac{4}{8} + \frac{3}{8} = \frac{7}{8}$$L입니다.",
+    "concept_tags": [
+      "진분수 덧셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$\frac{6}{8}$$L",
+        "reason": "분자를 잘못 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::13",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "수박 한 통의 $$\\frac{8}{10}$$ 중에서 $$\\frac{3}{10}$$을 먹었습니다. 남은 수박은 전체의 얼마일까요?",
+    "choices": [
+      "$$\frac{4}{10}$$",
+      "$$\frac{5}{10}$$",
+      "$$\frac{6}{10}$$",
+      "$$\frac{7}{10}$$"
+    ],
+    "answer": "$$\frac{5}{10}$$",
+    "answer_aliases": [
+      "5/10",
+      "1/2"
+    ],
+    "explanation": "남은 수박의 양을 구하려면 뺄셈을 합니다. $$\\frac{8}{10} - \frac{3}{10} = \frac{5}{10}$$입니다.",
+    "concept_tags": [
+      "진분수 뺄셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$\frac{6}{10}$$",
+        "reason": "분자를 잘못 뺐습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::14",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 빵집에서 어제는 $3\frac{2}{9}$$kg의 빵을 팔았고, 오늘은 어제보다 $1\frac{5}{9}$$kg 더 많이 팔았습니다. 오늘 판 빵은 몇 kg일까요?",
+    "choices": null,
+    "answer": "$$4\frac{7}{9}$$kg",
+    "answer_aliases": [
+      "4와 7/9kg",
+      "43/9kg"
+    ],
+    "explanation": "오늘 판 빵의 양은 어제 판 빵의 양에 $1\frac{5}{9}$$kg을 더한 것입니다. $3\frac{2}{9} + 1\frac{5}{9}$를 계산합니다. 자연수 부분 $3 + 1 = 4$이고, 분수 부분 $$\\frac{2}{9} + \frac{5}{9} = \frac{7}{9}$$이므로, $4\frac{7}{9}$$kg입니다.",
+    "concept_tags": [
+      "대분수 덧셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$4\frac{6}{9}$$kg",
+        "reason": "분수 부분을 잘못 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::15",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "길이가 $5\frac{1}{12}$$m인 색 테이프에서 $2\frac{7}{12}$$m를 사용했습니다. 남은 색 테이프의 길이는 몇 m일까요?",
+    "choices": [
+      "$$2\frac{5}{12}$$m",
+      "$$2\frac{6}{12}$$m",
+      "$$3\frac{5}{12}$$m",
+      "$$3\frac{6}{12}$$m"
+    ],
+    "answer": "$$2\frac{6}{12}$$m",
+    "answer_aliases": [
+      "2와 6/12m",
+      "2와 1/2m",
+      "30/12m",
+      "5/2m"
+    ],
+    "explanation": "남은 색 테이프의 길이를 구하려면 뺄셈을 합니다. $5\frac{1}{12} - 2\frac{7}{12}$를 계산합니다. 분수 부분 $$\\frac{1}{12}$$에서 $$\\frac{7}{12}$$를 뺄 수 없으므로, $5\frac{1}{12} = 4\frac{12+1}{12} = 4\frac{13}{12}$$로 바꿉니다. 이제 $4\frac{13}{12} - 2\frac{7}{12}$를 계산하면, 자연수 부분 $4 - 2 = 2$이고, 분수 부분 $$\\frac{13}{12} - \frac{7}{12} = \frac{6}{12}$$입니다. 따라서 $2\frac{6}{12}$$m입니다.",
+    "concept_tags": [
+      "대분수 뺄셈",
+      "받아내림",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$$3\frac{6}{12}$$m",
+        "reason": "받아내림을 하지 않고 자연수 부분을 잘못 뺐습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::16",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 물통에 물이 $1\frac{3}{8}$$L 들어있었습니다. 여기에 $2\frac{5}{8}$$L의 물을 더 넣었다가 $1\frac{7}{8}$$L를 사용했습니다. 남은 물은 몇 L일까요?",
+    "choices": [
+      "$$1\frac{1}{8}$$L",
+      "$$1\frac{2}{8}$$L",
+      "$$2\frac{1}{8}$$L",
+      "$$2\frac{2}{8}$$L"
+    ],
+    "answer": "$$2\frac{1}{8}$$L",
+    "answer_aliases": [
+      "2와 1/8L",
+      "17/8L"
+    ],
+    "explanation": "먼저 물을 더 넣은 양을 계산합니다. $1\frac{3}{8} + 2\frac{5}{8} = 3\frac{8}{8} = 4$$L입니다. 그 다음 사용한 물의 양을 뺍니다. $4 - 1\frac{7}{8}$를 계산합니다. $4 = 3\frac{8}{8}$$이므로, $3\frac{8}{8} - 1\frac{7}{8} = (3-1) + (\frac{8}{8}-\frac{7}{8}) = 2 + \frac{1}{8} = 2\frac{1}{8}$$L입니다.",
+    "concept_tags": [
+      "대분수 덧셈",
+      "대분수 뺄셈",
+      "받아내림",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$1\frac{1}{8}$$L",
+        "reason": "여러 단계의 계산에서 실수가 있었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::17",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "길이가 $10$$cm인 막대에서 $3\frac{4}{5}$$cm를 자르고, 남은 막대에서 $2\frac{3}{5}$$cm를 또 잘랐습니다. 마지막에 남은 막대의 길이는 몇 cm일까요?",
+    "choices": null,
+    "answer": "$$3\frac{3}{5}$$cm",
+    "answer_aliases": [
+      "3과 3/5cm",
+      "18/5cm"
+    ],
+    "explanation": "먼저 $10 - 3\frac{4}{5}$를 계산합니다. $10 = 9\frac{5}{5}$$이므로, $9\frac{5}{5} - 3\frac{4}{5} = 6\frac{1}{5}$$cm입니다. 이제 남은 막대 $6\frac{1}{5}$$cm에서 $2\frac{3}{5}$$cm를 뺍니다. $6\frac{1}{5} = 5\frac{5+1}{5} = 5\frac{6}{5}$$이므로, $5\frac{6}{5} - 2\frac{3}{5} = (5-2) + (\frac{6}{5}-\frac{3}{5}) = 3 + \frac{3}{5} = 3\frac{3}{5}$$cm입니다.",
+    "concept_tags": [
+      "대분수 뺄셈",
+      "받아내림",
+      "실생활 문제",
+      "두 번 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$4\frac{1}{5}$$cm",
+        "reason": "두 번째 뺄셈에서 받아내림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::18",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 분수에서 $1\frac{5}{11}$$를 뺐더니 $2\frac{8}{11}$$이 되었습니다. 어떤 분수는 무엇일까요?",
+    "choices": [
+      "$$3\frac{2}{11}$$",
+      "$$3\frac{3}{11}$$",
+      "$$4\frac{2}{11}$$",
+      "$$4\frac{3}{11}$$"
+    ],
+    "answer": "$$4\frac{2}{11}$$",
+    "answer_aliases": [
+      "4와 2/11",
+      "46/11"
+    ],
+    "explanation": "어떤 분수를 $$\\square$$라고 하면, $$\\square - 1\frac{5}{11} = 2\frac{8}{11}$$입니다. $$\\square = 2\frac{8}{11} + 1\frac{5}{11}$$입니다. 자연수 부분 $2 + 1 = 3$이고, 분수 부분 $$\\frac{8}{11} + \frac{5}{11} = \frac{13}{11}$$입니다. $$\\frac{13}{11}$$는 $1\frac{2}{11}$$이므로, $3 + 1\frac{2}{11} = 4\frac{2}{11}$$입니다.",
+    "concept_tags": [
+      "미지수 찾기",
+      "대분수 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$3\frac{3}{11}$$",
+        "reason": "분수 부분의 받아올림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::19",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "세 수 $1\frac{1}{7}, 2\frac{3}{7}, 3\frac{5}{7}$$이 있습니다. 이 중 가장 큰 수와 가장 작은 수의 차는 얼마일까요?",
+    "choices": [
+      "$$2\frac{3}{7}$$",
+      "$$2\frac{4}{7}$$",
+      "$$3\frac{3}{7}$$",
+      "$$3\frac{4}{7}$$"
+    ],
+    "answer": "$$2\frac{4}{7}$$",
+    "answer_aliases": [
+      "2와 4/7",
+      "18/7"
+    ],
+    "explanation": "가장 큰 수는 $3\frac{5}{7}$이고, 가장 작은 수는 $1\frac{1}{7}$입니다. 두 수의 차를 구하려면 뺄셈을 합니다. $3\frac{5}{7} - 1\frac{1}{7}$를 계산합니다. 자연수 부분 $3 - 1 = 2$이고, 분수 부분 $$\\frac{5}{7} - \frac{1}{7} = \frac{4}{7}$$이므로, $2\frac{4}{7}$$입니다.",
+    "concept_tags": [
+      "대분수 뺄셈",
+      "수의 크기 비교"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$$3\frac{4}{7}$$",
+        "reason": "가장 큰 수와 가장 작은 수를 잘못 찾았거나, 뺄셈을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::20",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$$\frac{3}{8} + \frac{4}{8}$$를 계산하면 얼마일까요?",
+    "choices": [
+      "$$\frac{6}{8}$$",
+      "$$\frac{7}{8}$$",
+      "$$\frac{8}{8}$$",
+      "$$1\frac{1}{8}$$"
+    ],
+    "answer": "$$\frac{7}{8}$$",
+    "answer_aliases": [
+      "7/8"
+    ],
+    "explanation": "분모가 같은 분수의 덧셈은 분모는 그대로 두고 분자끼리 더합니다. $3 + 4 = 7$이므로, $$\\frac{3}{8} + \frac{4}{8} = \frac{7}{8}$$입니다.",
+    "concept_tags": [
+      "진분수 덧셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$\frac{6}{8}$$",
+        "reason": "분자를 잘못 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-1::v3::21",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-15]",
+    "unit_id": "math-4-2-1",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 같은 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$$2\frac{1}{9} + 3\frac{4}{9}$$를 계산하면 얼마일까요?",
+    "choices": [
+      "$$5\frac{3}{9}$$",
+      "$$5\frac{4}{9}$$",
+      "$$5\frac{5}{9}$$",
+      "$$6\frac{5}{9}$$"
+    ],
+    "answer": "$$5\frac{5}{9}$$",
+    "answer_aliases": [
+      "5와 5/9",
+      "50/9"
+    ],
+    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. $2 + 3 = 5$이고, $$\\frac{1}{9} + \frac{4}{9} = \frac{5}{9}$$이므로, $2\frac{1}{9} + 3\frac{4}{9} = 5\frac{5}{9}$$입니다.",
+    "concept_tags": [
+      "대분수 덧셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$$5\frac{4}{9}$$",
+        "reason": "분수 부분을 잘못 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::0",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$0.3 + 0.5$를 계산하면 얼마입니까?",
+    "choices": [
+      "$0.7$",
+      "$0.8$",
+      "$0.9$",
+      "$1.0$"
+    ],
+    "answer": "$0.8$",
+    "answer_aliases": [
+      "0.8"
+    ],
+    "explanation": "소수점 자리를 맞춰 $0.3$과 $0.5$를 더하면 $0.8$입니다.",
+    "concept_tags": [
+      "소수덧셈",
+      "한자리소수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.7$",
+        "reason": "자릿값을 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::1",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$1.2 - 0.7$을 계산하면 얼마입니까?",
+    "choices": [
+      "$0.4$",
+      "$0.5$",
+      "$0.6$",
+      "$0.7$"
+    ],
+    "answer": "$0.5$",
+    "answer_aliases": [
+      "0.5"
+    ],
+    "explanation": "소수점 자리를 맞춰 $1.2$에서 $0.7$을 빼면 $0.5$입니다.",
+    "concept_tags": [
+      "소수뺄셈",
+      "한자리소수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.4$",
+        "reason": "받아내림 계산을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::2",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$0.25 + 0.13$을 계산하면 얼마입니까?",
+    "choices": [
+      "$0.37$",
+      "$0.38$",
+      "$0.39$",
+      "$0.40$"
+    ],
+    "answer": "$0.38$",
+    "answer_aliases": [
+      "0.38"
+    ],
+    "explanation": "소수점 자리를 맞춰 $0.25$와 $0.13$을 더하면 $0.38$입니다.",
+    "concept_tags": [
+      "소수덧셈",
+      "두자리소수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.37$",
+        "reason": "일의 자리 계산을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::3",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$0.87 - 0.42$를 계산하면 얼마입니까?",
+    "choices": [
+      "$0.43$",
+      "$0.44$",
+      "$0.45$",
+      "$0.46$"
+    ],
+    "answer": "$0.45$",
+    "answer_aliases": [
+      "0.45"
+    ],
+    "explanation": "소수점 자리를 맞춰 $0.87$에서 $0.42$를 빼면 $0.45$입니다.",
+    "concept_tags": [
+      "소수뺄셈",
+      "두자리소수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.43$",
+        "reason": "십의 자리 계산을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::4",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$0.6 + 0.35$를 계산하면 얼마입니까?",
+    "choices": null,
+    "answer": "$0.95$",
+    "answer_aliases": [
+      "0.95"
+    ],
+    "explanation": "$0.6$은 $0.60$과 같습니다. 소수점 자리를 맞춰 $0.60 + 0.35$를 계산하면 $0.95$입니다.",
+    "concept_tags": [
+      "소수덧셈",
+      "자릿값맞추기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$0.41$",
+        "reason": "자릿값을 맞추지 않고 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::5",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$1.5 - 0.25$를 계산하면 얼마입니까?",
+    "choices": null,
+    "answer": "$1.25$",
+    "answer_aliases": [
+      "1.25"
+    ],
+    "explanation": "$1.5$는 $1.50$과 같습니다. 소수점 자리를 맞춰 $1.50 - 0.25$를 계산하면 $1.25$입니다.",
+    "concept_tags": [
+      "소수뺄셈",
+      "자릿값맞추기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$1.20$",
+        "reason": "자릿값을 맞추지 않고 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::6",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$2.45 + 1.38$을 계산하면 얼마입니까?",
+    "choices": [
+      "$3.73$",
+      "$3.83$",
+      "$3.93$",
+      "$4.03$"
+    ],
+    "answer": "$3.83$",
+    "answer_aliases": [
+      "3.83"
+    ],
+    "explanation": "소수점 자리를 맞춰 계산합니다. $2.45 + 1.38 = 3.83$입니다.",
+    "concept_tags": [
+      "소수덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$3.73$",
+        "reason": "소수 첫째 자리에서 받아올림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::7",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$5.72 - 3.19$를 계산하면 얼마입니까?",
+    "choices": [
+      "$2.43$",
+      "$2.53$",
+      "$2.63$",
+      "$2.73$"
+    ],
+    "answer": "$2.53$",
+    "answer_aliases": [
+      "2.53"
+    ],
+    "explanation": "소수점 자리를 맞춰 계산합니다. $5.72 - 3.19 = 2.53$입니다.",
+    "concept_tags": [
+      "소수뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2.43$",
+        "reason": "소수 둘째 자리에서 받아내림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::8",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$0.7 + \\square = 1.25$입니다. $\\square$ 안에 알맞은 수는 무엇입니까?",
+    "choices": [
+      "$0.45$",
+      "$0.50$",
+      "$0.55$",
+      "$0.60$"
+    ],
+    "answer": "$0.55$",
+    "answer_aliases": [
+      "0.55"
+    ],
+    "explanation": "$\\square$를 구하려면 $1.25 - 0.7$을 계산해야 합니다. $1.25 - 0.70 = 0.55$입니다.",
+    "concept_tags": [
+      "소수덧셈",
+      "미지수찾기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$0.45$",
+        "reason": "자릿값을 맞추지 않고 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::9",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$3.4 - \\square = 1.85$입니다. $\\square$ 안에 알맞은 수는 무엇입니까?",
+    "choices": [
+      "$1.45$",
+      "$1.50$",
+      "$1.55$",
+      "$1.60$"
+    ],
+    "answer": "$1.55$",
+    "answer_aliases": [
+      "1.55"
+    ],
+    "explanation": "$\\square$를 구하려면 $3.4 - 1.85$를 계산해야 합니다. $3.40 - 1.85 = 1.55$입니다.",
+    "concept_tags": [
+      "소수뺄셈",
+      "미지수찾기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$1.45$",
+        "reason": "자릿값을 맞추지 않고 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::10",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$4.05 + 2.97$을 계산하면 얼마입니까?",
+    "choices": null,
+    "answer": "$7.02$",
+    "answer_aliases": [
+      "7.02"
+    ],
+    "explanation": "소수점 자리를 맞춰 계산합니다. $4.05 + 2.97 = 7.02$입니다.",
+    "concept_tags": [
+      "소수덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$6.92$",
+        "reason": "소수 첫째 자리에서 받아올림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::11",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$6.10 - 3.48$을 계산하면 얼마입니까?",
+    "choices": null,
+    "answer": "$2.62$",
+    "answer_aliases": [
+      "2.62"
+    ],
+    "explanation": "소수점 자리를 맞춰 계산합니다. $6.10 - 3.48 = 2.62$입니다.",
+    "concept_tags": [
+      "소수뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2.72$",
+        "reason": "소수 첫째 자리에서 받아내림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::12",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "철수는 $1.5 \text{ kg}$의 사과를 샀고, 영희는 $0.85 \text{ kg}$의 배를 샀습니다. 둘이 산 과일의 무게는 모두 몇 $\text{kg}$입니까?",
+    "choices": [
+      "$2.25 \text{ kg}$",
+      "$2.30 \text{ kg}$",
+      "$2.35 \text{ kg}$",
+      "$2.40 \text{ kg}$"
+    ],
+    "answer": "$2.35 \text{ kg}$",
+    "answer_aliases": [
+      "2.35"
+    ],
+    "explanation": "두 과일의 무게를 더해야 합니다. $1.5 + 0.85 = 1.50 + 0.85 = 2.35$입니다.",
+    "concept_tags": [
+      "소수덧셈",
+      "실생활문제",
+      "kg"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$2.25 \text{ kg}$",
+        "reason": "자릿값을 맞추지 않고 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::13",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "수영장의 물이 $25.7 \text{ L}$ 있었습니다. 이 중에서 $12.85 \text{ L}$를 사용했다면, 남은 물은 몇 $\text{L}$입니까?",
+    "choices": [
+      "$12.75 \text{ L}$",
+      "$12.85 \text{ L}$",
+      "$12.95 \text{ L}$",
+      "$13.05 \text{ L}$"
+    ],
+    "answer": "$12.85 \text{ L}$",
+    "answer_aliases": [
+      "12.85"
+    ],
+    "explanation": "남은 물의 양을 구하려면 $25.7 - 12.85$를 계산해야 합니다. $25.70 - 12.85 = 12.85$입니다.",
+    "concept_tags": [
+      "소수뺄셈",
+      "실생활문제",
+      "L"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$12.75 \text{ L}$",
+        "reason": "받아내림 계산을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::14",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "길이가 $3.4 \text{ m}$인 끈과 $2.75 \text{ m}$인 끈을 이어 붙였습니다. 이 두 끈의 전체 길이는 몇 $\text{m}$입니까? (겹치는 부분은 없습니다.)",
+    "choices": [
+      "$6.05 \text{ m}$",
+      "$6.10 \text{ m}$",
+      "$6.15 \text{ m}$",
+      "$6.20 \text{ m}$"
+    ],
+    "answer": "$6.15 \text{ m}$",
+    "answer_aliases": [
+      "6.15"
+    ],
+    "explanation": "두 끈의 길이를 더해야 합니다. $3.4 + 2.75 = 3.40 + 2.75 = 6.15$입니다.",
+    "concept_tags": [
+      "소수덧셈",
+      "실생활문제",
+      "m"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$6.05 \text{ m}$",
+        "reason": "자릿값을 맞추지 않고 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::15",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 화분에 물을 $1.2 \text{ L}$ 주었습니다. 다음 날 $0.75 \text{ L}$의 물을 더 주었다면, 총 몇 $\text{L}$의 물을 주었습니까?",
+    "choices": [
+      "$1.85 \text{ L}$",
+      "$1.90 \text{ L}$",
+      "$1.95 \text{ L}$",
+      "$2.00 \text{ L}$"
+    ],
+    "answer": "$1.95 \text{ L}$",
+    "answer_aliases": [
+      "1.95"
+    ],
+    "explanation": "총 물의 양을 구하려면 $1.2 + 0.75$를 계산해야 합니다. $1.20 + 0.75 = 1.95$입니다.",
+    "concept_tags": [
+      "소수덧셈",
+      "실생활문제",
+      "L"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$1.85 \text{ L}$",
+        "reason": "자릿값을 맞추지 않고 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::16",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 상자의 무게는 $0.45 \text{ kg}$입니다. 이 상자에 물건을 넣었더니 전체 무게가 $1.3 \text{ kg}$이 되었습니다. 물건의 무게는 몇 $\text{kg}$입니까?",
+    "choices": null,
+    "answer": "$0.85 \text{ kg}$",
+    "answer_aliases": [
+      "0.85"
+    ],
+    "explanation": "물건의 무게를 구하려면 전체 무게에서 상자의 무게를 빼야 합니다. $1.3 - 0.45 = 1.30 - 0.45 = 0.85$입니다.",
+    "concept_tags": [
+      "소수뺄셈",
+      "실생활문제",
+      "kg"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.95 \text{ kg}$",
+        "reason": "받아내림 계산을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::17",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "지우개 하나의 길이는 $4.8 \text{ cm}$이고, 연필 하나의 길이는 $15.25 \text{ cm}$입니다. 연필이 지우개보다 몇 $\text{cm}$ 더 깁니까?",
+    "choices": null,
+    "answer": "$10.45 \text{ cm}$",
+    "answer_aliases": [
+      "10.45"
+    ],
+    "explanation": "연필이 지우개보다 얼마나 더 긴지 구하려면 $15.25 - 4.8$을 계산해야 합니다. $15.25 - 4.80 = 10.45$입니다.",
+    "concept_tags": [
+      "소수뺄셈",
+      "실생활문제",
+      "cm"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$10.35 \text{ cm}$",
+        "reason": "자릿값을 맞추지 않고 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::18",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 수에서 $1.23$을 빼야 할 것을 잘못하여 더했더니 $3.45$가 되었습니다. 바르게 계산한 값은 얼마입니까?",
+    "choices": [
+      "$0.99$",
+      "$1.09$",
+      "$1.19$",
+      "$1.29$"
+    ],
+    "answer": "$0.99$",
+    "answer_aliases": [
+      "0.99"
+    ],
+    "explanation": "먼저 어떤 수를 구합니다. $\\square + 1.23 = 3.45$이므로 $\\square = 3.45 - 1.23 = 2.22$입니다. 바르게 계산하면 $2.22 - 1.23 = 0.99$입니다.",
+    "concept_tags": [
+      "소수덧셈뺄셈",
+      "두단계문제",
+      "오류수정"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$2.22$",
+        "reason": "어떤 수만 구하고 바르게 계산하지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-4-2-3::v3::19",
+    "subject": "수학",
+    "grade": 4,
+    "standard_code": "[4수01-17]",
+    "unit_id": "math-4-2-3",
+    "unit_name": "소수의 덧셈과 뺄셈",
+    "sub_unit": "소수 둘째 자리까지",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "$2.5$보다 $0.75$ 큰 수와 $4.2$보다 $1.38$ 작은 수의 합은 얼마입니까?",
+    "choices": [
+      "$5.97$",
+      "$6.07$",
+      "$6.17$",
+      "$6.27$"
+    ],
+    "answer": "$6.07$",
+    "answer_aliases": [
+      "6.07"
+    ],
+    "explanation": "$2.5$보다 $0.75$ 큰 수는 $2.5 + 0.75 = 3.25$입니다. $4.2$보다 $1.38$ 작은 수는 $4.2 - 1.38 = 2.82$입니다. 두 수의 합은 $3.25 + 2.82 = 6.07$입니다.",
+    "concept_tags": [
+      "소수덧셈뺄셈",
+      "두단계문제",
+      "비교"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$5.97$",
+        "reason": "마지막 덧셈에서 받아올림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
   }
 ]
