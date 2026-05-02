@@ -1,9 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Printer, RefreshCw } from "lucide-react";
-import { generateDrill } from "@/lib/drillGen";
+import { generateDrill, type DrillProblem } from "@/lib/drillGen";
 import type { SheetMeta } from "@/lib/sheets";
 import type { UnitDTO } from "@/lib/client";
 import { DrillSheet } from "@/components/DrillSheet";
@@ -19,6 +19,44 @@ function gradeFromUnitId(unitId: string): number {
   return m ? parseInt(m[1], 10) : 3;
 }
 
+// 양식 제목/풀 키 기반 안내 문구 — 덧/뺄/곱/나/혼합/분수/소수 분기
+function drillInstruction(sheet: SheetMeta): string {
+  const title = sheet.title || "";
+  const pk = sheet.pool_key || "";
+  if (/±|혼합|덧셈\/뺄셈|덧셈과 뺄셈/.test(title) || pk.startsWith("three_num") || pk.startsWith("mixed_calc")) {
+    return "계산하세요.";
+  }
+  if (/곱셈/.test(title) || pk.startsWith("h_mul") || pk.startsWith("frac_mul") || pk.startsWith("dec_mul")) {
+    return "곱셈을 하세요.";
+  }
+  if (/나눗셈/.test(title) || pk.startsWith("h_div") || pk.startsWith("frac_div") || pk.startsWith("dec_div")) {
+    return "나눗셈을 하세요.";
+  }
+  if (/뺄셈|받아내림|차/.test(title) || pk.startsWith("h_sub") || pk.startsWith("dec_sub") || pk === "frac_same_sub" || pk === "frac_diff_sub" || pk === "frac_natural_minus_proper" || pk === "frac_mixed_sub" || pk === "frac_mixed_sub_borrow") {
+    return "뺄셈을 하세요.";
+  }
+  if (/덧셈|받아올림|모으기/.test(title) || pk.startsWith("h_add") || pk.startsWith("dec_add") || pk === "frac_same_add" || pk === "frac_same_add_improper" || pk === "frac_diff_add" || pk === "frac_mixed_add" || pk === "frac_mixed_add_carry") {
+    return "덧셈을 하세요.";
+  }
+  if (pk === "decompose_9") return "두 수로 가르세요.";
+  if (pk === "make_ten") return "10이 되도록 빈 칸을 채우세요.";
+  if (pk === "break_ten") return "10에서 빼세요.";
+  if (pk === "frac_proper_to_improper") return "대분수를 가분수로 나타내세요.";
+  if (pk === "frac_improper_to_mixed") return "가분수를 대분수로 나타내세요.";
+  if (pk === "frac_compare_same") return "두 분수의 크기를 비교하세요.";
+  if (pk === "frac_reduce") return "분수를 약분하세요.";
+  if (pk === "frac_common_denom") return "두 분수를 통분하세요.";
+  if (pk === "factors") return "약수를 구하세요.";
+  if (pk === "multiples") return "배수를 구하세요.";
+  if (pk === "gcd") return "최대공약수를 구하세요.";
+  if (pk === "lcm") return "최소공배수를 구하세요.";
+  if (pk === "ratio_simplify") return "비를 가장 간단한 자연수의 비로 나타내세요.";
+  if (pk === "ratio_to_pct") return "비율을 백분율로 나타내세요.";
+  if (pk === "proportion") return "비례식을 풀어 빈 칸을 채우세요.";
+  if (pk === "proportional_share") return "비례배분으로 두 수를 구하세요.";
+  return "계산하세요.";
+}
+
 export default function DrillSheetPage({
   sheet,
   unit,
@@ -29,8 +67,22 @@ export default function DrillSheetPage({
   const [seedNonce, setSeedNonce] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [isGraded, setIsGraded] = useState(false);
+  const [problems, setProblems] = useState<DrillProblem[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const problems = useMemo(() => generateDrill(sheet), [sheet, seedNonce]);
+  useEffect(() => {
+    let mounted = true;
+    setLoading(true);
+    generateDrill(sheet).then((p) => {
+      if (mounted) {
+        setProblems(p);
+        setLoading(false);
+      }
+    });
+    return () => {
+      mounted = false;
+    };
+  }, [sheet, seedNonce]);
 
   const answeredCount = Object.entries(answers).filter(
     ([, v]) => v && String(v).trim()
@@ -126,9 +178,7 @@ export default function DrillSheetPage({
           </div>
           <div className="mt-2 mb-4 border-t border-[#111827]" />
           <p className="text-sm text-[#374151]">
-            {sheet.type === "drill_h_add" || sheet.type === "drill_v_add" || sheet.type === "drill_v_add_carry"
-              ? "덧셈을 하세요."
-              : "뺄셈을 하세요."}
+            {drillInstruction(sheet)}
             <span className="ml-2 text-xs text-[#6b7280]">
               (1번은 보기예요. 2번부터 풀어보세요.)
             </span>

@@ -1,0 +1,1 @@
+[{"op": "break_ten", "a": 1, "ans": 9}, {"op": "break_ten", "a": 2, "ans": 8}, {"op": "break_ten", "a": 3, "ans": 7}, {"op": "break_ten", "a": 4, "ans": 6}, {"op": "break_ten", "a": 5, "ans": 5}, {"op": "break_ten", "a": 6, "ans": 4}, {"op": "break_ten", "a": 7, "ans": 3}, {"op": "break_ten", "a": 8, "ans": 2}, {"op": "break_ten", "a": 9, "ans": 1}]

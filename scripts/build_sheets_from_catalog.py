@@ -12,7 +12,8 @@ from pathlib import Path
 
 ROOT = Path('/Users/hyejin/Documents/generalv1/edutech_qa')
 CAT = json.load(open(ROOT / 'scripts' / '11math_catalog.json'))
-POOLS = json.load(open(ROOT / 'frontend' / 'lib' / 'drill_pools.json'))
+# 인덱스 (key → size). 풀 본체는 public/pools/<key>.json 분리.
+POOLS = json.load(open(ROOT / 'frontend' / 'lib' / 'drill_pools_index.json'))
 OUT_TS = ROOT / 'frontend' / 'lib' / 'sheets_generated.json'
 OUT_REPORT = ROOT / 'scripts' / 'sheets_mapping_report.md'
 
@@ -30,6 +31,99 @@ def parse_layout(title, desc):
     if '세로' in desc: return 'v'
     if '가로' in desc: return 'h'
     return 'h'  # 기본 가로
+
+
+def parse_special_op(title, desc):
+    """분수·소수·약수배수·비/비례 등 특수 양식 → pool_key 직접 매핑."""
+    # 분수 변환
+    if '대분수를 가분수' in title or '진분수' in title and '가분수' in title and '나타내기' in title:
+        return 'frac_proper_to_improper'
+    if '가분수를 대분수' in title or '가분수' in title and '대분수' in title and '나타내기' in title:
+        return 'frac_improper_to_mixed'
+    if '대분수를' in title and '가분수' in title:
+        return 'frac_proper_to_improper'
+    if '가분수를' in title and '대분수' in title:
+        return 'frac_improper_to_mixed'
+    # 분수 크기 비교
+    if '크기 비교' in title and ('가분수' in title or '진분수' in title or '대분수' in title or '분수' in title):
+        return 'frac_compare_same'
+    # 분수 덧뺄
+    if '진분수의 덧셈' in title and '진분수' in desc and '진분수' in title:
+        if '가분수' in title:
+            return 'frac_same_add_improper'
+        return 'frac_same_add'
+    if '진분수의 뺄셈' in title or ('자연수 - 진분수' in title or '자연수' in title and '진분수' in title and ('-' in title or '뺄' in title)):
+        if '자연수' in title:
+            return 'frac_natural_minus_proper'
+        return 'frac_same_sub'
+    if '대분수의 덧셈' in title:
+        if '받아올림' in title or '분자의 합 >' in title or '분자의 합 ≥' in title:
+            return 'frac_mixed_add_carry'
+        return 'frac_mixed_add'
+    if '대분수의 뺄셈' in title:
+        if '받아내림' in title or '<2>' in title:
+            return 'frac_mixed_sub_borrow'
+        return 'frac_mixed_sub'
+    if '대분수와 진분수' in title and '덧셈' in title:
+        return 'frac_mixed_add'
+    if '대분수와 진분수' in title and '뺄셈' in title:
+        return 'frac_mixed_sub'
+    # 약분/통분
+    if '약분' in title:
+        return 'frac_reduce'
+    if '통분' in title:
+        return 'frac_common_denom'
+    # 분모 다른 분수 덧뺄
+    if '분모가 다른' in title and ('덧셈' in title or '뺄셈' in title):
+        return 'frac_diff_add' if '덧셈' in title else 'frac_diff_sub'
+    # 분수 곱셈/나눗셈
+    if '분수의 곱셈' in title or ('분수' in title and '곱셈' in title):
+        if '자연수' in title or '자연수' in desc:
+            return 'frac_mul_natural'
+        return 'frac_mul'
+    if '분수의 나눗셈' in title or ('분수' in title and '나눗셈' in title):
+        if '자연수' in title or '자연수' in desc:
+            return 'frac_div_natural'
+        return 'frac_div'
+    # 소수 덧뺄
+    if '소수' in title and '덧셈' in title:
+        if '두 자리' in title:
+            return 'dec_add_2_int' if '자연수가 있' in title else 'dec_add_2'
+        return 'dec_add_1_int' if '자연수가 있' in title else 'dec_add_1'
+    if '소수' in title and '뺄셈' in title:
+        if '두 자리' in title:
+            return 'dec_sub_2_int' if '자연수가 있' in title else 'dec_sub_2'
+        return 'dec_sub_1_int' if '자연수가 있' in title else 'dec_sub_1'
+    # 소수 곱셈
+    if '소수' in title and '곱셈' in title:
+        if '자연수' in title:
+            return 'dec_mul_nat_1'
+        return 'dec_mul_1'
+    # 소수 나눗셈
+    if '소수' in title and '나눗셈' in title:
+        return 'dec_div_nat_1'
+    # 약수와 배수
+    if '약수' in title and '구하기' in title:
+        return 'factors'
+    if '배수' in title and '구하기' in title:
+        return 'multiples'
+    if '최대공약수' in title or 'GCD' in title:
+        return 'gcd'
+    if '최소공배수' in title or 'LCM' in title:
+        return 'lcm'
+    # 비/비율/백분율
+    if '비를' in title or '간단한' in title and '비' in title:
+        return 'ratio_simplify'
+    if '백분율' in title or '비율' in title:
+        return 'ratio_to_pct'
+    if '비례식' in title:
+        return 'proportion'
+    if '비례배분' in title:
+        return 'proportional_share'
+    # 자연수 혼합
+    if '혼합' in title and '계산' in title:
+        return 'mixed_calc_3'
+    return None
 
 
 def parse_op(title, desc):
@@ -125,6 +219,8 @@ def find_pool_key(op, d1, d2, carry, with_remainder=False, title='', desc=''):
         if '몇십으로 나누기' in title:
             if with_remainder or '나머지 있' in title: candidates.append('h_div_3_2_rem')
             else: candidates.append('h_div_3_2')
+    elif op == 'mul' and 'frac' in title and '진분수' in title:
+        candidates.append('frac_mul')
     elif op == 'mix_addsub':
         # 세 수, 또는 ±형식 — 자릿수에 맞는 add 풀 사용 (내용은 어차피 +/- 섞여 출제)
         if d1 and d2 and d1 == d2:
@@ -175,6 +271,22 @@ for uid, info in CAT.items():
         carry = parse_carry(title, desc)
         d1, d2 = parse_digits(title)
         with_rem = '나머지' in title and '없음' not in title
+        # 우선 특수 양식(분수·소수·약수·비) 직매핑 시도
+        special_key = parse_special_op(title, desc)
+        if special_key and special_key in POOL_KEYS:
+            pool_key = special_key
+            # special op은 layout과 무관하게 동일 풀 사용 (가로/세로 구분 의미 적음)
+            sheets.append({
+                'id': short_id(f['no'], layout, special_key.split('_')[0][:3]),
+                'unit_id': uid,
+                'type': 'drill_h_add' if layout == 'h' else 'drill_v_add',  # placeholder type
+                'title': re.sub(r'\s+[AB]$', '', title),
+                'subtitle': f'{("세로식" if layout == "v" else "가로식")} · {auto_n}문제',
+                'problem_count': auto_n,
+                'pool_key': pool_key,
+                'layout': layout,
+            })
+            continue
         if op is None:
             unmapped.append((uid, f['no'], title, 'op?'))
             continue

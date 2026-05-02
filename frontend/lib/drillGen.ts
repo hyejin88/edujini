@@ -1,8 +1,8 @@
-// 드릴 학습지 생성 — drill_pools.json에서 시드 기반 N개 추출.
-// Gemini 호출 0, 25만 문제 사전 빌드 풀 활용. 매일 새 학습지.
+// 드릴 학습지 생성 — public/pools/<pool_key>.json에서 시드 기반 N개 추출.
+// 양식별 풀 1만개 (총 35만 문제), 페이지에서 필요한 풀만 fetch.
 
 import type { SheetMeta } from "./sheets";
-import poolsRaw from "./drill_pools.json";
+import poolIndex from "./drill_pools_index.json";
 
 type PoolItem =
   | { op: "+" | "-" | "×"; a: number; b: number; ans: number }
@@ -10,27 +10,42 @@ type PoolItem =
   | { op: "frac_add" | "frac_sub"; d: number; a: number; b: number; ans_num: number; ans_den: number }
   | { op: "decompose"; n: number; a: number; b: number }
   | { op: "make_ten" | "break_ten"; a: number; ans: number }
-  | { op: "three"; a: number; b: number; c: number; ops: "+-" | "-+"; ans: number };
+  | { op: "three"; a: number; b: number; c: number; ops: "+-" | "-+"; ans: number }
+  | Record<string, unknown>;
 
-const POOLS = poolsRaw as Record<string, PoolItem[]>;
+const INDEX = poolIndex as Record<string, number>;
 
-export interface DrillProblem {
-  index: number; // 1부터 시작
-  is_example: boolean;
-  op: string; // "+" | "-" | "×" | "÷" | "frac_add" | "frac_sub" | "decompose" | "make_ten" | "break_ten" | "three"
-  operands: number[]; // 보편적 표현 (덧/뺄/곱: [a,b], 나눗셈: [a,b], 분수: [a,d,b,d], decompose: [n,a,b], three: [a,b,c])
-  answer: number; // 주 답 (분수: 분자 / decompose: a / three: ans)
-  // 추가 필드
-  remainder?: number;
-  ans_den?: number; // 분수 답 분모
-  ops_str?: string; // 세 수 연산자
-  // 시각용
-  digits?: [number, number];
-  carry?: "none" | "once" | "any";
-  raw?: PoolItem; // 렌더러 직접 사용
+// 메모리 캐시 — 같은 풀 재요청 시 fetch 안 함
+const POOL_CACHE = new Map<string, PoolItem[]>();
+
+async function loadPool(key: string): Promise<PoolItem[]> {
+  if (POOL_CACHE.has(key)) return POOL_CACHE.get(key)!;
+  if (!INDEX[key]) return [];
+  try {
+    const r = await fetch(`/pools/${key}.json`, { cache: "force-cache" });
+    if (!r.ok) return [];
+    const data = (await r.json()) as PoolItem[];
+    POOL_CACHE.set(key, data);
+    return data;
+  } catch {
+    return [];
+  }
 }
 
-// 시드 가능한 PRNG
+export interface DrillProblem {
+  index: number;
+  is_example: boolean;
+  op: string;
+  operands: number[];
+  answer: number;
+  remainder?: number;
+  ans_den?: number;
+  ops_str?: string;
+  digits?: [number, number];
+  carry?: "none" | "once" | "any";
+  raw?: PoolItem;
+}
+
 function mulberry32(seed: number) {
   return function () {
     seed |= 0;
@@ -56,7 +71,6 @@ function todayKey(): string {
   return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 }
 
-// Fisher-Yates 셔플 (시드 가능)
 function shuffle<T>(arr: T[], rng: () => number): T[] {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -67,78 +81,55 @@ function shuffle<T>(arr: T[], rng: () => number): T[] {
 }
 
 function poolItemToProblem(item: PoolItem): Omit<DrillProblem, "index" | "is_example"> {
-  if (item.op === "+" || item.op === "-" || item.op === "×") {
+  const op = (item as { op?: string }).op;
+  if (op === "+" || op === "-" || op === "×") {
+    const it = item as { op: "+" | "-" | "×"; a: number; b: number; ans: number };
+    return { op: it.op, operands: [it.a, it.b], answer: it.ans, raw: item };
+  }
+  if (op === "÷") {
+    const it = item as { op: "÷"; a: number; b: number; ans: number; r?: number };
+    return { op: "÷", operands: [it.a, it.b], answer: it.ans, remainder: it.r, raw: item };
+  }
+  if (op === "frac_add" || op === "frac_sub") {
+    const it = item as { op: string; d: number; a: number; b: number; ans_num: number; ans_den: number };
     return {
-      op: item.op,
-      operands: [item.a, item.b],
-      answer: item.ans,
+      op: it.op,
+      operands: [it.a, it.d, it.b, it.d],
+      answer: it.ans_num,
+      ans_den: it.ans_den,
       raw: item,
     };
   }
-  if (item.op === "÷") {
-    return {
-      op: "÷",
-      operands: [item.a, item.b],
-      answer: item.ans,
-      remainder: item.r,
-      raw: item,
-    };
+  if (op === "decompose") {
+    const it = item as { op: string; n: number; a: number; b: number };
+    return { op: "decompose", operands: [it.n, it.a, it.b], answer: it.b, raw: item };
   }
-  if (item.op === "frac_add" || item.op === "frac_sub") {
-    return {
-      op: item.op,
-      operands: [item.a, item.d, item.b, item.d],
-      answer: item.ans_num,
-      ans_den: item.ans_den,
-      raw: item,
-    };
+  if (op === "make_ten" || op === "break_ten") {
+    const it = item as { op: string; a: number; ans: number };
+    return { op: it.op, operands: [it.a], answer: it.ans, raw: item };
   }
-  if (item.op === "decompose") {
-    return {
-      op: "decompose",
-      operands: [item.n, item.a, item.b],
-      answer: item.a,
-      raw: item,
-    };
+  if (op === "three") {
+    const it = item as { op: string; a: number; b: number; c: number; ops: string; ans: number };
+    return { op: "three", operands: [it.a, it.b, it.c], answer: it.ans, ops_str: it.ops, raw: item };
   }
-  if (item.op === "make_ten" || item.op === "break_ten") {
-    return {
-      op: item.op,
-      operands: [item.a],
-      answer: item.ans,
-      raw: item,
-    };
-  }
-  if (item.op === "three") {
-    return {
-      op: "three",
-      operands: [item.a, item.b, item.c],
-      answer: item.ans,
-      ops_str: item.ops,
-      raw: item,
-    };
-  }
-  // fallthrough
+  // 그 외 양식 (frac_mul, dec_*, factors, ratio_* 등) — 렌더러가 raw 사용
   return {
-    op: "?",
+    op: op || "?",
     operands: [],
     answer: 0,
     raw: item,
   };
 }
 
-export function generateDrill(sheet: SheetMeta): DrillProblem[] {
+export async function generateDrill(sheet: SheetMeta): Promise<DrillProblem[]> {
   const poolKey = sheet.pool_key;
-  const pool = poolKey ? POOLS[poolKey] : undefined;
+  if (!poolKey) return [];
+  const pool = await loadPool(poolKey);
+  if (pool.length === 0) return [];
+
   const seed = hashCode(`${sheet.unit_id}::${sheet.id}::${todayKey()}`);
   const rng = mulberry32(seed);
 
-  // 풀 없으면 빈 배열 (호출처에서 빈 상태 핸들링)
-  if (!pool || pool.length === 0) {
-    return [];
-  }
-
-  // 풀에서 problem_count 만큼 시드 기반 추출 — Fisher-Yates 부분 셔플
   const N = sheet.problem_count;
   const picked: PoolItem[] = [];
   if (pool.length <= N) {
@@ -150,11 +141,10 @@ export function generateDrill(sheet: SheetMeta): DrillProblem[] {
       idxs.add(Math.floor(rng() * pool.length));
     }
     for (const i of idxs) picked.push(pool[i]);
-    // 추출 결과도 한 번 더 셔플 (순서 다양성)
     picked.splice(0, picked.length, ...shuffle(picked, rng));
   }
 
-  const list: DrillProblem[] = picked.map((item, i) => {
+  return picked.map((item, i) => {
     const base = poolItemToProblem(item);
     return {
       ...base,
@@ -164,5 +154,13 @@ export function generateDrill(sheet: SheetMeta): DrillProblem[] {
       carry: sheet.carry,
     };
   });
-  return list;
+}
+
+// 풀 사이즈 동기 조회 (UI에서 "이 양식 N문제 풀" 표시용)
+export function getPoolSize(key: string): number {
+  return INDEX[key] || 0;
+}
+
+export function hasPool(key: string): boolean {
+  return !!INDEX[key];
 }

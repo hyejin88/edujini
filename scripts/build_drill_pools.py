@@ -10,8 +10,9 @@ from pathlib import Path
 
 random.seed(20260502)
 ROOT = Path('/Users/hyejin/Documents/generalv1/edutech_qa')
-OUT = ROOT / 'frontend' / 'lib' / 'drill_pools.json'
-MAX_POOL = 500  # 시드 셔플 + 매일 다른 학습지면 500개로도 다양성 충분, 번들 ~600KB
+OUT = ROOT / 'frontend' / 'lib' / 'drill_pools_index.json'  # 메타만 (키 → 풀 크기)
+SPLIT_DIR = ROOT / 'frontend' / 'public' / 'pools'         # 양식별 풀 파일
+MAX_POOL = 10000  # 풀당 1만 — 양식별 파일 분리(public/pools/)로 번들 압박 X
 
 
 def count_carries(a, b):
@@ -249,6 +250,509 @@ def gen_fraction_same_denom_sub():
     return out
 
 
+# ==== 분수: 변환 (가분수↔대분수, 진분수↔가분수) ====
+def gen_frac_proper_to_improper():
+    """진분수의 자연수 곱 → 가분수 (X · b/d). 일일수학 양식 매칭용 통합 표현."""
+    out = []
+    for d in range(2, 13):
+        for n in range(1, 4):  # 자연수
+            for b in range(1, d):  # 진분수 분자
+                num = n * d + b
+                out.append({
+                    'op': 'mixed_to_improper',
+                    'whole': n, 'num': b, 'den': d,
+                    'ans_num': num, 'ans_den': d,
+                })
+    return out
+
+
+def gen_frac_improper_to_mixed():
+    out = []
+    for d in range(2, 13):
+        for num in range(d + 1, 4 * d + 1):  # 가분수 분자 > 분모
+            whole = num // d
+            rem = num % d
+            out.append({
+                'op': 'improper_to_mixed',
+                'num': num, 'den': d,
+                'ans_whole': whole, 'ans_num': rem, 'ans_den': d,
+            })
+    return out
+
+
+def gen_frac_compare_same_denom():
+    """분모 같은 분수 크기 비교 — a/d ? b/d."""
+    out = []
+    for d in range(2, 13):
+        for a in range(1, 3 * d + 1):
+            for b in range(1, 3 * d + 1):
+                if a == b: continue
+                out.append({
+                    'op': 'frac_compare',
+                    'a_num': a, 'a_den': d, 'b_num': b, 'b_den': d,
+                    'ans': '>' if a > b else '<',
+                })
+    return out
+
+
+# ==== 분수의 덧셈/뺄셈: 합이 가분수 / 자연수-진분수 / 대분수 ====
+def gen_frac_same_add_sum_improper():
+    """분모 같은 진분수+진분수, 합이 가분수 (a + b >= d)."""
+    out = []
+    for d in range(3, 13):
+        for a in range(1, d):
+            for b in range(1, d):
+                if a + b >= d:
+                    out.append({
+                        'op': 'frac_add',
+                        'd': d, 'a': a, 'b': b,
+                        'ans_num': a + b, 'ans_den': d,
+                    })
+    return out
+
+
+def gen_frac_natural_minus_proper():
+    """자연수 - 진분수 = 대분수. (n - b/d, n>=1, 0<b<d)"""
+    out = []
+    for d in range(2, 13):
+        for n in range(1, 5):
+            for b in range(1, d):
+                # n - b/d = (n-1) + (d-b)/d
+                out.append({
+                    'op': 'frac_sub',
+                    'd': d, 'a_whole': n, 'a_num': 0, 'b': b,
+                    'ans_whole': n - 1, 'ans_num': d - b, 'ans_den': d,
+                })
+    return out
+
+
+def gen_frac_mixed_add():
+    """대분수의 덧셈 (분자의 합 < 분모)."""
+    out = []
+    for d in range(3, 13):
+        for w1 in range(1, 4):
+            for n1 in range(1, d):
+                for w2 in range(1, 4):
+                    for n2 in range(1, d - n1):
+                        out.append({
+                            'op': 'mixed_add',
+                            'w1': w1, 'n1': n1, 'w2': w2, 'n2': n2, 'd': d,
+                            'ans_whole': w1 + w2, 'ans_num': n1 + n2, 'ans_den': d,
+                        })
+    return out
+
+
+def gen_frac_mixed_add_carry():
+    """대분수의 덧셈 (분자의 합 >= 분모, 자연수 받아올림)."""
+    out = []
+    for d in range(3, 13):
+        for w1 in range(1, 4):
+            for n1 in range(1, d):
+                for w2 in range(1, 4):
+                    for n2 in range(d - n1, d):
+                        if n1 + n2 < d: continue
+                        total_num = n1 + n2
+                        ans_w = w1 + w2 + total_num // d
+                        ans_n = total_num % d
+                        out.append({
+                            'op': 'mixed_add',
+                            'w1': w1, 'n1': n1, 'w2': w2, 'n2': n2, 'd': d,
+                            'ans_whole': ans_w, 'ans_num': ans_n, 'ans_den': d,
+                        })
+    return out
+
+
+def gen_frac_mixed_sub():
+    """대분수의 뺄셈 (받아내림 없음, n1 >= n2)."""
+    out = []
+    for d in range(3, 13):
+        for w1 in range(2, 5):
+            for n1 in range(1, d):
+                for w2 in range(1, w1):
+                    for n2 in range(1, n1 + 1):
+                        out.append({
+                            'op': 'mixed_sub',
+                            'w1': w1, 'n1': n1, 'w2': w2, 'n2': n2, 'd': d,
+                            'ans_whole': w1 - w2, 'ans_num': n1 - n2, 'ans_den': d,
+                        })
+    return out
+
+
+def gen_frac_mixed_sub_borrow():
+    """대분수의 뺄셈 (받아내림 있음, n1 < n2)."""
+    out = []
+    for d in range(3, 13):
+        for w1 in range(2, 5):
+            for n1 in range(1, d):
+                for w2 in range(1, w1):
+                    for n2 in range(n1 + 1, d):
+                        # w1 n1/d - w2 n2/d → (w1-1) (n1+d)/d - w2 n2/d
+                        ans_w = (w1 - 1) - w2
+                        ans_n = (n1 + d) - n2
+                        out.append({
+                            'op': 'mixed_sub',
+                            'w1': w1, 'n1': n1, 'w2': w2, 'n2': n2, 'd': d,
+                            'ans_whole': ans_w, 'ans_num': ans_n, 'ans_den': d,
+                        })
+    return out
+
+
+# ==== 분모 다른 분수의 덧/뺄 (5학년) ====
+def gen_frac_diff_denom_add():
+    """분모 다른 진분수 + 진분수. 답은 분모 = 두 분모 LCM."""
+    from math import gcd
+    out = []
+    seen = set()
+    for d1 in range(2, 11):
+        for d2 in range(2, 11):
+            if d1 == d2: continue
+            for a in range(1, d1):
+                for b in range(1, d2):
+                    g = gcd(d1, d2)
+                    lcm = d1 * d2 // g
+                    num = a * (lcm // d1) + b * (lcm // d2)
+                    key = (d1, d2, a, b)
+                    if key in seen: continue
+                    seen.add(key)
+                    out.append({
+                        'op': 'frac_add_diff',
+                        'a_num': a, 'a_den': d1, 'b_num': b, 'b_den': d2,
+                        'ans_num': num, 'ans_den': lcm,
+                    })
+    return out
+
+
+def gen_frac_diff_denom_sub():
+    from math import gcd
+    out = []
+    for d1 in range(2, 11):
+        for d2 in range(2, 11):
+            if d1 == d2: continue
+            for a in range(1, d1):
+                for b in range(1, d2):
+                    g = gcd(d1, d2)
+                    lcm = d1 * d2 // g
+                    n1 = a * (lcm // d1)
+                    n2 = b * (lcm // d2)
+                    if n1 <= n2: continue  # 양수만
+                    out.append({
+                        'op': 'frac_sub_diff',
+                        'a_num': a, 'a_den': d1, 'b_num': b, 'b_den': d2,
+                        'ans_num': n1 - n2, 'ans_den': lcm,
+                    })
+    return out
+
+
+# ==== 분수의 곱셈/나눗셈 (5·6학년) ====
+def gen_frac_mul_proper():
+    """진분수 X 진분수."""
+    out = []
+    for d1 in range(2, 11):
+        for n1 in range(1, d1):
+            for d2 in range(2, 11):
+                for n2 in range(1, d2):
+                    out.append({
+                        'op': 'frac_mul',
+                        'a_num': n1, 'a_den': d1, 'b_num': n2, 'b_den': d2,
+                        'ans_num': n1 * n2, 'ans_den': d1 * d2,
+                    })
+    return out
+
+
+def gen_frac_mul_natural():
+    """자연수 X 진분수."""
+    out = []
+    for n in range(2, 10):
+        for d in range(2, 11):
+            for num in range(1, d):
+                out.append({
+                    'op': 'frac_mul_nat',
+                    'whole': n, 'b_num': num, 'b_den': d,
+                    'ans_num': n * num, 'ans_den': d,
+                })
+    return out
+
+
+def gen_frac_div_natural():
+    """진분수 ÷ 자연수."""
+    out = []
+    for d in range(2, 11):
+        for num in range(1, d):
+            for n in range(2, 10):
+                out.append({
+                    'op': 'frac_div_nat',
+                    'a_num': num, 'a_den': d, 'whole': n,
+                    'ans_num': num, 'ans_den': d * n,
+                })
+    return out
+
+
+def gen_frac_div_frac():
+    """진분수 ÷ 진분수."""
+    out = []
+    for d1 in range(2, 9):
+        for n1 in range(1, d1):
+            for d2 in range(2, 9):
+                for n2 in range(1, d2):
+                    out.append({
+                        'op': 'frac_div',
+                        'a_num': n1, 'a_den': d1, 'b_num': n2, 'b_den': d2,
+                        'ans_num': n1 * d2, 'ans_den': d1 * n2,
+                    })
+    return out
+
+
+# ==== 약분/통분 ====
+def gen_reduce_fraction():
+    """약분 — 약분 가능한 분수 → 기약분수."""
+    from math import gcd
+    out = []
+    for d in range(2, 25):
+        for n in range(1, d):
+            g = gcd(n, d)
+            if g <= 1: continue
+            out.append({
+                'op': 'reduce_frac',
+                'num': n, 'den': d,
+                'ans_num': n // g, 'ans_den': d // g,
+            })
+    return out
+
+
+def gen_common_denom():
+    """통분 — 두 분수를 통분 (분모 LCM 사용)."""
+    from math import gcd
+    out = []
+    for d1 in range(2, 11):
+        for d2 in range(d1 + 1, 12):
+            for a in range(1, d1):
+                for b in range(1, d2):
+                    g = gcd(d1, d2)
+                    lcm = d1 * d2 // g
+                    out.append({
+                        'op': 'common_denom',
+                        'a_num': a, 'a_den': d1, 'b_num': b, 'b_den': d2,
+                        'ans_lcm': lcm,
+                        'ans_a_num': a * (lcm // d1), 'ans_b_num': b * (lcm // d2),
+                    })
+    return out
+
+
+# ==== 소수 (4학년 +) ====
+def gen_decimal_add(decimals=1, integer=False):
+    """소수 덧셈. decimals=1: 0.x + 0.y (정수부 없음 또는 1자리)."""
+    out = []
+    int_max = 9 if integer else 0
+    scale = 10 ** decimals
+    int_lo = 0 if not integer else 1
+    for ai in range(int_lo, int_max + 1):
+        for ad in range(1, scale):
+            for bi in range(int_lo, int_max + 1):
+                for bd in range(1, scale):
+                    a = ai + ad / scale
+                    b = bi + bd / scale
+                    out.append({
+                        'op': 'dec_add',
+                        'a': round(a, decimals), 'b': round(b, decimals),
+                        'ans': round(a + b, decimals),
+                    })
+    return out
+
+
+def gen_decimal_sub(decimals=1, integer=False):
+    out = []
+    int_max = 9 if integer else 0
+    scale = 10 ** decimals
+    int_lo = 0 if not integer else 1
+    for ai in range(int_lo, int_max + 1):
+        for ad in range(1, scale):
+            for bi in range(int_lo, int_max + 1):
+                for bd in range(1, scale):
+                    a = ai + ad / scale
+                    b = bi + bd / scale
+                    if a < b: continue
+                    out.append({
+                        'op': 'dec_sub',
+                        'a': round(a, decimals), 'b': round(b, decimals),
+                        'ans': round(a - b, decimals),
+                    })
+    return out
+
+
+def gen_decimal_mul_natural(decimals=1):
+    """자연수 X 소수."""
+    out = []
+    scale = 10 ** decimals
+    for n in range(2, 10):
+        for di in range(0, 10):
+            for dd in range(1, scale):
+                d = di + dd / scale
+                out.append({
+                    'op': 'dec_mul_nat',
+                    'whole': n, 'dec': round(d, decimals),
+                    'ans': round(n * d, decimals),
+                })
+    return out
+
+
+def gen_decimal_mul_decimal(decimals=1):
+    """소수 X 소수 (decimals 자릿수)."""
+    out = []
+    scale = 10 ** decimals
+    for ai in range(0, 10):
+        for ad in range(1, scale):
+            for bi in range(0, 10):
+                for bd in range(1, scale):
+                    a = ai + ad / scale
+                    b = bi + bd / scale
+                    out.append({
+                        'op': 'dec_mul',
+                        'a': round(a, decimals), 'b': round(b, decimals),
+                        'ans': round(a * b, decimals * 2),
+                    })
+    return out
+
+
+def gen_decimal_div_natural(decimals=1):
+    """소수 ÷ 자연수 (떨어지는 경우만)."""
+    out = []
+    scale = 10 ** decimals
+    for n in range(2, 10):
+        for q_int in range(1, 10):
+            for q_dec in range(0, scale):
+                q = q_int + q_dec / scale
+                a = n * q
+                if abs(a - round(a, decimals)) > 1e-9: continue
+                out.append({
+                    'op': 'dec_div_nat',
+                    'a': round(a, decimals), 'whole': n,
+                    'ans': round(q, decimals),
+                })
+    return out
+
+
+# ==== 약수와 배수 (5학년) ====
+def gen_factors():
+    out = []
+    for n in range(4, 100):
+        factors = [i for i in range(1, n + 1) if n % i == 0]
+        if len(factors) >= 3:
+            out.append({'op': 'factors', 'n': n, 'ans': factors})
+    return out
+
+
+def gen_multiples():
+    out = []
+    for n in range(2, 21):
+        out.append({
+            'op': 'multiples',
+            'n': n,
+            'ans': [n * i for i in range(1, 11)],
+        })
+    return out
+
+
+def gen_gcd():
+    from math import gcd
+    out = []
+    for a in range(4, 100):
+        for b in range(4, 100):
+            if a == b: continue
+            g = gcd(a, b)
+            if g >= 2:
+                out.append({'op': 'gcd', 'a': a, 'b': b, 'ans': g})
+    return out
+
+
+def gen_lcm():
+    from math import gcd
+    out = []
+    for a in range(2, 30):
+        for b in range(a + 1, 30):
+            l = a * b // gcd(a, b)
+            out.append({'op': 'lcm', 'a': a, 'b': b, 'ans': l})
+    return out
+
+
+# ==== 비/비율/백분율 (6학년) ====
+def gen_ratio_simplify():
+    """비를 가장 간단한 자연수의 비로."""
+    from math import gcd
+    out = []
+    for a in range(2, 50):
+        for b in range(2, 50):
+            if a == b: continue
+            g = gcd(a, b)
+            if g >= 2:
+                out.append({'op': 'ratio_simplify', 'a': a, 'b': b, 'ans_a': a // g, 'ans_b': b // g})
+    return out
+
+
+def gen_ratio_to_pct():
+    """비율 → 백분율."""
+    out = []
+    for n in range(1, 100):
+        for d in [2, 4, 5, 8, 10, 20, 25, 50, 100]:
+            if n >= d: continue
+            pct = n * 100 / d
+            if abs(pct - round(pct, 2)) < 1e-9:
+                out.append({'op': 'ratio_to_pct', 'num': n, 'den': d, 'ans': round(pct, 2)})
+    return out
+
+
+# ==== 비례식·비례배분 (6학년) ====
+def gen_proportion():
+    """비례식 a:b = c:?  찾기."""
+    out = []
+    for a in range(2, 12):
+        for b in range(2, 12):
+            if a == b: continue
+            for k in range(2, 8):
+                c = a * k
+                d = b * k
+                out.append({'op': 'proportion', 'a': a, 'b': b, 'c': c, 'ans': d})
+    return out
+
+
+def gen_proportional_share():
+    """비례배분 — 전체 N을 a:b로 나눔."""
+    out = []
+    for total in [10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60]:
+        for a in range(1, total // 2):
+            for b in range(1, total // 2):
+                if (a + b) and total % (a + b) == 0:
+                    unit = total // (a + b)
+                    out.append({
+                        'op': 'prop_share',
+                        'total': total, 'a': a, 'b': b,
+                        'ans_a': a * unit, 'ans_b': b * unit,
+                    })
+    return out
+
+
+# ==== 자연수 혼합 계산 (5학년) ====
+def gen_mixed_calc_three():
+    """a (op) b (op) c — 사칙혼합 3개 항."""
+    import random as _r
+    _r.seed(7)
+    out = []
+    for _ in range(2000):
+        a = _r.randint(2, 50)
+        b = _r.randint(2, 30)
+        c = _r.randint(2, 20)
+        ops = _r.choice(['+×', '-×', '+÷', '-÷', '×+', '×-', '÷+'])
+        try:
+            # 우선순위 적용
+            v = {'+×': a + b * c, '-×': a - b * c, '+÷': a + (b // c if b % c == 0 else 0),
+                 '-÷': a - (b // c if b % c == 0 else 0), '×+': a * b + c, '×-': a * b - c,
+                 '÷+': (a // b if a % b == 0 else 0) + c}[ops]
+            if v < 0: continue
+            out.append({'op': 'mixed_calc', 'a': a, 'b': b, 'c': c, 'ops': ops, 'ans': v})
+        except Exception:
+            continue
+    return out
+
+
 def cap(pool, n=MAX_POOL):
     if len(pool) <= n:
         return pool
@@ -341,11 +845,74 @@ def main():
     pools['h_div_3_2'] = cap(gen_h_div(3, 2, with_remainder=False, q_max=99))
     pools['h_div_3_2_rem'] = cap(gen_h_div(3, 2, with_remainder=True, q_max=99))
 
-    # ===== 분수 =====
+    # ===== 분수 (3·4학년) =====
     pools['frac_same_add'] = cap(gen_fraction_same_denom_add())
+    pools['frac_same_add_improper'] = cap(gen_frac_same_add_sum_improper())
     pools['frac_same_sub'] = cap(gen_fraction_same_denom_sub())
+    pools['frac_natural_minus_proper'] = cap(gen_frac_natural_minus_proper())
+    pools['frac_proper_to_improper'] = cap(gen_frac_proper_to_improper())
+    pools['frac_improper_to_mixed'] = cap(gen_frac_improper_to_mixed())
+    pools['frac_compare_same'] = cap(gen_frac_compare_same_denom())
+    pools['frac_mixed_add'] = cap(gen_frac_mixed_add())
+    pools['frac_mixed_add_carry'] = cap(gen_frac_mixed_add_carry())
+    pools['frac_mixed_sub'] = cap(gen_frac_mixed_sub())
+    pools['frac_mixed_sub_borrow'] = cap(gen_frac_mixed_sub_borrow())
 
-    OUT.write_text(json.dumps(pools, ensure_ascii=False), encoding='utf-8')
+    # ===== 분수 (5·6학년) =====
+    pools['frac_diff_add'] = cap(gen_frac_diff_denom_add())
+    pools['frac_diff_sub'] = cap(gen_frac_diff_denom_sub())
+    pools['frac_mul'] = cap(gen_frac_mul_proper())
+    pools['frac_mul_natural'] = cap(gen_frac_mul_natural())
+    pools['frac_div_natural'] = cap(gen_frac_div_natural())
+    pools['frac_div'] = cap(gen_frac_div_frac())
+    pools['frac_reduce'] = cap(gen_reduce_fraction())
+    pools['frac_common_denom'] = cap(gen_common_denom())
+
+    # ===== 소수 (4·5·6학년) =====
+    pools['dec_add_1'] = cap(gen_decimal_add(1, integer=False))
+    pools['dec_add_1_int'] = cap(gen_decimal_add(1, integer=True))
+    pools['dec_add_2'] = cap(gen_decimal_add(2, integer=False))
+    pools['dec_add_2_int'] = cap(gen_decimal_add(2, integer=True))
+    pools['dec_sub_1'] = cap(gen_decimal_sub(1, integer=False))
+    pools['dec_sub_1_int'] = cap(gen_decimal_sub(1, integer=True))
+    pools['dec_sub_2'] = cap(gen_decimal_sub(2, integer=False))
+    pools['dec_sub_2_int'] = cap(gen_decimal_sub(2, integer=True))
+    pools['dec_mul_nat_1'] = cap(gen_decimal_mul_natural(1))
+    pools['dec_mul_nat_2'] = cap(gen_decimal_mul_natural(2))
+    pools['dec_mul_1'] = cap(gen_decimal_mul_decimal(1))
+    pools['dec_div_nat_1'] = cap(gen_decimal_div_natural(1))
+
+    # ===== 약수와 배수 (5학년) =====
+    pools['factors'] = cap(gen_factors())
+    pools['multiples'] = cap(gen_multiples())
+    pools['gcd'] = cap(gen_gcd())
+    pools['lcm'] = cap(gen_lcm())
+
+    # ===== 비/비율/백분율 (6학년) =====
+    pools['ratio_simplify'] = cap(gen_ratio_simplify())
+    pools['ratio_to_pct'] = cap(gen_ratio_to_pct())
+    pools['proportion'] = cap(gen_proportion())
+    pools['proportional_share'] = cap(gen_proportional_share())
+
+    # ===== 자연수 혼합 계산 (5학년) =====
+    pools['mixed_calc_3'] = cap(gen_mixed_calc_three())
+
+    # 분할 저장 — 풀별 개별 JSON 파일 (public/pools/<key>.json)
+    SPLIT_DIR.mkdir(parents=True, exist_ok=True)
+    # 기존 파일 정리
+    for old in SPLIT_DIR.glob('*.json'):
+        old.unlink()
+    index = {}
+    for k, v in pools.items():
+        (SPLIT_DIR / f'{k}.json').write_text(json.dumps(v, ensure_ascii=False), encoding='utf-8')
+        index[k] = len(v)
+    # 인덱스 (lib/drill_pools_index.json) — 클라이언트에서 풀 존재 확인용
+    OUT.write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding='utf-8')
+
+    # 기존 단일 drill_pools.json 제거
+    legacy = ROOT / 'frontend' / 'lib' / 'drill_pools.json'
+    if legacy.exists():
+        legacy.unlink()
 
     # 통계
     print(f'[OK] {OUT}')

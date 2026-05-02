@@ -1151,6 +1151,48 @@
       "layout": "h"
     }
   ],
+  "math-3-2-4": [
+    {
+      "id": "s1-h-f",
+      "unit_id": "math-3-2-4",
+      "type": "drill_h_add",
+      "title": "대분수를 가분수로 나타내기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_proper_to_improper",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-f",
+      "unit_id": "math-3-2-4",
+      "type": "drill_h_add",
+      "title": "가분수를 대분수로 나타내기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_improper_to_mixed",
+      "layout": "h"
+    },
+    {
+      "id": "s3-h-f",
+      "unit_id": "math-3-2-4",
+      "type": "drill_h_add",
+      "title": "분모가 같은 가분수/대분수끼리의 크기 비교",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_compare_same",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-f",
+      "unit_id": "math-3-2-4",
+      "type": "drill_h_add",
+      "title": "분모가 같은 가분수와 대분수의 크기 비교",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_compare_same",
+      "layout": "h"
+    }
+  ],
   "math-4-1-3": [
     {
       "id": "s1-h-m",
@@ -1343,25 +1385,565 @@
       "layout": "h"
     }
   ],
+  "math-4-2-1": [
+    {
+      "id": "s1-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 진분수의 덧셈 (합이 진분수)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_same_add",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 진분수의 덧셈 (합이 가분수)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_same_add_improper",
+      "layout": "h"
+    },
+    {
+      "id": "s3-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 대분수의 덧셈 (분자의 합 < 분모)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_mixed_add",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 대분수의 덧셈 (분자의 합 > 분모)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_mixed_add_carry",
+      "layout": "h"
+    },
+    {
+      "id": "s5-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 진분수의 뺄셈 (진분수 - 진분수)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_same_sub",
+      "layout": "h"
+    },
+    {
+      "id": "s6-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 진분수의 뺄셈 (자연수 - 진분수)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_natural_minus_proper",
+      "layout": "h"
+    },
+    {
+      "id": "s7-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 대분수의 뺄셈 <1>",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_mixed_sub",
+      "layout": "h"
+    },
+    {
+      "id": "s8-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 대분수의 뺄셈 <2>",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_mixed_sub_borrow",
+      "layout": "h"
+    },
+    {
+      "id": "s9-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 대분수와 진분수의 덧셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_same_add",
+      "layout": "h"
+    },
+    {
+      "id": "s10-h-f",
+      "unit_id": "math-4-2-1",
+      "type": "drill_h_add",
+      "title": "분모가 같은 대분수와 진분수의 뺄셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_same_sub",
+      "layout": "h"
+    }
+  ],
+  "math-4-2-3": [
+    {
+      "id": "s1-v-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_v_add",
+      "title": "자연수가 없는 소수 한 자리 수끼리의 덧셈",
+      "subtitle": "세로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_add_1",
+      "layout": "v"
+    },
+    {
+      "id": "s2-h-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_h_add",
+      "title": "자연수가 없는 소수 한 자리 수끼리의 덧셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_add_1",
+      "layout": "h"
+    },
+    {
+      "id": "s3-v-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_v_add",
+      "title": "자연수가 없는 소수 두 자리 수 범위의 덧셈",
+      "subtitle": "세로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_add_2",
+      "layout": "v"
+    },
+    {
+      "id": "s4-h-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_h_add",
+      "title": "자연수가 없는 소수 두 자리 수 범위의 덧셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_add_2",
+      "layout": "h"
+    },
+    {
+      "id": "s5-v-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_v_add",
+      "title": "자연수가 있는 소수 두 자리 수끼리의 덧셈",
+      "subtitle": "세로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_add_2_int",
+      "layout": "v"
+    },
+    {
+      "id": "s6-h-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_h_add",
+      "title": "자연수가 있는 소수 두 자리 수끼리의 덧셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_add_2_int",
+      "layout": "h"
+    },
+    {
+      "id": "s7-v-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_v_add",
+      "title": "자연수가 있는 소수 세 자리 수 범위의 덧셈",
+      "subtitle": "세로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_add_1_int",
+      "layout": "v"
+    },
+    {
+      "id": "s8-h-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_h_add",
+      "title": "자연수가 있는 소수 세 자리 수 범위의 덧셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_add_1_int",
+      "layout": "h"
+    },
+    {
+      "id": "s9-v-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_v_add",
+      "title": "소수 한 자리 수끼리의 뺄셈",
+      "subtitle": "세로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_sub_1",
+      "layout": "v"
+    },
+    {
+      "id": "s10-h-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_h_add",
+      "title": "소수 한 자리 수끼리의 뺄셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_sub_1",
+      "layout": "h"
+    },
+    {
+      "id": "s11-v-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_v_add",
+      "title": "자연수가 없는 소수 두 자리 범위의 뺄셈",
+      "subtitle": "세로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_sub_2",
+      "layout": "v"
+    },
+    {
+      "id": "s12-h-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_h_add",
+      "title": "자연수가 없는 소수 두 자리 범위의 뺄셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_sub_2",
+      "layout": "h"
+    },
+    {
+      "id": "s13-v-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_v_add",
+      "title": "자연수가 있는 소수 두 자리 수끼리의 뺄셈",
+      "subtitle": "세로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_sub_2_int",
+      "layout": "v"
+    },
+    {
+      "id": "s14-h-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_h_add",
+      "title": "자연수가 있는 소수 두 자리 수끼리의 뺄셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_sub_2_int",
+      "layout": "h"
+    },
+    {
+      "id": "s15-v-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_v_add",
+      "title": "자연수가 있는 소수 세 자리 수 범위의 뺄셈",
+      "subtitle": "세로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_sub_1_int",
+      "layout": "v"
+    },
+    {
+      "id": "s16-h-d",
+      "unit_id": "math-4-2-3",
+      "type": "drill_h_add",
+      "title": "자연수가 있는 소수 세 자리 수 범위의 뺄셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_sub_1_int",
+      "layout": "h"
+    }
+  ],
   "math-5-1-1": [
+    {
+      "id": "s1-h-m",
+      "unit_id": "math-5-1-1",
+      "type": "drill_h_add",
+      "title": "덧셈과 뺄셈의 혼합 계산",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-m",
+      "unit_id": "math-5-1-1",
+      "type": "drill_h_add",
+      "title": "곱셈과 나눗셈의 혼합 계산",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
     {
       "id": "s3-h-m",
       "unit_id": "math-5-1-1",
-      "type": "drill_h_mul",
+      "type": "drill_h_add",
       "title": "덧셈, 뺄셈, 곱셈의 혼합 계산",
       "subtitle": "가로식 · 16문제",
       "problem_count": 16,
-      "pool_key": "h_mul_1_1",
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-m",
+      "unit_id": "math-5-1-1",
+      "type": "drill_h_add",
+      "title": "덧셈, 뺄셈, 나눗셈의 혼합 계산",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
+    {
+      "id": "s5-h-m",
+      "unit_id": "math-5-1-1",
+      "type": "drill_h_add",
+      "title": "덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
+    {
+      "id": "s6-h-m",
+      "unit_id": "math-5-1-1",
+      "type": "drill_h_add",
+      "title": "( )가 있는 덧셈/뺄셈의 혼합 계산",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
+    {
+      "id": "s7-h-m",
+      "unit_id": "math-5-1-1",
+      "type": "drill_h_add",
+      "title": "( )가 있는 곱셈/나눗셈의 혼합 계산",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
       "layout": "h"
     },
     {
       "id": "s8-h-m",
       "unit_id": "math-5-1-1",
-      "type": "drill_h_mul",
+      "type": "drill_h_add",
       "title": "( )가 있는 덧셈/뺄셈/곱셈의 혼합 계산",
       "subtitle": "가로식 · 16문제",
       "problem_count": 16,
-      "pool_key": "h_mul_1_1",
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
+    {
+      "id": "s9-h-m",
+      "unit_id": "math-5-1-1",
+      "type": "drill_h_add",
+      "title": "( )가 있는 덧셈/뺄셈/나눗셈의 혼합 계산",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
+    {
+      "id": "s10-h-m",
+      "unit_id": "math-5-1-1",
+      "type": "drill_h_add",
+      "title": "( )가 있는 덧셈/뺄셈/곱셈/나눗셈의 혼합 계산",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
+    {
+      "id": "s11-h-m",
+      "unit_id": "math-5-1-1",
+      "type": "drill_h_add",
+      "title": "{ }가 있는 덧셈/뺄셈/곱셈/나눗셈의 혼합 계산",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    }
+  ],
+  "math-5-1-2": [
+    {
+      "id": "s1-h-f",
+      "unit_id": "math-5-1-2",
+      "type": "drill_h_add",
+      "title": "약수 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "factors",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-m",
+      "unit_id": "math-5-1-2",
+      "type": "drill_h_add",
+      "title": "배수 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "multiples",
+      "layout": "h"
+    },
+    {
+      "id": "s3-h-f",
+      "unit_id": "math-5-1-2",
+      "type": "drill_h_add",
+      "title": "공약수 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "factors",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-f",
+      "unit_id": "math-5-1-2",
+      "type": "drill_h_add",
+      "title": "최대 공약수 구하기 - 두 수를 곱으로 나타냄",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "factors",
+      "layout": "h"
+    },
+    {
+      "id": "s5-h-f",
+      "unit_id": "math-5-1-2",
+      "type": "drill_h_add",
+      "title": "최대 공약수 구하기 - 공통 약수 이용",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "factors",
+      "layout": "h"
+    },
+    {
+      "id": "s6-h-m",
+      "unit_id": "math-5-1-2",
+      "type": "drill_h_add",
+      "title": "공배수 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "multiples",
+      "layout": "h"
+    },
+    {
+      "id": "s7-h-m",
+      "unit_id": "math-5-1-2",
+      "type": "drill_h_add",
+      "title": "최소 공배수 구하기 - 두 수를 곱으로 나타냄",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "multiples",
+      "layout": "h"
+    },
+    {
+      "id": "s8-h-f",
+      "unit_id": "math-5-1-2",
+      "type": "drill_h_add",
+      "title": "최소 공배수 구하기 - 최대공약수 이용",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "factors",
+      "layout": "h"
+    }
+  ],
+  "math-5-1-4": [
+    {
+      "id": "s3-h-f",
+      "unit_id": "math-5-1-4",
+      "type": "drill_h_add",
+      "title": "기약분수 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_reduce",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-f",
+      "unit_id": "math-5-1-4",
+      "type": "drill_h_add",
+      "title": "분수의 통분 (곱을 공통분모로)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_common_denom",
+      "layout": "h"
+    },
+    {
+      "id": "s5-h-f",
+      "unit_id": "math-5-1-4",
+      "type": "drill_h_add",
+      "title": "분수의 통분 (최소공배수를 공통분모로)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_common_denom",
+      "layout": "h"
+    },
+    {
+      "id": "s6-h-f",
+      "unit_id": "math-5-1-4",
+      "type": "drill_h_add",
+      "title": "분수의 크기 비교",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_compare_same",
+      "layout": "h"
+    }
+  ],
+  "math-5-1-5": [
+    {
+      "id": "s1-h-f",
+      "unit_id": "math-5-1-5",
+      "type": "drill_h_add",
+      "title": "진분수의 덧셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_same_add",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-f",
+      "unit_id": "math-5-1-5",
+      "type": "drill_h_add",
+      "title": "대분수의 덧셈 (받아올림 없음)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_mixed_add_carry",
+      "layout": "h"
+    },
+    {
+      "id": "s3-h-f",
+      "unit_id": "math-5-1-5",
+      "type": "drill_h_add",
+      "title": "대분수의 덧셈 (받아올림 있음)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_mixed_add_carry",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-f",
+      "unit_id": "math-5-1-5",
+      "type": "drill_h_add",
+      "title": "진분수의 뺄셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_same_sub",
+      "layout": "h"
+    },
+    {
+      "id": "s5-h-f",
+      "unit_id": "math-5-1-5",
+      "type": "drill_h_add",
+      "title": "대분수의 뺄셈 (받아내림 없음)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_mixed_sub_borrow",
+      "layout": "h"
+    },
+    {
+      "id": "s6-h-f",
+      "unit_id": "math-5-1-5",
+      "type": "drill_h_add",
+      "title": "대분수의 뺄셈 (받아내림 있음)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_mixed_sub_borrow",
       "layout": "h"
     }
   ],
@@ -1407,23 +1989,23 @@
       "layout": "h"
     },
     {
-      "id": "s5-h-m",
+      "id": "s5-h-f",
       "unit_id": "math-5-2-2",
-      "type": "drill_h_mul",
+      "type": "drill_h_add",
       "title": "세 분수의 곱셈 (진분수)",
       "subtitle": "가로식 · 16문제",
       "problem_count": 16,
-      "pool_key": "h_mul_1_1",
+      "pool_key": "frac_mul",
       "layout": "h"
     },
     {
-      "id": "s6-h-m",
+      "id": "s6-h-f",
       "unit_id": "math-5-2-2",
-      "type": "drill_h_mul",
+      "type": "drill_h_add",
       "title": "세 분수의 곱셈 (대분수, 자연수 포함)",
       "subtitle": "가로식 · 16문제",
       "problem_count": 16,
-      "pool_key": "h_mul_1_1",
+      "pool_key": "frac_mul_natural",
       "layout": "h"
     }
   ],
@@ -1449,13 +2031,183 @@
       "layout": "h"
     },
     {
-      "id": "s4-h-m",
+      "id": "s4-h-d",
       "unit_id": "math-5-2-4",
-      "type": "drill_h_mul",
+      "type": "drill_h_add",
       "title": "세 소수의 곱셈",
       "subtitle": "가로식 · 16문제",
       "problem_count": 16,
-      "pool_key": "h_mul_1_1",
+      "pool_key": "dec_mul_1",
+      "layout": "h"
+    }
+  ],
+  "math-6-1-1": [
+    {
+      "id": "s2-h-f",
+      "unit_id": "math-6-1-1",
+      "type": "drill_h_add",
+      "title": "분수와 자연수의 곱셈/나눗셈 혼합",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_mul_natural",
+      "layout": "h"
+    }
+  ],
+  "math-6-1-4": [
+    {
+      "id": "s1-h-r",
+      "unit_id": "math-6-1-4",
+      "type": "drill_h_add",
+      "title": "비와 비율",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "ratio_to_pct",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-r",
+      "unit_id": "math-6-1-4",
+      "type": "drill_h_add",
+      "title": "백분율과 할푼리",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "ratio_to_pct",
+      "layout": "h"
+    }
+  ],
+  "math-6-2-1": [
+    {
+      "id": "s1-h-f",
+      "unit_id": "math-6-2-1",
+      "type": "drill_h_add",
+      "title": "분수의 나눗셈 <1>",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_div_natural",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-f",
+      "unit_id": "math-6-2-1",
+      "type": "drill_h_add",
+      "title": "분수의 나눗셈 <2>",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_div_natural",
+      "layout": "h"
+    },
+    {
+      "id": "s3-h-f",
+      "unit_id": "math-6-2-1",
+      "type": "drill_h_add",
+      "title": "분수의 나눗셈 <3>",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "frac_div",
+      "layout": "h"
+    }
+  ],
+  "math-6-2-2": [
+    {
+      "id": "s3-h-d",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "자릿수가 다른 두 소수의 나눗셈",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_div_nat_1",
+      "layout": "h"
+    },
+    {
+      "id": "s5-h-d",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "소수의 나눗셈에서 나머지 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "dec_div_nat_1",
+      "layout": "h"
+    },
+    {
+      "id": "s10-h-m",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "분수와 소수의 혼합 계산 (연산자가 2, 3개)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    },
+    {
+      "id": "s11-h-m",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "분수와 소수의 혼합 계산 (연산자가 4개 이상)",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "mixed_calc_3",
+      "layout": "h"
+    }
+  ],
+  "math-6-2-4": [
+    {
+      "id": "s2-h-p",
+      "unit_id": "math-6-2-4",
+      "type": "drill_h_add",
+      "title": "자연수로 된 비례식에서 @box 안의 수 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "proportion",
+      "layout": "h"
+    },
+    {
+      "id": "s3-h-p",
+      "unit_id": "math-6-2-4",
+      "type": "drill_h_add",
+      "title": "소수가 있는 비례식에서 @box 안의 수 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "proportion",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-p",
+      "unit_id": "math-6-2-4",
+      "type": "drill_h_add",
+      "title": "분수가 있는 비례식에서 @box 안의 수 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "proportion",
+      "layout": "h"
+    },
+    {
+      "id": "s6-h-r",
+      "unit_id": "math-6-2-4",
+      "type": "drill_h_add",
+      "title": "두 비를 연비로 나타낸 것에서 @box 안의 수 구하기",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "ratio_simplify",
+      "layout": "h"
+    },
+    {
+      "id": "s8-h-p",
+      "unit_id": "math-6-2-4",
+      "type": "drill_h_add",
+      "title": "비례배분",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "proportional_share",
+      "layout": "h"
+    },
+    {
+      "id": "s9-h-p",
+      "unit_id": "math-6-2-4",
+      "type": "drill_h_add",
+      "title": "연비로 비례배분",
+      "subtitle": "가로식 · 16문제",
+      "problem_count": 16,
+      "pool_key": "proportional_share",
       "layout": "h"
     }
   ]
