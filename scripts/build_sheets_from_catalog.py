@@ -260,7 +260,7 @@ def short_id(no, layout, op):
 unit_sheets = {}     # unit_id → [SheetMeta]
 report_lines = []
 unmapped = []
-auto_n = 16  # 기본 문항 수
+auto_n = 30  # 기본 문항 수 (일일수학 표준 ~30~32)
 for uid, info in CAT.items():
     sheets = []
     for f in info['formats']:

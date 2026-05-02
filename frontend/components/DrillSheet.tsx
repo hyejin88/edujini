@@ -426,11 +426,324 @@ function SpecialProblem({
     );
   }
 
-  // unknown op
+  // === 분수 변환 ===
+  const raw = (problem.raw || {}) as Record<string, number>;
+
+  // 대분수 → 가분수: w + n/d → ?/d
+  if (problem.op === "mixed_to_improper") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Mixed w={raw.whole} n={raw.num} d={raw.den} />
+        <span className="mx-1">=</span>
+        {problem.is_example ? (
+          <Frac n={raw.ans_num} d={raw.ans_den} />
+        ) : (
+          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+        )}
+        {isGraded && !problem.is_example && correct === false && (
+          <span className="ml-2 text-[#6b7280]" style={{ fontSize: "13px" }}>
+            (정답 {raw.ans_num}/{raw.ans_den})
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  // 가분수 → 대분수
+  if (problem.op === "improper_to_mixed") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Frac n={raw.num} d={raw.den} />
+        <span className="mx-1">=</span>
+        {problem.is_example ? (
+          <Mixed w={raw.ans_whole} n={raw.ans_num} d={raw.ans_den} />
+        ) : (
+          Box(`${raw.ans_whole} ${raw.ans_num}/${raw.ans_den}`, 100)
+        )}
+      </div>
+    );
+  }
+
+  // 분수 비교: a/d ? b/d
+  if (problem.op === "frac_compare") {
+    const ans = (raw.ans as unknown) as string; // '>' or '<'
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Frac n={raw.a_num} d={raw.a_den} />
+        <span className="mx-1">{problem.is_example ? String(raw.ans) : Box("(>, <)", 50)}</span>
+        <Frac n={raw.b_num} d={raw.b_den} />
+        {isGraded && !problem.is_example && correct === false && (
+          <span className="ml-2 text-[#6b7280]" style={{ fontSize: "13px" }}>
+            (정답 {String(ans)})
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  // 대분수 덧셈/뺄셈
+  if (problem.op === "mixed_add" || problem.op === "mixed_sub") {
+    const opSym = problem.op === "mixed_add" ? "+" : "−";
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Mixed w={raw.w1} n={raw.n1} d={raw.d} />
+        <span className="mx-1">{opSym}</span>
+        <Mixed w={raw.w2} n={raw.n2} d={raw.d} />
+        <span className="mx-1">=</span>
+        {problem.is_example ? (
+          <Mixed w={raw.ans_whole} n={raw.ans_num} d={raw.ans_den} />
+        ) : (
+          Box(`${raw.ans_whole} ${raw.ans_num}/${raw.ans_den}`, 100)
+        )}
+      </div>
+    );
+  }
+
+  // 분모 다른 분수 덧/뺄
+  if (problem.op === "frac_add_diff" || problem.op === "frac_sub_diff") {
+    const opSym = problem.op === "frac_add_diff" ? "+" : "−";
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Frac n={raw.a_num} d={raw.a_den} />
+        <span className="mx-1">{opSym}</span>
+        <Frac n={raw.b_num} d={raw.b_den} />
+        <span className="mx-1">=</span>
+        {problem.is_example ? (
+          <Frac n={raw.ans_num} d={raw.ans_den} />
+        ) : (
+          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+        )}
+      </div>
+    );
+  }
+
+  // 분수의 곱셈/나눗셈 (진분수×진분수)
+  if (problem.op === "frac_mul" || problem.op === "frac_div") {
+    const opSym = problem.op === "frac_mul" ? "×" : "÷";
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Frac n={raw.a_num} d={raw.a_den} />
+        <span className="mx-1">{opSym}</span>
+        <Frac n={raw.b_num} d={raw.b_den} />
+        <span className="mx-1">=</span>
+        {problem.is_example ? (
+          <Frac n={raw.ans_num} d={raw.ans_den} />
+        ) : (
+          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+        )}
+      </div>
+    );
+  }
+  // 자연수 X 분수
+  if (problem.op === "frac_mul_nat") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.whole} <span className="mx-1">×</span>
+        <Frac n={raw.b_num} d={raw.b_den} />
+        <span className="mx-1">=</span>
+        {problem.is_example ? (
+          <Frac n={raw.ans_num} d={raw.ans_den} />
+        ) : (
+          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+        )}
+      </div>
+    );
+  }
+  // 분수 ÷ 자연수
+  if (problem.op === "frac_div_nat") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Frac n={raw.a_num} d={raw.a_den} />
+        <span className="mx-1">÷</span>
+        {raw.whole}
+        <span className="mx-1">=</span>
+        {problem.is_example ? (
+          <Frac n={raw.ans_num} d={raw.ans_den} />
+        ) : (
+          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+        )}
+      </div>
+    );
+  }
+
+  // 약분
+  if (problem.op === "reduce_frac") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Frac n={raw.num} d={raw.den} />
+        <span className="mx-1">=</span>
+        {problem.is_example ? (
+          <Frac n={raw.ans_num} d={raw.ans_den} />
+        ) : (
+          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+        )}
+      </div>
+    );
+  }
+  // 통분: 두 분수 통분
+  if (problem.op === "common_denom") {
+    return (
+      <div className="font-mono" style={{ fontSize: "15px" }}>
+        (<Frac n={raw.a_num} d={raw.a_den} />,{" "}
+        <Frac n={raw.b_num} d={raw.b_den} />)<span className="mx-1">→</span>
+        {problem.is_example ? (
+          <span>
+            (<Frac n={raw.ans_a_num} d={raw.ans_lcm} />,{" "}
+            <Frac n={raw.ans_b_num} d={raw.ans_lcm} />)
+          </span>
+        ) : (
+          Box(`${raw.ans_a_num}/${raw.ans_lcm}, ${raw.ans_b_num}/${raw.ans_lcm}`, 140)
+        )}
+      </div>
+    );
+  }
+
+  // === 소수 덧셈/뺄셈/곱셈/나눗셈 ===
+  if (problem.op === "dec_add" || problem.op === "dec_sub") {
+    const opSym = problem.op === "dec_add" ? "+" : "−";
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} <span className="mx-1">{opSym}</span> {raw.b}
+        <span className="mx-1">=</span>
+        {Box(raw.ans)}
+      </div>
+    );
+  }
+  if (problem.op === "dec_mul") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} <span className="mx-1">×</span> {raw.b}
+        <span className="mx-1">=</span>
+        {Box(raw.ans)}
+      </div>
+    );
+  }
+  if (problem.op === "dec_mul_nat") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.whole} <span className="mx-1">×</span> {raw.dec}
+        <span className="mx-1">=</span>
+        {Box(raw.ans)}
+      </div>
+    );
+  }
+  if (problem.op === "dec_div_nat") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} <span className="mx-1">÷</span> {raw.whole}
+        <span className="mx-1">=</span>
+        {Box(raw.ans)}
+      </div>
+    );
+  }
+
+  // === 약수와 배수 ===
+  if (problem.op === "factors") {
+    const ans = (raw.ans as unknown) as number[];
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.n}의 약수:{" "}
+        {problem.is_example ? (
+          <span className={inputCls}>{Array.isArray(ans) ? ans.join(", ") : ""}</span>
+        ) : (
+          Box("(예: 1, 2, 4)", 140)
+        )}
+      </div>
+    );
+  }
+  if (problem.op === "multiples") {
+    const ans = (raw.ans as unknown) as number[];
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.n}의 배수 (10개):{" "}
+        {problem.is_example ? (
+          <span className={inputCls}>{Array.isArray(ans) ? ans.join(", ") : ""}</span>
+        ) : (
+          Box("(예: 2, 4, 6...)", 180)
+        )}
+      </div>
+    );
+  }
+  if (problem.op === "gcd") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a}, {raw.b}의 최대공약수 = {Box(raw.ans)}
+      </div>
+    );
+  }
+  if (problem.op === "lcm") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a}, {raw.b}의 최소공배수 = {Box(raw.ans)}
+      </div>
+    );
+  }
+
+  // === 비/비율/백분율 ===
+  if (problem.op === "ratio_simplify") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} : {raw.b} <span className="mx-1">=</span>{" "}
+        {problem.is_example ? (
+          <span className={inputCls}>{raw.ans_a} : {raw.ans_b}</span>
+        ) : (
+          Box(`${raw.ans_a}:${raw.ans_b}`, 80)
+        )}
+      </div>
+    );
+  }
+  if (problem.op === "ratio_to_pct") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        <Frac n={raw.num} d={raw.den} /> <span className="mx-1">=</span>{" "}
+        {Box(raw.ans)} %
+      </div>
+    );
+  }
+  if (problem.op === "proportion") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} : {raw.b} = {raw.c} : {Box(raw.ans)}
+      </div>
+    );
+  }
+  if (problem.op === "prop_share") {
+    return (
+      <div className="font-mono" style={{ fontSize: "15px" }}>
+        {raw.total}을 {raw.a} : {raw.b}로 →{" "}
+        {problem.is_example ? (
+          <span className={inputCls}>{raw.ans_a}, {raw.ans_b}</span>
+        ) : (
+          Box(`${raw.ans_a}, ${raw.ans_b}`, 100)
+        )}
+      </div>
+    );
+  }
+
+  // === 자연수 혼합 계산 (5학년) ===
+  if (problem.op === "mixed_calc") {
+    const ops = String(raw.ops || "");
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} {ops[0]} {raw.b} {ops[1]} {raw.c} = {Box(raw.ans)}
+      </div>
+    );
+  }
+
+  // unknown op fallthrough
   return (
     <div className="text-sm text-[#6b7280]">
       (이 양식은 표시 준비 중입니다)
     </div>
+  );
+}
+
+function Mixed({ w, n, d }: { w: number; n: number; d: number }) {
+  return (
+    <span style={{ display: "inline-flex", alignItems: "center" }}>
+      <span style={{ fontSize: "16px", marginRight: "2px" }}>{w}</span>
+      <Frac n={n} d={d} />
+    </span>
   );
 }
 

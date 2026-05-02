@@ -112,7 +112,8 @@ function poolItemToProblem(item: PoolItem): Omit<DrillProblem, "index" | "is_exa
     const it = item as { op: string; a: number; b: number; c: number; ops: string; ans: number };
     return { op: "three", operands: [it.a, it.b, it.c], answer: it.ans, ops_str: it.ops, raw: item };
   }
-  // 그 외 양식 (frac_mul, dec_*, factors, ratio_* 등) — 렌더러가 raw 사용
+  // 모든 op은 raw로 보존하여 SpecialProblem이 자체 렌더링.
+  // op은 그대로 통과시켜 DrillSheet에서 분기.
   return {
     op: op || "?",
     operands: [],
