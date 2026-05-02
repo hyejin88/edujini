@@ -7396,5 +7396,742 @@
     ],
     "license_code": "SELF_GEN",
     "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::0",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $15 + 3 \\times 4$",
+    "choices": [
+      "27",
+      "72",
+      "60",
+      "18"
+    ],
+    "answer": "27",
+    "answer_aliases": [
+      "27"
+    ],
+    "explanation": "곱셈을 덧셈보다 먼저 계산합니다. $3 \\times 4 = 12$ 이므로, $15 + 12 = 27$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "72",
+        "reason": "덧셈을 먼저 계산하는 오류 ($15+3=18$, $18 \\times 4 = 72$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::1",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $(15 + 3) \\times 4$",
+    "choices": [
+      "27",
+      "72",
+      "60",
+      "18"
+    ],
+    "answer": "72",
+    "answer_aliases": [
+      "72"
+    ],
+    "explanation": "괄호 안을 먼저 계산합니다. $15 + 3 = 18$ 이므로, $18 \\times 4 = 72$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "괄호",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "27",
+        "reason": "괄호의 우선순위를 무시하고 곱셈을 먼저 계산하는 오류"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::2",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 식을 계산하시오. $20 - 12 \\div 3$",
+    "choices": null,
+    "answer": "16",
+    "answer_aliases": [
+      "16"
+    ],
+    "explanation": "나눗셈을 뺄셈보다 먼저 계산합니다. $12 \\div 3 = 4$ 이므로, $20 - 4 = 16$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "2",
+        "reason": "뺄셈을 먼저 계산하는 오류 ($20-12=8$, $8 \\div 3$은 자연수가 아님)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::3",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $(20 - 12) \\div 4$",
+    "choices": [
+      "2",
+      "17",
+      "16",
+      "32"
+    ],
+    "answer": "2",
+    "answer_aliases": [
+      "2"
+    ],
+    "explanation": "괄호 안을 먼저 계산합니다. $20 - 12 = 8$ 이므로, $8 \\div 4 = 2$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "괄호",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "17",
+        "reason": "괄호의 우선순위를 무시하고 나눗셈을 먼저 계산하는 오류"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::4",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $7 \\times 5 + 10$",
+    "choices": [
+      "45",
+      "105",
+      "75",
+      "17"
+    ],
+    "answer": "45",
+    "answer_aliases": [
+      "45"
+    ],
+    "explanation": "곱셈을 덧셈보다 먼저 계산합니다. $7 \\times 5 = 35$ 이므로, $35 + 10 = 45$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "105",
+        "reason": "덧셈을 먼저 계산하는 오류 ($5+10=15$, $7 \\times 15 = 105$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::5",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음 식을 계산하시오. $30 \\div 5 - 2$",
+    "choices": null,
+    "answer": "4",
+    "answer_aliases": [
+      "4"
+    ],
+    "explanation": "나눗셈을 뺄셈보다 먼저 계산합니다. $30 \\div 5 = 6$ 이므로, $6 - 2 = 4$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "10",
+        "reason": "뺄셈을 먼저 계산하는 오류 ($5-2=3$, $30 \\div 3 = 10$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::6",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $10 + 2 \\times 3 - 5$",
+    "choices": [
+      "11",
+      "31",
+      "1",
+      "15"
+    ],
+    "answer": "11",
+    "answer_aliases": [
+      "11"
+    ],
+    "explanation": "곱셈을 먼저 계산합니다. $2 \\times 3 = 6$ 이므로, $10 + 6 - 5 = 16 - 5 = 11$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "31",
+        "reason": "왼쪽부터 순서대로 계산하는 오류 ($10+2=12$, $12 \\times 3 = 36$, $36-5=31$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::7",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "다음 식을 계산하시오. $24 \\div 4 + 3 \\times 2$",
+    "choices": null,
+    "answer": "12",
+    "answer_aliases": [
+      "12"
+    ],
+    "explanation": "나눗셈과 곱셈을 먼저 계산합니다. $24 \\div 4 = 6$, $3 \\times 2 = 6$ 이므로, $6 + 6 = 12$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "18",
+        "reason": "왼쪽부터 순서대로 계산하는 오류 ($24 \\div 4 = 6$, $6+3=9$, $9 \\times 2 = 18$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::8",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $(18 - 6) \\div 3 + 7$",
+    "choices": [
+      "11",
+      "13",
+      "10",
+      "15"
+    ],
+    "answer": "11",
+    "answer_aliases": [
+      "11"
+    ],
+    "explanation": "괄호 안을 먼저 계산합니다. $18 - 6 = 12$ 이므로, $12 \\div 3 + 7 = 4 + 7 = 11$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "괄호",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "13",
+        "reason": "괄호의 우선순위를 무시하고 나눗셈을 먼저 계산하는 오류 ($6 \\div 3 = 2$, $18-2+7=23$ 또는 $18-2=16$, $16+7=23$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::9",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $5 \\times (12 - 8) + 15$",
+    "choices": [
+      "35",
+      "75",
+      "20",
+      "25"
+    ],
+    "answer": "35",
+    "answer_aliases": [
+      "35"
+    ],
+    "explanation": "괄호 안을 먼저 계산합니다. $12 - 8 = 4$ 이므로, $5 \\times 4 + 15 = 20 + 15 = 35$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "괄호",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "75",
+        "reason": "괄호의 우선순위를 무시하고 곱셈을 먼저 계산하는 오류 ($5 \\times 12 = 60$, $60-8+15=67$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::10",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 식을 계산하시오. $40 - 5 \\times 3 + 10 \\div 2$",
+    "choices": null,
+    "answer": "30",
+    "answer_aliases": [
+      "30"
+    ],
+    "explanation": "곱셈과 나눗셈을 먼저 계산합니다. $5 \\times 3 = 15$, $10 \\div 2 = 5$ 이므로, $40 - 15 + 5 = 25 + 5 = 30$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "15",
+        "reason": "왼쪽부터 순서대로 계산하는 오류 ($40-5=35$, $35 \\times 3 = 105$, $105+10=115$, $115 \\div 2$는 자연수가 아님)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::11",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $(30 + 10) \\div 5 - 2 \\times 3$",
+    "choices": [
+      "2",
+      "10",
+      "14",
+      "20"
+    ],
+    "answer": "2",
+    "answer_aliases": [
+      "2"
+    ],
+    "explanation": "괄호 안을 먼저 계산합니다. $30 + 10 = 40$ 이므로, $40 \\div 5 - 2 \\times 3 = 8 - 6 = 2$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "괄호",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "10",
+        "reason": "곱셈을 먼저 계산하지 않고 왼쪽부터 계산하는 오류 ($40 \\div 5 = 8$, $8-2=6$, $6 \\times 3 = 18$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::12",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "사탕 20개가 있습니다. 친구 3명에게 4개씩 나누어 주고 남은 사탕을 내가 2개 더 먹었습니다. 남은 사탕은 몇 개입니까?",
+    "choices": [
+      "10개",
+      "8개",
+      "12개",
+      "14개"
+    ],
+    "answer": "10개",
+    "answer_aliases": [
+      "10"
+    ],
+    "explanation": "친구들에게 준 사탕은 $3 \\times 4 = 12$ (개)입니다. 남은 사탕은 $20 - 12 = 8$ (개)입니다. 내가 2개 더 먹었으므로 $8 + 2 = 10$ (개)입니다. 식으로 나타내면 $20 - 3 \\times 4 + 2 = 10$ 입니다.",
+    "concept_tags": [
+      "식 세우기",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "8개",
+        "reason": "내가 2개 더 먹은 것을 계산에 포함하지 않는 오류"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::13",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "연필 5자루가 1000원입니다. 3000원으로 연필을 사고 남은 돈으로 200원짜리 지우개를 몇 개 살 수 있습니까?",
+    "choices": null,
+    "answer": "10개",
+    "answer_aliases": [
+      "10"
+    ],
+    "explanation": "연필을 사고 남은 돈은 $3000 - 1000 = 2000$ (원)입니다. 남은 돈으로 200원짜리 지우개를 살 수 있는 개수는 $2000 \\div 200 = 10$ (개)입니다. 식으로 나타내면 $(3000 - 1000) \\div 200 = 10$ 입니다.",
+    "concept_tags": [
+      "식 세우기",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "15",
+        "reason": "3000원을 모두 지우개 사는 데 썼다고 착각하는 오류"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::14",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "빵 12개가 있습니다. 4개씩 묶어 포장한 후, 3묶음을 팔고 2묶음을 새로 만들었습니다. 현재 빵은 총 몇 묶음입니까?",
+    "choices": [
+      "2묶음",
+      "3묶음",
+      "4묶음",
+      "5묶음"
+    ],
+    "answer": "2묶음",
+    "answer_aliases": [
+      "2"
+    ],
+    "explanation": "처음에 빵은 $12 \\div 4 = 3$ (묶음)이었습니다. 3묶음을 팔았으므로 $3 - 3 = 0$ (묶음)이 남았습니다. 2묶음을 새로 만들었으므로 $0 + 2 = 2$ (묶음)입니다. 식으로 나타내면 $12 \\div 4 - 3 + 2 = 2$ 입니다.",
+    "concept_tags": [
+      "식 세우기",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "3묶음",
+        "reason": "새로 만든 묶음을 더하는 것을 잊거나, 처음 묶음 수를 잘못 계산하는 오류"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::15",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "학생 25명을 5명씩 조를 짰습니다. 각 조에 색연필 3자루씩 나눠주고, 남은 색연필 5자루는 선생님이 가졌습니다. 원래 색연필은 몇 자루였습니까?",
+    "choices": [
+      "20자루",
+      "15자루",
+      "25자루",
+      "30자루"
+    ],
+    "answer": "20자루",
+    "answer_aliases": [
+      "20"
+    ],
+    "explanation": "총 조의 수는 $25 \\div 5 = 5$ (조)입니다. 각 조에 3자루씩 주었으므로 나눠준 색연필은 $5 \\times 3 = 15$ (자루)입니다. 선생님이 5자루를 가졌으므로 원래 색연필은 $15 + 5 = 20$ (자루)입니다. 식으로 나타내면 $(25 \\div 5) \\times 3 + 5 = 20$ 입니다.",
+    "concept_tags": [
+      "식 세우기",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "15자루",
+        "reason": "선생님이 가진 색연필을 더하지 않는 오류"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::16",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "공책 1권은 500원, 볼펜 1자루는 300원입니다. 공책 3권과 볼펜 2자루를 사고 5000원을 냈을 때, 거스름돈은 얼마입니까?",
+    "choices": null,
+    "answer": "2900원",
+    "answer_aliases": [
+      "2900"
+    ],
+    "explanation": "공책 3권의 가격은 $500 \\times 3 = 1500$ (원)입니다. 볼펜 2자루의 가격은 $300 \\times 2 = 600$ (원)입니다. 총 구매 금액은 $1500 + 600 = 2100$ (원)입니다. 거스름돈은 $5000 - 2100 = 2900$ (원)입니다. 식으로 나타내면 $5000 - (500 \\times 3 + 300 \\times 2) = 2900$ 입니다.",
+    "concept_tags": [
+      "식 세우기",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "4200",
+        "reason": "괄호 없이 계산하여 뺄셈을 먼저 하는 오류 ($5000-500 \\times 3 + 300 \\times 2$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::17",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "과자 1봉지에는 과자가 10개 들어있습니다. 과자 3봉지를 사서 친구 2명과 내가 똑같이 나눠 먹었습니다. 한 명이 먹은 과자는 몇 개입니까?",
+    "choices": [
+      "10개",
+      "15개",
+      "30개",
+      "5개"
+    ],
+    "answer": "10개",
+    "answer_aliases": [
+      "10"
+    ],
+    "explanation": "총 과자의 개수는 $10 \\times 3 = 30$ (개)입니다. 친구 2명과 나를 포함하면 총 3명이므로, 한 명이 먹은 과자는 $30 \\div 3 = 10$ (개)입니다. 식으로 나타내면 $(10 \\times 3) \\div 3 = 10$ 입니다.",
+    "concept_tags": [
+      "식 세우기",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "15개",
+        "reason": "나를 포함하지 않고 친구 2명에게만 나눈 것으로 착각하는 오류"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::18",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $25 - (3 + 2) \\times 4 \\div 2$",
+    "choices": [
+      "15",
+      "10",
+      "20",
+      "5"
+    ],
+    "answer": "15",
+    "answer_aliases": [
+      "15"
+    ],
+    "explanation": "괄호 안을 먼저 계산합니다. $3 + 2 = 5$ 이므로, $25 - 5 \\times 4 \\div 2$ 입니다. 다음으로 곱셈과 나눗셈을 왼쪽부터 계산합니다. $5 \\times 4 = 20$, $20 \\div 2 = 10$ 이므로, $25 - 10 = 15$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "괄호",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "10",
+        "reason": "곱셈과 나눗셈의 순서를 잘못 적용하는 오류 ($25 - (5 \\times 4 \\div 2)$에서 $4 \\div 2$를 먼저 계산하는 등)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-1::v3::19",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-01]",
+    "unit_id": "math-5-1-1",
+    "unit_name": "자연수의 혼합 계산",
+    "sub_unit": "덧·뺄·곱·나눗셈 혼합",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "다음 식을 계산한 값으로 알맞은 것은 어느 것입니까? $(100 \\div 5 - 10) \\times 3 + 7$",
+    "choices": [
+      "37",
+      "47",
+      "27",
+      "17"
+    ],
+    "answer": "37",
+    "answer_aliases": [
+      "37"
+    ],
+    "explanation": "괄호 안의 나눗셈을 먼저 계산합니다. $100 \\div 5 = 20$ 이므로, $(20 - 10) \\times 3 + 7$ 입니다. 괄호 안의 뺄셈을 계산합니다. $20 - 10 = 10$ 이므로, $10 \\times 3 + 7$ 입니다. 곱셈을 먼저 계산합니다. $10 \\times 3 = 30$ 이므로, $30 + 7 = 37$ 입니다.",
+    "concept_tags": [
+      "연산 순서",
+      "괄호",
+      "혼합 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "47",
+        "reason": "괄호 안의 계산을 잘못하거나, 괄호 밖의 계산 순서를 잘못 적용하는 오류"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
   }
 ]

@@ -50,7 +50,7 @@ export default function LandingPage() {
             </span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            단원별 학습부터 매일 새 연산 문제까지.
+            AI 단원 학습 + 매일 새 연산 60만 문제.
             <br className="hidden sm:block" />
             우리 아이 학년에 맞춰 바로 풀고 즉시 채점해요.
           </p>
@@ -126,9 +126,9 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl px-4">
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              { title: "매일 새 문제", desc: "연산 문제는 단원·날짜로 매번 새 숫자" },
-              { title: "즉시 채점", desc: "정답·오답 유형까지 한 번에 표시" },
-              { title: "회원가입 없이", desc: "지금 바로 풀고, 마음에 들면 인쇄해요" },
+              { title: "AI 단원 학습", desc: "객·서술형 20문항 + 4축 오답 진단 + 학부모 리포트" },
+              { title: "60만 연산 풀", desc: "단원·날짜로 매번 다른 30문제, 한영 안 뜨는 숫자 키패드" },
+              { title: "회원가입 없이", desc: "지금 바로 풀고 즉시 채점 — 단말 안에서만 진단" },
             ].map((item) => (
               <Card key={item.title} className="border border-border p-6 text-left">
                 <p className="text-base font-semibold text-foreground">
