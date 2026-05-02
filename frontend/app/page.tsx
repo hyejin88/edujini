@@ -141,18 +141,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Trust Quote */}
-      <section className="border-y border-border bg-secondary py-12">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <blockquote className="text-xl font-medium text-foreground md:text-2xl">
-            &ldquo;공부방 20만원짜리보다 자세하대요&rdquo;
-          </blockquote>
-          <p className="mt-4 text-sm text-muted-foreground">
-            - 초등 3학년 학부모
-          </p>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="py-12">
         <div className="mx-auto max-w-4xl px-4 text-center">
