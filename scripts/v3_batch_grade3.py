@@ -55,14 +55,52 @@ def strip_fences(text: str) -> str:
     return re.sub(r"^```(?:json)?\s*|\s*```$", "", (text or "").strip(), flags=re.MULTILINE)
 
 
+VALID_ESCAPE = set('"\\/bfnrtu')
+
+
+def fix_invalid_escapes(s: str) -> str:
+    """JSON 문자열 내에서 invalid backslash escape를 \\\\로 자동 escape.
+    state machine 방식 — quote/escape 상태 추적."""
+    out = []
+    i = 0
+    in_string = False
+    while i < len(s):
+        c = s[i]
+        if c == '"':
+            # 문자열 경계 (이스케이프된 경우 제외)
+            backslashes = 0
+            j = i - 1
+            while j >= 0 and s[j] == '\\':
+                backslashes += 1
+                j -= 1
+            if backslashes % 2 == 0:
+                in_string = not in_string
+            out.append(c)
+            i += 1
+        elif in_string and c == '\\' and i + 1 < len(s):
+            nxt = s[i + 1]
+            if nxt in VALID_ESCAPE:
+                out.append(c)
+                out.append(nxt)
+                i += 2
+            else:
+                # invalid escape (\f가 아닌 \frac 등) → 더블
+                out.append('\\\\')
+                i += 1
+        else:
+            out.append(c)
+            i += 1
+    return ''.join(out)
+
+
 def safe_parse_json(text: str) -> dict | list | None:
-    """Gemini가 KaTeX 백슬래시를 단일로 출력할 때 JSON 파싱 실패 → 자동 보정."""
+    """Gemini가 KaTeX 백슬래시를 단일로 출력할 때 JSON 파싱 실패 → 자동 보정 (3단계)."""
     try:
         return json.loads(text)
     except json.JSONDecodeError:
         pass
-    # 1차 보정: \X 패턴 (X는 영문자) → \\X (KaTeX 명령어)
-    fixed = re.sub(r'\\(?=[a-zA-Z])', r'\\\\', text)
+    # 1차 보정: state-aware invalid escape fix
+    fixed = fix_invalid_escapes(text)
     try:
         return json.loads(fixed)
     except json.JSONDecodeError:
@@ -71,8 +109,14 @@ def safe_parse_json(text: str) -> dict | list | None:
     cleaned = re.sub(r'[\x00-\x08\x0B\x0C\x0E-\x1F]', '', fixed)
     try:
         return json.loads(cleaned)
+    except json.JSONDecodeError:
+        pass
+    # 3차 보정: 단순 regex (\X → \\X) — 이전 방식
+    fixed2 = re.sub(r'\\(?=[a-zA-Z])', r'\\\\', text)
+    try:
+        return json.loads(fixed2)
     except json.JSONDecodeError as e:
-        print(f"  [JSON-FIX] 2차 보정도 실패: {e}", flush=True)
+        print(f"  [JSON-FIX] 3차 보정도 실패: {e}", flush=True)
         return None
 
 

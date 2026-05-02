@@ -38,7 +38,9 @@ const COMP_UNITS: Record<string, { title: string; subtitle: string }> = {
   "math-3-1-3": { title: "단원 학습", subtitle: "나눗셈 개념·곱셈과 관계 · 20문제" },
   "math-3-1-4": { title: "단원 학습", subtitle: "(두 자리)×(한 자리) · 20문제" },
   "math-3-1-6": { title: "단원 학습", subtitle: "분수의 의미·소수 첫째 자리 · 20문제" },
+  "math-3-2-1": { title: "단원 학습", subtitle: "(세 자리)×(한 자리)·(두 자리)×(두 자리) · 20문제" },
   "math-3-2-2": { title: "단원 학습", subtitle: "(두 자리) ÷ (한 자리) · 20문제" },
+  "math-3-2-4": { title: "단원 학습", subtitle: "진분수·가분수·대분수 · 20문제" },
 };
 
 function compSheet(unitId: string): SheetMeta | null {
