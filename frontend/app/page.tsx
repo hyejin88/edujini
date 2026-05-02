@@ -51,10 +51,12 @@ export default function LandingPage() {
               골라보세요
             </span>
           </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            자녀가 어디서 막히는지 자동으로 짚어드려요.
-            <br className="hidden sm:block" />
-            우리 아이 학년에 맞춰 바로 풀고 즉시 채점해요.
+          <p className="mx-auto mb-3 max-w-2xl text-lg text-muted-foreground">
+            <strong className="text-foreground">아이 오답 유형까지 분석해서 다음 문제를 골라주는</strong>{" "}
+            <span className="whitespace-nowrap">무료 학습 사이트</span>
+          </p>
+          <p className="mx-auto mb-10 max-w-2xl text-sm text-muted-foreground">
+            지금은 회원가입 없이 — 곧 자녀별 학습 기록 저장도 추가돼요
           </p>
 
           {/* Grade Picker */}
@@ -128,9 +130,9 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl px-4">
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              { title: "어디서 막히는지 짚어드려요", desc: "받아올림·자릿값 정렬 같은 약한 부분을 자동으로 찾고, 다음에 뭐 풀면 좋은지 추천해요" },
-              { title: "학교 진도와 정확히 맞춰요", desc: "교과서 단원·성취기준 그대로. 매일 새 30문제 + 즉시 채점" },
-              { title: "회원가입 없이 지금 바로", desc: "이 단말 안에서만 진단 누적. 자녀가 풀고 학부모가 결과만 봐도 OK" },
+              { title: "오답 유형 자동 분석", desc: "왜 틀렸는지(개념·계산·꼼꼼함) 4가지 유형으로 분류해서 다음 학습을 추천해요" },
+              { title: "학교 진도와 정확히 맞춰요", desc: "교과서 단원·NCIC 성취기준 그대로. 매일 새 30문제 + 즉시 채점" },
+              { title: "지금은 회원가입 없이", desc: "이 단말 안에서만 진단 누적. 곧 자녀별 학습 기록 저장 기능 추가 예정" },
             ].map((item) => (
               <Card key={item.title} className="border border-border p-6 text-left">
                 <p className="text-base font-semibold text-foreground">
