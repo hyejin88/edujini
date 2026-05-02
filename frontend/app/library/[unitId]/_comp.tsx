@@ -170,11 +170,11 @@ export default function ComprehensiveSheet({
       <header className="no-print sticky top-0 z-10 border-b border-[#e5e7eb] bg-white">
         <div className="mx-auto flex max-w-[210mm] items-center justify-between px-4 py-3">
           <Link
-            href={`/library/${encodeURIComponent(unitId)}`}
+            href={`/library?grade=${unit?.grade ?? 3}&subject=${encodeURIComponent(unit?.subject ?? "수학")}&mode=comp`}
             className="flex items-center gap-2 text-sm text-[#6b7280] hover:text-[#111827]"
           >
             <ArrowLeft className="h-4 w-4" />
-            학습지 목록
+            단원 목록
           </Link>
           <div className="flex items-center gap-2">
             <button

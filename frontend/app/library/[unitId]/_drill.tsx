@@ -55,11 +55,11 @@ export default function DrillSheetPage({
       <header className="no-print sticky top-0 z-10 border-b border-[#e5e7eb] bg-white">
         <div className="mx-auto flex max-w-[210mm] items-center justify-between px-4 py-3">
           <Link
-            href={`/library/${encodeURIComponent(sheet.unit_id)}`}
+            href={`/library/${encodeURIComponent(sheet.unit_id)}?mode=drill`}
             className="flex items-center gap-2 text-sm text-[#6b7280] hover:text-[#111827]"
           >
             <ArrowLeft className="h-4 w-4" />
-            학습지 목록
+            양식 목록
           </Link>
           <div className="flex items-center gap-2">
             <button
