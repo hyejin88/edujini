@@ -81,7 +81,7 @@ function DrillProblemCell({
       {/* 번호 */}
       <div
         className="mb-1 font-serif font-bold text-[#111827]"
-        style={{ fontSize: "16px" }}
+        style={{ fontSize: "18px" }}
       >
         {problem.index}.
       </div>
@@ -141,7 +141,7 @@ function HorizontalProblem({
   return (
     <div
       className="font-mono"
-      style={{ fontSize: "16px", letterSpacing: "0.02em" }}
+      style={{ fontSize: "18px", letterSpacing: "0.02em" }}
     >
       {a} {problem.op} {b} ={" "}
       {problem.is_example ? (
@@ -203,7 +203,7 @@ function VerticalProblem({
   return (
     <div
       className="inline-block font-mono"
-      style={{ fontSize: "16px", letterSpacing: "0.04em" }}
+      style={{ fontSize: "18px", letterSpacing: "0.04em" }}
     >
       <table style={{ borderCollapse: "collapse" }}>
         <tbody>
@@ -439,7 +439,7 @@ function SpecialProblem({
     const [an, ad, bn, bd] = problem.operands;
     const opSym = problem.op === "frac_add" ? "+" : "−";
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         <Frac n={an} d={ad} /> <span className="mx-1">{opSym}</span>{" "}
         <Frac n={bn} d={bd} /> <span className="mx-1">=</span>{" "}
         {problem.is_example ? (
@@ -460,7 +460,7 @@ function SpecialProblem({
   if (problem.op === "decompose") {
     const [n, a] = problem.operands;
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {n} = {a} + {Box(problem.answer)}
       </div>
     );
@@ -473,7 +473,7 @@ function SpecialProblem({
     if (box === "left") {
       // □ + b = 10
       return (
-        <div className="font-mono" style={{ fontSize: "16px" }}>
+        <div className="font-mono" style={{ fontSize: "18px" }}>
           {Box(problem.answer)} + {r.b as number} = 10
         </div>
       );
@@ -481,7 +481,7 @@ function SpecialProblem({
     if (box === "sum") {
       // a + b = □
       return (
-        <div className="font-mono" style={{ fontSize: "16px" }}>
+        <div className="font-mono" style={{ fontSize: "18px" }}>
           {r.a as number} + {r.b as number} = {Box(problem.answer)}
         </div>
       );
@@ -489,14 +489,14 @@ function SpecialProblem({
     if (box === "three_sum") {
       // a + b + c = □
       return (
-        <div className="font-mono" style={{ fontSize: "16px" }}>
+        <div className="font-mono" style={{ fontSize: "18px" }}>
           {r.a as number} + {r.b as number} + {r.c as number} = {Box(problem.answer)}
         </div>
       );
     }
     // 기본: a + □ = 10
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {r.a as number} + {Box(problem.answer)} = 10
       </div>
     );
@@ -508,14 +508,14 @@ function SpecialProblem({
     if (box === "middle") {
       // 10 - □ = b
       return (
-        <div className="font-mono" style={{ fontSize: "16px" }}>
+        <div className="font-mono" style={{ fontSize: "18px" }}>
           10 − {Box(problem.answer)} = {r.ans_b as number}
         </div>
       );
     }
     // 기본: 10 - a = □
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         10 − {r.a as number} = {Box(problem.answer)}
       </div>
     );
@@ -528,7 +528,7 @@ function SpecialProblem({
     const o1 = ops[0] === "+" ? "+" : "−";
     const o2 = ops[1] === "+" ? "+" : "−";
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {r.a as number} {o1} {r.b as number} {o2} {r.c as number} = {Box(problem.answer)}
       </div>
     );
@@ -539,13 +539,13 @@ function SpecialProblem({
     const r = (problem.raw || {}) as Record<string, number | string>;
     if (r.box === "a") {
       return (
-        <div className="font-mono" style={{ fontSize: "16px" }}>
+        <div className="font-mono" style={{ fontSize: "18px" }}>
           {Box(problem.answer)} + {r.b as number} = {r.c as number}
         </div>
       );
     }
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {r.a as number} + {Box(problem.answer)} = {r.c as number}
       </div>
     );
@@ -553,7 +553,7 @@ function SpecialProblem({
   if (problem.op === "box_sub") {
     const r = (problem.raw || {}) as Record<string, number | string>;
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {r.a as number} − {Box(problem.answer)} = {r.c as number}
       </div>
     );
@@ -562,34 +562,34 @@ function SpecialProblem({
   if (problem.op === "box_mul") {
     const r = (problem.raw || {}) as Record<string, number | string>;
     if (r.box === "c") {
-      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} × {r.b as number} = {Box(problem.answer)}</div>);
+      return (<div className="font-mono" style={{ fontSize: "18px" }}>{r.a as number} × {r.b as number} = {Box(problem.answer)}</div>);
     }
     if (r.box === "b") {
-      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} × {Box(problem.answer)} = {r.c as number}</div>);
+      return (<div className="font-mono" style={{ fontSize: "18px" }}>{r.a as number} × {Box(problem.answer)} = {r.c as number}</div>);
     }
-    return (<div className="font-mono" style={{ fontSize: "16px" }}>{Box(problem.answer)} × {r.b as number} = {r.c as number}</div>);
+    return (<div className="font-mono" style={{ fontSize: "18px" }}>{Box(problem.answer)} × {r.b as number} = {r.c as number}</div>);
   }
   // 나눗셈 빈칸 3위치: a÷b=q, a÷?=q, ?÷b=q
   if (problem.op === "box_div") {
     const r = (problem.raw || {}) as Record<string, number | string>;
     if (r.box === "q") {
-      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} ÷ {r.b as number} = {Box(problem.answer)}</div>);
+      return (<div className="font-mono" style={{ fontSize: "18px" }}>{r.a as number} ÷ {r.b as number} = {Box(problem.answer)}</div>);
     }
     if (r.box === "b") {
-      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} ÷ {Box(problem.answer)} = {r.q as number}</div>);
+      return (<div className="font-mono" style={{ fontSize: "18px" }}>{r.a as number} ÷ {Box(problem.answer)} = {r.q as number}</div>);
     }
-    return (<div className="font-mono" style={{ fontSize: "16px" }}>{Box(problem.answer)} ÷ {r.b as number} = {r.q as number}</div>);
+    return (<div className="font-mono" style={{ fontSize: "18px" }}>{Box(problem.answer)} ÷ {r.b as number} = {r.q as number}</div>);
   }
   // 소수 덧셈 빈칸 3위치
   if (problem.op === "box_dec_add") {
     const r = (problem.raw || {}) as Record<string, number | string>;
     if (r.box === "c") {
-      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} + {r.b as number} = {Box(problem.answer)}</div>);
+      return (<div className="font-mono" style={{ fontSize: "18px" }}>{r.a as number} + {r.b as number} = {Box(problem.answer)}</div>);
     }
     if (r.box === "b") {
-      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} + {Box(problem.answer)} = {r.c as number}</div>);
+      return (<div className="font-mono" style={{ fontSize: "18px" }}>{r.a as number} + {Box(problem.answer)} = {r.c as number}</div>);
     }
-    return (<div className="font-mono" style={{ fontSize: "16px" }}>{Box(problem.answer)} + {r.b as number} = {r.c as number}</div>);
+    return (<div className="font-mono" style={{ fontSize: "18px" }}>{Box(problem.answer)} + {r.b as number} = {r.c as number}</div>);
   }
   // 덧뺄 관계: a+b=c 보고 c-a=?, c-b=? (두 답이라 ans1만 빈칸)
   if (problem.op === "rel_add_to_sub") {
@@ -608,7 +608,7 @@ function SpecialProblem({
     const o1 = ops[0] === "+" ? "+" : "−";
     const o2 = ops[1] === "+" ? "+" : "−";
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {a} {o1} {b} {o2} {c} = {Box(problem.answer)}
         {isGraded && !problem.is_example && correct === false && (
           <span className="ml-2 text-[#6b7280]" style={{ fontSize: "13px" }}>
@@ -625,7 +625,7 @@ function SpecialProblem({
   // 대분수 → 가분수: w + n/d → ?/d
   if (problem.op === "mixed_to_improper") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         <Mixed w={raw.whole} n={raw.num} d={raw.den} />
         <span className="mx-1">=</span>
         {problem.is_example ? (
@@ -645,7 +645,7 @@ function SpecialProblem({
   // 가분수 → 대분수
   if (problem.op === "improper_to_mixed") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         <Frac n={raw.num} d={raw.den} />
         <span className="mx-1">=</span>
         {problem.is_example ? (
@@ -687,7 +687,7 @@ function SpecialProblem({
       );
     };
     return (
-      <div className="font-mono flex items-center gap-2" style={{ fontSize: "16px" }}>
+      <div className="font-mono flex items-center gap-2" style={{ fontSize: "18px" }}>
         <Frac n={raw.a_num} d={raw.a_den} />
         {problem.is_example ? (
           <span className={`mx-1 ${inputCls}`} style={{ fontWeight: 700 }}>{String(raw.ans)}</span>
@@ -711,7 +711,7 @@ function SpecialProblem({
   if (problem.op === "mixed_add" || problem.op === "mixed_sub") {
     const opSym = problem.op === "mixed_add" ? "+" : "−";
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         <Mixed w={raw.w1} n={raw.n1} d={raw.d} />
         <span className="mx-1">{opSym}</span>
         <Mixed w={raw.w2} n={raw.n2} d={raw.d} />
@@ -729,7 +729,7 @@ function SpecialProblem({
   if (problem.op === "frac_add_diff" || problem.op === "frac_sub_diff") {
     const opSym = problem.op === "frac_add_diff" ? "+" : "−";
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         <Frac n={raw.a_num} d={raw.a_den} />
         <span className="mx-1">{opSym}</span>
         <Frac n={raw.b_num} d={raw.b_den} />
@@ -747,7 +747,7 @@ function SpecialProblem({
   if (problem.op === "frac_mul" || problem.op === "frac_div") {
     const opSym = problem.op === "frac_mul" ? "×" : "÷";
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         <Frac n={raw.a_num} d={raw.a_den} />
         <span className="mx-1">{opSym}</span>
         <Frac n={raw.b_num} d={raw.b_den} />
@@ -763,7 +763,7 @@ function SpecialProblem({
   // 자연수 X 분수
   if (problem.op === "frac_mul_nat") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.whole} <span className="mx-1">×</span>
         <Frac n={raw.b_num} d={raw.b_den} />
         <span className="mx-1">=</span>
@@ -778,7 +778,7 @@ function SpecialProblem({
   // 분수 ÷ 자연수
   if (problem.op === "frac_div_nat") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         <Frac n={raw.a_num} d={raw.a_den} />
         <span className="mx-1">÷</span>
         {raw.whole}
@@ -795,7 +795,7 @@ function SpecialProblem({
   // 약분
   if (problem.op === "reduce_frac") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         <Frac n={raw.num} d={raw.den} />
         <span className="mx-1">=</span>
         {problem.is_example ? (
@@ -854,7 +854,7 @@ function SpecialProblem({
   if (problem.op === "dec_add" || problem.op === "dec_sub") {
     const opSym = problem.op === "dec_add" ? "+" : "−";
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} <span className="mx-1">{opSym}</span> {raw.b}
         <span className="mx-1">=</span>
         {Box(raw.ans)}
@@ -863,7 +863,7 @@ function SpecialProblem({
   }
   if (problem.op === "dec_mul") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} <span className="mx-1">×</span> {raw.b}
         <span className="mx-1">=</span>
         {Box(raw.ans)}
@@ -872,7 +872,7 @@ function SpecialProblem({
   }
   if (problem.op === "dec_mul_nat") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.whole} <span className="mx-1">×</span> {raw.dec}
         <span className="mx-1">=</span>
         {Box(raw.ans)}
@@ -881,7 +881,7 @@ function SpecialProblem({
   }
   if (problem.op === "dec_div_nat") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} <span className="mx-1">÷</span> {raw.whole}
         <span className="mx-1">=</span>
         {Box(raw.ans)}
@@ -890,7 +890,7 @@ function SpecialProblem({
   }
   if (problem.op === "dec_div") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} <span className="mx-1">÷</span> {raw.b}
         <span className="mx-1">=</span>
         {Box(raw.ans)}
@@ -899,7 +899,7 @@ function SpecialProblem({
   }
   if (problem.op === "nat_div_dec") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} <span className="mx-1">÷</span> {raw.b}
         <span className="mx-1">=</span>
         {Box(raw.ans)}
@@ -908,7 +908,7 @@ function SpecialProblem({
   }
   if (problem.op === "nat_div_nat_dec") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} <span className="mx-1">÷</span> {raw.b}
         <span className="mx-1">=</span>
         {Box(raw.ans)}
@@ -917,7 +917,7 @@ function SpecialProblem({
   }
   if (problem.op === "cont_ratio") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} : {raw.b} : {raw.c} <span className="mx-1">=</span>{" "}
         {problem.is_example ? (
           <span className={inputCls}>{raw.ans_a} : {raw.ans_b} : {raw.ans_c}</span>
@@ -932,7 +932,7 @@ function SpecialProblem({
   if (problem.op === "factors") {
     const ans = (raw.ans as unknown) as number[];
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.n}의 약수:{" "}
         {problem.is_example ? (
           <span className={inputCls}>{Array.isArray(ans) ? ans.join(", ") : ""}</span>
@@ -945,7 +945,7 @@ function SpecialProblem({
   if (problem.op === "multiples") {
     const ans = (raw.ans as unknown) as number[];
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.n}의 배수 (10개):{" "}
         {problem.is_example ? (
           <span className={inputCls}>{Array.isArray(ans) ? ans.join(", ") : ""}</span>
@@ -957,14 +957,14 @@ function SpecialProblem({
   }
   if (problem.op === "gcd") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a}, {raw.b}의 최대공약수 = {Box(raw.ans)}
       </div>
     );
   }
   if (problem.op === "lcm") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a}, {raw.b}의 최소공배수 = {Box(raw.ans)}
       </div>
     );
@@ -973,7 +973,7 @@ function SpecialProblem({
   // === 비/비율/백분율 ===
   if (problem.op === "ratio_simplify") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} : {raw.b} <span className="mx-1">=</span>{" "}
         {problem.is_example ? (
           <span className={inputCls}>{raw.ans_a} : {raw.ans_b}</span>
@@ -985,7 +985,7 @@ function SpecialProblem({
   }
   if (problem.op === "ratio_to_pct") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         <Frac n={raw.num} d={raw.den} /> <span className="mx-1">=</span>{" "}
         {Box(raw.ans)} %
       </div>
@@ -993,7 +993,7 @@ function SpecialProblem({
   }
   if (problem.op === "proportion") {
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} : {raw.b} = {raw.c} : {Box(raw.ans)}
       </div>
     );
@@ -1015,7 +1015,7 @@ function SpecialProblem({
   if (problem.op === "mixed_calc") {
     const ops = String(raw.ops || "");
     return (
-      <div className="font-mono" style={{ fontSize: "16px" }}>
+      <div className="font-mono" style={{ fontSize: "18px" }}>
         {raw.a} {ops[0]} {raw.b} {ops[1]} {raw.c} = {Box(raw.ans)}
       </div>
     );
@@ -1032,7 +1032,7 @@ function SpecialProblem({
 function Mixed({ w, n, d }: { w: number; n: number; d: number }) {
   return (
     <span style={{ display: "inline-flex", alignItems: "center" }}>
-      <span style={{ fontSize: "16px", marginRight: "2px" }}>{w}</span>
+      <span style={{ fontSize: "18px", marginRight: "2px" }}>{w}</span>
       <Frac n={n} d={d} />
     </span>
   );
