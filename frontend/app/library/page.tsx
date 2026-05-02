@@ -26,6 +26,8 @@ function LibraryContent() {
   const searchParams = useSearchParams();
   const grade = parseInt(searchParams.get("grade") || "3", 10);
   const subject = searchParams.get("subject") || "수학";
+  const mode = (searchParams.get("mode") || "comp") as "comp" | "drill";
+  const modeLabel = mode === "drill" ? "연산 문제지" : "단원 학습지";
 
   const [units, setUnits] = useState<UnitDTO[]>([]);
   const [played, setPlayed] = useState<string[]>([]);
@@ -56,7 +58,7 @@ function LibraryContent() {
             홈으로
           </Link>
           <Link href="/" className="text-lg font-bold text-foreground">
-            Edujini
+            EDU Jini
           </Link>
         </div>
       </header>
@@ -64,11 +66,16 @@ function LibraryContent() {
       <main className="mx-auto max-w-5xl px-4 py-8">
         <div className="mb-8 flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-foreground">
+            <p className="text-xs font-medium tracking-wide text-muted-foreground">
+              {modeLabel}
+            </p>
+            <h1 className="mt-0.5 text-2xl font-bold text-foreground">
               {gradeLabel(grade)} · {subject}
             </h1>
             <p className="mt-1 text-sm text-muted-foreground">
-              단원별 학습지를 선택하세요. 단원당 20문항 · 인쇄 가능
+              {mode === "drill"
+                ? "연산 반복 드릴 — 단원을 선택하면 가로식·세로식 양식별 문제지를 보여드려요."
+                : "단원별 종합 학습지 — 객관식·서술형 20문항 + AI 자동 채점."}
             </p>
           </div>
           <Badge
@@ -103,6 +110,7 @@ function LibraryContent() {
                 index={index}
                 isPlayed={played.includes(unit.id)}
                 isLockedByLimit={false}
+                mode={mode}
               />
             ))}
           </div>
@@ -143,11 +151,13 @@ function UnitCard({
   index,
   isPlayed,
   isLockedByLimit,
+  mode,
 }: {
   unit: UnitDTO;
   index: number;
   isPlayed: boolean;
   isLockedByLimit: boolean;
+  mode: "comp" | "drill";
 }) {
   const inner = (
     <Card
@@ -202,7 +212,13 @@ function UnitCard({
       <Link href={`/result?lock=${encodeURIComponent(unit.id)}`}>{inner}</Link>
     );
   }
-  return <Link href={`/library/${encodeURIComponent(unit.id)}`}>{inner}</Link>;
+  // 단원 학습지 = 바로 종합 학습지로 (sheet=comp)
+  // 연산 문제지 = 단원 페이지에서 양식별 카드 5종 (mode=drill)
+  const href =
+    mode === "comp"
+      ? `/library/${encodeURIComponent(unit.id)}?sheet=comp`
+      : `/library/${encodeURIComponent(unit.id)}?mode=drill`;
+  return <Link href={href}>{inner}</Link>;
 }
 
 export default function LibraryPage() {

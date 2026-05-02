@@ -27,7 +27,7 @@ export const UNIT_SHEETS: Record<string, SheetMeta[]> = {
       id: "comp",
       unit_id: "math-3-1-1",
       type: "comprehensive",
-      title: "종합 학습지",
+      title: "단원 학습지",
       subtitle: "객관식 + 서술형 20문제 · AI 자동 채점",
       problem_count: 20,
     },

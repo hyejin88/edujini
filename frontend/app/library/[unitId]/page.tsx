@@ -23,6 +23,7 @@ function gradeLabel(g: number): string {
 function UnitContent({ unitId }: { unitId: string }) {
   const searchParams = useSearchParams();
   const sheetId = searchParams.get("sheet");
+  const mode = searchParams.get("mode"); // "drill" 일 때 연산 문제지 카드만
   const [unit, setUnit] = useState<UnitDTO | null>(null);
 
   useEffect(() => {
@@ -50,14 +51,19 @@ function UnitContent({ unitId }: { unitId: string }) {
     return <DrillSheetPage sheet={sheet} unit={unit} />;
   }
 
-  // 학습지 카드 그리드
-  const sheets = getUnitSheets(unitId);
+  // 학습지 카드 그리드 (mode=drill이면 드릴만, 아니면 모두)
+  const allSheets = getUnitSheets(unitId);
+  const sheets =
+    mode === "drill"
+      ? allSheets.filter((s) => s.type !== "comprehensive")
+      : allSheets;
+  const titleLabel = mode === "drill" ? "연산 문제지" : "학습지";
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-background">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
           <Link
-            href="/library?grade=3&subject=수학"
+            href={`/library?grade=3&subject=수학&mode=${mode === "drill" ? "drill" : "comp"}`}
             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" />
@@ -70,14 +76,16 @@ function UnitContent({ unitId }: { unitId: string }) {
       </header>
       <main className="mx-auto max-w-4xl px-4 py-10">
         <div className="mb-8">
-          <p className="text-sm text-muted-foreground">
-            {unit ? `${gradeLabel(unit.grade)} · ${unit.subject}` : "초3 · 수학"}
+          <p className="text-xs font-medium tracking-wide text-muted-foreground">
+            {titleLabel} · {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : "초3 수학"}
           </p>
-          <h1 className="mt-1 text-2xl font-bold">
+          <h1 className="mt-0.5 text-2xl font-bold">
             {unit?.unit_name || "단원"}
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            오늘의 학습지를 골라보세요. 모두 무료, 인쇄 가능.
+            {mode === "drill"
+              ? "양식을 선택해 주세요. 가로식·세로식, 받아올림 여부별로 분리되어 있어요."
+              : "이 단원의 종합 학습지입니다. 객관식·서술형 20문항 + AI 자동 채점."}
           </p>
         </div>
 
@@ -111,7 +119,7 @@ function SheetCard({ unitId, sheet }: { unitId: string; sheet: SheetMeta }) {
           <Icon className="h-4 w-4" />
         </div>
         <span className="text-[11px] uppercase tracking-wide text-muted-foreground">
-          {isComp ? "종합" : "연산 드릴"}
+          {isComp ? "단원 학습지" : "연산 문제지"}
         </span>
       </div>
       <h3 className="text-base font-semibold text-foreground">{sheet.title}</h3>

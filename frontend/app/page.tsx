@@ -30,9 +30,11 @@ export default function LandingPage() {
   const [selectedGrade, setSelectedGrade] = useState<number | null>(3);
   const [selectedSubject, setSelectedSubject] = useState<string>("수학");
 
-  const handleCTA = () => {
+  const goLibrary = (mode: "comp" | "drill") => {
     if (selectedGrade && selectedSubject) {
-      router.push(`/library?grade=${selectedGrade}&subject=${selectedSubject}`);
+      router.push(
+        `/library?grade=${selectedGrade}&subject=${selectedSubject}&mode=${mode}`
+      );
     }
   };
 
@@ -94,15 +96,29 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <Button
-            onClick={handleCTA}
-            size="lg"
-            className="group bg-primary px-8 text-base font-semibold hover:bg-primary/90"
-          >
-            단원 학습지 보기
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          {/* CTA Buttons — 두 갈래 */}
+          <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <Button
+              onClick={() => goLibrary("comp")}
+              size="lg"
+              className="group bg-primary px-8 text-base font-semibold hover:bg-primary/90"
+            >
+              단원 학습지 보기
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+            <Button
+              onClick={() => goLibrary("drill")}
+              size="lg"
+              variant="outline"
+              className="group border-2 px-8 text-base font-semibold"
+            >
+              연산 문제지 보기
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </div>
+          <p className="mt-4 text-xs text-muted-foreground">
+            단원 학습지 = 객관식·서술형 20문항 + AI 채점 · 연산 문제지 = 단순 연산 반복 드릴
+          </p>
         </div>
       </section>
 
