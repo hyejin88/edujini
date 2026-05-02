@@ -4,7 +4,8 @@ export interface LearnUnit {
   unit_id: string;            // math-3-1-6
   grade: number;              // 3
   semester: number;           // 1
-  slug: string;               // fraction-decimal
+  slug: string;               // fraction-decimal (canonical)
+  aliases?: string[];         // SEO alias — 사용자 자연 검색 변형 (예: "fraction", "fractions")
   unit_name: string;          // 분수와 소수
   short_description: string;  // 한 줄 요약 (메타 description)
   long_description: string;   // 학부모용 설명 (3~4문장)
@@ -259,8 +260,50 @@ export const LEARN_UNITS: LearnUnit[] = [
   },
 ];
 
+// 흔한 영문 검색 별칭 일괄 매핑 (단원 슬러그 ↔ alias)
+const ALIASES: Record<string, string[]> = {
+  "fraction-decimal": ["fraction", "fractions", "decimal", "decimals"],
+  "fraction-types": ["fraction", "fractions", "improper-fraction", "mixed-fraction"],
+  "fraction-add-subtract": ["fraction-add", "fraction-subtract", "fraction-addition"],
+  "fraction-different-denominator": ["fraction-different", "fraction-add-different"],
+  "fraction-multiplication": ["fraction-multiply", "fraction-mul"],
+  "fraction-division-natural": ["fraction-division", "fraction-divide"],
+  "fraction-division-fraction": ["fraction-division", "fraction-divide-fraction"],
+  "fraction-reduce-common-denominator": ["reduce", "common-denominator", "lcd"],
+  "decimal-add-subtract": ["decimal-add", "decimal-subtract"],
+  "decimal-multiplication": ["decimal-multiply", "decimal-mul"],
+  "decimal-division-natural": ["decimal-division", "decimal-divide"],
+  "decimal-division-decimal": ["decimal-division", "decimal-divide-decimal"],
+  "decimal-division-extended": ["decimal-division-advanced"],
+  "multiplication-table": ["multiplication", "times-table", "multiplication-9"],
+  "two-digit-multiplication": ["multiplication", "multiply-two-digit"],
+  "three-digit-multiplication": ["multiplication", "multiply-three-digit"],
+  "two-digit-division": ["division", "divide-two-digit"],
+  "division-introduction": ["division", "divide"],
+  "multiplication-division-advanced": ["multiplication", "division", "advanced"],
+  "two-digit-addition-subtraction": ["addition", "subtraction", "two-digit"],
+  "three-digit-addition-subtraction": ["addition", "subtraction", "three-digit", "regrouping"],
+  "addition-subtraction": ["addition", "subtraction", "plus-minus"],
+  "addition-subtraction-no-regrouping": ["addition", "subtraction", "no-regrouping"],
+  "addition-subtraction-with-regrouping": ["addition", "subtraction", "regrouping", "carry"],
+  "addition-subtraction-mixed": ["addition", "subtraction", "mixed"],
+  "factors-multiples": ["factors", "multiples", "gcd", "lcm"],
+  "mixed-arithmetic": ["arithmetic", "order-of-operations", "mixed"],
+  "ratio-percentage": ["ratio", "percentage", "percent"],
+  "proportion-share": ["proportion", "ratio-share"],
+};
+
 export function findLearnUnit(grade: number, slug: string): LearnUnit | undefined {
-  return LEARN_UNITS.find((u) => u.grade === grade && u.slug === slug);
+  // canonical slug 매칭
+  const exact = LEARN_UNITS.find((u) => u.grade === grade && u.slug === slug);
+  if (exact) return exact;
+  // alias 매칭 — 같은 학년 + alias 포함
+  for (const u of LEARN_UNITS) {
+    if (u.grade !== grade) continue;
+    const aliases = ALIASES[u.slug] || u.aliases || [];
+    if (aliases.includes(slug)) return u;
+  }
+  return undefined;
 }
 
 export function unitsByGrade(grade: number): LearnUnit[] {

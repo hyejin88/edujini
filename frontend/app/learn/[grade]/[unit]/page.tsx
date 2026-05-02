@@ -9,8 +9,29 @@ import { findLearnUnit, LEARN_UNITS } from "@/lib/learn-units";
 
 export const dynamic = "force-static";
 
+// alias도 정적 prerender → /learn/grade-3/fraction 도 빌드됨 (canonical은 fraction-decimal)
+const ALIAS_PARAMS: { grade: string; unit: string }[] = [
+  // 흔한 영문 검색 변형들 — findLearnUnit이 자동 매칭
+  ...["fraction", "fractions", "decimal"].flatMap((s) => [{ grade: "grade-3", unit: s }]),
+  ...["fraction", "fractions"].flatMap((s) => [{ grade: "grade-4", unit: s }, { grade: "grade-5", unit: s }, { grade: "grade-6", unit: s }]),
+  ...["multiplication", "times-table"].map((s) => ({ grade: "grade-2", unit: s })),
+  ...["multiplication"].flatMap((s) => [{ grade: "grade-3", unit: s }, { grade: "grade-4", unit: s }]),
+  ...["division"].flatMap((s) => [{ grade: "grade-3", unit: s }, { grade: "grade-4", unit: s }, { grade: "grade-6", unit: s }]),
+  ...["addition", "subtraction"].flatMap((s) => [
+    { grade: "grade-1", unit: s }, { grade: "grade-2", unit: s }, { grade: "grade-3", unit: s },
+  ]),
+  { grade: "grade-5", unit: "factors" },
+  { grade: "grade-5", unit: "multiples" },
+  { grade: "grade-6", unit: "ratio" },
+  { grade: "grade-6", unit: "percentage" },
+];
+
 export async function generateStaticParams() {
-  return LEARN_UNITS.map((u) => ({ grade: `grade-${u.grade}`, unit: u.slug }));
+  const canonical = LEARN_UNITS.map((u) => ({ grade: `grade-${u.grade}`, unit: u.slug }));
+  // 중복 제거 (alias가 canonical과 겹칠 수 있음)
+  const seen = new Set(canonical.map((p) => `${p.grade}/${p.unit}`));
+  const aliases = ALIAS_PARAMS.filter((p) => !seen.has(`${p.grade}/${p.unit}`));
+  return [...canonical, ...aliases];
 }
 
 function parseGrade(g: string): number | null {
