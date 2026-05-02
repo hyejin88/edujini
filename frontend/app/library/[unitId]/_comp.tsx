@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowLeft, Printer, RefreshCw } from "lucide-react";
 import "katex/dist/katex.min.css";
 import { InlineMath, BlockMath } from "react-katex";
+import { saveAttempts } from "@/lib/diagnose";
 import {
   fetchUnitProblems,
   gradeBatch,
@@ -160,6 +161,23 @@ export default function ComprehensiveSheet({
     for (const it of r.results) map[it.problem_id] = it.correct;
     setResults(map);
     setIsGraded(true);
+    // 진단용 attempts 로컬 저장 (PoC: 클라이언트 사이드 진단)
+    const now = new Date().toISOString();
+    const attemptsToSave = r.results.map((res) => {
+      const p = unitProblems.find((up) => up.id === res.problem_id);
+      return {
+        problem_id: res.problem_id,
+        unit_id: p?.unit_id || unitId,
+        unit_name: p?.unit_name || (unit?.unit_name ?? ""),
+        subject: p?.subject || (unit?.subject ?? "수학"),
+        user_answer: answers[res.problem_id] || "",
+        is_correct: res.correct,
+        error_label: res.error_label || null,
+        correct_answer: res.correct_answer,
+        created_at: now,
+      };
+    });
+    saveAttempts(attemptsToSave);
   };
 
   if (isLoading) {

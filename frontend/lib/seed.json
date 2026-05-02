@@ -3671,698 +3671,6 @@
     "is_published": true
   },
   {
-    "id": "math-3-2-1::v3::0",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 1,
-    "section": "warmup",
-    "body": "$123 \\times 2$의 계산 결과는 얼마입니까?",
-    "choices": [
-      "236",
-      "246",
-      "256",
-      "266"
-    ],
-    "answer": "246",
-    "answer_aliases": [
-      "246"
-    ],
-    "explanation": "일의 자리: $3 \\times 2 = 6$\n십의 자리: $2 \\times 2 = 4$\n백의 자리: $1 \\times 2 = 2$\n따라서 $123 \\times 2 = 246$입니다.",
-    "concept_tags": [
-      "세 자리 수 곱셈",
-      "한 자리 수 곱셈",
-      "올림 없는 곱셈"
-    ],
-    "common_errors": [],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::1",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 1,
-    "section": "warmup",
-    "body": "$215 \\times 3$의 계산 결과는 얼마입니까?",
-    "choices": [
-      "615",
-      "635",
-      "645",
-      "655"
-    ],
-    "answer": "645",
-    "answer_aliases": [
-      "645"
-    ],
-    "explanation": "일의 자리: $5 \\times 3 = 15$ (십의 자리로 $1$ 올림)\n십의 자리: $1 \\times 3 = 3$, 올림한 $1$을 더하면 $3+1 = 4$\n백의 자리: $2 \\times 3 = 6$\n따라서 $215 \\times 3 = 645$입니다.",
-    "concept_tags": [
-      "세 자리 수 곱셈",
-      "한 자리 수 곱셈",
-      "올림 있는 곱셈"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "615",
-        "reason": "일의 자리 올림을 잊었습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::2",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 1,
-    "section": "warmup",
-    "body": "$43 \\times 21$의 계산 결과는 얼마입니까?",
-    "choices": [
-      "860",
-      "883",
-      "903",
-      "913"
-    ],
-    "answer": "903",
-    "answer_aliases": [
-      "903"
-    ],
-    "explanation": "$43 \\times 1 = 43$\n$43 \\times 20 = 860$\n$43 + 860 = 903$\n따라서 $43 \\times 21 = 903$입니다.",
-    "concept_tags": [
-      "두 자리 수 곱셈",
-      "표준 곱셈 알고리즘"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "860",
-        "reason": "일의 자리 계산인 $43 \\times 1$을 더하는 것을 잊었습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::3",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 2,
-    "section": "warmup",
-    "body": "$108 \\times 4$의 계산 결과는 얼마입니까?",
-    "choices": [
-      "402",
-      "412",
-      "422",
-      "432"
-    ],
-    "answer": "432",
-    "answer_aliases": [
-      "432"
-    ],
-    "explanation": "일의 자리: $8 \\times 4 = 32$ (십의 자리로 $3$ 올림)\n십의 자리: $0 \\times 4 = 0$, 올림한 $3$을 더하면 $0+3 = 3$\n백의 자리: $1 \\times 4 = 4$\n따라서 $108 \\times 4 = 432$입니다.",
-    "concept_tags": [
-      "세 자리 수 곱셈",
-      "한 자리 수 곱셈",
-      "0이 있는 곱셈"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "402",
-        "reason": "십의 자리에서 올림한 수를 더하는 것을 잊었습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::4",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 2,
-    "section": "warmup",
-    "body": "$25 \\times 13$의 계산 결과는 얼마입니까?",
-    "choices": [
-      "275",
-      "305",
-      "325",
-      "345"
-    ],
-    "answer": "325",
-    "answer_aliases": [
-      "325"
-    ],
-    "explanation": "$25 \\times 3 = 75$\n$25 \\times 10 = 250$\n$75 + 250 = 325$\n따라서 $25 \\times 13 = 325$입니다.",
-    "concept_tags": [
-      "두 자리 수 곱셈",
-      "표준 곱셈 알고리즘",
-      "올림 있는 곱셈"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "275",
-        "reason": "십의 자리 계산을 $25 \\times 1$로 하고 $250$이 아닌 $25$를 더했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::5",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 2,
-    "section": "warmup",
-    "body": "다음 중 계산 결과가 가장 작은 것은 어느 것입니까?\n$101 \\times 5$, $203 \\times 2$, $150 \\times 3$, $120 \\times 4$",
-    "choices": [
-      "$101 \\times 5$",
-      "$203 \\times 2$",
-      "$150 \\times 3$",
-      "$120 \\times 4$"
-    ],
-    "answer": "$203 \\times 2$",
-    "answer_aliases": [
-      "203x2"
-    ],
-    "explanation": "각 곱셈을 계산합니다.\n$101 \\times 5 = 505$\n$203 \\times 2 = 406$\n$150 \\times 3 = 450$\n$120 \\times 4 = 480$\n이 중 가장 작은 값은 $406$이므로, $203 \\times 2$입니다.",
-    "concept_tags": [
-      "세 자리 수 곱셈",
-      "비교"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "$101 \\times 5$",
-        "reason": "$101 \\times 5$의 결과인 $505$가 가장 작다고 착각했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::6",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 3,
-    "section": "concept",
-    "body": "$324 \\times 3$을 계산할 때, 십의 자리 계산에서 올림한 수를 더한 후의 값은 얼마입니까?",
-    "choices": [
-      "6",
-      "7",
-      "8",
-      "9"
-    ],
-    "answer": "7",
-    "answer_aliases": [
-      "7"
-    ],
-    "explanation": "일의 자리: $4 \\times 3 = 12$ 이므로 십의 자리로 $1$을 올림합니다.\n십의 자리: $2 \\times 3 = 6$입니다. 여기에 올림한 $1$을 더하면 $6+1=7$이 됩니다.",
-    "concept_tags": [
-      "세 자리 수 곱셈",
-      "표준 곱셈 알고리즘",
-      "올림"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "6",
-        "reason": "십의 자리에서 올림한 수를 더하는 것을 잊었습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::7",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 3,
-    "section": "concept",
-    "body": "$145 \\times 6$을 계산하면 $870$입니다. 만약 어떤 학생이 $840$이라고 답했다면, 어떤 계산 실수를 한 것일까요?",
-    "choices": [
-      "일의 자리에서 올림한 수를 십의 자리에 더하지 않았습니다.",
-      "십의 자리에서 올림한 수를 백의 자리에 더하지 않았습니다.",
-      "일의 자리 계산을 잘못했습니다.",
-      "백의 자리 계산을 잘못했습니다."
-    ],
-    "answer": "일의 자리에서 올림한 수를 십의 자리에 더하지 않았습니다.",
-    "answer_aliases": [
-      "일의 자리 올림 누락"
-    ],
-    "explanation": "정확한 계산:\n$5 \\times 6 = 30$ (일의 자리에 $0$, 십의 자리로 $3$ 올림)\n$4 \\times 6 = 24$, 여기에 올림한 $3$을 더하면 $24+3=27$ (십의 자리에 $7$, 백의 자리로 $2$ 올림)\n$1 \\times 6 = 6$, 여기에 올림한 $2$를 더하면 $6+2=8$ (백의 자리에 $8$)\n결과: $870$\n\n만약 일의 자리에서 올림한 $3$을 십의 자리에 더하지 않았다면:\n$5 \\times 6 = 30$ (일의 자리에 $0$, 십의 자리로 $3$ 올림)\n$4 \\times 6 = 24$ (올림한 $3$을 더하지 않고 $4$를 십의 자리에 쓴다고 가정)\n$1 \\times 6 = 6$, 십의 자리에서 올림이 없다고 가정하면 백의 자리에 $6$이 아니라 $6+2=8$ (백의 자리 올림은 그대로 적용)\n십의 자리에서 $24$의 $4$를 쓰고 백의 자리로 $2$를 올리면 결과는 $840$이 됩니다.",
-    "concept_tags": [
-      "곱셈 오류 분석",
-      "올림 실수"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "십의 자리에서 올림한 수를 백의 자리에 더하지 않았습니다.",
-        "reason": "어떤 올림이 어디에서 누락되었는지 정확히 파악하지 못했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::8",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 2,
-    "section": "concept",
-    "body": "$23 \\times 14$를 세로셈으로 계산할 때, 두 번째 줄에 들어갈 수는 무엇입니까?",
-    "choices": [
-      "23",
-      "92",
-      "230",
-      "322"
-    ],
-    "answer": "230",
-    "answer_aliases": [
-      "230"
-    ],
-    "explanation": "세로셈에서 첫 번째 줄은 $23 \\times 4$의 계산 결과인 $92$가 들어갑니다.\n두 번째 줄은 $23 \\times 10$의 계산 결과가 들어갑니다. $23 \\times 10 = 230$입니다.",
-    "concept_tags": [
-      "두 자리 수 곱셈",
-      "표준 곱셈 알고리즘",
-      "부분 곱"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "23",
-        "reason": "두 번째 줄이 $23 \\times 1$이 아니라 $23 \\times 10$임을 이해하지 못했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::9",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 3,
-    "section": "concept",
-    "body": "$48 \\times 25$를 계산할 때, 올바르지 않은 계산 과정은 무엇입니까?",
-    "choices": [
-      "$48 \\times 5 = 240$",
-      "$48 \\times 20 = 960$",
-      "$240 + 960 = 1200$",
-      "$48 \\times 2 = 96$로 계산하여 십의 자리에 $96$을 씁니다."
-    ],
-    "answer": "$48 \\times 2 = 96$로 계산하여 십의 자리에 $96$을 씁니다.",
-    "answer_aliases": [
-      "48x2=96을 십의 자리에 쓰는 것"
-    ],
-    "explanation": "표준 곱셈 알고리즘에서 두 자리 수 곱셈은 각 자릿값에 맞춰 곱해야 합니다.\n$48 \\times 5 = 240$은 맞습니다.\n$48 \\times 20 = 960$은 맞습니다. ($48 \\times 2$를 계산한 후 오른쪽에 $0$을 붙여서 $960$이 됩니다.)\n최종 합산 $240 + 960 = 1200$도 맞습니다.\n하지만 ' $48 \\times 2 = 96$으로 계산하여 십의 자리에 $96$을 쓴다'는 것은, $48 \\times 20$을 $48 \\times 2$로 착각하고 자릿값을 잘못 맞추는 오류입니다. $48 \\times 20$의 결과는 십의 자리부터 시작하여 써야 합니다.",
-    "concept_tags": [
-      "두 자리 수 곱셈",
-      "표준 곱셈 알고리즘",
-      "자릿값 오류"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "$48 \\times 20 = 960$",
-        "reason": "$48 \\times 20$이 아닌 $48 \\times 2$를 계산하는 것이 틀렸다고 오해했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::10",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 2,
-    "section": "concept",
-    "body": "$100 \\times 9$과 $300 \\times 3$ 중 더 큰 값은 얼마입니까?",
-    "choices": [
-      "$100 \\times 9$",
-      "$300 \\times 3$",
-      "두 값은 같습니다.",
-      "비교할 수 없습니다."
-    ],
-    "answer": "두 값은 같습니다.",
-    "answer_aliases": [
-      "두 값은 같다"
-    ],
-    "explanation": "$100 \\times 9 = 900$\n$300 \\times 3 = 900$\n두 값은 $900$으로 같습니다.",
-    "concept_tags": [
-      "곱셈",
-      "비교"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "$100 \\times 9$",
-        "reason": "한쪽 계산을 잘못하여 다른 쪽이 더 크다고 착각했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::11",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 3,
-    "section": "concept",
-    "body": "$\\square$ 안에 들어갈 수로 알맞은 것은 무엇입니까?\n$15 \\times \\square = 105$",
-    "choices": [
-      "6",
-      "7",
-      "8",
-      "9"
-    ],
-    "answer": "7",
-    "answer_aliases": [
-      "7"
-    ],
-    "explanation": "$15 \\times 1 = 15$\n$15 \\times 2 = 30$\n$15 \\times 3 = 45$\n$15 \\times 4 = 60$\n$15 \\times 5 = 75$\n$15 \\times 6 = 90$\n$15 \\times 7 = 105$\n따라서 $\\square$ 안에 들어갈 수는 $7$입니다.",
-    "concept_tags": [
-      "곱셈",
-      "역연산",
-      "나눗셈"
-    ],
-    "common_errors": [],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::12",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "short_answer",
-    "difficulty": 3,
-    "section": "application",
-    "body": "한 상자에 사과가 $135$개씩 들어 있습니다. 사과 $4$상자에 들어 있는 사과는 모두 몇 개입니까?",
-    "choices": null,
-    "answer": "540개",
-    "answer_aliases": [
-      "540"
-    ],
-    "explanation": "사과 $4$상자에 들어 있는 사과의 수는 $135 \\times 4$로 계산할 수 있습니다.\n$135 \\times 4 = 540$\n따라서 사과는 모두 $540$개 들어 있습니다.",
-    "concept_tags": [
-      "세 자리 수 곱셈",
-      "실생활 문제"
-    ],
-    "common_errors": [],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::13",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "short_answer",
-    "difficulty": 3,
-    "section": "application",
-    "body": "어느 가게에서 인형을 한 개에 $25$원씩 팔고 있습니다. 인형 $18$개를 사려면 얼마를 내야 합니까?",
-    "choices": null,
-    "answer": "450원",
-    "answer_aliases": [
-      "450"
-    ],
-    "explanation": "인형 $18$개를 사는 데 필요한 금액은 $25 \\times 18$로 계산할 수 있습니다.\n$25 \\times 18 = 450$\n따라서 인형 $18$개를 사려면 $450$원을 내야 합니다.",
-    "concept_tags": [
-      "두 자리 수 곱셈",
-      "실생활 문제"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "350원",
-        "reason": "곱셈 계산을 잘못했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::14",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "short_answer",
-    "difficulty": 4,
-    "section": "application",
-    "body": "숫자 카드 $1, 2, 3, 4$를 한 번씩만 사용하여 (두 자리 수) $\\times$ (두 자리 수)를 만들 수 있는 곱셈식 중 가장 큰 곱은 얼마입니까?",
-    "choices": null,
-    "answer": "1312",
-    "answer_aliases": [
-      "1312"
-    ],
-    "explanation": "가장 큰 곱을 만들려면 큰 숫자들을 큰 자리수에 배치해야 합니다.\n가능한 조합을 만들어 계산합니다.\n$43 \\times 21 = 903$\n$42 \\times 31 = 1302$\n$41 \\times 32 = 1312$\n이 중 가장 큰 곱은 $1312$입니다.",
-    "concept_tags": [
-      "두 자리 수 곱셈",
-      "큰 수 만들기",
-      "문제 해결"
-    ],
-    "common_errors": [
-      {
-        "label": "문제해석",
-        "wrong_answer": "903",
-        "reason": "가장 큰 두 수의 곱이라고 생각하여 $43 \\times 21$을 선택했습니다. (예: $43 \\times 21$은 가장 큰 수를 만드는 조합이 아님)"
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::15",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "short_answer",
-    "difficulty": 3,
-    "section": "application",
-    "body": "연필이 한 자루에 $150$원입니다. 지우개가 한 개에 $80$원입니다. 연필 $3$자루와 지우개 $2$개를 사려면 모두 얼마가 필요합니까?",
-    "choices": null,
-    "answer": "610원",
-    "answer_aliases": [
-      "610"
-    ],
-    "explanation": "연필 $3$자루의 가격: $150 \\times 3 = 450$원\n지우개 $2$개의 가격: $80 \\times 2 = 160$원\n총 필요한 금액: $450 + 160 = 610$원",
-    "concept_tags": [
-      "세 자리 수 곱셈",
-      "한 자리 수 곱셈",
-      "덧셈",
-      "실생활 문제"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "530원",
-        "reason": "두 곱셈의 결과를 더하는 과정에서 실수가 있었습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::16",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "short_answer",
-    "difficulty": 3,
-    "section": "application",
-    "body": "하루에 $125$장씩 종이를 사용하는 학급이 있습니다. 이 학급에서 $5$일 동안 사용하는 종이는 모두 몇 장입니까?",
-    "choices": null,
-    "answer": "625장",
-    "answer_aliases": [
-      "625"
-    ],
-    "explanation": "$5$일 동안 사용하는 종이의 양은 $125 \\times 5$로 계산할 수 있습니다.\n$125 \\times 5 = 625$\n따라서 $5$일 동안 $625$장의 종이를 사용합니다.",
-    "concept_tags": [
-      "세 자리 수 곱셈",
-      "실생활 문제"
-    ],
-    "common_errors": [],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::17",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 4,
-    "section": "application",
-    "body": "어떤 수를 $24$에 곱해야 할 것을 잘못하여 $42$에 곱했더니 $1008$이 나왔습니다. 바르게 계산한 값은 얼마입니까?",
-    "choices": [
-      "564",
-      "576",
-      "588",
-      "600"
-    ],
-    "answer": "576",
-    "answer_aliases": [
-      "576"
-    ],
-    "explanation": "어떤 수를 $\\square$ 라고 하면, 잘못 계산한 식은 $\\square \\times 42 = 1008$입니다.\n$\\square$ 를 구하려면 $1008 \\div 42$를 계산해야 합니다.\n$1008 \\div 42 = 24$\n따라서 어떤 수는 $24$입니다.\n바르게 계산한 값은 $24 \\times 24$입니다.\n$24 \\times 24 = 576$\n정답은 $576$입니다.",
-    "concept_tags": [
-      "곱셈",
-      "나눗셈",
-      "역연산",
-      "문제 해결"
-    ],
-    "common_errors": [
-      {
-        "label": "문제해석",
-        "wrong_answer": "1008",
-        "reason": "어떤 수를 구하고 끝내거나, 잘못된 계산 결과를 그대로 답으로 선택했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-2-1::v3::18",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-06]",
-    "unit_id": "math-3-2-1",
-    "unit_name": "곱셈",
-    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
-    "publisher": "자체제작",
-    "type": "multiple_choice",
-    "difficulty": 4,
-    "section": "challenge",
-    "body": "어느 마을의 학생들이 한 달에 $23$권의 책을 읽습니다. 이 마을의 학생 $35$명이 $1$년 동안 읽는 책은 모두 몇 권입니까? (단, $1$년은 $12$달입니다.)",
-    "choices": [
-      "805권",
-      "2760권",
-      "9660권",
-      "10000권"
-    ],
-    "answer": "9660권",
-    "answer_aliases": [
-      "9660"
-    ],
-    "explanation": "먼저 학생 $35$명이 한 달 동안 읽는 책의 수를 구합니다.\n$23 \\times 35 = 805$권\n\n다음으로 학생 $35$명이 $1$년 동안 읽는 책의 수를 구합니다. $1$년은 $12$달이므로,\n$805 \\times 12 = 9660$권\n따라서 $1$년 동안 읽는 책은 모두 $9660$권입니다.",
-    "concept_tags": [
-      "두 자리 수 곱셈",
-      "다단계 문제",
-      "실생활 응용"
-    ],
-    "common_errors": [
-      {
-        "label": "문제해석",
-        "wrong_answer": "805권",
-        "reason": "한 달 동안의 책의 수만 구하고 $1$년치를 계산하지 않았습니다."
-      },
-      {
-        "label": "계산실수",
-        "wrong_answer": "2760권",
-        "reason": "학생 1명이 1년 동안 읽는 책의 수($23 \\times 12 = 276$)를 구한 후 학생 수를 곱하지 않았거나, 잘못된 중간 계산을 했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
     "id": "math-3-2-4::v3::0",
     "subject": "수학",
     "grade": 3,
@@ -5102,6 +4410,638 @@
         "reason": "세는 과정에서 숫자를 빠뜨림"
       }
     ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::0",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$213 \\times 3$을 계산하면 얼마인가요?",
+    "choices": [
+      "636",
+      "639",
+      "642",
+      "645"
+    ],
+    "answer": "639",
+    "answer_aliases": [
+      "639"
+    ],
+    "explanation": "$213 \\times 3 = 639$입니다.",
+    "concept_tags": [
+      "(세 자리)×(한 자리)"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::1",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$125 \\times 4$는 얼마인가요?",
+    "choices": [
+      "480",
+      "500",
+      "520",
+      "540"
+    ],
+    "answer": "500",
+    "answer_aliases": [
+      "500"
+    ],
+    "explanation": "$125 \\times 4$를 계산합니다. $5 \\times 4 = 20$ (2 올림), $2 \\times 4 = 8$에 올림한 2를 더하면 10 (1 올림), $1 \\times 4 = 4$에 올림한 1을 더하면 5. 따라서 500입니다.",
+    "concept_tags": [
+      "(세 자리)×(한 자리)",
+      "올림"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::2",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$347 \\times 5$의 값은 얼마인가요?",
+    "choices": [
+      "1635",
+      "1725",
+      "1735",
+      "1835"
+    ],
+    "answer": "1735",
+    "answer_aliases": [
+      "1735"
+    ],
+    "explanation": "$347 \\times 5$를 계산합니다. $7 \\times 5 = 35$ (3 올림), $4 \\times 5 = 20$에 올림한 3을 더하면 23 (2 올림), $3 \\times 5 = 15$에 올림한 2를 더하면 17. 따라서 1735입니다.",
+    "concept_tags": [
+      "(세 자리)×(한 자리)",
+      "올림"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::3",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$21 \\times 13$을 계산하면 얼마인가요?",
+    "choices": [
+      "263",
+      "273",
+      "283",
+      "293"
+    ],
+    "answer": "273",
+    "answer_aliases": [
+      "273"
+    ],
+    "explanation": "$21 \\times 13$을 계산합니다. $21 \\times 3 = 63$이고, $21 \\times 10 = 210$입니다. $63 + 210 = 273$입니다.",
+    "concept_tags": [
+      "(두 자리)×(두 자리)",
+      "표준 곱셈 알고리즘"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::4",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$32 \\times 24$의 값은 얼마인가요?",
+    "choices": [
+      "758",
+      "768",
+      "778",
+      "788"
+    ],
+    "answer": "768",
+    "answer_aliases": [
+      "768"
+    ],
+    "explanation": "$32 \\times 24$를 계산합니다. $32 \\times 4 = 128$이고, $32 \\times 20 = 640$입니다. $128 + 640 = 768$입니다.",
+    "concept_tags": [
+      "(두 자리)×(두 자리)",
+      "표준 곱셈 알고리즘"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::5",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음 곱셈 중 계산 결과가 가장 큰 것은 무엇인가요?",
+    "choices": [
+      "$105 \\times 6$",
+      "$21 \\times 20$",
+      "$35 \\times 15$",
+      "$120 \\times 4$"
+    ],
+    "answer": "$105 \\times 6$",
+    "answer_aliases": [
+      "105 x 6"
+    ],
+    "explanation": "$105 \\times 6 = 630$, $21 \\times 20 = 420$, $35 \\times 15 = 525$, $120 \\times 4 = 480$입니다. 따라서 가장 큰 값은 630인 $105 \\times 6$입니다.",
+    "concept_tags": [
+      "곱셈 비교",
+      "큰 수 곱셈 응용"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::6",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$405 \\times 7$을 바르게 계산한 것은 무엇인가요?",
+    "choices": [
+      "2805",
+      "2835",
+      "2875",
+      "2905"
+    ],
+    "answer": "2835",
+    "answer_aliases": [
+      "2835"
+    ],
+    "explanation": "$405 \\times 7$을 계산합니다. $5 \\times 7 = 35$ (3 올림), $0 \\times 7 = 0$에 올림한 3을 더하면 3, $4 \\times 7 = 28$. 따라서 2835입니다.",
+    "concept_tags": [
+      "(세 자리)×(한 자리)",
+      "0의 곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "2805",
+        "reason": "0을 곱할 때 올림 수를 더하지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::7",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$50 \\times 24$를 계산할 때, 다음 중 바르지 않은 계산 과정은 무엇인가요?",
+    "choices": [
+      "$50 \\times 4 = 200$",
+      "$50 \\times 20 = 1000$",
+      "$200 + 1000 = 1200$",
+      "$50 \\times 2 = 100$"
+    ],
+    "answer": "$50 \\times 2 = 100$",
+    "answer_aliases": [
+      "50 x 2 = 100"
+    ],
+    "explanation": "$50 \\times 24$는 $50 \\times 4$와 $50 \\times 20$을 더하여 계산합니다. $50 \\times 4 = 200$이고, $50 \\times 20 = 1000$입니다. 이 둘을 더하면 $200 + 1000 = 1200$이 됩니다. 보기 중 $50 \\times 2 = 100$은 십의 자리인 20을 2로 잘못 보고 계산한 것입니다.",
+    "concept_tags": [
+      "(두 자리)×(두 자리)",
+      "표준 곱셈 알고리즘",
+      "자릿값"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "두 부분 곱의 합계",
+        "reason": "부분 곱셈의 자릿값 개념을 이해하지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::8",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "어떤 학생이 $172 \\times 3$을 계산하는데, $7 \\times 3 = 21$을 계산한 뒤 올림을 잊고 $1 \\times 3 = 3$으로 계산하여 백의 자리가 3이 되었다고 합니다. 올바른 계산 결과는 얼마인가요?",
+    "choices": [
+      "316",
+      "416",
+      "516",
+      "616"
+    ],
+    "answer": "516",
+    "answer_aliases": [
+      "516"
+    ],
+    "explanation": "$172 \\times 3$을 계산하면 $2 \\times 3 = 6$, $7 \\times 3 = 21$ (2 올림), $1 \\times 3 = 3$에 올림한 2를 더하면 5. 따라서 올바른 값은 516입니다. 학생은 올림을 잊어 $1 \\times 3 = 3$에 올림을 더하지 않았습니다.",
+    "concept_tags": [
+      "(세 자리)×(한 자리)",
+      "올림 실수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "316",
+        "reason": "올림을 더하는 것을 잊었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::9",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$45 \\times 23$을 계산할 때, 아래 과정 중 잘못된 부분은 어디인가요? \n(계산 과정: 첫째 줄 $45 \\times 3 = 135$, 둘째 줄 $45 \\times 2 = 90$으로 일의 자리에 맞추어 적고 합계 $225$)",
+    "choices": [
+      "첫 번째 줄 $45 \\times 3 = 135$",
+      "두 번째 줄 $45 \\times 2$의 자리",
+      "두 부분 곱의 합계",
+      "세 자리 곱하기 한 자리 수의 원리"
+    ],
+    "answer": "두 번째 줄 $45 \\times 2$의 자리",
+    "answer_aliases": [
+      "두 번째 줄 45 x 2의 자리"
+    ],
+    "explanation": "$45 \\times 23$을 계산할 때, 첫 번째 줄은 $45 \\times 3 = 135$로 올바릅니다. 두 번째 줄은 $45 \\times 20$을 계산해야 하므로 $900$이 되어야 하며, 십의 자리부터 맞추어 적어야 합니다. 문제에서는 $45 \\times 2$로 $90$을 계산하여 일의 자리부터 적었으므로 잘못되었습니다. 따라서 합계도 잘못됩니다.",
+    "concept_tags": [
+      "(두 자리)×(두 자리)",
+      "표준 곱셈 알고리즘",
+      "자릿값"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "두 부분 곱의 합계",
+        "reason": "부분 곱의 자릿값을 고려하지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::10",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$208 \\times 4$와 $115 \\times 7$ 중 더 큰 값을 갖는 것은 무엇인가요?",
+    "choices": [
+      "$208 \\times 4$",
+      "$115 \\times 7$",
+      "같다",
+      "알 수 없다"
+    ],
+    "answer": "$208 \\times 4$",
+    "answer_aliases": [
+      "208 x 4"
+    ],
+    "explanation": "$208 \\times 4 = 832$이고, $115 \\times 7 = 805$입니다. $832 > 805$이므로 $208 \\times 4$가 더 큽니다.",
+    "concept_tags": [
+      "곱셈 비교",
+      "(세 자리)×(한 자리)"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::11",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$38 \\times 25$와 $42 \\times 23$의 계산 결과를 비교하여 더 큰 값은 무엇인가요?",
+    "choices": [
+      "$38 \\times 25$",
+      "$42 \\times 23$",
+      "같다",
+      "알 수 없다"
+    ],
+    "answer": "$42 \\times 23$",
+    "answer_aliases": [
+      "42 x 23"
+    ],
+    "explanation": "$38 \\times 25 = 950$이고, $42 \\times 23 = 966$입니다. $966 > 950$이므로 $42 \\times 23$이 더 큽니다.",
+    "concept_tags": [
+      "곱셈 비교",
+      "(두 자리)×(두 자리)"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::12",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "한 상자에 125개의 사탕이 들어있습니다. 사탕 6상자에는 모두 몇 개의 사탕이 들어있을까요?",
+    "choices": null,
+    "answer": "750개",
+    "answer_aliases": [
+      "750"
+    ],
+    "explanation": "$125 \\times 6$을 계산합니다. $125 \\times 6 = 750$이므로, 사탕은 모두 750개 들어있습니다.",
+    "concept_tags": [
+      "(세 자리)×(한 자리) 응용",
+      "실생활 문제"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::13",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "한 학생이 하루에 수학 문제를 18개씩 풉니다. 25일 동안 이 학생이 푼 수학 문제는 모두 몇 개인가요?",
+    "choices": null,
+    "answer": "450개",
+    "answer_aliases": [
+      "450"
+    ],
+    "explanation": "$18 \\times 25$를 계산합니다. $18 \\times 25 = 450$이므로, 25일 동안 450개의 문제를 풀었습니다.",
+    "concept_tags": [
+      "(두 자리)×(두 자리) 응용",
+      "실생활 문제"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::14",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "$1 \\square 3 \\times 4 = 572$일 때, $\\square$ 안에 들어갈 알맞은 숫자는 무엇인가요?",
+    "choices": null,
+    "answer": "4",
+    "answer_aliases": [
+      "4"
+    ],
+    "explanation": "$1 \\square 3 \\times 4 = 572$입니다. 일의 자리 $3 \\times 4 = 12$이므로 일의 자리는 2가 되고 1이 올림됩니다. 십의 자리는 $\\square \\times 4$에 올림 1을 더한 값이 7이 되어야 합니다. 즉, $\\square \\times 4$의 결과가 6으로 끝나는 수여야 합니다. $\\square = 4$일 때 $4 \\times 4 = 16$이므로 $16 + 1 = 17$이 되어 십의 자리가 7이 되고 1이 올림됩니다. 백의 자리는 $1 \\times 4$에 올림 1을 더한 값이 5가 되어야 합니다. $1 \\times 4 + 1 = 5$이므로 맞습니다. 따라서 $\\square$ 안에 들어갈 숫자는 4입니다.",
+    "concept_tags": [
+      "빈칸 채우기",
+      "(세 자리)×(한 자리)"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::15",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "$2 \\square \\times 32 = 800$일 때, $\\square$ 안에 들어갈 알맞은 숫자는 무엇인가요?",
+    "choices": null,
+    "answer": "5",
+    "answer_aliases": [
+      "5"
+    ],
+    "explanation": "$2 \\square \\times 32 = 800$을 만족하는 수를 찾습니다. 대략 $20 \\times 30 = 600$, $30 \\times 30 = 900$이므로 $2 \\square$는 20대 중반의 수일 것입니다. $25 \\times 32$를 계산하면 $25 \\times 2 = 50$, $25 \\times 30 = 750$이므로 $50 + 750 = 800$입니다. 따라서 $\\square$ 안에 들어갈 숫자는 5입니다.",
+    "concept_tags": [
+      "빈칸 채우기",
+      "(두 자리)×(두 자리)"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::16",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "숫자 카드 1, 2, 3, 5가 있습니다. 이 중 3장을 사용하여 (세 자리 수)를 만들고, 남은 1장으로 (한 자리 수)를 만들어 곱했을 때, 만들 수 있는 가장 큰 곱은 얼마인가요?",
+    "choices": null,
+    "answer": "1605",
+    "answer_aliases": [
+      "1605"
+    ],
+    "explanation": "가장 큰 곱을 만들려면, 한 자리 수와 세 자리 수를 모두 크게 만들어야 합니다. 숫자 5를 한 자리 수로 사용하고, 남은 숫자 1, 2, 3으로 가장 큰 세 자리 수 321을 만들 수 있습니다. 따라서 $321 \\times 5 = 1605$가 가장 큰 곱입니다.",
+    "concept_tags": [
+      "큰 수 곱셈 응용",
+      "문제 해결"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::17",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "숫자 카드 1, 2, 3, 4가 있습니다. 이 4장의 카드를 모두 사용하여 (두 자리 수) $\\times$ (두 자리 수)를 만들었을 때, 만들 수 있는 가장 작은 곱은 얼마인가요?",
+    "choices": null,
+    "answer": "312",
+    "answer_aliases": [
+      "312"
+    ],
+    "explanation": "가장 작은 곱을 만들려면, 두 자리 수의 십의 자리 숫자를 가능한 한 작게 만들어야 합니다. 숫자 1과 2를 십의 자리 숫자로 사용합니다. (1_ ) $\\times$ (2_ ) 형태를 만들고 남은 숫자 3과 4를 일의 자리에 배치합니다. $13 \\times 24 = 312$와 $14 \\times 23 = 322$ 중에서 가장 작은 곱은 312입니다.",
+    "concept_tags": [
+      "큰 수 곱셈 응용",
+      "문제 해결"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::18",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "한 공장에서 매일 150개의 장난감을 만듭니다. 1주일 동안 만든 장난감 중 300개를 팔았다면, 남은 장난감은 몇 개인가요? (1주일은 7일입니다.)",
+    "choices": [
+      "650개",
+      "750개",
+      "850개",
+      "950개"
+    ],
+    "answer": "750개",
+    "answer_aliases": [
+      "750"
+    ],
+    "explanation": "1. 1주일(7일) 동안 만든 장난감의 총 개수를 계산합니다: $150 \\times 7 = 1050$개.\n2. 총 장난감 개수에서 판매한 장난감 개수를 뺍니다: $1050 - 300 = 750$개.\n따라서 남은 장난감은 750개입니다.",
+    "concept_tags": [
+      "곱셈 활용",
+      "다단계 문제",
+      "실생활 문제"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-2-1::v3::19",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-06]",
+    "unit_id": "math-3-2-1",
+    "unit_name": "곱셈",
+    "sub_unit": "(세 자리 수) × (한 자리 수) / (두 자리 수) × (두 자리 수)",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 수에 6을 곱해야 할 것을 잘못하여 9를 곱했더니 450이 되었습니다. 바르게 계산하면 얼마인가요?",
+    "choices": null,
+    "answer": "300",
+    "answer_aliases": [
+      "300"
+    ],
+    "explanation": "1. 잘못 계산한 결과를 이용하여 어떤 수를 찾습니다. 어떤 수 $\\times 9 = 450$이므로, 어떤 수는 $450 \\div 9 = 50$입니다.\n2. 어떤 수(50)에 바르게 6을 곱합니다. $50 \\times 6 = 300$입니다.\n따라서 바르게 계산하면 300입니다.",
+    "concept_tags": [
+      "역연산",
+      "곱셈 활용",
+      "문제 해결"
+    ],
+    "common_errors": [],
     "license_code": "SELF_GEN",
     "is_published": true
   }
