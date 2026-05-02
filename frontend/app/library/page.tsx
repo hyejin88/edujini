@@ -200,7 +200,11 @@ function UnitCard({
           </div>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <Printer className="h-3.5 w-3.5" />
-            <span>{unit.problem_count}문항 · 인쇄 가능</span>
+            <span>
+              {mode === "drill"
+                ? `${getUnitSheets(unit.id).filter((s) => s.type !== "comprehensive").length}개 양식 · 매번 새 문제`
+                : `${unit.problem_count}문항 · 인쇄 가능`}
+            </span>
             {isPlayed && (
               <span className="ml-2 rounded-full bg-green-100 px-2 py-0.5 text-green-700">
                 ✓ 풀이중

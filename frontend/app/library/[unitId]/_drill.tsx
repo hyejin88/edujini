@@ -147,7 +147,12 @@ export default function DrillSheetPage({
   sheet: SheetMeta;
   unit: UnitDTO | null;
 }) {
-  const [seedNonce, setSeedNonce] = useState(0);
+  // 페이지 진입 시 매번 새 랜덤 nonce → 매번 다른 30문제
+  const [seedNonce, setSeedNonce] = useState<number>(() =>
+    typeof window === "undefined"
+      ? 0
+      : Date.now() ^ Math.floor(Math.random() * 1_000_000_000)
+  );
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [isGraded, setIsGraded] = useState(false);
   const [problems, setProblems] = useState<DrillProblem[]>([]);
@@ -156,7 +161,7 @@ export default function DrillSheetPage({
   useEffect(() => {
     let mounted = true;
     setLoading(true);
-    generateDrill(sheet).then((p) => {
+    generateDrill(sheet, seedNonce).then((p) => {
       if (mounted) {
         setProblems(p);
         setLoading(false);
@@ -183,7 +188,7 @@ export default function DrillSheetPage({
 
   const handleGrade = () => setIsGraded(true);
   const handleNew = () => {
-    setSeedNonce((n) => n + 1);
+    setSeedNonce(Date.now() ^ Math.floor(Math.random() * 1_000_000_000));
     setAnswers({});
     setIsGraded(false);
   };

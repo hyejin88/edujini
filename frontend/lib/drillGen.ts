@@ -138,13 +138,14 @@ function poolItemToProblem(item: PoolItem): Omit<DrillProblem, "index" | "is_exa
   };
 }
 
-export async function generateDrill(sheet: SheetMeta): Promise<DrillProblem[]> {
+export async function generateDrill(sheet: SheetMeta, nonce: number = 0): Promise<DrillProblem[]> {
   const poolKey = sheet.pool_key;
   if (!poolKey) return [];
   const pool = await loadPool(poolKey);
   if (pool.length === 0) return [];
 
-  const seed = hashCode(`${sheet.unit_id}::${sheet.id}::${todayKey()}`);
+  // 시드: unit + sheet + 날짜 + nonce (진입/새 문제 클릭마다 갱신)
+  const seed = hashCode(`${sheet.unit_id}::${sheet.id}::${todayKey()}::${nonce}`);
   const rng = mulberry32(seed);
 
   const N = sheet.problem_count;

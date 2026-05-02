@@ -366,6 +366,8 @@ for uid, info in CAT.items():
         carry = parse_carry(title, desc)
         d1, d2 = parse_digits(title)
         with_rem = '나머지' in title and '없음' not in title
+        # 카탈로그 제목 정리: @box → □, ☐ → □
+        title = title.replace('@box', '□').replace('☐', '□')
         # 우선 특수 양식(분수·소수·약수·비) 직매핑 시도
         special_key = parse_special_op(title, desc)
         if special_key and special_key in POOL_KEYS:
