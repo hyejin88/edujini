@@ -9486,5 +9486,1507 @@
     ],
     "license_code": "SELF_GEN",
     "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::0",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 나눗셈의 몫은 얼마입니까? 가장 간단한 분수로 나타내세요. $\\frac{1}{3} \\div 2$",
+    "choices": [
+      "$\\frac{1}{2}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{3}{2}$",
+      "$\\frac{1}{5}$"
+    ],
+    "answer": "$\\frac{1}{6}$",
+    "answer_aliases": [
+      "1/6"
+    ],
+    "explanation": "분수의 나눗셈은 나누는 수의 역수를 곱하는 것과 같습니다. $2$의 역수는 $\\frac{1}{2}$이므로, $\\frac{1}{3} \\div 2 = \\frac{1}{3} \\times \\frac{1}{2} = \\frac{1 \\times 1}{3 \\times 2} = \\frac{1}{6}$입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "자연수로 나누기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{2}{3}$",
+        "reason": "분모에 곱해야 할 것을 분자에 곱하는 실수입니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$\\frac{1}{2}$",
+        "reason": "나누는 수를 그대로 곱하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::1",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 중 $\\frac{3}{5} \\div 4$의 계산 결과로 옳은 것은 무엇입니까?",
+    "choices": [
+      "$\\frac{3}{20}$",
+      "$\\frac{12}{5}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{4}{15}$",
+      "$\\frac{7}{5}$"
+    ],
+    "answer": "$\\frac{3}{20}$",
+    "answer_aliases": [
+      "3/20"
+    ],
+    "explanation": "$\\frac{3}{5} \\div 4 = \\frac{3}{5} \\times \\frac{1}{4} = \\frac{3 \\times 1}{5 \\times 4} = \\frac{3}{20}$입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "자연수로 나누기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{12}{5}$",
+        "reason": "나누는 수를 곱하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::2",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$5 \\div 6$을 분수로 나타내면 얼마입니까? 가장 간단한 분수로 쓰세요.",
+    "choices": null,
+    "answer": "$\\frac{5}{6}$",
+    "answer_aliases": [
+      "5/6"
+    ],
+    "explanation": "자연수 나눗셈의 몫을 분수로 나타낼 때, 나누어지는 수가 분자, 나누는 수가 분모가 됩니다. 따라서 $5 \\div 6 = \\frac{5}{6}$입니다.",
+    "concept_tags": [
+      "자연수 나눗셈",
+      "분수로 표현"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$\\frac{6}{5}$",
+        "reason": "나누어지는 수와 나누는 수의 위치를 혼동하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::3",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$\\frac{4}{7}$을 $2$로 나눈 몫은 얼마입니까? 가장 간단한 분수로 나타내세요.",
+    "choices": [
+      "$\\frac{8}{7}$",
+      "$\\frac{2}{7}$",
+      "$\\frac{4}{14}$",
+      "$\\frac{1}{7}$",
+      "$\\frac{7}{8}$"
+    ],
+    "answer": "$\\frac{2}{7}$",
+    "answer_aliases": [
+      "2/7"
+    ],
+    "explanation": "$\\frac{4}{7} \\div 2 = \\frac{4}{7} \\times \\frac{1}{2} = \\frac{4 \\times 1}{7 \\times 2} = \\frac{4}{14}$입니다. 이를 약분하면 $\\frac{2}{7}$이 됩니다. 또는 분자의 $4$가 나누는 수 $2$로 나누어지므로, $\\frac{4 \\div 2}{7} = \\frac{2}{7}$로 바로 계산할 수도 있습니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "약분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{4}{14}$",
+        "reason": "약분을 하지 않아 가장 간단한 분수로 나타내지 못한 경우입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::4",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음 나눗셈의 몫을 가장 간단한 분수로 구하세요. $\\frac{2}{9} \\div 3$",
+    "choices": [
+      "$\\frac{6}{9}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{2}{27}$",
+      "$\\frac{1}{9}$",
+      "$\\frac{3}{18}$"
+    ],
+    "answer": "$\\frac{2}{27}$",
+    "answer_aliases": [
+      "2/27"
+    ],
+    "explanation": "$\\frac{2}{9} \\div 3 = \\frac{2}{9} \\times \\frac{1}{3} = \\frac{2 \\times 1}{9 \\times 3} = \\frac{2}{27}$입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "자연수로 나누기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{6}{9}$",
+        "reason": "나누는 수를 곱하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::5",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "주스 $\\frac{3}{4}$L를 3명이 똑같이 나누어 마셨습니다. 한 명이 마신 주스는 몇 L입니까? 가장 간단한 분수로 쓰세요.",
+    "choices": null,
+    "answer": "$\\frac{1}{4}$L",
+    "answer_aliases": [
+      "1/4L",
+      "1/4"
+    ],
+    "explanation": "전체 주스 양을 사람 수로 나누면 됩니다. $\\frac{3}{4} \\div 3 = \\frac{3}{4} \\times \\frac{1}{3} = \\frac{3}{12}$입니다. 이를 약분하면 $\\frac{1}{4}$이 됩니다. 따라서 한 명이 마신 주스는 $\\frac{1}{4}$L입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{9}{4}$L",
+        "reason": "나누는 수를 곱하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::6",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "가장 간단한 분수로 나타낸 $\\frac{7}{8} \\div 3$의 몫은 얼마입니까?",
+    "choices": [
+      "$\\frac{21}{8}$",
+      "$\\frac{7}{24}$",
+      "$\\frac{8}{21}$",
+      "$\\frac{7}{3}$",
+      "$\\frac{1}{24}$"
+    ],
+    "answer": "$\\frac{7}{24}$",
+    "answer_aliases": [
+      "7/24"
+    ],
+    "explanation": "$\\frac{7}{8} \\div 3 = \\frac{7}{8} \\times \\frac{1}{3} = \\frac{7 \\times 1}{8 \\times 3} = \\frac{7}{24}$입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "자연수로 나누기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{21}{8}$",
+        "reason": "나누는 수를 곱하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::7",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "대분수 $1\\frac{1}{2}$을 $4$로 나눈 몫은 얼마입니까? 가장 간단한 분수로 나타내세요.",
+    "choices": [
+      "$\\frac{3}{8}$",
+      "$\\frac{6}{4}$",
+      "$\\frac{1}{8}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{1}{2}$"
+    ],
+    "answer": "$\\frac{3}{8}$",
+    "answer_aliases": [
+      "3/8"
+    ],
+    "explanation": "먼저 대분수 $1\\frac{1}{2}$을 가분수로 바꿉니다. $1\\frac{1}{2} = \\frac{1 \\times 2 + 1}{2} = \\frac{3}{2}$입니다. 이제 나눗셈을 계산합니다. $\\frac{3}{2} \\div 4 = \\frac{3}{2} \\times \\frac{1}{4} = \\frac{3 \\times 1}{2 \\times 4} = \\frac{3}{8}$입니다.",
+    "concept_tags": [
+      "대분수",
+      "가분수",
+      "분수 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$\\frac{1}{8}$",
+        "reason": "대분수를 가분수로 바꾸는 과정에서 $1\\frac{1}{2}$을 $\\frac{1}{2}$로 착각하여 계산하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::8",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "어떤 분수를 $2$로 나누었더니 몫이 $\\frac{3}{10}$이 되었습니다. 어떤 분수의 분자는 얼마입니까? (어떤 분수를 $\\frac{\\square}{5}$라고 할 때, $\\frac{\\square}{5} \\div 2 = \\frac{3}{10}$)",
+    "choices": null,
+    "answer": "3",
+    "answer_aliases": [
+      "3"
+    ],
+    "explanation": "어떤 분수를 $\\frac{\\square}{5}$라고 하면, $\\frac{\\square}{5} \\div 2 = \\frac{3}{10}$입니다. 나눗셈을 곱셈으로 바꾸면 $\\frac{\\square}{5} \\times \\frac{1}{2} = \\frac{3}{10}$이 됩니다. 즉, $\\frac{\\square \\times 1}{5 \\times 2} = \\frac{\\square}{10} = \\frac{3}{10}$이므로, $\\square = 3$입니다.",
+    "concept_tags": [
+      "역연산",
+      "분수 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "6",
+        "reason": "어떤 분수를 구하는 것이 아니라 분자를 구하는 문제인데, $\\frac{6}{10}$으로 착각하여 분자를 6으로 답하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::9",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 두 나눗셈의 몫을 비교하여 $\\bigcirc$ 안에 알맞은 부등호는 무엇입니까? (>, <, =)\n$\\frac{5}{6} \\div 2 \\quad \\bigcirc \\quad \\frac{3}{4} \\div 3$",
+    "choices": [
+      ">",
+      "<",
+      "="
+    ],
+    "answer": ">",
+    "answer_aliases": [
+      ">"
+    ],
+    "explanation": "먼저 각각의 나눗셈을 계산합니다.\n$\\frac{5}{6} \\div 2 = \\frac{5}{6} \\times \\frac{1}{2} = \\frac{5}{12}$\n$\\frac{3}{4} \\div 3 = \\frac{3}{4} \\times \\frac{1}{3} = \\frac{3}{12}$ (약분하면 $\\frac{1}{4}$)\n두 분수를 비교하기 위해 통분합니다. $\\frac{5}{12}$와 $\\frac{3}{12}$를 비교하면 $\\frac{5}{12} > \\frac{3}{12}$입니다. 따라서 정답은 $>$입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "분수 비교",
+      "통분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "<",
+        "reason": "두 분수의 계산 결과 중 하나를 잘못 계산하여 비교가 틀린 경우입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::10",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$\\frac{9}{10}$을 $3$으로 나눈 몫을 가장 간단한 분수로 나타내면 얼마입니까?",
+    "choices": [
+      "$\\frac{27}{10}$",
+      "$\\frac{9}{30}$",
+      "$\\frac{3}{10}$",
+      "$\\frac{10}{27}$",
+      "$\\frac{1}{10}$"
+    ],
+    "answer": "$\\frac{3}{10}$",
+    "answer_aliases": [
+      "3/10"
+    ],
+    "explanation": "$\\frac{9}{10} \\div 3 = \\frac{9}{10} \\times \\frac{1}{3} = \\frac{9 \\times 1}{10 \\times 3} = \\frac{9}{30}$입니다. 이를 약분하면 $\\frac{3}{10}$이 됩니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "약분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{9}{30}$",
+        "reason": "약분을 하지 않아 가장 간단한 분수로 나타내지 못한 경우입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::11",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "길이 $\\frac{2}{3}$m인 끈을 4등분 하였습니다. 끈 한 조각의 길이는 몇 m입니까? 가장 간단한 분수로 쓰세요.",
+    "choices": null,
+    "answer": "$\\frac{1}{6}$m",
+    "answer_aliases": [
+      "1/6m",
+      "1/6"
+    ],
+    "explanation": "전체 끈의 길이를 등분한 수로 나누면 됩니다. $\\frac{2}{3} \\div 4 = \\frac{2}{3} \\times \\frac{1}{4} = \\frac{2}{12}$입니다. 이를 약분하면 $\\frac{1}{6}$이 됩니다. 따라서 끈 한 조각의 길이는 $\\frac{1}{6}$m입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{8}{3}$m",
+        "reason": "나누는 수를 곱하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::12",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "$\\frac{5}{6}$m의 천을 5조각으로 똑같이 나누어 사용했습니다. 한 조각의 천은 몇 m입니까?",
+    "choices": [
+      "$\\frac{25}{6}$m",
+      "$\\frac{1}{6}$m",
+      "$\\frac{5}{30}$m",
+      "$\\frac{6}{25}$m",
+      "$\\frac{1}{5}$m"
+    ],
+    "answer": "$\\frac{1}{6}$m",
+    "answer_aliases": [
+      "1/6m",
+      "1/6"
+    ],
+    "explanation": "전체 천의 길이를 조각 수로 나누면 됩니다. $\\frac{5}{6} \\div 5 = \\frac{5}{6} \\times \\frac{1}{5} = \\frac{5}{30}$입니다. 이를 약분하면 $\\frac{1}{6}$이 됩니다. 따라서 한 조각의 천은 $\\frac{1}{6}$m입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{5}{30}$m",
+        "reason": "약분을 하지 않아 가장 간단한 분수로 나타내지 못한 경우입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::13",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "쌀 $\\frac{7}{10}$kg을 2개의 봉지에 똑같이 나누어 담았습니다. 한 봉지에 담긴 쌀은 몇 kg입니까?",
+    "choices": [
+      "$\\frac{7}{20}$kg",
+      "$\\frac{14}{10}$kg",
+      "$\\frac{10}{14}$kg",
+      "$\\frac{7}{5}$kg",
+      "$\\frac{1}{20}$kg"
+    ],
+    "answer": "$\\frac{7}{20}$kg",
+    "answer_aliases": [
+      "7/20kg",
+      "7/20"
+    ],
+    "explanation": "전체 쌀의 양을 봉지 수로 나누면 됩니다. $\\frac{7}{10} \\div 2 = \\frac{7}{10} \\times \\frac{1}{2} = \\frac{7 \\times 1}{10 \\times 2} = \\frac{7}{20}$입니다. 따라서 한 봉지에 담긴 쌀은 $\\frac{7}{20}$kg입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{14}{10}$kg",
+        "reason": "나누는 수를 곱하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::14",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "페인트 $\\frac{9}{10}$L를 3명이 똑같이 나누어 가졌습니다. 한 명이 가진 페인트는 몇 L입니까? 가장 간단한 분수로 쓰세요.",
+    "choices": null,
+    "answer": "$\\frac{3}{10}$L",
+    "answer_aliases": [
+      "3/10L",
+      "3/10"
+    ],
+    "explanation": "전체 페인트 양을 사람 수로 나누면 됩니다. $\\frac{9}{10} \\div 3 = \\frac{9}{10} \\times \\frac{1}{3} = \\frac{9}{30}$입니다. 이를 약분하면 $\\frac{3}{10}$이 됩니다. 따라서 한 명이 가진 페인트는 $\\frac{3}{10}$L입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{27}{10}$L",
+        "reason": "나누는 수를 곱하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::15",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 케이크의 $\\frac{1}{2}$을 먹고 남은 케이크를 3명이 똑같이 나누어 먹었습니다. 한 명이 먹은 케이크는 전체의 얼마입니까?",
+    "choices": [
+      "$\\frac{1}{6}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{3}{2}$"
+    ],
+    "answer": "$\\frac{1}{6}$",
+    "answer_aliases": [
+      "1/6"
+    ],
+    "explanation": "케이크의 $\\frac{1}{2}$을 먹었으므로 남은 케이크는 전체의 $1 - \\frac{1}{2} = \\frac{1}{2}$입니다. 남은 케이크 $\\frac{1}{2}$을 3명이 똑같이 나누어 먹었으므로, $\\frac{1}{2} \\div 3 = \\frac{1}{2} \\times \\frac{1}{3} = \\frac{1}{6}$입니다. 따라서 한 명이 먹은 케이크는 전체의 $\\frac{1}{6}$입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "남은 양 계산",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$\\frac{1}{3}$",
+        "reason": "남은 케이크 양을 계산하지 않고 전체 케이크를 3명이 나눈 것으로 착각하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::16",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "A는 주스 $\\frac{4}{5}$L를 2명이 똑같이 나누어 마셨고, B는 주스 $\\frac{5}{6}$L를 3명이 똑같이 나누어 마셨습니다. 누가 한 명당 더 많은 양의 주스를 마셨습니까?",
+    "choices": [
+      "A",
+      "B",
+      "같다",
+      "알 수 없다"
+    ],
+    "answer": "A",
+    "answer_aliases": [
+      "A"
+    ],
+    "explanation": "A가 한 명당 마신 주스 양: $\\frac{4}{5} \\div 2 = \\frac{4}{5} \\times \\frac{1}{2} = \\frac{4}{10} = \\frac{2}{5}$L\nB가 한 명당 마신 주스 양: $\\frac{5}{6} \\div 3 = \\frac{5}{6} \\times \\frac{1}{3} = \\frac{5}{18}$L\n두 분수를 비교하기 위해 통분합니다. $\\frac{2}{5} = \\frac{2 \\times 18}{5 \\times 18} = \\frac{36}{90}$\n$\\frac{5}{18} = \\frac{5 \\times 5}{18 \\times 5} = \\frac{25}{90}$\n$\\frac{36}{90} > \\frac{25}{90}$이므로 A가 한 명당 더 많은 양의 주스를 마셨습니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "분수 비교",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "B",
+        "reason": "두 분수의 계산 결과나 비교 과정에서 실수가 발생한 경우입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::17",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 수를 $4$로 나누었더니 몫이 $\\frac{3}{8}$이 되었습니다. 어떤 수는 얼마입니까? 가장 간단한 분수로 쓰세요.",
+    "choices": null,
+    "answer": "$\\frac{3}{2}$",
+    "answer_aliases": [
+      "3/2",
+      "1과 1/2",
+      "1.5"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면, $\\square \\div 4 = \\frac{3}{8}$입니다. 나눗셈의 역연산을 이용하면 $\\square = \\frac{3}{8} \\times 4$입니다. $\\frac{3}{8} \\times 4 = \\frac{3 \\times 4}{8} = \\frac{12}{8}$입니다. 이를 약분하면 $\\frac{3}{2}$이 됩니다. 따라서 어떤 수는 $\\frac{3}{2}$입니다.",
+    "concept_tags": [
+      "역연산",
+      "분수 곱셈",
+      "분수 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$\\frac{3}{32}$",
+        "reason": "역연산을 잘못 적용하여 $\\frac{3}{8} \\div 4$를 계산하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::18",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 물통에 물이 가득 차 있었습니다. 전체 물의 $\\frac{1}{4}$을 사용하고, 남은 물을 3개의 통에 똑같이 나누어 담았습니다. 한 통에 담긴 물은 전체 물의 얼마입니까?",
+    "choices": [
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{12}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{6}$"
+    ],
+    "answer": "$\\frac{1}{4}$",
+    "answer_aliases": [
+      "1/4"
+    ],
+    "explanation": "전체 물의 $\\frac{1}{4}$을 사용했으므로 남은 물은 전체의 $1 - \\frac{1}{4} = \\frac{3}{4}$입니다. 남은 물 $\\frac{3}{4}$을 3개의 통에 똑같이 나누어 담았으므로, $\\frac{3}{4} \\div 3 = \\frac{3}{4} \\times \\frac{1}{3} = \\frac{3}{12}$입니다. 이를 약분하면 $\\frac{1}{4}$이 됩니다. 따라서 한 통에 담긴 물은 전체 물의 $\\frac{1}{4}$입니다.",
+    "concept_tags": [
+      "분수 나눗셈",
+      "남은 양 계산",
+      "복합 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$\\frac{1}{12}$",
+        "reason": "남은 물의 양을 $\\frac{1}{4}$로 착각하여 $\\frac{1}{4} \\div 3 = \\frac{1}{12}$로 계산하는 실수입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-1::v3::19",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-09]",
+    "unit_id": "math-6-1-1",
+    "unit_name": "분수의 나눗셈",
+    "sub_unit": "자연수 ÷ 자연수, 분수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "길이 $2\\frac{1}{4}$m인 끈을 3등분한 후, 그 중 한 조각을 다시 2등분하면 가장 작은 한 조각의 길이는 몇 m입니까?",
+    "choices": [
+      "$\\frac{3}{4}$m",
+      "$\\frac{3}{8}$m",
+      "$\\frac{9}{4}$m",
+      "$\\frac{9}{24}$m",
+      "$\\frac{1}{24}$m"
+    ],
+    "answer": "$\\frac{3}{8}$m",
+    "answer_aliases": [
+      "3/8m",
+      "3/8"
+    ],
+    "explanation": "먼저 $2\\frac{1}{4}$m를 가분수로 바꿉니다. $2\\frac{1}{4} = \\frac{2 \\times 4 + 1}{4} = \\frac{9}{4}$m입니다.\n이 끈을 3등분하면 한 조각의 길이는 $\\frac{9}{4} \\div 3 = \\frac{9}{4} \\times \\frac{1}{3} = \\frac{9}{12}$m입니다. 이를 약분하면 $\\frac{3}{4}$m입니다.\n그 중 한 조각인 $\\frac{3}{4}$m를 다시 2등분하면 $\\frac{3}{4} \\div 2 = \\frac{3}{4} \\times \\frac{1}{2} = \\frac{3}{8}$m입니다. 따라서 가장 작은 한 조각의 길이는 $\\frac{3}{8}$m입니다.",
+    "concept_tags": [
+      "대분수",
+      "가분수",
+      "분수 나눗셈",
+      "복합 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{9}{24}$m",
+        "reason": "중간 약분을 놓치거나 최종 약분을 하지 않은 경우입니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::0",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$9.6 \\div 3$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.32$",
+      "$3.2$",
+      "$32$",
+      "$320$"
+    ],
+    "answer": "$3.2$",
+    "answer_aliases": [
+      "3.2"
+    ],
+    "explanation": "$96 \\div 3 = 32$이므로, $9.6 \\div 3$은 $96 \\div 3$의 몫에 소수점을 한 자리 왼쪽으로 옮겨 $3.2$가 됩니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "소수점_위치"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.32$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$32$",
+        "reason": "자연수 나눗셈으로만 계산하고 소수점을 찍지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::1",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$12.4 \\div 4$의 몫을 구하세요.",
+    "choices": null,
+    "answer": "$3.1$",
+    "answer_aliases": [
+      "3.1"
+    ],
+    "explanation": "$12.4$를 $4$로 나누면, $12 \\div 4 = 3$이고 $4 \\div 4 = 1$이므로 $3.1$이 됩니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "기본_계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$31$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::2",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$2.5 \\div 5$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.5$",
+      "$5$",
+      "$0.05$",
+      "$25$"
+    ],
+    "answer": "$0.5$",
+    "answer_aliases": [
+      "0.5"
+    ],
+    "explanation": "$25 \\div 5 = 5$이므로, $2.5 \\div 5$는 $0.5$가 됩니다. 몫의 소수점은 나누어지는 수의 소수점과 같은 위치에 찍습니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "소수점_위치"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$5$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::3",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$18.9 \\div 9$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.21$",
+      "$2.1$",
+      "$21$",
+      "$210$"
+    ],
+    "answer": "$2.1$",
+    "answer_aliases": [
+      "2.1"
+    ],
+    "explanation": "$189 \\div 9 = 21$이므로, $18.9 \\div 9$는 $2.1$이 됩니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "기본_계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.21$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::4",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$32.8 \\div 8$의 몫을 구하세요.",
+    "choices": null,
+    "answer": "$4.1$",
+    "answer_aliases": [
+      "4.1"
+    ],
+    "explanation": "$32.8$을 $8$로 나누면, $32 \\div 8 = 4$이고 $8 \\div 8 = 1$이므로 $4.1$이 됩니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "기본_계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$41$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::5",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$0.6 \\div 2$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.03$",
+      "$0.3$",
+      "$3$",
+      "$30$"
+    ],
+    "answer": "$0.3$",
+    "answer_aliases": [
+      "0.3"
+    ],
+    "explanation": "$6 \\div 2 = 3$이므로, $0.6 \\div 2$는 $0.3$이 됩니다. 나누어지는 수의 소수점 위치에 맞춰 몫의 소수점을 찍습니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "소수점_위치"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$3$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::6",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$1.5 \\div 6$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.25$",
+      "$2.5$",
+      "$0.025$",
+      "$25$"
+    ],
+    "answer": "$0.25$",
+    "answer_aliases": [
+      "0.25"
+    ],
+    "explanation": "$1.5$를 $6$으로 나누면, $1$은 $6$으로 나누어지지 않으므로 몫의 일의 자리는 $0$입니다. $15 \\div 6 = 2$ 나머지는 $3$이므로 $30 \\div 6 = 5$가 되어 $0.25$가 됩니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "몫이_0인_경우",
+      "소수점_아래_자리수_늘리기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2.5$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::7",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$0.7 \\div 2$의 몫을 구하세요.",
+    "choices": null,
+    "answer": "$0.35$",
+    "answer_aliases": [
+      "0.35"
+    ],
+    "explanation": "$0.7$을 $2$로 나누면, $7 \\div 2 = 3$ 나머지는 $1$이므로 $10 \\div 2 = 5$가 되어 $0.35$가 됩니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "몫이_0인_경우",
+      "소수점_아래_자리수_늘리기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$3.5$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::8",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$2.4 \\div 5$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.48$",
+      "$4.8$",
+      "$0.048$",
+      "$48$"
+    ],
+    "answer": "$0.48$",
+    "answer_aliases": [
+      "0.48"
+    ],
+    "explanation": "$2.4$를 $5$로 나누면, $2$는 $5$로 나누어지지 않으므로 몫의 일의 자리는 $0$입니다. $24 \\div 5 = 4$ 나머지는 $4$이므로 $40 \\div 5 = 8$이 되어 $0.48$이 됩니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "몫이_0인_경우",
+      "소수점_아래_자리수_늘리기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$4.8$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::9",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$5.6 \\div 7$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.08$",
+      "$0.8$",
+      "$8$",
+      "$80$"
+    ],
+    "answer": "$0.8$",
+    "answer_aliases": [
+      "0.8"
+    ],
+    "explanation": "$5.6$을 $7$로 나누면, $5$는 $7$로 나누어지지 않으므로 몫의 일의 자리는 $0$입니다. $56 \\div 7 = 8$이므로 $0.8$이 됩니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "몫이_0인_경우"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$8$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::10",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$1.2 \\div 8$의 몫을 구하세요.",
+    "choices": null,
+    "answer": "$0.15$",
+    "answer_aliases": [
+      "0.15"
+    ],
+    "explanation": "$1.2$를 $8$로 나누면, $1$은 $8$로 나누어지지 않으므로 몫의 일의 자리는 $0$입니다. $12 \\div 8 = 1$ 나머지는 $4$이므로 $40 \\div 8 = 5$가 되어 $0.15$가 됩니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "몫이_0인_경우",
+      "소수점_아래_자리수_늘리기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$1.5$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::11",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$0.09 \\div 3$의 몫은 얼마인가요?",
+    "choices": [
+      "$0.3$",
+      "$0.03$",
+      "$3$",
+      "$0.003$"
+    ],
+    "answer": "$0.03$",
+    "answer_aliases": [
+      "0.03"
+    ],
+    "explanation": "$9 \\div 3 = 3$이므로, $0.09 \\div 3$은 $0.03$이 됩니다. 나누어지는 수의 소수점 위치에 맞춰 몫의 소수점을 찍습니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "소수점_위치"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$0.3$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::12",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "빵 $3$개를 만드는 데 밀가루 $1.2$ kg이 필요합니다. 빵 $1$개에 필요한 밀가루는 몇 kg인가요?",
+    "choices": [
+      "$0.4$ kg",
+      "$4$ kg",
+      "$0.04$ kg",
+      "$40$ kg"
+    ],
+    "answer": "$0.4$ kg",
+    "answer_aliases": [
+      "0.4kg"
+    ],
+    "explanation": "총 밀가루 양 $1.2$ kg을 빵의 개수 $3$으로 나누면 됩니다. $1.2 \\div 3 = 0.4$ kg입니다.",
+    "concept_tags": [
+      "실생활_문제",
+      "소수_나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$4$ kg",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::13",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "길이 $4.5$ m인 끈을 똑같이 $5$등분 하였습니다. 한 토막의 길이는 몇 m인가요?",
+    "choices": null,
+    "answer": "$0.9$ m",
+    "answer_aliases": [
+      "0.9m"
+    ],
+    "explanation": "총 길이 $4.5$ m를 $5$로 나누면 됩니다. $4.5 \\div 5 = 0.9$ m입니다.",
+    "concept_tags": [
+      "실생활_문제",
+      "소수_나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$9$ m",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::14",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "주스 $3.6$ L를 $4$개의 컵에 똑같이 나누어 담으려고 합니다. 한 컵에 담을 수 있는 주스는 몇 L인가요?",
+    "choices": [
+      "$0.09$ L",
+      "$0.9$ L",
+      "$9$ L",
+      "$90$ L"
+    ],
+    "answer": "$0.9$ L",
+    "answer_aliases": [
+      "0.9L"
+    ],
+    "explanation": "총 주스 양 $3.6$ L를 컵의 개수 $4$로 나누면 됩니다. $3.6 \\div 4 = 0.9$ L입니다.",
+    "concept_tags": [
+      "실생활_문제",
+      "소수_나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$9$ L",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::15",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "무게가 $2.8$ kg인 사과를 $7$명이 똑같이 나누어 먹었습니다. 한 명이 먹은 사과는 몇 kg인가요?",
+    "choices": [
+      "$0.04$ kg",
+      "$0.4$ kg",
+      "$4$ kg",
+      "$40$ kg"
+    ],
+    "answer": "$0.4$ kg",
+    "answer_aliases": [
+      "0.4kg"
+    ],
+    "explanation": "총 사과 무게 $2.8$ kg을 사람 수 $7$로 나누면 됩니다. $2.8 \\div 7 = 0.4$ kg입니다.",
+    "concept_tags": [
+      "실생활_문제",
+      "소수_나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$4$ kg",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::16",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 수를 $6$으로 나누었더니 몫이 $0.35$였습니다. 어떤 수는 얼마인가요?",
+    "choices": null,
+    "answer": "$2.1$",
+    "answer_aliases": [
+      "2.1"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면 $\\square \\div 6 = 0.35$입니다. 따라서 $\\square = 0.35 \times 6$을 계산하면 됩니다. $0.35 \times 6 = 2.1$입니다.",
+    "concept_tags": [
+      "역연산",
+      "소수_곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$21$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::17",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "철사 $1.8$ m로 똑같은 모양의 작품 $3$개를 만들었습니다. 작품 $1$개에 사용된 철사는 몇 m인가요?",
+    "choices": [
+      "$0.06$ m",
+      "$0.6$ m",
+      "$6$ m",
+      "$60$ m"
+    ],
+    "answer": "$0.6$ m",
+    "answer_aliases": [
+      "0.6m"
+    ],
+    "explanation": "총 철사 길이 $1.8$ m를 작품 개수 $3$으로 나누면 됩니다. $1.8 \\div 3 = 0.6$ m입니다.",
+    "concept_tags": [
+      "실생활_문제",
+      "소수_나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$6$ m",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::18",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 수에 $5$를 곱했더니 $12.5$가 되었습니다. 이 어떤 수를 $2$로 나눈 몫은 얼마인가요?",
+    "choices": [
+      "$1.25$",
+      "$2.5$",
+      "$0.25$",
+      "$0.125$"
+    ],
+    "answer": "$1.25$",
+    "answer_aliases": [
+      "1.25"
+    ],
+    "explanation": "먼저 어떤 수를 구합니다. 어떤 수를 $\\square$라고 하면 $\\square \times 5 = 12.5$이므로 $\\square = 12.5 \\div 5 = 2.5$입니다. 이제 이 어떤 수 $2.5$를 $2$로 나누면 $2.5 \\div 2 = 1.25$입니다.",
+    "concept_tags": [
+      "두_단계_문제",
+      "역연산",
+      "소수_나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2.5$",
+        "reason": "어떤 수를 구하고 마지막 나눗셈을 하지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-6-1-3::v3::19",
+    "subject": "수학",
+    "grade": 6,
+    "standard_code": "[6수01-10]",
+    "unit_id": "math-6-1-3",
+    "unit_name": "소수의 나눗셈",
+    "sub_unit": "소수 ÷ 자연수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "나누어지는 수가 $1.44$이고 나누는 수가 $6$일 때, 몫은 얼마인가요?",
+    "choices": [
+      "$0.24$",
+      "$2.4$",
+      "$0.024$",
+      "$24$"
+    ],
+    "answer": "$0.24$",
+    "answer_aliases": [
+      "0.24"
+    ],
+    "explanation": "$1.44 \\div 6$을 계산합니다. $14 \\div 6 = 2$ 나머지는 $2$이고, $24 \\div 6 = 4$이므로 $0.24$가 됩니다. 나누어지는 수의 소수점 위치에 맞춰 몫의 소수점을 찍습니다.",
+    "concept_tags": [
+      "소수_나눗셈",
+      "소수점_아래_두_자리"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2.4$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
   }
 ]

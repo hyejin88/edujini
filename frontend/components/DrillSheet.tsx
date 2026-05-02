@@ -379,6 +379,61 @@ function SpecialProblem({
       />
     );
 
+  // 분수 입력 (분자/분모 분리, 숫자 키패드만)
+  const FracInput = () => {
+    const [num = "", den = ""] = (userAns || "").split("/");
+    const cellStyle: React.CSSProperties = {
+      width: 28, textAlign: "center", border: "none",
+      fontFamily: "inherit", fontSize: "inherit", padding: 0,
+    };
+    return (
+      <span className={`inline-flex flex-col items-center align-middle ${inputCls}`} style={{ lineHeight: 1 }}>
+        <input type="text" inputMode="numeric" pattern="[0-9]*"
+          value={num} disabled={isGraded}
+          onChange={(e) => onChange(`${e.target.value}/${den}`)}
+          className="bg-transparent outline-none" style={cellStyle} />
+        <span style={{ borderTop: "1px solid #111827", width: "100%", margin: "1px 0" }} />
+        <input type="text" inputMode="numeric" pattern="[0-9]*"
+          value={den} disabled={isGraded}
+          onChange={(e) => onChange(`${num}/${e.target.value}`)}
+          className="bg-transparent outline-none" style={cellStyle} />
+      </span>
+    );
+  };
+
+  // 대분수 입력 (자연수 + 분자/분모, 숫자 키패드만)
+  const MixedInput = () => {
+    // userAns 형식: "w num/den" 또는 "w num den"
+    const m = (userAns || "").match(/^\s*(\d*)\s*(\d*)\s*\/?\s*(\d*)\s*$/);
+    const whole = m?.[1] || "";
+    const num = m?.[2] || "";
+    const den = m?.[3] || "";
+    const compose = (w: string, n: string, d: string) => `${w} ${n}/${d}`.trim();
+    const cellStyle: React.CSSProperties = {
+      width: 28, textAlign: "center", border: "none",
+      fontFamily: "inherit", fontSize: "inherit", padding: 0,
+    };
+    return (
+      <span className={`inline-flex items-center align-middle ${inputCls}`} style={{ lineHeight: 1 }}>
+        <input type="text" inputMode="numeric" pattern="[0-9]*"
+          value={whole} disabled={isGraded}
+          onChange={(e) => onChange(compose(e.target.value, num, den))}
+          className="bg-transparent outline-none" style={{ ...cellStyle, marginRight: 4 }} />
+        <span className="inline-flex flex-col items-center" style={{ lineHeight: 1 }}>
+          <input type="text" inputMode="numeric" pattern="[0-9]*"
+            value={num} disabled={isGraded}
+            onChange={(e) => onChange(compose(whole, e.target.value, den))}
+            className="bg-transparent outline-none" style={cellStyle} />
+          <span style={{ borderTop: "1px solid #111827", width: "100%", margin: "1px 0" }} />
+          <input type="text" inputMode="numeric" pattern="[0-9]*"
+            value={den} disabled={isGraded}
+            onChange={(e) => onChange(compose(whole, num, e.target.value))}
+            className="bg-transparent outline-none" style={cellStyle} />
+        </span>
+      </span>
+    );
+  };
+
   // 분수 덧/뺄 (분모 같음)
   if (problem.op === "frac_add" || problem.op === "frac_sub") {
     const [an, ad, bn, bd] = problem.operands;
@@ -390,7 +445,7 @@ function SpecialProblem({
         {problem.is_example ? (
           <Frac n={problem.answer} d={problem.ans_den ?? ad} />
         ) : (
-          Box(`${problem.answer}/${problem.ans_den ?? ad}`, 80)
+          <FracInput />
         )}
         {isGraded && !problem.is_example && correct === false && (
           <span className="ml-2 text-[#6b7280]" style={{ fontSize: "13px" }}>
@@ -576,7 +631,7 @@ function SpecialProblem({
         {problem.is_example ? (
           <Frac n={raw.ans_num} d={raw.ans_den} />
         ) : (
-          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+          <FracInput />
         )}
         {isGraded && !problem.is_example && correct === false && (
           <span className="ml-2 text-[#6b7280]" style={{ fontSize: "13px" }}>
@@ -596,7 +651,7 @@ function SpecialProblem({
         {problem.is_example ? (
           <Mixed w={raw.ans_whole} n={raw.ans_num} d={raw.ans_den} />
         ) : (
-          Box(`${raw.ans_whole} ${raw.ans_num}/${raw.ans_den}`, 100)
+          <MixedInput />
         )}
       </div>
     );
@@ -631,7 +686,7 @@ function SpecialProblem({
         {problem.is_example ? (
           <Mixed w={raw.ans_whole} n={raw.ans_num} d={raw.ans_den} />
         ) : (
-          Box(`${raw.ans_whole} ${raw.ans_num}/${raw.ans_den}`, 100)
+          <MixedInput />
         )}
       </div>
     );
@@ -649,7 +704,7 @@ function SpecialProblem({
         {problem.is_example ? (
           <Frac n={raw.ans_num} d={raw.ans_den} />
         ) : (
-          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+          <FracInput />
         )}
       </div>
     );
@@ -667,7 +722,7 @@ function SpecialProblem({
         {problem.is_example ? (
           <Frac n={raw.ans_num} d={raw.ans_den} />
         ) : (
-          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+          <FracInput />
         )}
       </div>
     );
@@ -682,7 +737,7 @@ function SpecialProblem({
         {problem.is_example ? (
           <Frac n={raw.ans_num} d={raw.ans_den} />
         ) : (
-          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+          <FracInput />
         )}
       </div>
     );
@@ -698,7 +753,7 @@ function SpecialProblem({
         {problem.is_example ? (
           <Frac n={raw.ans_num} d={raw.ans_den} />
         ) : (
-          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+          <FracInput />
         )}
       </div>
     );
@@ -713,7 +768,7 @@ function SpecialProblem({
         {problem.is_example ? (
           <Frac n={raw.ans_num} d={raw.ans_den} />
         ) : (
-          Box(`${raw.ans_num}/${raw.ans_den}`, 80)
+          <FracInput />
         )}
       </div>
     );
@@ -730,7 +785,33 @@ function SpecialProblem({
             <Frac n={raw.ans_b_num} d={raw.ans_lcm} />)
           </span>
         ) : (
-          Box(`${raw.ans_a_num}/${raw.ans_lcm}, ${raw.ans_b_num}/${raw.ans_lcm}`, 140)
+          (() => {
+            const parts = (userAns || ", ").split(",");
+            const a = (parts[0] || "").trim();
+            const b = (parts[1] || "").trim();
+            const setA = (v: string) => onChange(`${v}, ${b}`);
+            const setB = (v: string) => onChange(`${a}, ${v}`);
+            const fInput = (val: string, set: (v: string) => void) => {
+              const [n = "", d = ""] = val.split("/");
+              const cell: React.CSSProperties = { width: 28, textAlign: "center", border: "none", padding: 0, fontFamily: "inherit", fontSize: "inherit" };
+              return (
+                <span className={`inline-flex flex-col items-center align-middle ${inputCls}`} style={{ lineHeight: 1 }}>
+                  <input type="text" inputMode="numeric" pattern="[0-9]*" value={n} disabled={isGraded}
+                    onChange={(e) => set(`${e.target.value}/${d}`)}
+                    className="bg-transparent outline-none" style={cell} />
+                  <span style={{ borderTop: "1px solid #111827", width: "100%", margin: "1px 0" }} />
+                  <input type="text" inputMode="numeric" pattern="[0-9]*" value={d} disabled={isGraded}
+                    onChange={(e) => set(`${n}/${e.target.value}`)}
+                    className="bg-transparent outline-none" style={cell} />
+                </span>
+              );
+            };
+            return (
+              <span>
+                ({fInput(a, setA)}, {fInput(b, setB)})
+              </span>
+            );
+          })()
         )}
       </div>
     );
