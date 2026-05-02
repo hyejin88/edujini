@@ -90,11 +90,29 @@ export default function ResultPage() {
   if (weak_units[0]) concerns.push(`${weak_units[0].unit_name} 정답률 ${weak_units[0].accuracy}% — 같은 단원을 한 번 더 풀어보면 좋아요.`);
   if (concerns.length === 0) concerns.push("특별히 보완할 영역은 보이지 않아요. 같은 학년 다른 단원도 풀어보세요.");
 
-  const nexts: string[] = [];
-  if (weak_units[0]) nexts.push(`${weak_units[0].unit_name} 단원 학습 다시 풀기`);
-  if (top === "계산실수") nexts.push("연산 문제 30문제 워밍업 후 단원 학습 재도전");
-  if (top === "개념미숙" && weak_units[0]) nexts.push(`${weak_units[0].unit_name} 단원의 핵심 개념 다시 보기`);
-  if (nexts.length < 2) nexts.push("다음 학년 단원 미리 보기 (선행 가볍게)");
+  // 다음 학습 추천 — 텍스트 + 클릭 가능 링크 (있을 때만)
+  type NextItem = { text: string; href?: string };
+  const nexts: NextItem[] = [];
+  if (weak_units[0]) {
+    nexts.push({
+      text: `${weak_units[0].unit_name} 단원 학습 다시 풀기`,
+      href: `/library/${encodeURIComponent(weak_units[0].unit_id)}?sheet=comp`,
+    });
+  }
+  if (top === "계산실수" && weak_units[0]) {
+    nexts.push({
+      text: `${weak_units[0].unit_name} 연산 문제 30문제 워밍업`,
+      href: `/library/${encodeURIComponent(weak_units[0].unit_id)}?mode=drill`,
+    });
+  } else if (top === "계산실수") {
+    nexts.push({ text: "연산 문제로 워밍업 후 단원 학습 재도전", href: "/library?grade=3&subject=수학&mode=drill" });
+  }
+  if (top === "개념미숙" && weak_units[0]) {
+    nexts.push({ text: `${weak_units[0].unit_name} 단원의 핵심 개념 다시 보기`, href: `/library/${encodeURIComponent(weak_units[0].unit_id)}?sheet=comp` });
+  }
+  if (nexts.length < 2) {
+    nexts.push({ text: "다른 단원도 풀어보기", href: "/library?grade=3&subject=수학&mode=comp" });
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -134,7 +152,7 @@ export default function ResultPage() {
           <p className="text-muted-foreground">지금까지 푼 {total}문제 중 {correct}문제 정답</p>
         </div>
 
-        {/* Weak Units */}
+        {/* Weak Units — 클릭으로 바로 다시 풀기 */}
         {weak_units.length > 0 && (
           <section className="mb-10">
             <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-foreground">
@@ -143,16 +161,22 @@ export default function ResultPage() {
             </h2>
             <div className="space-y-3">
               {weak_units.map((u) => (
-                <Card key={u.unit_id} className="flex items-center justify-between border border-border p-4">
-                  <div>
-                    <p className="font-medium text-foreground">{u.unit_name}</p>
-                    <p className="text-sm text-muted-foreground">{u.correct}/{u.total} · 추가 학습 권장</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-2xl font-bold text-accent">{u.accuracy}%</p>
-                    <p className="text-xs text-muted-foreground">정답률</p>
-                  </div>
-                </Card>
+                <Link
+                  key={u.unit_id}
+                  href={`/library/${encodeURIComponent(u.unit_id)}?sheet=comp`}
+                  className="block"
+                >
+                  <Card className="flex items-center justify-between border border-border p-4 transition hover:-translate-y-0.5 hover:border-primary hover:shadow-sm">
+                    <div>
+                      <p className="font-medium text-foreground">{u.unit_name}</p>
+                      <p className="text-sm text-muted-foreground">{u.correct}/{u.total} · 다시 풀러 가기 →</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-2xl font-bold text-accent">{u.accuracy}%</p>
+                      <p className="text-xs text-muted-foreground">정답률</p>
+                    </div>
+                  </Card>
+                </Link>
               ))}
             </div>
           </section>
@@ -224,7 +248,16 @@ export default function ResultPage() {
               </h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 {nexts.map((n, i) => (
-                  <li key={i}>{i + 1}. {n}</li>
+                  <li key={i}>
+                    <span className="mr-1">{i + 1}.</span>
+                    {n.href ? (
+                      <Link href={n.href} className="text-primary underline-offset-4 hover:underline">
+                        {n.text} →
+                      </Link>
+                    ) : (
+                      n.text
+                    )}
+                  </li>
                 ))}
               </ul>
             </div>
