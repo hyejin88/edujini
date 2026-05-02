@@ -5,9 +5,12 @@ import {
   heuristicErrorLabel,
   recordAttempt,
 } from "@/lib/db";
-import { callGemini, LABEL_SYSTEM, safeParseJson } from "@/lib/gemini";
 
 export const runtime = "edge";
+
+// 채점은 정적 정답·오답 매칭 (Gemini 호출 0).
+// 4축 오답 라벨은 seed.json `common_errors` wrong_answer 매칭 → fallback "계산실수".
+// 학부모 리포트(/api/report)에서만 Gemini 사용.
 
 interface BatchAnswer {
   problem_id: string;
@@ -38,27 +41,7 @@ export async function POST(req: NextRequest) {
 
     let errorLabel: string | null = null;
     if (!ok) {
-      try {
-        const labelResp = await callGemini(
-          [
-            `문제: ${p.body}`,
-            `정답: ${p.answer}`,
-            `풀이: ${p.explanation}`,
-            `학생 답: ${ans.user_answer}`,
-            `이전 라벨 (있으면): `,
-          ].join("\n"),
-          {
-            systemInstruction: LABEL_SYSTEM,
-            temperature: 0.2,
-            responseMimeType: "application/json",
-          }
-        );
-        const parsed = safeParseJson<{ label?: string }>(labelResp);
-        errorLabel = parsed?.label || null;
-      } catch {
-        errorLabel = null;
-      }
-      if (!errorLabel) errorLabel = heuristicErrorLabel(p, ans.user_answer);
+      errorLabel = heuristicErrorLabel(p, ans.user_answer);
       errorCounts[errorLabel] = (errorCounts[errorLabel] || 0) + 1;
     }
 
