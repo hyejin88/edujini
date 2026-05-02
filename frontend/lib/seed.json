@@ -17499,5 +17499,748 @@
     ],
     "license_code": "SELF_GEN",
     "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::0",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$2+2+2+2$는 얼마인가요?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "answer": "8",
+    "answer_aliases": [
+      "8"
+    ],
+    "explanation": "2를 4번 더하면 $2+2+2+2 = 8$입니다.",
+    "concept_tags": [
+      "같은_수_더하기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "6",
+        "reason": "덧셈을 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::1",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "사탕이 한 봉지에 3개씩 있습니다. 2봉지에는 모두 몇 개 있나요?",
+    "choices": [
+      "3개",
+      "5개",
+      "6개",
+      "9개"
+    ],
+    "answer": "6개",
+    "answer_aliases": [
+      "6"
+    ],
+    "explanation": "한 봉지에 3개씩 2봉지이므로 $3+3 = 6$개입니다.",
+    "concept_tags": [
+      "묶어_세기",
+      "같은_수_더하기"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "3개",
+        "reason": "한 봉지의 개수만 생각했습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "5개",
+        "reason": "덧셈을 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::2",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$4+4+4$와 같은 것은 무엇인가요?",
+    "choices": [
+      "4를 2번 더한 것",
+      "4를 3번 더한 것",
+      "3을 4번 더한 것",
+      "4와 3을 더한 것"
+    ],
+    "answer": "4를 3번 더한 것",
+    "answer_aliases": [
+      "4를 3번 더한 것"
+    ],
+    "explanation": "$4+4+4$는 숫자 4를 3번 더한 것입니다.",
+    "concept_tags": [
+      "같은_수_더하기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "3을 4번 더한 것",
+        "reason": "더하는 수와 더하는 횟수를 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::3",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "5씩 3묶음은 모두 얼마인가요?",
+    "choices": null,
+    "answer": "15",
+    "answer_aliases": [
+      "15"
+    ],
+    "explanation": "5씩 3묶음은 $5+5+5 = 15$입니다.",
+    "concept_tags": [
+      "묶어_세기",
+      "같은_수_더하기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "8",
+        "reason": "5와 3을 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::4",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$3+3+3+3+3$에서 더하는 수는 무엇인가요?",
+    "choices": [
+      "3",
+      "5",
+      "15",
+      "없습니다"
+    ],
+    "answer": "3",
+    "answer_aliases": [
+      "3"
+    ],
+    "explanation": "덧셈식에서 계속 더해지는 수는 3입니다.",
+    "concept_tags": [
+      "같은_수_더하기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "5",
+        "reason": "더하는 횟수를 더하는 수로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::5",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "컵 2개에 물이 5컵씩 들어있습니다. 모두 몇 컵인가요?",
+    "choices": [
+      "5컵",
+      "7컵",
+      "10컵",
+      "12컵"
+    ],
+    "answer": "10컵",
+    "answer_aliases": [
+      "10"
+    ],
+    "explanation": "컵 2개에 5컵씩이므로 $5+5 = 10$컵입니다.",
+    "concept_tags": [
+      "묶어_세기",
+      "같은_수_더하기"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "7컵",
+        "reason": "5와 2를 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::6",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$4+4+4+4+4$는 4의 몇 배인가요?",
+    "choices": [
+      "4배",
+      "5배",
+      "20배",
+      "24배"
+    ],
+    "answer": "5배",
+    "answer_aliases": [
+      "5배"
+    ],
+    "explanation": "4를 5번 더했으므로 4의 5배입니다.",
+    "concept_tags": [
+      "곱셈_의미",
+      "배"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "4배",
+        "reason": "더하는 횟수를 잘못 세었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::7",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "2의 3배를 덧셈식으로 나타내세요.",
+    "choices": null,
+    "answer": "$2+2+2$",
+    "answer_aliases": [
+      "2+2+2"
+    ],
+    "explanation": "2의 3배는 2를 3번 더한 것과 같습니다.",
+    "concept_tags": [
+      "곱셈_의미",
+      "배",
+      "같은_수_더하기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "6",
+        "reason": "덧셈식으로 나타내라는 지시를 따르지 않고 답만 썼습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::8",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$5+5+5$는 5의 몇 배인가요?",
+    "choices": [
+      "1배",
+      "2배",
+      "3배",
+      "5배"
+    ],
+    "answer": "3배",
+    "answer_aliases": [
+      "3배"
+    ],
+    "explanation": "5를 3번 더했으므로 5의 3배입니다.",
+    "concept_tags": [
+      "곱셈_의미",
+      "배"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "5배",
+        "reason": "더하는 횟수를 잘못 세었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::9",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "3을 4번 더한 것을 '배'를 사용하여 나타낸 것은 무엇인가요?",
+    "choices": [
+      "3의 3배",
+      "4의 3배",
+      "3의 4배",
+      "4의 4배"
+    ],
+    "answer": "3의 4배",
+    "answer_aliases": [
+      "3의 4배"
+    ],
+    "explanation": "3을 4번 더한 것은 3의 4배라고 표현합니다.",
+    "concept_tags": [
+      "곱셈_의미",
+      "배"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "4의 3배",
+        "reason": "더하는 수와 더하는 횟수를 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::10",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "6의 2배는 얼마인가요?",
+    "choices": null,
+    "answer": "12",
+    "answer_aliases": [
+      "12"
+    ],
+    "explanation": "6의 2배는 6을 2번 더한 것과 같으므로 $6+6 = 12$입니다.",
+    "concept_tags": [
+      "곱셈_의미",
+      "배",
+      "같은_수_더하기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "8",
+        "reason": "6과 2를 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::11",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$7+7+7$은 7의 몇 배인가요?",
+    "choices": [
+      "1배",
+      "2배",
+      "3배",
+      "7배"
+    ],
+    "answer": "3배",
+    "answer_aliases": [
+      "3배"
+    ],
+    "explanation": "7을 3번 더했으므로 7의 3배입니다.",
+    "concept_tags": [
+      "곱셈_의미",
+      "배"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "7배",
+        "reason": "더하는 횟수를 잘못 세었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::12",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "연필이 한 상자에 5자루씩 있습니다. 3상자에는 모두 몇 자루인가요?",
+    "choices": [
+      "5자루",
+      "8자루",
+      "15자루",
+      "20자루"
+    ],
+    "answer": "15자루",
+    "answer_aliases": [
+      "15"
+    ],
+    "explanation": "한 상자에 5자루씩 3상자이므로 $5+5+5 = 15$자루입니다.",
+    "concept_tags": [
+      "묶어_세기",
+      "같은_수_더하기",
+      "문제해결"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "8자루",
+        "reason": "5와 3을 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::13",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "바구니 4개에 딸기가 3개씩 있습니다. 딸기는 모두 몇 개인가요?",
+    "choices": null,
+    "answer": "12",
+    "answer_aliases": [
+      "12개"
+    ],
+    "explanation": "바구니 4개에 3개씩이므로 $3+3+3+3 = 12$개입니다.",
+    "concept_tags": [
+      "묶어_세기",
+      "같은_수_더하기",
+      "문제해결"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "7",
+        "reason": "4와 3을 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::14",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "한 명이 2개씩 먹으면 4명이 먹는 사탕은 모두 몇 개인가요?",
+    "choices": [
+      "2개",
+      "4개",
+      "6개",
+      "8개"
+    ],
+    "answer": "8개",
+    "answer_aliases": [
+      "8"
+    ],
+    "explanation": "한 명당 2개씩 4명이므로 $2+2+2+2 = 8$개입니다.",
+    "concept_tags": [
+      "묶어_세기",
+      "같은_수_더하기",
+      "문제해결"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "6개",
+        "reason": "2와 4를 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::15",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "빵이 6개씩 2줄 있습니다. 빵은 모두 몇 개인가요?",
+    "choices": [
+      "6개",
+      "8개",
+      "12개",
+      "18개"
+    ],
+    "answer": "12개",
+    "answer_aliases": [
+      "12"
+    ],
+    "explanation": "6개씩 2줄이므로 $6+6 = 12$개입니다.",
+    "concept_tags": [
+      "묶어_세기",
+      "같은_수_더하기",
+      "문제해결"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "8개",
+        "reason": "6과 2를 더했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::16",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "4의 3배와 2의 5배 중 더 큰 수는 무엇인가요?",
+    "choices": null,
+    "answer": "12",
+    "answer_aliases": [
+      "12"
+    ],
+    "explanation": "4의 3배는 $4+4+4 = 12$입니다. 2의 5배는 $2+2+2+2+2 = 10$입니다. 따라서 12가 더 큽니다.",
+    "concept_tags": [
+      "곱셈_의미",
+      "배",
+      "같은_수_더하기",
+      "비교"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "10",
+        "reason": "두 수 중 작은 수를 답으로 선택했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::17",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "5씩 4묶음은 5의 몇 배인가요?",
+    "choices": [
+      "1배",
+      "4배",
+      "5배",
+      "20배"
+    ],
+    "answer": "4배",
+    "answer_aliases": [
+      "4배"
+    ],
+    "explanation": "5씩 4묶음은 5를 4번 더한 것이므로 5의 4배입니다.",
+    "concept_tags": [
+      "묶어_세기",
+      "곱셈_의미",
+      "배"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "5배",
+        "reason": "더하는 횟수를 잘못 이해했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::18",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "한 묶음에 3개씩 있는 구슬이 있습니다. 구슬이 모두 12개라면 몇 묶음인가요?",
+    "choices": [
+      "3묶음",
+      "4묶음",
+      "6묶음",
+      "9묶음"
+    ],
+    "answer": "4묶음",
+    "answer_aliases": [
+      "4"
+    ],
+    "explanation": "3개씩 더해서 12가 되는 횟수를 찾습니다. $3+3=6$, $6+3=9$, $9+3=12$. 3을 4번 더해야 12가 되므로 4묶음입니다.",
+    "concept_tags": [
+      "묶어_세기",
+      "같은_수_더하기",
+      "역연산_도입"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "9묶음",
+        "reason": "12에서 3을 뺀 값을 생각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-6::v3::19",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-09]",
+    "unit_id": "math-2-1-6",
+    "unit_name": "곱셈",
+    "sub_unit": "같은 수를 여러 번 더하기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 수를 3번 더하면 9가 됩니다. 어떤 수를 4번 더하면 얼마가 될까요?",
+    "choices": null,
+    "answer": "12",
+    "answer_aliases": [
+      "12"
+    ],
+    "explanation": "어떤 수를 3번 더해서 9가 되려면 $3+3+3=9$이므로 어떤 수는 3입니다. 어떤 수 3을 4번 더하면 $3+3+3+3 = 12$입니다.",
+    "concept_tags": [
+      "같은_수_더하기",
+      "곱셈_의미",
+      "추론"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "9",
+        "reason": "어떤 수를 찾지 않고 9를 그대로 답했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
   }
 ]
