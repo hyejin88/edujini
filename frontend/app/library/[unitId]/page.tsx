@@ -131,9 +131,8 @@ function SheetCard({ unitId, sheet }: { unitId: string; sheet: SheetMeta }) {
       </div>
       <h3 className="text-base font-semibold text-foreground">{sheet.title}</h3>
       <p className="mt-1 text-sm text-muted-foreground">{sheet.subtitle}</p>
-      <div className="mt-3 flex items-center gap-1 text-xs text-muted-foreground">
-        <Printer className="h-3.5 w-3.5" />
-        <span>{sheet.problem_count}문제 · 인쇄 가능</span>
+      <div className="mt-3 text-xs text-muted-foreground">
+        {sheet.problem_count}문제
       </div>
     </Link>
   );

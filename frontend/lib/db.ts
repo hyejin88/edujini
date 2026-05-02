@@ -72,10 +72,15 @@ function isPublishable(p: SeedProblem): boolean {
   if ((body.match(/\*\s+[가-힣]+:/g) || []).length >= 3) return false;
   // 보기 번호가 본문에 중복 노출된 케이스 (LLM이 본문에 ① ② ③ ④ + choices에 또 추가)
   if ((body.match(/[①②③④⑤]/g) || []).length >= 3) return false;
+  // KaTeX 리터럴 텍스트가 본문에 박힌 케이스 (Gemini 출력 오류)
+  if (/KaTeX\s/.test(body)) return false;
+  // $ 짝 안 맞음 — KaTeX 렌더 hang 위험
+  if ((body.match(/\$/g) || []).length % 2 !== 0) return false;
   for (const c of p.choices || []) {
     if (/\\begin\{array\}/.test(c)) return false;
     if (/[⟶⟷⋅]{2,}/.test(c)) return false;
     if (c.length > 80) return false;
+    if (/KaTeX\s/.test(c)) return false;
   }
   return true;
 }

@@ -192,19 +192,11 @@ function UnitCard({
               </span>
             ))}
           </div>
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <Printer className="h-3.5 w-3.5" />
-            <span>
-              {mode === "drill"
-                ? `${getUnitSheets(unit.id).filter((s) => s.type !== "comprehensive").length}개 양식 · 매번 새 문제`
-                : `${unit.problem_count}문항 · 인쇄 가능`}
-            </span>
-            {isPlayed && (
-              <span className="ml-2 rounded-full bg-green-100 px-2 py-0.5 text-green-700">
-                ✓ 풀이중
-              </span>
-            )}
-          </div>
+          {mode === "comp" && unit.problem_count > 0 && (
+            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <span>{unit.problem_count}문항</span>
+            </div>
+          )}
         </div>
         <div className="ml-4">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
