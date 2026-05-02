@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: 'EDU Jini - 단원별 무료 수학 학습지',
     template: '%s | EDU Jini',
   },
-  description: '아이 오답 유형까지 분석해서 다음 문제를 골라주는 무료 초등 수학 학습 사이트. 초1~초6 NCIC 성취기준, 회원가입 없이 즉시 채점.',
+  description: '아이 오답 유형까지 분석해서 다음 문제를 골라주는 초등 수학 학습 사이트. 초1~초6 NCIC 성취기준, 단원 학습 + 연산 + 학부모 리포트.',
   keywords: ['초등 수학 학습지', '초3 수학 학습지', '수학 단원평가', '기출문제 무료', 'AI 자동 채점', 'NCIC 성취기준', 'A4 학습지', '무료 수학 문제집'],
   openGraph: {
     title: 'EDU Jini - 단원별 무료 수학 학습지',

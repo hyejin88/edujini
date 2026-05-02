@@ -51,12 +51,9 @@ export default function LandingPage() {
               골라보세요
             </span>
           </h1>
-          <p className="mx-auto mb-3 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
             <strong className="text-foreground">아이 오답 유형까지 분석해서 다음 문제를 골라주는</strong>{" "}
-            <span className="whitespace-nowrap">무료 학습 사이트</span>
-          </p>
-          <p className="mx-auto mb-10 max-w-2xl text-sm text-muted-foreground">
-            회원가입 없이 즉시 풀이 — 자녀가 풀면 학부모가 같은 화면에서 진단 결과 확인
+            <span className="whitespace-nowrap">초등 수학 학습 사이트</span>
           </p>
 
           {/* Grade Picker */}
@@ -132,7 +129,7 @@ export default function LandingPage() {
             {[
               { title: "오답 유형 자동 분석", desc: "왜 틀렸는지(개념·계산·꼼꼼함) 4가지 유형으로 분류해서 다음 학습을 추천해요" },
               { title: "학교 진도와 정확히 맞춰요", desc: "교과서 단원·NCIC 성취기준 그대로. 매일 새 30문제 + 즉시 채점" },
-              { title: "회원가입 없이", desc: "자녀가 풀고 학부모가 결과만 봐도 OK. 가입·로그인 없음" },
+              { title: "학부모 리포트 자동 생성", desc: "잘한 점·보완할 점·다음에 풀면 좋은 단원까지 한 페이지에 정리" },
             ].map((item) => (
               <Card key={item.title} className="border border-border p-6 text-left">
                 <p className="text-base font-semibold text-foreground">
