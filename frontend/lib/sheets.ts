@@ -82,6 +82,30 @@ export const UNIT_SHEETS: Record<string, SheetMeta[]> = {
       carry: "any",
     },
   ],
+  "math-3-1-2": [
+    { id: "comp", unit_id: "math-3-1-2", type: "comprehensive", title: "단원 학습지", subtitle: "직선·반직선·선분·각 · 20문제", problem_count: 20 },
+  ],
+  "math-3-1-3": [
+    { id: "comp", unit_id: "math-3-1-3", type: "comprehensive", title: "단원 학습지", subtitle: "나눗셈 개념·곱셈과 관계 · 20문제", problem_count: 20 },
+    { id: "hsub", unit_id: "math-3-1-3", type: "drill_h_sub", title: "가로 나눗셈 (응용)", subtitle: "두 자리 ÷ 한 자리 · 14문제", problem_count: 14, digits: [2, 1], carry: "any" },
+  ],
+  "math-3-1-4": [
+    { id: "comp", unit_id: "math-3-1-4", type: "comprehensive", title: "단원 학습지", subtitle: "(두 자리)×(한 자리) · 20문제", problem_count: 20 },
+    { id: "hadd", unit_id: "math-3-1-4", type: "drill_h_add", title: "가로 곱셈 드릴", subtitle: "두 자리 × 한 자리 · 14문제", problem_count: 14, digits: [2, 1], carry: "any" },
+  ],
+  "math-3-1-5": [
+    { id: "comp", unit_id: "math-3-1-5", type: "comprehensive", title: "단원 학습지", subtitle: "mm·km·시간 단위 변환 · 20문제", problem_count: 20 },
+  ],
+  "math-3-1-6": [
+    { id: "comp", unit_id: "math-3-1-6", type: "comprehensive", title: "단원 학습지", subtitle: "분수의 의미·소수 첫째 자리 · 20문제", problem_count: 20 },
+  ],
+  "math-3-2-1": [
+    { id: "comp", unit_id: "math-3-2-1", type: "comprehensive", title: "단원 학습지", subtitle: "(세 자리)×(한 자리)·(두 자리)×(두 자리) · 20문제", problem_count: 20 },
+    { id: "vadd-no", unit_id: "math-3-2-1", type: "drill_v_add", title: "세로 곱셈 드릴", subtitle: "세 자리 × 한 자리 · 16문제", problem_count: 16, digits: [3, 1], carry: "any" },
+  ],
+  "math-3-2-3": [
+    { id: "comp", unit_id: "math-3-2-3", type: "comprehensive", title: "단원 학습지", subtitle: "원의 중심·반지름·지름 · 20문제", problem_count: 20 },
+  ],
 };
 
 export function getUnitSheets(unitId: string): SheetMeta[] {
