@@ -49,6 +49,10 @@ export interface SeedUnit {
 const PUBLISHED_UNITS = new Set<string>([
   // 초1 (3단원 v3 완료)
   "math-1-1-3", "math-1-2-2", "math-1-2-4",
+  // 초2 (3단원 v3 완료)
+  "math-2-1-3", "math-2-1-6", "math-2-2-2",
+  // 초5 추가 2단원 (재시도 성공)
+  "math-5-1-2", "math-5-1-5",
   // 초3 (7단원 v3 완료)
   "math-3-1-1", "math-3-1-3", "math-3-1-4", "math-3-1-6",
   "math-3-2-1", "math-3-2-2", "math-3-2-4",

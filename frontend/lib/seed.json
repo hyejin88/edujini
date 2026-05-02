@@ -1104,7 +1104,7 @@
     "type": "multiple_choice",
     "difficulty": 3,
     "section": "concept",
-    "body": "$36 \\times 7$을 다음과 같이 계산할 때, (가)에 알맞은 수는 무엇일까요?$$ \\begin{array}{r} 36 \\times \\quad 7 \\\\ \\hline (가) \\end{array} $$",
+    "body": "$36 \\times 7$을 다음과 같이 계산할 때, (가)에 알맞은 수는 무엇일까요?$ \\begin{array}{r} 36 \\times \\quad 7 \\\\ \\hline (가) \\end{array} $",
     "choices": [
       "212",
       "242",
@@ -5844,18 +5844,18 @@
     "type": "multiple_choice",
     "difficulty": 1,
     "section": "warmup",
-    "body": "$$\\f\\frac{1}{5} + \\f\\frac{2}{5}$$를 계산하면 얼마일까요?",
+    "body": "$\\frac{1}{5} + \\frac{2}{5}$를 계산하면 얼마일까요?",
     "choices": [
-      "$$\\f\\frac{1}{5}$$",
-      "$$\\f\\frac{2}{5}$$",
-      "$$\\f\\frac{3}{5}$$",
-      "$$\\f\\frac{4}{5}$$"
+      "$\\frac{1}{5}$",
+      "$\\frac{2}{5}$",
+      "$\\frac{3}{5}$",
+      "$\\frac{4}{5}$"
     ],
-    "answer": "$$\\f\\frac{3}{5}$$",
+    "answer": "$\\frac{3}{5}$",
     "answer_aliases": [
       "3/5"
     ],
-    "explanation": "분모가 같은 분수의 덧셈은 분모는 그대로 두고 분자끼리 더합니다. $1 + 2 = 3$이므로, $$\\frac{1}{5} + \\f\\frac{2}{5} = \\f\\frac{3}{5}$$입니다.",
+    "explanation": "분모가 같은 분수의 덧셈은 분모는 그대로 두고 분자끼리 더합니다. $1 + 2 = 3$이므로, $\\frac{1}{5} + \\frac{2}{5} = \\frac{3}{5}$입니다.",
     "concept_tags": [
       "진분수 덧셈"
     ],
@@ -5881,18 +5881,18 @@
     "type": "multiple_choice",
     "difficulty": 1,
     "section": "warmup",
-    "body": "$$\\f\\frac{7}{9} - \\f\\frac{3}{9}$$을 계산하면 얼마일까요?",
+    "body": "$\\frac{7}{9} - \\frac{3}{9}$을 계산하면 얼마일까요?",
     "choices": [
-      "$$\\f\\frac{2}{9}$$",
-      "$$\\f\\frac{3}{9}$$",
-      "$$\\f\\frac{4}{9}$$",
-      "$$\\f\\frac{5}{9}$$"
+      "$\\frac{2}{9}$",
+      "$\\frac{3}{9}$",
+      "$\\frac{4}{9}$",
+      "$\\frac{5}{9}$"
     ],
-    "answer": "$$\\f\\frac{4}{9}$$",
+    "answer": "$\\frac{4}{9}$",
     "answer_aliases": [
       "4/9"
     ],
-    "explanation": "분모가 같은 분수의 뺄셈은 분모는 그대로 두고 분자끼리 뺍니다. $7 - 3 = 4$이므로, $$\\frac{7}{9} - \\f\\frac{3}{9} = \\f\\frac{4}{9}$$입니다.",
+    "explanation": "분모가 같은 분수의 뺄셈은 분모는 그대로 두고 분자끼리 뺍니다. $7 - 3 = 4$이므로, $\\frac{7}{9} - \\frac{3}{9} = \\frac{4}{9}$입니다.",
     "concept_tags": [
       "진분수 뺄셈"
     ],
@@ -5918,14 +5918,14 @@
     "type": "short_answer",
     "difficulty": 2,
     "section": "warmup",
-    "body": "$$1\\f\\frac{1}{4} + 2\\f\\frac{2}{4}$$를 계산한 값을 기약분수로 나타내세요.",
+    "body": "$1\\frac{1}{4} + 2\\frac{2}{4}$를 계산한 값을 기약분수로 나타내세요.",
     "choices": null,
-    "answer": "$$3\\f\\frac{3}{4}$$",
+    "answer": "$3\\frac{3}{4}$",
     "answer_aliases": [
       "3과 3/4",
       "15/4"
     ],
-    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. $1 + 2 = 3$이고, $$\\frac{1}{4} + \\f\\frac{2}{4} = \\f\\frac{3}{4}$$이므로, $1\\f\\frac{1}{4} + 2\\f\\frac{2}{4} = 3\\f\\frac{3}{4}$$입니다.",
+    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. $1 + 2 = 3$이고, $\\frac{1}{4} + \\frac{2}{4} = \\frac{3}{4}$이므로, $1\\frac{1}{4} + 2\\frac{2}{4} = 3\\frac{3}{4}$입니다.",
     "concept_tags": [
       "대분수 덧셈"
     ],
@@ -5951,19 +5951,19 @@
     "type": "multiple_choice",
     "difficulty": 2,
     "section": "warmup",
-    "body": "$$3\\f\\frac{5}{7} - 1\\f\\frac{2}{7}$$를 계산하면 얼마일까요?",
+    "body": "$3\\frac{5}{7} - 1\\frac{2}{7}$를 계산하면 얼마일까요?",
     "choices": [
-      "$$1\\f\\frac{3}{7}$$",
-      "$$2\\f\\frac{3}{7}$$",
-      "$$2\\f\\frac{4}{7}$$",
-      "$$3\\f\\frac{3}{7}$$"
+      "$1\\frac{3}{7}$",
+      "$2\\frac{3}{7}$",
+      "$2\\frac{4}{7}$",
+      "$3\\frac{3}{7}$"
     ],
-    "answer": "$$2\\f\\frac{3}{7}$$",
+    "answer": "$2\\frac{3}{7}$",
     "answer_aliases": [
       "2와 3/7",
       "17/7"
     ],
-    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 뺍니다. $3 - 1 = 2$이고, $$\\frac{5}{7} - \\f\\frac{2}{7} = \\f\\frac{3}{7}$$이므로, $3\\f\\frac{5}{7} - 1\\f\\frac{2}{7} = 2\\f\\frac{3}{7}$$입니다.",
+    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 뺍니다. $3 - 1 = 2$이고, $\\frac{5}{7} - \\frac{2}{7} = \\frac{3}{7}$이므로, $3\\frac{5}{7} - 1\\frac{2}{7} = 2\\frac{3}{7}$입니다.",
     "concept_tags": [
       "대분수 뺄셈"
     ],
@@ -5991,16 +5991,16 @@
     "section": "warmup",
     "body": "다음 중 계산 결과가 가장 작은 것은 무엇일까요?",
     "choices": [
-      "$$\\f\\frac{1}{6} + \\f\\frac{2}{6}$$",
-      "$$\\f\\frac{5}{6} - \\f\\frac{3}{6}$$",
-      "$$\\f\\frac{4}{6} - \\f\\frac{1}{6}$$",
-      "$$\\f\\frac{2}{6} + \\f\\frac{1}{6}$$"
+      "$\\frac{1}{6} + \\frac{2}{6}$",
+      "$\\frac{5}{6} - \\frac{3}{6}$",
+      "$\\frac{4}{6} - \\frac{1}{6}$",
+      "$\\frac{2}{6} + \\frac{1}{6}$"
     ],
-    "answer": "$$\\f\\frac{1}{6} + \\f\\frac{2}{6}$$",
+    "answer": "$\\frac{1}{6} + \\frac{2}{6}$",
     "answer_aliases": [
       "1/6 + 2/6"
     ],
-    "explanation": "각 보기를 계산하면 다음과 같습니다.\n1. $$\\frac{1}{6} + \\f\\frac{2}{6} = \\f\\frac{3}{6}$$ \n2. $$\\frac{5}{6} - \\f\\frac{3}{6} = \\f\\frac{2}{6}$$ \n3. $$\\frac{4}{6} - \\f\\frac{1}{6} = \\f\\frac{3}{6}$$ \n4. $$\\frac{2}{6} + \\f\\frac{1}{6} = \\f\\frac{3}{6}$$ \n가장 작은 값은 $$\\frac{2}{6}$$입니다. 따라서 $$\\frac{5}{6} - \\f\\frac{3}{6}$$이 가장 작습니다.",
+    "explanation": "각 보기를 계산하면 다음과 같습니다.\n1. $\\frac{1}{6} + \\frac{2}{6} = \\frac{3}{6}$ \n2. $\\frac{5}{6} - \\frac{3}{6} = \\frac{2}{6}$ \n3. $\\frac{4}{6} - \\frac{1}{6} = \\frac{3}{6}$ \n4. $\\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6}$ \n가장 작은 값은 $\\frac{2}{6}$입니다. 따라서 $\\frac{5}{6} - \\frac{3}{6}$이 가장 작습니다.",
     "concept_tags": [
       "분수 덧셈 뺄셈 비교"
     ],
@@ -6026,14 +6026,14 @@
     "type": "short_answer",
     "difficulty": 2,
     "section": "warmup",
-    "body": "어떤 수에 $$\\frac{2}{10}$$를 더했더니 $$\\frac{7}{10}$$이 되었습니다. 어떤 수는 얼마일까요?",
+    "body": "어떤 수에 $\\frac{2}{10}$를 더했더니 $\\frac{7}{10}$이 되었습니다. 어떤 수는 얼마일까요?",
     "choices": null,
-    "answer": "$$\\f\\frac{5}{10}$$",
+    "answer": "$\\frac{5}{10}$",
     "answer_aliases": [
       "5/10",
       "1/2"
     ],
-    "explanation": "어떤 수를 $$\\square$$라고 하면, $$\\square + \\f\\frac{2}{10} = \\f\\frac{7}{10}$$입니다. $$\\square = \\f\\frac{7}{10} - \\f\\frac{2}{10} = \\f\\frac{5}{10}$$입니다.",
+    "explanation": "어떤 수를 $\\square$라고 하면, $\\square + \\frac{2}{10} = \\frac{7}{10}$입니다. $\\square = \\frac{7}{10} - \\frac{2}{10} = \\frac{5}{10}$입니다.",
     "concept_tags": [
       "미지수 찾기",
       "진분수 뺄셈"
@@ -6060,19 +6060,19 @@
     "type": "multiple_choice",
     "difficulty": 3,
     "section": "concept",
-    "body": "$$\\f\\frac{4}{7} + \\f\\frac{5}{7}$$를 계산하면 얼마일까요?",
+    "body": "$\\frac{4}{7} + \\frac{5}{7}$를 계산하면 얼마일까요?",
     "choices": [
-      "$$\\f\\frac{9}{7}$$",
-      "$$1\\f\\frac{2}{7}$$",
-      "$$1\\f\\frac{1}{7}$$",
-      "$$1\\f\\frac{3}{7}$$"
+      "$\\frac{9}{7}$",
+      "$1\\frac{2}{7}$",
+      "$1\\frac{1}{7}$",
+      "$1\\frac{3}{7}$"
     ],
-    "answer": "$$1\\f\\frac{2}{7}$$",
+    "answer": "$1\\frac{2}{7}$",
     "answer_aliases": [
       "1과 2/7",
       "9/7"
     ],
-    "explanation": "$$\\frac{4}{7} + \\f\\frac{5}{7} = \\f\\frac{9}{7}$$입니다. $$\\frac{9}{7}$$는 가분수이므로 대분수로 바꾸면 $$\\frac{9}{7} = 1\\f\\frac{2}{7}$$입니다.",
+    "explanation": "$\\frac{4}{7} + \\frac{5}{7} = \\frac{9}{7}$입니다. $\\frac{9}{7}$는 가분수이므로 대분수로 바꾸면 $\\frac{9}{7} = 1\\frac{2}{7}$입니다.",
     "concept_tags": [
       "진분수 덧셈",
       "가분수 대분수 변환"
@@ -6099,19 +6099,19 @@
     "type": "multiple_choice",
     "difficulty": 3,
     "section": "concept",
-    "body": "$$2\\f\\frac{3}{5} + 1\\f\\frac{4}{5}$$를 계산하면 얼마일까요?",
+    "body": "$2\\frac{3}{5} + 1\\frac{4}{5}$를 계산하면 얼마일까요?",
     "choices": [
-      "$$3\\f\\frac{2}{5}$$",
-      "$$3\\f\\frac{7}{5}$$",
-      "$$4\\f\\frac{1}{5}$$",
-      "$$4\\f\\frac{2}{5}$$"
+      "$3\\frac{2}{5}$",
+      "$3\\frac{7}{5}$",
+      "$4\\frac{1}{5}$",
+      "$4\\frac{2}{5}$"
     ],
-    "answer": "$$4\\f\\frac{2}{5}$$",
+    "answer": "$4\\frac{2}{5}$",
     "answer_aliases": [
       "4와 2/5",
       "22/5"
     ],
-    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. $2 + 1 = 3$이고, $$\\frac{3}{5} + \\f\\frac{4}{5} = \\f\\frac{7}{5}$$입니다. 따라서 $3 + \\f\\frac{7}{5}$인데, $$\\frac{7}{5}$$는 $1\\f\\frac{2}{5}$$이므로, $3 + 1\\f\\frac{2}{5} = 4\\f\\frac{2}{5}$$입니다.",
+    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. $2 + 1 = 3$이고, $\\frac{3}{5} + \\frac{4}{5} = \\frac{7}{5}$입니다. 따라서 $3 + \\frac{7}{5}$인데, $\\frac{7}{5}$는 $1\\frac{2}{5}$이므로, $3 + 1\\frac{2}{5} = 4\\frac{2}{5}$입니다.",
     "concept_tags": [
       "대분수 덧셈",
       "받아올림"
@@ -6138,16 +6138,16 @@
     "type": "short_answer",
     "difficulty": 3,
     "section": "concept",
-    "body": "$$4\\f\\frac{1}{6} - 1\\f\\frac{5}{6}$$를 계산한 값을 대분수로 나타내세요.",
+    "body": "$4\\frac{1}{6} - 1\\frac{5}{6}$를 계산한 값을 대분수로 나타내세요.",
     "choices": null,
-    "answer": "$$2\\f\\frac{2}{6}$$",
+    "answer": "$2\\frac{2}{6}$",
     "answer_aliases": [
       "2와 2/6",
       "2와 1/3",
       "14/6",
       "7/3"
     ],
-    "explanation": "분수 부분 $$\\frac{1}{6}$$에서 $$\\frac{5}{6}$$를 뺄 수 없으므로, 자연수 4에서 1을 받아내림 합니다. $4\\f\\frac{1}{6} = 3\\f\\frac{6+1}{6} = 3\\f\\frac{7}{6}$$입니다. 이제 $3\\f\\frac{7}{6} - 1\\f\\frac{5}{6}$를 계산하면, 자연수 부분 $3 - 1 = 2$이고, 분수 부분 $$\\frac{7}{6} - \\f\\frac{5}{6} = \\f\\frac{2}{6}$$입니다. 따라서 $2\\f\\frac{2}{6}$$입니다.",
+    "explanation": "분수 부분 $\\frac{1}{6}$에서 $\\frac{5}{6}$를 뺄 수 없으므로, 자연수 4에서 1을 받아내림 합니다. $4\\frac{1}{6} = 3\\frac{6+1}{6} = 3\\frac{7}{6}$입니다. 이제 $3\\frac{7}{6} - 1\\frac{5}{6}$를 계산하면, 자연수 부분 $3 - 1 = 2$이고, 분수 부분 $\\frac{7}{6} - \\frac{5}{6} = \\frac{2}{6}$입니다. 따라서 $2\\frac{2}{6}$입니다.",
     "concept_tags": [
       "대분수 뺄셈",
       "받아내림"
@@ -6174,18 +6174,18 @@
     "type": "multiple_choice",
     "difficulty": 3,
     "section": "concept",
-    "body": "다음 중 계산 결과가 $2\\f\\frac{1}{8}$$이 되는 식은 무엇일까요?",
+    "body": "다음 중 계산 결과가 $2\\frac{1}{8}$이 되는 식은 무엇일까요?",
     "choices": [
-      "$$3\\f\\frac{5}{8} - 1\\f\\frac{4}{8}$$",
-      "$$4\\f\\frac{3}{8} - 2\\f\\frac{1}{8}$$",
-      "$$5\\f\\frac{2}{8} - 3\\f\\frac{1}{8}$$",
-      "$$6\\f\\frac{7}{8} - 4\\f\\frac{6}{8}$$"
+      "$3\\frac{5}{8} - 1\\frac{4}{8}$",
+      "$4\\frac{3}{8} - 2\\frac{1}{8}$",
+      "$5\\frac{2}{8} - 3\\frac{1}{8}$",
+      "$6\\frac{7}{8} - 4\\frac{6}{8}$"
     ],
-    "answer": "$$3\\f\\frac{5}{8} - 1\\f\\frac{4}{8}$$",
+    "answer": "$3\\frac{5}{8} - 1\\frac{4}{8}$",
     "answer_aliases": [
       "3과 5/8 - 1과 4/8"
     ],
-    "explanation": "각 보기를 계산합니다.\n1. $3\\f\\frac{5}{8} - 1\\f\\frac{4}{8} = (3-1) + (\\f\\frac{5}{8}-\\f\\frac{4}{8}) = 2 + \\f\\frac{1}{8} = 2\\f\\frac{1}{8}$ \n2. $4\\f\\frac{3}{8} - 2\\f\\frac{1}{8} = (4-2) + (\\f\\frac{3}{8}-\\f\\frac{1}{8}) = 2 + \\f\\frac{2}{8} = 2\\f\\frac{2}{8}$ \n3. $5\\f\\frac{2}{8} - 3\\f\\frac{1}{8} = (5-3) + (\\f\\frac{2}{8}-\\f\\frac{1}{8}) = 2 + \\f\\frac{1}{8} = 2\\f\\frac{1}{8}$ \n4. $6\\f\\frac{7}{8} - 4\\f\\frac{6}{8} = (6-4) + (\\f\\frac{7}{8}-\\f\\frac{6}{8}) = 2 + \\f\\frac{1}{8} = 2\\f\\frac{1}{8}$ \n모두 $2\\f\\frac{1}{8}$이 됩니다. 문제에 오류가 있습니다. (수정 필요) \n다시 계산하여 정답을 하나만 만들겠습니다. \n\n새로운 보기:\n1. $3\\f\\frac{5}{8} - 1\\f\\frac{4}{8} = 2\\f\\frac{1}{8}$ \n2. $4\\f\\frac{3}{8} - 2\\f\\frac{2}{8} = 2\\f\\frac{1}{8}$ \n3. $5\\f\\frac{2}{8} - 3\\f\\frac{1}{8} = 2\\f\\frac{1}{8}$ \n4. $6\\f\\frac{7}{8} - 4\\f\\frac{5}{8} = 2\\f\\frac{2}{8}$ \n\n정답은 $3\\f\\frac{5}{8} - 1\\f\\frac{4}{8}$입니다.",
+    "explanation": "각 보기를 계산합니다.\n1. $3\\frac{5}{8} - 1\\frac{4}{8} = (3-1) + (\\frac{5}{8}-\\frac{4}{8}) = 2 + \\frac{1}{8} = 2\\frac{1}{8}$ \n2. $4\\frac{3}{8} - 2\\frac{1}{8} = (4-2) + (\\frac{3}{8}-\\frac{1}{8}) = 2 + \\frac{2}{8} = 2\\frac{2}{8}$ \n3. $5\\frac{2}{8} - 3\\frac{1}{8} = (5-3) + (\\frac{2}{8}-\\frac{1}{8}) = 2 + \\frac{1}{8} = 2\\frac{1}{8}$ \n4. $6\\frac{7}{8} - 4\\frac{6}{8} = (6-4) + (\\frac{7}{8}-\\frac{6}{8}) = 2 + \\frac{1}{8} = 2\\frac{1}{8}$ \n모두 $2\\frac{1}{8}$이 됩니다. 문제에 오류가 있습니다. (수정 필요) \n다시 계산하여 정답을 하나만 만들겠습니다. \n\n새로운 보기:\n1. $3\\frac{5}{8} - 1\\frac{4}{8} = 2\\frac{1}{8}$ \n2. $4\\frac{3}{8} - 2\\frac{2}{8} = 2\\frac{1}{8}$ \n3. $5\\frac{2}{8} - 3\\frac{1}{8} = 2\\frac{1}{8}$ \n4. $6\\frac{7}{8} - 4\\frac{5}{8} = 2\\frac{2}{8}$ \n\n정답은 $3\\frac{5}{8} - 1\\frac{4}{8}$입니다.",
     "concept_tags": [
       "대분수 뺄셈",
       "계산 결과 찾기"
@@ -6212,20 +6212,20 @@
     "type": "multiple_choice",
     "difficulty": 4,
     "section": "concept",
-    "body": "$$2\\f\\frac{3}{10} + \\square = 4\\f\\frac{7}{10}$$일 때, $$\\square$$ 안에 알맞은 수는 무엇일까요?",
+    "body": "$2\\frac{3}{10} + \\square = 4\\frac{7}{10}$일 때, $\\square$ 안에 알맞은 수는 무엇일까요?",
     "choices": [
-      "$$1\\f\\frac{4}{10}$$",
-      "$$2\\f\\frac{4}{10}$$",
-      "$$2\\f\\frac{5}{10}$$",
-      "$$3\\f\\frac{4}{10}$$"
+      "$1\\frac{4}{10}$",
+      "$2\\frac{4}{10}$",
+      "$2\\frac{5}{10}$",
+      "$3\\frac{4}{10}$"
     ],
-    "answer": "$$2\\f\\frac{4}{10}$$",
+    "answer": "$2\\frac{4}{10}$",
     "answer_aliases": [
       "2와 4/10",
       "2와 2/5",
       "12/5"
     ],
-    "explanation": "$$\\square = 4\\f\\frac{7}{10} - 2\\f\\frac{3}{10}$$입니다. 자연수 부분 $4 - 2 = 2$이고, 분수 부분 $$\\frac{7}{10} - \\f\\frac{3}{10} = \\f\\frac{4}{10}$$이므로, $$\\square = 2\\f\\frac{4}{10}$$입니다.",
+    "explanation": "$\\square = 4\\frac{7}{10} - 2\\frac{3}{10}$입니다. 자연수 부분 $4 - 2 = 2$이고, 분수 부분 $\\frac{7}{10} - \\frac{3}{10} = \\frac{4}{10}$이므로, $\\square = 2\\frac{4}{10}$입니다.",
     "concept_tags": [
       "미지수 찾기",
       "대분수 뺄셈"
@@ -6252,14 +6252,14 @@
     "type": "short_answer",
     "difficulty": 4,
     "section": "concept",
-    "body": "$$5\\f\\frac{1}{3} - \\square = 2\\f\\frac{2}{3}$$일 때, $$\\square$$ 안에 알맞은 수를 대분수로 나타내세요.",
+    "body": "$5\\frac{1}{3} - \\square = 2\\frac{2}{3}$일 때, $\\square$ 안에 알맞은 수를 대분수로 나타내세요.",
     "choices": null,
-    "answer": "$$2\\f\\frac{2}{3}$$",
+    "answer": "$2\\frac{2}{3}$",
     "answer_aliases": [
       "2와 2/3",
       "8/3"
     ],
-    "explanation": "$$\\square = 5\\f\\frac{1}{3} - 2\\f\\frac{2}{3}$$입니다. 분수 부분 $$\\frac{1}{3}$$에서 $$\\frac{2}{3}$$를 뺄 수 없으므로, $5\\f\\frac{1}{3} = 4\\f\\frac{3+1}{3} = 4\\f\\frac{4}{3}$$로 바꿉니다. 이제 $4\\f\\frac{4}{3} - 2\\f\\frac{2}{3}$를 계산하면, 자연수 부분 $4 - 2 = 2$이고, 분수 부분 $$\\frac{4}{3} - \\f\\frac{2}{3} = \\f\\frac{2}{3}$$입니다. 따라서 $$\\square = 2\\f\\frac{2}{3}$$입니다.",
+    "explanation": "$\\square = 5\\frac{1}{3} - 2\\frac{2}{3}$입니다. 분수 부분 $\\frac{1}{3}$에서 $\\frac{2}{3}$를 뺄 수 없으므로, $5\\frac{1}{3} = 4\\frac{3+1}{3} = 4\\frac{4}{3}$로 바꿉니다. 이제 $4\\frac{4}{3} - 2\\frac{2}{3}$를 계산하면, 자연수 부분 $4 - 2 = 2$이고, 분수 부분 $\\frac{4}{3} - \\frac{2}{3} = \\frac{2}{3}$입니다. 따라서 $\\square = 2\\frac{2}{3}$입니다.",
     "concept_tags": [
       "미지수 찾기",
       "대분수 뺄셈",
@@ -6287,18 +6287,18 @@
     "type": "multiple_choice",
     "difficulty": 3,
     "section": "application",
-    "body": "지혜는 우유 $$\\frac{4}{8}$$L를 마셨고, 슬기는 우유 $$\\frac{3}{8}$$L를 마셨습니다. 두 사람이 마신 우유는 모두 몇 L일까요?",
+    "body": "지혜는 우유 $\\frac{4}{8}$L를 마셨고, 슬기는 우유 $\\frac{3}{8}$L를 마셨습니다. 두 사람이 마신 우유는 모두 몇 L일까요?",
     "choices": [
-      "$$\\f\\frac{5}{8}$$L",
-      "$$\\f\\frac{6}{8}$$L",
-      "$$\\f\\frac{7}{8}$$L",
-      "$$1$$L"
+      "$\\frac{5}{8}$L",
+      "$\\frac{6}{8}$L",
+      "$\\frac{7}{8}$L",
+      "$1$L"
     ],
-    "answer": "$$\\f\\frac{7}{8}$$L",
+    "answer": "$\\frac{7}{8}$L",
     "answer_aliases": [
       "7/8L"
     ],
-    "explanation": "두 사람이 마신 우유의 양을 합하려면 덧셈을 합니다. $$\\frac{4}{8} + \\f\\frac{3}{8} = \\f\\frac{7}{8}$$L입니다.",
+    "explanation": "두 사람이 마신 우유의 양을 합하려면 덧셈을 합니다. $\\frac{4}{8} + \\frac{3}{8} = \\frac{7}{8}$L입니다.",
     "concept_tags": [
       "진분수 덧셈",
       "실생활 문제"
@@ -6325,19 +6325,19 @@
     "type": "multiple_choice",
     "difficulty": 3,
     "section": "application",
-    "body": "수박 한 통의 $$\\frac{8}{10}$$ 중에서 $$\\frac{3}{10}$$을 먹었습니다. 남은 수박은 전체의 얼마일까요?",
+    "body": "수박 한 통의 $\\frac{8}{10}$ 중에서 $\\frac{3}{10}$을 먹었습니다. 남은 수박은 전체의 얼마일까요?",
     "choices": [
-      "$$\\f\\frac{4}{10}$$",
-      "$$\\f\\frac{5}{10}$$",
-      "$$\\f\\frac{6}{10}$$",
-      "$$\\f\\frac{7}{10}$$"
+      "$\\frac{4}{10}$",
+      "$\\frac{5}{10}$",
+      "$\\frac{6}{10}$",
+      "$\\frac{7}{10}$"
     ],
-    "answer": "$$\\f\\frac{5}{10}$$",
+    "answer": "$\\frac{5}{10}$",
     "answer_aliases": [
       "5/10",
       "1/2"
     ],
-    "explanation": "남은 수박의 양을 구하려면 뺄셈을 합니다. $$\\frac{8}{10} - \\f\\frac{3}{10} = \\f\\frac{5}{10}$$입니다.",
+    "explanation": "남은 수박의 양을 구하려면 뺄셈을 합니다. $\\frac{8}{10} - \\frac{3}{10} = \\frac{5}{10}$입니다.",
     "concept_tags": [
       "진분수 뺄셈",
       "실생활 문제"
@@ -6364,14 +6364,14 @@
     "type": "short_answer",
     "difficulty": 4,
     "section": "application",
-    "body": "어떤 빵집에서 어제는 $3\\f\\frac{2}{9}$$kg의 빵을 팔았고, 오늘은 어제보다 $1\\f\\frac{5}{9}$$kg 더 많이 팔았습니다. 오늘 판 빵은 몇 kg일까요?",
+    "body": "어떤 빵집에서 어제는 $3\\frac{2}{9}$kg의 빵을 팔았고, 오늘은 어제보다 $1\\frac{5}{9}$kg 더 많이 팔았습니다. 오늘 판 빵은 몇 kg일까요?",
     "choices": null,
-    "answer": "$$4\\f\\frac{7}{9}$$kg",
+    "answer": "$4\\frac{7}{9}$kg",
     "answer_aliases": [
       "4와 7/9kg",
       "43/9kg"
     ],
-    "explanation": "오늘 판 빵의 양은 어제 판 빵의 양에 $1\\f\\frac{5}{9}$$kg을 더한 것입니다. $3\\f\\frac{2}{9} + 1\\f\\frac{5}{9}$를 계산합니다. 자연수 부분 $3 + 1 = 4$이고, 분수 부분 $$\\frac{2}{9} + \\f\\frac{5}{9} = \\f\\frac{7}{9}$$이므로, $4\\f\\frac{7}{9}$$kg입니다.",
+    "explanation": "오늘 판 빵의 양은 어제 판 빵의 양에 $1\\frac{5}{9}$kg을 더한 것입니다. $3\\frac{2}{9} + 1\\frac{5}{9}$를 계산합니다. 자연수 부분 $3 + 1 = 4$이고, 분수 부분 $\\frac{2}{9} + \\frac{5}{9} = \\frac{7}{9}$이므로, $4\\frac{7}{9}$kg입니다.",
     "concept_tags": [
       "대분수 덧셈",
       "실생활 문제"
@@ -6398,21 +6398,21 @@
     "type": "multiple_choice",
     "difficulty": 4,
     "section": "application",
-    "body": "길이가 $5\\f\\frac{1}{12}$$m인 색 테이프에서 $2\\f\\frac{7}{12}$$m를 사용했습니다. 남은 색 테이프의 길이는 몇 m일까요?",
+    "body": "길이가 $5\\frac{1}{12}$m인 색 테이프에서 $2\\frac{7}{12}$m를 사용했습니다. 남은 색 테이프의 길이는 몇 m일까요?",
     "choices": [
-      "$$2\\f\\frac{5}{12}$$m",
-      "$$2\\f\\frac{6}{12}$$m",
-      "$$3\\f\\frac{5}{12}$$m",
-      "$$3\\f\\frac{6}{12}$$m"
+      "$2\\frac{5}{12}$m",
+      "$2\\frac{6}{12}$m",
+      "$3\\frac{5}{12}$m",
+      "$3\\frac{6}{12}$m"
     ],
-    "answer": "$$2\\f\\frac{6}{12}$$m",
+    "answer": "$2\\frac{6}{12}$m",
     "answer_aliases": [
       "2와 6/12m",
       "2와 1/2m",
       "30/12m",
       "5/2m"
     ],
-    "explanation": "남은 색 테이프의 길이를 구하려면 뺄셈을 합니다. $5\\f\\frac{1}{12} - 2\\f\\frac{7}{12}$를 계산합니다. 분수 부분 $$\\frac{1}{12}$$에서 $$\\frac{7}{12}$$를 뺄 수 없으므로, $5\\f\\frac{1}{12} = 4\\f\\frac{12+1}{12} = 4\\f\\frac{13}{12}$$로 바꿉니다. 이제 $4\\f\\frac{13}{12} - 2\\f\\frac{7}{12}$를 계산하면, 자연수 부분 $4 - 2 = 2$이고, 분수 부분 $$\\frac{13}{12} - \\f\\frac{7}{12} = \\f\\frac{6}{12}$$입니다. 따라서 $2\\f\\frac{6}{12}$$m입니다.",
+    "explanation": "남은 색 테이프의 길이를 구하려면 뺄셈을 합니다. $5\\frac{1}{12} - 2\\frac{7}{12}$를 계산합니다. 분수 부분 $\\frac{1}{12}$에서 $\\frac{7}{12}$를 뺄 수 없으므로, $5\\frac{1}{12} = 4\\frac{12+1}{12} = 4\\frac{13}{12}$로 바꿉니다. 이제 $4\\frac{13}{12} - 2\\frac{7}{12}$를 계산하면, 자연수 부분 $4 - 2 = 2$이고, 분수 부분 $\\frac{13}{12} - \\frac{7}{12} = \\frac{6}{12}$입니다. 따라서 $2\\frac{6}{12}$m입니다.",
     "concept_tags": [
       "대분수 뺄셈",
       "받아내림",
@@ -6440,19 +6440,19 @@
     "type": "multiple_choice",
     "difficulty": 4,
     "section": "application",
-    "body": "어떤 물통에 물이 $1\\f\\frac{3}{8}$$L 들어있었습니다. 여기에 $2\\f\\frac{5}{8}$$L의 물을 더 넣었다가 $1\\f\\frac{7}{8}$$L를 사용했습니다. 남은 물은 몇 L일까요?",
+    "body": "어떤 물통에 물이 $1\\frac{3}{8}$L 들어있었습니다. 여기에 $2\\frac{5}{8}$L의 물을 더 넣었다가 $1\\frac{7}{8}$L를 사용했습니다. 남은 물은 몇 L일까요?",
     "choices": [
-      "$$1\\f\\frac{1}{8}$$L",
-      "$$1\\f\\frac{2}{8}$$L",
-      "$$2\\f\\frac{1}{8}$$L",
-      "$$2\\f\\frac{2}{8}$$L"
+      "$1\\frac{1}{8}$L",
+      "$1\\frac{2}{8}$L",
+      "$2\\frac{1}{8}$L",
+      "$2\\frac{2}{8}$L"
     ],
-    "answer": "$$2\\f\\frac{1}{8}$$L",
+    "answer": "$2\\frac{1}{8}$L",
     "answer_aliases": [
       "2와 1/8L",
       "17/8L"
     ],
-    "explanation": "먼저 물을 더 넣은 양을 계산합니다. $1\\f\\frac{3}{8} + 2\\f\\frac{5}{8} = 3\\f\\frac{8}{8} = 4$$L입니다. 그 다음 사용한 물의 양을 뺍니다. $4 - 1\\f\\frac{7}{8}$를 계산합니다. $4 = 3\\f\\frac{8}{8}$$이므로, $3\\f\\frac{8}{8} - 1\\f\\frac{7}{8} = (3-1) + (\\f\\frac{8}{8}-\\f\\frac{7}{8}) = 2 + \\f\\frac{1}{8} = 2\\f\\frac{1}{8}$$L입니다.",
+    "explanation": "먼저 물을 더 넣은 양을 계산합니다. $1\\frac{3}{8} + 2\\frac{5}{8} = 3\\frac{8}{8} = 4$L입니다. 그 다음 사용한 물의 양을 뺍니다. $4 - 1\\frac{7}{8}$를 계산합니다. $4 = 3\\frac{8}{8}$이므로, $3\\frac{8}{8} - 1\\frac{7}{8} = (3-1) + (\\frac{8}{8}-\\frac{7}{8}) = 2 + \\frac{1}{8} = 2\\frac{1}{8}$L입니다.",
     "concept_tags": [
       "대분수 덧셈",
       "대분수 뺄셈",
@@ -6481,14 +6481,14 @@
     "type": "short_answer",
     "difficulty": 4,
     "section": "application",
-    "body": "길이가 $10$$cm인 막대에서 $3\\f\\frac{4}{5}$$cm를 자르고, 남은 막대에서 $2\\f\\frac{3}{5}$$cm를 또 잘랐습니다. 마지막에 남은 막대의 길이는 몇 cm일까요?",
+    "body": "길이가 $10$cm인 막대에서 $3\\frac{4}{5}$cm를 자르고, 남은 막대에서 $2\\frac{3}{5}$cm를 또 잘랐습니다. 마지막에 남은 막대의 길이는 몇 cm일까요?",
     "choices": null,
-    "answer": "$$3\\f\\frac{3}{5}$$cm",
+    "answer": "$3\\frac{3}{5}$cm",
     "answer_aliases": [
       "3과 3/5cm",
       "18/5cm"
     ],
-    "explanation": "먼저 $10 - 3\\f\\frac{4}{5}$를 계산합니다. $10 = 9\\f\\frac{5}{5}$$이므로, $9\\f\\frac{5}{5} - 3\\f\\frac{4}{5} = 6\\f\\frac{1}{5}$$cm입니다. 이제 남은 막대 $6\\f\\frac{1}{5}$$cm에서 $2\\f\\frac{3}{5}$$cm를 뺍니다. $6\\f\\frac{1}{5} = 5\\f\\frac{5+1}{5} = 5\\f\\frac{6}{5}$$이므로, $5\\f\\frac{6}{5} - 2\\f\\frac{3}{5} = (5-2) + (\\f\\frac{6}{5}-\\f\\frac{3}{5}) = 3 + \\f\\frac{3}{5} = 3\\f\\frac{3}{5}$$cm입니다.",
+    "explanation": "먼저 $10 - 3\\frac{4}{5}$를 계산합니다. $10 = 9\\frac{5}{5}$이므로, $9\\frac{5}{5} - 3\\frac{4}{5} = 6\\frac{1}{5}$cm입니다. 이제 남은 막대 $6\\frac{1}{5}$cm에서 $2\\frac{3}{5}$cm를 뺍니다. $6\\frac{1}{5} = 5\\frac{5+1}{5} = 5\\frac{6}{5}$이므로, $5\\frac{6}{5} - 2\\frac{3}{5} = (5-2) + (\\frac{6}{5}-\\frac{3}{5}) = 3 + \\frac{3}{5} = 3\\frac{3}{5}$cm입니다.",
     "concept_tags": [
       "대분수 뺄셈",
       "받아내림",
@@ -6517,19 +6517,19 @@
     "type": "multiple_choice",
     "difficulty": 5,
     "section": "challenge",
-    "body": "어떤 분수에서 $1\\f\\frac{5}{11}$$를 뺐더니 $2\\f\\frac{8}{11}$$이 되었습니다. 어떤 분수는 무엇일까요?",
+    "body": "어떤 분수에서 $1\\frac{5}{11}$를 뺐더니 $2\\frac{8}{11}$이 되었습니다. 어떤 분수는 무엇일까요?",
     "choices": [
-      "$$3\\f\\frac{2}{11}$$",
-      "$$3\\f\\frac{3}{11}$$",
-      "$$4\\f\\frac{2}{11}$$",
-      "$$4\\f\\frac{3}{11}$$"
+      "$3\\frac{2}{11}$",
+      "$3\\frac{3}{11}$",
+      "$4\\frac{2}{11}$",
+      "$4\\frac{3}{11}$"
     ],
-    "answer": "$$4\\f\\frac{2}{11}$$",
+    "answer": "$4\\frac{2}{11}$",
     "answer_aliases": [
       "4와 2/11",
       "46/11"
     ],
-    "explanation": "어떤 분수를 $$\\square$$라고 하면, $$\\square - 1\\f\\frac{5}{11} = 2\\f\\frac{8}{11}$$입니다. $$\\square = 2\\f\\frac{8}{11} + 1\\f\\frac{5}{11}$$입니다. 자연수 부분 $2 + 1 = 3$이고, 분수 부분 $$\\frac{8}{11} + \\f\\frac{5}{11} = \\f\\frac{13}{11}$$입니다. $$\\frac{13}{11}$$는 $1\\f\\frac{2}{11}$$이므로, $3 + 1\\f\\frac{2}{11} = 4\\f\\frac{2}{11}$$입니다.",
+    "explanation": "어떤 분수를 $\\square$라고 하면, $\\square - 1\\frac{5}{11} = 2\\frac{8}{11}$입니다. $\\square = 2\\frac{8}{11} + 1\\frac{5}{11}$입니다. 자연수 부분 $2 + 1 = 3$이고, 분수 부분 $\\frac{8}{11} + \\frac{5}{11} = \\frac{13}{11}$입니다. $\\frac{13}{11}$는 $1\\frac{2}{11}$이므로, $3 + 1\\frac{2}{11} = 4\\frac{2}{11}$입니다.",
     "concept_tags": [
       "미지수 찾기",
       "대분수 덧셈",
@@ -6557,19 +6557,19 @@
     "type": "multiple_choice",
     "difficulty": 5,
     "section": "challenge",
-    "body": "세 수 $1\\f\\frac{1}{7}, 2\\f\\frac{3}{7}, 3\\f\\frac{5}{7}$$이 있습니다. 이 중 가장 큰 수와 가장 작은 수의 차는 얼마일까요?",
+    "body": "세 수 $1\\frac{1}{7}, 2\\frac{3}{7}, 3\\frac{5}{7}$이 있습니다. 이 중 가장 큰 수와 가장 작은 수의 차는 얼마일까요?",
     "choices": [
-      "$$2\\f\\frac{3}{7}$$",
-      "$$2\\f\\frac{4}{7}$$",
-      "$$3\\f\\frac{3}{7}$$",
-      "$$3\\f\\frac{4}{7}$$"
+      "$2\\frac{3}{7}$",
+      "$2\\frac{4}{7}$",
+      "$3\\frac{3}{7}$",
+      "$3\\frac{4}{7}$"
     ],
-    "answer": "$$2\\f\\frac{4}{7}$$",
+    "answer": "$2\\frac{4}{7}$",
     "answer_aliases": [
       "2와 4/7",
       "18/7"
     ],
-    "explanation": "가장 큰 수는 $3\\f\\frac{5}{7}$이고, 가장 작은 수는 $1\\f\\frac{1}{7}$입니다. 두 수의 차를 구하려면 뺄셈을 합니다. $3\\f\\frac{5}{7} - 1\\f\\frac{1}{7}$를 계산합니다. 자연수 부분 $3 - 1 = 2$이고, 분수 부분 $$\\frac{5}{7} - \\f\\frac{1}{7} = \\f\\frac{4}{7}$$이므로, $2\\f\\frac{4}{7}$$입니다.",
+    "explanation": "가장 큰 수는 $3\\frac{5}{7}$이고, 가장 작은 수는 $1\\frac{1}{7}$입니다. 두 수의 차를 구하려면 뺄셈을 합니다. $3\\frac{5}{7} - 1\\frac{1}{7}$를 계산합니다. 자연수 부분 $3 - 1 = 2$이고, 분수 부분 $\\frac{5}{7} - \\frac{1}{7} = \\frac{4}{7}$이므로, $2\\frac{4}{7}$입니다.",
     "concept_tags": [
       "대분수 뺄셈",
       "수의 크기 비교"
@@ -6596,18 +6596,18 @@
     "type": "multiple_choice",
     "difficulty": 2,
     "section": "warmup",
-    "body": "$$\\f\\frac{3}{8} + \\f\\frac{4}{8}$$를 계산하면 얼마일까요?",
+    "body": "$\\frac{3}{8} + \\frac{4}{8}$를 계산하면 얼마일까요?",
     "choices": [
-      "$$\\f\\frac{6}{8}$$",
-      "$$\\f\\frac{7}{8}$$",
-      "$$\\f\\frac{8}{8}$$",
-      "$$1\\f\\frac{1}{8}$$"
+      "$\\frac{6}{8}$",
+      "$\\frac{7}{8}$",
+      "$\\frac{8}{8}$",
+      "$1\\frac{1}{8}$"
     ],
-    "answer": "$$\\f\\frac{7}{8}$$",
+    "answer": "$\\frac{7}{8}$",
     "answer_aliases": [
       "7/8"
     ],
-    "explanation": "분모가 같은 분수의 덧셈은 분모는 그대로 두고 분자끼리 더합니다. $3 + 4 = 7$이므로, $$\\frac{3}{8} + \\f\\frac{4}{8} = \\f\\frac{7}{8}$$입니다.",
+    "explanation": "분모가 같은 분수의 덧셈은 분모는 그대로 두고 분자끼리 더합니다. $3 + 4 = 7$이므로, $\\frac{3}{8} + \\frac{4}{8} = \\frac{7}{8}$입니다.",
     "concept_tags": [
       "진분수 덧셈"
     ],
@@ -6633,19 +6633,19 @@
     "type": "multiple_choice",
     "difficulty": 3,
     "section": "concept",
-    "body": "$$2\\f\\frac{1}{9} + 3\\f\\frac{4}{9}$$를 계산하면 얼마일까요?",
+    "body": "$2\\frac{1}{9} + 3\\frac{4}{9}$를 계산하면 얼마일까요?",
     "choices": [
-      "$$5\\f\\frac{3}{9}$$",
-      "$$5\\f\\frac{4}{9}$$",
-      "$$5\\f\\frac{5}{9}$$",
-      "$$6\\f\\frac{5}{9}$$"
+      "$5\\frac{3}{9}$",
+      "$5\\frac{4}{9}$",
+      "$5\\frac{5}{9}$",
+      "$6\\frac{5}{9}$"
     ],
-    "answer": "$$5\\f\\frac{5}{9}$$",
+    "answer": "$5\\frac{5}{9}$",
     "answer_aliases": [
       "5와 5/9",
       "50/9"
     ],
-    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. $2 + 3 = 5$이고, $$\\frac{1}{9} + \\f\\frac{4}{9} = \\f\\frac{5}{9}$$이므로, $2\\f\\frac{1}{9} + 3\\f\\frac{4}{9} = 5\\f\\frac{5}{9}$$입니다.",
+    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. $2 + 3 = 5$이고, $\\frac{1}{9} + \\frac{4}{9} = \\frac{5}{9}$이므로, $2\\frac{1}{9} + 3\\frac{4}{9} = 5\\frac{5}{9}$입니다.",
     "concept_tags": [
       "대분수 덧셈"
     ],
@@ -13251,7 +13251,7 @@
     ],
     "answer": "$2:3 = 4:5$",
     "answer_aliases": [],
-    "explanation": "비례식은 비율이 같은 두 비를 등호로 나타낸 식입니다. 각 비의 비율을 확인합니다.\n$1:2$의 비율은 $\\f\\frac{1}{2}$, $3:6$의 비율은 $\\f\\frac{3}{6} = \\f\\frac{1}{2}$이므로 비례식입니다.\n$2:3$의 비율은 $\\f\\frac{2}{3}$, $4:5$의 비율은 $\\f\\frac{4}{5}$이므로 비례식이 아닙니다.\n$5:10$의 비율은 $\\f\\frac{5}{10} = \\f\\frac{1}{2}$, $1:2$의 비율은 $\\f\\frac{1}{2}$이므로 비례식입니다.\n$10:15$의 비율은 $\\f\\frac{10}{15} = \\f\\frac{2}{3}$, $2:3$의 비율은 $\\f\\frac{2}{3}$이므로 비례식입니다.",
+    "explanation": "비례식은 비율이 같은 두 비를 등호로 나타낸 식입니다. 각 비의 비율을 확인합니다.\n$1:2$의 비율은 $\\frac{1}{2}$, $3:6$의 비율은 $\\frac{3}{6} = \\frac{1}{2}$이므로 비례식입니다.\n$2:3$의 비율은 $\\frac{2}{3}$, $4:5$의 비율은 $\\frac{4}{5}$이므로 비례식이 아닙니다.\n$5:10$의 비율은 $\\frac{5}{10} = \\frac{1}{2}$, $1:2$의 비율은 $\\frac{1}{2}$이므로 비례식입니다.\n$10:15$의 비율은 $\\frac{10}{15} = \\frac{2}{3}$, $2:3$의 비율은 $\\frac{2}{3}$이므로 비례식입니다.",
     "concept_tags": [
       "비례식",
       "비율"
@@ -18238,6 +18238,1560 @@
         "label": "문제해석",
         "wrong_answer": "9",
         "reason": "어떤 수를 찾지 않고 9를 그대로 답했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::0",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "계산해 보세요. $27 + 15 = \\square$",
+    "choices": [
+      "$32$",
+      "$42$",
+      "$43$",
+      "$52$"
+    ],
+    "answer": "$42$",
+    "answer_aliases": [
+      "42"
+    ],
+    "explanation": "일의 자리: $7 + 5 = 12$입니다. 십의 자리로 1을 받아올림하고 일의 자리에 2를 씁니다.\n십의 자리: $2 + 1 + 1 (받아올림) = 4$입니다.\n따라서 $27 + 15 = 42$입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$32$",
+        "reason": "일의 자리 계산 시 받아올림을 하지 않았습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "$43$",
+        "reason": "일의 자리 계산이 틀렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::1",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "계산해 보세요. $43 - 18 = \\square$",
+    "choices": [
+      "$25$",
+      "$35$",
+      "$32$",
+      "$22$"
+    ],
+    "answer": "$25$",
+    "answer_aliases": [
+      "25"
+    ],
+    "explanation": "일의 자리: $3 - 8$은 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $13 - 8 = 5$입니다.\n십의 자리: 십의 자리 4는 10을 빌려주었으므로 3이 됩니다. $3 - 1 = 2$입니다.\n따라서 $43 - 18 = 25$입니다.",
+    "concept_tags": [
+      "두 자리 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$35$",
+        "reason": "십의 자리에서 받아내림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$32$",
+        "reason": "일의 자리 계산 시 받아내림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::2",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "계산해 보세요. $36 + 28 = \\square$",
+    "choices": null,
+    "answer": "$64$",
+    "answer_aliases": [
+      "64"
+    ],
+    "explanation": "일의 자리: $6 + 8 = 14$입니다. 십의 자리로 1을 받아올림하고 일의 자리에 4를 씁니다.\n십의 자리: $3 + 2 + 1 (받아올림) = 6$입니다.\n따라서 $36 + 28 = 64$입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "54",
+        "reason": "일의 자리에서 받아올림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "63",
+        "reason": "일의 자리 계산이 틀렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::3",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "계산해 보세요. $51 - 24 = \\square$",
+    "choices": [
+      "$27$",
+      "$37$",
+      "$33$",
+      "$23$"
+    ],
+    "answer": "$27$",
+    "answer_aliases": [
+      "27"
+    ],
+    "explanation": "일의 자리: $1 - 4$는 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $11 - 4 = 7$입니다.\n십의 자리: 십의 자리 5는 10을 빌려주었으므로 4가 됩니다. $4 - 2 = 2$입니다.\n따라서 $51 - 24 = 27$입니다.",
+    "concept_tags": [
+      "두 자리 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$37$",
+        "reason": "십의 자리에서 받아내림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$33$",
+        "reason": "일의 자리 계산 시 받아내림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::4",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "계산해 보세요. $19 + 33 = \\square$",
+    "choices": [
+      "$42$",
+      "$52$",
+      "$41$",
+      "$51$"
+    ],
+    "answer": "$52$",
+    "answer_aliases": [
+      "52"
+    ],
+    "explanation": "일의 자리: $9 + 3 = 12$입니다. 십의 자리로 1을 받아올림하고 일의 자리에 2를 씁니다.\n십의 자리: $1 + 3 + 1 (받아올림) = 5$입니다.\n따라서 $19 + 33 = 52$입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$42$",
+        "reason": "일의 자리 계산 시 받아올림을 하지 않았습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "$51$",
+        "reason": "일의 자리 계산이 틀렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::5",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "계산해 보세요. $65 - 37 = \\square$",
+    "choices": null,
+    "answer": "$28$",
+    "answer_aliases": [
+      "28"
+    ],
+    "explanation": "일의 자리: $5 - 7$은 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $15 - 7 = 8$입니다.\n십의 자리: 십의 자리 6은 10을 빌려주었으므로 5가 됩니다. $5 - 3 = 2$입니다.\n따라서 $65 - 37 = 28$입니다.",
+    "concept_tags": [
+      "두 자리 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "38",
+        "reason": "십의 자리에서 받아내림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "22",
+        "reason": "일의 자리 계산 시 받아내림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::6",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "계산해 보세요. $48 + 25 = \\square$",
+    "choices": [
+      "$63$",
+      "$73$",
+      "$62$",
+      "$72$"
+    ],
+    "answer": "$73$",
+    "answer_aliases": [
+      "73"
+    ],
+    "explanation": "일의 자리: $8 + 5 = 13$입니다. 십의 자리로 1을 받아올림하고 일의 자리에 3을 씁니다.\n십의 자리: $4 + 2 + 1 (받아올림) = 7$입니다.\n따라서 $48 + 25 = 73$입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$63$",
+        "reason": "일의 자리 계산 시 받아올림을 하지 않았습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "$72$",
+        "reason": "일의 자리 계산이 틀렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::7",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "계산해 보세요. $72 - 36 = \\square$",
+    "choices": [
+      "$36$",
+      "$46$",
+      "$34$",
+      "$44$"
+    ],
+    "answer": "$36$",
+    "answer_aliases": [
+      "36"
+    ],
+    "explanation": "일의 자리: $2 - 6$은 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $12 - 6 = 6$입니다.\n십의 자리: 십의 자리 7은 10을 빌려주었으므로 6이 됩니다. $6 - 3 = 3$입니다.\n따라서 $72 - 36 = 36$입니다.",
+    "concept_tags": [
+      "두 자리 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$46$",
+        "reason": "십의 자리에서 받아내림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$34$",
+        "reason": "일의 자리 계산 시 받아내림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::8",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "계산해 보세요. $54 + 39 = \\square$",
+    "choices": null,
+    "answer": "$93$",
+    "answer_aliases": [
+      "93"
+    ],
+    "explanation": "일의 자리: $4 + 9 = 13$입니다. 십의 자리로 1을 받아올림하고 일의 자리에 3을 씁니다.\n십의 자리: $5 + 3 + 1 (받아올림) = 9$입니다.\n따라서 $54 + 39 = 93$입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "83",
+        "reason": "일의 자리에서 받아올림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "92",
+        "reason": "일의 자리 계산이 틀렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::9",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "계산해 보세요. $80 - 47 = \\square$",
+    "choices": [
+      "$33$",
+      "$43$",
+      "$37$",
+      "$47$"
+    ],
+    "answer": "$33$",
+    "answer_aliases": [
+      "33"
+    ],
+    "explanation": "일의 자리: $0 - 7$은 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $10 - 7 = 3$입니다.\n십의 자리: 십의 자리 8은 10을 빌려주었으므로 7이 됩니다. $7 - 4 = 3$입니다.\n따라서 $80 - 47 = 33$입니다.",
+    "concept_tags": [
+      "두 자리 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$43$",
+        "reason": "십의 자리에서 받아내림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$37$",
+        "reason": "일의 자리 계산 시 받아내림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::10",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "계산해 보세요. $67 + 18 = \\square$",
+    "choices": [
+      "$75$",
+      "$85$",
+      "$74$",
+      "$84$"
+    ],
+    "answer": "$85$",
+    "answer_aliases": [
+      "85"
+    ],
+    "explanation": "일의 자리: $7 + 8 = 15$입니다. 십의 자리로 1을 받아올림하고 일의 자리에 5를 씁니다.\n십의 자리: $6 + 1 + 1 (받아올림) = 8$입니다.\n따라서 $67 + 18 = 85$입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$75$",
+        "reason": "일의 자리 계산 시 받아올림을 하지 않았습니다."
+      },
+      {
+        "label": "계산실수",
+        "wrong_answer": "$84$",
+        "reason": "일의 자리 계산이 틀렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::11",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "계산해 보세요. $91 - 55 = \\square$",
+    "choices": null,
+    "answer": "$36$",
+    "answer_aliases": [
+      "36"
+    ],
+    "explanation": "일의 자리: $1 - 5$는 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $11 - 5 = 6$입니다.\n십의 자리: 십의 자리 9는 10을 빌려주었으므로 8이 됩니다. $8 - 5 = 3$입니다.\n따라서 $91 - 55 = 36$입니다.",
+    "concept_tags": [
+      "두 자리 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "46",
+        "reason": "십의 자리에서 받아내림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "34",
+        "reason": "일의 자리 계산 시 받아내림을 잘못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::12",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "사과가 28개 있습니다. 배가 16개 있습니다. 사과와 배는 모두 몇 개일까요?",
+    "choices": [
+      "$34$개",
+      "$44$개",
+      "$32$개",
+      "$42$개"
+    ],
+    "answer": "$44$개",
+    "answer_aliases": [
+      "44개"
+    ],
+    "explanation": "사과와 배의 개수를 더해야 합니다. $28 + 16 = 44$입니다.\n일의 자리: $8 + 6 = 14$. 십의 자리로 1을 받아올림하고 일의 자리에 4를 씁니다.\n십의 자리: $2 + 1 + 1 (받아올림) = 4$입니다.\n따라서 모두 44개입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$34$개",
+        "reason": "일의 자리 계산 시 받아올림을 하지 않았습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "$12$개",
+        "reason": "뺄셈으로 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::13",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "연필이 35자루 있었습니다. 그 중에서 17자루를 사용했습니다. 남은 연필은 몇 자루일까요?",
+    "choices": [
+      "$18$자루",
+      "$28$자루",
+      "$12$자루",
+      "$22$자루"
+    ],
+    "answer": "$18$자루",
+    "answer_aliases": [
+      "18자루"
+    ],
+    "explanation": "남은 연필의 수를 구하려면 뺄셈을 해야 합니다. $35 - 17 = 18$입니다.\n일의 자리: $5 - 7$은 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $15 - 7 = 8$입니다.\n십의 자리: 십의 자리 3은 10을 빌려주었으므로 2가 됩니다. $2 - 1 = 1$입니다.\n따라서 남은 연필은 18자루입니다.",
+    "concept_tags": [
+      "두 자리 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$28$자루",
+        "reason": "십의 자리에서 받아내림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "$52$자루",
+        "reason": "덧셈으로 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::14",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "교실에 학생이 19명 있었습니다. 나중에 23명이 더 왔습니다. 교실에 있는 학생은 모두 몇 명일까요?",
+    "choices": null,
+    "answer": "$42$명",
+    "answer_aliases": [
+      "42명"
+    ],
+    "explanation": "교실에 있는 학생 수를 구하려면 덧셈을 해야 합니다. $19 + 23 = 42$입니다.\n일의 자리: $9 + 3 = 12$. 십의 자리로 1을 받아올림하고 일의 자리에 2를 씁니다.\n십의 자리: $1 + 2 + 1 (받아올림) = 4$입니다.\n따라서 교실에 있는 학생은 모두 42명입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "32명",
+        "reason": "일의 자리에서 받아올림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "4명",
+        "reason": "뺄셈으로 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::15",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "책이 52권 있었습니다. 그 중에서 29권을 읽었습니다. 남은 책은 몇 권일까요?",
+    "choices": [
+      "$23$권",
+      "$33$권",
+      "$27$권",
+      "$37$권"
+    ],
+    "answer": "$23$권",
+    "answer_aliases": [
+      "23권"
+    ],
+    "explanation": "남은 책의 수를 구하려면 뺄셈을 해야 합니다. $52 - 29 = 23$입니다.\n일의 자리: $2 - 9$는 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $12 - 9 = 3$입니다.\n십의 자리: 십의 자리 5는 10을 빌려주었으므로 4가 됩니다. $4 - 2 = 2$입니다.\n따라서 남은 책은 23권입니다.",
+    "concept_tags": [
+      "두 자리 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$33$권",
+        "reason": "십의 자리에서 받아내림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "$81$권",
+        "reason": "덧셈으로 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::16",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "풍선이 34개 있습니다. 친구에게 18개를 더 받았습니다. 풍선은 모두 몇 개일까요?",
+    "choices": [
+      "$42$개",
+      "$52$개",
+      "$48$개",
+      "$58$개"
+    ],
+    "answer": "$52$개",
+    "answer_aliases": [
+      "52개"
+    ],
+    "explanation": "풍선의 개수를 더해야 합니다. $34 + 18 = 52$입니다.\n일의 자리: $4 + 8 = 12$. 십의 자리로 1을 받아올림하고 일의 자리에 2를 씁니다.\n십의 자리: $3 + 1 + 1 (받아올림) = 5$입니다.\n따라서 모두 52개입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "받아올림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$42$개",
+        "reason": "일의 자리 계산 시 받아올림을 하지 않았습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "$16$개",
+        "reason": "뺄셈으로 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::17",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "사탕이 60개 있었습니다. 그 중에서 25개를 먹었습니다. 남은 사탕은 몇 개일까요?",
+    "choices": null,
+    "answer": "$35$개",
+    "answer_aliases": [
+      "35개"
+    ],
+    "explanation": "남은 사탕의 수를 구하려면 뺄셈을 해야 합니다. $60 - 25 = 35$입니다.\n일의 자리: $0 - 5$는 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $10 - 5 = 5$입니다.\n십의 자리: 십의 자리 6은 10을 빌려주었으므로 5가 됩니다. $5 - 2 = 3$입니다.\n따라서 남은 사탕은 35개입니다.",
+    "concept_tags": [
+      "두 자리 뺄셈",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "45개",
+        "reason": "십의 자리에서 받아내림을 하지 않고 계산했습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "85개",
+        "reason": "덧셈으로 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::18",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "$3\\square + 27 = 61$ 입니다. $\\square$ 안에 알맞은 수는 무엇일까요?",
+    "choices": [
+      "$2$",
+      "$3$",
+      "$4$",
+      "$5$"
+    ],
+    "answer": "$4$",
+    "answer_aliases": [
+      "4"
+    ],
+    "explanation": "어떤 수에 27을 더해서 61이 되었으므로, 61에서 27을 빼면 어떤 수를 알 수 있습니다.\n$61 - 27 = 34$입니다.\n일의 자리: $1 - 7$은 할 수 없으므로 십의 자리에서 10을 받아내림 합니다. $11 - 7 = 4$입니다.\n십의 자리: 십의 자리 6은 10을 빌려주었으므로 5가 됩니다. $5 - 2 = 3$입니다.\n따라서 $\\square$ 안에 알맞은 수는 4입니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "두 자리 뺄셈",
+      "받아올림",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2$",
+        "reason": "일의 자리 계산이 틀렸습니다."
+      },
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$3$",
+        "reason": "받아내림을 잘못 처리했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-1-3::v3::19",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-08]",
+    "unit_id": "math-2-1-3",
+    "unit_name": "덧셈과 뺄셈",
+    "sub_unit": "받아올림·받아내림이 있는 두 자리",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "버스에 25명의 사람이 타고 있었습니다. 정류장에서 18명이 더 탔고, 다음 정류장에서 12명이 내렸습니다. 지금 버스에는 몇 명의 사람이 있을까요?",
+    "choices": null,
+    "answer": "$31$명",
+    "answer_aliases": [
+      "31명"
+    ],
+    "explanation": "1. 먼저 버스에 18명이 더 탔으므로 덧셈을 합니다. $25 + 18 = 43$명입니다.\n   일의 자리: $5 + 8 = 13$. 십의 자리로 1을 받아올림하고 일의 자리에 3을 씁니다.\n   십의 자리: $2 + 1 + 1 (받아올림) = 4$입니다.\n2. 다음으로 12명이 내렸으므로 뺄셈을 합니다. $43 - 12 = 31$명입니다.\n   일의 자리: $3 - 2 = 1$입니다.\n   십의 자리: $4 - 1 = 3$입니다.\n따라서 지금 버스에는 31명의 사람이 있습니다.",
+    "concept_tags": [
+      "두 자리 덧셈",
+      "두 자리 뺄셈",
+      "받아올림",
+      "받아내림"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "29명",
+        "reason": "첫 번째 덧셈 또는 두 번째 뺄셈에서 계산 실수가 있었습니다."
+      },
+      {
+        "label": "문제해석",
+        "wrong_answer": "55명",
+        "reason": "모두 더하거나 빼는 순서를 잘못 이해했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::0",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "빈칸에 알맞은 수를 고르세요. $2 \\times 4 = \\square$",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": "8",
+    "answer_aliases": [
+      "8"
+    ],
+    "explanation": "$2 \\times 4$는 2를 4번 더한 것과 같습니다. $2+2+2+2 = 8$ 입니다.",
+    "concept_tags": [
+      "2단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "6",
+        "reason": "곱셈을 덧셈으로 착각하여 $2+4$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::1",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "빈칸에 알맞은 수를 고르세요. $5 \\times 3 = \\square$",
+    "choices": [
+      "8",
+      "10",
+      "15",
+      "20"
+    ],
+    "answer": "15",
+    "answer_aliases": [
+      "15"
+    ],
+    "explanation": "$5 \\times 3$은 5를 3번 더한 것과 같습니다. $5+5+5 = 15$ 입니다.",
+    "concept_tags": [
+      "5단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "8",
+        "reason": "곱셈을 덧셈으로 착각하여 $5+3$으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::2",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "빈칸에 알맞은 수를 쓰세요. $7 \\times 2 = \\square$",
+    "choices": null,
+    "answer": "14",
+    "answer_aliases": [
+      "14"
+    ],
+    "explanation": "$7 \\times 2$는 7을 2번 더한 것과 같습니다. $7+7 = 14$ 입니다.",
+    "concept_tags": [
+      "7단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "9",
+        "reason": "곱셈을 덧셈으로 착각하여 $7+2$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::3",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "빈칸에 알맞은 수를 고르세요. $3 \\times 6 = \\square$",
+    "choices": [
+      "9",
+      "12",
+      "15",
+      "18"
+    ],
+    "answer": "18",
+    "answer_aliases": [
+      "18"
+    ],
+    "explanation": "$3 \\times 6$은 3을 6번 더한 것과 같습니다. $3+3+3+3+3+3 = 18$ 입니다.",
+    "concept_tags": [
+      "3단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "9",
+        "reason": "곱셈을 덧셈으로 착각하여 $3+6$으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::4",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "빈칸에 알맞은 수를 고르세요. $9 \\times 5 = \\square$",
+    "choices": [
+      "14",
+      "35",
+      "40",
+      "45"
+    ],
+    "answer": "45",
+    "answer_aliases": [
+      "45"
+    ],
+    "explanation": "$9 \\times 5$는 9를 5번 더한 것과 같습니다. $9+9+9+9+9 = 45$ 입니다.",
+    "concept_tags": [
+      "9단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "14",
+        "reason": "곱셈을 덧셈으로 착각하여 $9+5$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::5",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "빈칸에 알맞은 수를 쓰세요. $4 \\times 8 = \\square$",
+    "choices": null,
+    "answer": "32",
+    "answer_aliases": [
+      "32"
+    ],
+    "explanation": "$4 \\times 8$은 4를 8번 더한 것과 같습니다. $4+4+4+4+4+4+4+4 = 32$ 입니다.",
+    "concept_tags": [
+      "4단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "12",
+        "reason": "곱셈을 덧셈으로 착각하여 $4+8$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::6",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "사탕이 3개씩 4묶음 있습니다. 사탕은 모두 몇 개일까요?",
+    "choices": [
+      "7개",
+      "10개",
+      "12개",
+      "15개"
+    ],
+    "answer": "12개",
+    "answer_aliases": [
+      "12"
+    ],
+    "explanation": "3개씩 4묶음은 $3 \\times 4$로 나타낼 수 있습니다. $3 \\times 4 = 12$ 이므로, 사탕은 모두 12개입니다.",
+    "concept_tags": [
+      "곱셈의 의미",
+      "3단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "7개",
+        "reason": "곱셈이 아닌 덧셈으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::7",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "한 접시에 귤이 5개씩 있습니다. 귤 2접시에는 귤이 모두 몇 개일까요?",
+    "choices": [
+      "7개",
+      "10개",
+      "12개",
+      "15개"
+    ],
+    "answer": "10개",
+    "answer_aliases": [
+      "10"
+    ],
+    "explanation": "5개씩 2접시는 $5 \\times 2$로 나타낼 수 있습니다. $5 \\times 2 = 10$ 이므로, 귤은 모두 10개입니다.",
+    "concept_tags": [
+      "곱셈의 의미",
+      "5단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "7개",
+        "reason": "곱셈이 아닌 덧셈으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::8",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$6 + 6 + 6 + 6$ 을 곱셈식으로 나타내세요.",
+    "choices": null,
+    "answer": "$6 \\times 4$",
+    "answer_aliases": [
+      "6x4",
+      "4x6"
+    ],
+    "explanation": "6을 4번 더한 것이므로, 곱셈식으로 $6 \\times 4$로 나타낼 수 있습니다.",
+    "concept_tags": [
+      "곱셈의 의미"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$6 \\times 6 \\times 6 \\times 6$",
+        "reason": "곱셈의 의미를 정확히 이해하지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::9",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$8 \\times 3$ 과 같은 값은 무엇일까요?",
+    "choices": [
+      "$8+3$",
+      "$8+8+8$",
+      "$3+3+3$",
+      "$8 \\times 8 \\times 8$"
+    ],
+    "answer": "$8+8+8$",
+    "answer_aliases": [
+      "8+8+8"
+    ],
+    "explanation": "$8 \\times 3$은 8을 3번 더한 것과 같습니다. 따라서 $8+8+8$과 같습니다.",
+    "concept_tags": [
+      "곱셈의 의미"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$8+3$",
+        "reason": "곱셈을 덧셈으로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::10",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "연필이 4자루씩 5묶음 있습니다. 연필은 모두 몇 자루일까요?",
+    "choices": [
+      "9자루",
+      "15자루",
+      "20자루",
+      "25자루"
+    ],
+    "answer": "20자루",
+    "answer_aliases": [
+      "20"
+    ],
+    "explanation": "4자루씩 5묶음은 $4 \\times 5$로 나타낼 수 있습니다. $4 \\times 5 = 20$ 이므로, 연필은 모두 20자루입니다.",
+    "concept_tags": [
+      "곱셈의 의미",
+      "4단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "9자루",
+        "reason": "곱셈이 아닌 덧셈으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::11",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$7 \\times 4 = \\square$ 입니다. $\\square$ 안에 알맞은 수는 무엇일까요?",
+    "choices": null,
+    "answer": "28",
+    "answer_aliases": [
+      "28"
+    ],
+    "explanation": "$7 \\times 4$는 7을 4번 더한 것과 같습니다. $7+7+7+7 = 28$ 입니다.",
+    "concept_tags": [
+      "7단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "11",
+        "reason": "곱셈을 덧셈으로 착각하여 $7+4$로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::12",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "한 상자에 귤이 8개씩 들어 있습니다. 귤 5상자에는 귤이 모두 몇 개일까요?",
+    "choices": [
+      "13개",
+      "35개",
+      "40개",
+      "45개"
+    ],
+    "answer": "40개",
+    "answer_aliases": [
+      "40"
+    ],
+    "explanation": "8개씩 5상자이므로, $8 \\times 5$로 계산합니다. $8 \\times 5 = 40$ 입니다.",
+    "concept_tags": [
+      "곱셈 활용",
+      "8단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "13개",
+        "reason": "곱셈이 아닌 덧셈으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::13",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "$6 \\times 7$ 의 값은 $9 \\times 4$ 의 값보다 얼마나 더 클까요?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": "6",
+    "answer_aliases": [
+      "6"
+    ],
+    "explanation": "$6 \\times 7 = 42$ 이고, $9 \\times 4 = 36$ 입니다. $42 - 36 = 6$ 이므로, 6만큼 더 큽니다.",
+    "concept_tags": [
+      "곱셈 비교",
+      "6단 곱셈구구",
+      "9단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "4",
+        "reason": "각 곱셈구구의 값을 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::14",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "$3 \\times \\square = 27$ 입니다. $\\square$ 안에 알맞은 수는 무엇일까요?",
+    "choices": null,
+    "answer": "9",
+    "answer_aliases": [
+      "9"
+    ],
+    "explanation": "3단 곱셈구구를 생각하면, $3 \\times 9 = 27$ 입니다. 따라서 $\\square$ 안에는 9가 들어갑니다.",
+    "concept_tags": [
+      "곱셈구구 빈칸 채우기",
+      "3단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "24",
+        "reason": "덧셈이나 뺄셈으로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::15",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "지우개가 9개씩 2상자 있습니다. 지우개는 모두 몇 개일까요?",
+    "choices": [
+      "11개",
+      "16개",
+      "18개",
+      "20개"
+    ],
+    "answer": "18개",
+    "answer_aliases": [
+      "18"
+    ],
+    "explanation": "9개씩 2상자이므로, $9 \\times 2$로 계산합니다. $9 \\times 2 = 18$ 입니다.",
+    "concept_tags": [
+      "곱셈 활용",
+      "9단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "11개",
+        "reason": "곱셈이 아닌 덧셈으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::16",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "$7 \\times 6$ 과 $8 \\times 5$ 중에서 더 큰 값은 무엇일까요?",
+    "choices": [
+      "$7 \\times 6$",
+      "$8 \\times 5$",
+      "같습니다",
+      "알 수 없습니다"
+    ],
+    "answer": "$7 \\times 6$",
+    "answer_aliases": [
+      "7x6"
+    ],
+    "explanation": "$7 \\times 6 = 42$ 이고, $8 \\times 5 = 40$ 입니다. $42$가 $40$보다 크므로, $7 \\times 6$이 더 큽니다.",
+    "concept_tags": [
+      "곱셈 비교",
+      "7단 곱셈구구",
+      "8단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$8 \\times 5$",
+        "reason": "두 곱셈구구의 값을 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::17",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "한 줄에 학생이 5명씩 6줄 서 있습니다. 학생은 모두 몇 명일까요?",
+    "choices": null,
+    "answer": "30명",
+    "answer_aliases": [
+      "30"
+    ],
+    "explanation": "5명씩 6줄이므로, $5 \\times 6$으로 계산합니다. $5 \\times 6 = 30$ 입니다.",
+    "concept_tags": [
+      "곱셈 활용",
+      "5단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "11명",
+        "reason": "곱셈이 아닌 덧셈으로 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::18",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "연필이 7자루씩 3묶음 있습니다. 친구에게 5자루를 주면 남은 연필은 몇 자루일까요?",
+    "choices": [
+      "16자루",
+      "18자루",
+      "21자루",
+      "26자루"
+    ],
+    "answer": "16자루",
+    "answer_aliases": [
+      "16"
+    ],
+    "explanation": "먼저 연필이 모두 몇 자루인지 구합니다. $7 \\times 3 = 21$ 자루입니다. 친구에게 5자루를 주었으므로, $21 - 5 = 16$ 자루가 남습니다.",
+    "concept_tags": [
+      "두 단계 문제",
+      "곱셈과 뺄셈",
+      "7단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "21자루",
+        "reason": "친구에게 준 연필 수를 빼지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-2-2-2::v3::19",
+    "subject": "수학",
+    "grade": 2,
+    "standard_code": "[2수01-10]",
+    "unit_id": "math-2-2-2",
+    "unit_name": "곱셈구구",
+    "sub_unit": "2~9단 곱셈구구",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "어떤 수를 4와 곱했더니 28이 되었습니다. 이 수는 무엇일까요?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": "7",
+    "answer_aliases": [
+      "7"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면, $\\square \\times 4 = 28$ 입니다. 4단 곱셈구구를 생각하면 $7 \\times 4 = 28$ 이므로, 이 수는 7입니다.",
+    "concept_tags": [
+      "곱셈구구 빈칸 채우기",
+      "4단 곱셈구구"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "24",
+        "reason": "곱셈이 아닌 뺄셈으로 착각했습니다."
       }
     ],
     "license_code": "SELF_GEN",
