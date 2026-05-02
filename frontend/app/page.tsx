@@ -37,7 +37,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section — 옅은 하늘 그라디언트 (캐릭터 청록 톤) */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#E6F4FB] via-[#F5F9FC] to-white py-12 md:py-16">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#E5F4FC] via-[#F4FAFD] to-white py-12 md:py-16">
         <div className="mx-auto max-w-4xl px-4 text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

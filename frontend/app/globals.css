@@ -12,19 +12,19 @@
   --card-foreground: #0F2A47;
   --popover: #ffffff;
   --popover-foreground: #0F2A47;
-  --primary: #0080E0;              /* EDU 파랑 — CTA·링크 */
+  --primary: #2EA7E0;              /* EDU Jini 메인 블루 (캐릭터 몸체 톤) */
   --primary-foreground: #ffffff;
-  --secondary: #E6F4FB;            /* 옅은 하늘 — Hero 배경, 카드 호버 */
+  --secondary: #E5F4FC;            /* 옅은 하늘 — Hero·카드 호버 */
   --secondary-foreground: #0F2A47;
-  --muted: #F5F9FC;                /* 거의 흰색 + 청록 톤 */
+  --muted: #F4FAFD;                /* 거의 흰색 + 청록 톤 */
   --muted-foreground: #5B7B98;
   --accent: #F08000;               /* Jini 주황 — 강조 */
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #DCEAF3;               /* 옅은 청록 테두리 */
-  --input: #DCEAF3;
-  --ring: #0080E0;
+  --border: #D8EBF7;               /* 옅은 청록 테두리 */
+  --input: #D8EBF7;
+  --ring: #2EA7E0;
   --radius: 0.875rem;              /* 친근한 둥근 모서리 (14px) */
 }
 
