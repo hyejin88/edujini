@@ -85,81 +85,9 @@ export function clearAttempts() {
   } catch {}
 }
 
-// ───── 공유 URL — base64 인코딩 (서버 없음, 회원가입 없음) ─────
 
-// CompressionStream 사용 (모던 브라우저 모두 지원)
-async function compressString(s: string): Promise<Uint8Array> {
-  const stream = new Blob([s]).stream().pipeThrough(new CompressionStream("gzip"));
-  const reader = stream.getReader();
-  const chunks: Uint8Array[] = [];
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    chunks.push(value);
-  }
-  const total = chunks.reduce((a, c) => a + c.length, 0);
-  const out = new Uint8Array(total);
-  let off = 0;
-  for (const c of chunks) { out.set(c, off); off += c.length; }
-  return out;
-}
-
-async function decompressBytes(bytes: Uint8Array): Promise<string> {
-  const stream = new Blob([bytes as BlobPart]).stream().pipeThrough(new DecompressionStream("gzip"));
-  const reader = stream.getReader();
-  const chunks: Uint8Array[] = [];
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    chunks.push(value);
-  }
-  const total = chunks.reduce((a, c) => a + c.length, 0);
-  const out = new Uint8Array(total);
-  let off = 0;
-  for (const c of chunks) { out.set(c, off); off += c.length; }
-  return new TextDecoder().decode(out);
-}
-
-function bytesToBase64Url(bytes: Uint8Array): string {
-  let s = "";
-  for (let i = 0; i < bytes.length; i++) s += String.fromCharCode(bytes[i]);
-  return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-}
-
-function base64UrlToBytes(s: string): Uint8Array {
-  s = s.replace(/-/g, "+").replace(/_/g, "/");
-  while (s.length % 4) s += "=";
-  const bin = atob(s);
-  const out = new Uint8Array(bin.length);
-  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
-  return out;
-}
-
-/** 진단 결과를 공유 가능한 URL 문자열로 인코딩 (gzip + base64url) */
-export async function encodeShareUrl(): Promise<string> {
-  const atts = loadAttempts();
-  // 최근 200개만 (URL 사이즈 제한)
-  const data = JSON.stringify({ v: 1, t: Date.now(), atts: atts.slice(-200) });
-  const compressed = await compressString(data);
-  const encoded = bytesToBase64Url(compressed);
-  return encoded;
-}
-
-/** 공유 URL 파라미터를 디코딩 → AttemptRecord[] 반환 */
-export async function decodeShareUrl(encoded: string): Promise<AttemptRecord[] | null> {
-  try {
-    const bytes = base64UrlToBytes(encoded);
-    const json = await decompressBytes(bytes);
-    const obj = JSON.parse(json);
-    if (obj.v !== 1 || !Array.isArray(obj.atts)) return null;
-    return obj.atts as AttemptRecord[];
-  } catch {
-    return null;
-  }
-}
-
-export function computeDiagnosis(scope?: { unitId?: string; lastN?: number; from?: AttemptRecord[] }): DiagnosisResult {
-  let atts = scope?.from ?? loadAttempts();
+export function computeDiagnosis(scope?: { unitId?: string; lastN?: number }): DiagnosisResult {
+  let atts = loadAttempts();
   if (scope?.unitId) atts = atts.filter((a) => a.unit_id === scope.unitId);
   if (scope?.lastN && scope.lastN > 0) atts = atts.slice(-scope.lastN);
 

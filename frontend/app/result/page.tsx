@@ -9,9 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { ArrowLeft, AlertTriangle, Check, AlertCircle, ArrowRight } from "lucide-react";
-import { useSearchParams } from "next/navigation";
-import { computeDiagnosis, decodeShareUrl, encodeShareUrl, type DiagnosisResult, clearAttempts } from "@/lib/diagnose";
-import { Suspense } from "react";
+import { computeDiagnosis, type DiagnosisResult, clearAttempts } from "@/lib/diagnose";
 
 const errorTypes = [
   { key: "개념미숙" as const, label: "개념미숙", description: "기초 개념 이해 부족" },
@@ -34,45 +32,12 @@ function topErrorLabel(eb: Record<string, number>): string | null {
   return entries[0][0];
 }
 
-function ResultPageInner() {
-  const searchParams = useSearchParams();
-  const sharedParam = searchParams.get("d");
+export default function ResultPage() {
   const [d, setD] = useState<DiagnosisResult | null>(null);
-  const [isShared, setIsShared] = useState(false);
-  const [shareUrl, setShareUrl] = useState<string>("");
-  const [shareCopied, setShareCopied] = useState(false);
 
   useEffect(() => {
-    if (sharedParam) {
-      decodeShareUrl(sharedParam).then((atts) => {
-        if (atts && atts.length > 0) {
-          setD(computeDiagnosis({ from: atts }));
-          setIsShared(true);
-        } else {
-          setD(computeDiagnosis());
-        }
-      });
-    } else {
-      setD(computeDiagnosis());
-    }
-  }, [sharedParam]);
-
-  const handleShare = async () => {
-    const encoded = await encodeShareUrl();
-    const url = `${window.location.origin}/result?d=${encoded}`;
-    setShareUrl(url);
-    try {
-      if (navigator.share) {
-        await navigator.share({ title: "EDU Jini 학습 진단", text: "자녀 학습 진단 결과", url });
-      } else {
-        await navigator.clipboard.writeText(url);
-        setShareCopied(true);
-        setTimeout(() => setShareCopied(false), 2500);
-      }
-    } catch {
-      // 사용자가 공유 취소 — 무시
-    }
-  };
+    setD(computeDiagnosis());
+  }, []);
 
   if (!d) {
     return (
@@ -300,34 +265,7 @@ function ResultPageInner() {
           </Card>
         </section>
 
-        <div className="mt-8 flex flex-col items-center gap-3 text-center">
-          {!isShared && (
-            <>
-              <button
-                onClick={handleShare}
-                className="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
-              >
-                {shareCopied ? "✓ 링크 복사됨 — 카톡에 붙여넣기" : "진단 결과 공유 링크 만들기"}
-              </button>
-              {shareUrl && (
-                <input
-                  readOnly
-                  value={shareUrl}
-                  onClick={(e) => (e.target as HTMLInputElement).select()}
-                  className="w-full max-w-md rounded border border-border px-3 py-1.5 text-xs text-muted-foreground"
-                />
-              )}
-              <p className="text-xs text-muted-foreground">
-                회원가입 없이 — 받는 사람도 그대로 볼 수 있어요
-              </p>
-            </>
-          )}
-          {isShared && (
-            <p className="text-xs text-muted-foreground">
-              공유받은 진단을 보고 있어요. 본인 진단을 보려면{" "}
-              <Link href="/result" className="underline">여기</Link>를 누르세요.
-            </p>
-          )}
+        <div className="mt-8 text-center">
           <button
             onClick={() => {
               if (confirm("진단 데이터(이 단말의 채점 기록)를 모두 지울까요?")) {
@@ -335,20 +273,12 @@ function ResultPageInner() {
                 setD(computeDiagnosis());
               }
             }}
-            className="mt-2 text-xs text-muted-foreground underline hover:text-foreground"
+            className="text-xs text-muted-foreground underline hover:text-foreground"
           >
             이 단말의 진단 기록 초기화
           </button>
         </div>
       </main>
     </div>
-  );
-}
-
-export default function ResultPage() {
-  return (
-    <Suspense fallback={<div className="flex min-h-screen items-center justify-center"><p className="text-muted-foreground">진단 불러오는 중...</p></div>}>
-      <ResultPageInner />
-    </Suspense>
   );
 }
