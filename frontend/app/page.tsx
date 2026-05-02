@@ -176,13 +176,17 @@ export default function LandingPage() {
           </div>
 
           <Card className="mx-auto max-w-2xl border-2 border-border bg-background p-6 shadow-sm">
-            <div className="mb-4 border-b border-border pb-3">
-              <p className="text-xs tracking-widest text-muted-foreground">
-                EDU Jini 학습 리포트 — 미리보기
-              </p>
-              <p className="mt-1 font-semibold text-foreground">
-                초3 수학 · 곱셈 단원 · 19/20 정답
-              </p>
+            <div className="mb-4 flex items-center gap-3 border-b border-border pb-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/character.png" alt="" className="h-12 w-12 flex-shrink-0" />
+              <div>
+                <p className="text-xs tracking-widest text-muted-foreground">
+                  EDU Jini 학습 리포트 — 미리보기
+                </p>
+                <p className="mt-1 font-semibold text-foreground">
+                  초3 수학 · 곱셈 단원 · 19/20 정답
+                </p>
+              </div>
             </div>
 
             <div className="mb-4">
@@ -223,7 +227,12 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="py-12">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="mb-2 text-sm font-medium text-foreground">EDU Jini</p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-wordmark.png"
+            alt="EDU Jini"
+            className="mx-auto mb-2 h-6 w-auto"
+          />
           <p className="mb-4 text-sm text-muted-foreground">
             NCIC 성취기준 기반 체계적인 학습
           </p>
