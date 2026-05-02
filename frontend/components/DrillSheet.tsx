@@ -33,18 +33,42 @@ export function DrillSheet({
     );
   }
 
+  // 예시(is_example) 1개를 별도 영역으로 분리, 본문은 1~N번 채점 대상만
+  const example = problems.find((p) => p.is_example);
+  const graded = problems.filter((p) => !p.is_example);
+
   return (
-    <div className="grid grid-cols-2 gap-x-8 gap-y-5 print:grid-cols-2">
-      {problems.map((p) => (
-        <DrillProblemCell
-          key={p.index}
-          problem={p}
-          isHorizontal={isHorizontal}
-          isGraded={isGraded}
-          answer={answers[p.index] || ""}
-          onChange={(v) => onChange(p.index, v)}
-        />
-      ))}
+    <div>
+      {/* 예시 영역 — 박스로 시각 분리 (인쇄 시에도 유지) */}
+      {example && (
+        <div className="mb-6 rounded-lg border border-[#d1d5db] bg-[#f9fafb] p-4 print:border-2 print:border-[#9ca3af]">
+          <p className="mb-2 text-xs font-semibold tracking-wide text-[#0080E0] print:text-[#374151]">
+            예시 보기
+          </p>
+          <DrillProblemCell
+            problem={example}
+            isHorizontal={isHorizontal}
+            isGraded={isGraded}
+            answer=""
+            onChange={() => {}}
+            hideNumber
+          />
+        </div>
+      )}
+
+      {/* 채점 대상 1~N번 */}
+      <div className="grid grid-cols-2 gap-x-8 gap-y-5 print:grid-cols-2">
+        {graded.map((p) => (
+          <DrillProblemCell
+            key={p.index}
+            problem={p}
+            isHorizontal={isHorizontal}
+            isGraded={isGraded}
+            answer={answers[p.index] || ""}
+            onChange={(v) => onChange(p.index, v)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
@@ -60,12 +84,14 @@ function DrillProblemCell({
   isGraded,
   answer,
   onChange,
+  hideNumber = false,
 }: {
   problem: DrillProblem;
   isHorizontal: boolean;
   isGraded: boolean;
   answer: string;
   onChange: (v: string) => void;
+  hideNumber?: boolean;
 }) {
   const userAns = problem.is_example ? String(problem.answer) : answer;
   const correct =
@@ -78,13 +104,15 @@ function DrillProblemCell({
       className="break-inside-avoid"
       style={{ wordBreak: "keep-all" }}
     >
-      {/* 번호 */}
-      <div
-        className="mb-1 font-serif font-bold text-[#111827]"
-        style={{ fontSize: "18px" }}
-      >
-        {problem.index}.
-      </div>
+      {/* 번호 (예시는 hideNumber로 숨김) */}
+      {!hideNumber && (
+        <div
+          className="mb-1 font-serif font-bold text-[#111827]"
+          style={{ fontSize: "18px" }}
+        >
+          {problem.index}.
+        </div>
+      )}
 
       {!isArithmetic(problem.op) ? (
         <SpecialProblem

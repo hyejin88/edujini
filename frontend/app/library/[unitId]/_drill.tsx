@@ -186,7 +186,8 @@ export default function DrillSheetPage({
       }).length
     : 0;
 
-  const total = problems.length - 1; // 1번은 시범, 채점 대상 X
+  // 예시(index=0)는 채점 대상 X. 채점 대상은 index 1~N.
+  const total = problems.filter((p) => !p.is_example).length;
   const score = total > 0 ? Math.round((correctCount / total) * 100) : 0;
 
   const handleGrade = () => {
@@ -308,7 +309,7 @@ export default function DrillSheetPage({
           <p className="text-sm text-[#374151]">
             {drillInstruction(sheet)}
             <span className="ml-2 text-xs text-[#6b7280]">
-              (1번은 보기예요. 2번부터 풀어보세요.)
+              (예시 보기 → 1번부터 풀어보세요.)
             </span>
           </p>
         </div>

@@ -148,7 +148,8 @@ export async function generateDrill(sheet: SheetMeta, nonce: number = 0): Promis
   const seed = hashCode(`${sheet.unit_id}::${sheet.id}::${todayKey()}::${nonce}`);
   const rng = mulberry32(seed);
 
-  const N = sheet.problem_count;
+  // problem_count = 채점 대상 문항 수. 추가로 1문항(예시·is_example)을 더 추출.
+  const N = sheet.problem_count + 1; // 예시 1 + 채점 N
   const picked: PoolItem[] = [];
   if (pool.length <= N) {
     picked.push(...shuffle(pool, rng));
@@ -162,11 +163,12 @@ export async function generateDrill(sheet: SheetMeta, nonce: number = 0): Promis
     picked.splice(0, picked.length, ...shuffle(picked, rng));
   }
 
+  // 첫 번째는 예시(is_example, index 0), 나머지는 1~N번 채점 대상
   return picked.map((item, i) => {
     const base = poolItemToProblem(item);
     return {
       ...base,
-      index: i + 1,
+      index: i, // 0=예시, 1~N=채점
       is_example: i === 0,
       digits: sheet.digits,
       carry: sheet.carry,
