@@ -91,7 +91,7 @@ function LibraryContent() {
             variant="secondary"
             className="bg-emerald-50 text-emerald-700 hover:bg-emerald-50"
           >
-            전 단원 무료
+            지금 무료 공개
           </Badge>
         </div>
 

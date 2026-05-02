@@ -149,6 +149,8 @@ function HorizontalProblem({
       ) : (
         <input
           type="text"
+          inputMode="numeric"
+          pattern="[0-9\-]*"
           value={userAns}
           disabled={isGraded}
           onChange={(e) => onChange(e.target.value)}
@@ -289,6 +291,8 @@ function VerticalProblem({
               <td colSpan={maxDigits} style={{ paddingTop: "2px" }}>
                 <input
                   type="text"
+                  inputMode="numeric"
+                  pattern="[0-9\-]*"
                   value={userAns}
                   onChange={(e) => onChange(e.target.value)}
                   className="bg-transparent text-center outline-none"
@@ -338,12 +342,28 @@ function SpecialProblem({
           : "text-[#b91c1c]"
         : "text-[#111827]";
 
+  // op별 모바일 키패드 — 분수/비는 / : 입력 필요해서 text + pattern, 그 외는 numeric
+  const op = problem.op;
+  const needsSlashOrColon =
+    op === "frac_add" || op === "frac_sub" || op === "frac_add_diff" || op === "frac_sub_diff" ||
+    op === "frac_mul" || op === "frac_mul_nat" || op === "frac_div" || op === "frac_div_nat" ||
+    op === "mixed_to_improper" || op === "improper_to_mixed" || op === "mixed_add" || op === "mixed_sub" ||
+    op === "reduce_frac" || op === "common_denom" || op === "ratio_simplify" || op === "cont_ratio" ||
+    op === "factors" || op === "multiples" || op === "prop_share";
+  const isDecimal = op === "dec_add" || op === "dec_sub" || op === "dec_mul" || op === "dec_mul_nat" ||
+    op === "dec_div_nat" || op === "dec_div" || op === "nat_div_dec" || op === "nat_div_nat_dec" ||
+    op === "ratio_to_pct";
+  const inputMode = needsSlashOrColon ? "text" : isDecimal ? "decimal" : "numeric";
+  const pattern = needsSlashOrColon ? "[0-9./: ,\\-]*" : isDecimal ? "[0-9.\\-]*" : "[0-9\\-]*";
+
   const Box = (val: string | number, w = 56) =>
     problem.is_example ? (
       <span className={inputCls}>{val}</span>
     ) : (
       <input
         type="text"
+        inputMode={inputMode}
+        pattern={pattern}
         value={userAns}
         disabled={isGraded}
         onChange={(e) => onChange(e.target.value)}

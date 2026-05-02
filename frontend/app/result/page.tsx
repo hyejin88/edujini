@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { ArrowLeft, FileText, AlertTriangle } from "lucide-react";
+import { ArrowLeft, AlertTriangle, Check, AlertCircle, ArrowRight } from "lucide-react";
 import { computeDiagnosis, type DiagnosisResult, clearAttempts } from "@/lib/diagnose";
 
 const errorTypes = [
@@ -16,6 +16,20 @@ const errorTypes = [
   { key: "문제해석" as const, label: "문제해석", description: "문제 이해 오류" },
   { key: "함정미인지" as const, label: "함정미인지", description: "함정 문제 미인지" },
 ];
+
+const ERROR_GUIDE: Record<string, string> = {
+  개념미숙: "기초 개념을 다시 짚어보면 좋아요. 단원 학습 처음부터 천천히 다시.",
+  계산실수: "여유를 갖고 한 단계씩 손으로 써가며 풀게 도와주세요.",
+  문제해석: "문제를 끝까지 읽고 무엇을 묻는지 표시해보세요.",
+  함정미인지: "보기를 끝까지 비교해보고 그림·단위에 함정이 있는지 살피세요.",
+};
+
+function topErrorLabel(eb: Record<string, number>): string | null {
+  const entries = Object.entries(eb).filter(([, v]) => v > 0);
+  if (entries.length === 0) return null;
+  entries.sort((a, b) => b[1] - a[1]);
+  return entries[0][0];
+}
 
 export default function ResultPage() {
   const [d, setD] = useState<DiagnosisResult | null>(null);
@@ -62,6 +76,25 @@ export default function ResultPage() {
 
   const { score_pct, correct, total, weak_units, error_breakdown, recent_session } = d;
   const wrong = total - correct;
+  const top = topErrorLabel(error_breakdown);
+
+  // 학부모 리포트 자동 생성 ─ 진단 데이터 기반
+  const highlights: string[] = [];
+  if (score_pct >= 80) highlights.push("정답률이 안정적이에요. 학습 흐름이 잘 잡혀 있습니다.");
+  if (weak_units.length === 0 && total >= 10) highlights.push("최근 풀이 단원에서 약점이 두드러지지 않아요.");
+  if (recent_session && recent_session.correct === recent_session.total) highlights.push("이번 학습에서 모든 문제를 맞혔어요.");
+  if (highlights.length === 0) highlights.push("꾸준히 학습 진단을 쌓으면 강점이 더 잘 보여요.");
+
+  const concerns: string[] = [];
+  if (top && error_breakdown[top] > 0) concerns.push(`${top} 유형 오답이 가장 많아요 — ${ERROR_GUIDE[top] ?? ""}`);
+  if (weak_units[0]) concerns.push(`${weak_units[0].unit_name} 정답률 ${weak_units[0].accuracy}% — 같은 단원을 한 번 더 풀어보면 좋아요.`);
+  if (concerns.length === 0) concerns.push("특별히 보완할 영역은 보이지 않아요. 같은 학년 다른 단원도 풀어보세요.");
+
+  const nexts: string[] = [];
+  if (weak_units[0]) nexts.push(`${weak_units[0].unit_name} 단원 학습 다시 풀기`);
+  if (top === "계산실수") nexts.push("연산 문제 30문제 워밍업 후 단원 학습 재도전");
+  if (top === "개념미숙" && weak_units[0]) nexts.push(`${weak_units[0].unit_name} 단원의 핵심 개념 다시 보기`);
+  if (nexts.length < 2) nexts.push("다음 학년 단원 미리 보기 (선행 가볍게)");
 
   return (
     <div className="min-h-screen bg-background">
@@ -84,26 +117,21 @@ export default function ResultPage() {
           <div className="mb-6 rounded-lg border border-border bg-secondary/30 p-4 text-sm">
             <p className="text-muted-foreground">방금 푼 학습</p>
             <p className="mt-1 font-semibold text-foreground">
-              {recent_session.unit_name} — {recent_session.score_pct}점 (
-              {recent_session.correct}/{recent_session.total})
+              {recent_session.unit_name} — {recent_session.score_pct}점 ({recent_session.correct}/{recent_session.total})
             </p>
           </div>
         )}
 
         {/* Score Section */}
         <div className="mb-10 text-center">
-          <p className="mb-2 text-sm font-medium text-muted-foreground">
-            전체 학습 진단 (누적)
-          </p>
+          <p className="mb-2 text-sm font-medium text-muted-foreground">전체 학습 진단 (누적)</p>
           <div className="mb-3">
             <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-7xl font-bold text-transparent">
               {score_pct}
             </span>
             <span className="ml-1 text-2xl text-muted-foreground">점</span>
           </div>
-          <p className="text-muted-foreground">
-            지금까지 푼 {total}문제 중 {correct}문제 정답
-          </p>
+          <p className="text-muted-foreground">지금까지 푼 {total}문제 중 {correct}문제 정답</p>
         </div>
 
         {/* Weak Units */}
@@ -115,15 +143,10 @@ export default function ResultPage() {
             </h2>
             <div className="space-y-3">
               {weak_units.map((u) => (
-                <Card
-                  key={u.unit_id}
-                  className="flex items-center justify-between border border-border p-4"
-                >
+                <Card key={u.unit_id} className="flex items-center justify-between border border-border p-4">
                   <div>
                     <p className="font-medium text-foreground">{u.unit_name}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {u.correct}/{u.total} · 추가 학습 권장
-                    </p>
+                    <p className="text-sm text-muted-foreground">{u.correct}/{u.total} · 추가 학습 권장</p>
                   </div>
                   <div className="text-right">
                     <p className="text-2xl font-bold text-accent">{u.accuracy}%</p>
@@ -138,9 +161,7 @@ export default function ResultPage() {
         {/* Error Breakdown */}
         {wrong > 0 && (
           <section className="mb-10">
-            <h2 className="mb-4 text-lg font-semibold text-foreground">
-              오답 유형 분석
-            </h2>
+            <h2 className="mb-4 text-lg font-semibold text-foreground">오답 유형 분석</h2>
             <Card className="border border-border p-6">
               <div className="grid grid-cols-2 gap-6">
                 {errorTypes.map(({ key, label, description }) => {
@@ -149,17 +170,11 @@ export default function ResultPage() {
                   return (
                     <div key={key}>
                       <div className="mb-2 flex items-center justify-between">
-                        <span className="text-sm font-medium text-foreground">
-                          {label}
-                        </span>
-                        <span className="text-sm text-muted-foreground">
-                          {count}문제
-                        </span>
+                        <span className="text-sm font-medium text-foreground">{label}</span>
+                        <span className="text-sm text-muted-foreground">{count}문제</span>
                       </div>
                       <Progress value={percentage} className="h-2" />
-                      <p className="mt-1 text-xs text-muted-foreground">
-                        {description}
-                      </p>
+                      <p className="mt-1 text-xs text-muted-foreground">{description}</p>
                     </div>
                   );
                 })}
@@ -168,27 +183,53 @@ export default function ResultPage() {
           </section>
         )}
 
-        {/* Reset / Parent Report */}
-        <Card className="border-2 border-amber-200 bg-amber-50 p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-amber-100">
-              <FileText className="h-6 w-6 text-amber-600" />
-            </div>
-            <div className="flex-1">
-              <h3 className="mb-1 text-lg font-semibold text-foreground">
-                학부모 리포트
+        {/* 학부모 리포트 (통합) */}
+        <section className="mb-10">
+          <h2 className="mb-4 text-lg font-semibold text-foreground">학부모 리포트</h2>
+          <Card className="border border-border p-6">
+            <div className="mb-5">
+              <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+                <Check className="h-4 w-4 text-green-600" />
+                잘한 점
               </h3>
-              <p className="mb-4 text-sm text-muted-foreground">
-                자녀의 학습 현황과 맞춤형 학습 가이드를 받아보세요.
-              </p>
-              <Link href="/parent-preview">
-                <Button className="bg-amber-500 text-foreground hover:bg-amber-600">
-                  학부모 리포트 무료 미리보기
-                </Button>
-              </Link>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {highlights.map((h, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-500" />
+                    {h}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-        </Card>
+
+            <div className="mb-5">
+              <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+                <AlertCircle className="h-4 w-4 text-amber-500" />
+                보완할 점
+              </h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {concerns.map((c, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-lg border border-border bg-muted/30 p-4">
+              <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+                <ArrowRight className="h-4 w-4 text-primary" />
+                다음 학습 추천
+              </h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {nexts.map((n, i) => (
+                  <li key={i}>{i + 1}. {n}</li>
+                ))}
+              </ul>
+            </div>
+          </Card>
+        </section>
 
         <div className="mt-8 text-center">
           <button

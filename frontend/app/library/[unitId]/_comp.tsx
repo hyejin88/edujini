@@ -436,6 +436,8 @@ function ProblemCell({
               </span>
               <input
                 type="text"
+                inputMode="decimal"
+                pattern="[0-9./:\-, ]*"
                 value={answer}
                 onChange={(e) => onAnswerChange(problem.id, e.target.value)}
                 disabled={isGraded}
