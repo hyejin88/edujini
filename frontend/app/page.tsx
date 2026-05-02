@@ -4,6 +4,7 @@ export const runtime = "edge";
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { track } from "@vercel/analytics";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
@@ -41,10 +42,12 @@ export default function LandingPage() {
   const handleSelectGrade = (g: number) => {
     setSelectedGrade(g);
     try { localStorage.setItem("edujini_last_grade", String(g)); } catch {}
+    track("grade_selected", { grade: g });
   };
 
   const goLibrary = (mode: "comp" | "drill") => {
     if (selectedGrade && selectedSubject) {
+      track("library_enter", { grade: selectedGrade, mode });
       router.push(
         `/library?grade=${selectedGrade}&subject=${selectedSubject}&mode=${mode}`
       );

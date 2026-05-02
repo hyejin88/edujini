@@ -9,6 +9,7 @@ import type { SheetMeta } from "@/lib/sheets";
 import type { UnitDTO } from "@/lib/client";
 import { DrillSheet } from "@/components/DrillSheet";
 import { saveAttempts, type AttemptRecord } from "@/lib/diagnose";
+import { track } from "@vercel/analytics";
 
 function gradeLabel(g: number): string {
   if (g <= 6) return `초${g}`;
@@ -218,6 +219,13 @@ export default function DrillSheetPage({
       })
       .filter((r) => r.user_answer.trim()); // 답 안 한 문제는 진단 제외
     if (records.length > 0) saveAttempts(records);
+    track("drill_graded", {
+      unit_id: sheet.unit_id,
+      sheet_id: sheet.id,
+      score,
+      total,
+      correct: correctCount,
+    });
   };
   const handleNew = () => {
     setSeedNonce(Date.now() ^ Math.floor(Math.random() * 1_000_000_000));

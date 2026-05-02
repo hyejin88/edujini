@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { ArrowLeft, AlertTriangle, Check, AlertCircle, ArrowRight } from "lucide-react";
 import { computeDiagnosis, type DiagnosisResult, clearAttempts } from "@/lib/diagnose";
+import { track } from "@vercel/analytics";
 
 const errorTypes = [
   { key: "개념미숙" as const, label: "개념미숙", description: "기초 개념 이해 부족" },
@@ -36,7 +37,15 @@ export default function ResultPage() {
   const [d, setD] = useState<DiagnosisResult | null>(null);
 
   useEffect(() => {
-    setD(computeDiagnosis());
+    const diagnosis = computeDiagnosis();
+    setD(diagnosis);
+    if (diagnosis.total > 0) {
+      track("result_view", {
+        total: diagnosis.total,
+        score_pct: diagnosis.score_pct,
+        weak_units: diagnosis.weak_units.length,
+      });
+    }
   }, []);
 
   if (!d) {

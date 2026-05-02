@@ -7,6 +7,7 @@ import { ArrowLeft, Printer, RefreshCw } from "lucide-react";
 import "katex/dist/katex.min.css";
 import { InlineMath, BlockMath } from "react-katex";
 import { saveAttempts } from "@/lib/diagnose";
+import { track } from "@vercel/analytics";
 import {
   fetchUnitProblems,
   gradeBatch,
@@ -179,6 +180,12 @@ export default function ComprehensiveSheet({
       };
     });
     saveAttempts(attemptsToSave);
+    track("comp_graded", {
+      unit_id: unitId,
+      score,
+      total: unitProblems.length,
+      correct: correctCount,
+    });
   };
 
   if (isLoading) {
