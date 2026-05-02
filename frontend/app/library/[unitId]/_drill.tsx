@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ArrowLeft, Printer, RefreshCw } from "lucide-react";
 import { generateDrill, type DrillProblem } from "@/lib/drillGen";
 import type { SheetMeta } from "@/lib/sheets";
@@ -148,6 +149,7 @@ export default function DrillSheetPage({
   sheet: SheetMeta;
   unit: UnitDTO | null;
 }) {
+  const router = useRouter();
   // 페이지 진입 시 매번 새 랜덤 nonce → 매번 다른 30문제
   const [seedNonce, setSeedNonce] = useState<number>(() =>
     typeof window === "undefined"
@@ -262,12 +264,13 @@ export default function DrillSheetPage({
                 </span>
               </button>
             ) : (
-              <span className="font-serif text-lg font-bold text-[#111827]">
-                {score}점 ·{" "}
-                <span className="text-sm text-[#6b7280]">
-                  {correctCount}/{total}
-                </span>
-              </span>
+              <button
+                onClick={() => router.push("/result")}
+                className="rounded bg-[#1e3a8a] px-3 py-1.5 text-sm text-white hover:bg-[#1e40af]"
+              >
+                {score}점 · 학습 진단 →
+                <span className="ml-1 text-xs opacity-80">({correctCount}/{total})</span>
+              </button>
             )}
           </div>
         </div>
