@@ -41,9 +41,9 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl px-4 text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/character.png"
-            alt="EDU Jini"
-            className="mx-auto mb-4 h-32 w-32 md:h-40 md:w-40"
+            src="/logo.png"
+            alt="EDU Jini — 초등학생 연산·학습 문제 제공"
+            className="mx-auto mb-4 h-48 w-auto md:h-56"
           />
           <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
             오늘의 학습,{" "}
