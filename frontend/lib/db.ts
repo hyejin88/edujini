@@ -77,6 +77,12 @@ function isPublishable(p: SeedProblem): boolean {
   // KaTeX 리터럴 텍스트 박힘 (body / explanation 모두 검사)
   if (/KaTeX\s/.test(body)) return false;
   if (/KaTeX\s/.test(p.explanation || "")) return false;
+  // KaTeX 백슬래시 손실 패턴 (\f → 손실 = "rac{")
+  if (/\brac\{|\bimes\b|\bquare\b/.test(body)) return false;
+  if (/\brac\{|\bimes\b|\bquare\b/.test(p.explanation || "")) return false;
+  for (const c of p.choices || []) {
+    if (/\brac\{|\bimes\b|\bquare\b/.test(c)) return false;
+  }
   // $ 짝 안 맞음 — KaTeX 렌더 hang 위험
   if ((body.match(/\$/g) || []).length % 2 !== 0) return false;
   if (((p.explanation || "").match(/\$/g) || []).length % 2 !== 0) return false;
