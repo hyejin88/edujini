@@ -203,7 +203,7 @@ export default function DrillSheetPage({
             className="flex items-center gap-2 text-sm text-[#6b7280] hover:text-[#111827]"
           >
             <ArrowLeft className="h-4 w-4" />
-            양식 목록
+            유형 목록
           </Link>
           <div className="flex items-center gap-2">
             <button

@@ -116,7 +116,7 @@ export default function LandingPage() {
             </Button>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            단원 학습 = 객관식·서술형 + 즉시 채점 · 연산 문제 = 가로식·세로식 반복 드릴
+            단원 학습 = 선택형·서술형 + 즉시 채점 · 연산 문제 = 가로식·세로식 반복 연습
           </p>
         </div>
       </section>
@@ -126,7 +126,7 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl px-4">
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              { title: "매일 새 문제", desc: "연산 드릴은 단원·날짜로 매번 새 숫자" },
+              { title: "매일 새 문제", desc: "연산 문제는 단원·날짜로 매번 새 숫자" },
               { title: "즉시 채점", desc: "정답·오답 유형까지 한 번에 표시" },
               { title: "회원가입 없이", desc: "지금 바로 풀고, 마음에 들면 인쇄해요" },
             ].map((item) => (

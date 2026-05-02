@@ -48,7 +48,7 @@ function UnitContent({ unitId }: { unitId: string }) {
     if (!sheet) {
       return (
         <div className="flex min-h-screen items-center justify-center">
-          <p className="text-[#6b7280]">학습 양식을 찾을 수 없어요.</p>
+          <p className="text-[#6b7280]">해당 학습을 찾을 수 없어요.</p>
         </div>
       );
     }
@@ -91,8 +91,8 @@ function UnitContent({ unitId }: { unitId: string }) {
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
             {mode === "drill"
-              ? "양식을 선택해 주세요. 가로식·세로식, 받아올림 여부별로 분리되어 있어요."
-              : "이 단원의 단원 학습입니다. 객관식·서술형 20문항 + AI 자동 채점."}
+              ? "유형을 선택하세요. 가로식·세로식, 받아올림 여부별로 나눠져 있어요."
+              : "이 단원의 종합 학습이에요. 선택형·서술형 20문항 + AI 자동 채점."}
           </p>
         </div>
 
