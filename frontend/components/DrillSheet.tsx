@@ -721,6 +721,45 @@ function SpecialProblem({
       </div>
     );
   }
+  if (problem.op === "dec_div") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} <span className="mx-1">÷</span> {raw.b}
+        <span className="mx-1">=</span>
+        {Box(raw.ans)}
+      </div>
+    );
+  }
+  if (problem.op === "nat_div_dec") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} <span className="mx-1">÷</span> {raw.b}
+        <span className="mx-1">=</span>
+        {Box(raw.ans)}
+      </div>
+    );
+  }
+  if (problem.op === "nat_div_nat_dec") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} <span className="mx-1">÷</span> {raw.b}
+        <span className="mx-1">=</span>
+        {Box(raw.ans)}
+      </div>
+    );
+  }
+  if (problem.op === "cont_ratio") {
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {raw.a} : {raw.b} : {raw.c} <span className="mx-1">=</span>{" "}
+        {problem.is_example ? (
+          <span className={inputCls}>{raw.ans_a} : {raw.ans_b} : {raw.ans_c}</span>
+        ) : (
+          Box(`${raw.ans_a}:${raw.ans_b}:${raw.ans_c}`, 100)
+        )}
+      </div>
+    );
+  }
 
   // === 약수와 배수 ===
   if (problem.op === "factors") {

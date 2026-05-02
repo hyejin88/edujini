@@ -123,6 +123,46 @@ def parse_special_op(title, desc):
     # 자연수 혼합
     if '혼합' in title and '계산' in title:
         return 'mixed_calc_3'
+    # math-3-1-1 #31·32: 세 수의 덧셈/뺄셈 (세 자리/네 자리)
+    if '세 수의 덧셈' in title or '세 수의 뺄셈' in title or ('세 수' in title and ('덧셈' in title or '뺄셈' in title or '/' in title)):
+        if '네 자리' in title:
+            return 'three_pm_4d'
+        if '세 자리' in title:
+            return 'three_pm_3d'
+        return 'three_pm_2d'
+    # math-2-1-3: 몇십 몇 + 몇 - 몇 (단순 세 수 ±)
+    if '+' in title and '-' in title and ('몇' in title or '자리' in title):
+        return 'three_pm_2d'
+    # 소수와 자연수의 곱
+    if '소수와 자연수의 곱' in title or ('소수' in title and '자연수' in title and '곱' in title):
+        return 'dec_mul_nat_1'
+    # 분수 ÷ 자연수
+    if ('분수' in title and '자연수' in title and ('나눗셈' in title or '÷' in title)) or '분수 ÷ 자연수' in title:
+        return 'frac_div_natural'
+    # 소수 ÷ 자연수 변형 (math-6-1-3)
+    if '소수' in title and '자연수' in title and ('나눗셈' in title or '÷' in title):
+        return 'dec_div_nat_2' if '둘째' in title or '두 자리' in title else 'dec_div_nat_1'
+    # 자연수 ÷ 자연수 (몫 소수)
+    if '자연수' in title and '자연수' in desc and ('나눗셈' in title or '÷' in title):
+        return 'nat_div_nat_dec'
+    # 소수 ÷ 소수
+    if '소수' in title and '소수' in title.split('÷')[1] if '÷' in title else False:
+        return 'dec_div_dec_1'
+    if '소수 한 자리' in title and '소수 한 자리' in title and '나눗셈' in title:
+        return 'dec_div_dec_1'
+    if '소수 두 자리' in title and '소수 두 자리' in title and '나눗셈' in title:
+        return 'dec_div_dec_2'
+    # 자연수 ÷ 소수
+    if '자연수' in title and '소수' in title and '÷' in title.replace(' ', ''):
+        return 'nat_div_dec_1'
+    # 소수↔분수 나눗셈 변환 (단순화: 분수 나눗셈 풀로 매핑)
+    if '소수' in title and '분수' in title and '나눗셈' in title:
+        return 'frac_div'
+    # 연비 / 가장 작은 자연수의 비
+    if '연비' in title:
+        return 'cont_ratio'
+    if '가장 작은' in title and '자연수의 비' in title:
+        return 'ratio_simplify'
     # 곱셈과 나눗셈의 관계 / 검산
     if ('곱셈' in title and '나눗셈' in title and '관계' in title) or ('나눗셈의 검산' in title):
         return 'h_div_2_1'

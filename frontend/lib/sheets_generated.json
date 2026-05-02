@@ -255,13 +255,13 @@
       "layout": "h"
     },
     {
-      "id": "s3-h-s",
+      "id": "s3-h-t",
       "unit_id": "math-1-2-4",
-      "type": "drill_h_sub",
+      "type": "drill_h_add",
       "title": "몇 + 몇 - 몇 / 몇 - 몇 + 몇 (한 자리 수)",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_sub_1_1",
+      "pool_key": "three_pm_2d",
       "layout": "h"
     },
     {
@@ -311,7 +311,7 @@
       "title": "두 수의 합이 10이 되는 세 수의 덧셈",
       "subtitle": "세로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "three_num_1",
+      "pool_key": "three_pm_2d",
       "layout": "v"
     },
     {
@@ -321,7 +321,7 @@
       "title": "두 수의 합이 10이 되는 세 수의 덧셈",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "three_num_1",
+      "pool_key": "three_pm_2d",
       "layout": "h"
     }
   ],
@@ -387,23 +387,23 @@
       "layout": "h"
     },
     {
-      "id": "s7-v-a",
+      "id": "s7-v-t",
       "unit_id": "math-1-2-6",
       "type": "drill_v_add",
       "title": "몇 + 몇 / 십몇 - 몇",
       "subtitle": "세로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_1_1",
+      "pool_key": "three_pm_2d",
       "layout": "v"
     },
     {
-      "id": "s8-h-a",
+      "id": "s8-h-t",
       "unit_id": "math-1-2-6",
       "type": "drill_h_add",
       "title": "몇 + 몇 / 십몇 - 몇",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
-      "pool_key": "h_add_1_1",
+      "pool_key": "three_pm_2d",
       "layout": "h"
     }
   ],
@@ -566,6 +566,16 @@
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
       "pool_key": "h_sub_2_1_borrow",
+      "layout": "h"
+    },
+    {
+      "id": "s17-h-t",
+      "unit_id": "math-2-1-3",
+      "type": "drill_h_add",
+      "title": "몇십 몇 + 몇 - 몇 / 몇십 몇 - 몇 + 몇 ",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "three_pm_2d",
       "layout": "h"
     },
     {
@@ -950,6 +960,26 @@
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
       "pool_key": "h_add_4_4",
+      "layout": "h"
+    },
+    {
+      "id": "s31-h-t",
+      "unit_id": "math-3-1-1",
+      "type": "drill_h_add",
+      "title": "세 수의 덧셈/뺄셈 (세 자리 수)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "three_pm_3d",
+      "layout": "h"
+    },
+    {
+      "id": "s32-h-t",
+      "unit_id": "math-3-1-1",
+      "type": "drill_h_add",
+      "title": "세 수의 덧셈/뺄셈 (네 자리 수)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "three_pm_4d",
       "layout": "h"
     }
   ],
@@ -2321,6 +2351,16 @@
   ],
   "math-5-2-4": [
     {
+      "id": "s1-h-d",
+      "unit_id": "math-5-2-4",
+      "type": "drill_h_add",
+      "title": "소수와 자연수의 곱",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "dec_mul_nat_1",
+      "layout": "h"
+    },
+    {
       "id": "s2-h-m",
       "unit_id": "math-5-2-4",
       "type": "drill_h_mul",
@@ -2353,6 +2393,16 @@
   ],
   "math-6-1-1": [
     {
+      "id": "s1-h-f",
+      "unit_id": "math-6-1-1",
+      "type": "drill_h_add",
+      "title": "분수 ÷ 자연수",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "frac_div_natural",
+      "layout": "h"
+    },
+    {
       "id": "s2-h-f",
       "unit_id": "math-6-1-1",
       "type": "drill_h_add",
@@ -2360,6 +2410,48 @@
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
       "pool_key": "frac_mul_natural",
+      "layout": "h"
+    }
+  ],
+  "math-6-1-3": [
+    {
+      "id": "s1-h-d",
+      "unit_id": "math-6-1-3",
+      "type": "drill_h_add",
+      "title": "소수 ÷ 자연수 ",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "dec_div_nat_1",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-d",
+      "unit_id": "math-6-1-3",
+      "type": "drill_h_add",
+      "title": "소수 ÷ 자연수 (소수 끝자리 아래 0을 내려 계산)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "dec_div_nat_1",
+      "layout": "h"
+    },
+    {
+      "id": "s3-h-n",
+      "unit_id": "math-6-1-3",
+      "type": "drill_h_add",
+      "title": "자연수 ÷ 자연수",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "nat_div_nat_dec",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-n",
+      "unit_id": "math-6-1-3",
+      "type": "drill_h_add",
+      "title": "자연수 ÷ 자연수 (반올림하여 나타냄)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "nat_div_nat_dec",
       "layout": "h"
     }
   ],
@@ -2419,10 +2511,40 @@
   ],
   "math-6-2-2": [
     {
+      "id": "s1-h-d",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "소수 한 자리 수 ÷ 소수 한 자리 수",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "dec_div_dec_1",
+      "layout": "h"
+    },
+    {
+      "id": "s2-h-d",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "소수 두 자리 수 ÷ 소수 두 자리 수",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "dec_div_dec_1",
+      "layout": "h"
+    },
+    {
       "id": "s3-h-d",
       "unit_id": "math-6-2-2",
       "type": "drill_h_add",
       "title": "자릿수가 다른 두 소수의 나눗셈",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "dec_div_nat_1",
+      "layout": "h"
+    },
+    {
+      "id": "s4-h-d",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "자연수 ÷ 소수",
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
       "pool_key": "dec_div_nat_1",
@@ -2436,6 +2558,36 @@
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
       "pool_key": "dec_div_nat_1",
+      "layout": "h"
+    },
+    {
+      "id": "s7-h-d",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "소수 ÷ 분수 (소수로 고쳐 계산)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "dec_div_dec_1",
+      "layout": "h"
+    },
+    {
+      "id": "s8-h-d",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "분수 ÷ 소수 (분수로 고쳐 계산)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "dec_div_dec_1",
+      "layout": "h"
+    },
+    {
+      "id": "s9-h-d",
+      "unit_id": "math-6-2-2",
+      "type": "drill_h_add",
+      "title": "분수 ÷ 소수 (소수로 고쳐 계산)",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "dec_div_dec_1",
       "layout": "h"
     },
     {
@@ -2460,6 +2612,16 @@
     }
   ],
   "math-6-2-4": [
+    {
+      "id": "s1-h-r",
+      "unit_id": "math-6-2-4",
+      "type": "drill_h_add",
+      "title": "가장 작은 자연수의 비로 나타내기",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "ratio_simplify",
+      "layout": "h"
+    },
     {
       "id": "s2-h-p",
       "unit_id": "math-6-2-4",
@@ -2491,6 +2653,16 @@
       "layout": "h"
     },
     {
+      "id": "s5-h-c",
+      "unit_id": "math-6-2-4",
+      "type": "drill_h_add",
+      "title": "두 비의 관계를 연비로 나타내기",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "cont_ratio",
+      "layout": "h"
+    },
+    {
       "id": "s6-h-r",
       "unit_id": "math-6-2-4",
       "type": "drill_h_add",
@@ -2498,6 +2670,16 @@
       "subtitle": "가로식 · 30문제",
       "problem_count": 30,
       "pool_key": "ratio_simplify",
+      "layout": "h"
+    },
+    {
+      "id": "s7-h-c",
+      "unit_id": "math-6-2-4",
+      "type": "drill_h_add",
+      "title": "가장 작은 수의 연비로 나타내기",
+      "subtitle": "가로식 · 30문제",
+      "problem_count": 30,
+      "pool_key": "cont_ratio",
       "layout": "h"
     },
     {

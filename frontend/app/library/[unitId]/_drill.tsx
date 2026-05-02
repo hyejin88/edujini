@@ -31,7 +31,10 @@ function checkAnswer(p: DrillProblem, userInput: string): boolean {
     op === "three" || op === "mixed_calc" ||
     op === "dec_add" || op === "dec_sub" || op === "dec_mul" ||
     op === "dec_mul_nat" || op === "dec_div_nat" || op === "proportion" ||
-    op === "gcd" || op === "lcm" || op === "ratio_to_pct"
+    op === "gcd" || op === "lcm" || op === "ratio_to_pct" ||
+    op === "dec_div" || op === "nat_div_dec" || op === "nat_div_nat_dec" ||
+    op === "three_pm" || op === "box_add" || op === "box_sub" ||
+    op === "rel_add_to_sub"
   ) {
     const n = Number(ua.replace(/[^\d.\-]/g, ""));
     if (!isFinite(n)) return false;
@@ -61,6 +64,12 @@ function checkAnswer(p: DrillProblem, userInput: string): boolean {
     const m = ua.match(/^(\d+)\s*:\s*(\d+)$/);
     if (!m) return false;
     return parseInt(m[1]) === raw.ans_a && parseInt(m[2]) === raw.ans_b;
+  }
+  // 연비 a:b:c
+  if (op === "cont_ratio") {
+    const m = ua.match(/^(\d+)\s*:\s*(\d+)\s*:\s*(\d+)$/);
+    if (!m) return false;
+    return parseInt(m[1]) === raw.ans_a && parseInt(m[2]) === raw.ans_b && parseInt(m[3]) === raw.ans_c;
   }
   // 비례배분 "ans_a, ans_b"
   if (op === "prop_share") {

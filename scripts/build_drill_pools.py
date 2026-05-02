@@ -620,6 +620,117 @@ def gen_decimal_div_natural(decimals=1):
     return out
 
 
+def gen_decimal_div_decimal(decimals=1):
+    """소수 ÷ 소수 — 떨어지는 케이스. (예: 1.5 ÷ 0.5 = 3)"""
+    import random as _r
+    _r.seed(13)
+    out = []
+    seen = set()
+    scale = 10 ** decimals
+    for _ in range(80000):
+        a_int = _r.randint(0, 30)
+        a_dec = _r.randint(1, scale - 1)
+        b_int = _r.randint(0, 5)
+        b_dec = _r.randint(1, scale - 1)
+        a = round(a_int + a_dec / scale, decimals)
+        b = round(b_int + b_dec / scale, decimals)
+        if b < 0.1: continue
+        # a ÷ b 떨어지는지
+        q = a / b
+        if abs(q - round(q, decimals)) > 1e-9: continue
+        key = (a, b)
+        if key in seen: continue
+        seen.add(key)
+        out.append({'op': 'dec_div', 'a': a, 'b': b, 'ans': round(q, decimals)})
+    return out
+
+
+def gen_natural_div_decimal(decimals=1):
+    """자연수 ÷ 소수."""
+    out = []
+    scale = 10 ** decimals
+    for n in range(2, 100):
+        for b_int in range(0, 5):
+            for b_dec in range(1, scale):
+                b = round(b_int + b_dec / scale, decimals)
+                if b < 0.1: continue
+                q = n / b
+                if abs(q - round(q, decimals)) > 1e-9: continue
+                out.append({'op': 'nat_div_dec', 'a': n, 'b': b, 'ans': round(q, decimals)})
+    return out
+
+
+def gen_natural_div_natural_dec_quotient():
+    """자연수 ÷ 자연수, 몫이 소수."""
+    out = []
+    for n in range(2, 50):
+        for b in range(2, 20):
+            q = n / b
+            if abs(q - round(q, 2)) > 1e-9: continue
+            if abs(q - round(q)) < 1e-9: continue  # 정수 몫은 제외
+            out.append({'op': 'nat_div_nat_dec', 'a': n, 'b': b, 'ans': round(q, 2)})
+    return out
+
+
+def gen_continuous_ratio():
+    """연비 a:b:c — 가장 간단히."""
+    from math import gcd
+    out = []
+    for a in range(2, 30):
+        for b in range(2, 30):
+            for c in range(2, 30):
+                g = gcd(gcd(a, b), c)
+                if g >= 2:
+                    out.append({
+                        'op': 'cont_ratio',
+                        'a': a, 'b': b, 'c': c,
+                        'ans_a': a // g, 'ans_b': b // g, 'ans_c': c // g,
+                    })
+    return out
+
+
+def gen_three_pm_3d():
+    """세 자리 수 ± ± (세 수 ±)."""
+    import random as _r
+    _r.seed(31)
+    out = []
+    seen = set()
+    for _ in range(40000):
+        a = _r.randint(100, 999)
+        b = _r.randint(100, 999)
+        c = _r.randint(100, 999)
+        ops = _r.choice(['++', '+-', '-+', '--'])
+        v1 = a + b if ops[0] == '+' else a - b
+        v2 = v1 + c if ops[1] == '+' else v1 - c
+        if v2 < 0 or v2 > 9999: continue
+        key = (a, b, c, ops)
+        if key in seen: continue
+        seen.add(key)
+        out.append({'op': 'three_pm', 'a': a, 'b': b, 'c': c, 'ops': ops, 'ans': v2})
+    return out
+
+
+def gen_three_pm_4d():
+    """네 자리 수 ± ± ."""
+    import random as _r
+    _r.seed(41)
+    out = []
+    seen = set()
+    for _ in range(40000):
+        a = _r.randint(1000, 9999)
+        b = _r.randint(1000, 9999)
+        c = _r.randint(1000, 9999)
+        ops = _r.choice(['++', '+-', '-+', '--'])
+        v1 = a + b if ops[0] == '+' else a - b
+        v2 = v1 + c if ops[1] == '+' else v1 - c
+        if v2 < 0 or v2 > 99999: continue
+        key = (a, b, c, ops)
+        if key in seen: continue
+        seen.add(key)
+        out.append({'op': 'three_pm', 'a': a, 'b': b, 'c': c, 'ops': ops, 'ans': v2})
+    return out
+
+
 # ==== 빈칸 채우기 (덧셈/뺄셈 □ 찾기) ====
 def gen_box_addsub_1d():
     """한 자리 수 a ± □ = c 또는 □ + b = c 빈칸 찾기."""
@@ -943,6 +1054,14 @@ def main():
     pools['dec_mul_nat_2'] = cap(gen_decimal_mul_natural(2))
     pools['dec_mul_1'] = cap(gen_decimal_mul_decimal(1))
     pools['dec_div_nat_1'] = cap(gen_decimal_div_natural(1))
+    pools['dec_div_nat_2'] = cap(gen_decimal_div_natural(2))
+    pools['dec_div_dec_1'] = cap(gen_decimal_div_decimal(1))
+    pools['dec_div_dec_2'] = cap(gen_decimal_div_decimal(2))
+    pools['nat_div_dec_1'] = cap(gen_natural_div_decimal(1))
+    pools['nat_div_nat_dec'] = cap(gen_natural_div_natural_dec_quotient())
+    pools['cont_ratio'] = cap(gen_continuous_ratio())
+    pools['three_pm_3d'] = cap(gen_three_pm_3d())
+    pools['three_pm_4d'] = cap(gen_three_pm_4d())
 
     # ===== 약수와 배수 (5학년) =====
     pools['factors'] = cap(gen_factors())
