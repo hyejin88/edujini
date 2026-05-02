@@ -56,7 +56,7 @@ export default function LandingPage() {
             <span className="whitespace-nowrap">무료 학습 사이트</span>
           </p>
           <p className="mx-auto mb-10 max-w-2xl text-sm text-muted-foreground">
-            지금은 회원가입 없이 — 곧 자녀별 학습 기록 저장도 추가돼요
+            회원가입 없이 즉시 풀이 · 진단 결과는 카톡 공유 링크로 가족과 나눔
           </p>
 
           {/* Grade Picker */}
@@ -132,7 +132,7 @@ export default function LandingPage() {
             {[
               { title: "오답 유형 자동 분석", desc: "왜 틀렸는지(개념·계산·꼼꼼함) 4가지 유형으로 분류해서 다음 학습을 추천해요" },
               { title: "학교 진도와 정확히 맞춰요", desc: "교과서 단원·NCIC 성취기준 그대로. 매일 새 30문제 + 즉시 채점" },
-              { title: "지금은 회원가입 없이", desc: "이 단말 안에서만 진단 누적. 곧 자녀별 학습 기록 저장 기능 추가 예정" },
+              { title: "회원가입 없이", desc: "이 단말 안에서 진단 누적, 카톡 공유 링크로 가족과 나누기 — 가입·로그인 없음" },
             ].map((item) => (
               <Card key={item.title} className="border border-border p-6 text-left">
                 <p className="text-base font-semibold text-foreground">
