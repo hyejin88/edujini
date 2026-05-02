@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, Check, AlertCircle, ArrowRight, Printer } from "lucide-react";
+import { ArrowLeft, Check, AlertCircle, ArrowRight } from "lucide-react";
 import { computeDiagnosis, type DiagnosisResult } from "@/lib/diagnose";
 
 function gradeLabel(g: number): string {
@@ -211,15 +211,9 @@ export default function ParentPreviewPage() {
           </div>
         </Card>
 
-        <div className="mt-8 text-center no-print">
-          <Button size="lg" className="gap-2" onClick={() => window.print()}>
-            <Printer className="h-5 w-5" />
-            인쇄 / PDF 저장
-          </Button>
-          <p className="mt-3 text-xs text-muted-foreground">
-            이 단말의 채점 기록 기반으로 자동 작성됩니다. 회원가입·서버 저장 없음.
-          </p>
-        </div>
+        <p className="mt-8 text-center text-xs text-muted-foreground no-print">
+          이 단말의 채점 기록 기반으로 자동 작성됩니다.
+        </p>
       </main>
     </div>
   );
