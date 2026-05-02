@@ -391,19 +391,104 @@ function SpecialProblem({
     );
   }
 
-  // 10 만들기: a + ? = 10
+  // 10 만들기: 빈칸 위치 4종 (right / left / sum / three_sum)
   if (problem.op === "make_ten") {
+    const r = (problem.raw || {}) as Record<string, number | null | string>;
+    const box = r.box as string | undefined;
+    if (box === "left") {
+      // □ + b = 10
+      return (
+        <div className="font-mono" style={{ fontSize: "16px" }}>
+          {Box(problem.answer)} + {r.b as number} = 10
+        </div>
+      );
+    }
+    if (box === "sum") {
+      // a + b = □
+      return (
+        <div className="font-mono" style={{ fontSize: "16px" }}>
+          {r.a as number} + {r.b as number} = {Box(problem.answer)}
+        </div>
+      );
+    }
+    if (box === "three_sum") {
+      // a + b + c = □
+      return (
+        <div className="font-mono" style={{ fontSize: "16px" }}>
+          {r.a as number} + {r.b as number} + {r.c as number} = {Box(problem.answer)}
+        </div>
+      );
+    }
+    // 기본: a + □ = 10
     return (
       <div className="font-mono" style={{ fontSize: "16px" }}>
-        {problem.operands[0]} + {Box(problem.answer)} = 10
+        {r.a as number} + {Box(problem.answer)} = 10
       </div>
     );
   }
-  // 10에서 빼기: 10 − a = ?
+  // 10에서 빼기: 빈칸 위치 2종 (right / middle)
   if (problem.op === "break_ten") {
+    const r = (problem.raw || {}) as Record<string, number | null | string>;
+    const box = r.box as string | undefined;
+    if (box === "middle") {
+      // 10 - □ = b
+      return (
+        <div className="font-mono" style={{ fontSize: "16px" }}>
+          10 − {Box(problem.answer)} = {r.ans_b as number}
+        </div>
+      );
+    }
+    // 기본: 10 - a = □
     return (
       <div className="font-mono" style={{ fontSize: "16px" }}>
-        10 − {problem.operands[0]} = {Box(problem.answer)}
+        10 − {r.a as number} = {Box(problem.answer)}
+      </div>
+    );
+  }
+
+  // 세 수 ± 양식: a (±) b (±) c = ?
+  if (problem.op === "three_pm") {
+    const r = (problem.raw || {}) as Record<string, number | string>;
+    const ops = String(r.ops || "++");
+    const o1 = ops[0] === "+" ? "+" : "−";
+    const o2 = ops[1] === "+" ? "+" : "−";
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {r.a as number} {o1} {r.b as number} {o2} {r.c as number} = {Box(problem.answer)}
+      </div>
+    );
+  }
+
+  // 빈칸 채우기 (□+b=c, a+□=c, a-□=c)
+  if (problem.op === "box_add") {
+    const r = (problem.raw || {}) as Record<string, number | string>;
+    if (r.box === "a") {
+      return (
+        <div className="font-mono" style={{ fontSize: "16px" }}>
+          {Box(problem.answer)} + {r.b as number} = {r.c as number}
+        </div>
+      );
+    }
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {r.a as number} + {Box(problem.answer)} = {r.c as number}
+      </div>
+    );
+  }
+  if (problem.op === "box_sub") {
+    const r = (problem.raw || {}) as Record<string, number | string>;
+    return (
+      <div className="font-mono" style={{ fontSize: "16px" }}>
+        {r.a as number} − {Box(problem.answer)} = {r.c as number}
+      </div>
+    );
+  }
+  // 덧뺄 관계: a+b=c 보고 c-a=?, c-b=? (두 답이라 ans1만 빈칸)
+  if (problem.op === "rel_add_to_sub") {
+    const r = (problem.raw || {}) as Record<string, number | string>;
+    return (
+      <div className="font-mono text-sm" style={{ fontSize: "15px" }}>
+        {r.a as number} + {r.b as number} = {r.c as number} ⇒ {r.c as number} − {r.a as number} = {Box(problem.answer)}
       </div>
     );
   }

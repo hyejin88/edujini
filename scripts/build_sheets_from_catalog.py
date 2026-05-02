@@ -123,6 +123,25 @@ def parse_special_op(title, desc):
     # 자연수 혼합
     if '혼합' in title and '계산' in title:
         return 'mixed_calc_3'
+    # 곱셈과 나눗셈의 관계 / 검산
+    if ('곱셈' in title and '나눗셈' in title and '관계' in title) or ('나눗셈의 검산' in title):
+        return 'h_div_2_1'
+    # 몇백·몇천의 곱
+    if ('몇백' in title or '몇천' in title) and '곱' in title:
+        return 'h_mul_round_high'
+    # 몇십으로 나누기
+    if '몇십으로 나누기' in title or '몇십' in title and '나누기' in title:
+        return 'h_div_3_2_rem' if '나머지 있' in title else 'h_div_3_2'
+    # 분수↔소수 변환 (5학년)
+    if '분수' in title and '소수로' in title and '나타내' in title:
+        return 'frac_reduce'  # 임시 — 별도 풀 필요
+    if '소수' in title and '분수로' in title and '나타내' in title:
+        return 'frac_reduce'
+    if '분수와 소수의 비교' in title or ('분수' in title and '소수' in title and '비교' in title):
+        return 'frac_compare_same'
+    # 크기가 같은 분수 만들기
+    if '크기가 같은 분수' in title:
+        return 'frac_reduce'
     # 1학년: 두 수로 가르기 / 두 수를 모으기
     if '두 수로 가르기' in title or '가르기' in title:
         return 'decompose_9'
@@ -156,9 +175,16 @@ def parse_op(title, desc):
     # ± / ∓ 는 mix
     if '±' in title or '∓' in title: return 'mix_addsub'
     if '나눗셈' in title or '÷' in title: return 'div'
-    if '곱셈' in title or 'X' in title or '×' in title: return 'mul'
+    if '곱셈' in title or '×' in title: return 'mul'
+    # 'X' 단독 곱셈 기호 (예: "두 자리 X 한 자리")
+    if re.search(r'\sX\s', title): return 'mul'
     if '뺄셈' in title or '받아내림' in title or '가르기' in title or '에서 빼' in title or '의 차' in title: return 'sub'
     if '덧셈' in title or '받아올림' in title or '모으기' in title or '되는 더하기' in title or '되도록' in title: return 'add'
+    # 단순 +/- 기호만 있는 제목 (예: "네 자리 수 + 세 자리 수")
+    has_plus = '+' in title
+    has_minus = re.search(r'\s-\s|수\s*-\s*|\d-\d', title) is not None
+    if has_plus and not has_minus: return 'add'
+    if has_minus and not has_plus: return 'sub'
     if '나눗셈' in desc: return 'div'
     if '곱셈' in desc: return 'mul'
     if '뺄셈' in desc: return 'sub'

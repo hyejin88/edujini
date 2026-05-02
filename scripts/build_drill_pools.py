@@ -168,18 +168,29 @@ def gen_decompose_under(n_max=9):
 
 
 def gen_make_ten():
-    """10 만들기 — a + ? = 10."""
+    """10 만들기 — 빈칸 위치 다양화 + 0 포함 + 세 수 합."""
     out = []
-    for a in range(1, 10):
-        out.append({'op': 'make_ten', 'a': a, 'ans': 10 - a})
+    # 두 자연수 합 = 10, 빈칸 위치 좌/우/합 (0~10)
+    for a in range(0, 11):
+        b = 10 - a
+        # 오른쪽 빈칸: a + □ = 10
+        out.append({'op': 'make_ten', 'a': a, 'b': None, 'ans': b, 'box': 'right'})
+        # 왼쪽 빈칸: □ + b = 10
+        out.append({'op': 'make_ten', 'a': None, 'b': b, 'ans': a, 'box': 'left'})
+        # 합 빈칸 (검증형): a + b = □
+        out.append({'op': 'make_ten', 'a': a, 'b': b, 'ans': 10, 'box': 'sum'})
     return out
 
 
 def gen_break_ten():
-    """10에서 빼기 — 10 - a = ?."""
+    """10에서 빼기 + 자리 교환 + 빈칸 위치 다양화."""
     out = []
-    for a in range(1, 10):
-        out.append({'op': 'break_ten', 'a': a, 'ans': 10 - a})
+    for a in range(0, 11):
+        b = 10 - a
+        # 오른쪽 빈칸: 10 - a = □
+        out.append({'op': 'break_ten', 'a': a, 'ans': b, 'box': 'right'})
+        # 가운데 빈칸: 10 - □ = b
+        out.append({'op': 'break_ten', 'a': None, 'ans_b': b, 'ans': a, 'box': 'middle'})
     return out
 
 

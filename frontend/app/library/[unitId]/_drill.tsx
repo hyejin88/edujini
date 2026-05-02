@@ -19,6 +19,79 @@ function gradeFromUnitId(unitId: string): number {
   return m ? parseInt(m[1], 10) : 3;
 }
 
+// op별 정답 비교 — 분수/소수/비/배열 등 다양한 형식 지원
+function checkAnswer(p: DrillProblem, userInput: string): boolean {
+  const ua = userInput.trim();
+  if (!ua) return false;
+  const op = p.op;
+  // 산술 4종 + decompose/make_ten/break_ten/three/mixed_calc/h_div_*/dec_div_nat/proportion/gcd/lcm/dec_add/dec_sub/dec_mul/dec_mul_nat/ratio_to_pct
+  if (
+    op === "+" || op === "-" || op === "×" || op === "÷" ||
+    op === "decompose" || op === "make_ten" || op === "break_ten" ||
+    op === "three" || op === "mixed_calc" ||
+    op === "dec_add" || op === "dec_sub" || op === "dec_mul" ||
+    op === "dec_mul_nat" || op === "dec_div_nat" || op === "proportion" ||
+    op === "gcd" || op === "lcm" || op === "ratio_to_pct"
+  ) {
+    const n = Number(ua.replace(/[^\d.\-]/g, ""));
+    if (!isFinite(n)) return false;
+    return Math.abs(n - p.answer) < 1e-6;
+  }
+  // 분수: "n/d" 또는 정수+분수 "w n/d"
+  const raw = (p.raw || {}) as Record<string, number | string>;
+  if (op === "frac_add" || op === "frac_sub" || op === "frac_add_diff" || op === "frac_sub_diff" || op === "frac_mul" || op === "frac_div" || op === "frac_mul_nat" || op === "frac_div_nat" || op === "reduce_frac" || op === "mixed_to_improper") {
+    const m = ua.match(/^(\d+)\s*\/\s*(\d+)$/);
+    if (!m) return false;
+    const num = parseInt(m[1]);
+    const den = parseInt(m[2]);
+    return num === p.answer && den === (p.ans_den ?? raw.ans_den);
+  }
+  // 대분수: "w n/d" or "w n d"
+  if (op === "improper_to_mixed" || op === "mixed_add" || op === "mixed_sub") {
+    const m = ua.match(/^(\d+)\s+(\d+)\s*\/\s*(\d+)$/) || ua.match(/^(\d+)\s+(\d+)\s+(\d+)$/);
+    if (!m) return false;
+    return parseInt(m[1]) === raw.ans_whole && parseInt(m[2]) === raw.ans_num && parseInt(m[3]) === raw.ans_den;
+  }
+  // 분수 비교: '>' or '<'
+  if (op === "frac_compare") {
+    return ua === ">" || ua === "<" ? ua === raw.ans : false;
+  }
+  // 비 a:b
+  if (op === "ratio_simplify") {
+    const m = ua.match(/^(\d+)\s*:\s*(\d+)$/);
+    if (!m) return false;
+    return parseInt(m[1]) === raw.ans_a && parseInt(m[2]) === raw.ans_b;
+  }
+  // 비례배분 "ans_a, ans_b"
+  if (op === "prop_share") {
+    const parts = ua.split(/[,\s]+/).map((s) => parseInt(s)).filter((x) => !isNaN(x));
+    return parts.length === 2 && parts[0] === raw.ans_a && parts[1] === raw.ans_b;
+  }
+  // 통분 "a/lcm, b/lcm"
+  if (op === "common_denom") {
+    const ms = [...ua.matchAll(/(\d+)\s*\/\s*(\d+)/g)];
+    if (ms.length !== 2) return false;
+    return parseInt(ms[0][1]) === raw.ans_a_num && parseInt(ms[0][2]) === raw.ans_lcm &&
+           parseInt(ms[1][1]) === raw.ans_b_num && parseInt(ms[1][2]) === raw.ans_lcm;
+  }
+  // 약수/배수: 콤마 구분 정수 리스트
+  if (op === "factors" || op === "multiples") {
+    const expected = (raw.ans as unknown) as number[];
+    if (!Array.isArray(expected)) return false;
+    const userNums = ua.split(/[,\s]+/).map((s) => parseInt(s)).filter((x) => !isNaN(x)).sort((a, b) => a - b);
+    const exp = [...expected].sort((a, b) => a - b);
+    return userNums.length === exp.length && userNums.every((n, i) => n === exp[i]);
+  }
+  // 빈칸 채우기 / 덧뺄 관계 / 세 수 ± — 단일 정답
+  if (op === "box_add" || op === "box_sub" || op === "rel_add_to_sub" || op === "three_pm") {
+    const n = Number(ua.replace(/[^\d.\-]/g, ""));
+    return Math.abs(n - p.answer) < 1e-6;
+  }
+  // fallback: 숫자 비교
+  const n = Number(ua.replace(/[^\d.\-]/g, ""));
+  return isFinite(n) && Math.abs(n - p.answer) < 1e-6;
+}
+
 // 양식 제목/풀 키 기반 안내 문구 — 덧/뺄/곱/나/혼합/분수/소수 분기
 function drillInstruction(sheet: SheetMeta): string {
   const title = sheet.title || "";
@@ -91,8 +164,7 @@ export default function DrillSheetPage({
   const correctCount = isGraded
     ? problems.filter((p) => {
         if (p.is_example) return false;
-        const ua = (answers[p.index] || "").replace(/[^\d-]/g, "");
-        return Number(ua) === p.answer;
+        return checkAnswer(p, answers[p.index] || "");
       }).length
     : 0;
 

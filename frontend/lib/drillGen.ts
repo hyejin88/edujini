@@ -112,12 +112,28 @@ function poolItemToProblem(item: PoolItem): Omit<DrillProblem, "index" | "is_exa
     const it = item as { op: string; a: number; b: number; c: number; ops: string; ans: number };
     return { op: "three", operands: [it.a, it.b, it.c], answer: it.ans, ops_str: it.ops, raw: item };
   }
-  // 모든 op은 raw로 보존하여 SpecialProblem이 자체 렌더링.
-  // op은 그대로 통과시켜 DrillSheet에서 분기.
+  // box_add / box_sub / rel_add_to_sub / three_pm: answer 필드를 raw에서 가져옴
+  if (op === "box_add" || op === "box_sub" || op === "rel_add_to_sub" || op === "three_pm") {
+    const r = item as Record<string, number>;
+    return {
+      op: op as string,
+      operands: [],
+      answer: (r.ans ?? r.ans1 ?? 0) as number,
+      raw: item,
+    };
+  }
+  // 분수·소수·약수배수·비/비례 — answer는 op별로 다름 (ans_num/ans/ans_a 등)
+  // SpecialProblem이 raw에서 직접 읽음. answer는 요약값으로.
+  const r2 = item as Record<string, number>;
+  let answer = 0;
+  if (typeof r2.ans === "number") answer = r2.ans;
+  else if (typeof r2.ans_num === "number") answer = r2.ans_num;
+  else if (typeof r2.ans_a === "number") answer = r2.ans_a;
   return {
     op: op || "?",
     operands: [],
-    answer: 0,
+    answer,
+    ans_den: typeof r2.ans_den === "number" ? r2.ans_den : undefined,
     raw: item,
   };
 }
