@@ -112,8 +112,8 @@ function poolItemToProblem(item: PoolItem): Omit<DrillProblem, "index" | "is_exa
     const it = item as { op: string; a: number; b: number; c: number; ops: string; ans: number };
     return { op: "three", operands: [it.a, it.b, it.c], answer: it.ans, ops_str: it.ops, raw: item };
   }
-  // box_add / box_sub / rel_add_to_sub / three_pm: answer 필드를 raw에서 가져옴
-  if (op === "box_add" || op === "box_sub" || op === "rel_add_to_sub" || op === "three_pm") {
+  // 빈칸 변형 + 관계 + 세 수 ±: answer 필드를 raw에서 가져옴
+  if (op === "box_add" || op === "box_sub" || op === "box_mul" || op === "box_div" || op === "box_dec_add" || op === "rel_add_to_sub" || op === "three_pm") {
     const r = item as Record<string, number>;
     return {
       op: op as string,

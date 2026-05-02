@@ -34,6 +34,7 @@ function checkAnswer(p: DrillProblem, userInput: string): boolean {
     op === "gcd" || op === "lcm" || op === "ratio_to_pct" ||
     op === "dec_div" || op === "nat_div_dec" || op === "nat_div_nat_dec" ||
     op === "three_pm" || op === "box_add" || op === "box_sub" ||
+    op === "box_mul" || op === "box_div" || op === "box_dec_add" ||
     op === "rel_add_to_sub"
   ) {
     const n = Number(ua.replace(/[^\d.\-]/g, ""));

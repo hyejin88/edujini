@@ -483,6 +483,39 @@ function SpecialProblem({
       </div>
     );
   }
+  // 곱셈 빈칸 3위치: a×b=?, a×?=c, ?×b=c
+  if (problem.op === "box_mul") {
+    const r = (problem.raw || {}) as Record<string, number | string>;
+    if (r.box === "c") {
+      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} × {r.b as number} = {Box(problem.answer)}</div>);
+    }
+    if (r.box === "b") {
+      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} × {Box(problem.answer)} = {r.c as number}</div>);
+    }
+    return (<div className="font-mono" style={{ fontSize: "16px" }}>{Box(problem.answer)} × {r.b as number} = {r.c as number}</div>);
+  }
+  // 나눗셈 빈칸 3위치: a÷b=q, a÷?=q, ?÷b=q
+  if (problem.op === "box_div") {
+    const r = (problem.raw || {}) as Record<string, number | string>;
+    if (r.box === "q") {
+      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} ÷ {r.b as number} = {Box(problem.answer)}</div>);
+    }
+    if (r.box === "b") {
+      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} ÷ {Box(problem.answer)} = {r.q as number}</div>);
+    }
+    return (<div className="font-mono" style={{ fontSize: "16px" }}>{Box(problem.answer)} ÷ {r.b as number} = {r.q as number}</div>);
+  }
+  // 소수 덧셈 빈칸 3위치
+  if (problem.op === "box_dec_add") {
+    const r = (problem.raw || {}) as Record<string, number | string>;
+    if (r.box === "c") {
+      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} + {r.b as number} = {Box(problem.answer)}</div>);
+    }
+    if (r.box === "b") {
+      return (<div className="font-mono" style={{ fontSize: "16px" }}>{r.a as number} + {Box(problem.answer)} = {r.c as number}</div>);
+    }
+    return (<div className="font-mono" style={{ fontSize: "16px" }}>{Box(problem.answer)} + {r.b as number} = {r.c as number}</div>);
+  }
   // 덧뺄 관계: a+b=c 보고 c-a=?, c-b=? (두 답이라 ans1만 빈칸)
   if (problem.op === "rel_add_to_sub") {
     const r = (problem.raw || {}) as Record<string, number | string>;

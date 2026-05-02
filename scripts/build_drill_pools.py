@@ -732,6 +732,59 @@ def gen_three_pm_4d():
 
 
 # ==== 빈칸 채우기 (덧셈/뺄셈 □ 찾기) ====
+def gen_box_mul(d1, d2):
+    """곱셈 빈칸 3위치: a*b=?, a*?=c, ?*b=c"""
+    out = []
+    def rng(d):
+        if d == 1: return range(2, 10)
+        return range(10**(d-1), 10**d)
+    for a in rng(d1):
+        for b in rng(d2):
+            c = a * b
+            # 정답 위치 (기존)
+            out.append({'op': 'box_mul', 'a': a, 'b': b, 'c': c, 'box': 'c', 'ans': c})
+            # 두 번째 인수 빈칸: a × ? = c
+            out.append({'op': 'box_mul', 'a': a, 'c': c, 'box': 'b', 'ans': b})
+            # 첫 번째 인수 빈칸: ? × b = c
+            out.append({'op': 'box_mul', 'b': b, 'c': c, 'box': 'a', 'ans': a})
+    return out
+
+
+def gen_box_div(d1, d2, with_remainder=False):
+    """나눗셈 빈칸 3위치: a÷b=?, a÷?=q, ?÷b=q"""
+    out = []
+    def rng_b(d):
+        if d == 1: return range(2, 10)
+        return range(10**(d-1), 10**d)
+    for b in rng_b(d2):
+        for q in range(2, 100):
+            a = b * q
+            if a >= 10**d1: continue
+            if d1 > 1 and a < 10**(d1-1): continue
+            # 답 위치
+            out.append({'op': 'box_div', 'a': a, 'b': b, 'q': q, 'box': 'q', 'ans': q})
+            # 제수 빈칸: a ÷ ? = q
+            out.append({'op': 'box_div', 'a': a, 'q': q, 'box': 'b', 'ans': b})
+            # 피제수 빈칸: ? ÷ b = q
+            out.append({'op': 'box_div', 'b': b, 'q': q, 'box': 'a', 'ans': a})
+    return out
+
+
+def gen_box_dec_add(decimals=1):
+    """소수 덧셈 빈칸 3위치 (decimals=1, 자연수 없는 0.x + 0.y)."""
+    out = []
+    scale = 10 ** decimals
+    for ad in range(1, scale):
+        for bd in range(1, scale):
+            a = round(ad / scale, decimals)
+            b = round(bd / scale, decimals)
+            c = round(a + b, decimals)
+            out.append({'op': 'box_dec_add', 'a': a, 'b': b, 'c': c, 'box': 'c', 'ans': c})
+            out.append({'op': 'box_dec_add', 'a': a, 'c': c, 'box': 'b', 'ans': b})
+            out.append({'op': 'box_dec_add', 'b': b, 'c': c, 'box': 'a', 'ans': a})
+    return out
+
+
 def gen_box_addsub_1d():
     """한 자리 수 a ± □ = c 또는 □ + b = c 빈칸 찾기."""
     out = []
@@ -1084,6 +1137,17 @@ def main():
     pools['rel_addsub_1d'] = cap(gen_addsub_relation_1d())
     pools['rel_addsub_2d'] = cap(gen_addsub_relation_2d())
     pools['three_pm_2d'] = cap(gen_three_pm_2d())
+
+    # ===== 빈칸 3위치 변형 (수학선생님 권고: 학년 무관 채택) =====
+    pools['box_mul_1_1'] = cap(gen_box_mul(1, 1))   # 곱셈구구 빈칸
+    pools['box_mul_2_1'] = cap(gen_box_mul(2, 1))
+    pools['box_mul_2_2'] = cap(gen_box_mul(2, 2))
+    pools['box_mul_3_1'] = cap(gen_box_mul(3, 1))
+    pools['box_mul_3_2'] = cap(gen_box_mul(3, 2))
+    pools['box_div_2_1'] = cap(gen_box_div(2, 1))
+    pools['box_div_3_1'] = cap(gen_box_div(3, 1))
+    pools['box_div_2_2'] = cap(gen_box_div(2, 2))
+    pools['box_dec_add_1'] = cap(gen_box_dec_add(1))
 
     # 분할 저장 — 풀별 개별 JSON 파일 (public/pools/<key>.json)
     SPLIT_DIR.mkdir(parents=True, exist_ok=True)

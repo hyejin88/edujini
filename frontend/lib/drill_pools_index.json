@@ -110,5 +110,14 @@
   "box_addsub_2d": 10000,
   "rel_addsub_1d": 81,
   "rel_addsub_2d": 8910,
-  "three_pm_2d": 10000
+  "three_pm_2d": 10000,
+  "box_mul_1_1": 192,
+  "box_mul_2_1": 2160,
+  "box_mul_2_2": 10000,
+  "box_mul_3_1": 10000,
+  "box_mul_3_2": 10000,
+  "box_div_2_1": 492,
+  "box_div_3_1": 1842,
+  "box_div_2_2": 318,
+  "box_dec_add_1": 243
 }
