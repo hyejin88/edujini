@@ -67,6 +67,15 @@
   }
 }
 
+/* 학습지 컨테이너 — 화면(모바일/데스크탑) vs 인쇄 분리.
+   max-w-[210mm]는 인쇄용. 화면에서는 viewport에 맞춤. */
+@media screen and (max-width: 768px) {
+  .worksheet-page {
+    max-width: 100% !important;
+    padding: 16px !important;
+  }
+}
+
 /* Print Styles — A4 학습지 강제 */
 @page {
   size: A4;

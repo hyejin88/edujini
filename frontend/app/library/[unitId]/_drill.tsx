@@ -286,7 +286,7 @@ export default function DrillSheetPage({
       </header>
 
       <main
-        className="mx-auto my-8 max-w-[210mm] bg-white shadow-lg print:my-0 print:max-w-none print:p-[16mm] print:shadow-none"
+        className="worksheet-page mx-auto my-8 max-w-[210mm] bg-white shadow-lg print:my-0 print:max-w-none print:p-[16mm] print:shadow-none"
         style={{ padding: "16mm" }}
       >
         {/* 헤더 — 화면용 컬러 워드마크 + 인쇄용 흑백 캐릭터 */}
