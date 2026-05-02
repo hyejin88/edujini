@@ -227,20 +227,20 @@ export default function DrillSheetPage({
 
   return (
     <div className="min-h-screen bg-[#f5f5f5] print:bg-white">
-      {/* 툴바 */}
+      {/* 툴바 — 모바일 2단, 데스크탑 1단 */}
       <header className="no-print sticky top-0 z-10 border-b border-[#e5e7eb] bg-white">
-        <div className="mx-auto flex max-w-[210mm] items-center justify-between px-4 py-3">
+        <div className="mx-auto flex max-w-[210mm] flex-col gap-2 px-4 py-2 sm:flex-row sm:items-center sm:justify-between sm:py-3">
           <Link
             href={`/library/${encodeURIComponent(sheet.unit_id)}?mode=drill`}
-            className="flex items-center gap-2 text-sm text-[#6b7280] hover:text-[#111827]"
+            className="inline-flex min-h-[44px] items-center gap-2 text-sm text-[#6b7280] hover:text-[#111827]"
           >
             <ArrowLeft className="h-4 w-4" />
             유형 목록
           </Link>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={handleNew}
-              className="flex items-center gap-1 rounded border border-[#e5e7eb] bg-white px-3 py-1.5 text-sm text-[#111827] hover:bg-[#f9fafb]"
+              className="inline-flex min-h-[40px] items-center gap-1 rounded border border-[#e5e7eb] bg-white px-3 py-1.5 text-sm text-[#111827] hover:bg-[#f9fafb]"
               title="새 문제 받기"
             >
               <RefreshCw className="h-3.5 w-3.5" />
@@ -248,7 +248,7 @@ export default function DrillSheetPage({
             </button>
             <button
               onClick={() => window.print()}
-              className="flex items-center gap-1 rounded border border-[#e5e7eb] bg-white px-3 py-1.5 text-sm text-[#111827] hover:bg-[#f9fafb]"
+              className="inline-flex min-h-[40px] items-center gap-1 rounded border border-[#e5e7eb] bg-white px-3 py-1.5 text-sm text-[#111827] hover:bg-[#f9fafb]"
             >
               <Printer className="h-3.5 w-3.5" />
               인쇄/PDF
@@ -257,7 +257,7 @@ export default function DrillSheetPage({
               <button
                 onClick={handleGrade}
                 disabled={answeredCount === 0}
-                className="rounded bg-[#111827] px-3 py-1.5 text-sm text-white hover:bg-[#1f2937] disabled:opacity-50"
+                className="min-h-[40px] flex-1 rounded bg-[#111827] px-3 py-1.5 text-sm text-white hover:bg-[#1f2937] disabled:opacity-50 sm:flex-none"
               >
                 채점{" "}
                 <span className="rounded bg-white/20 px-1.5 text-xs">
@@ -267,7 +267,7 @@ export default function DrillSheetPage({
             ) : (
               <button
                 onClick={() => router.push("/result")}
-                className="rounded bg-[#1e3a8a] px-3 py-1.5 text-sm text-white hover:bg-[#1e40af]"
+                className="min-h-[40px] flex-1 rounded bg-[#1e3a8a] px-3 py-1.5 text-sm text-white hover:bg-[#1e40af] sm:flex-none"
               >
                 {score}점 · 학습 진단 →
                 <span className="ml-1 text-xs opacity-80">({correctCount}/{total})</span>
