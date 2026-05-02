@@ -144,10 +144,11 @@ function LibraryContent() {
         )}
 
         {/* 작은 광고 1개 — 단원 그리드 한참 아래, 푸터 위. 학습지 페이지엔 절대 광고 없음 */}
+        {/* AdSense — EduJini-Library-Bottom (단원 그리드 하단, 학습지 페이지엔 노출 X) */}
         <AdSlot
-          slot="LIBRARY_BOTTOM"
-          format="rectangle"
-          className="mx-auto mt-16 max-w-sm opacity-90"
+          slot="8138946717"
+          format="auto"
+          className="mx-auto mt-16 max-w-2xl"
         />
       </main>
     </div>
