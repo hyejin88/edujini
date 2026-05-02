@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default function PrivacyPage() {
-  const today = "2026년 5월 1일";
+  const today = "2026년 5월 2일";
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-background">
@@ -29,12 +29,17 @@ export default function PrivacyPage() {
         <p className="text-sm text-muted-foreground">시행일자: {today}</p>
 
         <h2>1. 수집 항목</h2>
-        <p>EDU Jini는 회원가입 없이 사용 가능합니다. 다음 정보를 자동 수집·생성합니다.</p>
+        <p>
+          EDU Jini는 <strong>회원가입 없이</strong> 사용 가능하며, 자녀 이름·전화번호·이메일 등 개인 식별 정보를
+          입력받지 않습니다. 다음 정보만 자동 수집·생성합니다.
+        </p>
         <ul>
-          <li><strong>익명 사용자 ID</strong> — 브라우저 localStorage에 무작위 8자 문자열 저장 (예: <code>u_abc12345</code>). 식별 정보 아님.</li>
-          <li><strong>풀이 기록</strong> — 어떤 문항에 어떤 답을 입력했는지, 정답 여부, 4축 오답 라벨링 결과. 인메모리(서버 재시작 시 휘발).</li>
-          <li><strong>풀이한 단원 목록</strong> — localStorage에 저장.</li>
+          <li><strong>익명 사용자 ID</strong> — 브라우저 localStorage에 무작위 8자 문자열 (예: <code>u_abc12345</code>). 식별 정보 아님.</li>
+          <li><strong>풀이 기록</strong> — 단원·문항·답·정답 여부·오답 유형. 브라우저 localStorage(<code>edujini_attempts_v1</code>)에만 저장. 외부 서버 전송 X.</li>
+          <li><strong>풀이한 단원 목록</strong> — localStorage(<code>edujini_played_units</code>).</li>
+          <li><strong>마지막 선택 학년</strong> — localStorage(<code>edujini_last_grade</code>) 재방문 편의용.</li>
           <li><strong>접속 로그</strong> — Cloudflare가 IP·User-Agent를 보안 목적으로 자동 수집·익명화 처리.</li>
+          <li><strong>광고 쿠키</strong> — Google AdSense가 광고 노출·빈도 제어를 위해 익명 쿠키 사용 (자세한 내용은 3항).</li>
         </ul>
 
         <h2>2. 이용 목적</h2>
@@ -62,10 +67,14 @@ export default function PrivacyPage() {
 
         <h2>5. 어린이 개인정보 보호</h2>
         <p>
-          EDU Jini는 K-12 학습 서비스로 13세 미만 사용자 가능성이 있어, COPPA 및 한국 개인정보보호법에 따라
-          개인 식별 정보를 수집·저장하지 않습니다. AdSense는 "Made for Kids" 사이트로 등록되어 비개인화 광고만
-          노출됩니다.
+          EDU Jini는 초등학생(만 6~13세) 학습 서비스이므로 정보통신망법 및 COPPA를 준수합니다.
         </p>
+        <ul>
+          <li>회원가입·이메일·전화번호 등 <strong>개인 식별 정보를 수집하지 않습니다</strong>.</li>
+          <li>자녀가 직접 가입할 수 있는 절차가 없으므로 법정대리인 동의 절차도 적용되지 않습니다.</li>
+          <li>AdSense는 사이트 단위로 <strong>"어린이 대상" 처리</strong>되어 맞춤형 광고·행동 추적이 차단되며, 비개인화 광고만 노출됩니다.</li>
+          <li>유료 서비스 도입 시(Phase 2) 결제 단계에서만 학부모(보호자) 본인 인증을 받을 예정이며, 자녀 직접 가입은 영구히 받지 않습니다.</li>
+        </ul>
 
         <h2>6. 사용자 권리</h2>
         <ul>
