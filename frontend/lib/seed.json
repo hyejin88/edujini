@@ -8133,5 +8133,1358 @@
     ],
     "license_code": "SELF_GEN",
     "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::0",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음을 계산해 보세요. $\\frac{1}{5} \\times 3$",
+    "choices": [
+      "$\\frac{1}{15}$",
+      "$\\frac{3}{5}$",
+      "$\\frac{5}{3}$",
+      "$1\\frac{2}{5}$"
+    ],
+    "answer": "$\\frac{3}{5}$",
+    "answer_aliases": [
+      "3/5"
+    ],
+    "explanation": "분수와 자연수의 곱셈은 분수의 분자에 자연수를 곱합니다. $\\frac{1}{5} \\times 3 = \\frac{1 \\times 3}{5} = \\frac{3}{5}$입니다.",
+    "concept_tags": [
+      "분수와 자연수의 곱셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{1}{15}$",
+        "reason": "분모에 자연수를 곱하는 실수를 하였습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::1",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음을 계산해 보세요. $4 \\times \\frac{1}{7}$",
+    "choices": [
+      "$\\frac{1}{28}$",
+      "$\\frac{4}{7}$",
+      "$\\frac{7}{4}$",
+      "$1\\frac{3}{4}$"
+    ],
+    "answer": "$\\frac{4}{7}$",
+    "answer_aliases": [
+      "4/7"
+    ],
+    "explanation": "자연수와 분수의 곱셈은 자연수를 분수의 분자에 곱합니다. $4 \\times \\frac{1}{7} = \\frac{4 \\times 1}{7} = \\frac{4}{7}$입니다.",
+    "concept_tags": [
+      "자연수와 분수의 곱셈"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::2",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$\\frac{2}{9}$를 2배 한 값은 얼마인가요?",
+    "choices": null,
+    "answer": "$\\frac{4}{9}$",
+    "answer_aliases": [
+      "4/9"
+    ],
+    "explanation": "$\\frac{2}{9}$를 2배 하는 것은 $\\frac{2}{9} \\times 2$를 계산하는 것과 같습니다. $\\frac{2}{9} \\times 2 = \\frac{2 \\times 2}{9} = \\frac{4}{9}$입니다.",
+    "concept_tags": [
+      "분수와 자연수의 곱셈",
+      "곱셈의 의미"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::3",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음을 계산해 보세요. $5 \\times \\frac{3}{10}$",
+    "choices": [
+      "$\\frac{15}{10}$",
+      "$\\frac{3}{2}$",
+      "$1\\frac{1}{2}$",
+      "$\\frac{1}{2}$"
+    ],
+    "answer": "$1\\frac{1}{2}$",
+    "answer_aliases": [
+      "3/2",
+      "1과1/2"
+    ],
+    "explanation": "$5 \\times \\frac{3}{10} = \\frac{5 \\times 3}{10} = \\frac{15}{10}$입니다. $\\frac{15}{10}$를 약분하면 $\\frac{3}{2}$이 되고, 대분수로 나타내면 $1\\frac{1}{2}$입니다.",
+    "concept_tags": [
+      "자연수와 분수의 곱셈",
+      "약분",
+      "대분수 변환"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{15}{10}$",
+        "reason": "약분을 하지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::4",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음을 계산해 보세요. $1\\frac{1}{4} \\times 2$",
+    "choices": [
+      "$1\\frac{2}{8}$",
+      "$2\\frac{1}{2}$",
+      "$2\\frac{2}{4}$",
+      "$1\\frac{1}{2}$"
+    ],
+    "answer": "$2\\frac{1}{2}$",
+    "answer_aliases": [
+      "5/2",
+      "2과1/2"
+    ],
+    "explanation": "대분수를 가분수로 바꾸어 계산합니다. $1\\frac{1}{4} = \\frac{5}{4}$이므로, $\\frac{5}{4} \\times 2 = \\frac{5 \\times 2}{4} = \\frac{10}{4}$입니다. $\\frac{10}{4}$를 약분하면 $\\frac{5}{2}$가 되고, 대분수로 나타내면 $2\\frac{1}{2}$입니다.",
+    "concept_tags": [
+      "대분수와 자연수의 곱셈",
+      "가분수 변환",
+      "약분"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$1\\frac{2}{8}$",
+        "reason": "대분수를 가분수로 바꾸지 않고 계산하여 분모를 곱하거나, 약분을 제대로 하지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::5",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$\\frac{3}{8} \\times 4$를 계산하여 기약분수로 나타내세요.",
+    "choices": null,
+    "answer": "$\\frac{3}{2}$",
+    "answer_aliases": [
+      "3/2",
+      "1과1/2"
+    ],
+    "explanation": "$\\frac{3}{8} \\times 4 = \\frac{3 \\times 4}{8} = \\frac{12}{8}$입니다. 분자와 분모를 4로 약분하면 $\\frac{3}{2}$입니다.",
+    "concept_tags": [
+      "분수와 자연수의 곱셈",
+      "약분"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::6",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음을 계산한 값과 같은 것은 어느 것인가요? $\\frac{5}{6} \\times 3$",
+    "choices": [
+      "$\\frac{15}{18}$",
+      "$\\frac{5}{2}$",
+      "$2\\frac{1}{2}$",
+      "$1\\frac{1}{2}$"
+    ],
+    "answer": "$2\\frac{1}{2}$",
+    "answer_aliases": [
+      "5/2",
+      "2과1/2"
+    ],
+    "explanation": "$\\frac{5}{6} \\times 3 = \\frac{5 \\times 3}{6} = \\frac{15}{6}$입니다. 분자와 분모를 3으로 약분하면 $\\frac{5}{2}$가 되고, 대분수로 나타내면 $2\\frac{1}{2}$입니다.",
+    "concept_tags": [
+      "분수와 자연수의 곱셈",
+      "약분",
+      "대분수 변환"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::7",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$6 \\times \\frac{7}{12}$를 계산하여 기약분수로 나타내세요.",
+    "choices": null,
+    "answer": "$\\frac{7}{2}$",
+    "answer_aliases": [
+      "7/2",
+      "3과1/2"
+    ],
+    "explanation": "$6 \\times \\frac{7}{12} = \\frac{6 \\times 7}{12} = \\frac{42}{12}$입니다. 분자와 분모를 6으로 약분하면 $\\frac{7}{2}$입니다.",
+    "concept_tags": [
+      "자연수와 분수의 곱셈",
+      "약분"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::8",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음을 계산해 보세요. $\\frac{2}{3} \\times \\frac{1}{5}$",
+    "choices": [
+      "$\\frac{2}{15}$",
+      "$\\frac{3}{8}$",
+      "$\\frac{10}{3}$",
+      "$\\frac{1}{15}$"
+    ],
+    "answer": "$\\frac{2}{15}$",
+    "answer_aliases": [
+      "2/15"
+    ],
+    "explanation": "분수와 분수의 곱셈은 분자는 분자끼리, 분모는 분모끼리 곱합니다. $\\frac{2}{3} \\times \\frac{1}{5} = \\frac{2 \\times 1}{3 \\times 5} = \\frac{2}{15}$입니다.",
+    "concept_tags": [
+      "분수와 분수의 곱셈"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::9",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음을 계산하여 기약분수로 나타내세요. $\\frac{3}{4} \\times \\frac{2}{9}$",
+    "choices": [
+      "$\\frac{6}{36}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{2}{12}$",
+      "$\\frac{1}{3}$"
+    ],
+    "answer": "$\\frac{1}{6}$",
+    "answer_aliases": [
+      "1/6"
+    ],
+    "explanation": "$\\frac{3}{4} \\times \\frac{2}{9} = \\frac{3 \\times 2}{4 \\times 9} = \\frac{6}{36}$입니다. 분자와 분모를 6으로 약분하면 $\\frac{1}{6}$입니다. (계산 전에 약분: $\\frac{\\cancel{3}_1}{4} \\times \\frac{\\cancel{2}_1}{\\cancel{9}_3} = \\frac{1 \\times 1}{2 \\times 3} = \\frac{1}{6}$)",
+    "concept_tags": [
+      "분수와 분수의 곱셈",
+      "약분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{6}{36}$",
+        "reason": "약분을 하지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::10",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "concept",
+    "body": "$2\\frac{1}{3} \\times \\frac{3}{7}$을 계산하여 기약분수로 나타내세요.",
+    "choices": null,
+    "answer": "$1$",
+    "answer_aliases": [
+      "1"
+    ],
+    "explanation": "대분수를 가분수로 바꾸어 계산합니다. $2\\frac{1}{3} = \\frac{7}{3}$이므로, $\\frac{7}{3} \\times \\frac{3}{7}$입니다. 계산 전에 약분하면 $\\frac{\\cancel{7}_1}{\\cancel{3}_1} \\times \\frac{\\cancel{3}_1}{\\cancel{7}_1} = \\frac{1 \\times 1}{1 \\times 1} = 1$입니다.",
+    "concept_tags": [
+      "대분수와 분수의 곱셈",
+      "가분수 변환",
+      "약분"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::11",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음을 계산하여 기약분수로 나타내세요. $\\frac{5}{8} \\times \\frac{4}{5}$",
+    "choices": [
+      "$\\frac{20}{40}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{9}{13}$",
+      "$\\frac{1}{4}$"
+    ],
+    "answer": "$\\frac{1}{2}$",
+    "answer_aliases": [
+      "1/2"
+    ],
+    "explanation": "$\\frac{5}{8} \\times \\frac{4}{5}$에서 계산 전에 약분합니다. 분자 5와 분모 5를 5로 약분하고, 분자 4와 분모 8을 4로 약분하면 $\\frac{\\cancel{5}_1}{\\cancel{8}_2} \\times \\frac{\\cancel{4}_1}{\\cancel{5}_1} = \\frac{1 \\times 1}{2 \\times 1} = \\frac{1}{2}$입니다.",
+    "concept_tags": [
+      "분수와 분수의 곱셈",
+      "약분"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::12",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "우유 $\\frac{3}{4}\\text{L}$가 있습니다. 이 우유의 5배는 몇 $\\text{L}$인가요?",
+    "choices": [
+      "$\\frac{15}{4}\\text{L}$",
+      "$3\\frac{3}{4}\\text{L}$",
+      "$1\\frac{1}{4}\\text{L}$",
+      "$3\\frac{1}{4}\\text{L}$"
+    ],
+    "answer": "$3\\frac{3}{4}\\text{L}$",
+    "answer_aliases": [
+      "15/4L",
+      "3과3/4L"
+    ],
+    "explanation": "$\\frac{3}{4}\\text{L}$의 5배는 $\\frac{3}{4} \\times 5$로 계산합니다. $\\frac{3}{4} \\times 5 = \\frac{3 \\times 5}{4} = \\frac{15}{4}$입니다. 대분수로 나타내면 $3\\frac{3}{4}$입니다.",
+    "concept_tags": [
+      "분수와 자연수의 곱셈",
+      "실생활 문제",
+      "대분수 변환"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{15}{4}\\text{L}$",
+        "reason": "대분수로 바꾸지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::13",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "18개의 사탕 중 $\\frac{2}{3}$를 친구에게 주었습니다. 친구에게 준 사탕은 몇 개인가요?",
+    "choices": null,
+    "answer": "$12$개",
+    "answer_aliases": [
+      "12"
+    ],
+    "explanation": "18개의 $\\frac{2}{3}$는 $18 \\times \\frac{2}{3}$로 계산합니다. $18 \\times \\frac{2}{3} = \\frac{18 \\times 2}{3} = \\frac{36}{3} = 12$입니다.",
+    "concept_tags": [
+      "자연수와 분수의 곱셈",
+      "실생활 문제"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::14",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "가로가 $\\frac{5}{6}\\text{m}$이고 세로가 $\\frac{3}{4}\\text{m}$인 직사각형 모양의 밭의 넓이는 몇 $\\text{m}^2$인가요?",
+    "choices": [
+      "$\\frac{15}{24}\\text{m}^2$",
+      "$\\frac{5}{8}\\text{m}^2$",
+      "$\\frac{1}{2}\\text{m}^2$",
+      "$\\frac{15}{10}\\text{m}^2$"
+    ],
+    "answer": "$\\frac{5}{8}\\text{m}^2$",
+    "answer_aliases": [
+      "5/8m^2"
+    ],
+    "explanation": "직사각형의 넓이는 가로 $\\times$ 세로입니다. $\\frac{5}{6} \\times \\frac{3}{4}$를 계산합니다. 계산 전에 약분하면 $\\frac{5}{\\cancel{6}_2} \\times \\frac{\\cancel{3}_1}{4} = \\frac{5 \\times 1}{2 \\times 4} = \\frac{5}{8}$입니다.",
+    "concept_tags": [
+      "분수와 분수의 곱셈",
+      "넓이",
+      "실생활 문제",
+      "약분"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::15",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 책의 전체 쪽수는 120쪽입니다. 어제 전체의 $\\frac{1}{4}$을 읽고, 오늘 남은 쪽수의 $\\frac{1}{3}$을 읽었습니다. 오늘 읽은 쪽수는 몇 쪽인가요?",
+    "choices": null,
+    "answer": "$30$쪽",
+    "answer_aliases": [
+      "30"
+    ],
+    "explanation": "1. 어제 읽은 쪽수: $120 \\times \\frac{1}{4} = 30$쪽\n2. 남은 쪽수: $120 - 30 = 90$쪽\n3. 오늘 읽은 쪽수: $90 \\times \\frac{1}{3} = 30$쪽",
+    "concept_tags": [
+      "분수와 자연수의 곱셈",
+      "다단계 문제",
+      "남은 양 계산"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::16",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "지혜는 물 $\\frac{2}{5}\\text{L}$를 마셨고, 준수는 지혜가 마신 물의 3배를 마셨습니다. 준수가 마신 물의 양은 몇 $\\text{L}$인가요?",
+    "choices": [
+      "$\\frac{6}{5}\\text{L}$",
+      "$1\\frac{1}{5}\\text{L}$",
+      "$1\\frac{2}{5}\\text{L}$",
+      "$\\frac{5}{6}\\text{L}$"
+    ],
+    "answer": "$1\\frac{1}{5}\\text{L}$",
+    "answer_aliases": [
+      "6/5L",
+      "1과1/5L"
+    ],
+    "explanation": "준수가 마신 물의 양은 지혜가 마신 물의 3배이므로 $\\frac{2}{5} \\times 3$을 계산합니다. $\\frac{2}{5} \\times 3 = \\frac{6}{5}$입니다. 대분수로 나타내면 $1\\frac{1}{5}$입니다.",
+    "concept_tags": [
+      "분수와 자연수의 곱셈",
+      "실생활 문제",
+      "대분수 변환"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::17",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "한 시간에 $2\\frac{1}{2}\\text{km}$를 걷는 사람이 $1\\frac{3}{5}$시간 동안 걸으면 몇 $\\text{km}$를 걷게 될까요?",
+    "choices": [
+      "$4\\text{km}$",
+      "$3\\frac{1}{2}\\text{km}$",
+      "$2\\frac{1}{2}\\text{km}$",
+      "$3\\frac{1}{5}\\text{km}$"
+    ],
+    "answer": "$4\\text{km}$",
+    "answer_aliases": [
+      "4km"
+    ],
+    "explanation": "(한 시간 동안 걷는 거리) $\\times$ (걸은 시간)으로 계산합니다. $2\\frac{1}{2} \\times 1\\frac{3}{5}$입니다.\n대분수를 가분수로 바꾸면 $2\\frac{1}{2} = \\frac{5}{2}$, $1\\frac{3}{5} = \\frac{8}{5}$입니다.\n$\\frac{5}{2} \\times \\frac{8}{5}$에서 계산 전에 약분하면 $\\frac{\\cancel{5}_1}{\\cancel{2}_1} \\times \\frac{\\cancel{8}_4}{\\cancel{5}_1} = \\frac{1 \\times 4}{1 \\times 1} = 4$입니다.",
+    "concept_tags": [
+      "대분수와 대분수의 곱셈",
+      "실생활 문제",
+      "가분수 변환",
+      "약분"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::18",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "다음을 계산하여 기약분수로 나타내세요. $\\frac{1}{2} \\times \\frac{2}{3} \\times \\frac{3}{4}$",
+    "choices": [
+      "$\\frac{6}{24}$",
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{3}{8}$"
+    ],
+    "answer": "$\\frac{1}{4}$",
+    "answer_aliases": [
+      "1/4"
+    ],
+    "explanation": "세 분수의 곱셈은 분자는 분자끼리, 분모는 분모끼리 곱합니다. 계산 전에 약분하면 편리합니다.\n$\\frac{1}{\\cancel{2}_1} \\times \\frac{\\cancel{2}_1}{\\cancel{3}_1} \\times \\frac{\\cancel{3}_1}{4} = \\frac{1 \\times 1 \\times 1}{1 \\times 1 \\times 4} = \\frac{1}{4}$입니다.",
+    "concept_tags": [
+      "세 분수의 곱셈",
+      "약분"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-2::v3::19",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-06]",
+    "unit_id": "math-5-2-2",
+    "unit_name": "분수의 곱셈",
+    "sub_unit": "진분수·자연수와 분수의 곱셈",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "어떤 수에 $\\frac{3}{5}$을 곱해야 할 것을 잘못하여 더했더니 $1\\frac{1}{2}$이 되었습니다. 바르게 계산한 값은 얼마인가요?",
+    "choices": [
+      "$\\frac{3}{10}$",
+      "$\\frac{27}{50}$",
+      "$\\frac{2}{5}$",
+      "$\\frac{1}{2}$"
+    ],
+    "answer": "$\\frac{27}{50}$",
+    "answer_aliases": [
+      "27/50"
+    ],
+    "explanation": "1. 어떤 수를 $\\square$라고 하면, 잘못 계산한 식은 $\\square + \\frac{3}{5} = 1\\frac{1}{2}$입니다.\n2. $1\\frac{1}{2}$을 가분수로 바꾸면 $\\frac{3}{2}$입니다.\n3. $\\square + \\frac{3}{5} = \\frac{3}{2}$이므로, $\\square = \\frac{3}{2} - \\frac{3}{5}$입니다.\n4. 통분하여 계산하면 $\\frac{15}{10} - \\frac{6}{10} = \\frac{9}{10}$입니다. 어떤 수는 $\\frac{9}{10}$입니다.\n5. 바르게 계산한 값은 어떤 수에 $\\frac{3}{5}$을 곱하는 것이므로, $\\frac{9}{10} \\times \\frac{3}{5}$입니다.\n6. $\\frac{9}{10} \\times \\frac{3}{5} = \\frac{9 \\times 3}{10 \\times 5} = \\frac{27}{50}$입니다.",
+    "concept_tags": [
+      "역연산",
+      "분수의 덧셈과 뺄셈",
+      "분수의 곱셈",
+      "다단계 문제"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::0",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$0.3 \\times 4$의 값은 얼마인가요?",
+    "choices": [
+      "$0.12$",
+      "$1.2$",
+      "$12$",
+      "$120$"
+    ],
+    "answer": "$1.2$",
+    "answer_aliases": [
+      "1.2"
+    ],
+    "explanation": "$0.3 \\times 4$는 $3 \\times 4 = 12$에서 소수점 한 자리를 생각하여 $1.2$가 됩니다.",
+    "concept_tags": [
+      "소수와 자연수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$12$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::1",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$5 \\times 0.7$을 계산하면 얼마인가요?",
+    "choices": null,
+    "answer": "$3.5$",
+    "answer_aliases": [
+      "3.5"
+    ],
+    "explanation": "$5 \\times 0.7$은 $5 \\times 7 = 35$에서 소수점 한 자리를 생각하여 $3.5$가 됩니다.",
+    "concept_tags": [
+      "자연수와 소수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::2",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$1.2 \\times 3$을 바르게 계산한 것은 어느 것인가요?",
+    "choices": [
+      "$0.36$",
+      "$3.6$",
+      "$36$",
+      "$360$"
+    ],
+    "answer": "$3.6$",
+    "answer_aliases": [
+      "3.6"
+    ],
+    "explanation": "$1.2 \\times 3$은 $12 \\times 3 = 36$에서 소수점 한 자리를 생각하여 $3.6$이 됩니다.",
+    "concept_tags": [
+      "소수와 자연수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$36$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::3",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$6 \\times 2.1$을 계산하세요.",
+    "choices": null,
+    "answer": "$12.6$",
+    "answer_aliases": [
+      "12.6"
+    ],
+    "explanation": "$6 \\times 2.1$은 $6 \\times 21 = 126$에서 소수점 한 자리를 생각하여 $12.6$이 됩니다.",
+    "concept_tags": [
+      "자연수와 소수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::4",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$0.05 \\times 7$의 값은 얼마인가요?",
+    "choices": [
+      "$0.035$",
+      "$0.35$",
+      "$3.5$",
+      "$35$"
+    ],
+    "answer": "$0.35$",
+    "answer_aliases": [
+      "0.35"
+    ],
+    "explanation": "$0.05 \\times 7$은 $5 \\times 7 = 35$에서 소수점 두 자리를 생각하여 $0.35$가 됩니다.",
+    "concept_tags": [
+      "소수와 자연수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$3.5$",
+        "reason": "소수점 위치를 한 자리로 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::5",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$8 \\times 0.03$을 계산하세요.",
+    "choices": null,
+    "answer": "$0.24$",
+    "answer_aliases": [
+      "0.24"
+    ],
+    "explanation": "$8 \\times 0.03$은 $8 \\times 3 = 24$에서 소수점 두 자리를 생각하여 $0.24$가 됩니다.",
+    "concept_tags": [
+      "자연수와 소수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::6",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$0.4 \\times 0.2$를 계산하면 얼마인가요?",
+    "choices": [
+      "$0.08$",
+      "$0.8$",
+      "$8$",
+      "$80$"
+    ],
+    "answer": "$0.08$",
+    "answer_aliases": [
+      "0.08"
+    ],
+    "explanation": "$0.4 \\times 0.2$는 $4 \\times 2 = 8$에서 소수점 한 자리와 한 자리를 더해 총 두 자리를 생각하여 $0.08$이 됩니다.",
+    "concept_tags": [
+      "소수와 소수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.8$",
+        "reason": "소수점 위치를 한 자리로 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::7",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "$1.5 \\times 0.3$을 계산하세요.",
+    "choices": null,
+    "answer": "$0.45$",
+    "answer_aliases": [
+      "0.45"
+    ],
+    "explanation": "$1.5 \\times 0.3$은 $15 \\times 3 = 45$에서 소수점 한 자리와 한 자리를 더해 총 두 자리를 생각하여 $0.45$가 됩니다.",
+    "concept_tags": [
+      "소수와 소수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::8",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$0.06 \\times 0.7$의 값은 얼마인가요?",
+    "choices": [
+      "$0.0042$",
+      "$0.042$",
+      "$0.42$",
+      "$4.2$"
+    ],
+    "answer": "$0.042$",
+    "answer_aliases": [
+      "0.042"
+    ],
+    "explanation": "$0.06 \\times 0.7$은 $6 \\times 7 = 42$에서 소수점 두 자리와 한 자리를 더해 총 세 자리를 생각하여 $0.042$가 됩니다.",
+    "concept_tags": [
+      "소수와 소수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.42$",
+        "reason": "소수점 위치를 두 자리로 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::9",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$2.3 \\times 0.04$를 계산하면 얼마인가요?",
+    "choices": [
+      "$0.0092$",
+      "$0.092$",
+      "$0.92$",
+      "$9.2$"
+    ],
+    "answer": "$0.092$",
+    "answer_aliases": [
+      "0.092"
+    ],
+    "explanation": "$2.3 \\times 0.04$는 $23 \\times 4 = 92$에서 소수점 한 자리와 두 자리를 더해 총 세 자리를 생각하여 $0.092$가 됩니다.",
+    "concept_tags": [
+      "소수와 소수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.92$",
+        "reason": "소수점 위치를 두 자리로 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::10",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$0.12 \\times 5$를 계산할 때, 소수점은 어디에 찍어야 하나요?",
+    "choices": [
+      "$0.06$",
+      "$0.6$",
+      "$6$",
+      "$60$"
+    ],
+    "answer": "$0.6$",
+    "answer_aliases": [
+      "0.6"
+    ],
+    "explanation": "$0.12 \\times 5$는 $12 \\times 5 = 60$에서 소수점 두 자리를 생각하여 $0.60$이 됩니다. $0.60$은 $0.6$과 같습니다.",
+    "concept_tags": [
+      "소수와 자연수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$6$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::11",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$3 \\times 0.25$를 계산하세요.",
+    "choices": null,
+    "answer": "$0.75$",
+    "answer_aliases": [
+      "0.75"
+    ],
+    "explanation": "$3 \\times 0.25$는 $3 \\times 25 = 75$에서 소수점 두 자리를 생각하여 $0.75$가 됩니다.",
+    "concept_tags": [
+      "자연수와 소수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::12",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "한 자루에 $0.8 \\text{ kg}$인 연필이 $5$자루 있습니다. 연필 $5$자루의 전체 무게는 몇 $\\text{kg}$인가요?",
+    "choices": [
+      "$0.4 \\text{ kg}$",
+      "$4 \\text{ kg}$",
+      "$40 \\text{ kg}$",
+      "$400 \\text{ kg}$"
+    ],
+    "answer": "$4 \\text{ kg}$",
+    "answer_aliases": [
+      "4"
+    ],
+    "explanation": "연필 $5$자루의 전체 무게는 $0.8 \\times 5$로 계산합니다. $0.8 \\times 5 = 4.0 = 4$이므로 $4 \\text{ kg}$입니다.",
+    "concept_tags": [
+      "소수와 자연수의 곱셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$40 \\text{ kg}$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::13",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "$1 \\text{ m}$의 철사 무게가 $1.2 \\text{ kg}$입니다. 이 철사 $3.5 \\text{ m}$의 무게는 몇 $\\text{kg}$인가요?",
+    "choices": [
+      "$0.42 \\text{ kg}$",
+      "$4.2 \\text{ kg}$",
+      "$42 \\text{ kg}$",
+      "$420 \\text{ kg}$"
+    ],
+    "answer": "$4.2 \\text{ kg}$",
+    "answer_aliases": [
+      "4.2"
+    ],
+    "explanation": "철사 $3.5 \\text{ m}$의 무게는 $1.2 \\times 3.5$로 계산합니다. $12 \\times 35 = 420$이고, 소수점은 총 두 자리이므로 $4.20 = 4.2 \\text{ kg}$입니다.",
+    "concept_tags": [
+      "소수와 소수의 곱셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$42 \\text{ kg}$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::14",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "가로가 $0.6 \\text{ m}$, 세로가 $0.9 \\text{ m}$인 직사각형 모양의 종이가 있습니다. 이 종이의 넓이는 몇 $\\text{m}^2$인가요?",
+    "choices": [
+      "$0.054 \\text{ m}^2$",
+      "$0.54 \\text{ m}^2$",
+      "$5.4 \\text{ m}^2$",
+      "$54 \\text{ m}^2$"
+    ],
+    "answer": "$0.54 \\text{ m}^2$",
+    "answer_aliases": [
+      "0.54"
+    ],
+    "explanation": "직사각형의 넓이는 가로 $\\times$ 세로이므로 $0.6 \\times 0.9$를 계산합니다. $6 \\times 9 = 54$이고, 소수점은 총 두 자리이므로 $0.54 \\text{ m}^2$입니다.",
+    "concept_tags": [
+      "소수와 소수의 곱셈",
+      "넓이 계산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$5.4 \\text{ m}^2$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::15",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "$1 \\text{ L}$의 휘발유로 $12.5 \\text{ km}$를 갈 수 있는 자동차가 있습니다. 이 자동차가 $0.8 \\text{ L}$의 휘발유로 갈 수 있는 거리는 몇 $\\text{km}$인가요?",
+    "choices": null,
+    "answer": "$10 \\text{ km}$",
+    "answer_aliases": [
+      "10"
+    ],
+    "explanation": "$0.8 \\text{ L}$의 휘발유로 갈 수 있는 거리는 $12.5 \\times 0.8$로 계산합니다. $125 \\times 8 = 1000$이고, 소수점은 총 두 자리이므로 $10.00 = 10 \\text{ km}$입니다.",
+    "concept_tags": [
+      "소수와 소수의 곱셈",
+      "실생활 문제"
+    ],
+    "common_errors": [],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::16",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 수에 $0.5$를 곱해야 할 것을 잘못하여 $5$를 곱했더니 $24$가 되었습니다. 바르게 계산한 값은 얼마인가요?",
+    "choices": [
+      "$2.4$",
+      "$4.8$",
+      "$12$",
+      "$24$"
+    ],
+    "answer": "$2.4$",
+    "answer_aliases": [
+      "2.4"
+    ],
+    "explanation": "어떤 수를 $\\square$라고 하면, $\\square \\times 5 = 24$입니다. 따라서 $\\square = 24 \\div 5 = 4.8$입니다. 바르게 계산한 값은 $4.8 \\times 0.5$이므로 $4.8 \\times 0.5 = 2.4$입니다.",
+    "concept_tags": [
+      "소수 곱셈",
+      "역연산",
+      "문제 해결"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$4.8$",
+        "reason": "어떤 수를 구하고 바르게 계산하는 단계를 놓쳤습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::17",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "$0.2 \\times 0.3$과 $0.02 \\times 3$의 계산 결과를 비교할 때, 옳은 것은 무엇인가요?",
+    "choices": [
+      "$0.2 \\times 0.3$이 더 크다",
+      "$0.02 \\times 3$이 더 크다",
+      "두 값이 같다",
+      "비교할 수 없다"
+    ],
+    "answer": "두 값이 같다",
+    "answer_aliases": [
+      "두 값이 같다"
+    ],
+    "explanation": "$0.2 \\times 0.3 = 0.06$이고, $0.02 \\times 3 = 0.06$입니다. 따라서 두 값은 같습니다.",
+    "concept_tags": [
+      "소수 곱셈",
+      "결과 비교"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$0.2 \\times 0.3$이 더 크다",
+        "reason": "각각의 계산을 잘못하여 비교했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::18",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "$0.2 \\times \\square = 0.08$일 때, $\\square$ 안에 알맞은 수는 무엇인가요?",
+    "choices": [
+      "$0.04$",
+      "$0.4$",
+      "$4$",
+      "$40$"
+    ],
+    "answer": "$0.4$",
+    "answer_aliases": [
+      "0.4"
+    ],
+    "explanation": "$\\square$를 구하려면 $0.08 \\div 0.2$를 계산해야 합니다. $0.08 \\div 0.2 = 0.8 \\div 2 = 0.4$입니다.",
+    "concept_tags": [
+      "소수 곱셈",
+      "미지수 찾기",
+      "역연산"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$4$",
+        "reason": "소수점 위치를 잘못 계산했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-2-4::v3::19",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-08]",
+    "unit_id": "math-5-2-4",
+    "unit_name": "소수의 곱셈",
+    "sub_unit": "소수와 자연수, 소수와 소수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "$1.25 \\times 0.4$를 계산하면 얼마인가요?",
+    "choices": [
+      "$0.05$",
+      "$0.5$",
+      "$5$",
+      "$50$"
+    ],
+    "answer": "$0.5$",
+    "answer_aliases": [
+      "0.5"
+    ],
+    "explanation": "$1.25 \\times 0.4$는 $125 \\times 4 = 500$에서 소수점 두 자리와 한 자리를 더해 총 세 자리를 생각하여 $0.500$이 됩니다. $0.500$은 $0.5$와 같습니다.",
+    "concept_tags": [
+      "소수와 소수의 곱셈",
+      "소수점 위치"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$5$",
+        "reason": "소수점 위치를 잘못 찍었습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
   }
 ]

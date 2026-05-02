@@ -15,10 +15,6 @@ const grades = [
   { value: 4, label: "초4" },
   { value: 5, label: "초5" },
   { value: 6, label: "초6" },
-  { value: 7, label: "중1" },
-  { value: 8, label: "중2" },
-  { value: 9, label: "중3" },
-  { value: 10, label: "고1" },
 ];
 
 const subjects = [
@@ -50,7 +46,7 @@ export default function LandingPage() {
             </span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            AI 단원 학습 + 매일 새 연산 60만 문제.
+            자녀가 어디서 막히는지 자동으로 짚어드려요.
             <br className="hidden sm:block" />
             우리 아이 학년에 맞춰 바로 풀고 즉시 채점해요.
           </p>
@@ -116,7 +112,7 @@ export default function LandingPage() {
             </Button>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            단원 학습 = 선택형·서술형 + 즉시 채점 · 연산 문제 = 가로식·세로식 반복 연습
+            단원 학습으로 약점 진단 · 연산 문제로 매일 30문제 반복 연습
           </p>
         </div>
       </section>
@@ -126,9 +122,9 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl px-4">
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              { title: "AI 단원 학습", desc: "객·서술형 20문항 + 4축 오답 진단 + 학부모 리포트" },
-              { title: "60만 연산 풀", desc: "단원·날짜로 매번 다른 30문제, 한영 안 뜨는 숫자 키패드" },
-              { title: "회원가입 없이", desc: "지금 바로 풀고 즉시 채점 — 단말 안에서만 진단" },
+              { title: "어디서 막히는지 짚어드려요", desc: "받아올림·자릿값 정렬 같은 약한 부분을 자동으로 찾고, 다음에 뭐 풀면 좋은지 추천해요" },
+              { title: "학교 진도와 정확히 맞춰요", desc: "교과서 단원·성취기준 그대로. 매일 새 30문제 + 즉시 채점" },
+              { title: "회원가입 없이 지금 바로", desc: "이 단말 안에서만 진단 누적. 자녀가 풀고 학부모가 결과만 봐도 OK" },
             ].map((item) => (
               <Card key={item.title} className="border border-border p-6 text-left">
                 <p className="text-base font-semibold text-foreground">
