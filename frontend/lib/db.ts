@@ -24,6 +24,11 @@ export interface SeedProblem {
   license_code?: string;
   is_published?: boolean;
   standard_code?: string;
+  // 도형 단원 (원·평면도형) 자동 SVG 렌더용. 없으면 무시.
+  figure?: {
+    type: string;
+    [key: string]: any;
+  };
 }
 
 export interface SeedUnit {

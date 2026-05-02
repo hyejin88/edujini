@@ -43,17 +43,16 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="bg-secondary py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="mb-4 text-sm font-medium tracking-wide text-muted-foreground">
-            NCIC 성취기준 기반 학습지
-          </p>
           <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            단원별 학습지를{" "}
+            오늘의 학습지,{" "}
             <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-              초1~고3 전 단원
+              골라보세요
             </span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground">
-            교육과정에 맞춘 체계적인 학습지. AI 자동 채점·해설 + A4 인쇄.
+            단원별 학습지부터 매일 새 연산 문제지까지.
+            <br className="hidden sm:block" />
+            우리 아이 학년에 맞춰 바로 풀고 즉시 채점해요.
           </p>
 
           {/* Grade Picker */}
@@ -117,7 +116,7 @@ export default function LandingPage() {
             </Button>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            단원 학습지 = 객관식·서술형 20문항 + AI 채점 · 연산 문제지 = 단순 연산 반복 드릴
+            단원 학습지 = 객관식·서술형 + 즉시 채점 · 연산 문제지 = 가로식·세로식 반복 드릴
           </p>
         </div>
       </section>
@@ -127,9 +126,9 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl px-4">
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              { title: "전 학년·전 과목", desc: "초1~고3 NCIC 성취기준 기반" },
-              { title: "단원당 20문항", desc: "AI 자동 채점 + 단계별 해설" },
-              { title: "A4 인쇄·PDF", desc: "학습지 그대로 출력 가능" },
+              { title: "매일 새 문제", desc: "연산 드릴은 학습지 ID·날짜로 매번 새 숫자" },
+              { title: "즉시 채점", desc: "정답·오답 유형까지 한 번에 표시" },
+              { title: "회원가입 없이", desc: "지금 바로 풀고, 마음에 들면 인쇄해요" },
             ].map((item) => (
               <Card key={item.title} className="border border-border p-6 text-left">
                 <p className="text-base font-semibold text-foreground">

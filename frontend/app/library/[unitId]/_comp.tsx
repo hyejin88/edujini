@@ -14,11 +14,13 @@ import {
   type ProblemDTO,
   type UnitDTO,
 } from "@/lib/client";
+import { FigureRenderer, type Figure } from "@/components/Figures";
 
 type Problem = ProblemDTO & {
   answer?: string;
   explanation?: string;
   error_type?: string;
+  figure?: Figure;
 };
 
 function gradeLabel(g: number): string {
@@ -312,6 +314,11 @@ function ProblemCell({
           >
             <MathText text={problem.body} />
           </div>
+          {problem.figure && (
+            <div className="mt-1">
+              <FigureRenderer figure={problem.figure} />
+            </div>
+          )}
 
           {problem.type === "multiple_choice" && problem.choices ? (
             <div className="mt-2 space-y-1">

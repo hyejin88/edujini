@@ -55,6 +55,27 @@ def strip_fences(text: str) -> str:
     return re.sub(r"^```(?:json)?\s*|\s*```$", "", (text or "").strip(), flags=re.MULTILINE)
 
 
+def safe_parse_json(text: str) -> dict | list | None:
+    """Gemini가 KaTeX 백슬래시를 단일로 출력할 때 JSON 파싱 실패 → 자동 보정."""
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    # 1차 보정: \X 패턴 (X는 영문자) → \\X (KaTeX 명령어)
+    fixed = re.sub(r'\\(?=[a-zA-Z])', r'\\\\', text)
+    try:
+        return json.loads(fixed)
+    except json.JSONDecodeError:
+        pass
+    # 2차 보정: 제어문자 제거
+    cleaned = re.sub(r'[\x00-\x08\x0B\x0C\x0E-\x1F]', '', fixed)
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError as e:
+        print(f"  [JSON-FIX] 2차 보정도 실패: {e}", flush=True)
+        return None
+
+
 def normalize(p: dict) -> dict:
     for s, d in KEY_MAP.items():
         if s in p and d not in p:
@@ -163,7 +184,9 @@ def gen_unit(client, unit) -> list[dict]:
             raise
 
     text = strip_fences(resp.text or "")
-    data = json.loads(text)
+    data = safe_parse_json(text)
+    if data is None:
+        return []
     return data.get("problems", []) if isinstance(data, dict) else (data if isinstance(data, list) else [])
 
 

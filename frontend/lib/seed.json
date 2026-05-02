@@ -1,438 +1,5 @@
 [
   {
-    "id": "math-3-1-3::천재교육::0",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "천재교육",
-    "type": "multiple_choice",
-    "difficulty": 1,
-    "body": "사탕 12개를 3명에게 똑같이 나누어 주려고 합니다. 한 명이 몇 개씩 가질 수 있는지 알아보는 나눗셈식으로 알맞은 것은 무엇인가요?\n\n(그림: 사탕 12개가 놓여 있고, 3명의 아이가 기대하는 표정으로 앉아 있습니다.)",
-    "choices": [
-      "$$12 \\div 3 = 4$$",
-      "$$3 \\div 12 = 0$$",
-      "$$12 \\div 4 = 3$$",
-      "$$3 \\times 4 = 12$$"
-    ],
-    "answer": "$$12 \\div 3 = 4$$",
-    "answer_aliases": [],
-    "explanation": "사탕 전체 개수 12개를 3명에게 똑같이 나누어 주므로, 12를 3으로 나누는 나눗셈식을 세울 수 있습니다. $$12 \\div 3 = 4$$이므로, 한 명이 4개씩 가질 수 있습니다.",
-    "concept_tags": [
-      "똑같이 나누기",
-      "나눗셈의 의미"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "$$3 \\div 12 = 0$$",
-        "reason": "나누어지는 수와 나누는 수를 혼동하여 식을 잘못 세웠습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::천재교육::1",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "천재교육",
-    "type": "multiple_choice",
-    "difficulty": 1,
-    "body": "연필 15자루를 5자루씩 묶으면 모두 몇 묶음이 되는지 알아보는 나눗셈식은 무엇인가요?",
-    "choices": [
-      "$$15 \\div 5 = 3$$",
-      "$$5 \\div 15 = 0$$",
-      "$$15 \\div 3 = 5$$",
-      "$$15 \\times 5 = 75$$"
-    ],
-    "answer": "$$15 \\div 5 = 3$$",
-    "answer_aliases": [],
-    "explanation": "전체 연필 수 15자루를 5자루씩 묶으므로, 15를 5로 나누는 나눗셈식을 세울 수 있습니다. $$15 \\div 5 = 3$$이므로, 모두 3묶음이 됩니다.",
-    "concept_tags": [
-      "묶어 세기",
-      "나눗셈의 의미"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "$$5 \\div 15 = 0$$",
-        "reason": "전체에서 부분을 나누는 것이 아닌 부분으로 전체를 나누는 것으로 오해하여 나누어지는 수와 나누는 수를 혼동했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::천재교육::2",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "천재교육",
-    "type": "short_answer",
-    "difficulty": 2,
-    "body": "도넛 20개를 한 상자에 4개씩 담으려고 합니다. 도넛을 모두 담으려면 상자가 몇 개 필요한지 나눗셈식을 쓰고 답을 구하시오.",
-    "choices": [],
-    "answer": "$$20 \\div 4 = 5$$, 5개",
-    "answer_aliases": [
-      "5",
-      "5개"
-    ],
-    "explanation": "전체 도넛 20개를 한 상자에 4개씩 담으므로, 필요한 상자 수를 구하기 위해서는 20을 4로 나누어야 합니다. $$20 \\div 4 = 5$$이므로, 상자는 5개 필요합니다.",
-    "concept_tags": [
-      "묶어 세기",
-      "나눗셈식 세우기"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "4개",
-        "reason": "나눗셈 계산에 오류가 있었습니다."
-      },
-      {
-        "label": "개념미숙",
-        "wrong_answer": "4 \\times 5 = 20",
-        "reason": "곱셈식은 맞지만, 문제에서 요구하는 나눗셈식으로 표현하지 못했습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::천재교육::3",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "천재교육",
-    "type": "multiple_choice",
-    "difficulty": 2,
-    "body": "색종이 24장을 4명이 똑같이 나누어 가졌습니다. 한 명이 몇 장씩 가졌는지 나눗셈식과 답을 바르게 연결한 것을 고르시오.",
-    "choices": [
-      "$$24 \\div 4 = 6$$, 6장",
-      "$$24 \\div 6 = 4$$, 4장",
-      "$$4 \\div 24 = 0$$, 0장",
-      "$$24 \\times 4 = 96$$, 96장"
-    ],
-    "answer": "$$24 \\div 4 = 6$$, 6장",
-    "answer_aliases": [],
-    "explanation": "색종이 24장을 4명이 똑같이 나누어 가졌으므로, 24를 4로 나누는 나눗셈식을 세울 수 있습니다. $$24 \\div 4 = 6$$이므로, 한 명이 6장씩 가졌습니다.",
-    "concept_tags": [
-      "똑같이 나누기",
-      "나눗셈식 표현"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "$$4 \\div 24 = 0$$, 0장",
-        "reason": "나누는 수와 나누어지는 수를 혼동하여 식을 잘못 세웠습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::천재교육::4",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "천재교육",
-    "type": "multiple_choice",
-    "difficulty": 3,
-    "body": "바둑돌 18개를 3개씩 묶었더니 6묶음이 되었습니다. 이 상황을 나타내는 나눗셈식과 그와 관계있는 곱셈식으로 알맞은 것은 무엇인가요?\n\n(그림: 바둑돌 18개가 3개씩 묶여서 총 6묶음이 되어 있는 모습.)",
-    "choices": [
-      "$$18 \\div 3 = 6$$, $$3 \\times 6 = 18$$",
-      "$$18 \\div 6 = 3$$, $$6 \\times 3 = 18$$",
-      "$$18 \\div 3 = 6$$, $$18 \\times 3 = 54$$",
-      "$$3 \\times 6 = 18$$, $$18 \\div 6 = 3$$"
-    ],
-    "answer": "$$18 \\div 3 = 6$$, $$3 \\times 6 = 18$$",
-    "answer_aliases": [],
-    "explanation": "전체 바둑돌 18개를 3개씩 묶으면 6묶음이 되므로, 나눗셈식은 $$18 \\div 3 = 6$$입니다. 나눗셈과 곱셈은 서로 관계있는 연산이므로, 몫 6과 나누는 수 3을 곱하면 나누어지는 수 18이 되는 곱셈식 $$3 \\times 6 = 18$$이 관계있는 식입니다.",
-    "concept_tags": [
-      "묶어 세기",
-      "곱셈과 나눗셈의 관계"
-    ],
-    "common_errors": [
-      {
-        "label": "문제해석",
-        "wrong_answer": "$$18 \\div 6 = 3$$, $$6 \\times 3 = 18$$",
-        "reason": "3개씩 묶었다는 조건이 아닌 6묶음이 되었다는 조건으로 나눗셈식을 세워 오답을 선택했습니다."
-      },
-      {
-        "label": "함정미인지",
-        "wrong_answer": "$$3 \\times 6 = 18$$, $$18 \\div 6 = 3$$",
-        "reason": "곱셈과 나눗셈의 관계는 알지만, 문제에서 설명하는 상황의 나눗셈식부터 바르게 찾는 데 어려움이 있었습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::천재교육::5",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "천재교육",
-    "type": "short_answer",
-    "difficulty": 4,
-    "body": "지혜는 리본 30cm를 가지고 있습니다. 이 리본으로 한 개에 5cm씩 리본 장식을 만들려고 합니다. 지혜가 만들 수 있는 리본 장식은 모두 몇 개인지 구하고, 이 상황을 나눗셈식과 곱셈식으로 각각 나타내시오.",
-    "choices": [],
-    "answer": "6개, 나눗셈식: $$30 \\div 5 = 6$$, 곱셈식: $$5 \\times 6 = 30$$",
-    "answer_aliases": [
-      "6개, 나눗셈식: $$30 \\div 5 = 6$$, 곱셈식: $$6 \\times 5 = 30$$"
-    ],
-    "explanation": "1. **만들 수 있는 리본 장식 개수 구하기**: 전체 리본 길이 30cm를 한 개당 필요한 리본 길이 5cm로 나누면 만들 수 있는 장식의 개수를 알 수 있습니다. $$30 \\div 5 = 6$$이므로, 리본 장식은 6개 만들 수 있습니다.\n2. **나눗셈식으로 나타내기**: 전체 30cm를 5cm씩 묶으므로, $$30 \\div 5 = 6$$입니다.\n3. **곱셈식으로 나타내기**: 리본 장식 6개에 각각 5cm씩 리본이 필요하므로, $$5 \\times 6 = 30$$ 또는 $$6 \\times 5 = 30$$으로 나타낼 수 있습니다.",
-    "concept_tags": [
-      "실생활 응용",
-      "나눗셈의 의미",
-      "묶어 세기",
-      "곱셈과 나눗셈의 관계"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "5개",
-        "reason": "나눗셈 계산에 오류가 있었습니다."
-      },
-      {
-        "label": "문제해석",
-        "wrong_answer": "나눗셈식만 작성하거나 곱셈식만 작성",
-        "reason": "문제에서 요구하는 나눗셈식과 곱셈식을 모두 작성하지 않았습니다."
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::미래엔::0",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "미래엔",
-    "type": "multiple_choice",
-    "difficulty": 1,
-    "body": "사과 12개를 친구 4명에게 똑같이 나누어 주려고 합니다. 한 명이 몇 개씩 가질 수 있나요?",
-    "choices": [
-      "2개",
-      "3개",
-      "4개",
-      "5개",
-      "6개"
-    ],
-    "answer": "3개",
-    "answer_aliases": [],
-    "explanation": "1. 사과 전체 개수는 12개입니다.\n2. 친구는 4명입니다.\n3. 12개를 4명에게 똑같이 나누어 주려면 12 ÷ 4를 계산합니다.\n4. 12 ÷ 4 = 3이므로, 한 명이 3개씩 가질 수 있습니다.",
-    "concept_tags": [
-      "똑같이 나누기"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "",
-        "reason": ""
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::미래엔::1",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "미래엔",
-    "type": "short_answer",
-    "difficulty": 2,
-    "body": "연필 24자루를 한 상자에 6자루씩 묶어 담으려고 합니다. 상자는 모두 몇 개가 필요할까요?",
-    "choices": null,
-    "answer": "4개",
-    "answer_aliases": [],
-    "explanation": "1. 연필 전체 개수는 24자루입니다.\n2. 한 상자에 6자루씩 묶어 담습니다.\n3. 24자루를 6자루씩 묶으려면 24 ÷ 6을 계산합니다.\n4. 24 ÷ 6 = 4이므로, 상자는 모두 4개가 필요합니다.",
-    "concept_tags": [
-      "묶어 세기",
-      "똑같이 나누기"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "",
-        "reason": ""
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::미래엔::2",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "미래엔",
-    "type": "multiple_choice",
-    "difficulty": 2,
-    "body": "어떤 수를 4로 나누면 6이 됩니다. 어떤 수는 얼마일까요?",
-    "choices": [
-      "10",
-      "18",
-      "24",
-      "30",
-      "36"
-    ],
-    "answer": "24",
-    "answer_aliases": [],
-    "explanation": "1. '어떤 수를 4로 나누면 6이 된다'는 나눗셈식으로 □ ÷ 4 = 6으로 나타낼 수 있습니다.\n2. 나눗셈과 곱셈의 관계를 이용하면, 나누어지는 수는 나누는 수와 몫을 곱한 것과 같습니다.\n3. 따라서 □ = 4 × 6을 계산합니다.\n4. 4 × 6 = 24이므로, 어떤 수는 24입니다.",
-    "concept_tags": [
-      "곱셈과 나눗셈의 관계"
-    ],
-    "common_errors": [
-      {
-        "label": "개념미숙",
-        "wrong_answer": "",
-        "reason": ""
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::미래엔::3",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "미래엔",
-    "type": "short_answer",
-    "difficulty": 3,
-    "body": "딸기 28개를 컵 4개에 똑같이 나누어 담으려고 합니다. 한 컵에 딸기를 몇 개씩 담을 수 있을까요?",
-    "choices": null,
-    "answer": "7개",
-    "answer_aliases": [],
-    "explanation": "1. 딸기 전체 개수는 28개입니다.\n2. 컵은 4개입니다.\n3. 28개를 4개의 컵에 똑같이 나누어 담으려면 28 ÷ 4를 계산합니다.\n4. 28 ÷ 4 = 7이므로, 한 컵에 딸기를 7개씩 담을 수 있습니다.",
-    "concept_tags": [
-      "똑같이 나누기"
-    ],
-    "common_errors": [
-      {
-        "label": "계산실수",
-        "wrong_answer": "",
-        "reason": ""
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::미래엔::4",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "미래엔",
-    "type": "multiple_choice",
-    "difficulty": 3,
-    "body": "35명의 학생이 한 차에 5명씩 나누어 타고 수영장으로 갑니다. 차는 모두 몇 대가 필요할까요? 이 상황을 나눗셈식으로 바르게 나타낸 것은 어느 것인가요?",
-    "choices": [
-      "35 - 5 = 30",
-      "35 + 5 = 40",
-      "35 ÷ 5 = 7",
-      "5 × 7 = 35",
-      "35 ÷ 7 = 5"
-    ],
-    "answer": "35 ÷ 5 = 7",
-    "answer_aliases": [],
-    "explanation": "1. 전체 학생 수는 35명입니다.\n2. 한 차에 5명씩 탑니다.\n3. 35명을 5명씩 묶어 나누는 것이므로 35 ÷ 5로 식을 세울 수 있습니다.\n4. 35 ÷ 5 = 7이므로, 차는 7대가 필요합니다.\n5. 이 상황을 바르게 나타낸 나눗셈식은 35 ÷ 5 = 7입니다.",
-    "concept_tags": [
-      "똑같이 나누기",
-      "곱셈과 나눗셈의 관계"
-    ],
-    "common_errors": [
-      {
-        "label": "문제해석",
-        "wrong_answer": "",
-        "reason": ""
-      },
-      {
-        "label": "개념미숙",
-        "wrong_answer": "",
-        "reason": ""
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
-    "id": "math-3-1-3::미래엔::5",
-    "subject": "수학",
-    "grade": 3,
-    "standard_code": "[4수01-07]",
-    "unit_id": "math-3-1-3",
-    "unit_name": "나눗셈",
-    "sub_unit": "똑같이 나누기",
-    "publisher": "미래엔",
-    "type": "multiple_choice",
-    "difficulty": 4,
-    "body": "어떤 수를 8로 나누었더니 4가 되었습니다. 이 어떤 수를 2로 나누면 얼마가 될까요?",
-    "choices": [
-      "8",
-      "16",
-      "24",
-      "32",
-      "40"
-    ],
-    "answer": "16",
-    "answer_aliases": [],
-    "explanation": "1. 먼저 '어떤 수를 8로 나누었더니 4가 되었다'는 나눗셈식을 세웁니다: □ ÷ 8 = 4.\n2. 나눗셈과 곱셈의 관계를 이용하여 어떤 수를 구합니다: □ = 8 × 4 = 32.\n3. 이제 어떤 수(32)를 2로 나눕니다: 32 ÷ 2.\n4. 32 ÷ 2 = 16이므로, 답은 16입니다.",
-    "concept_tags": [
-      "곱셈과 나눗셈의 관계",
-      "똑같이 나누기"
-    ],
-    "common_errors": [
-      {
-        "label": "문제해석",
-        "wrong_answer": "",
-        "reason": ""
-      },
-      {
-        "label": "계산실수",
-        "wrong_answer": "",
-        "reason": ""
-      }
-    ],
-    "license_code": "SELF_GEN",
-    "is_published": true
-  },
-  {
     "id": "math-3-1-5::천재교육::0",
     "subject": "수학",
     "grade": 3,
@@ -6214,6 +5781,733 @@
         "label": "문제해석",
         "wrong_answer": "20개",
         "reason": "나머지 귤에서 다시 분수를 계산해야 하는데, 전체 귤에서 상한 귤을 계산했을 수 있습니다. (예: $30 - 6 - (30 \\times \\frac{1}{4})$)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::0",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "사탕 15개를 친구 3명이 똑같이 나누어 가집니다. 한 명이 가질 수 있는 사탕은 몇 개입니까?",
+    "choices": [
+      "2개",
+      "3개",
+      "4개",
+      "5개"
+    ],
+    "answer": "5개",
+    "answer_aliases": [
+      "5"
+    ],
+    "explanation": "사탕 15개를 3명이 똑같이 나누어 가지므로, $15 \\div 3 = 5$입니다. 따라서 한 명이 5개씩 가질 수 있습니다.",
+    "concept_tags": [
+      "똑같이 나누기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "3개",
+        "reason": "나누는 수와 몫을 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::1",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "연필 20자루를 한 묶음에 4자루씩 묶으려고 합니다. 연필은 몇 묶음이 됩니까?",
+    "choices": [
+      "3묶음",
+      "4묶음",
+      "5묶음",
+      "6묶음"
+    ],
+    "answer": "5묶음",
+    "answer_aliases": [
+      "5"
+    ],
+    "explanation": "연필 20자루를 4자루씩 묶으므로, $20 \\div 4 = 5$입니다. 따라서 5묶음이 됩니다.",
+    "concept_tags": [
+      "묶어 세기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "4묶음",
+        "reason": "곱셈구구를 정확히 기억하지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::2",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 나눗셈식을 계산하시오. `$18 \\div 3 = \\square$`",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "6",
+    "answer_aliases": [
+      "6"
+    ],
+    "explanation": "$18 \\div 3$은 3에 어떤 수를 곱하면 18이 되는지 찾는 것과 같습니다. $3 \\times 6 = 18$이므로, $18 \\div 3 = 6$입니다.",
+    "concept_tags": [
+      "나눗셈 계산",
+      "곱셈과 나눗셈의 관계"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "5",
+        "reason": "곱셈구구를 정확히 떠올리지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::3",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "귤 24개를 6개씩 바구니에 담으려고 합니다. 바구니는 몇 개 필요합니까?",
+    "choices": [
+      "3개",
+      "4개",
+      "5개",
+      "6개"
+    ],
+    "answer": "4개",
+    "answer_aliases": [
+      "4"
+    ],
+    "explanation": "귤 24개를 6개씩 묶으므로, $24 \\div 6 = 4$입니다. 따라서 바구니는 4개 필요합니다.",
+    "concept_tags": [
+      "묶어 세기"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "3개",
+        "reason": "나눗셈 계산이 틀렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::4",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "친구 5명이 색종이 25장을 똑같이 나누어 가졌습니다. 한 명이 받은 색종이는 몇 장입니까?",
+    "choices": [
+      "4장",
+      "5장",
+      "6장",
+      "7장"
+    ],
+    "answer": "5장",
+    "answer_aliases": [
+      "5"
+    ],
+    "explanation": "색종이 25장을 5명이 똑같이 나누어 가지므로, $25 \\div 5 = 5$입니다. 따라서 한 명이 5장씩 받습니다.",
+    "concept_tags": [
+      "똑같이 나누기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "4장",
+        "reason": "나누는 상황을 곱하는 상황으로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::5",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음 중 나눗셈식 `$12 \\div 4 = 3$`과 같은 상황은 어느 것입니까?",
+    "choices": [
+      "사과 12개를 3명이 나눕니다.",
+      "연필 12자루를 4자루씩 묶습니다.",
+      "공책 4권을 3명이 나눕니다.",
+      "지우개 3개를 12명이 나눕니다."
+    ],
+    "answer": "연필 12자루를 4자루씩 묶습니다.",
+    "answer_aliases": [],
+    "explanation": "$12 \\div 4 = 3$은 전체 12개를 4개씩 묶었을 때 묶음이 3개가 된다는 의미이거나, 12개를 4명에게 똑같이 나누어 주었을 때 한 명이 3개씩 받는다는 의미입니다. '연필 12자루를 4자루씩 묶습니다.'는 묶어 세기의 상황을 나타냅니다.",
+    "concept_tags": [
+      "나눗셈 의미",
+      "묶어 세기"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "사과 12개를 3명이 나눕니다.",
+        "reason": "나누는 수와 몫의 역할을 혼동했습니다. (12÷3=4에 해당)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::6",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "어떤 수를 3으로 나누면 7이 됩니다. 어떤 수는 얼마입니까?",
+    "choices": [
+      "18",
+      "21",
+      "24",
+      "27"
+    ],
+    "answer": "21",
+    "answer_aliases": [
+      "21"
+    ],
+    "explanation": "어떤 수를 `$A$`라고 하면, `$A \\div 3 = 7$`입니다. 나눗셈과 곱셈의 관계를 이용하면 `$3 \\times 7 = A$`이므로, `$A = 21$`입니다.",
+    "concept_tags": [
+      "곱셈과 나눗셈의 관계",
+      "미지수 찾기"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "24",
+        "reason": "곱셈구구를 정확히 기억하지 못했거나, 덧셈으로 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::7",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "사과 30개를 똑같이 나누어 담았더니 한 봉지에 5개씩 들어 있었습니다. 사과는 몇 봉지에 담았습니까?",
+    "choices": [
+      "4봉지",
+      "5봉지",
+      "6봉지",
+      "7봉지"
+    ],
+    "answer": "6봉지",
+    "answer_aliases": [
+      "6"
+    ],
+    "explanation": "사과 30개를 한 봉지에 5개씩 담았으므로, $30 \\div 5 = 6$입니다. 따라서 사과는 6봉지에 담았습니다.",
+    "concept_tags": [
+      "묶어 세기",
+      "나눗셈 의미"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "5봉지",
+        "reason": "나누는 수와 몫을 혼동했습니다. (주어진 '5개씩'을 몫으로 착각)"
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::8",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "곱셈식 `$4 \\times 6 = 24$`를 이용하여 만들 수 있는 나눗셈식이 아닌 것은 무엇입니까?",
+    "choices": [
+      "$24 \\div 4 = 6$",
+      "$24 \\div 6 = 4$",
+      "$24 \\div 3 = 8$",
+      "모두 만들 수 있습니다."
+    ],
+    "answer": "$24 \\div 3 = 8$",
+    "answer_aliases": [],
+    "explanation": "곱셈과 나눗셈의 관계에 따라 `$4 \\times 6 = 24$`이면 `$24 \\div 4 = 6$`과 `$24 \\div 6 = 4$`를 만들 수 있습니다. `$24 \\div 3 = 8$`은 `$3 \\times 8 = 24$`와 관련된 식입니다.",
+    "concept_tags": [
+      "곱셈과 나눗셈의 관계"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "모두 만들 수 있습니다.",
+        "reason": "곱셈과 나눗셈의 관계를 정확히 이해하지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::9",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "딸기 16개를 접시 4개에 똑같이 나누어 담으려면 한 접시에 딸기를 몇 개씩 담아야 합니까? 이 상황을 바르게 나타낸 식은 무엇입니까?",
+    "choices": [
+      "$16 + 4 = 20$",
+      "$16 - 4 = 12$",
+      "$16 \\times 4 = 64$",
+      "$16 \\div 4 = 4$"
+    ],
+    "answer": "$16 \\div 4 = 4$",
+    "answer_aliases": [],
+    "explanation": "딸기 16개를 접시 4개에 '똑같이 나누어 담는' 상황은 나눗셈으로 표현합니다. 따라서 `$16 \\div 4$`가 올바른 식입니다. 계산하면 `$16 \\div 4 = 4$`입니다.",
+    "concept_tags": [
+      "나눗셈 식 만들기",
+      "똑같이 나누기"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$16 \\times 4 = 64$",
+        "reason": "나누는 상황을 곱하는 상황으로 잘못 해석했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::10",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "27개의 구슬을 한 사람에게 9개씩 나누어 주려고 합니다. 몇 명에게 나누어 줄 수 있습니까?",
+    "choices": [
+      "2명",
+      "3명",
+      "4명",
+      "5명"
+    ],
+    "answer": "3명",
+    "answer_aliases": [
+      "3"
+    ],
+    "explanation": "27개의 구슬을 한 사람에게 9개씩 묶어 주므로, $27 \\div 9 = 3$입니다. 따라서 3명에게 나누어 줄 수 있습니다.",
+    "concept_tags": [
+      "묶어 세기",
+      "나눗셈 의미"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "2명",
+        "reason": "곱셈구구를 정확하게 떠올리지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::11",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "다음 나눗셈식 중 몫이 가장 큰 것은 어느 것입니까?",
+    "choices": [
+      "$10 \\div 2$",
+      "$12 \\div 3$",
+      "$16 \\div 4$",
+      "$20 \\div 5$"
+    ],
+    "answer": "$10 \\div 2$",
+    "answer_aliases": [],
+    "explanation": "각 나눗셈식의 몫을 계산하면 다음과 같습니다. `$10 \\div 2 = 5$`, `$12 \\div 3 = 4$`, `$16 \\div 4 = 4$`, `$20 \\div 5 = 4$`. 따라서 몫이 가장 큰 것은 `$10 \\div 2$`입니다.",
+    "concept_tags": [
+      "나눗셈 계산",
+      "몫의 비교"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$20 \\div 5$",
+        "reason": "가장 큰 숫자를 포함한 식이 몫이 가장 클 것이라고 착각했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::12",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "연필 7자루씩 3묶음이 있습니다. 이 연필을 7명에게 똑같이 나누어 주려면 한 명당 몇 자루씩 받을 수 있습니까?",
+    "choices": [
+      "2자루",
+      "3자루",
+      "4자루",
+      "5자루"
+    ],
+    "answer": "3자루",
+    "answer_aliases": [
+      "3"
+    ],
+    "explanation": "먼저 전체 연필 수를 구합니다. 7자루씩 3묶음이므로 `$7 \\times 3 = 21$`자루입니다. 이 21자루를 7명에게 똑같이 나누어 주므로 `$21 \\div 7 = 3$`입니다. 따라서 한 명당 3자루씩 받을 수 있습니다.",
+    "concept_tags": [
+      "두 단계 문제",
+      "곱셈과 나눗셈"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "7자루",
+        "reason": "처음 7자루라는 숫자만 보고 함정에 빠졌습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::13",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "application",
+    "body": "친구 4명이 공책 32권을 똑같이 나누어 가졌습니다. 한 명이 받은 공책은 몇 권입니까? 답과 단위를 함께 쓰시오.",
+    "choices": null,
+    "answer": "8권",
+    "answer_aliases": [
+      "8개"
+    ],
+    "explanation": "공책 32권을 친구 4명이 똑같이 나누어 가지므로, `$32 \\div 4 = 8$`입니다. 따라서 한 명이 8권씩 받습니다.",
+    "concept_tags": [
+      "똑같이 나누기",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "7권",
+        "reason": "곱셈구구를 정확히 떠올리지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::14",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "지우개 18개를 2개씩 주머니에 넣으려고 합니다. 주머니는 몇 개 필요합니까?",
+    "choices": [
+      "7개",
+      "8개",
+      "9개",
+      "10개"
+    ],
+    "answer": "9개",
+    "answer_aliases": [
+      "9"
+    ],
+    "explanation": "지우개 18개를 2개씩 묶어서 주머니에 넣으므로, `$18 \\div 2 = 9$`입니다. 따라서 주머니는 9개 필요합니다.",
+    "concept_tags": [
+      "묶어 세기",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "8개",
+        "reason": "나눗셈 계산이 틀렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::15",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "빵 45개를 한 상자에 9개씩 담으려고 합니다. 빵을 모두 담으려면 상자는 몇 개 필요합니까? 답과 단위를 함께 쓰시오.",
+    "choices": null,
+    "answer": "5개",
+    "answer_aliases": [
+      "5개"
+    ],
+    "explanation": "빵 45개를 한 상자에 9개씩 묶어 담으므로, `$45 \\div 9 = 5$`입니다. 따라서 상자는 5개 필요합니다.",
+    "concept_tags": [
+      "묶어 세기",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "4개",
+        "reason": "곱셈구구를 정확히 기억하지 못했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::16",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "꽃 28송이를 똑같이 나누어 4개의 꽃병에 꽂았습니다. 각 꽃병에는 꽃이 몇 송이씩 꽂혀 있습니까?",
+    "choices": [
+      "5송이",
+      "6송이",
+      "7송이",
+      "8송이"
+    ],
+    "answer": "7송이",
+    "answer_aliases": [
+      "7"
+    ],
+    "explanation": "꽃 28송이를 4개의 꽃병에 똑같이 나누어 꽂으므로, `$28 \\div 4 = 7$`입니다. 따라서 각 꽃병에는 7송이씩 꽂혀 있습니다.",
+    "concept_tags": [
+      "똑같이 나누기",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "6송이",
+        "reason": "나눗셈 계산이 틀렸습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::17",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 수에 6을 곱하면 42가 됩니다. 이 어떤 수를 7로 나누면 몫은 얼마입니까? 답만 쓰시오.",
+    "choices": null,
+    "answer": "1",
+    "answer_aliases": [
+      "1개"
+    ],
+    "explanation": "먼저 어떤 수를 찾아야 합니다. 어떤 수를 `$A$`라고 하면 `$A \\times 6 = 42$`입니다. 곱셈과 나눗셈의 관계에 따라 `$A = 42 \\div 6 = 7$`입니다. 이제 이 어떤 수 7을 7로 나누면 `$7 \\div 7 = 1$`입니다. 따라서 몫은 1입니다.",
+    "concept_tags": [
+      "곱셈과 나눗셈의 관계",
+      "두 단계 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "7",
+        "reason": "어떤 수만 구하고 마지막 나눗셈을 하지 않았습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::18",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "challenge",
+    "body": "주스 35병을 5병씩 상자에 담아 판매하려고 합니다. 또, 이 주스를 7명에게 똑같이 나누어 주려고 합니다. 다음 설명 중 옳은 것은 무엇입니까?",
+    "choices": [
+      "7상자가 되고, 한 명당 7병씩 마실 수 있습니다.",
+      "5상자가 되고, 한 명당 5병씩 마실 수 있습니다.",
+      "7상자가 되고, 한 명당 5병씩 마실 수 있습니다.",
+      "5상자가 되고, 한 명당 7병씩 마실 수 있습니다."
+    ],
+    "answer": "7상자가 되고, 한 명당 5병씩 마실 수 있습니다.",
+    "answer_aliases": [],
+    "explanation": "주스 35병을 5병씩 상자에 담으면 `$35 \\div 5 = 7$`상자가 됩니다. 이 주스 35병을 7명에게 똑같이 나누어 주면 `$35 \\div 7 = 5$`병씩 마실 수 있습니다. 따라서 7상자가 되고, 한 명당 5병씩 마실 수 있습니다.",
+    "concept_tags": [
+      "두 가지 나눗셈 상황",
+      "똑같이 나누기",
+      "묶어 세기"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "7상자가 되고, 한 명당 7병씩 마실 수 있습니다.",
+        "reason": "각각의 나눗셈 상황에 맞는 숫자를 혼동했습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-3-1-3::v3::19",
+    "subject": "수학",
+    "grade": 3,
+    "standard_code": "[4수01-07]",
+    "unit_id": "math-3-1-3",
+    "unit_name": "나눗셈",
+    "sub_unit": "똑같이 나누기",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "연필 40자루를 한 묶음에 8자루씩 묶었습니다. 이렇게 묶은 연필 묶음을 5명에게 똑같이 나누어 주려고 합니다. 한 명당 연필 묶음을 몇 묶음씩 가질 수 있습니까? 답과 단위를 함께 쓰시오.",
+    "choices": null,
+    "answer": "1묶음",
+    "answer_aliases": [
+      "1개"
+    ],
+    "explanation": "먼저 연필 40자루를 8자루씩 묶으면 `$40 \\div 8 = 5$`묶음이 됩니다. 이제 이 5묶음의 연필을 5명에게 똑같이 나누어 주므로 `$5 \\div 5 = 1$`묶음씩 가질 수 있습니다. 따라서 한 명당 1묶음씩 가질 수 있습니다.",
+    "concept_tags": [
+      "두 단계 나눗셈",
+      "묶어 세기",
+      "똑같이 나누기"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "5묶음",
+        "reason": "첫 번째 나눗셈 결과만 구하고 마지막 단계를 놓쳤습니다."
       }
     ],
     "license_code": "SELF_GEN",
