@@ -37,8 +37,14 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-secondary py-16 md:py-24">
+      <section className="bg-secondary py-12 md:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/character.png"
+            alt="EDU Jini"
+            className="mx-auto mb-4 h-32 w-32 md:h-40 md:w-40"
+          />
           <h1 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
             오늘의 학습,{" "}
             <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">

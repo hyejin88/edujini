@@ -13858,5 +13858,1447 @@
     ],
     "license_code": "SELF_GEN",
     "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::0",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 중 15의 약수가 아닌 것은 어느 것입니까?",
+    "choices": [
+      "1",
+      "3",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "answer_aliases": null,
+    "explanation": "15의 약수는 1, 3, 5, 15입니다. 따라서 6은 15의 약수가 아닙니다.",
+    "concept_tags": [
+      "약수"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "1",
+        "reason": "1은 모든 수의 약수임을 혼동할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::1",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 중 8의 배수가 아닌 것은 어느 것입니까?",
+    "choices": [
+      "8",
+      "16",
+      "24",
+      "30"
+    ],
+    "answer": "30",
+    "answer_aliases": null,
+    "explanation": "8의 배수는 8, 16, 24, 32, ... 입니다. 30은 8의 배수가 아닙니다.",
+    "concept_tags": [
+      "배수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "24",
+        "reason": "배수를 잘못 계산할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::2",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "24의 약수를 모두 쓰시오.",
+    "choices": null,
+    "answer": "1, 2, 3, 4, 6, 8, 12, 24",
+    "answer_aliases": [
+      "1 2 3 4 6 8 12 24"
+    ],
+    "explanation": "24를 나누어떨어지게 하는 수는 1, 2, 3, 4, 6, 8, 12, 24입니다.",
+    "concept_tags": [
+      "약수"
+    ],
+    "common_errors": [
+      {
+        "label": "누락",
+        "wrong_answer": "1, 2, 3, 4, 6, 8, 12",
+        "reason": "자기 자신을 약수에서 빠뜨릴 수 있습니다."
+      },
+      {
+        "label": "누락",
+        "wrong_answer": "2, 3, 4, 6, 8, 12, 24",
+        "reason": "1을 약수에서 빠뜨릴 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::3",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "60보다 작은 9의 배수는 모두 몇 개입니까?",
+    "choices": [
+      "5개",
+      "6개",
+      "7개",
+      "8개"
+    ],
+    "answer": "6개",
+    "answer_aliases": null,
+    "explanation": "9의 배수는 9, 18, 27, 36, 45, 54입니다. 60보다 작은 9의 배수는 총 6개입니다.",
+    "concept_tags": [
+      "배수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "7개",
+        "reason": "63을 포함하여 개수를 잘못 셀 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::4",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 설명 중 옳은 것은 어느 것입니까?",
+    "choices": [
+      "1은 모든 수의 배수이다.",
+      "어떤 수의 약수는 그 수보다 항상 작다.",
+      "어떤 수의 배수는 그 수보다 항상 크다.",
+      "1은 모든 수의 약수이다."
+    ],
+    "answer": "1은 모든 수의 약수이다.",
+    "answer_aliases": null,
+    "explanation": "1은 모든 자연수의 약수입니다. 어떤 수의 약수 중에는 자기 자신도 포함되고, 배수 중에도 자기 자신도 포함됩니다.",
+    "concept_tags": [
+      "약수",
+      "배수"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "어떤 수의 약수는 그 수보다 항상 작다.",
+        "reason": "자기 자신을 약수에서 제외하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::5",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$35$는 $7$의 $\\square$이다. $\\square$ 안에 알맞은 말은 무엇입니까?",
+    "choices": [
+      "약수",
+      "배수",
+      "공약수",
+      "공배수"
+    ],
+    "answer": "배수",
+    "answer_aliases": null,
+    "explanation": "$35 = 7 \\times 5$이므로, 35는 7의 배수입니다.",
+    "concept_tags": [
+      "약수",
+      "배수"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "약수",
+        "reason": "약수와 배수의 관계를 혼동할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::6",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "16과 24의 공약수가 아닌 것은 어느 것입니까?",
+    "choices": [
+      "1",
+      "2",
+      "4",
+      "6"
+    ],
+    "answer": "6",
+    "answer_aliases": null,
+    "explanation": "16의 약수는 1, 2, 4, 8, 16입니다. 24의 약수는 1, 2, 3, 4, 6, 8, 12, 24입니다. 공약수는 1, 2, 4, 8입니다. 따라서 6은 공약수가 아닙니다.",
+    "concept_tags": [
+      "공약수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "8",
+        "reason": "한 수의 약수만 보고 판단할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::7",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "5와 8의 공배수 중 50보다 작은 수는 모두 몇 개입니까?",
+    "choices": [
+      "1개",
+      "2개",
+      "3개",
+      "4개"
+    ],
+    "answer": "1개",
+    "answer_aliases": null,
+    "explanation": "5와 8의 최소공배수는 40입니다. 공배수는 40, 80, ... 입니다. 50보다 작은 공배수는 40 한 개뿐입니다.",
+    "concept_tags": [
+      "공배수",
+      "최소공배수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "2개",
+        "reason": "최소공배수를 잘못 구하거나 개수를 잘못 셀 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::8",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "36과 48의 최대공약수를 구하시오.",
+    "choices": null,
+    "answer": "12",
+    "answer_aliases": null,
+    "explanation": "36의 약수: 1, 2, 3, 4, 6, 9, 12, 18, 36\n48의 약수: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48\n공약수 중 가장 큰 수는 12입니다.",
+    "concept_tags": [
+      "최대공약수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "6",
+        "reason": "모든 공약수를 찾지 못하고 중간에 멈출 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::9",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "10과 15의 최소공배수를 구하시오.",
+    "choices": null,
+    "answer": "30",
+    "answer_aliases": null,
+    "explanation": "10의 배수: 10, 20, 30, 40, ...\n15의 배수: 15, 30, 45, ...\n공배수 중 가장 작은 수는 30입니다.",
+    "concept_tags": [
+      "최소공배수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "150",
+        "reason": "두 수를 곱하여 최소공배수로 착각할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::10",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "두 수의 공약수는 항상 최대공약수의 약수이다. 이 문장이 맞으면 '참', 틀리면 '거짓'을 고르시오.",
+    "choices": [
+      "참",
+      "거짓"
+    ],
+    "answer": "참",
+    "answer_aliases": null,
+    "explanation": "두 수의 공약수는 최대공약수의 약수와 같습니다.",
+    "concept_tags": [
+      "공약수",
+      "최대공약수"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "거짓",
+        "reason": "공약수와 최대공약수의 관계를 정확히 이해하지 못할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::11",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "concept",
+    "body": "두 수의 공배수는 항상 최소공배수의 배수이다. 이 문장이 맞으면 '참', 틀리면 '거짓'을 고르시오.",
+    "choices": [
+      "참",
+      "거짓"
+    ],
+    "answer": "참",
+    "answer_aliases": null,
+    "explanation": "두 수의 공배수는 최소공배수의 배수와 같습니다.",
+    "concept_tags": [
+      "공배수",
+      "최소공배수"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "거짓",
+        "reason": "공배수와 최소공배수의 관계를 정확히 이해하지 못할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::12",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "연필 30자루와 지우개 42개를 가능한 한 많은 학생들에게 똑같이 나누어 주려고 합니다. 몇 명의 학생에게 나누어 줄 수 있습니까?",
+    "choices": [
+      "5명",
+      "6명",
+      "7명",
+      "8명"
+    ],
+    "answer": "6명",
+    "answer_aliases": null,
+    "explanation": "가능한 한 많은 학생들에게 똑같이 나누어 주려면 30과 42의 최대공약수를 구해야 합니다.\n30의 약수: 1, 2, 3, 5, 6, 10, 15, 30\n42의 약수: 1, 2, 3, 6, 7, 14, 21, 42\n최대공약수는 6입니다. 따라서 6명의 학생에게 나누어 줄 수 있습니다.",
+    "concept_tags": [
+      "최대공약수",
+      "실생활"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "7명",
+        "reason": "최소공배수를 구하거나 약수를 잘못 찾을 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::13",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "가로 12cm, 세로 18cm인 직사각형 모양의 종이를 겹치지 않게 이어 붙여 가장 작은 정사각형을 만들려고 합니다. 정사각형의 한 변의 길이는 몇 cm입니까?",
+    "choices": [
+      "24cm",
+      "36cm",
+      "48cm",
+      "72cm"
+    ],
+    "answer": "36cm",
+    "answer_aliases": null,
+    "explanation": "가장 작은 정사각형을 만들려면 12와 18의 최소공배수를 구해야 합니다.\n12의 배수: 12, 24, 36, 48, ...\n18의 배수: 18, 36, 54, ...\n최소공배수는 36입니다. 따라서 정사각형의 한 변의 길이는 36cm입니다.",
+    "concept_tags": [
+      "최소공배수",
+      "실생활"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "72cm",
+        "reason": "두 수를 곱하거나 최대공약수를 구하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::14",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 두 수의 최대공약수는 9이고, 최소공배수는 108입니다. 두 수 중 하나가 27일 때, 다른 한 수는 얼마입니까?",
+    "choices": null,
+    "answer": "36",
+    "answer_aliases": null,
+    "explanation": "두 수의 곱은 최대공약수와 최소공배수의 곱과 같습니다.\n$27 \\times \\square = 9 \\times 108$\n$27 \\times \\square = 972$\n$\\square = 972 \\div 27$\n$\\square = 36$\n따라서 다른 한 수는 36입니다.",
+    "concept_tags": [
+      "최대공약수",
+      "최소공배수",
+      "관계"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "54",
+        "reason": "나눗셈 또는 곱셈 과정에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::15",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "4로 나누면 2가 남고, 5로 나누면 3이 남는 가장 작은 두 자리 자연수는 무엇입니까?",
+    "choices": [
+      "18",
+      "22",
+      "28",
+      "38"
+    ],
+    "answer": "18",
+    "answer_aliases": null,
+    "explanation": "어떤 수를 $\\square$라고 하면, $\\square$는 4로 나누면 2가 남고, 5로 나누면 3이 남습니다.\n이것은 $\\square+2$가 4의 배수이고, $\\square+2$가 5의 배수라는 뜻입니다.\n즉, $\\square+2$는 4와 5의 공배수입니다.\n4와 5의 최소공배수는 20입니다.\n공배수는 20, 40, 60, ... 입니다.\n$\\square+2 = 20$일 때, $\\square = 18$입니다.\n18은 두 자리 자연수 중 가장 작은 수이며, 조건을 만족합니다.",
+    "concept_tags": [
+      "공배수",
+      "나머지",
+      "실생활"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "22",
+        "reason": "나머지 조건을 잘못 적용하거나, 4와 5의 공배수를 잘못 찾을 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::16",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "application",
+    "body": "12와 18의 공약수 중 1이 아닌 약수의 합을 구하시오.",
+    "choices": [
+      "6",
+      "9",
+      "11",
+      "12"
+    ],
+    "answer": "11",
+    "answer_aliases": null,
+    "explanation": "12의 약수: 1, 2, 3, 4, 6, 12\n18의 약수: 1, 2, 3, 6, 9, 18\n12와 18의 공약수는 1, 2, 3, 6입니다.\n이 중에서 1이 아닌 약수는 2, 3, 6입니다.\n이들의 합은 $2 + 3 + 6 = 11$입니다.",
+    "concept_tags": [
+      "공약수",
+      "합"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "12",
+        "reason": "1을 포함하여 합을 구하거나, 공약수를 잘못 찾을 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::17",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 수로 36을 나누면 나누어떨어지고, 52를 나누면 4가 남습니다. 이러한 수 중에서 가장 큰 수는 무엇입니까?",
+    "choices": null,
+    "answer": "12",
+    "answer_aliases": null,
+    "explanation": "어떤 수는 36의 약수입니다.\n어떤 수는 52에서 4를 뺀 수, 즉 48의 약수입니다.\n따라서 어떤 수는 36과 48의 공약수입니다. 이 중에서 가장 큰 수를 찾아야 하므로 최대공약수를 구합니다.\n36의 약수: 1, 2, 3, 4, 6, 9, 12, 18, 36\n48의 약수: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48\n공약수는 1, 2, 3, 4, 6, 12입니다.\n이 중에서 가장 큰 수는 12입니다. 또한, 나누는 수는 나머지(4)보다 커야 하므로 12는 조건을 만족합니다.",
+    "concept_tags": [
+      "최대공약수",
+      "나머지"
+    ],
+    "common_errors": [
+      {
+        "label": "함정미인지",
+        "wrong_answer": "4",
+        "reason": "나누는 수가 나머지보다 커야 한다는 조건을 놓칠 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::18",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "세 수 12, 18, 30의 최대공약수와 최소공배수를 각각 구하시오.",
+    "choices": null,
+    "answer": "최대공약수: 6, 최소공배수: 180",
+    "answer_aliases": [
+      "최대공약수 6, 최소공배수 180",
+      "6, 180"
+    ],
+    "explanation": "세 수의 최대공약수를 구합니다.\n12 = $2 \\times 2 \\times 3$\n18 = $2 \\times 3 \\times 3$\n30 = $2 \\times 3 \\times 5$\n공통으로 곱해진 수는 $2 \\times 3 = 6$입니다. (최대공약수)\n세 수의 최소공배수를 구합니다.\n$2 \\times 2 \\times 3 \\times 3 \\times 5 = 180$입니다. (최소공배수)",
+    "concept_tags": [
+      "최대공약수",
+      "최소공배수",
+      "세 수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "최대공약수: 2, 최소공배수: 360",
+        "reason": "소인수분해를 잘못하거나 공약수/공배수를 잘못 구할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-2::v3::19",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-02]",
+    "unit_id": "math-5-1-2",
+    "unit_name": "약수와 배수",
+    "sub_unit": "약수·배수·공약수·공배수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "두 자연수 A와 B의 최대공약수는 8이고, 최소공배수는 120입니다. A가 24일 때, B는 얼마입니까?",
+    "choices": [
+      "30",
+      "36",
+      "40",
+      "48"
+    ],
+    "answer": "40",
+    "answer_aliases": null,
+    "explanation": "두 자연수의 곱은 최대공약수와 최소공배수의 곱과 같습니다.\n$A \\times B = (최대공약수) \\times (최소공배수)$\n$24 \\times B = 8 \\times 120$\n$24 \\times B = 960$\n$B = 960 \\div 24$\n$B = 40$\n따라서 B는 40입니다.",
+    "concept_tags": [
+      "최대공약수",
+      "최소공배수",
+      "관계"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "30",
+        "reason": "나눗셈 과정에서 실수가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::0",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "다음 분수 중 가장 큰 분수는 어느 것인가요?",
+    "choices": [
+      "$\\frac{1}{2}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{4}{5}$"
+    ],
+    "answer": "$\\frac{4}{5}$",
+    "answer_aliases": [
+      "4/5"
+    ],
+    "explanation": "모든 분수를 통분하여 크기를 비교합니다. 2, 3, 4, 5의 최소공배수는 60입니다. \n$\\frac{1}{2} = \\frac{30}{60}$\n$\\frac{2}{3} = \\frac{40}{60}$\n$\\frac{3}{4} = \\frac{45}{60}$\n$\\frac{4}{5} = \\frac{48}{60}$\n따라서 가장 큰 분수는 $\\frac{4}{5}$입니다.",
+    "concept_tags": [
+      "분수 크기 비교",
+      "통분"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "$\\frac{1}{2}$",
+        "reason": "분모가 작다고 무조건 크다고 오해할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::1",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 1,
+    "section": "warmup",
+    "body": "$\\frac{1}{3}$과 $\\frac{1}{4}$을 통분할 때, 공통분모가 될 수 있는 수는 무엇인가요?",
+    "choices": [
+      "7",
+      "12",
+      "16",
+      "24"
+    ],
+    "answer": "12",
+    "answer_aliases": [
+      "12"
+    ],
+    "explanation": "두 분수의 분모인 3과 4의 최소공배수를 찾으면 됩니다. 3과 4의 최소공배수는 12입니다. 따라서 공통분모는 12가 될 수 있습니다.",
+    "concept_tags": [
+      "통분",
+      "최소공배수"
+    ],
+    "common_errors": [
+      {
+        "label": "개념미숙",
+        "wrong_answer": "7",
+        "reason": "분모를 더한 값을 공통분모로 착각할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::2",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음 덧셈의 결과는 얼마인가요? $\\frac{2}{5} + \\frac{1}{10}$",
+    "choices": [
+      "$\\frac{3}{15}$",
+      "$\\frac{3}{10}$",
+      "$\\frac{5}{10}$",
+      "$\\frac{1}{2}$"
+    ],
+    "answer": "$\\frac{1}{2}$",
+    "answer_aliases": [
+      "1/2",
+      "5/10"
+    ],
+    "explanation": "두 분수의 분모 5와 10의 최소공배수는 10입니다. $\\frac{2}{5}$를 분모가 10인 분수로 바꾸면 $\\frac{4}{10}$이 됩니다. \n$\\frac{4}{10} + \\frac{1}{10} = \\frac{5}{10}$\n$\\frac{5}{10}$를 약분하면 $\\frac{1}{2}$입니다.",
+    "concept_tags": [
+      "분수 덧셈",
+      "통분",
+      "약분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{3}{15}$",
+        "reason": "분모와 분자를 각각 더하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::3",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "다음 뺄셈의 결과는 얼마인가요? $\\frac{7}{8} - \\frac{1}{4}$",
+    "choices": [
+      "$\\frac{6}{4}$",
+      "$\\frac{5}{8}$",
+      "$\\frac{6}{8}$",
+      "$\\frac{3}{4}$"
+    ],
+    "answer": "$\\frac{5}{8}$",
+    "answer_aliases": [
+      "5/8"
+    ],
+    "explanation": "두 분수의 분모 8과 4의 최소공배수는 8입니다. $\\frac{1}{4}$을 분모가 8인 분수로 바꾸면 $\\frac{2}{8}$가 됩니다. \n$\\frac{7}{8} - \\frac{2}{8} = \\frac{5}{8}$",
+    "concept_tags": [
+      "분수 뺄셈",
+      "통분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{6}{4}$",
+        "reason": "분모를 통분하지 않고 분자만 빼는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::4",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$\\frac{1}{2}$과 $\\frac{3}{5}$을 통분했을 때, 두 분수의 합을 기약분수로 나타내세요.",
+    "choices": null,
+    "answer": "$\\frac{11}{10}$",
+    "answer_aliases": [
+      "11/10",
+      "1과 1/10"
+    ],
+    "explanation": "분모 2와 5의 최소공배수는 10입니다. \n$\\frac{1}{2} = \\frac{5}{10}$\n$\\frac{3}{5} = \\frac{6}{10}$\n두 분수를 더하면 $\\frac{5}{10} + \\frac{6}{10} = \\frac{11}{10}$입니다. 이는 기약분수입니다.",
+    "concept_tags": [
+      "분수 덧셈",
+      "통분",
+      "기약분수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{4}{7}$",
+        "reason": "분모와 분자를 각각 더하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::5",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 2,
+    "section": "warmup",
+    "body": "$\\frac{5}{6}$에서 $\\frac{1}{3}$을 뺀 값을 기약분수로 나타내세요.",
+    "choices": null,
+    "answer": "$\\frac{1}{2}$",
+    "answer_aliases": [
+      "1/2"
+    ],
+    "explanation": "분모 6과 3의 최소공배수는 6입니다. \n$\\frac{1}{3}$을 분모가 6인 분수로 바꾸면 $\\frac{2}{6}$가 됩니다. \n$\\frac{5}{6} - \\frac{2}{6} = \\frac{3}{6}$\n$\\frac{3}{6}$을 약분하면 $\\frac{1}{2}$입니다.",
+    "concept_tags": [
+      "분수 뺄셈",
+      "통분",
+      "기약분수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{4}{3}$",
+        "reason": "분모를 통분하지 않고 분자만 빼는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::6",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$\\frac{3}{4} + \\frac{2}{5}$를 계산한 값은 얼마인가요?",
+    "choices": [
+      "$\\frac{5}{9}$",
+      "$\\frac{15}{20}$",
+      "$\\frac{23}{20}$",
+      "$\\frac{23}{40}$"
+    ],
+    "answer": "$\\frac{23}{20}$",
+    "answer_aliases": [
+      "23/20",
+      "1과 3/20"
+    ],
+    "explanation": "분모 4와 5의 최소공배수는 20입니다. \n$\\frac{3}{4} = \\frac{15}{20}$\n$\\frac{2}{5} = \\frac{8}{20}$\n두 분수를 더하면 $\\frac{15}{20} + \\frac{8}{20} = \\frac{23}{20}$입니다.",
+    "concept_tags": [
+      "분수 덧셈",
+      "통분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{5}{9}$",
+        "reason": "분모와 분자를 각각 더하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::7",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$\\frac{5}{6} - \\frac{3}{8}$을 계산한 값은 얼마인가요?",
+    "choices": [
+      "$\\frac{2}{2}$",
+      "$\\frac{1}{24}$",
+      "$\\frac{11}{24}$",
+      "$\\frac{7}{24}$"
+    ],
+    "answer": "$\\frac{11}{24}$",
+    "answer_aliases": [
+      "11/24"
+    ],
+    "explanation": "분모 6과 8의 최소공배수는 24입니다. \n$\\frac{5}{6} = \\frac{20}{24}$\n$\\frac{3}{8} = \\frac{9}{24}$\n두 분수를 빼면 $\\frac{20}{24} - \\frac{9}{24} = \\frac{11}{24}$입니다.",
+    "concept_tags": [
+      "분수 뺄셈",
+      "통분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{2}{2}$",
+        "reason": "분모를 통분하지 않고 분자만 빼는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::8",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$1\\frac{1}{2} + \\frac{2}{3}$를 계산한 값은 얼마인가요?",
+    "choices": [
+      "$1\\frac{3}{5}$",
+      "$2\\frac{1}{6}$",
+      "$1\\frac{5}{6}$",
+      "$2\\frac{1}{5}$"
+    ],
+    "answer": "$2\\frac{1}{6}$",
+    "answer_aliases": [
+      "2와 1/6",
+      "13/6"
+    ],
+    "explanation": "가분수로 바꾸어 계산합니다. $1\\frac{1}{2} = \\frac{3}{2}$\n분모 2와 3의 최소공배수는 6입니다. \n$\\frac{3}{2} = \\frac{9}{6}$\n$\\frac{2}{3} = \\frac{4}{6}$\n두 분수를 더하면 $\\frac{9}{6} + \\frac{4}{6} = \\frac{13}{6}$입니다. 이것을 대분수로 바꾸면 $2\\frac{1}{6}$입니다.",
+    "concept_tags": [
+      "대분수 덧셈",
+      "통분",
+      "가분수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$1\\frac{3}{5}$",
+        "reason": "자연수 부분은 그대로 두고 분수 부분만 통분 없이 더하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::9",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$3\\frac{1}{4} - \\frac{2}{3}$를 계산한 값은 얼마인가요?",
+    "choices": [
+      "$2\\frac{7}{12}$",
+      "$3\\frac{5}{12}$",
+      "$2\\frac{1}{12}$",
+      "$3\\frac{1}{12}$"
+    ],
+    "answer": "$2\\frac{7}{12}$",
+    "answer_aliases": [
+      "2와 7/12",
+      "31/12"
+    ],
+    "explanation": "가분수로 바꾸어 계산합니다. $3\\frac{1}{4} = \\frac{13}{4}$\n분모 4와 3의 최소공배수는 12입니다. \n$\\frac{13}{4} = \\frac{39}{12}$\n$\\frac{2}{3} = \\frac{8}{12}$\n두 분수를 빼면 $\\frac{39}{12} - \\frac{8}{12} = \\frac{31}{12}$입니다. 이것을 대분수로 바꾸면 $2\\frac{7}{12}$입니다.",
+    "concept_tags": [
+      "대분수 뺄셈",
+      "통분",
+      "가분수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$3\\frac{5}{12}$",
+        "reason": "자연수 부분은 그대로 두고 분수 부분만 통분 없이 빼는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::10",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$2\\frac{1}{6} + 1\\frac{3}{4}$을 계산한 값을 대분수로 나타내세요.",
+    "choices": null,
+    "answer": "$3\\frac{11}{12}$",
+    "answer_aliases": [
+      "3과 11/12",
+      "47/12"
+    ],
+    "explanation": "자연수 부분은 자연수 부분끼리, 분수 부분은 분수 부분끼리 더합니다. \n$2+1=3$\n$\\frac{1}{6} + \\frac{3}{4}$\n분모 6과 4의 최소공배수는 12입니다. \n$\\frac{1}{6} = \\frac{2}{12}$\n$\\frac{3}{4} = \\frac{9}{12}$\n$\\frac{2}{12} + \\frac{9}{12} = \\frac{11}{12}$\n따라서 $3 + \\frac{11}{12} = 3\\frac{11}{12}$입니다.",
+    "concept_tags": [
+      "대분수 덧셈",
+      "통분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$3\\frac{4}{10}$",
+        "reason": "분모를 통분하지 않고 분자만 더하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::11",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 3,
+    "section": "concept",
+    "body": "$4\\frac{1}{3} - 2\\frac{3}{5}$을 계산한 값을 대분수로 나타내세요.",
+    "choices": null,
+    "answer": "$1\\frac{11}{15}$",
+    "answer_aliases": [
+      "1과 11/15",
+      "26/15"
+    ],
+    "explanation": "가분수로 바꾸어 계산합니다. $4\\frac{1}{3} = \\frac{13}{3}$, $2\\frac{3}{5} = \\frac{13}{5}$\n분모 3과 5의 최소공배수는 15입니다. \n$\\frac{13}{3} = \\frac{65}{15}$\n$\\frac{13}{5} = \\frac{39}{15}$\n두 분수를 빼면 $\\frac{65}{15} - \\frac{39}{15} = \\frac{26}{15}$입니다. 이것을 대분수로 바꾸면 $1\\frac{11}{15}$입니다.",
+    "concept_tags": [
+      "대분수 뺄셈",
+      "통분",
+      "가분수"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2\\frac{2}{2}$",
+        "reason": "분모를 통분하지 않고 분자만 빼는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::12",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "지혜는 우유 $\\frac{3}{4}$L를 마셨고, 준수는 우유 $\\frac{2}{5}$L를 마셨습니다. 두 사람이 마신 우유는 모두 몇 L인가요?",
+    "choices": [
+      "$\\frac{5}{9}$L",
+      "$\\frac{15}{20}$L",
+      "$\\frac{23}{20}$L",
+      "$\\frac{23}{40}$L"
+    ],
+    "answer": "$\\frac{23}{20}$L",
+    "answer_aliases": [
+      "23/20L",
+      "1과 3/20L"
+    ],
+    "explanation": "두 사람이 마신 우유의 양을 더해야 합니다. $\\frac{3}{4} + \\frac{2}{5}$\n분모 4와 5의 최소공배수는 20입니다. \n$\\frac{3}{4} = \\frac{15}{20}$\n$\\frac{2}{5} = \\frac{8}{20}$\n두 분수를 더하면 $\\frac{15}{20} + \\frac{8}{20} = \\frac{23}{20}$L입니다.",
+    "concept_tags": [
+      "분수 덧셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$\\frac{5}{9}$L",
+        "reason": "분모와 분자를 각각 더하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::13",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 물통에 물이 $\\frac{7}{8}$L 들어 있었습니다. 이 중에서 $\\frac{1}{3}$L를 사용했다면, 남은 물은 몇 L인가요?",
+    "choices": [
+      "$\\frac{6}{5}$L",
+      "$\\frac{13}{24}$L",
+      "$\\frac{1}{24}$L",
+      "$\\frac{15}{24}$L"
+    ],
+    "answer": "$\\frac{13}{24}$L",
+    "answer_aliases": [
+      "13/24L"
+    ],
+    "explanation": "남은 물의 양을 구하려면 뺄셈을 해야 합니다. $\\frac{7}{8} - \\frac{1}{3}$\n분모 8과 3의 최소공배수는 24입니다. \n$\\frac{7}{8} = \\frac{21}{24}$\n$\\frac{1}{3} = \\frac{8}{24}$\n두 분수를 빼면 $\\frac{21}{24} - \\frac{8}{24} = \\frac{13}{24}$L입니다.",
+    "concept_tags": [
+      "분수 뺄셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$\\frac{6}{5}$L",
+        "reason": "분모를 통분하지 않고 분자만 빼는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::14",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "길이가 $2\\frac{1}{5}$m인 철사에서 $\\frac{3}{4}$m를 잘라냈습니다. 남은 철사의 길이는 몇 m인가요?",
+    "choices": [
+      "$1\\frac{9}{20}$m",
+      "$2\\frac{1}{20}$m",
+      "$1\\frac{1}{20}$m",
+      "$2\\frac{9}{20}$m"
+    ],
+    "answer": "$1\\frac{9}{20}$m",
+    "answer_aliases": [
+      "1과 9/20m",
+      "29/20m"
+    ],
+    "explanation": "남은 철사의 길이를 구하려면 뺄셈을 해야 합니다. $2\\frac{1}{5} - \\frac{3}{4}$\n가분수로 바꾸어 계산합니다. $2\\frac{1}{5} = \\frac{11}{5}$\n분모 5와 4의 최소공배수는 20입니다. \n$\\frac{11}{5} = \\frac{44}{20}$\n$\\frac{3}{4} = \\frac{15}{20}$\n두 분수를 빼면 $\\frac{44}{20} - \\frac{15}{20} = \\frac{29}{20}$m입니다. 이것을 대분수로 바꾸면 $1\\frac{9}{20}$m입니다.",
+    "concept_tags": [
+      "대분수 뺄셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2\\frac{1}{20}$m",
+        "reason": "자연수 부분에서 빌려오는 것을 잊거나 잘못 계산할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::15",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 빵을 만드는 데 밀가루 $1\\frac{1}{2}$컵과 설탕 $\\frac{2}{3}$컵이 필요합니다. 밀가루와 설탕의 양의 합은 얼마인가요?",
+    "choices": [
+      "$1\\frac{3}{5}$컵",
+      "$2\\frac{1}{6}$컵",
+      "$1\\frac{5}{6}$컵",
+      "$2\\frac{1}{5}$컵"
+    ],
+    "answer": "$2\\frac{1}{6}$컵",
+    "answer_aliases": [
+      "2와 1/6컵",
+      "13/6컵"
+    ],
+    "explanation": "밀가루와 설탕의 양을 더해야 합니다. $1\\frac{1}{2} + \\frac{2}{3}$\n가분수로 바꾸어 계산합니다. $1\\frac{1}{2} = \\frac{3}{2}$\n분모 2와 3의 최소공배수는 6입니다. \n$\\frac{3}{2} = \\frac{9}{6}$\n$\\frac{2}{3} = \\frac{4}{6}$\n두 분수를 더하면 $\\frac{9}{6} + \\frac{4}{6} = \\frac{13}{6}$컵입니다. 이것을 대분수로 바꾸면 $2\\frac{1}{6}$컵입니다.",
+    "concept_tags": [
+      "대분수 덧셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$1\\frac{3}{5}$컵",
+        "reason": "자연수 부분은 그대로 두고 분수 부분만 통분 없이 더하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::16",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "수진이는 어제 책을 $\\frac{3}{5}$권 읽었고, 오늘은 어제 읽은 양보다 $\\frac{1}{4}$권 더 읽었습니다. 수진이가 오늘 읽은 책의 양을 기약분수로 나타내세요.",
+    "choices": null,
+    "answer": "$\\frac{17}{20}$권",
+    "answer_aliases": [
+      "17/20권"
+    ],
+    "explanation": "수진이가 오늘 읽은 책의 양은 어제 읽은 양에 $\\frac{1}{4}$권을 더한 것입니다. $\\frac{3}{5} + \\frac{1}{4}$\n분모 5와 4의 최소공배수는 20입니다. \n$\\frac{3}{5} = \\frac{12}{20}$\n$\\frac{1}{4} = \\frac{5}{20}$\n두 분수를 더하면 $\\frac{12}{20} + \\frac{5}{20} = \\frac{17}{20}$권입니다. 이는 기약분수입니다.",
+    "concept_tags": [
+      "분수 덧셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "문제해석",
+        "wrong_answer": "$\\frac{4}{9}$권",
+        "reason": "분모와 분자를 각각 더하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::17",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "short_answer",
+    "difficulty": 4,
+    "section": "application",
+    "body": "어떤 끈의 길이는 $3\\frac{1}{2}$m이고, 다른 끈의 길이는 $1\\frac{2}{3}$m입니다. 두 끈의 길이의 차이는 몇 m인가요? (대분수로 나타내세요)",
+    "choices": null,
+    "answer": "$1\\frac{5}{6}$m",
+    "answer_aliases": [
+      "1과 5/6m",
+      "11/6m"
+    ],
+    "explanation": "두 끈의 길이의 차이를 구하려면 뺄셈을 해야 합니다. $3\\frac{1}{2} - 1\\frac{2}{3}$\n가분수로 바꾸어 계산합니다. $3\\frac{1}{2} = \\frac{7}{2}$, $1\\frac{2}{3} = \\frac{5}{3}$\n분모 2와 3의 최소공배수는 6입니다. \n$\\frac{7}{2} = \\frac{21}{6}$\n$\\frac{5}{3} = \\frac{10}{6}$\n두 분수를 빼면 $\\frac{21}{6} - \\frac{10}{6} = \\frac{11}{6}$m입니다. 이것을 대분수로 바꾸면 $1\\frac{5}{6}$m입니다.",
+    "concept_tags": [
+      "대분수 뺄셈",
+      "실생활 문제"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$2\\frac{1}{1}$m",
+        "reason": "분모를 통분하지 않고 분자만 빼는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::18",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "다음 식에서 $\\square$ 안에 알맞은 수를 기약분수로 쓰세요. $\\frac{1}{2} + \\square = \\frac{7}{8}$",
+    "choices": [
+      "$\\frac{3}{8}$",
+      "$\\frac{1}{4}$",
+      "$\\frac{5}{8}$",
+      "$\\frac{1}{2}$"
+    ],
+    "answer": "$\\frac{3}{8}$",
+    "answer_aliases": [
+      "3/8"
+    ],
+    "explanation": "$\\square$를 구하려면 $\\frac{7}{8}$에서 $\\frac{1}{2}$을 빼야 합니다. $\\square = \\frac{7}{8} - \\frac{1}{2}$\n분모 8과 2의 최소공배수는 8입니다. \n$\\frac{1}{2} = \\frac{4}{8}$\n$\\square = \\frac{7}{8} - \\frac{4}{8} = \\frac{3}{8}$입니다. 이는 기약분수입니다.",
+    "concept_tags": [
+      "미지수 찾기",
+      "분수 뺄셈"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{5}{8}$",
+        "reason": "통분 과정에서 오류가 발생할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
+  },
+  {
+    "id": "math-5-1-5::v3::19",
+    "subject": "수학",
+    "grade": 5,
+    "standard_code": "[6수01-05]",
+    "unit_id": "math-5-1-5",
+    "unit_name": "분수의 덧셈과 뺄셈",
+    "sub_unit": "분모가 다른 분수",
+    "publisher": "자체제작",
+    "type": "multiple_choice",
+    "difficulty": 5,
+    "section": "challenge",
+    "body": "세 분수 $\\frac{1}{3}$, $\\frac{1}{4}$, $\\frac{1}{6}$의 합은 얼마인가요?",
+    "choices": [
+      "$\\frac{3}{13}$",
+      "$\\frac{9}{12}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{2}$"
+    ],
+    "answer": "$\\frac{3}{4}$",
+    "answer_aliases": [
+      "3/4",
+      "9/12"
+    ],
+    "explanation": "세 분수를 더해야 합니다. $\\frac{1}{3} + \\frac{1}{4} + \\frac{1}{6}$\n분모 3, 4, 6의 최소공배수는 12입니다. \n$\\frac{1}{3} = \\frac{4}{12}$\n$\\frac{1}{4} = \\frac{3}{12}$\n$\\frac{1}{6} = \\frac{2}{12}$\n세 분수를 더하면 $\\frac{4}{12} + \\frac{3}{12} + \\frac{2}{12} = \\frac{9}{12}$입니다. \n$\\frac{9}{12}$를 약분하면 $\\frac{3}{4}$입니다.",
+    "concept_tags": [
+      "세 분수 덧셈",
+      "통분",
+      "약분"
+    ],
+    "common_errors": [
+      {
+        "label": "계산실수",
+        "wrong_answer": "$\\frac{3}{13}$",
+        "reason": "분모와 분자를 각각 더하는 오류를 범할 수 있습니다."
+      }
+    ],
+    "license_code": "SELF_GEN",
+    "is_published": true
   }
 ]
