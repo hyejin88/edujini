@@ -76,10 +76,10 @@
   }
 }
 
-/* Print Styles — A4 학습지 강제 */
+/* Print Styles — A4 학습지 강제 (여백 좁게: 사방 10mm) */
 @page {
   size: A4;
-  margin: 16mm;
+  margin: 10mm;
 }
 
 @media print {

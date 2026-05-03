@@ -239,7 +239,7 @@ export default function ComprehensiveSheet({
       </header>
 
       <main
-        className="worksheet-page mx-auto my-8 max-w-[210mm] bg-white shadow-lg print:my-0 print:max-w-none print:p-[16mm] print:shadow-none"
+        className="worksheet-page mx-auto my-8 max-w-[210mm] bg-white shadow-lg print:my-0 print:max-w-none print:p-0 print:shadow-none"
         style={{ padding: "16mm" }}
       >
         <div className="mb-6 print:mb-3">
