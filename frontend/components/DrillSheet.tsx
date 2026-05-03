@@ -635,13 +635,21 @@ function SpecialProblem({
     }
     return (<div className="font-mono" style={{ fontSize: "18px" }}>{Box(problem.answer)} + {r.b as number} = {r.c as number}</div>);
   }
-  // 덧뺄 관계: a+b=c 보고 c-a=?, c-b=? (두 답이라 ans1만 빈칸)
+  // 덧뺄 관계: a+b=c 보고 c-a=? (수 가족 시각화 — 1학년 친화)
   if (problem.op === "rel_add_to_sub") {
     const r = (problem.raw || {}) as Record<string, number | string>;
     return (
-      <div className="font-mono text-sm" style={{ fontSize: "15px" }}>
-        {r.a as number} + {r.b as number} = {r.c as number} ⇒ {r.c as number} − {r.a as number} = {Box(problem.answer)}
-      </div>
+      <RelAddToSubCell
+        a={r.a as number}
+        b={r.b as number}
+        c={r.c as number}
+        answer={problem.answer}
+        isExample={problem.is_example}
+        isGraded={isGraded}
+        userAns={userAns}
+        onChange={onChange}
+        correct={correct}
+      />
     );
   }
 
@@ -1092,6 +1100,204 @@ function Frac({ n, d }: { n: number; d: number }) {
       <span style={{ borderTop: "1px solid #111827", width: "100%", margin: "1px 0" }} />
       <span style={{ fontSize: "13px" }}>{d}</span>
     </span>
+  );
+}
+
+// === rel_add_to_sub 전용 셀 (1학년 친화 시각화) ===
+// 같은 세 수가 덧셈/뺄셈에 공통 등장한다는 점을 강조 — 수 가족 시각화.
+// 각 수는 고유 색 박스로 표시 (인쇄 시에도 외곽선 두꺼움 + light tone으로 구분).
+// 첫 식(시범) → 굵은 ↓ → 둘째 식(빈칸).
+function RelAddToSubCell({
+  a, b, c, answer, isExample, isGraded, userAns, onChange, correct,
+}: {
+  a: number;
+  b: number;
+  c: number;
+  answer: number;
+  isExample: boolean;
+  isGraded: boolean;
+  userAns: string;
+  onChange: (v: string) => void;
+  correct: boolean | null;
+}) {
+  // 색 토큰 — 같은 숫자는 같은 색.
+  // 1학년 친화 따뜻한 톤 (light), 흑백 인쇄 호환을 위해 외곽선은 진하게.
+  // 결과 박스(c)는 약간 진하게 강조.
+  const colorOf = (n: number): { bg: string; border: string; text: string } => {
+    if (n === a) return { bg: "#FEF3C7", border: "#D97706", text: "#92400E" }; // 노랑
+    if (n === b) return { bg: "#DBEAFE", border: "#2563EB", text: "#1E3A8A" }; // 연파랑
+    return { bg: "#FCE7F3", border: "#BE185D", text: "#9D174D" }; // 연분홍 (c=결과)
+  };
+
+  // 숫자 박스 — 1학년 친화 둥근 사각형, 굵은 sans-serif, 24px+
+  const NumBox = ({ n, emphasis = false }: { n: number; emphasis?: boolean }) => {
+    const c = colorOf(n);
+    return (
+      <span
+        className="inline-flex items-center justify-center"
+        style={{
+          width: 44,
+          height: 44,
+          backgroundColor: c.bg,
+          border: `2.5px solid ${c.border}`,
+          borderRadius: 10,
+          fontSize: 24,
+          fontWeight: 800,
+          color: c.text,
+          fontFamily:
+            "'Nanum Pen Script', 'Comic Sans MS', 'Apple SD Gothic Neo', system-ui, sans-serif",
+          lineHeight: 1,
+          boxShadow: emphasis ? "0 0 0 1.5px rgba(0,0,0,0.04)" : "none",
+        }}
+      >
+        {n}
+      </span>
+    );
+  };
+
+  // 연산 기호 (＋, −, =) — 굵고 큰 친화적 폰트
+  const Sym = ({ children }: { children: React.ReactNode }) => (
+    <span
+      style={{
+        fontSize: 22,
+        fontWeight: 800,
+        color: "#374151",
+        margin: "0 4px",
+        lineHeight: 1,
+        fontFamily: "system-ui, -apple-system, sans-serif",
+      }}
+    >
+      {children}
+    </span>
+  );
+
+  // 빈칸 — 점선 박스 ("여기에 답을 써요" 시각 단서)
+  const AnswerBox = () => {
+    const inputColor = isExample
+      ? "#1E3A8A"
+      : isGraded
+        ? correct
+          ? "#15803D"
+          : "#B91C1C"
+        : "#111827";
+    if (isExample) {
+      // 시범: 답이 노랑 박스(b)와 같은 색으로 채워져 있음 → b 색 사용
+      const cb = colorOf(answer);
+      return (
+        <span
+          className="inline-flex items-center justify-center"
+          style={{
+            width: 44,
+            height: 44,
+            backgroundColor: cb.bg,
+            border: `2.5px solid ${cb.border}`,
+            borderRadius: 10,
+            fontSize: 24,
+            fontWeight: 800,
+            color: cb.text,
+            fontFamily:
+              "'Nanum Pen Script', 'Comic Sans MS', 'Apple SD Gothic Neo', system-ui, sans-serif",
+            lineHeight: 1,
+          }}
+        >
+          {answer}
+        </span>
+      );
+    }
+    return (
+      <span
+        className="inline-flex items-center justify-center"
+        style={{
+          width: 44,
+          height: 44,
+          backgroundColor: "#FFFFFF",
+          border: "2.5px dashed #6B7280",
+          borderRadius: 10,
+          lineHeight: 1,
+        }}
+      >
+        <input
+          type="text"
+          inputMode="numeric"
+          pattern="[0-9\-]*"
+          value={userAns}
+          disabled={isGraded}
+          onChange={(e) => onChange(e.target.value)}
+          className="bg-transparent text-center outline-none"
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "none",
+            fontSize: 24,
+            fontWeight: 800,
+            color: inputColor,
+            fontFamily:
+              "'Nanum Pen Script', 'Comic Sans MS', 'Apple SD Gothic Neo', system-ui, sans-serif",
+            padding: 0,
+            textAlign: "center",
+          }}
+        />
+      </span>
+    );
+  };
+
+  // 한 줄(식) 렌더 — 가운데 정렬
+  const Row = ({ children }: { children: React.ReactNode }) => (
+    <div
+      className="flex items-center justify-center"
+      style={{ gap: 2, flexWrap: "nowrap" }}
+    >
+      {children}
+    </div>
+  );
+
+  return (
+    <div
+      className="break-inside-avoid"
+      style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}
+    >
+      {/* 첫 식: a + b = c (시범 — 모두 채워짐) */}
+      <Row>
+        <NumBox n={a} />
+        <Sym>＋</Sym>
+        <NumBox n={b} />
+        <Sym>＝</Sym>
+        <NumBox n={c} emphasis />
+      </Row>
+
+      {/* 굵은 ↓ 화살표 — 두 식이 같은 수 가족임을 시각적으로 연결 */}
+      <span
+        aria-hidden
+        style={{
+          fontSize: 22,
+          lineHeight: 1,
+          color: "#9CA3AF",
+          fontWeight: 900,
+          margin: "-2px 0",
+        }}
+      >
+        ↓
+      </span>
+
+      {/* 둘째 식: c − a = ? (빈칸) */}
+      <Row>
+        <NumBox n={c} emphasis />
+        <Sym>−</Sym>
+        <NumBox n={a} />
+        <Sym>＝</Sym>
+        <AnswerBox />
+      </Row>
+
+      {/* 채점 후 오답 시 정답 안내 */}
+      {isGraded && !isExample && correct === false && (
+        <div
+          className="text-[#6b7280]"
+          style={{ fontSize: 12, marginTop: 2 }}
+        >
+          정답 {answer}
+        </div>
+      )}
+    </div>
   );
 }
 
