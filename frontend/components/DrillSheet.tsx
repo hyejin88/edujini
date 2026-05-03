@@ -101,44 +101,46 @@ function DrillProblemCell({
 
   return (
     <div
-      className="break-inside-avoid"
+      className="break-inside-avoid flex items-start gap-2"
       style={{ wordBreak: "keep-all" }}
     >
-      {/* 번호 (예시는 hideNumber로 숨김) */}
+      {/* 번호 — 식 좌측 inline (별도 행 차지 X). 예시는 hideNumber로 숨김. */}
       {!hideNumber && (
-        <div
-          className="mb-1 font-serif font-bold text-[#111827]"
-          style={{ fontSize: "18px" }}
+        <span
+          className="font-serif font-bold text-[#111827] flex-shrink-0"
+          style={{ fontSize: "18px", lineHeight: "1.4", minWidth: "22px" }}
         >
           {problem.index}.
-        </div>
+        </span>
       )}
 
-      {!isArithmetic(problem.op) ? (
-        <SpecialProblem
-          problem={problem}
-          isGraded={isGraded}
-          userAns={userAns}
-          onChange={onChange}
-          correct={correct}
-        />
-      ) : isHorizontal ? (
-        <HorizontalProblem
-          problem={problem}
-          isGraded={isGraded}
-          userAns={userAns}
-          onChange={onChange}
-          correct={correct}
-        />
-      ) : (
-        <VerticalProblem
-          problem={problem}
-          isGraded={isGraded}
-          userAns={userAns}
-          onChange={onChange}
-          correct={correct}
-        />
-      )}
+      <div className="flex-1 min-w-0">
+        {!isArithmetic(problem.op) ? (
+          <SpecialProblem
+            problem={problem}
+            isGraded={isGraded}
+            userAns={userAns}
+            onChange={onChange}
+            correct={correct}
+          />
+        ) : isHorizontal ? (
+          <HorizontalProblem
+            problem={problem}
+            isGraded={isGraded}
+            userAns={userAns}
+            onChange={onChange}
+            correct={correct}
+          />
+        ) : (
+          <VerticalProblem
+            problem={problem}
+            isGraded={isGraded}
+            userAns={userAns}
+            onChange={onChange}
+            correct={correct}
+          />
+        )}
+      </div>
     </div>
   );
 }
