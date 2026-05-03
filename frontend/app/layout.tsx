@@ -30,8 +30,37 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    // Google Search Console / Naver Search Advisor verification 코드 받으면 여기에 삽입
+    // google: 'xxxxxxxxxxxxxxxx',
+    // other: { 'naver-site-verification': 'xxxxxxxxxxxxxxxx' },
+  },
   // icons는 app/icon.png + app/apple-icon.png Next.js 자동 인식 사용 (별도 메타 X)
 }
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: "EDU Jini",
+  alternateName: "에듀 지니",
+  url: "https://edujini.pages.dev",
+  logo: "https://edujini.pages.dev/logo.png",
+  description: "초1~초6 NCIC 성취기준 기반 무료 수학 학습 사이트. AI 자동 채점·4축 오답 분석·학부모 리포트.",
+  sameAs: [],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "EDU Jini",
+  url: "https://edujini.pages.dev",
+  inLanguage: "ko",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://edujini.pages.dev/library?grade={grade}&subject=수학&mode=comp",
+    "query-input": "required name=grade",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -49,6 +78,15 @@ export default function RootLayout({
         />
         {/* AdSense 사이트 소유권 확인 + 광고 로드 베이스 스크립트 */}
         <AdSenseScript />
+        {/* JSON-LD 구조화 데이터 — Organization + WebSite (전 사이트 공통) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </head>
       <body className="font-sans antialiased">
         {children}

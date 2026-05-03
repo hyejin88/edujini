@@ -82,8 +82,71 @@ export default async function LearnUnitPage({
   const u = findLearnUnit(grade, slug);
   if (!u) notFound();
 
+  const pageUrl = `https://edujini.pages.dev/learn/grade-${grade}/${u.slug}`;
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: `초${grade} 수학 ${u.unit_name}`,
+    description: u.long_description,
+    url: pageUrl,
+    inLanguage: "ko",
+    educationalLevel: `Grade ${grade}`,
+    teaches: u.unit_name,
+    isAccessibleForFree: true,
+    educationalAlignment: u.ncic_codes.map((code) => ({
+      "@type": "AlignmentObject",
+      alignmentType: "educationalSubject",
+      educationalFramework: "NCIC 2022 개정 교육과정",
+      targetName: code,
+    })),
+    provider: {
+      "@type": "EducationalOrganization",
+      name: "EDU Jini",
+      url: "https://edujini.pages.dev",
+      logo: "https://edujini.pages.dev/logo.png",
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "online",
+      courseWorkload: "PT30M",
+    },
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "홈", item: "https://edujini.pages.dev/" },
+      { "@type": "ListItem", position: 2, name: `초${grade} 수학`, item: `https://edujini.pages.dev/learn/grade-${grade}` },
+      { "@type": "ListItem", position: 3, name: u.unit_name, item: pageUrl },
+    ],
+  };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: u.common_struggles.map((s) => ({
+      "@type": "Question",
+      name: `${u.unit_name}에서 자녀가 ${s}처럼 막혀요. 어떻게 도와줘야 하나요?`,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: `EDU Jini는 ${u.unit_name} 단원에서 "${s}" 같은 패턴을 자동으로 진단해, 어디서 막혔는지 알려드립니다. 단원 학습 20문항을 풀고 4축 오답 분석(개념·계산·문제해석·꼼꼼함)으로 약점을 짚어드립니다. 회원가입 없이 무료로 이용 가능합니다.`,
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <header className="border-b border-border bg-background">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
           <Link
