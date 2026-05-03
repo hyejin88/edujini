@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   verification: {
-    // Google Search Console / Naver Search Advisor verification 코드 받으면 여기에 삽입
-    // google: 'xxxxxxxxxxxxxxxx',
+    google: 'sb91Xzfjji8oYiAdLZfyyKZcYZJkF_9_YgCISPJOfFI',
+    // 네이버 코드 받으면 추가:
     // other: { 'naver-site-verification': 'xxxxxxxxxxxxxxxx' },
   },
   // icons는 app/icon.png + app/apple-icon.png Next.js 자동 인식 사용 (별도 메타 X)
