@@ -32,8 +32,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'sb91Xzfjji8oYiAdLZfyyKZcYZJkF_9_YgCISPJOfFI',
-    // 네이버 코드 받으면 추가:
-    // other: { 'naver-site-verification': 'xxxxxxxxxxxxxxxx' },
+    other: {
+      'naver-site-verification': '40540fc7beea74581f53742ebb8439379ef17e99',
+    },
   },
   // icons는 app/icon.png + app/apple-icon.png Next.js 자동 인식 사용 (별도 메타 X)
 }
