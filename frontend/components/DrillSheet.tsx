@@ -57,7 +57,7 @@ export function DrillSheet({
       )}
 
       {/* 채점 대상 1~N번 */}
-      <div className="grid grid-cols-2 gap-x-8 gap-y-5 print:grid-cols-4 print:gap-x-4 print:gap-y-3">
+      <div className="grid grid-cols-2 gap-x-8 gap-y-5 print:grid-cols-3 print:gap-x-6 print:gap-y-4">
         {graded.map((p) => (
           <DrillProblemCell
             key={p.index}

@@ -243,18 +243,19 @@ export default function ComprehensiveSheet({
         style={{ padding: "16mm" }}
       >
         <div className="mb-6 print:mb-3">
-          {/* 화면·인쇄 통일 — logo-wordmark 단일 + 가운데 1열 */}
-          <div className="flex flex-col items-center gap-2">
+          {/* 헤더 — 좌: 캐릭터, 가운데: 제목, 우: 균형 더미 (1줄) */}
+          <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logo-wordmark.png"
+              src="/character.png"
               alt="EDU Jini"
-              className="h-7 w-auto print:h-6"
+              className="h-12 w-12 print:h-10 print:w-10"
             />
             <h1 className="text-center font-serif text-xl font-bold text-[#111827]">
               {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(unitId))} 수학`}{" "}
               · {unit?.unit_name || ""}
             </h1>
+            <div className="h-12 w-12 print:h-10 print:w-10" aria-hidden="true" />
           </div>
           <div className="mt-2 mb-4 border-t border-[#111827]" />
           {/* 이름·날짜 — 인쇄 전용, 제목 아래 우측 정렬 */}
