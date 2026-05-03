@@ -39,10 +39,10 @@ export function DrillSheet({
 
   return (
     <div>
-      {/* 예시 영역 — 박스로 시각 분리 (인쇄 시에도 유지) */}
+      {/* 예시 영역 — 박스로 시각 분리. 인쇄 시 가운데 정렬 (박스 폭 자동 + 컨텐츠 가운데) */}
       {example && (
-        <div className="mb-6 rounded-lg border border-[#d1d5db] bg-[#f9fafb] p-4 print:mb-3 print:p-2 print:border-2 print:border-[#9ca3af]">
-          <p className="mb-2 text-xs font-semibold tracking-wide text-[#0080E0] print:text-[#374151]">
+        <div className="mb-6 rounded-lg border border-[#d1d5db] bg-[#f9fafb] p-4 print:mx-auto print:mb-3 print:flex print:max-w-[60%] print:flex-col print:items-center print:p-2 print:border-2 print:border-[#9ca3af]">
+          <p className="mb-2 text-xs font-semibold tracking-wide text-[#0080E0] print:text-center print:text-[#374151]">
             예시 보기
           </p>
           <DrillProblemCell
