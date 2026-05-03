@@ -8,8 +8,10 @@ import { Brand } from "@/components/Brand";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { ArrowLeft, AlertTriangle, Check, AlertCircle, ArrowRight } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { ArrowLeft, AlertTriangle, Check, AlertCircle, ArrowRight, Sparkles, MessageCircle } from "lucide-react";
 import { computeDiagnosis, type DiagnosisResult, clearAttempts } from "@/lib/diagnose";
+import { fetchParentReportV2, makeUserId, type ParentReport } from "@/lib/client";
 import { track } from "@vercel/analytics";
 
 const errorTypes = [
@@ -41,8 +43,53 @@ function formatElapsed(ms: number): string {
   return s === 0 ? `${m}분` : `${m}분 ${s}초`;
 }
 
+// 학부모 리포트 캐시 (Gemini 호출 비용 절감)
+const REPORT_CACHE_KEY = "edujini_parent_report_v1";
+const REPORT_CACHE_TTL_MS = 60 * 60 * 1000; // 1시간
+
+interface CachedReport {
+  ts: number;
+  hash: string; // 진단 데이터 변경 감지
+  source: "gemini" | "template";
+  report: ParentReport;
+}
+
+// 진단 데이터 → 안정적 hash. 서버측 sha256 결과와 일치할 필요 없고,
+// 변경 감지에만 쓰므로 길이+JSON 단순 fold 로 충분.
+function diagHash(s: string): string {
+  let h = 5381;
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) + h + s.charCodeAt(i)) | 0;
+  }
+  return `c${(h >>> 0).toString(16)}`;
+}
+
+function loadCachedReport(): CachedReport | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(REPORT_CACHE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as CachedReport;
+    if (!parsed?.ts || !parsed.report) return null;
+    if (Date.now() - parsed.ts > REPORT_CACHE_TTL_MS) return null;
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+function saveCachedReport(c: CachedReport) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(REPORT_CACHE_KEY, JSON.stringify(c));
+  } catch {}
+}
+
 export default function ResultPage() {
   const [d, setD] = useState<DiagnosisResult | null>(null);
+  const [aiReport, setAiReport] = useState<ParentReport | null>(null);
+  const [aiSource, setAiSource] = useState<"gemini" | "template" | null>(null);
+  const [aiLoading, setAiLoading] = useState(false);
 
   useEffect(() => {
     const diagnosis = computeDiagnosis();
@@ -55,6 +102,78 @@ export default function ResultPage() {
       });
     }
   }, []);
+
+  // 학부모 리포트 (Gemini) 자동 호출 — 진단이 충분히 쌓였을 때만
+  useEffect(() => {
+    if (!d || d.total < 5) return;
+
+    // payload 압축 — top 3 weak_units, recent_session 핵심만
+    const payload = {
+      diagnosis: {
+        total: d.total,
+        correct: d.correct,
+        score_pct: d.score_pct,
+        weak_units: d.weak_units.slice(0, 3).map((u) => ({
+          unit_id: u.unit_id,
+          unit_name: u.unit_name,
+          accuracy: u.accuracy,
+          total: u.total,
+          correct: u.correct,
+        })),
+        error_breakdown: d.error_breakdown,
+        recent_session: d.recent_session
+          ? {
+              unit_id: d.recent_session.unit_id,
+              unit_name: d.recent_session.unit_name,
+              score_pct: d.recent_session.score_pct,
+              correct: d.recent_session.correct,
+              total: d.recent_session.total,
+              source: d.recent_session.source,
+              sheet_title: d.recent_session.sheet_title,
+            }
+          : null,
+      },
+    };
+
+    const hash = diagHash(JSON.stringify(payload.diagnosis));
+
+    // 캐시 hit (1시간 + 동일 hash) → 재호출 skip
+    const cached = loadCachedReport();
+    if (cached && cached.hash === hash) {
+      setAiReport(cached.report);
+      setAiSource(cached.source);
+      return;
+    }
+
+    let cancelled = false;
+    setAiLoading(true);
+    (async () => {
+      try {
+        const uid = makeUserId();
+        const env = await fetchParentReportV2(uid, payload);
+        if (cancelled) return;
+        setAiReport(env.report);
+        setAiSource(env.source);
+        saveCachedReport({
+          ts: Date.now(),
+          hash,
+          source: env.source,
+          report: env.report,
+        });
+      } catch {
+        // 실패 → 기존 클라이언트 템플릿 fallback (UI 별도 처리)
+        if (!cancelled) {
+          setAiReport(null);
+          setAiSource(null);
+        }
+      } finally {
+        if (!cancelled) setAiLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [d]);
 
   if (!d) {
     return (
@@ -261,60 +380,177 @@ export default function ResultPage() {
           </section>
         )}
 
-        {/* 학부모 리포트 (통합) */}
+        {/* 학부모 리포트 (Gemini V2 통합 + 템플릿 fallback) */}
         <section className="mb-10">
-          <h2 className="mb-4 text-lg font-semibold text-foreground">학부모 리포트</h2>
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="text-lg font-semibold text-foreground">학부모 리포트</h2>
+            {aiSource === "gemini" && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary">
+                <Sparkles className="h-3 w-3" />
+                선생님이 직접 작성
+              </span>
+            )}
+          </div>
           <Card className="border border-border p-6">
-            <div className="mb-5">
-              <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
-                <Check className="h-4 w-4 text-green-600" />
-                잘한 점
-              </h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                {highlights.map((h, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-500" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {aiLoading && !aiReport ? (
+              // 로딩 상태 — skeleton
+              <div className="space-y-4">
+                <Skeleton className="h-4 w-3/4" />
+                <Skeleton className="h-4 w-2/3" />
+                <Skeleton className="h-20 w-full" />
+                <Skeleton className="h-4 w-1/2" />
+                <Skeleton className="h-16 w-full" />
+              </div>
+            ) : aiReport ? (
+              <>
+                {/* Gemini 응답 — subject + summary */}
+                {aiReport.subject && (
+                  <p className="mb-1 text-sm font-semibold text-foreground">{aiReport.subject}</p>
+                )}
+                {aiReport.summary && (
+                  <p className="mb-5 text-sm leading-relaxed text-muted-foreground">{aiReport.summary}</p>
+                )}
 
-            <div className="mb-5">
-              <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
-                <AlertCircle className="h-4 w-4 text-amber-500" />
-                보완할 점
-              </h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                {concerns.map((c, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
+                {/* 잘한 점 */}
+                {aiReport.highlights && aiReport.highlights.length > 0 && (
+                  <div className="mb-5">
+                    <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+                      <Check className="h-4 w-4 text-green-600" />
+                      잘한 점
+                    </h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {aiReport.highlights.map((h, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-500" />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-            <div className="rounded-lg border border-border bg-muted/30 p-4">
-              <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
-                <ArrowRight className="h-4 w-4 text-primary" />
-                다음 학습 추천
-              </h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                {nexts.map((n, i) => (
-                  <li key={i}>
-                    <span className="mr-1">{i + 1}.</span>
-                    {n.href ? (
-                      <Link href={n.href} className="text-primary underline-offset-4 hover:underline">
-                        {n.text} →
-                      </Link>
-                    ) : (
-                      n.text
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
+                {/* 보완할 점 */}
+                {aiReport.concerns && aiReport.concerns.length > 0 && (
+                  <div className="mb-5">
+                    <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+                      <AlertCircle className="h-4 w-4 text-amber-500" />
+                      보완할 점
+                    </h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {aiReport.concerns.map((c, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* 약점 인사이트 (axis_insight) — 4축 분포 해석 */}
+                {aiReport.axis_insight && (
+                  <div className="mb-5 rounded-lg border border-amber-200 bg-amber-50/60 p-4 dark:border-amber-900/40 dark:bg-amber-900/20">
+                    <h3 className="mb-1 flex items-center gap-2 text-sm font-semibold text-amber-900 dark:text-amber-200">
+                      <AlertTriangle className="h-4 w-4" />
+                      약점 인사이트
+                    </h3>
+                    <p className="text-sm leading-relaxed text-amber-900/90 dark:text-amber-100/90">
+                      {aiReport.axis_insight}
+                    </p>
+                  </div>
+                )}
+
+                {/* 다음 학습 추천 — Gemini next_action + 기존 CTA 링크 모두 보존 */}
+                <div className="mb-5 rounded-lg border border-border bg-muted/30 p-4">
+                  <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    다음 학습 추천
+                  </h3>
+                  {aiReport.next_action && (
+                    <p className="mb-3 text-sm text-foreground">{aiReport.next_action}</p>
+                  )}
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {nexts.map((n, i) => (
+                      <li key={i}>
+                        <span className="mr-1">{i + 1}.</span>
+                        {n.href ? (
+                          <Link href={n.href} className="text-primary underline-offset-4 hover:underline">
+                            {n.text} →
+                          </Link>
+                        ) : (
+                          n.text
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* 선생님 한마디 (teacher_note) */}
+                {aiReport.teacher_note && (
+                  <div className="rounded-lg border border-primary/30 bg-primary/5 p-4">
+                    <h3 className="mb-1 flex items-center gap-2 text-sm font-semibold text-primary">
+                      <MessageCircle className="h-4 w-4" />
+                      선생님 한마디
+                    </h3>
+                    <p className="text-sm leading-relaxed text-foreground">{aiReport.teacher_note}</p>
+                  </div>
+                )}
+              </>
+            ) : (
+              // Fallback — 기존 클라이언트 텍스트 템플릿 그대로
+              <>
+                <div className="mb-5">
+                  <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+                    <Check className="h-4 w-4 text-green-600" />
+                    잘한 점
+                  </h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {highlights.map((h, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-500" />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-5">
+                  <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+                    <AlertCircle className="h-4 w-4 text-amber-500" />
+                    보완할 점
+                  </h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {concerns.map((c, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500" />
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="rounded-lg border border-border bg-muted/30 p-4">
+                  <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                    다음 학습 추천
+                  </h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {nexts.map((n, i) => (
+                      <li key={i}>
+                        <span className="mr-1">{i + 1}.</span>
+                        {n.href ? (
+                          <Link href={n.href} className="text-primary underline-offset-4 hover:underline">
+                            {n.text} →
+                          </Link>
+                        ) : (
+                          n.text
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            )}
           </Card>
         </section>
 

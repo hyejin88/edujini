@@ -1,6 +1,12 @@
 // Browser API client (calls /api/* same origin)
 // Used by client components.
 
+import type {
+  ParentReport,
+  ParentReportEnvelope,
+  ParentReportRequest,
+} from "@/lib/types";
+
 export interface UnitDTO {
   id: string;
   subject: string;
@@ -123,6 +129,24 @@ export async function getParentReport(
   );
   if (!r.ok) throw new Error("리포트 실패");
   return r.json();
+}
+
+// V2 — POST 로 클라이언트 진단(JSON) 을 보내 Gemini 응답을 받음.
+// result 페이지에서 사용.
+export type { ParentReport, ParentReportEnvelope } from "@/lib/types";
+
+export async function fetchParentReportV2(
+  userId: string,
+  payload: ParentReportRequest
+): Promise<ParentReportEnvelope> {
+  const r = await fetch(`/api/report/${encodeURIComponent(userId)}`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(payload),
+    cache: "no-store",
+  });
+  if (!r.ok) throw new Error(`report v2 failed: ${r.status}`);
+  return (await r.json()) as ParentReportEnvelope;
 }
 
 export function makeUserId(): string {
