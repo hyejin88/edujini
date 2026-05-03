@@ -165,23 +165,28 @@ export default async function LearnUnitPage({
           </div>
         </section>
 
-        {/* CTA */}
+        {/* CTA — 두 갈래: 단원 학습 + 연산 문제 */}
         <Card className="border-2 border-primary/30 bg-gradient-to-b from-secondary/50 to-white p-6 text-center">
           <p className="mb-2 text-sm text-muted-foreground">회원가입 없이 지금 바로</p>
           <h3 className="mb-4 text-xl font-bold text-foreground">
-            {u.unit_name} 학습 시작하기
+            {u.unit_name} 시작하기
           </h3>
-          <Link href={`/library/${u.unit_id}?sheet=comp`}>
-            <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90">
-              단원 학습 시작
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-          </Link>
-          <p className="mt-3 text-xs text-muted-foreground">
-            연산 반복 연습도 함께 →{" "}
-            <Link href={`/library/${u.unit_id}?mode=drill`} className="underline">
-              연산 문제 보기
+          <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center">
+            <Link href={`/library/${u.unit_id}?sheet=comp`} className="flex-1 sm:flex-none">
+              <Button size="lg" className="w-full gap-2 bg-primary hover:bg-primary/90 sm:w-auto">
+                단원 학습 (20문항 + 진단)
+                <ArrowRight className="h-4 w-4" />
+              </Button>
             </Link>
+            <Link href={`/library/${u.unit_id}?mode=drill`} className="flex-1 sm:flex-none">
+              <Button size="lg" variant="outline" className="w-full gap-2 border-2 sm:w-auto">
+                연산 문제 (매일 새 30문제)
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+          <p className="mt-3 text-xs text-muted-foreground">
+            단원 학습으로 약점 진단 → 연산 문제로 반복 연습이 효과적이에요
           </p>
         </Card>
 

@@ -29,12 +29,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
   const unitPages: MetadataRoute.Sitemap = units
     .filter((u) => problemSet.has(u.id))
-    .map((u) => ({
-      url: `${BASE}/library/${encodeURIComponent(u.id)}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    }));
+    .flatMap((u) => [
+      {
+        url: `${BASE}/library/${encodeURIComponent(u.id)}?sheet=comp`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+      },
+      {
+        url: `${BASE}/library/${encodeURIComponent(u.id)}?mode=drill`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 0.75,
+      },
+    ]);
 
   // SEO 단원별 랜딩 페이지
   const learnPages: MetadataRoute.Sitemap = LEARN_UNITS.map((u) => ({
