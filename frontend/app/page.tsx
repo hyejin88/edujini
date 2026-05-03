@@ -232,9 +232,9 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl px-4 text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo-wordmark.png"
+            src="/character.png"
             alt="EDU Jini"
-            className="mx-auto mb-2 h-6 w-auto"
+            className="mx-auto mb-2 h-12 w-auto"
           />
           <p className="mb-4 text-sm text-muted-foreground">
             NCIC 성취기준 기반 체계적인 학습
