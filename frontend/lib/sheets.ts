@@ -13,7 +13,18 @@ export type SheetType =
   | "drill_v_add"
   | "drill_v_add_carry"
   | "drill_v_sub"
-  | "drill_v_mul";
+  | "drill_v_mul"
+  | "drill_v_div"
+  // 분수 가로식 (SpecialProblem 자동 처리)
+  | "drill_h_frac_add"
+  | "drill_h_frac_sub"
+  | "drill_h_frac_mul"
+  | "drill_h_frac_div"
+  // 소수 가로식 (SpecialProblem 자동 처리)
+  | "drill_h_dec_add"
+  | "drill_h_dec_sub"
+  | "drill_h_dec_mul"
+  | "drill_h_dec_div";
 
 export interface SheetMeta {
   id: string;

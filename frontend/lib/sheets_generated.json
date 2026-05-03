@@ -307,7 +307,7 @@
     {
       "id": "s8-v-t",
       "unit_id": "math-1-2-4",
-      "type": "drill_v_add",
+      "type": "drill_h_add",
       "title": "두 수의 합이 10이 되는 세 수의 덧셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -389,7 +389,7 @@
     {
       "id": "s7-v-t",
       "unit_id": "math-1-2-6",
-      "type": "drill_v_add",
+      "type": "drill_h_add",
       "title": "몇 + 몇 / 십몇 - 몇",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -511,7 +511,7 @@
     {
       "id": "s11-v-t",
       "unit_id": "math-2-1-3",
-      "type": "drill_v_add",
+      "type": "drill_h_add",
       "title": "몇십 몇 ± 몇 (받아올림/내림 있음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -531,7 +531,7 @@
     {
       "id": "s13-v-t",
       "unit_id": "math-2-1-3",
-      "type": "drill_v_add",
+      "type": "drill_h_add",
       "title": "몇십 몇 ± 몇십 몇",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -633,7 +633,7 @@
     {
       "id": "s4-v-b",
       "unit_id": "math-2-2-2",
-      "type": "drill_v_add",
+      "type": "drill_h_add",
       "title": "곱셈구구에서 □안의 수 찾기",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -925,7 +925,7 @@
     {
       "id": "s27-v-t",
       "unit_id": "math-3-1-1",
-      "type": "drill_v_add",
+      "type": "drill_h_add",
       "title": "몇백 몇십 몇 ± 몇백 몇십 몇",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1017,7 +1017,7 @@
     {
       "id": "s4-v-d",
       "unit_id": "math-3-1-3",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "곱셈구구 내에서의 나눗셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1283,7 +1283,7 @@
     {
       "id": "s1-v-d",
       "unit_id": "math-3-2-2",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "몇십 ÷ 몇 (내림이 없고 나머지도 없음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1303,7 +1303,7 @@
     {
       "id": "s3-v-d",
       "unit_id": "math-3-2-2",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "몇십 몇 ÷ 몇 (내림이 없고 나머지도 없음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1323,7 +1323,7 @@
     {
       "id": "s5-v-d",
       "unit_id": "math-3-2-2",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "몇십 몇 ÷ 몇 (내림이 있으나 나머지가 없음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1343,7 +1343,7 @@
     {
       "id": "s7-v-d",
       "unit_id": "math-3-2-2",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "몇십 몇 ÷ 몇 (내림이 있고 나머지도 있음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1363,7 +1363,7 @@
     {
       "id": "s9-v-d",
       "unit_id": "math-3-2-2",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "몇백 몇십 몇 ÷ 몇 (내림/나머지 있음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1383,7 +1383,7 @@
     {
       "id": "s11-v-d",
       "unit_id": "math-3-2-2",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "나눗셈의 몫과 나머지",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1425,7 +1425,7 @@
     {
       "id": "s1-h-f",
       "unit_id": "math-3-2-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "대분수를 가분수로 나타내기",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1435,7 +1435,7 @@
     {
       "id": "s2-h-f",
       "unit_id": "math-3-2-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "가분수를 대분수로 나타내기",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1445,7 +1445,7 @@
     {
       "id": "s3-h-f",
       "unit_id": "math-3-2-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분모가 같은 가분수/대분수끼리의 크기 비교",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1455,7 +1455,7 @@
     {
       "id": "s4-h-f",
       "unit_id": "math-3-2-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분모가 같은 가분수와 대분수의 크기 비교",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1547,7 +1547,7 @@
     {
       "id": "s9-v-h",
       "unit_id": "math-4-1-3",
-      "type": "drill_v_add",
+      "type": "drill_h_add",
       "title": "몇십으로 나누기 (나머지 없음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1567,7 +1567,7 @@
     {
       "id": "s11-v-h",
       "unit_id": "math-4-1-3",
-      "type": "drill_v_add",
+      "type": "drill_h_add",
       "title": "몇십으로 나누기 (나머지 있음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1587,7 +1587,7 @@
     {
       "id": "s13-v-d",
       "unit_id": "math-4-1-3",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "두 자리 수 ÷ 두 자리 수 (나머지 없음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1607,7 +1607,7 @@
     {
       "id": "s15-v-d",
       "unit_id": "math-4-1-3",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "두 자리 수 ÷ 두 자리 수 (나머지 있음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1627,7 +1627,7 @@
     {
       "id": "s17-v-d",
       "unit_id": "math-4-1-3",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "세 자리 수 ÷ 두 자리 수 (나머지 없음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1647,7 +1647,7 @@
     {
       "id": "s19-v-d",
       "unit_id": "math-4-1-3",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "세 자리 수 ÷ 두 자리 수 (나머지 있음)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1667,7 +1667,7 @@
     {
       "id": "s21-v-d",
       "unit_id": "math-4-1-3",
-      "type": "drill_h_div",
+      "type": "drill_v_div",
       "title": "세 자리 수 ÷ 두 자리 수 (몫이 두 자리)",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1689,7 +1689,7 @@
     {
       "id": "s1-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분모가 같은 진분수의 덧셈 (합이 진분수)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1699,7 +1699,7 @@
     {
       "id": "s2-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분모가 같은 진분수의 덧셈 (합이 가분수)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1709,7 +1709,7 @@
     {
       "id": "s3-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분모가 같은 대분수의 덧셈 (분자의 합 < 분모)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1719,7 +1719,7 @@
     {
       "id": "s4-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분모가 같은 대분수의 덧셈 (분자의 합 > 분모)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1729,7 +1729,7 @@
     {
       "id": "s5-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_sub",
       "title": "분모가 같은 진분수의 뺄셈 (진분수 - 진분수)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1739,7 +1739,7 @@
     {
       "id": "s6-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_sub",
       "title": "분모가 같은 진분수의 뺄셈 (자연수 - 진분수)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1749,7 +1749,7 @@
     {
       "id": "s7-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_sub",
       "title": "분모가 같은 대분수의 뺄셈 <1>",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1759,7 +1759,7 @@
     {
       "id": "s8-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_sub",
       "title": "분모가 같은 대분수의 뺄셈 <2>",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1769,7 +1769,7 @@
     {
       "id": "s9-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분모가 같은 대분수와 진분수의 덧셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1779,7 +1779,7 @@
     {
       "id": "s10-h-f",
       "unit_id": "math-4-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_sub",
       "title": "분모가 같은 대분수와 진분수의 뺄셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1791,7 +1791,7 @@
     {
       "id": "s1-v-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_v_add",
+      "type": "drill_h_dec_add",
       "title": "자연수가 없는 소수 한 자리 수끼리의 덧셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1801,7 +1801,7 @@
     {
       "id": "s2-h-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_add",
       "title": "자연수가 없는 소수 한 자리 수끼리의 덧셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1811,7 +1811,7 @@
     {
       "id": "s3-v-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_v_add",
+      "type": "drill_h_dec_add",
       "title": "자연수가 없는 소수 두 자리 수 범위의 덧셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1821,7 +1821,7 @@
     {
       "id": "s4-h-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_add",
       "title": "자연수가 없는 소수 두 자리 수 범위의 덧셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1831,7 +1831,7 @@
     {
       "id": "s5-v-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_v_add",
+      "type": "drill_h_dec_add",
       "title": "자연수가 있는 소수 두 자리 수끼리의 덧셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1841,7 +1841,7 @@
     {
       "id": "s6-h-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_add",
       "title": "자연수가 있는 소수 두 자리 수끼리의 덧셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1851,7 +1851,7 @@
     {
       "id": "s7-v-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_v_add",
+      "type": "drill_h_dec_add",
       "title": "자연수가 있는 소수 세 자리 수 범위의 덧셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1861,7 +1861,7 @@
     {
       "id": "s8-h-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_add",
       "title": "자연수가 있는 소수 세 자리 수 범위의 덧셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1871,7 +1871,7 @@
     {
       "id": "s9-v-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_v_add",
+      "type": "drill_h_dec_sub",
       "title": "소수 한 자리 수끼리의 뺄셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1881,7 +1881,7 @@
     {
       "id": "s10-h-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_sub",
       "title": "소수 한 자리 수끼리의 뺄셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1891,7 +1891,7 @@
     {
       "id": "s11-v-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_v_add",
+      "type": "drill_h_dec_sub",
       "title": "자연수가 없는 소수 두 자리 범위의 뺄셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1901,7 +1901,7 @@
     {
       "id": "s12-h-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_sub",
       "title": "자연수가 없는 소수 두 자리 범위의 뺄셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1911,7 +1911,7 @@
     {
       "id": "s13-v-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_v_add",
+      "type": "drill_h_dec_sub",
       "title": "자연수가 있는 소수 두 자리 수끼리의 뺄셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1921,7 +1921,7 @@
     {
       "id": "s14-h-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_sub",
       "title": "자연수가 있는 소수 두 자리 수끼리의 뺄셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -1931,7 +1931,7 @@
     {
       "id": "s15-v-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_v_add",
+      "type": "drill_h_dec_sub",
       "title": "자연수가 있는 소수 세 자리 수 범위의 뺄셈",
       "subtitle": "세로식 · 20문제",
       "problem_count": 20,
@@ -1941,7 +1941,7 @@
     {
       "id": "s16-h-d",
       "unit_id": "math-4-2-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_sub",
       "title": "자연수가 있는 소수 세 자리 수 범위의 뺄셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2147,7 +2147,7 @@
     {
       "id": "s1-h-f",
       "unit_id": "math-5-1-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "크기가 같은 분수 만들기",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2157,7 +2157,7 @@
     {
       "id": "s3-h-f",
       "unit_id": "math-5-1-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "기약분수 구하기",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2167,7 +2167,7 @@
     {
       "id": "s4-h-f",
       "unit_id": "math-5-1-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분수의 통분 (곱을 공통분모로)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2177,7 +2177,7 @@
     {
       "id": "s5-h-f",
       "unit_id": "math-5-1-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분수의 통분 (최소공배수를 공통분모로)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2187,7 +2187,7 @@
     {
       "id": "s6-h-f",
       "unit_id": "math-5-1-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분수의 크기 비교",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2197,7 +2197,7 @@
     {
       "id": "s7-h-f",
       "unit_id": "math-5-1-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분수를 소수로 나타내기",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2207,7 +2207,7 @@
     {
       "id": "s8-h-f",
       "unit_id": "math-5-1-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "소수를 분수로 나타내기",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2217,7 +2217,7 @@
     {
       "id": "s9-h-f",
       "unit_id": "math-5-1-4",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "분수와 소수의 비교",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2229,7 +2229,7 @@
     {
       "id": "s1-h-f",
       "unit_id": "math-5-1-5",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "진분수의 덧셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2239,7 +2239,7 @@
     {
       "id": "s2-h-f",
       "unit_id": "math-5-1-5",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "대분수의 덧셈 (받아올림 없음)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2249,7 +2249,7 @@
     {
       "id": "s3-h-f",
       "unit_id": "math-5-1-5",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_add",
       "title": "대분수의 덧셈 (받아올림 있음)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2259,7 +2259,7 @@
     {
       "id": "s4-h-f",
       "unit_id": "math-5-1-5",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_sub",
       "title": "진분수의 뺄셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2269,7 +2269,7 @@
     {
       "id": "s5-h-f",
       "unit_id": "math-5-1-5",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_sub",
       "title": "대분수의 뺄셈 (받아내림 없음)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2279,7 +2279,7 @@
     {
       "id": "s6-h-f",
       "unit_id": "math-5-1-5",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_sub",
       "title": "대분수의 뺄셈 (받아내림 있음)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2331,7 +2331,7 @@
     {
       "id": "s5-h-f",
       "unit_id": "math-5-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_mul",
       "title": "세 분수의 곱셈 (진분수)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2341,7 +2341,7 @@
     {
       "id": "s6-h-f",
       "unit_id": "math-5-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_mul",
       "title": "세 분수의 곱셈 (대분수, 자연수 포함)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2353,7 +2353,7 @@
     {
       "id": "s1-h-d",
       "unit_id": "math-5-2-4",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_mul",
       "title": "소수와 자연수의 곱",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2383,7 +2383,7 @@
     {
       "id": "s4-h-d",
       "unit_id": "math-5-2-4",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_mul",
       "title": "세 소수의 곱셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2395,7 +2395,7 @@
     {
       "id": "s1-h-f",
       "unit_id": "math-6-1-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_div",
       "title": "분수 ÷ 자연수",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2405,7 +2405,7 @@
     {
       "id": "s2-h-f",
       "unit_id": "math-6-1-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_div",
       "title": "분수와 자연수의 곱셈/나눗셈 혼합",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2417,7 +2417,7 @@
     {
       "id": "s1-h-d",
       "unit_id": "math-6-1-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "소수 ÷ 자연수 ",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2427,7 +2427,7 @@
     {
       "id": "s2-h-d",
       "unit_id": "math-6-1-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "소수 ÷ 자연수 (소수 끝자리 아래 0을 내려 계산)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2437,7 +2437,7 @@
     {
       "id": "s3-h-n",
       "unit_id": "math-6-1-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "자연수 ÷ 자연수",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2447,7 +2447,7 @@
     {
       "id": "s4-h-n",
       "unit_id": "math-6-1-3",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "자연수 ÷ 자연수 (반올림하여 나타냄)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2481,7 +2481,7 @@
     {
       "id": "s1-h-f",
       "unit_id": "math-6-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_div",
       "title": "분수의 나눗셈 <1>",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2491,7 +2491,7 @@
     {
       "id": "s2-h-f",
       "unit_id": "math-6-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_div",
       "title": "분수의 나눗셈 <2>",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2501,7 +2501,7 @@
     {
       "id": "s3-h-f",
       "unit_id": "math-6-2-1",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_div",
       "title": "분수의 나눗셈 <3>",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2513,7 +2513,7 @@
     {
       "id": "s1-h-d",
       "unit_id": "math-6-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "소수 한 자리 수 ÷ 소수 한 자리 수",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2523,7 +2523,7 @@
     {
       "id": "s2-h-d",
       "unit_id": "math-6-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "소수 두 자리 수 ÷ 소수 두 자리 수",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2533,7 +2533,7 @@
     {
       "id": "s3-h-d",
       "unit_id": "math-6-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "자릿수가 다른 두 소수의 나눗셈",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2543,7 +2543,7 @@
     {
       "id": "s4-h-d",
       "unit_id": "math-6-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "자연수 ÷ 소수",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2553,7 +2553,7 @@
     {
       "id": "s5-h-d",
       "unit_id": "math-6-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "소수의 나눗셈에서 나머지 구하기",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2563,7 +2563,7 @@
     {
       "id": "s6-h-f",
       "unit_id": "math-6-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_frac_div",
       "title": "소수 ÷ 분수 (분수로 고쳐 계산)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2573,7 +2573,7 @@
     {
       "id": "s7-h-d",
       "unit_id": "math-6-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "소수 ÷ 분수 (소수로 고쳐 계산)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2583,7 +2583,7 @@
     {
       "id": "s8-h-d",
       "unit_id": "math-6-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "분수 ÷ 소수 (분수로 고쳐 계산)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,
@@ -2593,7 +2593,7 @@
     {
       "id": "s9-h-d",
       "unit_id": "math-6-2-2",
-      "type": "drill_h_add",
+      "type": "drill_h_dec_div",
       "title": "분수 ÷ 소수 (소수로 고쳐 계산)",
       "subtitle": "가로식 · 20문제",
       "problem_count": 20,

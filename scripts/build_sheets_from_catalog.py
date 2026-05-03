@@ -344,10 +344,52 @@ def sheet_type(op, layout):
         if layout == 'v': return 'drill_v_mul'
         return 'drill_h_mul'
     if op == 'div':
-        return 'drill_h_div'  # 나눗셈은 가로식만 (현재 SheetType에 v_div 없음)
+        # 정수 나눗셈 — 세로식(v) / 가로식(h) 분기
+        if layout == 'v': return 'drill_v_div'
+        return 'drill_h_div'
     if op == 'mix_addsub':
         return 'drill_v_add' if layout == 'v' else 'drill_h_add'
     return 'drill_h_add'
+
+
+def special_sheet_type(pool_key, title, desc, layout):
+    """특수 양식(분수·소수 등) → drill_h_frac_* / drill_h_dec_* SheetType 결정.
+
+    분수/소수는 SpecialProblem에서 op 필드 기반으로 렌더링되지만,
+    SheetType은 인쇄 그리드 + 메타 분류용으로 의미가 있다.
+    """
+    pk = pool_key or ''
+    t = title or ''
+    d = desc or ''
+    # 분수 계열
+    is_frac_pool = pk.startswith('frac_') or pk in ('frac_reduce', 'frac_common_denom',
+                                                     'frac_compare_same', 'frac_proper_to_improper',
+                                                     'frac_improper_to_mixed')
+    # 소수 계열
+    is_dec_pool = pk.startswith('dec_') or pk.startswith('nat_div_dec') or pk == 'nat_div_nat_dec'
+    if is_frac_pool:
+        if '나눗셈' in t or '÷' in t or pk in ('frac_div', 'frac_div_natural'):
+            return 'drill_h_frac_div'
+        if '곱셈' in t or '×' in t or pk in ('frac_mul', 'frac_mul_natural'):
+            return 'drill_h_frac_mul'
+        if '뺄셈' in t or pk.endswith('_sub') or pk in ('frac_natural_minus_proper', 'frac_mixed_sub_borrow', 'frac_diff_sub'):
+            return 'drill_h_frac_sub'
+        if '덧셈' in t or pk.endswith('_add') or pk in ('frac_mixed_add_carry', 'frac_diff_add'):
+            return 'drill_h_frac_add'
+        # 변환·비교·약분·통분 등 — 분수 영역이므로 add 계열로 분류 (시각적 grid 동일)
+        return 'drill_h_frac_add'
+    if is_dec_pool:
+        if '나눗셈' in t or '÷' in t or pk.startswith('dec_div') or pk.startswith('nat_div'):
+            return 'drill_h_dec_div'
+        if '곱셈' in t or '×' in t or '곱' in t or pk.startswith('dec_mul'):
+            return 'drill_h_dec_mul'
+        if '뺄셈' in t or pk.startswith('dec_sub'):
+            return 'drill_h_dec_sub'
+        if '덧셈' in t or pk.startswith('dec_add'):
+            return 'drill_h_dec_add'
+        return 'drill_h_dec_add'
+    # 분수↔소수 비교 등 혼합 — 가로식 add로 fallback
+    return None
 
 
 def short_id(no, layout, op):
@@ -374,11 +416,16 @@ for uid, info in CAT.items():
         special_key = parse_special_op(title, desc)
         if special_key and special_key in POOL_KEYS:
             pool_key = special_key
-            # special op은 layout과 무관하게 동일 풀 사용 (가로/세로 구분 의미 적음)
+            # special op은 SpecialProblem 컴포넌트에서 op 기반으로 렌더링 (가로식 고정)
+            # SheetType은 분수/소수 영역 분류 + 메타용
+            stype = special_sheet_type(pool_key, title, desc, layout)
+            if stype is None:
+                # 약수·배수·비/비례 등 분수·소수 외 특수양식 — 가로식 add로 분류 (시각 동일)
+                stype = 'drill_h_add'
             sheets.append({
                 'id': short_id(f['no'], layout, special_key.split('_')[0][:3]),
                 'unit_id': uid,
-                'type': 'drill_h_add' if layout == 'h' else 'drill_v_add',  # placeholder type
+                'type': stype,
                 'title': re.sub(r'\s+[AB]$', '', title),
                 'subtitle': f'{("세로식" if layout == "v" else "가로식")} · {auto_n}문제',
                 'problem_count': auto_n,

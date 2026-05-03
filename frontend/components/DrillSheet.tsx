@@ -19,11 +19,25 @@ export function DrillSheet({
   answers: Record<number, string>;
   onChange: (idx: number, value: string) => void;
 }) {
+  // 가로식: 기존 정수 4종 + 분수/소수 가로식 8종
+  // 세로식: drill_v_* (drill_v_div 포함 — 받아내림 표기 위해 4열 grid 사용)
   const isHorizontal =
     sheet.type === "drill_h_add" ||
     sheet.type === "drill_h_sub" ||
     sheet.type === "drill_h_mul" ||
-    sheet.type === "drill_h_div";
+    sheet.type === "drill_h_div" ||
+    sheet.type === "drill_h_frac_add" ||
+    sheet.type === "drill_h_frac_sub" ||
+    sheet.type === "drill_h_frac_mul" ||
+    sheet.type === "drill_h_frac_div" ||
+    sheet.type === "drill_h_dec_add" ||
+    sheet.type === "drill_h_dec_sub" ||
+    sheet.type === "drill_h_dec_mul" ||
+    sheet.type === "drill_h_dec_div";
+
+  // 인쇄 그리드 — 세로식 ÷ 는 받아내림/몫 단계 표기 공간 확보 위해 4열
+  const printCols =
+    sheet.type === "drill_v_div" ? "print:grid-cols-4" : "print:grid-cols-3";
 
   if (problems.length === 0) {
     return (
@@ -56,8 +70,8 @@ export function DrillSheet({
         </div>
       )}
 
-      {/* 채점 대상 1~N번 */}
-      <div className="grid grid-cols-2 gap-x-8 gap-y-5 print:grid-cols-3 print:gap-x-6 print:gap-y-4">
+      {/* 채점 대상 1~N번 — 양식별 인쇄 그리드 분기 (drill_v_div=4열, 그 외=3열) */}
+      <div className={`grid grid-cols-2 gap-x-8 gap-y-5 ${printCols} print:gap-x-6 print:gap-y-4`}>
         {graded.map((p) => (
           <DrillProblemCell
             key={p.index}
