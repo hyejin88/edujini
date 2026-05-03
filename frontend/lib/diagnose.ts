@@ -112,6 +112,13 @@ export function computeDiagnosis(scope?: { unitId?: string; lastN?: number }): D
     byUnit.set(a.unit_id, u);
   }
 
+  // 진단 임계값 (수학 교사 권고):
+  // - 90%+ = 잘함 (약점 X, 칭찬)
+  // - 70~89% = 안정 — 다른 단원으로 진도 OK, 다시 풀고 싶으면 풀이 가능
+  // - <70% = 보강 권장 (한 번 더 풀면 좋은 단원)
+  // 최소 5문항 풀어야 통계적으로 의미 있음
+  const WEAK_THRESHOLD = 70;
+  const MIN_ATTEMPTS = 5;
   const weak = [...byUnit.entries()]
     .map(([uid, u]) => ({
       unit_id: uid,
@@ -121,7 +128,7 @@ export function computeDiagnosis(scope?: { unitId?: string; lastN?: number }): D
       total: u.total,
       correct: u.correct,
     }))
-    .filter((u) => u.accuracy < 100)
+    .filter((u) => u.accuracy < WEAK_THRESHOLD && u.total >= MIN_ATTEMPTS)
     .sort((a, b) => a.accuracy - b.accuracy)
     .slice(0, 3);
 
@@ -202,7 +209,7 @@ export function computeDiagnosis(scope?: { unitId?: string; lastN?: number }): D
       ...s,
       accuracy: s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0,
     }))
-    .filter((s) => s.accuracy < 100 && s.total >= 5)
+    .filter((s) => s.accuracy < WEAK_THRESHOLD && s.total >= MIN_ATTEMPTS)
     .sort((a, b) => a.accuracy - b.accuracy)
     .slice(0, 3);
 
