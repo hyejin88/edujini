@@ -64,6 +64,7 @@ async def _label(problem: dict, student_answer: str) -> str | None:
         return None
 
     user = USER_LABEL.format(
+        grade=problem.get("grade", 3),
         problem_body=problem.get("body", ""),
         correct_answer=problem.get("answer", ""),
         explanation=problem.get("explanation", ""),
