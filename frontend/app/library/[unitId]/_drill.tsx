@@ -151,7 +151,7 @@ export default function DrillSheetPage({
   unit: UnitDTO | null;
 }) {
   const router = useRouter();
-  // 페이지 진입 시 매번 새 랜덤 nonce → 매번 다른 30문제
+  // 페이지 진입 시 매번 새 랜덤 nonce → 매번 다른 20문제
   const [seedNonce, setSeedNonce] = useState<number>(() =>
     typeof window === "undefined"
       ? 0
@@ -161,6 +161,9 @@ export default function DrillSheetPage({
   const [isGraded, setIsGraded] = useState(false);
   const [problems, setProblems] = useState<DrillProblem[]>([]);
   const [loading, setLoading] = useState(true);
+  // 풀이 시작 시각 — 문제 로드 완료 시점부터 카운트, 새 문제 받기 시 리셋
+  const [startTime, setStartTime] = useState<number>(0);
+  const [elapsedMs, setElapsedMs] = useState<number>(0);
 
   useEffect(() => {
     let mounted = true;
@@ -169,6 +172,7 @@ export default function DrillSheetPage({
       if (mounted) {
         setProblems(p);
         setLoading(false);
+        setStartTime(Date.now());
       }
     });
     return () => {
@@ -193,9 +197,10 @@ export default function DrillSheetPage({
 
   const handleGrade = () => {
     setIsGraded(true);
+    const elapsed = startTime > 0 ? Date.now() - startTime : 0;
+    setElapsedMs(elapsed);
     // 진단용 attempts 로컬 저장 — 1번(예시) 제외, 답한 문제만
     const now = new Date().toISOString();
-    const grade = sheet.unit_id.match(/^[a-z]+-(\d+)/i);
     const subject = "수학";
     const records: AttemptRecord[] = problems
       .filter((p) => !p.is_example)
@@ -215,6 +220,7 @@ export default function DrillSheetPage({
           sheet_id: sheet.id,
           sheet_title: sheet.title,
           pool_key: sheet.pool_key,
+          elapsed_ms: elapsed,
         };
       })
       .filter((r) => r.user_answer.trim()); // 답 안 한 문제는 진단 제외
@@ -225,6 +231,7 @@ export default function DrillSheetPage({
       score,
       total,
       correct: correctCount,
+      elapsed_sec: Math.round(elapsed / 1000),
     });
   };
   const handleNew = () => {

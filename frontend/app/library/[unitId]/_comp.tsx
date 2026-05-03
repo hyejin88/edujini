@@ -129,6 +129,9 @@ export default function ComprehensiveSheet({
   const [isGraded, setIsGraded] = useState(false);
   const [results, setResults] = useState<Record<string, boolean>>({});
   const [isLoading, setIsLoading] = useState(true);
+  // 풀이 시작 시각 — 문제 로드 완료 시점
+  const [startTime, setStartTime] = useState<number>(0);
+  const [elapsedMs, setElapsedMs] = useState<number>(0);
 
   useEffect(() => {
     fetchUnitProblems(unitId, 20, true)
@@ -136,6 +139,7 @@ export default function ComprehensiveSheet({
         setUnitProblems(problems as Problem[]);
         setIsLoading(false);
         recordPlayedUnit(unitId);
+        setStartTime(Date.now());
       })
       .catch(() => setIsLoading(false));
   }, [unitId]);
@@ -162,6 +166,8 @@ export default function ComprehensiveSheet({
     for (const it of r.results) map[it.problem_id] = it.correct;
     setResults(map);
     setIsGraded(true);
+    const elapsed = startTime > 0 ? Date.now() - startTime : 0;
+    setElapsedMs(elapsed);
     // 진단용 attempts 로컬 저장 (PoC: 클라이언트 사이드 진단)
     const now = new Date().toISOString();
     const attemptsToSave = r.results.map((res) => {
@@ -177,6 +183,7 @@ export default function ComprehensiveSheet({
         correct_answer: res.correct_answer,
         created_at: now,
         source: "comp" as const,
+        elapsed_ms: elapsed,
       };
     });
     saveAttempts(attemptsToSave);
@@ -185,6 +192,7 @@ export default function ComprehensiveSheet({
       score,
       total: unitProblems.length,
       correct: correctCount,
+      elapsed_sec: Math.round(elapsed / 1000),
     });
   };
 

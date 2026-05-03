@@ -19,6 +19,8 @@ export interface AttemptRecord {
   sheet_id?: string;
   sheet_title?: string;
   pool_key?: string;
+  // 풀이 소요 시간(ms) — 한 세션 내 모든 record 동일값
+  elapsed_ms?: number;
 }
 
 export interface DiagnosisResult {
@@ -42,6 +44,7 @@ export interface DiagnosisResult {
     total: number;
     source?: "comp" | "drill";
     sheet_title?: string;
+    elapsed_ms?: number;
   } | null;
   // 연산 양식별 진단
   weak_drill_sheets: {
@@ -172,6 +175,7 @@ export function computeDiagnosis(scope?: { unitId?: string; lastN?: number }): D
       score_pct: lastAtts.length > 0 ? Math.round((c / lastAtts.length) * 100) : 0,
       source: lastSource,
       sheet_title: last.sheet_title,
+      elapsed_ms: last.elapsed_ms,
     };
   }
 

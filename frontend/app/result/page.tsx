@@ -33,6 +33,14 @@ function topErrorLabel(eb: Record<string, number>): string | null {
   return entries[0][0];
 }
 
+function formatElapsed(ms: number): string {
+  const sec = Math.round(ms / 1000);
+  if (sec < 60) return `${sec}초`;
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  return s === 0 ? `${m}분` : `${m}분 ${s}초`;
+}
+
 export default function ResultPage() {
   const [d, setD] = useState<DiagnosisResult | null>(null);
 
@@ -146,6 +154,11 @@ export default function ResultPage() {
             <p className="text-muted-foreground">방금 푼 학습</p>
             <p className="mt-1 font-semibold text-foreground">
               {recent_session.unit_name} — {recent_session.score_pct}점 ({recent_session.correct}/{recent_session.total})
+              {recent_session.elapsed_ms !== undefined && recent_session.elapsed_ms > 0 && (
+                <span className="ml-2 text-xs font-normal text-muted-foreground">
+                  · 풀이 시간 {formatElapsed(recent_session.elapsed_ms)}
+                </span>
+              )}
             </p>
           </div>
         )}
