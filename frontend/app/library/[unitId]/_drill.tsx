@@ -289,31 +289,20 @@ export default function DrillSheetPage({
         className="worksheet-page mx-auto my-8 max-w-[210mm] bg-white shadow-lg print:my-0 print:max-w-none print:p-[16mm] print:shadow-none"
         style={{ padding: "16mm" }}
       >
-        {/* 헤더 — 화면: 좌우 분리 / 인쇄: 캐릭터·제목 가운데 1열, 이름·날짜 별도 행 */}
+        {/* 헤더 — 화면·인쇄 모두 logo-wordmark 단일 + 가운데 1열 (브랜드 통일) */}
         <div className="mb-6 print:mb-3">
-          <div className="flex items-center justify-between print:flex-col print:items-center print:gap-1">
+          <div className="flex flex-col items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo-wordmark.png"
               alt="EDU Jini"
-              className="h-6 w-auto print:hidden"
+              className="h-7 w-auto print:h-6"
             />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/character-mono.png"
-              alt="EDU Jini"
-              className="hidden h-10 w-auto print:block"
-            />
-            <h1 className="hidden font-serif text-xl font-bold text-[#111827] print:block print:text-center">
+            <h1 className="text-center font-serif text-xl font-bold text-[#111827]">
               {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(sheet.unit_id))} 수학`}{" "}
               · {sheet.title}
             </h1>
           </div>
-          {/* 화면용 제목 (인쇄 시는 위에서 가운데로 표기) */}
-          <h1 className="mt-3 font-serif text-xl font-bold text-[#111827] print:hidden">
-            {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(sheet.unit_id))} 수학`}{" "}
-            · {sheet.title}
-          </h1>
           <div className="mt-2 mb-4 border-t border-[#111827]" />
           {/* 이름·날짜 — 인쇄 전용, 제목 아래 별도 행 (오른쪽 정렬) */}
           <div className="mb-3 hidden justify-end gap-6 text-xs text-[#374151] print:flex">

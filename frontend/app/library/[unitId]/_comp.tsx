@@ -242,31 +242,26 @@ export default function ComprehensiveSheet({
         className="worksheet-page mx-auto my-8 max-w-[210mm] bg-white shadow-lg print:my-0 print:max-w-none print:p-[16mm] print:shadow-none"
         style={{ padding: "16mm" }}
       >
-        <div className="mb-6">
-          {/* 화면용 컬러 워드마크 + 인쇄용 흑백 캐릭터 */}
-          <div className="mb-3 flex items-center justify-between">
+        <div className="mb-6 print:mb-3">
+          {/* 화면·인쇄 통일 — logo-wordmark 단일 + 가운데 1열 */}
+          <div className="flex flex-col items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo-wordmark.png"
               alt="EDU Jini"
-              className="h-6 w-auto print:hidden"
+              className="h-7 w-auto print:h-6"
             />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/character-mono.png"
-              alt="EDU Jini"
-              className="hidden h-10 w-auto print:block"
-            />
-            <div className="hidden gap-6 text-xs text-[#6b7280] print:flex">
-              <span>이름 ____________</span>
-              <span>날짜 ___ / ___</span>
-            </div>
+            <h1 className="text-center font-serif text-xl font-bold text-[#111827]">
+              {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(unitId))} 수학`}{" "}
+              · {unit?.unit_name || ""}
+            </h1>
           </div>
-          <h1 className="font-serif text-xl font-bold text-[#111827]">
-            {unit ? `${gradeLabel(unit.grade)} ${unit.subject}` : `${gradeLabel(gradeFromUnitId(unitId))} 수학`}{" "}
-            · {unit?.unit_name || ""}
-          </h1>
           <div className="mt-2 mb-4 border-t border-[#111827]" />
+          {/* 이름·날짜 — 인쇄 전용, 제목 아래 우측 정렬 */}
+          <div className="mb-3 hidden justify-end gap-6 text-xs text-[#374151] print:flex">
+            <span>이름 ____________</span>
+            <span>날짜 ___ / ___</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2 print:grid-cols-2">
