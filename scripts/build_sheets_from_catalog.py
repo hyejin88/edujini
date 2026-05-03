@@ -357,7 +357,7 @@ def short_id(no, layout, op):
 unit_sheets = {}     # unit_id → [SheetMeta]
 report_lines = []
 unmapped = []
-auto_n = 30  # 기본 문항 수 (일일수학 표준 ~30~32)
+auto_n = 20  # A4 한 페이지 분량 (가로식 2열x10행, 세로식은 컴팩트하게 들어감)
 for uid, info in CAT.items():
     sheets = []
     for f in info['formats']:
