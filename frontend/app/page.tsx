@@ -8,6 +8,7 @@ import { track } from "@vercel/analytics";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
+import { computeDiagnosis, type DiagnosisResult } from "@/lib/diagnose";
 
 const grades = [
   { value: 1, label: "초1" },
@@ -27,6 +28,8 @@ export default function LandingPage() {
   // 학년 기억 — localStorage 우선, 없으면 미선택 (사용자가 명시 선택 유도)
   const [selectedGrade, setSelectedGrade] = useState<number | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<string>("수학");
+  // 사용자 진단 데이터 — 재방문자에게 본인 리포트 미리보기
+  const [diagnosis, setDiagnosis] = useState<DiagnosisResult | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -37,6 +40,7 @@ export default function LandingPage() {
         if (g >= 1 && g <= 6) setSelectedGrade(g);
       }
     } catch {}
+    setDiagnosis(computeDiagnosis());
   }, []);
 
   const handleSelectGrade = (g: number) => {
@@ -166,59 +170,115 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* AI 진단 미리보기 — 풀어보지 않은 사용자에게 결과물이 어떤지 보여주기 */}
+      {/* AI 진단 미리보기 — 첫 방문자: 예시 / 재방문자: 본인 누적 리포트 */}
       <section className="border-y border-border bg-secondary/30 py-12 md:py-16">
         <div className="mx-auto max-w-4xl px-4">
           <div className="mb-8 text-center">
             <p className="mb-2 text-sm font-medium text-muted-foreground">
-              EDU Jini가 자녀에게 보여주는 결과
+              {diagnosis && diagnosis.total > 0
+                ? "이번 단말의 학습 진단"
+                : "EDU Jini가 자녀에게 보여주는 결과"}
             </p>
             <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-              풀고 나면 이런 학부모 리포트가 자동 생성돼요
+              {diagnosis && diagnosis.total > 0
+                ? "지금까지 푼 학습의 종합 리포트"
+                : "풀고 나면 이런 학부모 리포트가 자동 생성돼요"}
             </h2>
           </div>
 
-          <Card className="mx-auto max-w-2xl border-2 border-border bg-background p-6 shadow-sm">
-            <div className="mb-4 flex items-center gap-3 border-b border-border pb-3">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/character.png" alt="" className="h-12 w-12 flex-shrink-0" />
-              <div>
-                <p className="text-xs tracking-widest text-muted-foreground">
-                  EDU Jini 학습 리포트 — 미리보기
-                </p>
-                <p className="mt-1 font-semibold text-foreground">
-                  초3 수학 · 곱셈 단원 · 19/20 정답
-                </p>
+          {diagnosis && diagnosis.total > 0 ? (
+            // 재방문자 — 본인 데이터 기반 동적 리포트
+            <Card className="mx-auto max-w-2xl border-2 border-primary/30 bg-background p-6 shadow-sm">
+              <div className="mb-4 flex items-center gap-3 border-b border-border pb-3">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/character.png" alt="" className="h-12 w-12 flex-shrink-0" />
+                <div className="flex-1">
+                  <p className="text-xs tracking-widest text-muted-foreground">
+                    EDU Jini 학습 리포트 — 누적
+                  </p>
+                  <p className="mt-1 font-semibold text-foreground">
+                    {diagnosis.total}문제 풀이 · {diagnosis.correct}문제 정답 ({diagnosis.score_pct}점)
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="mb-4">
-              <p className="mb-2 text-sm font-semibold text-foreground">잘한 점</p>
-              <ul className="space-y-1 text-sm text-muted-foreground">
-                <li>· 받아올림 없는 두 자리 곱셈을 빠르게 풀었어요</li>
-                <li>· 문장제에서 식 세우기까지 스스로 해냈어요</li>
-              </ul>
-            </div>
+              {diagnosis.recent_session && (
+                <div className="mb-4 rounded-lg border border-border bg-secondary/30 p-3 text-sm">
+                  <p className="text-xs text-muted-foreground">방금 푼 학습</p>
+                  <p className="mt-1 font-medium text-foreground">
+                    {diagnosis.recent_session.unit_name} — {diagnosis.recent_session.score_pct}점 ({diagnosis.recent_session.correct}/{diagnosis.recent_session.total})
+                  </p>
+                </div>
+              )}
 
-            <div className="mb-4">
-              <p className="mb-2 text-sm font-semibold text-foreground">보완할 점</p>
-              <ul className="space-y-1 text-sm text-muted-foreground">
-                <li>· 받아올림 2번 있는 곱셈에서 자릿값 정렬을 자주 놓쳐요</li>
-                <li>· 함정 문제(단위 다른 비교)를 끝까지 안 읽는 경향</li>
-              </ul>
-            </div>
+              {diagnosis.weak_units.length > 0 && (
+                <div className="mb-4">
+                  <p className="mb-2 text-sm font-semibold text-foreground">보완이 필요한 단원</p>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    {diagnosis.weak_units.slice(0, 3).map((u) => (
+                      <li key={u.unit_id}>
+                        · {u.unit_name} — {u.accuracy}% ({u.correct}/{u.total})
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
-            <div className="rounded-lg border border-border bg-muted/30 p-3">
-              <p className="mb-2 text-sm font-semibold text-foreground">
-                다음 학습 추천
-              </p>
-              <ol className="space-y-1 text-sm text-muted-foreground">
-                <li>1. 곱셈 단원 받아올림 2번 양식 20문제 워밍업</li>
-                <li>2. (두 자리)×(두 자리) 단원 학습 재도전</li>
-                <li>3. 문장제 끝까지 읽기 습관 만들기</li>
-              </ol>
-            </div>
-          </Card>
+              <div className="flex justify-center pt-2">
+                <Button
+                  onClick={() => router.push("/result")}
+                  variant="outline"
+                  className="gap-2"
+                >
+                  전체 학습 진단 자세히 보기
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
+            </Card>
+          ) : (
+            // 첫 방문자 — 예시 리포트
+            <Card className="mx-auto max-w-2xl border-2 border-border bg-background p-6 shadow-sm">
+              <div className="mb-4 flex items-center gap-3 border-b border-border pb-3">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/character.png" alt="" className="h-12 w-12 flex-shrink-0" />
+                <div>
+                  <p className="text-xs tracking-widest text-muted-foreground">
+                    EDU Jini 학습 리포트 — 미리보기
+                  </p>
+                  <p className="mt-1 font-semibold text-foreground">
+                    초3 수학 · 곱셈 단원 · 19/20 정답
+                  </p>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <p className="mb-2 text-sm font-semibold text-foreground">잘한 점</p>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>· 받아올림 없는 두 자리 곱셈을 빠르게 풀었어요</li>
+                  <li>· 문장제에서 식 세우기까지 스스로 해냈어요</li>
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <p className="mb-2 text-sm font-semibold text-foreground">보완할 점</p>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>· 받아올림 2번 있는 곱셈에서 자릿값 정렬을 자주 놓쳐요</li>
+                  <li>· 함정 문제(단위 다른 비교)를 끝까지 안 읽는 경향</li>
+                </ul>
+              </div>
+
+              <div className="rounded-lg border border-border bg-muted/30 p-3">
+                <p className="mb-2 text-sm font-semibold text-foreground">
+                  다음 학습 추천
+                </p>
+                <ol className="space-y-1 text-sm text-muted-foreground">
+                  <li>1. 곱셈 단원 받아올림 2번 양식 20문제 워밍업</li>
+                  <li>2. (두 자리)×(두 자리) 단원 학습 재도전</li>
+                  <li>3. 문장제 끝까지 읽기 습관 만들기</li>
+                </ol>
+              </div>
+            </Card>
+          )}
 
           <p className="mx-auto mt-6 max-w-xl text-center text-sm text-muted-foreground">
             정답률만 알려주는 다른 학습지와 달리, <strong className="text-foreground">왜 틀렸는지</strong>까지 짚어주고

@@ -22,6 +22,37 @@ function gradeFromUnitId(unitId: string): number {
   return m ? parseInt(m[1], 10) : 3;
 }
 
+// 드릴 오답 4축 라벨링 휴리스틱
+// - 개념미숙: 답 미입력·자릿수 크게 다름·부호 반대 (해법 자체를 모름)
+// - 계산실수: 정답 ±1, ±10, 자릿값 1단위 차이 (계산만 틀림)
+// - 함정미인지: 단위·부호 누락 (드릴엔 거의 없음)
+// - 문제해석: 드릴은 단순 산술이라 거의 발생 X (default 안 씀)
+function classifyDrillError(p: DrillProblem, userInput: string): "개념미숙" | "계산실수" | "함정미인지" | "문제해석" {
+  const ua = userInput.trim();
+  if (!ua) return "개념미숙"; // 미입력 = 푸는 법 모름
+  // 분수·비·배열 등 산술 외는 정답 매칭이 까다로워 일단 계산실수
+  if (typeof p.answer !== "number") return "계산실수";
+  const userNum = Number(ua.replace(/[^\d.\-]/g, ""));
+  if (!isFinite(userNum)) return "개념미숙"; // 숫자 아닌 값
+  const correct = p.answer;
+  const diff = Math.abs(userNum - correct);
+  // 정확히 0이면 맞은 것 — 호출 안 됐을 것이지만 안전
+  if (diff === 0) return "계산실수";
+  // 자릿수 차이가 크면 (예: 답 247, 입력 24 또는 2400) 개념·자릿값 미숙
+  const correctDigits = String(Math.abs(Math.round(correct))).length;
+  const userDigits = String(Math.abs(Math.round(userNum))).length;
+  if (Math.abs(correctDigits - userDigits) >= 2) return "개념미숙";
+  // 부호 반대 (덧셈인데 큰수-작은수처럼 풀거나 그 반대)
+  if (correct > 0 && userNum < 0) return "개념미숙";
+  if (correct < 0 && userNum > 0) return "개념미숙";
+  // 정답 ±1 ~ ±10 사이 — 전형적 계산 실수 (받아올림·받아내림 누락)
+  if (diff <= 10) return "계산실수";
+  // 정답의 10% 이내 — 계산실수 (큰 수 살짝 빗나감)
+  if (correct !== 0 && diff / Math.abs(correct) < 0.1) return "계산실수";
+  // 그 외 — 자릿수는 같지만 크게 빗나감 → 개념미숙
+  return "개념미숙";
+}
+
 // op별 정답 비교 — 분수/소수/비/배열 등 다양한 형식 지원
 function checkAnswer(p: DrillProblem, userInput: string): boolean {
   const ua = userInput.trim();
@@ -214,7 +245,7 @@ export default function DrillSheetPage({
           subject,
           user_answer: ua,
           is_correct: isCorrect,
-          error_label: isCorrect ? null : "계산실수",
+          error_label: isCorrect ? null : classifyDrillError(p, ua),
           created_at: now,
           source: "drill" as const,
           sheet_id: sheet.id,

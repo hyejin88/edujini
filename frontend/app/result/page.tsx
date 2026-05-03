@@ -95,41 +95,72 @@ export default function ResultPage() {
   const { score_pct, correct, total, weak_units, error_breakdown, recent_session } = d;
   const wrong = total - correct;
   const top = topErrorLabel(error_breakdown);
+  // 방금 푼 학습이 통과 수준(90점+) — 그러면 "다시 풀기" 권장 안 함
+  const recentMastered = !!recent_session && recent_session.score_pct >= 90;
+  // 추천 단원 = 방금 푼 단원이 통과 수준이면 *다른* 약점 단원, 아니면 첫 약점 단원
+  const recommendUnit = recentMastered
+    ? weak_units.find((u) => u.unit_id !== recent_session?.unit_id) ?? null
+    : weak_units[0] ?? null;
+  // 학년 추출 (디폴트 3) — recent_session.unit_id 우선
+  const recentGrade = ((): number => {
+    const m = recent_session?.unit_id?.match(/^[a-z]+-(\d+)/i);
+    return m ? parseInt(m[1], 10) : 3;
+  })();
 
   // 학부모 리포트 자동 생성 ─ 진단 데이터 기반
   const highlights: string[] = [];
+  if (recentMastered) {
+    highlights.push(`${recent_session!.unit_name} 단원에서 ${recent_session!.score_pct}점 — 잘했어요!`);
+  }
   if (score_pct >= 80) highlights.push("정답률이 안정적이에요. 학습 흐름이 잘 잡혀 있습니다.");
   if (weak_units.length === 0 && total >= 10) highlights.push("최근 풀이 단원에서 약점이 두드러지지 않아요.");
   if (recent_session && recent_session.correct === recent_session.total) highlights.push("이번 학습에서 모든 문제를 맞혔어요.");
   if (highlights.length === 0) highlights.push("꾸준히 학습 진단을 쌓으면 강점이 더 잘 보여요.");
 
   const concerns: string[] = [];
-  if (top && error_breakdown[top] > 0) concerns.push(`${top} 유형 오답이 가장 많아요 — ${ERROR_GUIDE[top] ?? ""}`);
-  if (weak_units[0]) concerns.push(`${weak_units[0].unit_name} 정답률 ${weak_units[0].accuracy}% — 같은 단원을 한 번 더 풀어보면 좋아요.`);
+  // 오답 유형은 2건 이상일 때만 (1건은 우연성 높음)
+  if (top && error_breakdown[top] >= 2) concerns.push(`${top} 유형 오답이 가장 많아요 — ${ERROR_GUIDE[top] ?? ""}`);
+  // 약점 단원은 정답률 80% 미만일 때만 (학년별 임계치 통과해도 80% 이상이면 "잘하는 편")
+  if (recommendUnit && recommendUnit.accuracy < 80) {
+    concerns.push(`${recommendUnit.unit_name} 정답률 ${recommendUnit.accuracy}% — 같은 단원을 한 번 더 풀어보면 좋아요.`);
+  }
   if (concerns.length === 0) concerns.push("특별히 보완할 영역은 보이지 않아요. 같은 학년 다른 단원도 풀어보세요.");
 
   // 다음 학습 추천 — 텍스트 + 클릭 가능 링크 (있을 때만)
   type NextItem = { text: string; href?: string };
   const nexts: NextItem[] = [];
-  if (weak_units[0]) {
+  if (recentMastered) {
+    // 방금 풀이가 통과 수준 — 다음 도전
+    if (recommendUnit) {
+      nexts.push({
+        text: `${recommendUnit.unit_name} 단원도 도전해 보세요`,
+        href: `/library/${encodeURIComponent(recommendUnit.unit_id)}?sheet=comp`,
+      });
+    } else {
+      nexts.push({
+        text: "같은 학년 다른 단원도 도전해 보세요",
+        href: `/library?grade=${recentGrade}&subject=수학&mode=comp`,
+      });
+    }
+  } else if (recommendUnit) {
     nexts.push({
-      text: `${weak_units[0].unit_name} 단원 학습 다시 풀기`,
-      href: `/library/${encodeURIComponent(weak_units[0].unit_id)}?sheet=comp`,
+      text: `${recommendUnit.unit_name} 단원 학습 다시 풀기`,
+      href: `/library/${encodeURIComponent(recommendUnit.unit_id)}?sheet=comp`,
     });
   }
-  if (top === "계산실수" && weak_units[0]) {
+  if (top === "계산실수" && recommendUnit) {
     nexts.push({
-      text: `${weak_units[0].unit_name} 연산 문제 20문제 워밍업`,
-      href: `/library/${encodeURIComponent(weak_units[0].unit_id)}?mode=drill`,
+      text: `${recommendUnit.unit_name} 연산 문제 20문제 워밍업`,
+      href: `/library/${encodeURIComponent(recommendUnit.unit_id)}?mode=drill`,
     });
-  } else if (top === "계산실수") {
-    nexts.push({ text: "연산 문제로 워밍업 후 단원 학습 재도전", href: "/library?grade=3&subject=수학&mode=drill" });
+  } else if (top === "계산실수" && !recentMastered) {
+    nexts.push({ text: "연산 문제로 워밍업 후 단원 학습 재도전", href: `/library?grade=${recentGrade}&subject=수학&mode=drill` });
   }
-  if (top === "개념미숙" && weak_units[0]) {
-    nexts.push({ text: `${weak_units[0].unit_name} 단원의 핵심 개념 다시 보기`, href: `/library/${encodeURIComponent(weak_units[0].unit_id)}?sheet=comp` });
+  if (top === "개념미숙" && recommendUnit) {
+    nexts.push({ text: `${recommendUnit.unit_name} 단원의 핵심 개념 다시 보기`, href: `/library/${encodeURIComponent(recommendUnit.unit_id)}?sheet=comp` });
   }
   if (nexts.length < 2) {
-    nexts.push({ text: "다른 단원도 풀어보기", href: "/library?grade=3&subject=수학&mode=comp" });
+    nexts.push({ text: "다른 단원도 풀어보기", href: `/library?grade=${recentGrade}&subject=수학&mode=comp` });
   }
 
   return (
