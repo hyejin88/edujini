@@ -111,7 +111,7 @@ export default function ResultPage() {
   }
   if (top === "계산실수" && weak_units[0]) {
     nexts.push({
-      text: `${weak_units[0].unit_name} 연산 문제 30문제 워밍업`,
+      text: `${weak_units[0].unit_name} 연산 문제 20문제 워밍업`,
       href: `/library/${encodeURIComponent(weak_units[0].unit_id)}?mode=drill`,
     });
   } else if (top === "계산실수") {

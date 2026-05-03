@@ -140,7 +140,7 @@ export default function LandingPage() {
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
             {selectedGrade
-              ? "단원 학습으로 약점 진단 · 연산 문제로 매일 30문제 반복 연습"
+              ? "단원 학습으로 약점 진단 · 연산 문제로 매일 20문제 반복 연습"
               : "먼저 자녀 학년을 골라주세요"}
           </p>
         </div>
@@ -152,7 +152,7 @@ export default function LandingPage() {
           <div className="grid gap-4 md:grid-cols-3">
             {[
               { title: "오답 유형 자동 분석", desc: "왜 틀렸는지(개념·계산·꼼꼼함) 4가지 유형으로 분류해서 다음 학습을 추천해요" },
-              { title: "학교 진도와 정확히 맞춰요", desc: "교과서 단원·NCIC 성취기준 그대로. 매일 새 30문제 + 즉시 채점" },
+              { title: "학교 진도와 정확히 맞춰요", desc: "교과서 단원·NCIC 성취기준 그대로. 매일 새 20문제 + 즉시 채점" },
               { title: "학부모 리포트 자동 생성", desc: "잘한 점·보완할 점·다음에 풀면 좋은 단원까지 한 페이지에 정리" },
             ].map((item) => (
               <Card key={item.title} className="border border-border p-6 text-left">
@@ -213,7 +213,7 @@ export default function LandingPage() {
                 다음 학습 추천
               </p>
               <ol className="space-y-1 text-sm text-muted-foreground">
-                <li>1. 곱셈 단원 받아올림 2번 양식 30문제 워밍업</li>
+                <li>1. 곱셈 단원 받아올림 2번 양식 20문제 워밍업</li>
                 <li>2. (두 자리)×(두 자리) 단원 학습 재도전</li>
                 <li>3. 문장제 끝까지 읽기 습관 만들기</li>
               </ol>

@@ -180,7 +180,7 @@ export default async function LearnUnitPage({
             </Link>
             <Link href={`/library/${u.unit_id}?mode=drill`} className="flex-1 sm:flex-none">
               <Button size="lg" variant="outline" className="w-full gap-2 border-2 sm:w-auto">
-                연산 문제 (매일 새 30문제)
+                연산 문제 (매일 새 20문제)
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>

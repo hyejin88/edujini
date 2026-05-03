@@ -82,7 +82,7 @@ function LibraryContent() {
             </h1>
             <p className="mt-1 text-sm text-muted-foreground">
               {mode === "drill"
-                ? "연산 반복 연습 — 단원을 선택하면 유형별로 30문제씩 풀 수 있어요."
+                ? "연산 반복 연습 — 단원을 선택하면 유형별로 20문제씩 풀 수 있어요."
                 : "단원별 종합 학습 — 선택형·서술형 20문항 + AI 자동 채점."}
             </p>
           </div>
