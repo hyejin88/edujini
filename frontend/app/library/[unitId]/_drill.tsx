@@ -290,7 +290,7 @@ export default function DrillSheetPage({
         style={{ padding: "16mm" }}
       >
         {/* 헤더 — 화면용 컬러 워드마크 + 인쇄용 흑백 캐릭터 */}
-        <div className="mb-6">
+        <div className="mb-6 print:mb-3">
           <div className="flex items-center justify-between">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img

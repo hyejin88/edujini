@@ -41,7 +41,7 @@ export function DrillSheet({
     <div>
       {/* 예시 영역 — 박스로 시각 분리 (인쇄 시에도 유지) */}
       {example && (
-        <div className="mb-6 rounded-lg border border-[#d1d5db] bg-[#f9fafb] p-4 print:border-2 print:border-[#9ca3af]">
+        <div className="mb-6 rounded-lg border border-[#d1d5db] bg-[#f9fafb] p-4 print:mb-3 print:p-2 print:border-2 print:border-[#9ca3af]">
           <p className="mb-2 text-xs font-semibold tracking-wide text-[#0080E0] print:text-[#374151]">
             예시 보기
           </p>
@@ -57,7 +57,7 @@ export function DrillSheet({
       )}
 
       {/* 채점 대상 1~N번 */}
-      <div className="grid grid-cols-2 gap-x-8 gap-y-5 print:grid-cols-2">
+      <div className="grid grid-cols-2 gap-x-8 gap-y-5 print:grid-cols-4 print:gap-x-4 print:gap-y-3">
         {graded.map((p) => (
           <DrillProblemCell
             key={p.index}
