@@ -66,8 +66,49 @@ export default async function GradeIndexPage({
     return acc;
   }, {});
 
+  const pageUrl = `https://edujini.pages.dev/learn/grade-${grade}`;
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `초${grade} 수학 단원 학습`,
+    description: `초${grade} 수학 ${units.length}개 단원 — NCIC 성취기준 기반 무료 학습.`,
+    url: pageUrl,
+    inLanguage: "ko",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "EDU Jini",
+      url: "https://edujini.pages.dev",
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: units.length,
+      itemListElement: units.map((u, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `https://edujini.pages.dev/learn/grade-${u.grade}/${u.slug}`,
+        name: u.unit_name,
+      })),
+    },
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "홈", item: "https://edujini.pages.dev/" },
+      { "@type": "ListItem", position: 2, name: `초${grade} 수학`, item: pageUrl },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <header className="border-b border-border bg-background">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
           <Link
